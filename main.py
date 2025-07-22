@@ -1,7 +1,7 @@
 
 from input_output import read_lines_from_file, write_string_to_file
 import os
-from evaluator import cq_coverage
+from evaluator import cq_coverage,query_complexity
 import re
 from workflows.ontogenia import Ontogenia
 from workflows.blank import Blank
@@ -24,7 +24,8 @@ def main_loop(model=None, workflow='Blank', parameters=[5,'gemini',-1]):
 
 
 
-    cq_coverage('ontologies/ontology.txt',cqs)
+    addressed_cqs = cq_coverage('ontologies/ontology.txt',cqs)
+    
 
 
 main_loop()
