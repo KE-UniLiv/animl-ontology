@@ -1,25 +1,31 @@
-from generator import call_gemini_api
-from prompts import user_prompt, ontogenia
+
 from input_output import read_lines_from_file, write_string_to_file
 import os
-from evaluator import eurecom_baseline
+from evaluator import cq_coverage
+import re
+from workflows.ontogenia import Ontogenia
+from workflows.blank import Blank
 
-def main_loop(model=None, user_prompt=user_prompt, system_prompt=ontogenia, evaluation_metric=None,evaluation_mechanism=None,batch_size=5):
+def main_loop(model=None, workflow='Blank', parameters=[5,'gemini',-1]):
     cqs = read_lines_from_file('cqs.txt')
-    batches = []
-    for i in range(0, len(cqs), batch_size):
-        batches.append(str(cqs[i:i + batch_size]))
 
-    attached_batches = []
+    #write_string_to_file(f'ontologies/ontology.txt', '')
 
-    for i in range(0,len(batches)):
-        attached_batches.append(batches[i])
-        fragment = call_gemini_api(user_prompt+str(attached_batches), system_prompt)
-        write_string_to_file(f'ontologies/ontology.txt', fragment)
-    
-    print('yeet')
+    while parameters[len(parameters)-1] != 1:
+        fragment,parameters = globals()[workflow](parameters,cqs)
+        pattern = r'(<\?xml version="1\.0"\?>.*?</rdf:RDF>)'
+        match = re.search(pattern, fragment, re.DOTALL)
+        if match:
+            print('Ontology fragment received, writing to file...')
+            write_string_to_file(f'ontologies/ontology.txt', match.group(1))
+        else:
+            if fragment != '':
+                raise ValueError('LLM produced an invalid ontology fragment:' + fragment)
 
-    eurecom_baseline()
+
+
+    cq_coverage('ontologies/ontology.txt',cqs)
+
 
 main_loop()
 

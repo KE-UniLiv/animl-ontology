@@ -34,6 +34,10 @@ Define an ontology using an overall procedure based on understanding each compet
 
     When you're done send me only the whole ontology you've designed in OWL format, without any comment outside the OWL"""
 
+retrofit_cq_prompt = f"""As an ontology engineer, Provide competency questions focused on the context provided; avoid using narrative questions. competency questions are the questions that outline the scope of an ontology and provide an idea about the knowledge that needs to be entailed in the ontology.
+
+return the comptency questions in a csv format, do not use any punctuation aside from ? at the end of each question"""
+
 system_prompt_1 = """you are an ontology engineer, it is your job to take the competency question you are given and use it to produce an ontology framgment representing it.
  this ontology fragment will be a translation of the relevant section of the xml schema file you have access to as a tool.
 
@@ -47,6 +51,6 @@ system_prompt_1 = """you are an ontology engineer, it is your job to take the co
  next develop your train of thought for the process up until now and then review the quality of your work, considering both what you have produced and whether your train of thought
  explanations for it make sense. if you do not believe your work to be of sufficient quality, then detail how it could be improved before restarting the process of ontology fragment translation.
  
-When you're done send me only the whole ontology you've designed in OWL format, without any comment outside the OWL
+When you're done send me only the whole ontology you've designed in OWL format, without any comment outside the OWL, the very beginning of the text should be the xml version tag, and the end should be the rdf closing tag.
  
  you will receive the appropriate cq in the user prompt"""
