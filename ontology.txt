@@ -1,0 +1,743 @@
+parts=[Part(
+  text="""```xml
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#"/>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Award"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeAction"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#DedicationStatement"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Equipment"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicAlgorithm"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicDataset"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicGenre"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Performance"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Process"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Release"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Work"/>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEnsemble">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Artist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Person"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Artist"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Broadcaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Process"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPerformance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Performance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Process"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Process"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Process"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Work"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPiece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Work"/>
+    </owl:Class>
+
+
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Award"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#DedicationStatement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Equipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicDataset"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicGenre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Performance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Process"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Release"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Work"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPiece"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPiece"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Release"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEnsemble"/>
+        <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Person"/>
+    </owl:Class>
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#creates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPiece"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#createsMusicEntity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPerformance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeAction"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasAssociatedText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasCollaboratedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMemberArtist">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isMemberOf"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMemberEnsemble">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEnsemble"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMembershipEntry"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMusicGenre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicGenre"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasReceived">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Award"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasReceivedNominationFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Award"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasRecording">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isRecordingOf"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMembershipEntry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEnsemble"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMemberEnsemble"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasPart">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#influences">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#wasInfluencedBy"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involves">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Equipment"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involvesAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involvesBroadcaster">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Broadcaster"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involvesPublisher">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Publisher"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isDedicatedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#DedicationStatement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Person"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isMemberOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isProducedBy"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#recordsPerformance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPerformance"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#trainedOnDataset">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicAlgorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicDataset"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#wasInfluencedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isProducedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isRecordingOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isSourceOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text"/>
+    </owl:ObjectProperty>
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasActivityEndDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasActivityStartDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasAlias">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasFormationLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEnsemble"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasFormType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasInstrumentation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasKey">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLicense">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Release"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMembershipEndDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMembershipStartDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasOpusStatement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasRoleDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#AbstractScore">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasFormType"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasInstrumentation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasKey"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLicense"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasAssociatedText"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasName"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasAlias"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#BroadcastingSituation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involvesBroadcaster"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Broadcaster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLocation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeProcess">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involvesAgent"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasAction"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#CreativeAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#creates"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPiece"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLocation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#DedicationStatement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isDedicatedTo"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMemberArtist"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMemberEnsemble"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEnsemble"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasRoleDescription"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMembershipStartDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMembershipEndDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicAlgorithm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#trainedOnDataset"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMusicGenre"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicGenre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasReceived"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Award"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasReceivedNominationFor"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Award"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasCollaboratedWith"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#wasInfluencedBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicArtist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasActivityStartDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasActivityEndDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isMemberOf"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEnsemble">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasFormationLocation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasMembershipEntry"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Membership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasOpusStatement"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasRecording"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasPart"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPerformance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#createsMusicEntity"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#PublicationSituation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involvesPublisher"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Publisher"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLocation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLicense"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#RecordingProcess">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#produces"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Recording"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#involves"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Equipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#recordsPerformance"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#MusicalPerformance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Release">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#hasLicense"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#isSourceOf"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2023/11/music-recording-ontology#Text"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+</rdf:RDF>
+```"""
+)] role='model'
