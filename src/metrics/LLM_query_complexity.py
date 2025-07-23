@@ -1,9 +1,15 @@
 from deeponto.onto import Ontology
 from deeponto.onto.projection import OntologyProjector
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-def LLM_query_complexity(addressed_cqs, model,list_of_cq_bindings):
-    onto = Ontology('data/ontologies/ontology.txt')
-    output = Ontology.get_all_axioms(onto)
-    print(output)
+from src.generator import call_generator
+from prompts import SQARQL_prompt
 
-LLM_query_complexity(None,None,None)
+def LLM_query_complexity(addressed_cqs, model,ontology):
+    return None
+    #for entry in addressed_cqs:
+    #    SQARQL_query = call_generator(SQARQL_prompt, entry, model)
+
+
