@@ -27,6 +27,12 @@ def read_csv_to_data_frame(csv_file):
     except Exception as e:
         return
     
+def save_array_to_file(array, filename):
+    with open(filename, 'w') as f:
+        for item in array:
+            f.write(f"{item}\n")
+
+    
 def save_to_csv(data):
     # Specify the desired file path and name
     file_path ='data/extracted_triplets/ontology_triplets.csv'

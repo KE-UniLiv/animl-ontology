@@ -12,6 +12,7 @@ def query_complexity(covered_cqs,triplets):
     average = 0
     shortest_paths = []
     for entry in covered_cqs:
+        print('this is the query: ' + entry)
         doc = nlp(entry)
         subject = None
         object = None
