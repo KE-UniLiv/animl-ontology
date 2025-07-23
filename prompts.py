@@ -1,4 +1,4 @@
-from input_output import read_file_as_string
+from src.input_output import read_file_as_string
 
 user_prompt = f""" this is the cq you will be working to translate:"""
 

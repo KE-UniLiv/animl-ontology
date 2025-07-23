@@ -1,4 +1,4 @@
-from input_output import read_file_as_string
+from src.input_output import read_file_as_string
 
 def Blank(parameters,cqs):
     parameters[len(parameters)-1] = 1
