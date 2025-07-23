@@ -37,7 +37,6 @@ def most_similar_object(similarities):
     return greatest_similarity
 
 def find_cosine_distances(objects, objects_to_be_compared_with):
-    print('these are the true cqs' + str(objects_to_be_compared_with))
     model = SentenceTransformer('all-mpnet-base-v2')
     vectors = model.encode(objects, convert_to_tensor=True)
     vectors_to_be_compared_with = model.encode(objects_to_be_compared_with, convert_to_tensor=True)
@@ -94,7 +93,5 @@ def triplet_extraction(ontology):
         obj = con(o)  
         data.append([sub, pre, obj])
     save_to_csv(data) 
-
-
 
 

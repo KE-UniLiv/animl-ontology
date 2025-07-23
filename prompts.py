@@ -4,6 +4,8 @@ user_prompt = f""" this is the cq you will be working to translate:"""
 
 system_prompt_2 = 'literally just return the question that you are given in your user prompt'
 
+SQARQL_prompt = f""""""
+
 ontogenia = f"""read the following procedure:
 
 Define an ontology using an overall procedure based on understanding each competency question using this procedure:
