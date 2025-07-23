@@ -1,6 +1,6 @@
-from input_output import read_file_as_string
+from src.input_output import read_file_as_string
 from prompts import ontogenia, user_prompt
-from generator import call_generator
+from src.generator import call_generator
 
 def Ontogenia(parameters,cqs):
     print('Ontogenia workflow started--------------------------------------------------------------------')
