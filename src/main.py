@@ -19,19 +19,22 @@ def main_loop(model=None, workflow='Blank', parameters=[5,'gemini',-1]):
         pattern = r'(<\?xml version="1\.0"\?>.*?</rdf:RDF>)'
         match = re.search(pattern, fragment, re.DOTALL)
         if match:
-            print('Ontology fragment received, writing to file...')
             write_string_to_file(f'ontologies/ontology.txt', match.group(1))
         else:
             if fragment != '':
                 raise ValueError('LLM produced an invalid ontology fragment:' + fragment)
 
 
-    triplet_extraction('data/ontologies/ontology.txt')
-    print('cqs in main' + str(cqs))
-    coverage = cq_coverage(cqs,'gemini')
+    #triplet_extraction('data/ontologies/ontology.txt')
+
+    #coverage = cq_coverage(cqs,'gemini')
+
+    #print('coverage: ' + str(coverage))
 
     average_complexity = query_complexity(read_lines_from_file('data/addressed_cqs/addressed_cqs.txt'),read_csv_to_data_frame('data/extracted_triplets/ontology_triplets.csv'))
-    LLM_complexity = LLM_query_complexity(read_lines_from_file('data/addressed_cqs/addressed_cqs.txt'), model, read_file_as_string('data/ontologies/ontology.txt'))
+
+    print('average centrality: ' + str(average_complexity))
+   # LLM_complexity = LLM_query_complexity(read_lines_from_file('data/addressed_cqs/addressed_cqs.txt'), model, read_file_as_string('data/ontologies/ontology.txt'))
 
 
 main_loop()

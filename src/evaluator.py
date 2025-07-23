@@ -5,14 +5,8 @@ import torch
 
 from deeponto.onto import Ontology
 from deeponto.onto.projection import OntologyProjector
-import pandas as pd
-from src.generator import call_gemini_api
-from prompts import retrofit_cq_prompt
-from src.input_output import read_lines_from_file, write_string_to_file, save_to_csv, read_csv_to_data_frame
-import ast
-import os
-import spacy
-from collections import deque, defaultdict
+from src.input_output import save_to_csv
+
 
 
 
@@ -52,19 +46,6 @@ def nearest_neighbors(generated_resources, true_resources):
 
     return most_similar_object(find_cosine_distances(generated_resources, true_resources))
     
-def principled_reuse(ontology,odp_set):
-    class_regex = r'<(?:owl:Class|rdf:Description|rdfs:subClassOf)[^>]*?(?:rdf:about|rdf:resource)="[^"#]+[#/]([^"#/>]+)"'
-    property_regex = r'<(?:rdf:Description|owl:ObjectProperty)[^>]*rdf:about="[^"#]+[#/]([^"#/>]+)"'
-
-    primary_triplets = triplet_extraction(ontology)
-
-    for filename in os.listdir(odp_set):
-        file_path = os.path.join(odp_set, filename)
-        if os.path.isfile(file_path):
-            print(f"Processing file: {file_path}")
-            # You can call resource_name_extractor or other logic here as needed
-
-
 def triplet_extraction(ontology):
     onto = Ontology(ontology)
     projector = OntologyProjector(bidirectional_taxonomy=False, only_taxonomy=True, include_literals=True)
