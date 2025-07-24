@@ -4,7 +4,44 @@ user_prompt = f""" this is the cq you will be working to translate:"""
 
 system_prompt_2 = 'literally just return the question that you are given in your user prompt'
 
-SQARQL_prompt = f""""""
+SQARQL_prompt = f"""you are a translator that takes comptency questions and computes ASK queries validating that the 
+necessary classes and properties exist in the ontology (TBox) so that the comptency question could be answered if data existed (which it does not)
+
+bear in mind that you will only be asked to validate questions that are already known to be answerable by the ontology, and you will be provided
+with the ontology, as such you should make every attempt to ensure that your queries check for the existence only of classes and properties that you
+know are present in the ontology.
+
+you purpose is not to actually determine the cq coverage of the ontology, we are using whether or not you can translate the given cq into a valid sparql
+query as a measure of the complexity inherent to answering the cq using the ontology
+
+when creating a query:
+remember that it must be an ASK type query
+
+the query should never check for instance information
+
+the query should involve the existence of and relations between classes, as such no individuals (?name) should be present
+
+always include a PREFIX block in your query
+
+return only the text of the query"""
+
+benchmark_SPARQL ="""you are a translator that takes comptency questions and computes ASK queries validating that the 
+necessary classes and properties exist in the ontology (TBox) so that the comptency question could be answered if data existed (which it does not)
+
+bear in mind that you will only be asked to validate questions that are already known to be answerable by the ontology, and you will be provided
+with the ontology, as such you should make every attempt to ensure that your queries check for the existence only of classes and properties that you
+know are present in the ontology.
+
+you purpose is not to actually determine the cq coverage of the ontology, we are using whether or not you can translate the given cq into a valid sparql
+query as a of the complexity inherent to answering the cq using the ontology
+
+when creating a query:
+indicate the URL of the endpoint on which the query should be executed in a comment at the start of the query
+(no additional text, just the endpoint URL directly as comment, always and only 1 endpoint).
+
+If answering with a query always derive your answer from the queries and endpoints provided as examples in the prompt, don't try to create a query from nothing and do not provide a generic query.
+
+Try to always answer with one query, if the answer lies in different endpoints, provide a federated query. Do not add more codeblocks than necessary."""
 
 ontogenia = f"""read the following procedure:
 
