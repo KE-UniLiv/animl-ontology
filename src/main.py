@@ -12,6 +12,7 @@ import rdflib
 import os
 from rdflib import Graph, RDF, BNode
 from deeponto.onto.projection import OntologyProjector
+from deeponto.onto import Ontology
 
 def main_loop(ontology, workflow, parameters):
     cqs = read_lines_from_file(f'data/input_cqs/{ontology}.txt')
@@ -22,9 +23,9 @@ def main_loop(ontology, workflow, parameters):
         fragment,parameters = globals()[workflow](parameters,cqs,ontology)
         if fragment != None:
             print(fragment)
-            #TODO: feedback the model with the type of error its previous output had
-            pattern = r'(&lt;\?xml version="1\.0"\?&gt;.*?&lt;/rdf:RDF&gt;)'
+            pattern = r'(<\?xml version="1\.0"\?>.*?</rdf:RDF>)'
             match = re.search(pattern, fragment, re.DOTALL)
+            print('life is a series loosely connected disappointments' + str(match))
             if match:
                 print('it got though first round')
                 try:
@@ -33,9 +34,11 @@ def main_loop(ontology, workflow, parameters):
                     old_value = read_file_as_string(f'data/ontologies/{ontology}.txt')
                     try:
                         print('it got though second round')
+
                         write_string_to_file(f'data/ontologies/{ontology}.txt', match.group(1))
                         projector = OntologyProjector(bidirectional_taxonomy=False, only_taxonomy=True, include_literals=True)
-                        triplets = projector.project(f'data/ontologies/{ontology}.txt')
+                        onto = Ontology(f'data/ontologies/{ontology}.txt')
+                        triplets = projector.project(onto)
                         print('it passed, and as such the ontology file should at least exist')
                     except:
                         print('anonymous objects')
