@@ -54,4 +54,4 @@ SELECT DISTINCT ?award WHERE {
 
 
 
-#LLM_query_complexity(read_lines_from_file('data/addressed_cqs/addressed_cqs.txt'),'gemini',read_file_as_string('data/ontologies/ontology.txt'))
+LLM_query_complexity(read_lines_from_file('data/addressed_cqs/ontology.txt'),'gemini',read_file_as_string('data/ontologies/ontology.txt'))

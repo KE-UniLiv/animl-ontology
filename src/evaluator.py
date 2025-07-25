@@ -46,7 +46,7 @@ def nearest_neighbors(generated_resources, true_resources):
 
     return most_similar_object(find_cosine_distances(generated_resources, true_resources))
     
-def triplet_extraction(ontology):
+def triplet_extraction(ontology,file_name):
     onto = Ontology(ontology)
     projector = OntologyProjector(bidirectional_taxonomy=False, only_taxonomy=True, include_literals=True)
 
@@ -73,6 +73,6 @@ def triplet_extraction(ontology):
         pre = con(p) 
         obj = con(o)  
         data.append([sub, pre, obj])
-    save_to_csv(data) 
+    save_to_csv(data,f'data/extracted_triplets/{file_name}.csv') 
 
 

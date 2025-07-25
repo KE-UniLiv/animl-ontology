@@ -33,9 +33,8 @@ def save_array_to_file(array, filename):
             f.write(f"{item}\n")
 
     
-def save_to_csv(data):
+def save_to_csv(data,file_path):
     # Specify the desired file path and name
-    file_path ='data/extracted_triplets/ontology_triplets.csv'
     with open(file_path, 'w', newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter='\t') # the s, p, o saves in the csv file and seperated by space no commas if i want comma delete the delimiter
         writer.writerows(data)
