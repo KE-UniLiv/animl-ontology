@@ -1,0 +1,21 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+owlunittest:death  a owlunit:CompetencyQuestionVerification ;
+ 	owlunit:hasCompetencyQuestion "What are the interests of a certain person?" ;
+ 	owlunit:hasSPARQLUnitTest """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	PREFIX mm: <https://w3id.org/polifonia/ontology/music-meta/>
+ 
+	ASK WHERE {
+    	mm:RecordingProcess rdfs:subClassOf owl:Thing .
+    	mm:MusicalPerformance rdfs:subClassOf owl:Thing .
+ 
+    	mm:isRecordedBy rdfs:range mm:RecordingProcess .
+    	mm:isRecordedBy rdfs:domain ?domain .
+    	?domain owl:unionOf/rdf:rest*/rdf:first mm:MusicalPerformance .
+}""" ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:testsOntology <https://w3id.org/polifonia/ontology/music-meta/>

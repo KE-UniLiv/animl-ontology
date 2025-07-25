@@ -1,23 +1,24 @@
- INFO 2025-07-24 16:43:26,234 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
-ERROR 2025-07-24 16:43:26,505 [main] (ErrorHandlerFactory.java:106) - [line: 11, col: 24] Undefined prefix: https
- INFO 2025-07-24 16:44:32,486 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
- INFO 2025-07-24 16:44:32,745 [main] (OWLUnit.java:102) - test_test_file.ttl doesn't define any test case.
- INFO 2025-07-24 16:46:14,224 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
-ERROR 2025-07-24 16:46:14,486 [main] (ErrorHandlerFactory.java:106) - [line: 4, col: 2 ] Out of place: [KEYWORD:a]
- INFO 2025-07-24 16:47:06,804 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
-ERROR 2025-07-24 16:47:07,077 [main] (ErrorHandlerFactory.java:106) - [line: 4, col: 1 ] Out of place: [KEYWORD:testcase]
- INFO 2025-07-24 16:47:47,335 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
-ERROR 2025-07-24 16:47:47,608 [main] (ErrorHandlerFactory.java:106) - [line: 4, col: 1 ] Out of place: [KEYWORD:testcase]
- INFO 2025-07-24 16:48:47,438 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
-ERROR 2025-07-24 16:48:47,703 [main] (ErrorHandlerFactory.java:106) - [line: 7, col: 23] Undefined prefix: ex
- INFO 2025-07-24 16:49:50,222 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
-ERROR 2025-07-24 16:49:50,493 [main] (ErrorHandlerFactory.java:106) - [line: 7, col: 23] Unrecognized keyword: data
- INFO 2025-07-24 16:50:11,942 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
- INFO 2025-07-24 16:50:12,214 [main] (OWLUnit.java:102) - test_test_file.ttl doesn't define any test case.
- INFO 2025-07-25 09:19:46,813 [main] (OWLUnit.java:89) - Test case URI test_test_file.ttl
- INFO 2025-07-25 09:19:47,170 [main] (OWLUnit.java:102) - test_test_file.ttl doesn't define any test case.
- INFO 2025-07-25 09:24:19,519 [main] (OWLUnit.java:89) - Test case URI test_7.ttl
- INFO 2025-07-25 09:24:19,801 [main] (OWLUnit.java:102) - test_7.ttl doesn't define any test case.
- INFO 2025-07-25 09:24:51,803 [main] (OWLUnit.java:89) - Test case URI test_7.ttl
- INFO 2025-07-25 09:24:52,063 [main] (OWLUnit.java:102) - test_7.ttl doesn't define any test case.
- INFO 2025-07-25 09:27:27,955 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/test10
+ INFO 2025-07-25 11:59:52,789 [main] (OWLUnit.java:89) - Test case URI infinite.ttl
+ERROR 2025-07-25 11:59:53,075 [main] (ErrorHandlerFactory.java:106) - [line: 8, col: 23] Undefined prefix: ex
+ INFO 2025-07-25 12:00:10,726 [main] (OWLUnit.java:89) - Test case URI infinite.ttl
+ INFO 2025-07-25 12:00:10,993 [main] (OWLUnit.java:102) - infinite.ttl doesn't define any test case.
+ INFO 2025-07-25 12:04:12,980 [main] (OWLUnit.java:89) - Test case URI death
+ INFO 2025-07-25 12:04:13,239 [main] (OWLUnit.java:102) - death doesn't define any test case.
+ INFO 2025-07-25 12:04:38,654 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/tes/death
+ INFO 2025-07-25 12:08:33,090 [main] (OWLUnit.java:89) - Test case URI infinite.ttl/death
+ INFO 2025-07-25 12:09:11,528 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/death
+ INFO 2025-07-25 12:12:28,389 [main] (OWLUnit.java:89) - Test case URI death
+ INFO 2025-07-25 12:12:28,645 [main] (OWLUnit.java:102) - death doesn't define any test case.
+ INFO 2025-07-25 12:12:35,522 [main] (OWLUnit.java:89) - Test case URI death
+ INFO 2025-07-25 12:12:55,508 [main] (OWLUnit.java:89) - Test case URI owlunittest:death
+ INFO 2025-07-25 12:12:55,763 [main] (OWLUnit.java:102) - owlunittest:death doesn't define any test case.
+ INFO 2025-07-25 12:50:12,139 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/ontology/cq1.ttl
+ERROR 2025-07-25 12:50:13,145 [main] (ErrorHandlerFactory.java:106) - [line: 1, col: 7 ] Bad character in IRI (space): <?xml[space]...>
+ INFO 2025-07-25 12:51:16,632 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/ontology/cq1.ttl
+ERROR 2025-07-25 12:51:17,512 [main] (ErrorHandlerFactory.java:106) - [line: 1, col: 7 ] Bad character in IRI (space): <?xml[space]...>
+ INFO 2025-07-25 12:52:13,571 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/ontology/test2
+ INFO 2025-07-25 12:52:41,086 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/test2
+ INFO 2025-07-25 12:52:53,790 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/test2.ttl
+ INFO 2025-07-25 12:54:58,409 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/examples/cq1.ttl
+ INFO 2025-07-25 12:55:24,098 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/examples/cq1-testalod.ttl
+ INFO 2025-07-25 12:55:25,087 [main] (OWLUnit.java:102) - https://w3id.org/OWLunit/examples/cq1-testalod.ttl doesn't define any test case.

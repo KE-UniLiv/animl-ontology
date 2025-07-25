@@ -17,6 +17,10 @@ def read_file_as_string(file_path):
         return ''
     
 def write_string_to_file(file_path, content):
+    try:
+        f = open(file_path, "x")
+    except:
+        Nothing = None
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(content)
 
@@ -28,6 +32,10 @@ def read_csv_to_data_frame(csv_file):
         return
     
 def save_array_to_file(array, filename):
+    try:
+        f = open(filename, "x")
+    except:
+        Nothing = None
     with open(filename, 'w') as f:
         for item in array:
             f.write(f"{item}\n")
