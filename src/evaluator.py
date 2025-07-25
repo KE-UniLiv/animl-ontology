@@ -2,6 +2,7 @@ from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_distances
 import numpy as np
 import torch
+from rdflib import Graph, RDF, BNode
 
 from deeponto.onto import Ontology
 from deeponto.onto.projection import OntologyProjector
@@ -47,6 +48,19 @@ def nearest_neighbors(generated_resources, true_resources):
     return most_similar_object(find_cosine_distances(generated_resources, true_resources))
     
 def triplet_extraction(ontology,file_name):
+    
+    g = Graph()
+    g.parse(ontology, format="xml")  # or "ttl", "n3", etc.
+
+    # Get all individuals that are NOT anonymous
+    named_individuals = [
+        s for s in g.subjects(RDF.type, None)
+        if not isinstance(s, BNode)]
+    
+    
+    named_individuals.serialize(destination=ontology, format="xml")
+
+
     onto = Ontology(ontology)
     projector = OntologyProjector(bidirectional_taxonomy=False, only_taxonomy=True, include_literals=True)
 
