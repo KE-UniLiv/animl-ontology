@@ -25,9 +25,10 @@ def generate_questions_from_csv(triplets,model):
             complete_prompt = f"{', '.join(row)}?"  # Convert chunk to list format for question generation
         questions = call_generator(retrofit_cq_prompt,complete_prompt,model)  # Generate questions for each row in the chunk
         questions_list = [questions.strip().split('\n')]
+        print(questions_list)
         generated_cqs.extend(questions_list)
     
-
+    print('these are the cqs being dropped')
     return generated_cqs
 
 def findBERTScore(generated_cqs,true_cqs):
@@ -37,12 +38,13 @@ def findBERTScore(generated_cqs,true_cqs):
     return BERTScore
 
 
-def cq_coverage(true_cqs,model):
-    generated_cqs = generate_questions_from_csv(read_csv_to_data_frame('data/extracted_triplets/ontology_triplets.csv'),model)
+def cq_coverage(true_cqs,model,ontology):
+    generated_cqs = generate_questions_from_csv(read_csv_to_data_frame(f'data/extracted_triplets/{ontology}.csv'),model)
+    print(generated_cqs)
     greatest_similarity_cqs = findBERTScore(generated_cqs,true_cqs)
     addressed_cqs = [cq for cq, sim in zip(true_cqs, greatest_similarity_cqs) if sim < 0.5]
 
-    save_array_to_file(addressed_cqs,'data/addressed_cqs/addressed_cqs.txt')
+    save_array_to_file(addressed_cqs,f'data/addressed_cqs/{ontology}.txt')
     
     return len(addressed_cqs)/len(true_cqs)
 
