@@ -32,6 +32,9 @@ bear in mind that you will only be asked to validate questions that are already 
 with the ontology, as such you should make every attempt to ensure that your queries check for the existence only of classes and properties that you
 know are present in the ontology.
 
+do not check for the existence of classes referenced but not defined in the ontology, these come from external ontologies and are not in scope,
+you may still check that the correct relations to them exist
+
 you purpose is not to actually determine the cq coverage of the ontology, we are using whether or not you can translate the given cq into a valid sparql
 query as a of the complexity inherent to answering the cq using the ontology
 

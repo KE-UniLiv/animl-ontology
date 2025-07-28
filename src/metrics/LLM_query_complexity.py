@@ -15,7 +15,7 @@ from prompts import SQARQL_prompt, benchmark_SPARQL
 
 def LLM_query_complexity(addressed_cqs, model,ontology):
     average = 0
-    for counter in range (0,(len(addressed_cqs)-1)):
+    for counter in range (0,(len(addressed_cqs))):
         print('this is the cq' + str(addressed_cqs[counter]))
         context = f"""you are instructed to translate this competency question: {addressed_cqs[counter]} into SPARQL
         this operation is about the following ontology: {ontology}, as stated in the primary prompt,
@@ -35,6 +35,7 @@ def LLM_query_complexity(addressed_cqs, model,ontology):
         else:
             if SQARQL_query != '':
                 raise ValueError('LLM produced a regex invalid SPAQRQL query:' + SQARQL_query)
+    return average/(counter+1)
 
 def query_checker(ontology,SPARQL_query):   
     try:

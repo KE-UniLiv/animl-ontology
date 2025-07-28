@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/myontology#"
+     xml:base="http://www.semanticweb.org/myontology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/myontology#"/>
+
+    <!-- Classes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#Agent"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#Award"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#CreativeAction"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#CreativeProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/myontology#Process"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#Equipment"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#MusicArtist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/myontology#Agent"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#MusicalPerformance"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#MusicalPiece"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#Process"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#Recording">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/myontology#MusicalPiece"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#RecordingProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/myontology#CreativeProcess"/>
+    </owl:Class>
+
+    <!-- Disjoint Classes -->
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/myontology#Agent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/myontology#Award"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/myontology#CreativeAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/myontology#Equipment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/myontology#MusicalPerformance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/myontology#MusicalPiece"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/myontology#Process"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+    <!-- Object Properties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#hasCreativeAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#CreativeProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#CreativeAction"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#isPartOfProcess"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#hasNominationFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#Award"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#isNominatedForBy"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#hasReceived">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#MusicArtist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#Award"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#isReceivedBy"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#involvesAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#CreativeProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#Agent"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#isInvolvedInProcess"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#involvesEquipment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#RecordingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#Equipment"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#isInvolvedIn"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#isInvolvedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#Equipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#RecordingProcess"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#isInvolvedInProcess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#CreativeProcess"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#isNominatedForBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#Award"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#isPartOfProcess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#CreativeAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#CreativeProcess"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#isProducedDuring">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#Recording"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#RecordingProcess"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#produces"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#isReceivedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#Award"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#MusicArtist"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#isRecordedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#MusicalPerformance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#RecordingProcess"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#recordsPerformance"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#ledToCreationOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#MusicalPiece"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/myontology#wasCreatedByProcess"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#RecordingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#Recording"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/myontology#ledToCreationOf"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#recordsPerformance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#RecordingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#MusicalPerformance"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/myontology#wasCreatedByProcess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#MusicalPiece"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/myontology#Process"/>
+    </owl:ObjectProperty>
+
+    <!-- Datatype Properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/myontology#hasCreationDateTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#CreativeProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/myontology#hasCreationLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/myontology#CreativeProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Class Restrictions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#CreativeProcess">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#involvesAgent"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#hasCreativeAction"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#hasCreationDateTime"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#hasCreationLocation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#MusicArtist">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#hasNominationFor"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#hasReceived"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#MusicalPiece">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#wasCreatedByProcess"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#Recording">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#isProducedDuring"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/myontology#RecordingProcess">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#produces"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#involvesEquipment"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/myontology#recordsPerformance"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+</rdf:RDF>
