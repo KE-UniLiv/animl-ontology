@@ -42,3 +42,5 @@ ERROR 2025-07-28 11:55:48,436 [main] (ErrorHandlerFactory.java:106) - [line: 21,
  INFO 2025-07-28 12:00:43,942 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/death
  INFO 2025-07-28 12:03:09,713 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/death
  INFO 2025-07-28 12:05:34,161 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/death
+ INFO 2025-07-28 12:20:24,110 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/death
+ INFO 2025-07-28 12:20:48,887 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/death
