@@ -1,4 +1,4 @@
-from src.input_output import read_file_as_string
+from src.input_output import read_file_as_string, write_string_to_file
 from prompts import ontogenia, user_prompt
 from src.generator import call_generator
 
@@ -7,6 +7,10 @@ def Ontogenia(parameters,cqs,ontology):
    # print('starting with parameters:' + str(parameters))
 
     if parameters[len(parameters)-1] == -1:
+        try:
+            write_string_to_file(f'data/ontologies/{ontology}.txt','')
+        except:
+            nothing = None
         batches = []
         for i in range(0, len(cqs), parameters[0]):
             batches.append(str(cqs[i:i + parameters[0]]))

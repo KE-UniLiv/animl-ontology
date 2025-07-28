@@ -6,6 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.
 
 from src.evaluator import nearest_neighbors
 
+# somewhat useful, unknown level of error due to NLP.
 
 def query_complexity(covered_cqs,triplets):
     nlp = spacy.load("en_core_web_lg")

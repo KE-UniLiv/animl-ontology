@@ -16,7 +16,8 @@ def call_gemini_api(system_prompt,prompt):
     model="gemini-2.5-flash",
     contents=prompt,
     config=types.GenerateContentConfig(
-        system_instruction=[system_prompt]
+        system_instruction=[system_prompt],
+        temperature = 0.0
     ),
     )
     return response.text

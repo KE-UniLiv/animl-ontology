@@ -59,16 +59,17 @@ def main_loop(ontology, workflow, parameters):
 
 
 
-    triplet_extraction(f'data/ontologies/{ontology}.txt',ontology)
+    #triplet_extraction(f'data/ontologies/{ontology}.txt',ontology)
 
-    coverage = cq_coverage(cqs,parameters[1],ontology)
+    #coverage = cq_coverage(cqs,parameters[1],ontology)
 
-    print('coverage: ' + str(coverage))
+    #print('coverage: ' + str(coverage))
 
     #average_complexity = query_complexity(read_lines_from_file(f'data/addressed_cqs/{ontology}.txt'),read_csv_to_data_frame(f'data/extracted_triplets/{ontology}.csv'),ontology)
 
     #print('average centrality: ' + str(average_complexity))
-    #LLM_complexity = LLM_query_complexity(read_lines_from_file(f'data/addressed_cqs/{ontology}.txt'), parameters[1], read_file_as_string(f'data/ontologies/{ontology}.txt'))
+    LLM_complexity = LLM_query_complexity(read_lines_from_file(f'data/addressed_cqs/{ontology}.txt'), parameters[1], read_file_as_string(f'data/ontologies/{ontology}.txt'))
+    print('complexity:' +str(LLM_complexity))
 
 
 
