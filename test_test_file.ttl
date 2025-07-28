@@ -1,9 +1,0 @@
-@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix owlunittest: <https://w3id.org/OWLunit/test/> .
-
-owlunittest:test_1 a owlunit:CompetencyQuestionVerification ;
- 	owlunit:hasCompetencyQuestion "the value of this one means nothing" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX mm: <https://w3id.org/polifonia/ontology/music-meta/> SELECT DISTINCT ?award WHERE {?artist a mm:MusicArtist .?artist mm:nominatedForAward ?award }" ;
-	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
-	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"interest\" ] } ,  \"results\": {  \"bindings\": [ {  \"interest\": {  \"type\":  \"uri\" ,  \"value\":  \"https://w3id.org/OWLunit/examples/Basketball\" } } ] } }";
-	owlunit:testsOntology <data/ontolgies/ontology.txt>
