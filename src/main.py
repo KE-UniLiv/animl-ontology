@@ -22,35 +22,25 @@ def main_loop(ontology, workflow, parameters):
     while parameters[len(parameters)-1] != 1:
         fragment,parameters = globals()[workflow](parameters,cqs,ontology)
         if fragment != None:
-            print(fragment)
-            pattern = r'(<\?xml version="1\.0"\?>.*?</rdf:RDF>)'
-            match = re.search(pattern, fragment, re.DOTALL)
-            print('life is a series loosely connected disappointments' + str(match))
-            if match:
-                print('it got though first round')
+            try:
+                g = Graph()
+                g.parse(data=fragment, format="turtle")  # or "turtle", "n3", etc
+                old_value = read_file_as_string(f'data/ontologies/{ontology}.txt')
                 try:
-                    g = Graph()
-                    g.parse(data=match.group(0), format="xml")  # or "turtle", "n3", etc
-                    old_value = read_file_as_string(f'data/ontologies/{ontology}.txt')
-                    try:
-                        print('it got though second round')
+                    print('it got though first round')
 
-                        write_string_to_file(f'data/ontologies/{ontology}.txt', match.group(1))
-                        projector = OntologyProjector(bidirectional_taxonomy=False, only_taxonomy=True, include_literals=True)
-                        onto = Ontology(f'data/ontologies/{ontology}.txt')
-                        triplets = projector.project(onto)
-                        print('it passed, and as such the ontology file should at least exist')
-                    except:
-                        print('anonymous objects')
-                        parameters[3].pop()
-                        parameters[len(parameters)-1] = 0
-                        write_string_to_file(f'data/ontologies/{ontology}.txt',old_value)
+                    write_string_to_file(f'data/ontologies/{ontology}.txt', fragment)
+                    projector = OntologyProjector(bidirectional_taxonomy=False, only_taxonomy=True, include_literals=True)
+                    onto = Ontology(f'data/ontologies/{ontology}.txt')
+                    triplets = projector.project(onto)
+                    print('it passed, and as such the ontology file should at least exist')
                 except:
-                    print('invalid rdf syntax')
+                    print('anonymous objects')
                     parameters[3].pop()
                     parameters[len(parameters)-1] = 0
-            else:
-                print('invalid start or close tag')
+                    write_string_to_file(f'data/ontologies/{ontology}.txt',old_value)
+            except:
+                print('invalid rdf syntax')
                 parameters[3].pop()
                 parameters[len(parameters)-1] = 0
 
