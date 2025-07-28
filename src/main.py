@@ -51,7 +51,7 @@ def main_loop(ontology, workflow, parameters):
 
     #triplet_extraction(f'data/ontologies/{ontology}.txt',ontology)
 
-    #coverage = cq_coverage(cqs,parameters[1],ontology)
+    coverage = cq_coverage(cqs,parameters[1],ontology)
 
     #print('coverage: ' + str(coverage))
 
