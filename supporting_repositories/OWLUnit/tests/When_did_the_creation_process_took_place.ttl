@@ -1,0 +1,22 @@
+
+        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	        owlunit:hasCompetencyQuestion "When did the creation process took place?" ;
+ 	        owlunit:hasSPARQLUnitTest """
+	            
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?startDate ?endDate
+WHERE {
+  ?creativeProcess rdf:type <https://w3id.org/polifonia/ontology/music-meta/CreativeProcess> ;
+                   <https://w3id.org/polifonia/ontology/core/activityStartDate> ?startDate ;
+                   <https://w3id.org/polifonia/ontology/core/activityEndDate> ?endDate .
+}
+
+""" ;
+	        owlunit:testsOntology <../../../data/ontologies/ontology.ttl> .

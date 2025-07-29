@@ -1,0 +1,20 @@
+
+        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	        owlunit:hasCompetencyQuestion "Which is the key an abstract score is composed or written in?" ;
+ 	        owlunit:hasSPARQLUnitTest """
+	            
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?key
+WHERE {
+  ?abstractScore rdf:type <https://w3id.org/polifonia/ontology/music-meta/AbstractScore> ;
+                 <https://w3id.org/polifonia/ontology/music-meta/hasKey> ?key .
+  ?key rdf:type <https://w3id.org/polifonia/ontology/music-meta/Key> .
+}
+""" ;
+	        owlunit:testsOntology <../../../data/ontologies/ontology.ttl> .

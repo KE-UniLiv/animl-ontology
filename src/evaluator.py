@@ -7,10 +7,12 @@ from deeponto.onto import Ontology
 from deeponto.onto.projection import OntologyProjector
 import sys
 import os
+import subprocess
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from src.input_output import save_to_csv, overwrite_first_line
-from supporting_repositories.AutoKGQA.API.create_indexes import createIndexes
-from supporting_repositories.AutoKGQA.API.core.QuestionHandler import run_question
+from src.input_output import save_to_csv, overwrite_first_line, read_lines_from_file, write_string_to_file, save_array_to_file
+from supporting_repositories.Auto_KGQA.API.create_indexes import createIndexes
+from supporting_repositories.Auto_KGQA.API.core.QuestionHandler import run_question
 
 
 
@@ -80,8 +82,37 @@ def triplet_extraction(ontology,file_name):
     save_to_csv(data,f'data/extracted_triplets/{file_name}.csv') 
 
 def evaluator(ontology):
-    overwrite_first_line("supporting_repositories/Auto-KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "c:/Users/sgwmorli/internship_stage_2/animl_ontology/animl-ontology/data/ontologies/{ontology}.ttl"')
+    overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "c:/Users/sgwmorli/internship_stage_2/animl_ontology/animl-ontology/data/ontologies/{ontology}.ttl"')
     createIndexes()
+    cqs = read_lines_from_file(f'data/input_cqs/{ontology}.txt')
+    average = 0
+    library = []
+    for cq in cqs:
+        result = run_question(cq)
+        write_string_to_file(f'supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}.ttl',f'''
+        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	        owlunit:hasCompetencyQuestion "{cq}" ;
+ 	        owlunit:hasSPARQLUnitTest """
+	            {result['sparql']}""" ;
+	        owlunit:testsOntology <../../../data/ontologies/ontology.ttl> .''')
+        
+        print("Current working directory:", os.getcwd())
+        output = subprocess.run(["java", "-jar", 'supporting_repositories/OWLUnit/OWLUnit-0.3.2.jar', "--test-case", "https://w3id.org/OWLunit/test/primary","--filepath",f"supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}.ttl"], capture_output = True)
+        print(output)
+        if str(output).__contains__('PASSED'):
+            average += 1
+            result['correctness'] = True
+        else:
+            result['correctness'] = False
+        print(result['correctness'])
+        library.append(result)
+    average = average/len(cqs)
+    print(average)
+    save_array_to_file(library,f'data/addressed_cqs/{ontology}.txt')
 
 
 
