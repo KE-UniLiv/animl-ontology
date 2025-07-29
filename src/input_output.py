@@ -53,7 +53,7 @@ def overwrite_first_line(file_path,first_line):
 
     # Replace the first line
     if lines:
-        lines[0] = first_line
+        lines[0] = f'{first_line}\n'
     else:
         lines = [first_line]
 # Write the modified lines back to the file

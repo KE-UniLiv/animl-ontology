@@ -32,7 +32,6 @@ def call_gemini_api(system_prompt,prompt):
     )
     return response.text
 
-print(call_gemini_api('bruh','rigged'))
 
 
 

@@ -1,4 +1,3 @@
-
 import spacy
 from collections import deque, defaultdict
 import sys
@@ -55,6 +54,3 @@ def cq_coverage(true_cqs,model,ontology):
     save_array_to_file(addressed_cqs,f'data/addressed_cqs/{ontology}.txt')
     
     return len(addressed_cqs)/len(true_cqs)
-
-
-

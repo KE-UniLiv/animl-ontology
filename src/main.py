@@ -1,7 +1,7 @@
 
 from input_output import read_lines_from_file, write_string_to_file, read_csv_to_data_frame, read_file_as_string
 from metrics.LLM_query_complexity import LLM_query_complexity
-from evaluator import triplet_extraction
+from evaluator import triplet_extraction, evaluator
 import re
 import sys
 from metrics.LLM_cq_coverage import cq_coverage
@@ -24,21 +24,7 @@ def main_loop(ontology, workflow, parameters):
         if fragment != None:
             try:
                 g = Graph()
-                g.parse(data=fragment, format="turtle")  # or "turtle", "n3", etc
-                old_value = read_file_as_string(f'data/ontologies/{ontology}.txt')
-                try:
-                    print('it got though first round')
-
-                    write_string_to_file(f'data/ontologies/{ontology}.txt', fragment)
-                    projector = OntologyProjector(bidirectional_taxonomy=False, only_taxonomy=True, include_literals=True)
-                    onto = Ontology(f'data/ontologies/{ontology}.txt')
-                    triplets = projector.project(onto)
-                    print('it passed, and as such the ontology file should at least exist')
-                except:
-                    print('anonymous objects')
-                    parameters[3].pop()
-                    parameters[len(parameters)-1] = 0
-                    write_string_to_file(f'data/ontologies/{ontology}.txt',old_value)
+                g.parse(data=fragment, format="n3")  # or "turtle", "n3", etc
             except:
                 print('invalid rdf syntax')
                 parameters[3].pop()
@@ -47,19 +33,21 @@ def main_loop(ontology, workflow, parameters):
        # except:
         #    parameters[3].pop()
 
-
+    evaluator(ontology)
 
     #triplet_extraction(f'data/ontologies/{ontology}.txt',ontology)
 
-    coverage = cq_coverage(cqs,parameters[1],ontology)
+    #coverage = cq_coverage(cqs,parameters[1],ontology)
 
     #print('coverage: ' + str(coverage))
 
     #average_complexity = query_complexity(read_lines_from_file(f'data/addressed_cqs/{ontology}.txt'),read_csv_to_data_frame(f'data/extracted_triplets/{ontology}.csv'),ontology)
 
     #print('average centrality: ' + str(average_complexity))
-    LLM_complexity = LLM_query_complexity(read_lines_from_file(f'data/addressed_cqs/{ontology}.txt'), parameters[1], read_file_as_string(f'data/ontologies/{ontology}.txt'))
-    print('complexity:' +str(LLM_complexity))
+    #LLM_complexity = LLM_query_complexity(read_lines_from_file(f'data/addressed_cqs/{ontology}.txt'), parameters[1], read_file_as_string(f'data/ontologies/{ontology}.txt'))
+    #print('complexity:' +str(LLM_complexity))
+
+
 
 
 
