@@ -1,0 +1,931 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.ontology.org/zero#> a owl:Ontology .
+<http://www.ontology.org/zero#AbstractScore>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#MusicalPiece>, <http://www.ontology.org/zero#Text>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasFormType> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasFormType> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasInstrumentation> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasInstrumentation> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasMusicalKey> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasMusicalKey> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLicense> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLicense> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Agent>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isInvolvedIn> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Award>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasNominee> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isAwardedTo> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Broadcaster>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Agent>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isBroadcasterOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#BroadcastingSituation>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Process>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTime> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTime> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasBroadcaster> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#CreativeAction>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isPartOfCreativeProcess> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#CreativeProcess>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Process>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasInvolvedAgent> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasCreativeAction> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#creates> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTime> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTime> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#DedicationStatement>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, <http://www.ontology.org/zero#Text>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isDedicatedTo> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isDedicatedTo> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Equipment>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isUsedIn> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#EvenNumber>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Integer> .
+
+<http://www.ontology.org/zero#FormType>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.ontology.org/zero#FormationProcess>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Process>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#forms> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTime> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] ;
+  owl:disjointWith <http://www.ontology.org/zero#BroadcastingSituation>, <http://www.ontology.org/zero#CreativeProcess>, <http://www.ontology.org/zero#PublicationSituation>, <http://www.ontology.org/zero#RecordingProcess> .
+
+<http://www.ontology.org/zero#Instrument>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Equipment>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isIncludedIn> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Instrumentation>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#includesInstrument> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isInstrumentationOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Integer>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Number> .
+
+<http://www.ontology.org/zero#License>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, <http://www.ontology.org/zero#Text>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isLicenseOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Location>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isLocationOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicAlgorithm>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasBeenTrainedOn> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicArtist>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Person>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasReceivedAward> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isNominatedFor> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasGenre> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#influencedBy> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#collaboratesWith> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasActivityStartDate> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasActivityStartDate> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasActivityEndDate> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasActivityEndDate> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasName> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasName> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasAlias> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLanguageCode> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLanguageCode> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicDataset>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isTrainingDataFor> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicEnsemble>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Agent>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#wasFormedThrough> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] ;
+  owl:disjointWith <http://www.ontology.org/zero#Person> .
+
+<http://www.ontology.org/zero#MusicEnsembleMembership>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#memberOfEnsemble> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#memberOfEnsemble> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasMember> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasMember> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasRoleDescription> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasRoleDescription> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTimeInterval> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTimeInterval> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicEntity>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasOpusStatement> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasOpusStatement> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLicense> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasAssociatedText> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasPart> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isPartOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicGenre>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isGenreOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicalPerformance>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Performance>, <http://www.ontology.org/zero#MusicEntity>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isRecordedBy> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#performs> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasOutput> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#MusicalPiece>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#MusicEntity>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isCreatedBy> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isCreatedBy> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isPerformedBy> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] ;
+  owl:disjointWith <http://www.ontology.org/zero#MusicalPerformance>, <http://www.ontology.org/zero#Recording> .
+
+<http://www.ontology.org/zero#NegativeNumber>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Number> ;
+  owl:disjointWith <http://www.ontology.org/zero#PositiveNumber> .
+
+<http://www.ontology.org/zero#Number>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasNumericalValue> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasNumericalValue> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#OddNumber>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Integer> ;
+  owl:disjointWith <http://www.ontology.org/zero#EvenNumber> .
+
+<http://www.ontology.org/zero#Performance>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.ontology.org/zero#Person>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Agent>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isRecipientOfDedication> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#PositiveNumber>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Number> .
+
+<http://www.ontology.org/zero#Process>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.ontology.org/zero#PublicationSituation>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Process>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasPublisher> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTime> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasTime> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLocation> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Publisher>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Agent>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isPublisherOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Recording>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#MusicEntity>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isProducedBy> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isOutputOf> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLicense> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLicense> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#RecordingProcess>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#Process>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#produces> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#records> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#uses> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Release>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#MusicEntity>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLicense> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasLicense> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Text>
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isSourceFor> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isDerivedFrom> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#isAssociatedWith> ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+  ] .
+
+<http://www.ontology.org/zero#Zero>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.ontology.org/zero#EvenNumber>, [
+    a owl:Restriction ;
+    owl:onProperty <http://www.ontology.org/zero#hasNumericalValue> ;
+    owl:hasValue 0
+  ] ;
+  owl:disjointWith <http://www.ontology.org/zero#NegativeNumber>, <http://www.ontology.org/zero#OddNumber>, <http://www.ontology.org/zero#PositiveNumber> .
+
+<http://www.ontology.org/zero#collaboratesWith>
+  a owl:ObjectProperty, owl:SymmetricProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range <http://www.ontology.org/zero#MusicArtist> .
+
+<http://www.ontology.org/zero#creates>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#CreativeProcess> ;
+  rdfs:range <http://www.ontology.org/zero#MusicalPiece> .
+
+<http://www.ontology.org/zero#forms>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#wasFormedThrough> ;
+  rdfs:domain <http://www.ontology.org/zero#FormationProcess> ;
+  rdfs:range <http://www.ontology.org/zero#MusicEnsemble> .
+
+<http://www.ontology.org/zero#hasAssociatedText>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEntity> ;
+  rdfs:range <http://www.ontology.org/zero#Text> .
+
+<http://www.ontology.org/zero#hasBeenTrainedOn>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicAlgorithm> ;
+  rdfs:range <http://www.ontology.org/zero#MusicDataset> .
+
+<http://www.ontology.org/zero#hasBroadcaster>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#BroadcastingSituation> ;
+  rdfs:range <http://www.ontology.org/zero#Broadcaster> .
+
+<http://www.ontology.org/zero#hasCreativeAction>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#CreativeProcess> ;
+  rdfs:range <http://www.ontology.org/zero#CreativeAction> .
+
+<http://www.ontology.org/zero#hasFormType>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#AbstractScore> ;
+  rdfs:range <http://www.ontology.org/zero#FormType> .
+
+<http://www.ontology.org/zero#hasGenre>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range <http://www.ontology.org/zero#MusicGenre> .
+
+<http://www.ontology.org/zero#hasInvolvedAgent>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#CreativeProcess> ;
+  rdfs:range <http://www.ontology.org/zero#Agent> .
+
+<http://www.ontology.org/zero#hasInstrumentation>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#AbstractScore> ;
+  rdfs:range <http://www.ontology.org/zero#Instrumentation> .
+
+<http://www.ontology.org/zero#hasLicense>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEntity> ;
+  rdfs:range <http://www.ontology.org/zero#License> .
+
+<http://www.ontology.org/zero#hasLocation>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#CreativeProcess>, <http://www.ontology.org/zero#PublicationSituation>, <http://www.ontology.org/zero#BroadcastingSituation>, <http://www.ontology.org/zero#FormationProcess> ;
+  rdfs:range <http://www.ontology.org/zero#Location> .
+
+<http://www.ontology.org/zero#hasMember>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEnsembleMembership> ;
+  rdfs:range <http://www.ontology.org/zero#MusicArtist> .
+
+<http://www.ontology.org/zero#hasNominee>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#isNominatedFor> ;
+  rdfs:domain <http://www.ontology.org/zero#Award> ;
+  rdfs:range <http://www.ontology.org/zero#MusicArtist> .
+
+<http://www.ontology.org/zero#hasOutput>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicalPerformance> ;
+  rdfs:range <http://www.ontology.org/zero#Recording> .
+
+<http://www.ontology.org/zero#hasPart>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#isPartOf> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEntity> ;
+  rdfs:range <http://www.ontology.org/zero#MusicEntity> .
+
+<http://www.ontology.org/zero#hasPublisher>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#PublicationSituation> ;
+  rdfs:range <http://www.ontology.org/zero#Publisher> .
+
+<http://www.ontology.org/zero#hasReceivedAward>
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf <http://www.ontology.org/zero#isNominatedFor> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range <http://www.ontology.org/zero#Award> .
+
+<http://www.ontology.org/zero#includesInstrument>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#Instrumentation> ;
+  rdfs:range <http://www.ontology.org/zero#Instrument> .
+
+<http://www.ontology.org/zero#influencedBy>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#influences> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range <http://www.ontology.org/zero#MusicArtist> .
+
+<http://www.ontology.org/zero#influences>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range <http://www.ontology.org/zero#MusicArtist> .
+
+<http://www.ontology.org/zero#isAssociatedWith>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasAssociatedText> ;
+  rdfs:domain <http://www.ontology.org/zero#Text> ;
+  rdfs:range <http://www.ontology.org/zero#MusicEntity> .
+
+<http://www.ontology.org/zero#isAwardedTo>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasReceivedAward> ;
+  rdfs:domain <http://www.ontology.org/zero#Award> ;
+  rdfs:range <http://www.ontology.org/zero#MusicArtist> .
+
+<http://www.ontology.org/zero#isBroadcasterOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasBroadcaster> ;
+  rdfs:domain <http://www.ontology.org/zero#Broadcaster> ;
+  rdfs:range <http://www.ontology.org/zero#BroadcastingSituation> .
+
+<http://www.ontology.org/zero#isCreatedBy>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#creates> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicalPiece> ;
+  rdfs:range <http://www.ontology.org/zero#CreativeProcess> .
+
+<http://www.ontology.org/zero#isDedicatedTo>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#DedicationStatement> ;
+  rdfs:range <http://www.ontology.org/zero#Person> .
+
+<http://www.ontology.org/zero#isDerivedFrom>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#isSourceFor> ;
+  rdfs:domain <http://www.ontology.org/zero#Text> ;
+  rdfs:range <http://www.ontology.org/zero#Text> .
+
+<http://www.ontology.org/zero#isFormTypeOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasFormType> ;
+  rdfs:domain <http://www.ontology.org/zero#FormType> ;
+  rdfs:range <http://www.ontology.org/zero#AbstractScore> .
+
+<http://www.ontology.org/zero#isGenreOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasGenre> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicGenre> ;
+  rdfs:range <http://www.ontology.org/zero#MusicArtist> .
+
+<http://www.ontology.org/zero#isIncludedIn>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#includesInstrument> ;
+  rdfs:domain <http://www.ontology.org/zero#Instrument> ;
+  rdfs:range <http://www.ontology.org/zero#Instrumentation> .
+
+<http://www.ontology.org/zero#isInvolvedIn>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasInvolvedAgent> ;
+  rdfs:domain <http://www.ontology.org/zero#Agent> ;
+  rdfs:range <http://www.ontology.org/zero#CreativeProcess> .
+
+<http://www.ontology.org/zero#isInstrumentationOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasInstrumentation> ;
+  rdfs:domain <http://www.ontology.org/zero#Instrumentation> ;
+  rdfs:range <http://www.ontology.org/zero#AbstractScore> .
+
+<http://www.ontology.org/zero#isLicenseOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasLicense> ;
+  rdfs:domain <http://www.ontology.org/zero#License> ;
+  rdfs:range <http://www.ontology.org/zero#MusicEntity> .
+
+<http://www.ontology.org/zero#isLocationOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasLocation> ;
+  rdfs:domain <http://www.ontology.org/zero#Location> ;
+  rdfs:range <http://www.ontology.org/zero#CreativeProcess>, <http://www.ontology.org/zero#PublicationSituation>, <http://www.ontology.org/zero#BroadcastingSituation>, <http://www.ontology.org/zero#FormationProcess> .
+
+<http://www.ontology.org/zero#isNominatedFor>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range <http://www.ontology.org/zero#Award> .
+
+<http://www.ontology.org/zero#isPartOf>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEntity> ;
+  rdfs:range <http://www.ontology.org/zero#MusicEntity> .
+
+<http://www.ontology.org/zero#isOutputOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasOutput> ;
+  rdfs:domain <http://www.ontology.org/zero#Recording> ;
+  rdfs:range <http://www.ontology.org/zero#MusicalPerformance> .
+
+<http://www.ontology.org/zero#isPerformedBy>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#performs> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicalPiece> ;
+  rdfs:range <http://www.ontology.org/zero#MusicalPerformance> .
+
+<http://www.ontology.org/zero#isPartOfCreativeProcess>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasCreativeAction> ;
+  rdfs:domain <http://www.ontology.org/zero#CreativeAction> ;
+  rdfs:range <http://www.ontology.org/zero#CreativeProcess> .
+
+<http://www.ontology.org/zero#isProducedBy>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#produces> ;
+  rdfs:domain <http://www.ontology.org/zero#Recording> ;
+  rdfs:range <http://www.ontology.org/zero#RecordingProcess> .
+
+<http://www.ontology.org/zero#isPublisherOf>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasPublisher> ;
+  rdfs:domain <http://www.ontology.org/zero#Publisher> ;
+  rdfs:range <http://www.ontology.org/zero#PublicationSituation> .
+
+<http://www.ontology.org/zero#isRecordedBy>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#records> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicalPerformance> ;
+  rdfs:range <http://www.ontology.org/zero#RecordingProcess> .
+
+<http://www.ontology.org/zero#isRecipientOfDedication>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#isDedicatedTo> ;
+  rdfs:domain <http://www.ontology.org/zero#Person> ;
+  rdfs:range <http://www.ontology.org/zero#DedicationStatement> .
+
+<http://www.ontology.org/zero#isSourceFor>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#Text> ;
+  rdfs:range <http://www.ontology.org/zero#Text> .
+
+<http://www.ontology.org/zero#isTrainingDataFor>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#hasBeenTrainedOn> ;
+  rdfs:domain <http://www.ontology.org/zero#MusicDataset> ;
+  rdfs:range <http://www.ontology.org/zero#MusicAlgorithm> .
+
+<http://www.ontology.org/zero#isUsedIn>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.ontology.org/zero#uses> ;
+  rdfs:domain <http://www.ontology.org/zero#Equipment> ;
+  rdfs:range <http://www.ontology.org/zero#RecordingProcess> .
+
+<http://www.ontology.org/zero#memberOfEnsemble>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEnsembleMembership> ;
+  rdfs:range <http://www.ontology.org/zero#MusicEnsemble> .
+
+<http://www.ontology.org/zero#performs>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicalPerformance> ;
+  rdfs:range <http://www.ontology.org/zero#MusicalPiece> .
+
+<http://www.ontology.org/zero#produces>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#RecordingProcess> ;
+  rdfs:range <http://www.ontology.org/zero#Recording> .
+
+<http://www.ontology.org/zero#records>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#RecordingProcess> ;
+  rdfs:range <http://www.ontology.org/zero#MusicalPerformance> .
+
+<http://www.ontology.org/zero#uses>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#RecordingProcess> ;
+  rdfs:range <http://www.ontology.org/zero#Equipment> .
+
+<http://www.ontology.org/zero#wasFormedThrough>
+  a owl:ObjectProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEnsemble> ;
+  rdfs:range <http://www.ontology.org/zero#FormationProcess> .
+
+<http://www.ontology.org/zero#hasMusicalKey>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#AbstractScore> ;
+  rdfs:range xsd:string .
+
+<http://www.ontology.org/zero#hasNumericalValue>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#Number> ;
+  rdfs:range xsd:integer .
+
+<http://www.ontology.org/zero#hasOpusStatement>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEntity> ;
+  rdfs:range xsd:string .
+
+<http://www.ontology.org/zero#hasRoleDescription>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEnsembleMembership> ;
+  rdfs:range xsd:string .
+
+<http://www.ontology.org/zero#hasTime>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#CreativeProcess>, <http://www.ontology.org/zero#PublicationSituation>, <http://www.ontology.org/zero#BroadcastingSituation>, <http://www.ontology.org/zero#FormationProcess> ;
+  rdfs:range xsd:dateTime .
+
+<http://www.ontology.org/zero#hasTimeInterval>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicEnsembleMembership> ;
+  rdfs:range xsd:string .
+
+<http://www.ontology.org/zero#hasActivityStartDate>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range xsd:date .
+
+<http://www.ontology.org/zero#hasActivityEndDate>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range xsd:date .
+
+<http://www.ontology.org/zero#hasName>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range xsd:string .
+
+<http://www.ontology.org/zero#hasAlias>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range xsd:string .
+
+<http://www.ontology.org/zero#hasLanguageCode>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.ontology.org/zero#MusicArtist> ;
+  rdfs:range xsd:string .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <http://www.ontology.org/zero#Agent>
+   <http://www.ontology.org/zero#Award>
+   <http://www.ontology.org/zero#BroadcastingSituation>
+   <http://www.ontology.org/zero#CreativeAction>
+   <http://www.ontology.org/zero#DedicationStatement>
+   <http://www.ontology.org/zero#Equipment>
+   <http://www.ontology.org/zero#FormType>
+   <http://www.ontology.org/zero#FormationProcess>
+   <http://www.ontology.org/zero#Instrumentation>
+   <http://www.ontology.org/zero#License>
+   <http://www.ontology.org/zero#Location>
+   <http://www.ontology.org/zero#MusicAlgorithm>
+   <http://www.ontology.org/zero#MusicDataset>
+   <http://www.ontology.org/zero#MusicEnsemble>
+   <http://www.ontology.org/zero#MusicEnsembleMembership>
+   <http://www.ontology.org/zero#MusicGenre>
+   <http://www.ontology.org/zero#MusicalPerformance>
+   <http://www.ontology.org/zero#Number>
+   <http://www.ontology.org/zero#Process>
+   <http://www.ontology.org/zero#PublicationSituation>
+   <http://www.ontology.org/zero#Recording>
+   <http://www.ontology.org/zero#Release>
+ ) .
