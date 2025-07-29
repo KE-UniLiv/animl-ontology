@@ -46,3 +46,16 @@ def save_to_csv(data,file_path):
     with open(file_path, 'w', newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter='\t') # the s, p, o saves in the csv file and seperated by space no commas if i want comma delete the delimiter
         writer.writerows(data)
+
+def overwrite_first_line(file_path,first_line):
+    with open(file_path, "r") as file:
+        lines = file.readlines()
+
+    # Replace the first line
+    if lines:
+        lines[0] = first_line
+    else:
+        lines = [first_line]
+# Write the modified lines back to the file
+    with open(file_path, "w") as file:
+        file.writelines(lines)

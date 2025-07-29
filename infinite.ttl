@@ -3,7 +3,14 @@
 @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
 
 owlunittest:death  a owlunit:CompetencyQuestionVerification ;
- 	owlunit:hasCompetencyQuestion "Which award has a music artist received?" ;
- 	owlunit:hasSPARQLUnitTest """	PREFIX mm: <https://w3id.org/polifonia/ontology/music-meta/>
-	 SELECT DISTINCT ?award ?musicArtist WHERE {?musicArtist a mm:MusicArtist ; mm:receivedAward ?award}""" ;
-	owlunit:testsOntology <data/ontologies/test_ontology.ttl> . 
+ 	owlunit:hasCompetencyQuestion "Which award has a music artist received a nomination for?" ;
+ 	owlunit:hasSPARQLUnitTest """
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX ns1: <http://www.kgqa.com/>
+	
+	SELECT ?award WHERE {
+    ?musicArtist rdf:type <https://w3id.org/polifonia/ontology/music-meta/MusicArtist> .
+    ?musicArtist <https://w3id.org/polifonia/ontology/music-meta/nominatedForAward> ?award .
+	}""" ;
+	owlunit:testsOntology <data/ontologies/ontology.ttl> . 
