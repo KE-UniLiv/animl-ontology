@@ -3,11 +3,14 @@ from sklearn.metrics.pairwise import cosine_distances
 import numpy as np
 import torch
 from rdflib import Graph, RDF, BNode
-
 from deeponto.onto import Ontology
 from deeponto.onto.projection import OntologyProjector
-from src.input_output import save_to_csv
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from src.input_output import save_to_csv, overwrite_first_line
+from supporting_repositories.AutoKGQA.API.create_indexes import createIndexes
+from supporting_repositories.AutoKGQA.API.core.QuestionHandler import run_question
 
 
 
@@ -75,5 +78,10 @@ def triplet_extraction(ontology,file_name):
         obj = con(o)  
         data.append([sub, pre, obj])
     save_to_csv(data,f'data/extracted_triplets/{file_name}.csv') 
+
+def evaluator(ontology):
+    overwrite_first_line("supporting_repositories/Auto-KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "c:/Users/sgwmorli/internship_stage_2/animl_ontology/animl-ontology/data/ontologies/{ontology}.ttl"')
+    createIndexes()
+
 
 
