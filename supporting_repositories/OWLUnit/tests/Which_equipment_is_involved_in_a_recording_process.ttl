@@ -1,0 +1,26 @@
+
+        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	        owlunit:hasCompetencyQuestion "Which equipment is involved in a recording process?" ;
+ 	        owlunit:hasSPARQLUnitTest """
+	            
+
+PREFIX ns1: <http://www.kgqa.com/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?equipmentLabel
+WHERE {
+    ?recordingProcess rdf:type <https://w3id.org/polifonia/ontology/music-meta/RecordingProcess> .
+    ?recordingProcess <https://w3id.org/polifonia/ontology/music-meta/hasEquipment> ?equipment .
+    ?equipment rdf:type <https://w3id.org/polifonia/ontology/music-meta/RecordingEquipment> .
+    ?equipment rdfs:label ?equipmentLabel
+}
+
+""" ;
+	        owlunit:testsOntology <../../../data/ontologies/ontology.ttl> .

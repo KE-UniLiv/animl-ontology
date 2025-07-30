@@ -1,0 +1,19 @@
+
+        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	        owlunit:hasCompetencyQuestion "Which music dataset has a music algorithm been trained on?" ;
+ 	        owlunit:hasSPARQLUnitTest """
+	            
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX music: <https://w3id.org/polifonia/ontology/music-meta/>
+
+SELECT ?musicDataset
+WHERE {
+    ?musicAlgorithm rdf:type music:MusicAlgorithm .
+    ?musicAlgorithm music:isTrainedOn ?musicDataset .
+}
+""" ;
+	        owlunit:testsOntology <../../../data/ontologies/ontology.ttl> .

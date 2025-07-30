@@ -1,0 +1,22 @@
+
+        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	        owlunit:hasCompetencyQuestion "for a parameter blueprint, what is the blueprint for the category within which the corresponding parameter resides?" ;
+ 	        owlunit:hasSPARQLUnitTest """
+	            
+PREFIX ns1: <http://www.kgqa.com/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?parameterCategory ?categoryBlueprint
+WHERE {
+  ?parameterBlueprint a ns1:ParameterType.
+  ?parameterBlueprint ns1:has_Category ?parameterCategory.
+  ?parameterCategory ns1:has_Parameter ?parameterBlueprint.
+  ?parameterCategory ns1:has_Blueprint ?categoryBlueprint.
+}
+
+""" ;
+	        owlunit:testsOntology <../../../data/ontologies/animl_skeleton.ttl> .

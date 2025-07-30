@@ -1,0 +1,21 @@
+
+        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	        owlunit:hasCompetencyQuestion "What experiment steps are included in a result?" ;
+ 	        owlunit:hasSPARQLUnitTest """
+	            
+PREFIX ns1: <http://www.kgqa.com/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?resultStep ?experimentStepLabel
+WHERE {
+  ?resultStep a ns1:ResultType.
+  ?resultStep ns1:has_ExperimentStepSet ?experimentStepSet.
+  ?experimentStepSet ns1:has_ExperimentStep ?experimentStep.
+  ?experimentStep rdfs:label ?experimentStepLabel
+}
+""" ;
+	        owlunit:testsOntology <../../../data/ontologies/animl_skeleton.ttl> .

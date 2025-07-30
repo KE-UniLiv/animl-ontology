@@ -1,0 +1,83 @@
+What experiment steps are included in a result?
+what series did datapoints in infrastructure originate from?
+for a parameter blueprint, what is the blueprint for the category within which the corresponding parameter resides?
+for a series, what type of datapoints does it contain?
+for a technique, what techniques extend it?
+for a sample, which step produced it and which step consumes it?
+when a sample is referenced in infrastrustructure, is that sample derived in a previous step?
+which items can have signatures attached to them?
+what are the different data types present in a series?
+what is the first value in a series?
+what actions has an author performed?
+what software has been run on a device?
+which parameters in a category are optional?
+which parameters are common between allowed series blueprints in a series set blueprint?
+which categories are sub categories
+is a samples (A) container (B) produced in the same experiment step as sample (A) is consumed?
+do any human authors have versions?
+does a series relate to a result, method, or sample?
+is a series contained in a sub category?
+what is the container of an item pointed to by a reference?
+which experiment steps where present in the previous version of a document?
+what is the timestamp at which a sample is referenced?
+which experiment steps is a technique used in?
+how many samples can be in the parentdatareferenceset for an experiment before the constraints of its technqiue are violated?
+for a datappoint in a series, what is the value at the equivalent position in the other series in the same serieset?
+can a result share series with an experimentstep it references?
+are any samples derived from derived experiment steps?
+which positions in a container are occupied?
+which parameters are tied to experiment steps and which are tied to samples?
+which changes has software been involved in
+what is the version two versions before a current version?
+do an changes effect versions?
+would any part of a template violate any part of the techqniue for any of the experiment steps using it?
+is the any tag shared by at least two instances of different classes?
+which series sets contain empty series?
+what is the data type (required by the technqiue) for a series?
+does a document have at least one of every relation type it can have?
+is a technique both extended and an extension?
+who is the author of a revision during which a series was created that violated a technique?
+which pieces of infrastructure query data from their own experiment steps results?
+What is the ID of the container that a sample is in?
+What is the comment for an object?
+What is the name and value of a tag associated with an object?
+Which samples are does a container contain?
+Which samples are derived?
+what is the role of a reference?
+what result data points are included in an infrastructure?
+What is the id for referenced data?
+which experiment steps are included in a result?
+are experiment steps included in a result to be produced or consumed?
+What is the URI of a techniqu?
+What is the SHA256 checksum of a technique?
+What is the phone number of an author?
+What is the address of an author?
+What is the id of a device?
+Who is the manufacturer of a piece of software?
+What is the length of a series?
+For a series with auto-incremented values, what is the starting value?
+For a series with auto-incremented values, what is the increment between values?
+what is the numeric value of an encoded data point?
+What is the offset value for a derived SI unit's definition?
+What software was used to create a diff in the version history?
+What was the scope of a change recorded in a diff entry (element or attributes)?
+Which experiment steps is a sample used in?
+which results reference a given experiment step?
+which results reference a given series?
+Which experiment steps make use of a specific template ID?
+which techniques can an extension extend?
+which extensions can an extension extend?
+What are the category blueprints defined within a specific sample role blueprint?
+how many experiment steps can be in an infrastructure according to a technique?
+how many results can one experiment step have?
+what is the documentation for an object?
+how many series of a certain blueprint can occur in a set?
+what are the units for a parameter?
+what are the literature references for a technique?
+what is the infrastructure for a template / experiment step?
+what is the method for a template / expierment step?
+what is the result for a template / experiment step?
+what is technique for a template / experiment step?
+what data types are present in a series?
+
+

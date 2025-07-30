@@ -83,6 +83,22 @@ def triplet_extraction(ontology,file_name):
 
 def evaluator(ontology):
     print('this is running')
+    print('''
+      ,-'"""`-.
+    ,'         `.
+   /        `    \
+  (    /          )
+  |             " |
+  (               )
+ `.\\          \ /
+   `:.     , \ ,\ _
+ hh  `:-.___,-`-.{\)
+       `.        |/ \
+         `.        \ \
+           `-.     _\,)
+              `.  |,-||
+                `.|| ||
+    one must imagine sisphyus happy''')
     overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/{ontology}.ttl"')
     createIndexes()
     cqs = read_lines_from_file(f'data/input_cqs/{ontology}.txt')
@@ -99,7 +115,7 @@ def evaluator(ontology):
  	        owlunit:hasCompetencyQuestion "{cq}" ;
  	        owlunit:hasSPARQLUnitTest """
 	            {result['sparql']}""" ;
-	        owlunit:testsOntology <../../../data/ontologies/ontology.ttl> .''')
+	        owlunit:testsOntology <../../../data/ontologies/{ontology}.ttl> .''')
         
         print("Current working directory:", os.getcwd())
         output = subprocess.run(["java", "-jar", 'supporting_repositories/OWLUnit/OWLUnit-0.3.2.jar', "--test-case", "https://w3id.org/OWLunit/test/primary","--filepath",f"supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}.ttl"], capture_output = True)
