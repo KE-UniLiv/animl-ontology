@@ -1,0 +1,253 @@
+http://www.ontology.org/zero#hasLocation
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://www.ontology.org/zero#hasInvolvedAgent
+1
+http://www.ontology.org/zero#isFormTypeOf
+zero is Form Type Of
+http://www.ontology.org/zero#NegativeNumber
+http://www.w3.org/2002/07/owl#Class
+http://www.ontology.org/zero#BroadcastingSituation
+http://www.ontology.org/zero#Process
+http://www.ontology.org/zero#isPartOf
+http://www.ontology.org/zero#FormType
+http://www.w3.org/2002/07/owl#maxCardinality
+http://www.w3.org/2002/07/owl#Restriction
+http://www.ontology.org/zero#hasNominee
+zero has Nominee
+http://www.ontology.org/zero#isPartOfCreativeProcess
+zero is Part Of Creative Process
+http://www.ontology.org/zero#hasActivityEndDate
+http://www.w3.org/2001/XMLSchema#date
+zero Form Type
+http://www.ontology.org/zero#influences
+http://www.ontology.org/zero#hasBroadcaster
+http://www.w3.org/2002/07/owl#AllDisjointClasses
+http://www.ontology.org/zero#isTrainingDataFor
+http://www.ontology.org/zero#MusicAlgorithm
+http://www.ontology.org/zero#isProducedBy
+http://www.ontology.org/zero#hasOpusStatement
+http://www.ontology.org/zero#collaboratesWith
+http://www.ontology.org/zero#MusicArtist
+http://www.w3.org/2002/07/owl#onProperty
+http://www.w3.org/2002/07/owl#SymmetricProperty
+http://www.ontology.org/zero#MusicEntity
+http://www.w3.org/2002/07/owl#Thing
+http://www.ontology.org/zero#Award
+http://www.ontology.org/zero#isAssociatedWith
+http://www.ontology.org/zero#CreativeProcess
+http://www.ontology.org/zero#MusicDataset
+http://www.ontology.org/zero#isNominatedFor
+file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology/superclass
+http://www.ontology.org/zero#MusicalPiece
+http://www.ontology.org/zero#hasLanguageCode
+http://www.ontology.org/zero#memberOfEnsemble
+http://www.ontology.org/zero#hasAlias
+http://www.ontology.org/zero#hasTimeInterval
+owl on Property
+http://www.ontology.org/zero#FormationProcess
+http://www.ontology.org/zero#hasRoleDescription
+http://www.ontology.org/zero#MusicEnsembleMembership
+http://www.ontology.org/zero#License
+http://www.w3.org/2002/07/owl#minCardinality
+71
+http://www.ontology.org/zero#Number
+http://www.ontology.org/zero#PositiveNumber
+http://www.ontology.org/zero#EvenNumber
+zero Even Number
+http://www.ontology.org/zero#produces
+zero produces
+http://www.ontology.org/zero#hasNumericalValue
+zero has Numerical Value
+zero has Language Code
+http://www.ontology.org/zero#hasBeenTrainedOn
+http://www.ontology.org/zero#hasMusicalKey
+http://www.w3.org/2001/XMLSchema#string
+http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
+http://www.ontology.org/zero#isBroadcasterOf
+http://www.ontology.org/zero#uses
+http://www.ontology.org/zero#RecordingProcess
+http://www.ontology.org/zero#wasFormedThrough
+22-rdf-syntax-ns rest
+zero has Broadcaster
+http://www.ontology.org/zero#Equipment
+zero Music Ensemble Membership
+http://www.ontology.org/zero#AbstractScore
+zero Music Dataset
+http://www.ontology.org/zero#hasMember
+zero has Member
+http://www.ontology.org/zero#hasPublisher
+zero has Publisher
+http://www.ontology.org/zero#isGenreOf
+http://www.ontology.org/zero#isLocationOf
+http://www.ontology.org/zero#isLicenseOf
+http://www.w3.org/2002/07/owl#DatatypeProperty
+http://www.w3.org/1999/02/22-rdf-syntax-ns#first
+22
+http://www.ontology.org/zero#isDedicatedTo
+http://www.ontology.org/zero#Person
+http://www.ontology.org/zero#isCreatedBy
+http://www.ontology.org/zero#hasTime
+zero has Time
+zero is Associated With
+http://www.ontology.org/zero#hasName
+zero has Name
+http://www.ontology.org/zero#isSourceFor
+http://www.ontology.org/zero#Text
+http://www.ontology.org/zero#forms
+zero Recording Process
+http://www.ontology.org/zero#Broadcaster
+http://www.w3.org/2001/XMLSchema#dateTime
+http://www.ontology.org/zero#MusicEnsemble
+http://www.ontology.org/zero#records
+http://www.ontology.org/zero#MusicalPerformance
+zero License
+http://www.ontology.org/zero#isDerivedFrom
+http://www.ontology.org/zero#isRecordedBy
+http://www.ontology.org/zero#Release
+zero Release
+http://www.ontology.org/zero#hasCreativeAction
+http://www.ontology.org/zero#CreativeAction
+owl Restriction
+http://www.ontology.org/zero#isIncludedIn
+http://www.ontology.org/zero#creates
+zero has Creative Action
+zero is Created By
+http://www.w3.org/2002/07/owl#hasValue
+http://www.ontology.org/zero#hasReceivedAward
+zero has Received Award
+http://www.ontology.org/zero#includesInstrument
+zero includes Instrument
+zero Negative Number
+http://www.ontology.org/zero#isPerformedBy
+owl Datatype Property
+zero forms
+http://www.ontology.org/zero#hasActivityStartDate
+zero has Activity Start Date
+owl Symmetric Property
+zero influences
+http://www.ontology.org/zero#Integer
+http://www.ontology.org/zero#Instrumentation
+http://www.ontology.org/zero#influencedBy
+http://www.ontology.org/zero#PublicationSituation
+http://www.ontology.org/zero#DedicationStatement
+http://www.ontology.org/zero#isAwardedTo
+http://www.ontology.org/zero#isInvolvedIn
+http://www.ontology.org/zero#Publisher
+http://www.ontology.org/zero#Location
+zero has Time Interval
+http://www.ontology.org/zero#isOutputOf
+zero Publisher
+http://www.ontology.org/zero#hasFormType
+http://www.ontology.org/zero#OddNumber
+zero Odd Number
+http://www.ontology.org/zero#hasAssociatedText
+http://www.ontology.org/zero#MusicGenre
+http://www.ontology.org/zero#isRecipientOfDedication
+http://www.ontology.org/zero#Agent
+http://www.ontology.org/zero#hasGenre
+zero Person
+zero records
+http://www.ontology.org/zero#hasOutput
+http://www.ontology.org/zero#hasPart
+http://www.w3.org/2002/07/owl#disjointWith
+12
+zero has Form Type
+zero Award
+zero Music Artist
+zero Integer
+http://www.w3.org/2002/07/owl#members
+owl members
+http://www.ontology.org/zero#hasInstrumentation
+zero is Nominated For
+zero is Performed By
+http://www.ontology.org/zero#isPublisherOf
+http://www.ontology.org/zero#isInstrumentationOf
+http://www.ontology.org/zero#Recording
+zero Equipment
+zero Formation Process
+http://www.ontology.org/zero#performs
+http://www.ontology.org/zero#Instrument
+zero Location
+zero has Output
+zero Creative Process
+http://www.ontology.org/zero#hasLicense
+http://www.ontology.org/zero#isUsedIn
+owl has Value
+zero is Output Of
+zero Musical Performance
+owl max Cardinality
+owl All Disjoint Classes
+zero collaborates With
+http://www.ontology.org/zero#Zero
+http://www.w3.org/2002/07/owl#ObjectProperty
+owl disjoint With
+http://www.w3.org/2002/07/owl#Ontology
+http://www.ontology.org/zero#Performance
+zero is Involved In
+zero is Recorded By
+owl Class
+zero has Location
+zero Process
+zero has Opus Statement
+zero has Been Trained On
+zero is Location Of
+zero Publication Situation
+zero is Recipient Of Dedication
+http://www.w3.org/2002/07/owl#inverseOf
+owl Ontology
+zero Abstract Score
+zero influenced By
+zero is Training Data For
+zero performs
+owl min Cardinality
+zero uses
+zero Text
+zero has License
+zero has Involved Agent
+zero has Role Description
+22-rdf-syntax-ns first
+zero Music Algorithm
+zero is Included In
+zero Creative Action
+zero Zero
+zero is Publisher Of
+zero has Activity End Date
+zero has Instrumentation
+zero Number
+25
+owl inverse Of
+zero is Dedicated To
+zero Musical Piece
+zero has Part
+zero is License Of
+zero is Instrumentation Of
+zero is Part Of
+zero Performance
+zero Agent
+zero Instrument
+zero has Associated Text
+zero Broadcasting Situation
+zero is Produced By
+zero has Genre
+zero is Derived From
+zero Music Genre
+zero is Genre Of
+zero member Of Ensemble
+zero Broadcaster
+zero is Source For
+zero Recording
+zero is Awarded To
+zero has Alias
+zero Instrumentation
+zero was Formed Through
+zero is Used In
+97
+zero creates
+zero Dedication Statement
+zero Positive Number
+zero is Broadcaster Of
+owl Object Property
+zero Music Entity
+http://www.w3.org/2001/XMLSchema#integer
+zero Music Ensemble
+zero has Musical Key

@@ -109,3 +109,45 @@
  INFO 2025-07-29 16:18:59,407 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
  INFO 2025-07-29 16:19:18,494 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
  INFO 2025-07-29 16:19:38,942 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 09:58:43,215 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 09:59:01,126 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 09:59:23,499 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 09:59:40,488 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 09:59:59,058 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:00:19,076 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:00:35,654 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:00:55,406 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:01:13,082 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:01:33,157 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:01:52,761 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:02:09,826 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:02:27,040 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:02:45,723 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:03:03,220 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:03:20,273 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:03:37,455 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:03:53,952 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:04:10,388 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:04:27,648 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:04:45,017 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:05:00,654 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:05:17,143 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:05:35,867 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:05:52,154 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:06:10,925 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:06:27,154 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:06:43,547 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:06:58,838 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:07:15,917 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:07:33,156 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:07:51,224 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:08:08,856 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:08:27,538 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:08:47,770 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:09:04,554 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:09:25,122 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:09:42,536 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:09:59,392 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:10:15,840 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:10:34,558 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary
+ INFO 2025-07-30 10:10:51,314 [main] (OWLUnit.java:89) - Test case URI https://w3id.org/OWLunit/test/primary

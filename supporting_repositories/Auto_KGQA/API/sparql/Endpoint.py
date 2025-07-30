@@ -65,7 +65,8 @@ class Endpoint:
     def run_sparql_rdflib(self,query):
         if self.graph == None and self.url_endpoint != None:
             g = Graph()
-            self.graph = g.parse(self.url_endpoint,format=guess_format(self.url_endpoint))
+            print(self.url_endpoint)
+            self.graph = g.parse(self.url_endpoint,format='n3')
         qres = self.graph.query(query)
         #print('the result of the query is ')
         
@@ -111,66 +112,46 @@ class Endpoint:
         #print('life is not purposeful')
         try:
             result_set = []
-            if self.url_endpoint != None and'http' in self.url_endpoint:
-                #Enpoint is a valid remote SPARQL endpoint
-                sparql = SPARQLWrapper(self.url_endpoint)
-                sparql.setQuery(query)
-                sparql.setReturnFormat(JSON)
-                results = sparql.query().convert()
-                for result in results["results"]["bindings"]:
+            #Enpoint is a local file
+            results= self.run_sparql_rdflib(query)
+            results = xmltodict.parse(results.serialize())
+            # print(results)
+            if results["sparql"]["results"] == None:
+                return result_set
+            if type(results["sparql"]["results"]["result"]) is dict:
                     result_item = {}
-                    for var in result:
-                        value = result[var]["value"].replace('"',"'")
-                        if value.lower() == "false" or value.lower() == "true":
-                            value = value.lower()
-                        if 'datatype' in result[var]:
-                            if str(result[var]["datatype"])=="http://localhost:8890/null":
-                                if value.lower() == "false" or value.lower() == "true":
-                                    result[var]["datatype"] = "http://www.w3.org/2001/XMLSchema#boolean"
-                                else:
-                                    try:
-                                        float(var)
-                                        result[var]["datatype"] = "http://www.w3.org/2001/XMLSchema#float"
-                                    except:
-                                        result[var]["datatype"] = "http://www.w3.org/2001/XMLSchema#string"
-                            result_item["?"+var] = f'\"{str(value)}\"^^<{str(result[var]["datatype"])}>'
-                        else:
-                            result_item["?"+var] = str(value)
-                    result_set.append(result_item)
-            else:
-                #Enpoint is a local file
-                results= self.run_sparql_rdflib(query)
-                results = xmltodict.parse(results.serialize())
-                # print(results)
-                if results["sparql"]["results"] == None:
-                    return result_set
-                if type(results["sparql"]["results"]["result"]) is dict:
-                        result_item = {}
-                        if type(results["sparql"]["results"]["result"]["binding"]) is list:
-                            for var in results["sparql"]["results"]["result"]["binding"]:
-                                #print('one value was read safely A')
-                                result_item["?"+var["@name"]] = self.parse_value_redflib_result(var)
-                            result_set.append(result_item)
-                        else:
-                            var = results["sparql"]["results"]["result"]["binding"]
-                            #print('one value was read safely B')
+                    if type(results["sparql"]["results"]["result"]["binding"]) is list:
+                        for var in results["sparql"]["results"]["result"]["binding"]:
+                            #print('one value was read safely A')
                             result_item["?"+var["@name"]] = self.parse_value_redflib_result(var)
                         result_set.append(result_item)
-                else:
+                    else:
+                        var = results["sparql"]["results"]["result"]["binding"]
+                        #print('one value was read safely B')
+                        result_item["?"+var["@name"]] = self.parse_value_redflib_result(var)
+                    result_set.append(result_item)
+            else:
+                print(results)
+                print(results['sparql'])
+                print(results['sparql']['results'])
+                print(results['sparql']['results']['result'])
+                if results["sparql"]["results"]["result"] != None:
                     for result in results["sparql"]["results"]["result"]:
                         result_item = {}
                         if type(result["binding"]) is list:
                             for var in result["binding"]:
-                               # print('one value was read safely C')
+                              # print('one value was read safely C')
                                 result_item["?"+var["@name"]] = self.parse_value_redflib_result(var)
                         else:
-                           # print('one value was read safely D')
-                            #print(result)
-                            #print(result['binding'])
+                         # print('one value was read safely D')
+                          #print(result)
+                           #print(result['binding'])
                             result_item["?"+result["binding"]["@name"]] = self.parse_value_redflib_result(result["binding"])
-                       # print('result item' + str(result_item))               
+                        # print('result item' + str(result_item))               
                         if ('?term' not in result_item) or (result_item["?term"] != "term"):
                             result_set.append(result_item)
+                else:
+                    result_set = []
             return result_set
         except Exception as e:
             print("Exception on run_sparql: "+str(e))

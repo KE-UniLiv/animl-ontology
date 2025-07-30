@@ -82,7 +82,8 @@ def triplet_extraction(ontology,file_name):
     save_to_csv(data,f'data/extracted_triplets/{file_name}.csv') 
 
 def evaluator(ontology):
-    overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "c:/Users/sgwmorli/internship_stage_2/animl_ontology/animl-ontology/data/ontologies/{ontology}.ttl"')
+    print('this is running')
+    overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/{ontology}.ttl"')
     createIndexes()
     cqs = read_lines_from_file(f'data/input_cqs/{ontology}.txt')
     average = 0
