@@ -1,166 +1,166 @@
-<http://www.w3.org/2002/07/owl#onProperty> <http://www.kgqa.com/count> "10"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Music Artist".
-<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has End Time".
-<http://example.org/music-ontology#involvesAgent> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Process> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Process".
-<http://example.org/music-ontology#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "owl Object Property".
-<http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#MusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Musical Performance".
-<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://www.w3.org/2002/07/owl#Restriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://www.w3.org/2002/07/owl#Restriction> <http://www.w3.org/2000/01/rdf-schema#label> "owl Restriction".
-<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass".
-<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#MusicalPiece> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract musical composition or work.".
-<http://example.org/music-ontology#CreativeAction> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific action or step within a creative process.".
-<http://example.org/music-ontology#receivedNominationFor> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#receivedAward> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Agent".
-<http://example.org/music-ontology#creates> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#MusicalPiece>.
-<http://www.w3.org/2002/07/owl#Ontology> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#receivedAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#CreativeProcess> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#RecordingProcess>.
-<http://example.org/music-ontology#RecordingProcess> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Recording> <http://www.w3.org/2000/01/rdf-schema#comment> "A captured audio or visual artifact, typically produced by a recording process.".
-<http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#Location> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Location".
-<http://example.org/music-ontology#Artist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#Award> <http://www.w3.org/2000/01/rdf-schema#comment> "A recognition or prize given for achievement.".
-<http://example.org/music-ontology#Process> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
-<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology received Award".
-<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
 <http://example.org/music-ontology#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#receivedNominationFor> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
 <http://example.org/music-ontology#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
-<http://example.org/music-ontology#CreativeAction> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Creative Action".
-<http://example.org/music-ontology#MusicalPiece> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Musical Piece".
-<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The end time of a creative process.".
-<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2000/01/rdf-schema#label> "owl disjoint With".
-<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#MusicArtist>.
-<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass".
-<http://example.org/music-ontology#CreativeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Location>.
-<http://example.org/music-ontology#creates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
-<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a recording process to the recording it produces.".
-<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The start time of a creative process.".
-<http://example.org/music-ontology#Recording> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Recording".
-<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#label> "owl some Values From".
-<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass".
-<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a recording process to the equipment used in it.".
-<http://example.org/music-ontology#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographical or abstract place.".
-<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#receivedNominationFor>.
-<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology involves Agent".
-<http://example.org/music-ontology#Recording> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#Award> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Award".
-<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Recording Process That Recorded Musical Performance".
-<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#CreativeAction> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Artist".
-<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a music artist to an award they were nominated for.".
-<http://example.org/music-ontology#Agent> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://www.w3.org/2002/07/owl#minCardinality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Restriction>.
-<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "A process that leads to the creation of a new work, such as a musical piece.".
-<http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#DatatypeProperty>.
-<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Restriction>.
-<http://example.org/music-ontology#creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#MusicalPerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Award>.
-<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Equipment>.
-<http://example.org/music-ontology#MusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of performing music.".
-<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#MusicalPiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology recorded".
-<http://www.w3.org/2002/07/owl#Restriction> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#RecordingProcess>.
+<http://example.org/music-ontology#receivedAward> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
 <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2000/01/rdf-schema#label> "owl Class".
-<http://www.w3.org/2002/07/owl#minCardinality> <http://www.kgqa.com/count> "9"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#Agent>.
-<http://example.org/music-ontology#Recording> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
-<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#MusicArtist>.
-<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology produces".
-<http://www.w3.org/2002/07/owl#disjointWith> <http://www.kgqa.com/count> "5"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#comment> "A person who creates works of art.".
-<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#Process>.
-<http://example.org/music-ontology#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity capable of action, such as a person or organization.".
+<http://example.org/music-ontology#Recording> <http://www.w3.org/2000/01/rdf-schema#comment> "A captured audio or visual artifact, typically produced by a recording process.".
+<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#MusicalPerformance> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#Recording> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process to its location.".
+<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass".
 <http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a creative process to its constituent creative actions.".
-<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#RecordingProcess>.
-<http://www.w3.org/2002/07/owl#Class> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Recording Process".
-<http://example.org/music-ontology#involvesEquipment> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A series of actions or steps taken in order to achieve a particular end.".
+<http://example.org/music-ontology#recorded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#MusicalPerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
 <http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#Process>.
-<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> "owl on Property".
-<http://example.org/music-ontology#hasLocation> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#Artist> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass".
+<http://example.org/music-ontology#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographical or abstract place.".
+<http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "owl Datatype Property".
+<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#Process>.
+<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#CreativeAction> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific action or step within a creative process.".
+<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of recording process that captured a musical performance.".
+<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#DatatypeProperty>.
+<http://www.w3.org/2002/07/owl#Restriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#recorded> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
 <http://www.w3.org/2002/07/owl#minCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
 <http://example.org/music-ontology#Award> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "A process involving the capture of sound or visual data.".
-<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#RecordingProcess>.
-<http://example.org/music-ontology#Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Tools or machinery used in a process.".
-<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#Location> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#MusicalPerformance>.
-<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has Location".
-<http://example.org/music-ontology#Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Equipment".
-<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Creative Process".
-<http://www.w3.org/2002/07/owl#minCardinality> <http://www.w3.org/2000/01/rdf-schema#label> "owl min Cardinality".
-<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#CreativeAction>.
-<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a creative process to an agent involved in it.".
-<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#Artist>.
-<http://example.org/music-ontology#Award> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of recording process that captured a musical performance.".
-<http://example.org/music-ontology#MusicArtist> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#produces> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Award>.
-<http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/2000/01/rdf-schema#label> "owl Ontology".
-<http://example.org/music-ontology#creates> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a creative process to the musical piece it creates.".
-<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a music artist to an award they have received.".
-<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#comment> "An artist specializing in music.".
-<http://example.org/music-ontology#produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#MusicalPerformance> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#MusicalPiece> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Recording>.
-<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology involves Equipment".
-<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process to its location.".
-<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has Start Time".
-<http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime>.
-<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Agent>.
-<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime>.
-<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a recording process to the musical performance it recorded.".
-<http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#RecordingProcess>.
-<http://example.org/music-ontology#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> "file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass".
 <http://example.org/music-ontology#involvesAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
-<http://example.org/music-ontology#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
-<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has Creative Action".
-<http://example.org/music-ontology#hasEndTime> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#receivedNominationFor>.
+<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Award>.
+<http://example.org/music-ontology#involvesAgent> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#MusicalPiece> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Award>.
+<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a music artist to an award they were nominated for.".
 <http://example.org/music-ontology#creates> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology creates".
-<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology received Nomination For".
 <http://example.org/music-ontology#hasStartTime> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#recorded> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#hasCreativeAction> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://example.org/music-ontology#recorded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
-<http://example.org/music-ontology#creates> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Restriction>.
-<http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#ObjectProperty>.
+<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#comment> "An artist specializing in music.".
+<http://example.org/music-ontology#Location> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Location".
+<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#RecordingProcess>.
+<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Equipment>.
+<http://www.w3.org/2002/07/owl#disjointWith> <http://www.kgqa.com/count> "5"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://www.w3.org/2002/07/owl#minCardinality> <http://www.w3.org/2000/01/rdf-schema#label> "owl min Cardinality".
 <http://example.org/music-ontology#Equipment> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-<http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "owl Datatype Property".
+<http://example.org/music-ontology#Process> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Process".
+<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology received Nomination For".
+<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#MusicArtist>.
+<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "A process that leads to the creation of a new work, such as a musical piece.".
+<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#MusicArtist>.
+<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has Creative Action".
+<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://www.w3.org/2002/07/owl#Ontology> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#CreativeAction> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Creative Action".
+<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology recorded".
+<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The end time of a creative process.".
+<http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://www.w3.org/2002/07/owl#Restriction> <http://www.w3.org/2000/01/rdf-schema#label> "owl Restriction".
+<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime>.
+<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology produces".
+<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#Award> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#Award> <http://www.w3.org/2000/01/rdf-schema#comment> "A recognition or prize given for achievement.".
+<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The start time of a creative process.".
+<http://www.w3.org/2002/07/owl#onProperty> <http://www.kgqa.com/count> "10"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
+<http://example.org/music-ontology#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity capable of action, such as a person or organization.".
+<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "A process involving the capture of sound or visual data.".
+<http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/2000/01/rdf-schema#label> "owl Ontology".
+<http://example.org/music-ontology#Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Equipment".
+<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#hasCreativeAction> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#label> "owl some Values From".
+<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#CreativeProcess> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Creative Process".
+<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#MusicalPerformance>.
+<http://example.org/music-ontology#CreativeAction> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#MusicalPiece> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Musical Piece".
+<http://example.org/music-ontology#Artist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A series of actions or steps taken in order to achieve a particular end.".
+<http://example.org/music-ontology#Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Tools or machinery used in a process.".
+<http://example.org/music-ontology#CreativeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#Award> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Award".
+<http://example.org/music-ontology#MusicalPiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has End Time".
+<http://example.org/music-ontology#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
+<http://example.org/music-ontology#RecordingProcess> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has Start Time".
+<http://www.w3.org/2002/07/owl#minCardinality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Restriction>.
+<http://example.org/music-ontology#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime>.
+<http://example.org/music-ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#comment> "A person who creates works of art.".
+<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology has Location".
+<http://example.org/music-ontology#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> "owl on Property".
+<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Recording Process That Recorded Musical Performance".
+<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Agent>.
+<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology involves Agent".
+<http://example.org/music-ontology#MusicArtist> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
+<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a recording process to the recording it produces.".
+<http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "owl Object Property".
+<http://example.org/music-ontology#hasLocation> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#receivedNominationFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#RecordingProcess> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Recording Process".
+<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a recording process to the musical performance it recorded.".
+<http://example.org/music-ontology#produces> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://www.w3.org/2002/07/owl#minCardinality> <http://www.kgqa.com/count> "9"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#Process> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#RecordingProcess>.
+<http://example.org/music-ontology#CreativeProcess> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#MusicalPiece> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract musical composition or work.".
+<http://example.org/music-ontology#Agent> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#recorded> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#RecordingProcess>.
+<http://example.org/music-ontology#Artist> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#Recording> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#creates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/music-ontology#CreativeProcess>.
+<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Restriction>.
+<http://example.org/music-ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#Agent>.
+<http://example.org/music-ontology#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#creates> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#creates> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a creative process to the musical piece it creates.".
+<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#ObjectProperty>.
+<http://example.org/music-ontology#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Agent".
+<http://example.org/music-ontology#hasEndTime> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology involves Equipment".
+<http://example.org/music-ontology#hasCreativeAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#CreativeAction>.
+<http://example.org/music-ontology#MusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Musical Performance".
+<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Music Artist".
+<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Artist".
+<http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2000/01/rdf-schema#label> "owl disjoint With".
+<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Location>.
+<http://example.org/music-ontology#MusicalPerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of performing music.".
+<http://www.w3.org/2002/07/owl#Restriction> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology received Award".
+<http://example.org/music-ontology#involvesAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a creative process to an agent involved in it.".
+<http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#MusicArtist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/music-ontology#Artist>.
+<http://example.org/music-ontology#involvesEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a recording process to the equipment used in it.".
+<http://example.org/music-ontology#receivedAward> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a music artist to an award they have received.".
+<http://example.org/music-ontology#involvesEquipment> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Restriction>.
+<http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#receivedAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>.
+<http://example.org/music-ontology#Recording> <http://www.w3.org/2000/01/rdf-schema#label> "music-ontology Recording".
+<http://www.w3.org/2002/07/owl#Class> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
+<http://example.org/music-ontology#creates> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#MusicalPiece>.
+<http://example.org/music-ontology#produces> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/music-ontology#Recording>.
+<http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>.
+<http://example.org/music-ontology#Location> <http://www.kgqa.com/count> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.

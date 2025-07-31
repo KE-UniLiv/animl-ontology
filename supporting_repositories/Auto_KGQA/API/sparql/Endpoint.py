@@ -65,7 +65,6 @@ class Endpoint:
     def run_sparql_rdflib(self,query):
         if self.graph == None and self.url_endpoint != None:
             g = Graph()
-            print(self.url_endpoint)
             self.graph = g.parse(self.url_endpoint,format='n3')
         try:
             qres = self.graph.query(query)
@@ -541,7 +540,6 @@ class Endpoint:
         uri = uri.replace("<","").replace(">","")
         if uri in self.labels:
             return self.labels[uri]
-        print('this is the entity, the the human readable description of which we are trying to extract' +str(uri))
         labels_ =  self.get_labels_(uri)
         self.labels[uri]= labels_
         return labels_
@@ -571,7 +569,6 @@ class Endpoint:
             <{uri}> ?property ?label.
             FILTER(
                 ?property = rdfs:label ||
-                ?property = rdfs:comment ||
                 ?property = foaf:name ||
                 ?property = skos:prefLabel ||
                 ?property = dc:title ||
@@ -586,8 +583,9 @@ class Endpoint:
         labels = []
         #if results == None:
         #    return 'entity of unknown human description'
-        for result in results:
-            labels.append([result["?label"],result["?property"]])
+        if results:
+            for result in results:
+                labels.append([result["?label"],result["?property"]])
         label_from_uri = self.uri_to_label(uri)
         if not label_from_uri in labels:
             labels.append([label_from_uri,"URI"])
