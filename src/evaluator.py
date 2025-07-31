@@ -2,17 +2,19 @@ from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_distances
 import numpy as np
 import torch
-from rdflib import Graph, RDF, BNode
 from deeponto.onto import Ontology
 from deeponto.onto.projection import OntologyProjector
 import sys
 import os
-import subprocess
+import threading
+import queue
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from src.input_output import save_to_csv
+from metrics.autoUnit import autoUnit
 from src.input_output import save_to_csv, overwrite_first_line, read_lines_from_file, write_string_to_file, save_array_to_file
 from supporting_repositories.Auto_KGQA.API.create_indexes import createIndexes
-from supporting_repositories.Auto_KGQA.API.core.QuestionHandler import run_question
+
 
 
 
@@ -81,55 +83,34 @@ def triplet_extraction(ontology,file_name):
         data.append([sub, pre, obj])
     save_to_csv(data,f'data/extracted_triplets/{file_name}.csv') 
 
-def evaluator(ontology):
-    print('this is running')
-    print('''
-      ,-'"""`-.
-    ,'         `.
-   /        `    \
-  (    /          )
-  |             " |
-  (               )
- `.\\          \ /
-   `:.     , \ ,\ _
- hh  `:-.___,-`-.{\)
-       `.        |/ \
-         `.        \ \
-           `-.     _\,)
-              `.  |,-||
-                `.|| ||
-    one must imagine sisphyus happy''')
-    overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/{ontology}.ttl"')
-    createIndexes()
-    cqs = read_lines_from_file(f'data/input_cqs/{ontology}.txt')
-    average = 0
-    library = []
-    for cq in cqs:
-        result = run_question(cq)
-        write_string_to_file(f'supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}.ttl',f'''
-        @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-        @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-        @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+def evaluation_runner(metrics):
+    for metric in metrics:
+        metric['parameters']['initialisation_step'] = 0
+        target=globals()[metric['name']], args=(metric['parameters'],0,output_queue)
 
-        owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
- 	        owlunit:hasCompetencyQuestion "{cq}" ;
- 	        owlunit:hasSPARQLUnitTest """
-	            {result['sparql']}""" ;
-	        owlunit:testsOntology <../../../data/ontologies/{ontology}.ttl> .''')
-        
-        print("Current working directory:", os.getcwd())
-        output = subprocess.run(["java", "-jar", 'supporting_repositories/OWLUnit/OWLUnit-0.3.2.jar', "--test-case", "https://w3id.org/OWLunit/test/primary","--filepath",f"supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}.ttl"], capture_output = True)
-        print(output)
-        if str(output).__contains__('PASSED'):
-            average += 1
-            result['correctness'] = True
-        else:
-            result['correctness'] = False
-        print(result['correctness'])
-        library.append(result)
-    average = average/len(cqs)
-    print(average)
-    save_array_to_file(library,f'data/addressed_cqs/{ontology}.txt')
+        threads = []
+        #todo, a multi threading helper function that runs on gpu is avialble, and creates threads otherwise
+        output_queue = queue.Queue()
+        one = threading.Thread(target=globals()[metric['name']], args=(metric['parameters'],1,output_queue))
+        one.start()
+        threads.append(one)
+        two = threading.Thread(target=globals()[metric['name']], args=(metric['parameters'],2,output_queue))
+        two.start()
+        threads.append(two)
+        three = threading.Thread(target=globals()[metric['name']], args=(metric['parameters'],3,output_queue))
+        three.start()
+        threads.append(three)
+        for t in threads:
+            t.join()
+        result = 0
+        while not output_queue.empty():
+            result += output_queue.get()
+        result = result / 3
+        print(result)
+
+
+
+
 
 
 

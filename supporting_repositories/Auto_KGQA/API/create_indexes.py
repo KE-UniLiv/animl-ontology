@@ -36,7 +36,7 @@ def createIndexes():
         print("Extracting T-Box...")
         t_box_generator = Generator_T_Box(endpoint_a_box)
         triples_full_ttl = t_box_generator.generate_t_box()
-        print(triples_full_ttl)
+        #print(triples_full_ttl)
         print("Triples in T-Box extracted: "+ str(len(triples_full_ttl.splitlines())))
         with open(ENDPOINT_T_BOX_URL,"w") as t_box_file:
             t_box_file.write(triples_full_ttl)

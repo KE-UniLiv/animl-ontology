@@ -7,18 +7,18 @@ import re
 import os
 # from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain_community.embeddings import SentenceTransformerEmbeddings
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from API.sparql.Utils import convertToTurtle, list_to_string_triples
-from API.sparql.Filter_Triples import Filter_Triples
-from API.nlp.parsers import *
-from API.context.ContextLLM import *
-from API.configs import NUMBER_HOPS,LIMIT_BY_PROPERTY,FILTER_GRAPH,RELEVANCE_THRESHOLD,MAX_HITS_RATE,PRINT_HITS,TEMPERATURE_TRANSLATE,TEMPERATURE_SELECT,TEMPERATURE_FINAL_ANSWER,USE_A_BOX_INDEX
-from API.core.Configs_loader import load_configs
-from API.configs import *
-from API.nlp.normalizer import *
-from API.sparql.Endpoint import Endpoint
-#Import T-Box index
-from API.index.import_index import *
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..','..','..','..')))
+from supporting_repositories.Auto_KGQA.API.sparql.Utils import convertToTurtle, list_to_string_triples
+from supporting_repositories.Auto_KGQA.API.sparql.Filter_Triples import Filter_Triples
+from supporting_repositories.Auto_KGQA.API.nlp.parsers import *
+from supporting_repositories.Auto_KGQA.API.context.ContextLLM import *
+from supporting_repositories.Auto_KGQA.API.configs import NUMBER_HOPS,LIMIT_BY_PROPERTY,FILTER_GRAPH,RELEVANCE_THRESHOLD,MAX_HITS_RATE,PRINT_HITS,TEMPERATURE_TRANSLATE,TEMPERATURE_SELECT,TEMPERATURE_FINAL_ANSWER,USE_A_BOX_INDEX
+from supporting_repositories.Auto_KGQA.API.core.Configs_loader import load_configs
+from supporting_repositories.Auto_KGQA.API.configs import *
+from supporting_repositories.Auto_KGQA.API.nlp.normalizer import *
+from supporting_repositories.Auto_KGQA.API.sparql.Endpoint import Endpoint
+from supporting_repositories.Auto_KGQA.API.index.import_index import *
+from src.generator import call_generator
 
 
 #OpenAI
@@ -90,7 +90,7 @@ class QuestionHandler:
         self.generalConversation.add({"role":"user","content":question})
         # print(self.messagesTranslater.to_list())
         #client = OpenAI()
-        completion = OpenAI(api_key = os.getenv("OPENAI_API_KEY")).chat.completions.create(model=self.model_name,messages=self.messagesTranslater.to_list(),n=5,temperature=TEMPERATURE_TRANSLATE)
+        completion = call_generator('gpt',self.messagesTranslater.to_list(),n=5,temperature=TEMPERATURE_TRANSLATE)
         results = []
         sparqls = []
         structured_results = []
@@ -112,7 +112,7 @@ class QuestionHandler:
         # print(results)
         if len(results) > 0:
             self.messagesChooseBest.changeQuestion(question,structured_results)
-            completion = OpenAI(api_key = os.getenv("OPENAI_API_KEY")).chat.completions.create(model=self.model_name,messages=self.messagesChooseBest.to_list(),temperature=TEMPERATURE_SELECT)
+            completion = call_generator('gpt',self.messagesChooseBest.to_list(),temperature=TEMPERATURE_SELECT)
             selection = completion.choices[0].message.content
             # print(f"input:{prompt_best_selection}")
             # print(f"output:{selection}")
@@ -123,7 +123,7 @@ class QuestionHandler:
                 sparql_selected = sparqls[selection_number]
                 result_selected = results[selection_number]
             except:
-                print("Escolha deu errado!: "+selection)
+                #print("Escolha deu errado!: "+selection)
                 selection_number = 0
             self.messagesTranslater.add({"role":"assistant",
                                              "content":f"""
@@ -153,7 +153,7 @@ class QuestionHandler:
         ```;
         """
         self.messagesNL.add({"role":"user","content":question_forumlated})
-        completion = OpenAI(api_key = os.getenv("OPENAI_API_KEY")).chat.completions.create(model=self.model_name,messages=self.messagesNL.to_list(),temperature=TEMPERATURE_FINAL_ANSWER)
+        completion = call_generator('gpt',self.messagesNL.to_list(),temperature=TEMPERATURE_FINAL_ANSWER)
         answer = completion.choices[0].message.content
         self.messagesNL.add({"role":"assistant","content":answer})
         if self.generalConversation[-1]["role"] == "assistant":
@@ -180,7 +180,7 @@ class QuestionHandler:
         else:
             print("Não gerou consulta SPARQL válida")
             self.generalConversation.add({"role":"user","content":question})
-            completion = OpenAI(api_key = os.getenv("OPENAI_API_KEY")).chat.completions.create(model=self.model_name, messages=self.generalConversation.to_list())
+            completion = call_generator('gpt',self.generalConversation.to_list(),temperature=1.0)
             answer = completion.choices[0].message.content
             self.generalConversation.add({"role":"assistant","content":answer})
             return {'answer':answer,
@@ -206,12 +206,12 @@ class QuestionHandler:
             finalAnswer = f"""User: {llmAnswer['question']}\nGPT: {llmAnswer['answer']}\n\n\n\nSPARQL:\n{llmAnswer['sparql']}\n-------------------------------------------------------------\n"""
         else:
             finalAnswer =f"""User: {llmAnswer['question']}\nGPT: {llmAnswer['answer']}\n-------------------------------------------------------------\n"""
-        print(finalAnswer)
+        #print(finalAnswer)
 
 def run_question(question):
     normalizer, endpoint_t_box, t_box_index, endpoint_a_box, a_box_index = load_configs()
     Handler = QuestionHandler(Endpoint(ENDPOINT_KNOWLEDGE_GRAPH_URL),endpoint_t_box,t_box_index,normalizer,a_box_index=a_box_index)
     result = Handler.processQuestion(question)
     print(' it terminated without error')
-    print(result['sparql'])
+    #print(result['sparql'])
     return result

@@ -96,25 +96,25 @@ class Filter_Triples:
             #print(hits)
 
         if hits != None and len(hits) > 0:
-           # selected_triples = []
-           # if needed_nodes != None:
-           #     print('needed nodes != None')
-           #     needed_nodes = uris_list_to_rdflib_refs_list(needed_nodes)
-           #     nodes = set(needed_nodes) # Nodes (resources) already included in the selected triples
-           # else:
-           #     print('needed_nodes = None')
-           #     nodes = set() # Nodes (resources) already included in the selected triples
-           # if needed_properties != None:
-           #     print('needed_properties != None')
-            ##    needed_properties = uris_list_to_rdflib_refs_list(needed_properties)
-           #     properties = set(needed_properties) # Properties already included in the selected triples    
-           # else:
-            #    print('needed_properties = None')
-            #    properties = set() # Properties already included in the selected triples
+            selected_triples = []
+            if needed_nodes != None:
+                print('needed nodes != None')
+                needed_nodes = uris_list_to_rdflib_refs_list(needed_nodes)
+                nodes = set(needed_nodes) # Nodes (resources) already included in the selected triples
+            else:
+                print('needed_nodes = None')
+                nodes = set() # Nodes (resources) already included in the selected triples
+            if needed_properties != None:
+                print('needed_properties != None')
+                needed_properties = uris_list_to_rdflib_refs_list(needed_properties)
+                properties = set(needed_properties) # Properties already included in the selected triples    
+            else:
+                print('needed_properties = None')
+                properties = set() # Properties already included in the selected triples
             nodes = set()
             properties = set()
             for hit in hits: # Unpackage selected triples from faiss result
-                print('this hit' + str(hit))
+                #print('this hit' + str(hit))
                 selected_triples+= hit.metadata['triples']
                 for triple in hit.metadata['triples']:
                     nodes.add(triple[0])

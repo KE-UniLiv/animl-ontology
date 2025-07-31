@@ -131,10 +131,10 @@ class Endpoint:
                         result_item["?"+var["@name"]] = self.parse_value_redflib_result(var)
                     result_set.append(result_item)
             else:
-                print(results)
-                print(results['sparql'])
-                print(results['sparql']['results'])
-                print(results['sparql']['results']['result'])
+                #print(results)
+                #print(results['sparql'])
+               # print(results['sparql']['results'])
+               # print(results['sparql']['results']['result'])
                 if results["sparql"]["results"]["result"] != None:
                     for result in results["sparql"]["results"]["result"]:
                         result_item = {}

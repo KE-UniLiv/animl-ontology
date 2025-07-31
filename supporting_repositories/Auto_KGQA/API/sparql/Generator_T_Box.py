@@ -132,7 +132,7 @@ class Generator_T_Box:
         triples = "# Classes\n"
         for uri in classes:
             class_ = classes[uri]
-            print(class_)
+            #print(class_)
             triples_class = f"<{uri}> a owl:Class.\n"
             if len(class_['super_classes']) > 0:
                 for super_class in class_['super_classes']:

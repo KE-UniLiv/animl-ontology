@@ -13,7 +13,9 @@ from src.input_output import read_csv_to_data_frame, save_array_to_file
 
 
 
-def generate_questions_from_csv(triplets,model):
+def generate_questions_from_csv(parameters,thread_number,output_queue):
+    triplets = parameters[0]
+    model = parameters[1]
 
     df_chunks = [triplets[i:i+10] for i in range(0, triplets.shape[0], 5)]  # Split data into chunks for processing
 
@@ -32,7 +34,7 @@ def generate_questions_from_csv(triplets,model):
         if questions == '':
             print('the generator did not match any questions to the chunk')
         questions_list = [questions.strip().split('\n')]
-        print(questions_list)
+        #print(questions_list)
         generated_cqs.extend(questions_list)
     
     print('these are the cqs being dropped')
@@ -47,7 +49,7 @@ def findBERTScore(true_cqs,generated_cqs):
 
 def cq_coverage(true_cqs,model,ontology):
     generated_cqs = generate_questions_from_csv(read_csv_to_data_frame(f'data/extracted_triplets/{ontology}.csv'),model)
-    print(generated_cqs)
+    #print(generated_cqs)
     greatest_similarity_cqs = findBERTScore(true_cqs,generated_cqs)
     addressed_cqs = [cq for cq, sim in zip(true_cqs, greatest_similarity_cqs) if sim < 0.5]
 

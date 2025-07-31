@@ -44,7 +44,7 @@ class Index:
 
     def create(self):
         keys,metadata = self.prepare_dataset(self.terms)
-        print(self.terms)
+        #print(self.terms)
         print('these are the keys ' + str(keys))
         print('this is the metdata ' + str(metadata))
         faiss = FAISS.from_texts(keys, self.embedding_function, metadata)
