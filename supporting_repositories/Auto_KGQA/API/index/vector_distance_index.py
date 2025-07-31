@@ -8,12 +8,12 @@ from langchain_community.vectorstores.faiss import DistanceStrategy
 
 
 class Index:
-    def __init__(self,path_index,endpoint,normalizer) -> None:
+    def __init__(self,path_index,endpoint,normalizer,model) -> None:
         self.path_index = path_index
         self.endpoint = endpoint
         self.normalizer = normalizer
         self.type = "FAISS"
-        self.embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+        self.embedding_function = model
         if not os.path.isdir(path_index):
             print("Creating new index...")
             os.makedirs(path_index)
@@ -70,17 +70,17 @@ class Index:
             return False
 
 class TBoxIndex(Index):
-    def __init__(self, endpoint, normalizer) -> None:
+    def __init__(self, endpoint, normalizer,model) -> None:
         path_index = path_index = "supporting_repositories/Auto_KGQA/index/temp/t_box_index/faiss"
-        super().__init__(path_index, endpoint, normalizer)
+        super().__init__(path_index, endpoint, normalizer,model)
     
     def loadTerms(self,endpoint):
         self.terms = endpoint.listTerms()
 
 class ABoxIndex(Index):
-    def __init__(self, endpoint, normalizer) -> None:
+    def __init__(self, endpoint, normalizer,model) -> None:
         path_index = path_index = "supporting_repositories/Auto_KGQA/index/temp/a_box_index/faiss"
-        super().__init__(path_index, endpoint, normalizer)
+        super().__init__(path_index, endpoint, normalizer,model)
     
     def loadTerms(self,endpoint):
         self.terms = endpoint.listResources()

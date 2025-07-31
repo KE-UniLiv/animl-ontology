@@ -27,7 +27,7 @@ load_dotenv()
 
 
 class QuestionHandler:
-    def __init__(self,endpoint,endpoint_t_box,t_box_index,normalizer,messagesTranslater=ContextTranslator(""),messagesNL=ContextNLGenerator(),generalConversation=ContextDialog(),messagesChooseBest = ContextChooseBestSPARQL(""),a_box_index=None,model_name="gpt-3.5-turbo-16k") -> None:
+    def __init__(self,model,endpoint,endpoint_t_box,t_box_index,normalizer,messagesTranslater=ContextTranslator(""),messagesNL=ContextNLGenerator(),generalConversation=ContextDialog(),messagesChooseBest = ContextChooseBestSPARQL(""),a_box_index=None,model_name="gpt-3.5-turbo-16k") -> None:
         self.endpoint = endpoint
         self.endpoint_t_box = endpoint_t_box
         self.t_box_index = t_box_index
@@ -38,7 +38,7 @@ class QuestionHandler:
         self.messagesChooseBest = messagesChooseBest
         self.a_box_index = a_box_index
         self.model_name = model_name
-        self.embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+        self.embedding_function = model
 
 
     def getRelatedTriples(self,question,index,number_hops=NUMBER_HOPS,limit_by_property=LIMIT_BY_PROPERTY):
@@ -208,9 +208,9 @@ class QuestionHandler:
             finalAnswer =f"""User: {llmAnswer['question']}\nGPT: {llmAnswer['answer']}\n-------------------------------------------------------------\n"""
         #print(finalAnswer)
 
-def run_question(question):
-    normalizer, endpoint_t_box, t_box_index, endpoint_a_box, a_box_index = load_configs()
-    Handler = QuestionHandler(Endpoint(ENDPOINT_KNOWLEDGE_GRAPH_URL),endpoint_t_box,t_box_index,normalizer,a_box_index=a_box_index)
+def run_question(question,model):
+    normalizer, endpoint_t_box, t_box_index, endpoint_a_box, a_box_index = load_configs(model)
+    Handler = QuestionHandler(model,Endpoint(ENDPOINT_KNOWLEDGE_GRAPH_URL),endpoint_t_box,t_box_index,normalizer,a_box_index=a_box_index,)
     result = Handler.processQuestion(question)
     print(' it terminated without error')
     #print(result['sparql'])

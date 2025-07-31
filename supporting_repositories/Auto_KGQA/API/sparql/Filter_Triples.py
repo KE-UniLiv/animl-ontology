@@ -35,6 +35,7 @@ class Filter_Triples:
         sentences = {}
         metadata = []
         for triple in self.graph:
+   
             s = self.endpoint.get_labels(triple[0])[0][0]
             if str(triple[1]) == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
                 p = "is a"

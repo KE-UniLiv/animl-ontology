@@ -2,7 +2,7 @@ import spacy
 import spacy_dbpedia_spotlight
 
 class Index:
-    def __init__(self,path_index=None,endpoint=None,normalizer=None) -> None:
+    def __init__(self,path_index=None,endpoint=None,normalizer=None,model=None) -> None:
         print("Setting up DBpedia Spotlight service")
         self.type = "SPOTLIGHT"
         self.index = spacy.load('en_core_web_md')
@@ -27,10 +27,10 @@ class Index:
         return True
 
 class TBoxIndex(Index):
-    def __init__(self, endpoint=None, normalizer=None) -> None:
-        super().__init__()
+    def __init__(self, endpoint=None, normalizer=None,model=None,something=None) -> None:
+        super().__init__(model)
 
 class ABoxIndex(Index):
-    def __init__(self, endpoint=None, normalizer=None) -> None:
-        super().__init__()
+    def __init__(self, endpoint=None, normalizer=None,model=None,something=None) -> None:
+        super().__init__(model)
     

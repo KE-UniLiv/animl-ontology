@@ -26,7 +26,7 @@ def main_loop(ontology, workflow, parameters):
                 parameters[3].pop()
                 parameters[len(parameters)-1] = 0
     
-    evaluation_runner([{'name':'autoUnit','parameters':[ontology]}])
+    evaluation_runner([{'name':'autoUnit','parameters':{'ontology':ontology}}])
 
 
 

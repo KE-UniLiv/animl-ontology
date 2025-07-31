@@ -8,6 +8,7 @@ from supporting_repositories.Auto_KGQA.API.sparql.Generator_T_Box import Generat
 from supporting_repositories.Auto_KGQA.API.configs import *
 from supporting_repositories.Auto_KGQA.API.index.import_index import *
 import shutil
+from langchain_community.embeddings import SentenceTransformerEmbeddings
 
 def createIndexes():
     if os.path.exists("sparql/temp/labels.obj"):
@@ -53,7 +54,7 @@ def createIndexes():
     print("-----------------------------------------------------------")
 
     print("Creating T-Box index")
-    t_box_index = TBoxIndex(endpoint_t_box,normalizer)
+    t_box_index = TBoxIndex(endpoint_t_box,normalizer,SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2"))
     print("T-Box index created: "+str(t_box_index.exists()) + " Type: "+t_box_index.type)
     print("-----------------------------------------------------------")
 

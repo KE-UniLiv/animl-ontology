@@ -67,7 +67,10 @@ class Endpoint:
             g = Graph()
             print(self.url_endpoint)
             self.graph = g.parse(self.url_endpoint,format='n3')
-        qres = self.graph.query(query)
+        try:
+            qres = self.graph.query(query)
+        except:
+            qres = None
         #print('the result of the query is ')
         
        # for row in qres:
@@ -114,6 +117,8 @@ class Endpoint:
             result_set = []
             #Enpoint is a local file
             results= self.run_sparql_rdflib(query)
+            if results == None:
+                return None
             results = xmltodict.parse(results.serialize())
             # print(results)
             if results["sparql"]["results"] == None:
@@ -517,7 +522,12 @@ class Endpoint:
     def struct_result_query(self,sparql):
         try:
             query_results = self.run_sparql(sparql)
-            if len(query_results) > 10:
+            if query_results == None:
+                question_formulated = f'''
+                {{"query":"```sparql\n{sparql}\n```",
+                "result": 'the query was syntactically invalid and failed }}
+                '''
+            elif len(query_results) > 10:
                 query_results = query_results[:10]
             question_formulated = f'''
                 {{"query":"```sparql\n{sparql}\n```",
@@ -531,6 +541,7 @@ class Endpoint:
         uri = uri.replace("<","").replace(">","")
         if uri in self.labels:
             return self.labels[uri]
+        print('this is the entity, the the human readable description of which we are trying to extract' +str(uri))
         labels_ =  self.get_labels_(uri)
         self.labels[uri]= labels_
         return labels_
@@ -560,6 +571,7 @@ class Endpoint:
             <{uri}> ?property ?label.
             FILTER(
                 ?property = rdfs:label ||
+                ?property = rdfs:comment ||
                 ?property = foaf:name ||
                 ?property = skos:prefLabel ||
                 ?property = dc:title ||
@@ -572,6 +584,8 @@ class Endpoint:
         }}"""
         results = self.run_sparql(query)
         labels = []
+        #if results == None:
+        #    return 'entity of unknown human description'
         for result in results:
             labels.append([result["?label"],result["?property"]])
         label_from_uri = self.uri_to_label(uri)

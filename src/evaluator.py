@@ -85,27 +85,37 @@ def triplet_extraction(ontology,file_name):
 
 def evaluation_runner(metrics):
     for metric in metrics:
-        metric['parameters']['initialisation_step'] = 0
-        target=globals()[metric['name']], args=(metric['parameters'],0,output_queue)
-
-        threads = []
-        #todo, a multi threading helper function that runs on gpu is avialble, and creates threads otherwise
         output_queue = queue.Queue()
-        one = threading.Thread(target=globals()[metric['name']], args=(metric['parameters'],1,output_queue))
-        one.start()
-        threads.append(one)
-        two = threading.Thread(target=globals()[metric['name']], args=(metric['parameters'],2,output_queue))
-        two.start()
-        threads.append(two)
-        three = threading.Thread(target=globals()[metric['name']], args=(metric['parameters'],3,output_queue))
-        three.start()
-        threads.append(three)
+        metric['parameters']['initialisation_step'] = 1
+        target=globals()[metric['name']](metric['parameters'],0,output_queue)
+        metric['parameters']['initialisation_step'] = 0
+        threads_number = 0
+        parameters = output_queue.get()
+        if not(parameters['paralleism_blocker'] == True):
+            threads_number = 2
+            threads = []
+            #todo, a multi threading helper function that runs on gpu if avialble, and creates threads otherwise
+            one = threading.Thread(target=globals()[metric['name']], args=(parameters,1,output_queue))
+            one.start()
+            threads.append(one)
+            two = threading.Thread(target=globals()[metric['name']], args=(parameters,2,output_queue))
+            two.start()
+            threads.append(two)
+            three = threading.Thread(target=globals()[metric['name']], args=(parameters,3,output_queue))
+            three.start()
+            threads.append(three)
+            four = threading.Thread(target=globals()[metric['name']], args=(parameters,4,output_queue))
+            four.start()
+            threads.append(four)
+        else:
+            threads_number = 1
+            target=globals()[metric['name']](metric['parameters'],0,output_queue)
         for t in threads:
             t.join()
         result = 0
         while not output_queue.empty():
             result += output_queue.get()
-        result = result / 3
+        result = result / threads_number
         print(result)
 
 
