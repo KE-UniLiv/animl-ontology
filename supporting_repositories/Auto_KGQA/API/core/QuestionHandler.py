@@ -120,8 +120,17 @@ class QuestionHandler:
             # return
             try:
                 selection_number = [int(s) for s in re.findall(r'\b\d+\b', selection)] [0]
-                sparql_selected = sparqls[selection_number]
-                result_selected = results[selection_number]
+                if selection_number == -1:
+                    sparql_selected = """
+                        SELECT ?s ?p ?o WHERE {
+                         ?s ?p ?o .
+                        FILTER(false)
+                        }
+                     """
+                    results_selected = []
+                else:
+                    sparql_selected = sparqls[selection_number]
+                    result_selected = results[selection_number]
             except:
                 raise RuntimeError('gpt failed to produce a selection for the best sparql query')
                 selection_number = 0 
@@ -167,7 +176,6 @@ class QuestionHandler:
 
     def processQuestion(self,question,number_hops=NUMBER_HOPS,limit_by_property=LIMIT_BY_PROPERTY,filter_graph= FILTER_GRAPH,last_question=None):
         ttl = self.getRelevantGraph(question,number_hops,limit_by_property,filter_graph,last_question=last_question)
-        print('is this running?')
         textToSPARQL_return = self.textToSPARQL(question,ttl)
         if textToSPARQL_return != None:
             sparqls,results,selection_number = textToSPARQL_return

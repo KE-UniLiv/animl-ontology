@@ -29,15 +29,23 @@ class ContextDialog:
     def __str__(self):
         return str(self.system + self.content)
     
-
-
-class ContextTranslator(ContextDialog):
-    restrictions = """
+original_restriction  = """
     - Use only classes and properties defined in the RDF graph, for this is important to use the same URIs for the properties and classes as defined in the original graph;
     - Include all the the prefixes used in the SPARQL query;
     - Declare non-essential properties to the question as OPTIONAL if needed;
     - DO NOT use specific resources in the query;
     - Declare filters on strings (like labels and names) as filters operations over REGEX function using the case insensitive flag."""
+
+inaccuracy_accepting_restriction = """
+    - where possible you should use the classes and properties defined in the RDF graph, however (only when it is impossible to reasonably approximate the original question with existing resources) you may invent new classes and properties to use in your query;
+    - when using existing classes and properties it is important to use the same URIs for the properties and classes as defined in the original graph;
+    - Include all the the prefixes used in the SPARQL query;
+    - Declare non-essential properties to the question as OPTIONAL if needed;
+    - DO NOT use specific resources in the query;
+    - Declare filters on strings (like labels and names) as filters operations over REGEX function using the case insensitive flag."""
+
+class ContextTranslator(ContextDialog):
+    restrictions = original_restriction
     def __init__(self,graph,length=SIZE_CONTEXT_WINDOW_TRANSLATE,language="en"):
         super().__init__(length,language)
         self.changeGraph(graph)
@@ -48,7 +56,7 @@ class ContextTranslator(ContextDialog):
         if rag:
             rag_text = "Here are some sample related questions accompanied by their queries to help you:\n"+rag+"\n"
         if self.language == "en":
-            self.system.append({"role":"system","content":"Consider the following RDF graph written in Turtle syntax: "+str(graph)})
+            self.system.append({"role":"system","content":"Consider the following RDF graph written in n3 syntax: "+str(graph)})
             # self.system.append({"role":"system","content":"""Write a SPARQL query for the question given by the user using only classes and properties defined in the RDF graph, for this is important to use the same URIs for the properties and classes as defined in the original graph. Also remember to include the prefixes. Moreover declare non-essential properties to the question as OPTIONAL if needed. Declare filters on strings (like labels and names) as filters operations over REGEX function using the case insensitive flag, for example use '''?a rdfs:label ?name. FILTER(REGEX(?name,"[VALUE NAME]","i"))''' instead of '''?a rdfs:label "[VALUE NAME]".''' ."""})
             self.system.append({"role":"system","content":f"""Write a SPARQL query for the question given by the user following the restrictions: \n{self.restrictions}
 Example:
@@ -64,18 +72,7 @@ Example:
             self.system.append({"role":"system","content":"""Escreva uma consulta SPARQL para a questão dada pelo usuário utilizando apenas classes e propriedades definidas no grafo RDF, para isso é importante utilizar as mesmas URIs para as propriedades e classes como definidas no grafo original. Também é importante lembrar de incluir os prefixos. Além disso, declare propriedades não essenciais para a questão como como OPTINAL se necessárias. Declare filtros sobre strings (como labels e nomes) como operações de filtros sobre funções REGEX usando a flaf case insensitive, por exemplo use '''?a rdfs:label ?name. FILTER(REGEX(?name,"[VALUE NAME]","i"))''' ao invés de '''?a rdfs:label "[VALUE NAME]".'''"""})
 
 
-
-
-
-class ContextChooseBestSPARQL(ContextDialog):
-    def __init__(self,length=SIZE_CONTEXT_WINDOW_SELECT):
-        super().__init__(length)
-        
-    def changeGraph(self,graph):
-        self.system = []
-        self.system.append({"role":"system","content":"Consider the following RDF graph written in Turtle syntax: "+str(graph)})
-
-    def changeQuestion(self,question,structured_results):
+def build_original_best_selection(question,structured_results):
         prompt_best_selection = f"""
         Given the question: "{question}"
         Select the number of the option that better representes a SPARQL query for the given question:
@@ -89,7 +86,41 @@ class ContextChooseBestSPARQL(ContextDialog):
         Use the following criteria to evaluate the options: {ContextTranslator.restrictions}
         Return only the number of the selected option and nothing more!"""
         # print(prompt_best_selection)
-        self.system.append({"role":"system","content":prompt_best_selection})
+
+        return prompt_best_selection
+
+def build_inaccuracy_accepting_best_selection(question,structured_results):
+        prompt_best_selection = f"""
+        Given the question: "{question}"
+        determine whether any of the given options represent an accpetable sparql query for the given question:
+        ```json
+        {{"""
+
+        for idx,structured_result in enumerate(structured_results):
+            prompt_best_selection+= f"""{idx}:{structured_result},\n"""
+        
+        prompt_best_selection+= f"""}}```
+        if none are acceptable then return the number -1,
+
+        otherwise,
+        Select the number of the option that better representes a SPARQL query for the given question
+
+        Use the following criteria to evaluate the options: {ContextTranslator.restrictions}
+        Return only the number of the selected option and nothing more!"""
+        # print(prompt_best_selection)
+
+        return prompt_best_selection
+
+class ContextChooseBestSPARQL(ContextDialog):
+    def __init__(self,length=SIZE_CONTEXT_WINDOW_SELECT):
+        super().__init__(length)
+        
+    def changeGraph(self,graph):
+        self.system = []
+        self.system.append({"role":"system","content":"Consider the following RDF graph written in Turtle syntax: "+str(graph)})
+
+    def changeQuestion(self,question,structured_results):
+        self.system.append({"role":"system","content":build_original_best_selection(question,structured_results)})
 
 
      

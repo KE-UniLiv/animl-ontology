@@ -7,6 +7,10 @@ __pycache__/
 # C extensions
 *.so
 
+#temporary files folder
+supporting_repositories/OWLUnit/tests/
+
+
 # Distribution / packaging
 .Python
 build/

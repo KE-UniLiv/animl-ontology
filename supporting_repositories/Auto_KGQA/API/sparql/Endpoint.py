@@ -293,6 +293,8 @@ class Endpoint:
         }}"""
         # print(query)
         triples = self.run_sparql(query)
+        if triples==None:
+            return [], False
         for triple in triples:
             if self.filterSelfEquivalenceAxioms(triple["?s"],triple["?p"],uri):
                 describe += f"""<{triple["?s"]}> <{triple["?p"]}> <{uri}>.\n"""
