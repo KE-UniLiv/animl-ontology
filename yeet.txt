@@ -1,100 +1,100 @@
-http://example.org/music-ontology#Award
-A recognition or prize given for achievement.
-http://example.org/music-ontology#CreativeProcess
-file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass
+http://example.org/music-ontology#hasCreativeAction
+music-ontology has Creative Action
+http://example.org/music-ontology#Artist
+music-ontology Artist
+http://example.org/music-ontology#MusicArtist
+An artist specializing in music.
+http://www.w3.org/2002/07/owl#DatatypeProperty
+http://www.w3.org/2002/07/owl#Class
+http://www.w3.org/2002/07/owl#ObjectProperty
+owl Object Property
 http://example.org/music-ontology#MusicalPiece
 1
-music-ontology Musical Piece
-http://example.org/music-ontology#hasEndTime
-The end time of a creative process.
-http://www.w3.org/2002/07/owl#Ontology
-http://www.w3.org/2002/07/owl#ObjectProperty
-http://www.w3.org/2002/07/owl#Class
-http://www.w3.org/2002/07/owl#disjointWith
-http://www.w3.org/2002/07/owl#DatatypeProperty
-http://example.org/music-ontology#receivedAward
-music-ontology received Award
-http://www.w3.org/2002/07/owl#minCardinality
-http://www.w3.org/2002/07/owl#Restriction
+http://example.org/music-ontology#Award
 http://example.org/music-ontology#RecordingProcess
-http://example.org/music-ontology#Artist
-http://example.org/music-ontology#involvesAgent
-http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
-http://example.org/music-ontology#creates
-Relates a creative process to the musical piece it creates.
-http://example.org/music-ontology#Process
-A series of actions or steps taken in order to achieve a particular end.
+file:///C:/Users/sgwmorli/internship/animl_ontology/superclass
 http://example.org/music-ontology#MusicalPerformance
-music-ontology Musical Performance
-http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance
-A specific type of recording process that captured a musical performance.
-owl Ontology
-A process involving the capture of sound or visual data.
-http://example.org/music-ontology#hasCreativeAction
-http://example.org/music-ontology#CreativeAction
-owl Datatype Property
-music-ontology creates
-http://example.org/music-ontology#involvesEquipment
-http://example.org/music-ontology#recorded
-Relates a recording process to the musical performance it recorded.
-The act of performing music.
-http://www.w3.org/2002/07/owl#someValuesFrom
-http://example.org/music-ontology#produces
-http://example.org/music-ontology#hasLocation
+http://example.org/music-ontology#hasEndTime
+http://example.org/music-ontology#CreativeProcess
+A recognition or prize given for achievement.
+http://www.w3.org/2002/07/owl#disjointWith
+5
+http://www.w3.org/2002/07/owl#minCardinality
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 http://example.org/music-ontology#Recording
-http://example.org/music-ontology#receivedNominationFor
-http://example.org/music-ontology#hasStartTime
-music-ontology has Start Time
-Relates a creative process to an agent involved in it.
-http://example.org/music-ontology#MusicArtist
-http://www.w3.org/2002/07/owl#onProperty
-music-ontology Award
+music-ontology Recording
+http://example.org/music-ontology#creates
+Relates a creative process to its constituent creative actions.
+music-ontology Recording Process
+http://www.w3.org/2002/07/owl#someValuesFrom
+http://example.org/music-ontology#involvesEquipment
+A process involving the capture of sound or visual data.
+http://www.w3.org/2002/07/owl#Ontology
+http://example.org/music-ontology#receivedAward
+music-ontology Musical Performance
 http://example.org/music-ontology#Agent
 music-ontology Agent
-music-ontology Recording Process
-music-ontology involves Equipment
-music-ontology recorded
-Relates a recording process to the equipment used in it.
-Relates a creative process to its constituent creative actions.
-music-ontology has Creative Action
-Relates a process to its location.
-owl some Values From
-An artist specializing in music.
-music-ontology Creative Action
 http://example.org/music-ontology#Equipment
-5
-music-ontology has End Time
-Relates a music artist to an award they were nominated for.
-http://example.org/music-ontology#Location
-music-ontology Creative Process
-owl min Cardinality
-owl Restriction
-owl Object Property
-music-ontology involves Agent
-An entity capable of action, such as a person or organization.
-A process that leads to the creation of a new work, such as a musical piece.
-owl Class
-music-ontology produces
-http://www.w3.org/2001/XMLSchema#dateTime
-A captured audio or visual artifact, typically produced by a recording process.
-A geographical or abstract place.
-music-ontology Music Artist
-music-ontology Process
-The start time of a creative process.
-owl on Property
-An abstract musical composition or work.
-music-ontology Recording Process That Recorded Musical Performance
-music-ontology has Location
-9
-Relates a recording process to the recording it produces.
+http://example.org/music-ontology#involvesAgent
 Relates a music artist to an award they have received.
-music-ontology received Nomination For
-music-ontology Equipment
-music-ontology Recording
-Tools or machinery used in a process.
-10
-music-ontology Location
+http://example.org/music-ontology#hasStartTime
+http://example.org/music-ontology#Process
+music-ontology creates
+http://example.org/music-ontology#receivedNominationFor
+http://www.w3.org/2002/07/owl#Restriction
+music-ontology has End Time
+The act of performing music.
+A captured audio or visual artifact, typically produced by a recording process.
+http://example.org/music-ontology#RecordingProcessThatRecordedMusicalPerformance
+A specific type of recording process that captured a musical performance.
+http://example.org/music-ontology#recorded
+music-ontology involves Agent
+owl Restriction
+The end time of a creative process.
+http://example.org/music-ontology#CreativeAction
+music-ontology Creative Action
 owl disjoint With
+http://www.w3.org/2001/XMLSchema#dateTime
+music-ontology Musical Piece
+http://example.org/music-ontology#produces
+Relates a recording process to the recording it produces.
+An entity capable of action, such as a person or organization.
+owl min Cardinality
+Relates a recording process to the musical performance it recorded.
+9
+music-ontology Process
 A person who creates works of art.
+Relates a creative process to an agent involved in it.
 A specific action or step within a creative process.
-music-ontology Artist
+http://example.org/music-ontology#Location
+A geographical or abstract place.
+http://example.org/music-ontology#hasLocation
+Relates a process to its location.
+http://www.w3.org/2002/07/owl#onProperty
+owl some Values From
+music-ontology Location
+music-ontology received Award
+Relates a music artist to an award they were nominated for.
+music-ontology involves Equipment
+music-ontology Recording Process That Recorded Musical Performance
+An abstract musical composition or work.
+music-ontology has Start Time
+owl Ontology
+A process that leads to the creation of a new work, such as a musical piece.
+music-ontology received Nomination For
+10
+Relates a recording process to the equipment used in it.
+owl on Property
+The start time of a creative process.
+music-ontology Music Artist
+music-ontology has Location
+music-ontology Equipment
+music-ontology recorded
+music-ontology Creative Process
+music-ontology produces
+owl Class
+owl Datatype Property
+Relates a creative process to the musical piece it creates.
+A series of actions or steps taken in order to achieve a particular end.
+Tools or machinery used in a process.
+music-ontology Award

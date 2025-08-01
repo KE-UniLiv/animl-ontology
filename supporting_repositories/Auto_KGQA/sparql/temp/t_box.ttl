@@ -8,7 +8,7 @@
     rdfs:label "music-ontology Recording Process That Recorded Musical Performance" ;
     kgqa:count 1 ;
     rdfs:comment "A specific type of recording process that captured a musical performance." ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass>,
+    rdfs:subClassOf <file:///C:/Users/sgwmorli/internship/animl_ontology/superclass>,
         <http://example.org/music-ontology#RecordingProcess> .
 
 <http://example.org/music-ontology#creates> a rdf:Property ;
@@ -190,14 +190,14 @@ owl:Restriction a owl:Class ;
     rdfs:label "music-ontology Recording Process" ;
     kgqa:count 1 ;
     rdfs:comment "A process involving the capture of sound or visual data." ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass>,
+    rdfs:subClassOf <file:///C:/Users/sgwmorli/internship/animl_ontology/superclass>,
         <http://example.org/music-ontology#Process> .
 
 <http://example.org/music-ontology#CreativeProcess> a owl:Class ;
     rdfs:label "music-ontology Creative Process" ;
     kgqa:count 1 ;
     rdfs:comment "A process that leads to the creation of a new work, such as a musical piece." ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/internship_stage_2/animl_ontology_2/superclass>,
+    rdfs:subClassOf <file:///C:/Users/sgwmorli/internship/animl_ontology/superclass>,
         <http://example.org/music-ontology#Process> .
 
 owl:Class a owl:Class ;

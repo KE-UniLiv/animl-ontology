@@ -12,7 +12,7 @@ what actions has an author performed?
 what software has been run on a device?
 which parameters in a category are optional?
 which parameters are common between allowed series blueprints in a series set blueprint?
-which categories are sub categories
+which categories are sub categories?
 is a samples (A) container (B) produced in the same experiment step as sample (A) is consumed?
 do any human authors have versions?
 does a series relate to a result, method, or sample?

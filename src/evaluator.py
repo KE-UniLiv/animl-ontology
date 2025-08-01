@@ -8,7 +8,7 @@ import sys
 import os
 import threading
 import queue
-
+import statistics
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from src.input_output import save_to_csv
 from metrics.autoUnit import autoUnit
@@ -112,11 +112,13 @@ def evaluation_runner(metrics):
             target=globals()[metric['name']](metric['parameters'],0,output_queue)
         for t in threads:
             t.join()
-        result = 0
+        result = []
         while not output_queue.empty():
-            result += output_queue.get()
-        result = result / threads_number
-        print(result)
+            result.append(output_queue.get())
+        mean = statistics.mean(result)
+        print('mean:' +str(mean))
+        standard_deviation = statistics.stdev(result)
+        print('standard deviation:' + str(standard_deviation))
 
 
 

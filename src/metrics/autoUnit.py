@@ -1,6 +1,7 @@
 import sys
 import os
 import subprocess
+import nltk
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from src.input_output import save_to_csv, overwrite_first_line, read_lines_from_file, write_string_to_file, save_array_to_file
@@ -10,7 +11,9 @@ from supporting_repositories.Auto_KGQA.API.core.QuestionHandler import run_quest
 
 def autoUnit(parameters,thread_number,output_queue):
     if parameters['initialisation_step'] == 1:
-        overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology_2/data/ontologies/{parameters['ontology']}.ttl"')
+
+        nltk.download('punkt')
+        overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/{parameters['ontology']}.ttl"')
         createIndexes()
         parameters['model'] = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
         parameters['paralleism_blocker'] = False
