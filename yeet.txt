@@ -1,493 +1,498 @@
 https://w3id.org/polifonia/ontology/music-meta/MusicSheet
-https://w3id.org/polifonia/ontology/music-meta/Score
-https://w3id.org/polifonia/ontology/music-meta/Libretto
-https://w3id.org/polifonia/ontology/music-meta/Text
-https://w3id.org/polifonia/ontology/music-meta/Text
-https://w3id.org/polifonia/ontology/music-meta/StudioPerformance
-https://w3id.org/polifonia/ontology/music-meta/MusicalPerformance
-https://w3id.org/polifonia/ontology/music-meta/MusicEntity
-Music Entity
-https://w3id.org/polifonia/ontology/music-meta/Release
-Release
-https://w3id.org/polifonia/ontology/music-meta/isInvolvedInCreativeProcess
-Is involved in creative process
-https://w3id.org/polifonia/ontology/music-meta/isPartOfMusicEntity
-https://w3id.org/polifonia/ontology/music-meta/FormType
-Form Type
-https://w3id.org/polifonia/ontology/music-meta/isInfluencedBy
-https://w3id.org/polifonia/ontology/music-meta/MusicArtist
-https://w3id.org/polifonia/ontology/music-meta/isBroadcasterOf
-Is broadcaster of
-https://w3id.org/polifonia/ontology/music-meta/nominatedForAward
-http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
-http://www.w3.org/2002/07/owl#allValuesFrom
-https://w3id.org/polifonia/ontology/music-meta/CreativeTask
-https://w3id.org/polifonia/ontology/music-meta/isRealisedBy
-http://www.w3.org/2002/07/owl#ReflexiveProperty
-http://www.w3.org/2002/07/owl#Class
-https://w3id.org/polifonia/ontology/music-meta/creates
-Creates
-https://w3id.org/polifonia/ontology/music-meta/Score
-https://w3id.org/polifonia/ontology/core/isDerivedFrom
-http://purl.org/vocab/vann/preferredNamespaceUri
-http://www.w3.org/2002/07/owl#Ontology
-1
-https://w3id.org/polifonia/ontology/music-meta/MusicArtist
-An individual or group involved in creating, performing, or producing music. It encompasses musicians, singers, bands, composers, conductors, producers, and other artistic entities within the music industry.
-https://w3id.org/polifonia/ontology/music-meta/isFormationPlaceOf
-https://w3id.org/polifonia/ontology/music-meta/isScoreOf
-Is score of
-A written, printed or digital document that contains the musical notation of a composition. It encompasses the musical score, which serves as a visual representation of the music, including the arrangement of notes, rhythms, dynamics, and other musical symbols.
-https://w3id.org/polifonia/ontology/music-meta/hasCompositionPart
-https://w3id.org/polifonia/ontology/music-meta/Broadcaster
-http://www.w3.org/2000/01/rdf-schema#label
-http://www.w3.org/2002/07/owl#DatatypeProperty
-https://w3id.org/polifonia/ontology/music-meta/hasText
-https://w3id.org/polifonia/ontology/music-meta/AbstractScore
-https://w3id.org/polifonia/ontology/music-meta/AbstractScore
-https://w3id.org/polifonia/ontology/music-meta/Award
-http://creativecommons.org/ns#license
-https://w3id.org/polifonia/ontology/music-meta/RecordingProcess
-https://w3id.org/polifonia/ontology/music-meta/isTextFragmentOf
-https://w3id.org/polifonia/ontology/core/isPartOf
-https://w3id.org/polifonia/ontology/music-meta/isCreatedBy
-The type or structure of a musical composition. It encompasses the various standardized or recognized forms and structures that compositions can adopt, providing a framework for understanding and categorizing musical works based on their organizational patterns.
-https://w3id.org/polifonia/ontology/music-meta/tempo
-tempo
-http://www.w3.org/2002/07/owl#unionOf
-https://w3id.org/polifonia/ontology/music-meta/CreativeTask
-4
-https://w3id.org/polifonia/ontology/music-meta/hasEquipment
-Specifies that a RecordingProcess involves a specific RecordingEquipment. This property represents the relationship between a RecordingProcess and the equipment used in the recording process. It indicates that the mentioned RecordingProcess utilizes the mentioned RecordingEquipment for capturing or producing the recorded content.
-https://w3id.org/polifonia/ontology/music-meta/hasInstrumentation
-https://w3id.org/polifonia/ontology/music-meta/Section
-Section
-https://w3id.org/polifonia/ontology/music-meta/involvesMusicEnsemble
-https://w3id.org/polifonia/ontology/core/involvesAgent
-https://w3id.org/polifonia/ontology/music-meta/isLicenseOf
-https://w3id.org/polifonia/ontology/music-meta/isPublicationSituationOf
-Is publication situation of
-https://w3id.org/polifonia/ontology/music-meta/CreativeAction
-Creative Action
-http://www.w3.org/2002/07/owl#versionInfo
-https://w3id.org/polifonia/ontology/music-meta/isRecordedBy
-file:///C:/Users/sgwmorli/internship/animl_ontology/domain
-https://w3id.org/polifonia/ontology/core/Agent
-https://w3id.org/polifonia/ontology/music-meta/PublicationSituation
-Descibes the situation or context in which a musical work or recording is published or made publicly available. A PublicationSituation encompasses various aspects related to the publication of music, including the timing, location, medium, format, and associated entities involved in the publication process.
-Is realised by
-https://w3id.org/polifonia/ontology/core/hasPart
-https://w3id.org/polifonia/ontology/music-meta/hasAgentRole
-music-meta has Agent Role
-https://w3id.org/polifonia/ontology/music-meta/hasPublicationSituation
-Publication situation
-https://w3id.org/polifonia/ontology/music-meta/Instrumentation
-https://w3id.org/polifonia/ontology/music-meta/hasTextFragment
-Has text part
-121
-https://w3id.org/polifonia/ontology/core/Place
-https://w3id.org/polifonia/ontology/music-meta/MusicAlgorithm
-http://www.w3.org/1999/02/22-rdf-syntax-ns#first
-https://w3id.org/polifonia/ontology/music-meta/Recording
-file:///C:/Users/sgwmorli/internship/animl_ontology/superclass
-https://w3id.org/polifonia/ontology/music-meta/isDedicatedTo
-https://w3id.org/polifonia/ontology/music-meta/DedicationStatement
-http://purl.org/dc/terms/license
-http://www.w3.org/2000/01/rdf-schema#Literal
-Involves music ensemble
-https://w3id.org/polifonia/ontology/core/text
-http://www.w3.org/2002/07/owl#NamedIndividual
-owl Named Individual
-Inverse relationship of 'hasLicense.' It indicates that a License is associated with a specific Recording, Release, or Score. This property establishes the connection from the License's perspective, indicating that it governs the usage and distribution of the mentioned Recording, Release, or Score.
-The distribution and availability of a recorded musical work to the public. It encompasses the act of officially making a recorded music product, such as an album or single, available for purchase, streaming, or other forms of consumption.
-http://purl.org/dc/terms/issued
-https://w3id.org/polifonia/ontology/music-meta/isTrainingOf
-https://w3id.org/polifonia/ontology/music-meta/MusicAlgorithm
-https://w3id.org/polifonia/ontology/music-meta/isBroadcastedIn
-https://w3id.org/polifonia/ontology/music-meta/Recording
-https://w3id.org/polifonia/ontology/music-meta/involvesCreativeAction
-Involves creative action
-http://www.w3.org/2002/07/owl#onProperty
-Broadcaster
-https://w3id.org/polifonia/ontology/music-meta/isRealisationOf
-Iverse relationship of 'isRealisedBy.' It indicates that a Score or ScorePart is a realisation or tangible representation of a specific AbstractScore or Instrumentation. This property establishes the connection from the Score or ScorePart's perspective, indicating that it materializes or embodies the musical content or instrumentation described in the corresponding AbstractScore or Instrumentation.
-https://w3id.org/polifonia/ontology/core/hasPart
-file:///C:/Users/sgwmorli/internship/animl_ontology/s
-https://w3id.org/polifonia/ontology/music-meta/isKeyOf
-https://w3id.org/polifonia/ontology/music-meta/Key
-https://w3id.org/polifonia/ontology/music-meta/BroadcastingSituation
-https://w3id.org/polifonia/ontology/music-meta/MediumOfPerformance
-owl Class
-https://w3id.org/polifonia/ontology/music-meta/License
-Inverse relationship of 'hasKey.' It indicates that a Key is associated with a specific AbstractScore. This property establishes the connection from the Key's perspective, indicating that it is the key signature or tonal center assigned to the corresponding AbstractScore.
-file:///C:/Users/sgwmorli/internship/animl_ontology/range
-http://purl.org/dc/elements/1.1/creator
-https://w3id.org/polifonia/ontology/music-meta/isTrainedOn
-Key
-http://purl.org/dc/elements/1.1/title
-https://w3id.org/polifonia/ontology/music-meta/Collection
-https://w3id.org/polifonia/ontology/music-meta/Lyrics
-https://w3id.org/polifonia/ontology/music-meta/License
-The legal agreement or permission governing the usage and distribution of a musical work or its associated components. It encompasses the terms and conditions under which the music is licensed, including the rights granted, restrictions imposed, and obligations of the licensee.
-https://w3id.org/polifonia/ontology/music-meta/hasBroadcaster
-https://w3id.org/polifonia/ontology/music-meta/isPartOfRelease
-https://w3id.org/polifonia/ontology/music-meta/OpusStatement
-https://w3id.org/polifonia/ontology/core/activityEndDate
-http://www.w3.org/2001/XMLSchema#dateTime
-http://www.w3.org/2002/07/owl#versionIRI
-https://w3id.org/polifonia/ontology/music-meta/hasFormType
-A curated or organized grouping of musical works or related entities. It encompasses a cohesive set of musical compositions, recordings, scores, or other music-related items that are brought together based on a specific theme, genre, artist, or any other organizing principle.
-http://www.w3.org/2002/07/owl#ObjectProperty
-https://w3id.org/polifonia/ontology/music-meta/hasCollaboratedWith
-https://w3id.org/polifonia/ontology/music-meta/isCompositionPartOf
-https://w3id.org/polifonia/ontology/music-meta/isOpusStatementOf
-https://w3id.org/polifonia/ontology/music-meta/MusicGenre
-https://w3id.org/polifonia/ontology/music-meta/hasDedicationStatement
-https://w3id.org/polifonia/ontology/music-meta/orderNumber
-owl version Info
-http://purl.org/dc/elements/1.1/license
-https://w3id.org/polifonia/ontology/music-meta/Movement
-A self-contained section within a larger musical composition, typically found in multi-movement works such as symphonies, sonatas, or concertos. It encompasses a distinct and coherent portion of the composition that is characterized by its own unique musical ideas, structure, and expression.
-http://purl.org/dc/terms/modified
-terms modified
-owl union Of
-22-rdf-syntax-ns first
-https://w3id.org/polifonia/ontology/music-meta/OpusStatement
-https://w3id.org/polifonia/ontology/music-meta/isScorePartOf
-Is score part of
-Music Algorithm
-An action or process involving creativity, imagination, and artistic expression. It encompasses activities related to the creation, production, or development of artistic works, including music. It can include properties such as creator, medium, and result.
-A task or assignment involving creative activities in the context of music. It encompasses various activities that require artistic expression, innovation, and imagination to create or develop musical works, performances, compositions, or other creative endeavors.
-https://w3id.org/polifonia/ontology/music-meta/CompositionPart
-https://w3id.org/polifonia/ontology/music-meta/TextFragment
-A fragment or excerpt of text within a larger textual component of a musical composition. It encapsulates a specific portion of the lyrics, libretto, or other textual elements associated with the music. A TextFragment provides a smaller unit of textual content that can be individually referenced or analyzed within the context of the composition.
-https://w3id.org/polifonia/ontology/music-meta/Mode
-https://w3id.org/polifonia/ontology/music-meta/isFormTypeOf
-Is form type of
-https://w3id.org/polifonia/ontology/music-meta/Musician
-https://w3id.org/polifonia/ontology/music-meta/mediumCardinality
-http://www.w3.org/2001/XMLSchema#integer
-https://w3id.org/polifonia/ontology/music-meta/Award
-https://w3id.org/polifonia/ontology/music-meta/wasFormedIn
-https://w3id.org/polifonia/ontology/music-meta/MusicEnsenble
-https://w3id.org/polifonia/ontology/music-meta/hasKey
-https://w3id.org/polifonia/ontology/music-meta/Key
-https://w3id.org/polifonia/ontology/music-meta/hasMusicEntityPart
-https://w3id.org/polifonia/ontology/music-meta/MusicEntity
-Specifies that an AbstractScore is composed or written in a particular Key. This property represents the relationship between an AbstractScore and the Key in which it is intended to be performed or understood. It indicates that the AbstractScore is structured or based on the mentioned Key, which defines the tonal center, pitch relationships, and overall harmonic framework of the musical composition.
-https://w3id.org/polifonia/ontology/music-meta/involvesAgent
-https://w3id.org/polifonia/ontology/music-meta/hasScore
-Indicates that an Instrumentation is associated with a Score. This property represents the relationship between an Instrumentation and the Score that represents its musical notation. It signifies that the Instrumentation is accompanied by the mentioned Score, which provides the written or printed representation of the musical arrangement for the instruments or voices involved.
-https://w3id.org/polifonia/ontology/music-meta/hasScorePart
-Has score part
-https://w3id.org/polifonia/ontology/music-meta/CompositionPart
-A distinct section or segment of a musical composition. It encompasses the individual components or sections that make up a larger musical work, such as movements, sections, verses, choruses, or any other identifiable divisions within the composition.
-http://purl.org/vocab/vann/preferredNamespacePrefix
-https://w3id.org/polifonia/ontology/music-meta/hasMedium
+A physical or printed document that contains the musical notation of a composition. It encompasses the sheet music, which provides a visual representation of the music, including notes, rhythms, lyrics, and other musical symbols.
 https://w3id.org/polifonia/ontology/music-meta/hasOpusStatement
-http://www.w3.org/2002/07/owl#someValuesFrom
-https://w3id.org/polifonia/ontology/music-meta/isRealisedIn
-Represents the relationship between an AbstractScore or Instrumentation and the Score or ScorePart that brings it to life in a tangible or performable form. It signifies that the AbstractScore or Instrumentation is manifested or rendered into a concrete representation or performance through the mentioned Score or ScorePart.
-61
-Collection
-https://w3id.org/polifonia/ontology/music-meta/DedicationStatement
-Dedication Statement
-https://w3id.org/polifonia/ontology/music-meta/isMediumOf
+https://w3id.org/polifonia/ontology/music-meta/OpusStatement
+https://w3id.org/polifonia/ontology/music-meta/hasMusicEntityPart
+Has music entity part
+file:///C:/Users/sgwmorli/internship/animl_ontology/s
 https://w3id.org/polifonia/ontology/music-meta/ScorePart
-https://w3id.org/polifonia/ontology/music-meta/isProducedByRecordingProcess
-https://w3id.org/polifonia/ontology/music-meta/RecordingProcess
-o
-https://w3id.org/polifonia/ontology/music-meta/isGenreOf
-https://w3id.org/polifonia/ontology/music-meta/MusicGenre
-Inverse relationship of 'hasPublicationSituation.' It indicates that a PublicationSituation is associated with a specific Score or Recording. This property establishes the connection from the PublicationSituation's perspective, indicating that it defines the conditions and circumstances under which the mentioned Score or Recording is published or made publicly available.
-https://w3id.org/polifonia/ontology/music-meta/producesRecording
-https://w3id.org/polifonia/ontology/music-meta/opusSubNumber
-Opus sub number
-Is trained on
-http://www.w3.org/2002/07/owl#imports
+http://www.w3.org/2002/07/owl#Class
+1
+https://w3id.org/polifonia/ontology/music-meta/isInvolvedInCreativeProcess
+http://www.w3.org/2002/07/owl#ObjectProperty
+http://www.w3.org/2002/07/owl#AnnotationProperty
+https://w3id.org/polifonia/ontology/music-meta/wasFormedIn
+Was formed in
+http://www.w3.org/2002/07/owl#someValuesFrom
+78
+https://w3id.org/polifonia/ontology/music-meta/involvesCreativeAction
 https://w3id.org/polifonia/ontology/music-meta/CreativeProcess
-https://w3id.org/polifonia/ontology/music-meta/isEquipmentOf
-https://w3id.org/polifonia/ontology/music-meta/isPublisherOf
-Is publisher of
-Mode
-https://w3id.org/polifonia/ontology/music-meta/hasLicense
-vann preferred Namespace Uri
-https://w3id.org/polifonia/ontology/music-meta/receivedAward
-https://w3id.org/polifonia/ontology/core/isInvolvedIn
-https://w3id.org/polifonia/ontology/music-meta/MusicAnnotationTimeInterval
+https://w3id.org/polifonia/ontology/music-meta/CreativeProcess
+http://www.w3.org/1999/02/22-rdf-syntax-ns#first
+28
+https://w3id.org/polifonia/ontology/music-meta/hasEquipment
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 https://w3id.org/polifonia/ontology/music-meta/involvesMemberOfMusicEnsemble
-Musician
-The specific ensemble, group, or combination of instruments or voices used in a musical performance or recording. It describes the medium through which the musical composition is interpreted and brought to life.
-https://w3id.org/polifonia/ontology/music-meta/MusicalPerformance
-https://w3id.org/polifonia/ontology/music-meta/Note
-Has instrumentation
-Inverse relationship of 'hasTextFragment.' It indicates that a TextFragment is associated with a specific Text. This property establishes the connection from the TextFragment's perspective, indicating that it is a fragment or segment of the larger Text.
-Is part of release
-https://w3id.org/polifonia/ontology/music-meta/MusicEnsembleMembership
-https://w3id.org/polifonia/ontology/core/involvesAgent
-core involves Agent
-https://w3id.org/polifonia/ontology/music-meta/Instrumentation
-Specifies that a Text has a TextFragment associated with it. This property represents the relationship between a Text, such as lyrics or written text, and its corresponding TextFragment. It indicates that the Text contains or includes the mentioned TextFragment, which represents a portion or segment of the overall Text.
+Specifies the involvement of a MusicArtist as a member of a MusicEnsemble. This property represents the relationship between a MusicEnsembleMembership and the MusicArtist who is actively involved or participates as a member of the ensemble.
+http://www.w3.org/2002/07/owl#TransitiveProperty
+https://w3id.org/polifonia/ontology/music-meta/isRecordedBy
+o
+https://w3id.org/polifonia/ontology/music-meta/isBroadcasterOf
+https://w3id.org/polifonia/ontology/music-meta/Broadcaster
+https://w3id.org/polifonia/ontology/music-meta/hasGenre
+pecifies the genre or genres associated with a MusicArtist. This property represents the relationship between a MusicArtist and the MusicGenre(s) that are attributed or associated with their artistic output or musical style. It indicates the genre(s) that best describe the musical genre(s) or genres in which the MusicArtist operates or specializes.
+https://w3id.org/polifonia/ontology/music-meta/mediumCardinality
+https://w3id.org/polifonia/ontology/music-meta/isGenreOf
+Is genre of
+https://w3id.org/polifonia/ontology/music-meta/isScorePartOf
+https://w3id.org/polifonia/ontology/core/isPartOf
+https://w3id.org/polifonia/ontology/music-meta/ScorePart
+http://purl.org/dc/terms/license
+https://w3id.org/polifonia/ontology/music-meta/hasCollaboratedWith
 Specifies that a MusicArtist has collaborated with another MusicArtist. This property represents the relationship between two MusicArtists who have worked together on a musical project or performance. It indicates that the MusicArtist has engaged in a collaborative effort with the mentioned MusicArtist, indicating a shared creative endeavor, joint performance, or joint contribution to a musical work.
-Has broadcaster
-Inverse relationship of 'hasScore.' It indicates that a Score is associated with a specific Instrumentation. This property establishes the connection from the Score's perspective, indicating that it serves as the musical notation for the mentioned Instrumentation.
-Is influenced by
-http://www.w3.org/2002/07/owl#inverseOf
-Has form type
-https://w3id.org/polifonia/ontology/core/name
-Is realisation of
-https://w3id.org/polifonia/ontology/music-meta/Publisher
-Indicates that an AbstractScore has a specific FormType associated with it. This property represents the relationship between an AbstractScore and its designated FormType, which categorizes the overall structure or musical form of the composition. It signifies that the AbstractScore conforms to the mentioned FormType, which could include classifications such as Sonata, Symphony, Concerto, or other recognized musical forms.
 https://w3id.org/polifonia/ontology/music-meta/RecordingEquipment
 Recording Equipment
-Recording
-https://w3id.org/polifonia/ontology/music-meta/isInvolvedIn
-https://w3id.org/polifonia/ontology/music-meta/CreativeProcess
-Is medium of
-A distinct and identifiable segment within a musical composition. It encompasses smaller divisions within a composition that contribute to its overall structure, such as verses, choruses, bridges, or any other delineated portions of the music.
-Music Ensamble Membership
-core is Derived From
-Has equipment
-Is training of
-https://w3id.org/polifonia/ontology/music-meta/opusNumber
-Music Genre
-Lyrics
-Specifies that a ScorePart is performed using a specific MediumOfPerformance. This property represents the relationship between a ScorePart and the medium or instrument through which it is intended to be performed. It indicates that the ScorePart is designed or written for the mentioned MediumOfPerformance, which could include instruments, voices, or other performance mediums.
-https://w3id.org/polifonia/ontology/core/Person
-https://w3id.org/polifonia/ontology/core/hasSource
-http://www.w3.org/2002/07/owl#FunctionalProperty
-http://purl.org/dc/elements/1.1/description
-https://w3id.org/polifonia/ontology/music-meta/PublicationSituation
-Creative Task
-The arrangement or combination of musical instruments used in a composition, performance, or recording. It describes the specific instruments, their roles, and how they interact to create the overall sound and texture of the music. It can include properties such as instruments used, roles, and techniques.
-https://w3id.org/polifonia/ontology/music-meta/CollectionConcept
-terms issued
-http://www.w3.org/2002/07/owl#TransitiveProperty
-owl Transitive Property
-An abstract concept that allows to refer to the actual musical content of a MusicEntity. This makes it possible to describe musical properties that imply the existence of a hypothetical score, which may not be necessarily, or formally, materialised by the creators of the musical entity.
-Specifies that a DedicationStatement is dedicated to a specific Person. This property represents the relationship between a DedicationStatement, typically found in musical works, and the person or entity to whom the dedication is addressed. It indicates that the DedicationStatement is intended as a tribute or honor to the mentioned Person.
-license
-Note
+https://w3id.org/polifonia/ontology/music-meta/CompositionPart
 https://w3id.org/polifonia/ontology/music-meta/TextFragment
-https://w3id.org/polifonia/ontology/music-meta/hasRecording
-A live or recorded rendition of a musical composition. It encompasses the act of performing music, whether by musicians, singers, or other performers, to convey the intended artistic expression and interpretation of the composition.
-http://www.w3.org/2002/07/owl#Restriction
-owl Restriction
-https://w3id.org/polifonia/ontology/core/InformationRealization
-vann preferred Namespace Prefix
-https://w3id.org/polifonia/ontology/music-meta/AnnotationMethod
-Is produced by recording process
-Inverse relationship of 'hasMusicEntityPart.' It indicates that a MusicEntity part or component is part of a specific MusicEntity. This property establishes the connection from the MusicEntity part's perspective, indicating its inclusion or membership within the larger MusicEntity. The inverse property 'isPartOfMusicEntity' allows for the modeling and description of the hierarchical or structural relationships between MusicEntity parts and the MusicEntities they belong to.
-https://w3id.org/polifonia/ontology/music-meta/isInstrumentationOf
-Is instrumentation of
-Specifies the relationship between a MusicEnsemble and a Place, indicating that the ensemble was formed or established in a particular location. This property highlights the geographical origin or location where the ensemble came into existence or was initially established, providing information about its place of formation.
-Has recording
-https://w3id.org/polifonia/ontology/music-meta/isTextOf
-https://w3id.org/polifonia/ontology/core/MusicDataset
-https://w3id.org/polifonia/ontology/music-meta/isRecordingProcessOf
-Is key of
-Award
-A specific category or classification of music that shares common characteristics, styles, or cultural origins. It encompasses distinct musical traditions, styles, or movements that define a particular genre.
-Specifies the relationship between a MusicEnsembleMembership and a MusicEnsemble, indicating that the membership involves or includes the specified music ensemble.
-http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
-https://w3id.org/polifonia/ontology/music-meta/ScorePart
-Produces recording
-https://w3id.org/polifonia/ontology/music-meta/Publisher
-https://w3id.org/polifonia/ontology/music-meta/FormType
-Score Part
-Is license of
-An algorithm or computational process used in the creation, analysis, or manipulation of music. It encompasses algorithms designed to generate musical compositions, analyze musical patterns, apply effects or transformations to audio, or perform other computational tasks related to music.
-https://w3id.org/polifonia/ontology/music-meta/Release
-Inverse relationship of 'hasInstrumentation.' It indicates that an Instrumentation is associated with a specific AbstractScore. This property establishes the connection from the Instrumentation's perspective, indicating that it is the specified instrumentation or vocal arrangement intended for the corresponding AbstractScore.
-Has score
-Specifies the relationship between a MusicEntity and its constituent parts or components. This property represents the connection between a MusicEntity and the individual parts or components that comprise it. It indicates that the MusicEntity is composed of or includes the mentioned parts, which may consist of specific sections, movements, instrumental or vocal parts, or other structural elements that contribute to the overall composition.
-Has dedication statement
-Inverse relationship of 'isRecordedBy.' It indicates that a RecordingProcess is associated with a specific MusicEntity or MusicalPerformance. This property establishes the connection from the RecordingProcess's perspective, indicating that it is the process responsible for capturing or documenting the mentioned MusicEntity or MusicalPerformance.
-Inverse relationship of 'producesRecording.' It indicates that a Recording is produced by a specific RecordingProcess. This property establishes the connection from the Recording's perspective, indicating that it is the result or output of the mentioned RecordingProcess.
-https://w3id.org/polifonia/ontology/music-meta/LivePerformance
-Live Performance
-order number
-Inverse relationship of 'hasFormType.' It indicates that a FormType is associated with a specific AbstractScore. This property establishes the connection from the FormType's perspective, indicating that it characterizes the overall musical structure or form of the corresponding AbstractScore.
-https://w3id.org/polifonia/ontology/music-meta/DigitalScore
-DigitalScore
-https://w3id.org/polifonia/ontology/core/activityStartDate
-https://w3id.org/polifonia/ontology/music-meta/hasPublisher
-owl Datatype Property
-Has key
-A statement or declaration related to a musical opus or composition. It is typically used to provide information about the creation, purpose, or significance of a specific musical work.
-Specifies that a Recording, Release, or Score is associated with a specific License. This property represents the relationship between a musical recording, a release of music, or a musical score, and the license that governs its usage and distribution. It indicates that the mentioned Recording, Release, or Score is subject to the terms and conditions defined by the mentioned License.
-https://w3id.org/polifonia/ontology/music-meta/hasGenre
-https://w3id.org/polifonia/ontology/music-meta/hasSource
-License
-Text Fragment
-owl all Values From
-Specifies that a Score includes a specific ScorePart. This property represents the relationship between a Score and its constituent ScoreParts, which are individual sections or components of the overall musical notation. It indicates that the Score comprises the mentioned ScorePart, which can represent a particular instrument's part, vocal line, or other segmented elements within the musical composition.
-https://w3id.org/polifonia/ontology/music-meta/RecordingEquipment
-5
-Is part of music entity
-https://w3id.org/polifonia/ontology/core/Alias
-28
-https://w3id.org/polifonia/ontology/core/isPartOf
-Specifies that a MusicArtist is influenced by another MusicArtist. This property represents the relationship between a MusicArtist and the MusicArtist(s) who have had a significant impact on their artistic development or musical style. It indicates that the MusicArtist has been influenced by the ideas, techniques, or musical expressions of the mentioned MusicArtist(s), which have played a role in shaping their own musical approach or creative output.
-description
-Recording Process
-terms license
-https://w3id.org/polifonia/ontology/music-meta/MusicEnsembleMembership
-https://w3id.org/polifonia/ontology/music-meta/MusicEnsenble
-Inverse relationship of 'hasEquipment.' It indicates that a RecordingEquipment is associated with a specific RecordingProcess. This property establishes the connection from the RecordingEquipment's perspective, indicating that it is the equipment used in the mentioned RecordingProcess.
-Studio Performance
-The process of capturing and creating a recorded version of a musical performance or composition. It encompasses the various stages and techniques involved in recording, editing, mixing, and mastering the audio to produce a finalized recording.
-A specific musical mode, which is a set of pitch relationships and tonal characteristics that define a particular scale and tonal center. It describes the arrangement of intervals and patterns of pitches used in a musical composition or performance.
-Specifies that a MusicEntity or MusicalPerformance is recorded through a RecordingProcess. This property represents the relationship between a MusicEntity or MusicalPerformance and the process of recording it, typically involving capturing the audio or video performance in a recorded format.
-Has genre
-Has text
-owl imports
-Inverse relationship of 'hasBroadcaster.' It indicates that a Broadcaster is associated with a specific BroadcastingSituation. This property establishes the connection from the Broadcaster's perspective, indicating that they are responsible for broadcasting the content in the mentioned BroadcastingSituation.
-An entity or organization responsible for publishing or distributing musical works, scores, recordings, or other music-related content. It encompasses companies, labels, or individuals that handle the production, promotion, and dissemination of music to the public.
-12
-Opus number
-Is created by
-A musical performance that takes place in a recording studio or controlled environment specifically designed for audio recording. It encompasses the act of performing music with the purpose of capturing high-quality audio for later production, mixing, and mastering.
-Has medium
-78
-Is text fragment of
-https://w3id.org/polifonia/ontology/core/involves
-core has Source
-Is text of
-Specifies that a MusicAlgorithm has been trained on a specific MusicDataset. This property indicates the relationship between a MusicAlgorithm and the dataset it was trained on, highlighting the input data used to train and develop the algorithm's functionality and knowledge in the field of music.
-owl some Values From
-owl Object Property
-Publication Situation
-Inverse relationship of 'hasText.' It indicates that a Text is associated with a specific AbstractScore. This property establishes the connection from the Text's perspective, indicating that it is the textual content or annotations specifically intended for the corresponding AbstractScore.
-Specifies the involvement of a MusicArtist as a member of a MusicEnsemble. This property represents the relationship between a MusicEnsembleMembership and the MusicArtist who is actively involved or participates as a member of the ensemble.
-owl Functional Property
-The tonal center or tonic pitch of a musical composition. It denotes the specific pitch or note around which the composition revolves and provides a framework for harmonic and melodic relationships within the piece. It can include properties such as tonic pitch, mode, and related scales.
-Iverse relationship of 'hasPublisher.' It indicates that a Publisher is associated with a specific PublicationSituation. This property establishes the connection from the Publisher's perspective, indicating that they are responsible for publishing the content in the mentioned PublicationSituation.
-owl on Property
-https://w3id.org/polifonia/ontology/music-meta/hasMode
-https://w3id.org/polifonia/ontology/music-meta/BroadcastingSituation
-22-rdf-syntax-ns rest
-Is involved in
-Movement
-Specifies that an AbstractScore has an Instrumentation associated with it. This property represents the relationship between an AbstractScore and its corresponding Instrumentation. It indicates that the AbstractScore is intended to be performed by the instruments or voices specified in the Instrumentation.
-http://www.w3.org/2002/07/owl#SymmetricProperty
-Medium cardinality
-https://w3id.org/polifonia/ontology/core/AgentRole
-pecifies that a RecordingProcess produces a specific Recording. This property represents the relationship between a RecordingProcess and the resulting recorded output. It indicates that the mentioned RecordingProcess is responsible for the creation or production of the mentioned Recording.
-Specifies that a BroadcastingSituation involves a specific Broadcaster. This property represents the relationship between a broadcasting situation and the entity responsible for the broadcasting. It indicates that the mentioned BroadcastingSituation is associated with the mentioned Broadcaster, who is responsible for transmitting or airing the content.
-An annotation method refers to the nature of the procedure used for producing annotation on an artifact.
-http://www.w3.org/2002/07/owl#AnnotationProperty
-The relation between a music artist and a situation in which such entity is member of a collection.
-core text
-https://w3id.org/polifonia/ontology/core/isRealizedBy
-https://w3id.org/polifonia/ontology/music-meta/Broadcaster
-Has source
-Represents the relationship between an AbstractScore and its constituent CompositionParts, such as Movements or Sections. It signifies that the AbstractScore includes or comprises the mentioned CompositionPart, which can be a distinct musical section, movement, or other structural elements within the composition.
-Inverse relationship of 'involvesCreativeAction.' It indicates that a CreativeAction is involved in a specific CreativeProcess. This property establishes the connection from the CreativeAction's perspective, indicating its active involvement or participation within the context of the CreativeProcess.
-owl Annotation Property
-owl inverse Of
-Music Artist
-Is recording process of
-core activity Start Date
-Inverse relationship of 'creates.' It indicates that a MusicEntity is created by a specific CreativeProcess. This property establishes the connection from the MusicEntity's perspective, indicating the creative process that is responsible for the entity's generation, composition, production, or creation.
-A specific interval or duration within a musical composition that is annotated or marked with additional information.
-Involves agent
-The textual component of a musical composition that consists of the words, verses, or poetic expressions sung or spoken during the performance. Lyrics provide the vocal content and convey the narrative, emotions, or messages expressed through the music. They encompass the written representation of the lyrical content, which may be organized into lines, stanzas, or verses, forming an integral part of the composition.
-Is opus statement of
-Composition Part
-Specifies that a CreativeProcess involves a CreativeAction. This property represents the relationship between a CreativeProcess and the CreativeAction that is part of or integral to the process.
-Music Ensenble
-Opus Stantement
-Represents the relationship between a CreativeProcess and the MusicEntity that is produced or brought into existence as a result of the process. It indicates that the CreativeProcess is responsible for generating, composing, producing, or otherwise creating the mentioned MusicEntity.
-https://w3id.org/polifonia/ontology/music-meta/CreativeAction
-Is broadcasted in
-25
-https://w3id.org/polifonia/ontology/core/InformationObject
-https://w3id.org/polifonia/ontology/core/InformationObject
-has genre
-A physical or printed document that contains the musical notation of a composition. It encompasses the sheet music, which provides a visual representation of the music, including notes, rhythms, lyrics, and other musical symbols.
-owl Symmetric Property
-https://w3id.org/polifonia/ontology/core/hasAgentRole
-Has mode
-Inverse relationship of 'hasScorePart.' It indicates that a ScorePart is a component or part of a specific Score. This property establishes the connection from the ScorePart's perspective, indicating its membership or inclusion within the larger Score.
-Creative Process
-https://w3id.org/polifonia/ontology/core/TimeInterval
-Inverse relationship of 'isTrainedOn.' It indicates that a specific MusicDataset is used as training data for a MusicAlgorithm. The inverse property establishes the connection from the dataset's perspective, highlighting its role in training and contributing to the development of the algorithm's functionality and knowledge in the field of music.
-Has opus statement
-An abstract or conceptual grouping of musical works or related entities. It encompasses a conceptual framework or idea that serves as the basis for organizing and categorizing musical compositions, recordings, scores, or other music-related items.
-Has composition part
-Has collaborated with
-Specifies that a PublicationSituation involves a specific Publisher. This property represents the relationship between a publication situation and the entity or organization responsible for publishing the content. It indicates that the mentioned PublicationSituation is associated with the mentioned Publisher, who is responsible for releasing or making the content available to the public.
-Nominated for award
-Specifies that a MusicArtist has received a specific Award. It indicates that the MusicArtist has been honored or recognized with the mentioned Award, highlighting their achievement or excellence in the music industry.
-ns license
-The membership of a musician in a music ensemble. It captures the association between a musician and a specific ensemble, indicating that the musician is a member of the ensemble.
-Is genre of
-Music Annotation Time Interval
-Inverse relationship of 'wasFormedIn.' Establishes the connection from the place's perspective, highlighting its significance as the location where the ensemble was formed or established. It provides information about the historical and geographical association between the place and the formation of music ensembles, emphasizing the role of the place in shaping the ensemble's origin and identity.
-core activity End Date
-https://w3id.org/polifonia/ontology/music-meta/MediumOfPerformance
-Represents the relationship between a MusicArtist and the Award for which they have received a nomination. It indicates that the MusicArtist has been recognized or considered for the Award, highlighting their achievement or recognition in the music industry.
-Publisher
-Specifies the involvement of an agent or agents in a particular activity, process, or event. This property represents the relationship between an entity or event and the agent or agents that are actively engaged or participating in it. It indicates that the agent(s) play a role or contribute to the execution, performance, or realization of the associated entity or event.
-Has publisher
-Specifies that an AbstractScore has associated Text. This property represents the relationship between an AbstractScore and the Text associated with it. It indicates that the AbstractScore contains or includes the mentioned Text, which provides additional textual information, instructions, or annotations related to the score.
-This class represents an Information Object, which is defined as the sum of all the elements that make up a piece of music. A music entity abstract a musical work, as it may results from a composition process, an improvisation, or be the result of non-written transmission.
-Represents a specific situation or context related to broadcasting activities. It encompasses various scenarios, conditions, or events that may impact the broadcast of music or other content. It can include properties such as location, time, and specific conditions.
-owl version IRI
-Score
-Is realized by
-Libretto
-is dedicated to
-Is composition part of
-Specifies that a MusicEntity has an OpusStatement associated with it. This property represents the relationship between a MusicEntity and its corresponding OpusStatement. It indicates that the MusicEntity is identified or labeled with a specific OpusStatement, which typically includes information such as the opus number, title, composer, and other relevant details related to the work's cataloging or classification.
-A musical performance that takes place in real-time and is witnessed by an audience. It encompasses the act of performing music in a live setting, such as a concert, recital, or music festival, where the performers and audience interact directly.
-The equipment and tools used in the process of recording music. It encompasses the various devices, instruments, and technologies employed to capture and produce high-quality audio recordings.
-Specifies that a Score or Recording is associated with a specific PublicationSituation. This property represents the relationship between a musical score or recording and the situation or context in which it is published or made publicly available. It indicates that the mentioned Score or Recording is subject to the conditions and circumstances defined by the mentioned PublicationSituation.
-owl Reflexive Property
-A specific part or section within a musical score. It refers to a distinct musical line or voice within a composition that is intended to be performed by a particular instrument or group of instruments.
-https://w3id.org/polifonia/ontology/core/Situation
-Is formation place of
-139
-Text
-Specifies that a Recording is part of a specific Release. This property represents the relationship between a recorded musical content and the larger release or collection in which it is included. It indicates that the mentioned Recording is a component or part of the mentioned Release.
-Was formed in
-A statement or expression of dedication, typically found in music albums, books, or other creative works. It is a declaration of gratitude, acknowledgment, or special recognition towards individuals, groups, or causes. It can include properties such as text, creator, and recipient.
-Received award
-An award is intended as a recognition for a creative outcome, or more generally, for an activity carried out over a period of time. Typically, an award is given by an organisation and follows a recurring event.
-Medium of Performance
-A written or textual component of a musical composition. It encompasses the textual elements, such as lyrics or libretto, that accompany or form part of a musical work.
-Has music entity part
-Instrumentation
-Specifies that a Recording is broadcasted in a specific BroadcastingSituation. This property represents the relationship between a recorded musical content and the broadcasting situation in which it is aired or transmitted. It indicates that the mentioned Recording is made available to the public through the mentioned BroadcastingSituation.
-Inverse relationship of 'hasGenre.' It specifies that a MusicGenre is attributed or associated with a MusicArtist.
-Inverse relationship of 'hasCompositionPart.' It indicates that a CompositionPart, such as a Movement or Section, is a component or part of a specific AbstractScore. This property establishes the connection from the CompositionPart's perspective, indicating its membership or inclusion within the larger AbstractScore.
-A digital or electronic version of a musical score. It encompasses the digital representation of musical notation, allowing for electronic distribution, display, and manipulation of the score.
-Involves member of music ensemble
-http://www.w3.org/2001/XMLSchema#string
+https://w3id.org/polifonia/ontology/music-meta/isRealisationOf
+Iverse relationship of 'isRealisedBy.' It indicates that a Score or ScorePart is a realisation or tangible representation of a specific AbstractScore or Instrumentation. This property establishes the connection from the Score or ScorePart's perspective, indicating that it materializes or embodies the musical content or instrumentation described in the corresponding AbstractScore or Instrumentation.
+https://w3id.org/polifonia/ontology/music-meta/AbstractScore
+https://w3id.org/polifonia/ontology/music-meta/MusicalPerformance
 Musical Performance
-The written text or script of an opera, oratorio, or other dramatic musical work. The libretto serves as the literary foundation for the performance, providing the dialogue, lyrics, and stage directions that guide the singers, actors, and production team.
-Specialises the involvesAgent property for agents with musical roles.
-A class representing an entity or organization involved in broadcasting or transmitting audio or video content, including music.
-Is realised in
-Abstract Score
-pecifies the genre or genres associated with a MusicArtist. This property represents the relationship between a MusicArtist and the MusicGenre(s) that are attributed or associated with their artistic output or musical style. It indicates the genre(s) that best describe the musical genre(s) or genres in which the MusicArtist operates or specializes.
-nverse relationship of 'hasMedium.' It indicates that a MediumOfPerformance is associated with a specific ScorePart. This property establishes the connection from the MediumOfPerformance's perspective, indicating that it is the performance medium or instrument for which the mentioned ScorePart is intended.
-Is recorded by
+https://w3id.org/polifonia/ontology/music-meta/isTextFragmentOf
+https://w3id.org/polifonia/ontology/music-meta/TextFragment
+https://w3id.org/polifonia/ontology/music-meta/isScoreOf
+https://w3id.org/polifonia/ontology/music-meta/Section
+https://w3id.org/polifonia/ontology/music-meta/hasScorePart
+https://w3id.org/polifonia/ontology/music-meta/isPartOfRelease
+https://w3id.org/polifonia/ontology/music-meta/Recording
+https://w3id.org/polifonia/ontology/music-meta/producesRecording
+Produces recording
+https://w3id.org/polifonia/ontology/music-meta/Recording
+https://w3id.org/polifonia/ontology/music-meta/isPublicationSituationOf
+Inverse relationship of 'hasPublicationSituation.' It indicates that a PublicationSituation is associated with a specific Score or Recording. This property establishes the connection from the PublicationSituation's perspective, indicating that it defines the conditions and circumstances under which the mentioned Score or Recording is published or made publicly available.
+https://w3id.org/polifonia/ontology/music-meta/MusicGenre
+A specific category or classification of music that shares common characteristics, styles, or cultural origins. It encompasses distinct musical traditions, styles, or movements that define a particular genre.
+https://w3id.org/polifonia/ontology/music-meta/MusicEntity
+https://w3id.org/polifonia/ontology/music-meta/isBroadcastedIn
+Specifies that a Recording is broadcasted in a specific BroadcastingSituation. This property represents the relationship between a recorded musical content and the broadcasting situation in which it is aired or transmitted. It indicates that the mentioned Recording is made available to the public through the mentioned BroadcastingSituation.
+http://www.w3.org/2000/01/rdf-schema#label
+https://w3id.org/polifonia/ontology/music-meta/CreativeTask
+4
+https://w3id.org/polifonia/ontology/music-meta/hasInstrumentation
+https://w3id.org/polifonia/ontology/music-meta/isPublisherOf
+https://w3id.org/polifonia/ontology/music-meta/Publisher
+http://purl.org/vocab/vann/preferredNamespaceUri
+http://www.w3.org/2002/07/owl#Ontology
+https://w3id.org/polifonia/ontology/music-meta/Libretto
+Libretto
+https://w3id.org/polifonia/ontology/music-meta/BroadcastingSituation
+https://w3id.org/polifonia/ontology/core/Situation
+https://w3id.org/polifonia/ontology/music-meta/isProducedByRecordingProcess
+https://w3id.org/polifonia/ontology/music-meta/MusicEnsembleMembership
+The membership of a musician in a music ensemble. It captures the association between a musician and a specific ensemble, indicating that the musician is a member of the ensemble.
+http://purl.org/dc/elements/1.1/description
+Is broadcaster of
+https://w3id.org/polifonia/ontology/music-meta/Text
+https://w3id.org/polifonia/ontology/core/hasPart
+https://w3id.org/polifonia/ontology/music-meta/isInstrumentationOf
+https://w3id.org/polifonia/ontology/music-meta/nominatedForAward
+https://w3id.org/polifonia/ontology/music-meta/isOpusStatementOf
+https://w3id.org/polifonia/ontology/music-meta/hasScore
+Indicates that an Instrumentation is associated with a Score. This property represents the relationship between an Instrumentation and the Score that represents its musical notation. It signifies that the Instrumentation is accompanied by the mentioned Score, which provides the written or printed representation of the musical arrangement for the instruments or voices involved.
+https://w3id.org/polifonia/ontology/music-meta/Movement
+https://w3id.org/polifonia/ontology/music-meta/CompositionPart
+http://purl.org/dc/terms/issued
+https://w3id.org/polifonia/ontology/music-meta/hasTextFragment
+https://w3id.org/polifonia/ontology/music-meta/Award
+An award is intended as a recognition for a creative outcome, or more generally, for an activity carried out over a period of time. Typically, an award is given by an organisation and follows a recurring event.
+terms issued
+https://w3id.org/polifonia/ontology/music-meta/hasText
+Specifies that an AbstractScore has associated Text. This property represents the relationship between an AbstractScore and the Text associated with it. It indicates that the AbstractScore contains or includes the mentioned Text, which provides additional textual information, instructions, or annotations related to the score.
+Has equipment
+https://w3id.org/polifonia/ontology/music-meta/involvesMusicEnsemble
+https://w3id.org/polifonia/ontology/music-meta/MusicEnsenble
+Has opus statement
+https://w3id.org/polifonia/ontology/music-meta/MusicEntity
+https://w3id.org/polifonia/ontology/music-meta/hasBroadcaster
+Has broadcaster
+http://purl.org/dc/elements/1.1/license
+license
+https://w3id.org/polifonia/ontology/core/hasSource
+core has Source
+https://w3id.org/polifonia/ontology/music-meta/hasSource
+https://w3id.org/polifonia/ontology/music-meta/MusicArtist
+file:///C:/Users/sgwmorli/internship/animl_ontology/superclass
+http://purl.org/dc/elements/1.1/creator
+5
+http://www.w3.org/2002/07/owl#versionInfo
+owl version Info
+https://w3id.org/polifonia/ontology/music-meta/hasAgentRole
+https://w3id.org/polifonia/ontology/music-meta/involvesAgent
+Involves agent
+https://w3id.org/polifonia/ontology/music-meta/Score
+Score
+https://w3id.org/polifonia/ontology/music-meta/isEquipmentOf
+https://w3id.org/polifonia/ontology/music-meta/hasPublisher
+https://w3id.org/polifonia/ontology/music-meta/PublicationSituation
+https://w3id.org/polifonia/ontology/music-meta/isTrainingOf
+Inverse relationship of 'isTrainedOn.' It indicates that a specific MusicDataset is used as training data for a MusicAlgorithm. The inverse property establishes the connection from the dataset's perspective, highlighting its role in training and contributing to the development of the algorithm's functionality and knowledge in the field of music.
+https://w3id.org/polifonia/ontology/music-meta/isTextOf
+Is text of
+https://w3id.org/polifonia/ontology/core/activityStartDate
+core activity Start Date
+https://w3id.org/polifonia/ontology/music-meta/tempo
+http://www.w3.org/2002/07/owl#NamedIndividual
+https://w3id.org/polifonia/ontology/core/involvesAgent
+Is realisation of
+https://w3id.org/polifonia/ontology/music-meta/Collection
+Has source
+https://w3id.org/polifonia/ontology/music-meta/AbstractScore
+Creative Task
+https://w3id.org/polifonia/ontology/music-meta/Release
+https://w3id.org/polifonia/ontology/music-meta/isCreatedBy
+https://w3id.org/polifonia/ontology/music-meta/isKeyOf
+https://w3id.org/polifonia/ontology/music-meta/Musician
 An individual who is skilled in playing a musical instrument, singing, or composing music. It encompasses instrumentalists, vocalists, composers, conductors, and other individuals actively engaged in the creation, performance, or production of music.
-Broadcasting Situation
-rdf-schema label
-Is equipment of
-Describes a series of actions, steps, or stages involved in the creative development or production of artistic works, including music. It encompasses the process of generating ideas, exploring concepts, refining techniques, and producing the final creative output. It can include properties such as participants, duration, and output.
-Has license
-core name
-creator
-Annotation Method
-owl Ontology
-Inverse relationship of 'hasOpusStatement.' It indicates that an OpusStatement is associated with a specific MusicEntity. This property establishes the connection from the OpusStatement's perspective, indicating that it is the statement or label attributed to a particular MusicEntity. The inverse property 'isOpusStatementOf' allows for the modeling and description of the relationship between OpusStatements and the MusicEntities they pertain to, providing a means to identify and associate OpusStatements with their corresponding musical works.
-Music Sheet
-Collection Concept
-title
-A recorded performance or rendition of a musical composition. It refers to the capturing of sound, whether in a studio or live setting, for the purpose of creating a permanent audio representation of a musical performance.
+Inverse relationship of 'hasScorePart.' It indicates that a ScorePart is a component or part of a specific Score. This property establishes the connection from the ScorePart's perspective, indicating its membership or inclusion within the larger Score.
+https://w3id.org/polifonia/ontology/music-meta/hasRecording
+https://w3id.org/polifonia/ontology/music-meta/isInvolvedIn
+Is involved in
+https://w3id.org/polifonia/ontology/music-meta/MusicAnnotationTimeInterval
+https://w3id.org/polifonia/ontology/music-meta/orderNumber
+https://w3id.org/polifonia/ontology/music-meta/hasFormType
+owl some Values From
+https://w3id.org/polifonia/ontology/music-meta/PublicationSituation
+Publication Situation
+http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
+A task or assignment involving creative activities in the context of music. It encompasses various activities that require artistic expression, innovation, and imagination to create or develop musical works, performances, compositions, or other creative endeavors.
+http://www.w3.org/2002/07/owl#DatatypeProperty
+Is recorded by
+http://www.w3.org/2002/07/owl#onProperty
+http://www.w3.org/2002/07/owl#SymmetricProperty
+https://w3id.org/polifonia/ontology/core/isInvolvedIn
+https://w3id.org/polifonia/ontology/music-meta/FormType
+The type or structure of a musical composition. It encompasses the various standardized or recognized forms and structures that compositions can adopt, providing a framework for understanding and categorizing musical works based on their organizational patterns.
+https://w3id.org/polifonia/ontology/music-meta/Key
+Key
+https://w3id.org/polifonia/ontology/music-meta/hasPublicationSituation
+https://w3id.org/polifonia/ontology/music-meta/Instrumentation
+https://w3id.org/polifonia/ontology/music-meta/MusicArtist
+https://w3id.org/polifonia/ontology/core/activityEndDate
+https://w3id.org/polifonia/ontology/core/TimeInterval
+Has publisher
+https://w3id.org/polifonia/ontology/core/isPartOf
+http://www.w3.org/2002/07/owl#allValuesFrom
+Is score of
+Represents the relationship between a MusicArtist and the Award for which they have received a nomination. It indicates that the MusicArtist has been recognized or considered for the Award, highlighting their achievement or recognition in the music industry.
+Instrumentation
+https://w3id.org/polifonia/ontology/music-meta/StudioPerformance
+Studio Performance
+Specifies that a BroadcastingSituation involves a specific Broadcaster. This property represents the relationship between a broadcasting situation and the entity responsible for the broadcasting. It indicates that the mentioned BroadcastingSituation is associated with the mentioned Broadcaster, who is responsible for transmitting or airing the content.
+https://w3id.org/polifonia/ontology/music-meta/opusNumber
+Score Part
+https://w3id.org/polifonia/ontology/music-meta/MusicEnsenble
 A group or collective of musicians who perform together as an ensemble. It encompasses various types of musical groups, such as orchestras, bands, choirs, chamber ensembles, and jazz ensembles.
+139
+http://www.w3.org/2002/07/owl#inverseOf
+25
+https://w3id.org/polifonia/ontology/music-meta/isLicenseOf
+https://w3id.org/polifonia/ontology/music-meta/License
+http://purl.org/dc/terms/modified
+A written, printed or digital document that contains the musical notation of a composition. It encompasses the musical score, which serves as a visual representation of the music, including the arrangement of notes, rhythms, dynamics, and other musical symbols.
+owl Class
+http://purl.org/vocab/vann/preferredNamespacePrefix
+vann preferred Namespace Prefix
+pecifies that a RecordingProcess produces a specific Recording. This property represents the relationship between a RecordingProcess and the resulting recorded output. It indicates that the mentioned RecordingProcess is responsible for the creation or production of the mentioned Recording.
+Specifies that a MusicEntity or MusicalPerformance is recorded through a RecordingProcess. This property represents the relationship between a MusicEntity or MusicalPerformance and the process of recording it, typically involving capturing the audio or video performance in a recorded format.
+https://w3id.org/polifonia/ontology/music-meta/RecordingProcess
+http://www.w3.org/2002/07/owl#Restriction
+https://w3id.org/polifonia/ontology/music-meta/creates
+https://w3id.org/polifonia/ontology/music-meta/hasCompositionPart
+https://w3id.org/polifonia/ontology/music-meta/Text
+https://w3id.org/polifonia/ontology/music-meta/Mode
+A specific musical mode, which is a set of pitch relationships and tonal characteristics that define a particular scale and tonal center. It describes the arrangement of intervals and patterns of pitches used in a musical composition or performance.
+https://w3id.org/polifonia/ontology/music-meta/Score
+https://w3id.org/polifonia/ontology/music-meta/receivedAward
+https://w3id.org/polifonia/ontology/music-meta/Award
+https://w3id.org/polifonia/ontology/music-meta/isPartOfMusicEntity
+https://w3id.org/polifonia/ontology/music-meta/hasMedium
+http://www.w3.org/2001/XMLSchema#dateTime
+Specialises the involvesAgent property for agents with musical roles.
+https://w3id.org/polifonia/ontology/music-meta/isTrainedOn
+Release
+https://w3id.org/polifonia/ontology/music-meta/isRecordingProcessOf
+Is recording process of
+https://w3id.org/polifonia/ontology/music-meta/MediumOfPerformance
+Medium of Performance
+https://w3id.org/polifonia/ontology/music-meta/Broadcaster
+https://w3id.org/polifonia/ontology/music-meta/License
+The legal agreement or permission governing the usage and distribution of a musical work or its associated components. It encompasses the terms and conditions under which the music is licensed, including the rights granted, restrictions imposed, and obligations of the licensee.
+file:///C:/Users/sgwmorli/internship/animl_ontology/range
+https://w3id.org/polifonia/ontology/core/name
+https://w3id.org/polifonia/ontology/music-meta/RecordingProcess
+https://w3id.org/polifonia/ontology/music-meta/CreativeTask
+The tonal center or tonic pitch of a musical composition. It denotes the specific pitch or note around which the composition revolves and provides a framework for harmonic and melodic relationships within the piece. It can include properties such as tonic pitch, mode, and related scales.
+Is training of
+owl all Values From
+https://w3id.org/polifonia/ontology/music-meta/hasKey
+http://purl.org/dc/elements/1.1/title
+Has text part
+Specifies that an AbstractScore is composed or written in a particular Key. This property represents the relationship between an AbstractScore and the Key in which it is intended to be performed or understood. It indicates that the AbstractScore is structured or based on the mentioned Key, which defines the tonal center, pitch relationships, and overall harmonic framework of the musical composition.
+https://w3id.org/polifonia/ontology/music-meta/Lyrics
+The textual component of a musical composition that consists of the words, verses, or poetic expressions sung or spoken during the performance. Lyrics provide the vocal content and convey the narrative, emotions, or messages expressed through the music. They encompass the written representation of the lyrical content, which may be organized into lines, stanzas, or verses, forming an integral part of the composition.
+http://www.w3.org/2002/07/owl#unionOf
+12
+Music Entity
+http://www.w3.org/2002/07/owl#ReflexiveProperty
+Involves creative action
+https://w3id.org/polifonia/ontology/music-meta/isInfluencedBy
+https://w3id.org/polifonia/ontology/music-meta/MusicAlgorithm
+A distinct section or segment of a musical composition. It encompasses the individual components or sections that make up a larger musical work, such as movements, sections, verses, choruses, or any other identifiable divisions within the composition.
+Is trained on
+https://w3id.org/polifonia/ontology/core/Place
+tempo
+http://www.w3.org/2000/01/rdf-schema#Literal
+https://w3id.org/polifonia/ontology/music-meta/opusSubNumber
+http://www.w3.org/2001/XMLSchema#integer
+https://w3id.org/polifonia/ontology/music-meta/isMediumOf
+https://w3id.org/polifonia/ontology/music-meta/CreativeAction
+https://w3id.org/polifonia/ontology/music-meta/DigitalScore
+A digital or electronic version of a musical score. It encompasses the digital representation of musical notation, allowing for electronic distribution, display, and manipulation of the score.
+Inverse relationship of 'hasOpusStatement.' It indicates that an OpusStatement is associated with a specific MusicEntity. This property establishes the connection from the OpusStatement's perspective, indicating that it is the statement or label attributed to a particular MusicEntity. The inverse property 'isOpusStatementOf' allows for the modeling and description of the relationship between OpusStatements and the MusicEntities they pertain to, providing a means to identify and associate OpusStatements with their corresponding musical works.
+https://w3id.org/polifonia/ontology/core/InformationRealization
+https://w3id.org/polifonia/ontology/core/InformationRealization
+creator
+https://w3id.org/polifonia/ontology/music-meta/Instrumentation
+The written text or script of an opera, oratorio, or other dramatic musical work. The libretto serves as the literary foundation for the performance, providing the dialogue, lyrics, and stage directions that guide the singers, actors, and production team.
+terms license
+Has instrumentation
+A class representing an entity or organization involved in broadcasting or transmitting audio or video content, including music.
+The specific ensemble, group, or combination of instruments or voices used in a musical performance or recording. It describes the medium through which the musical composition is interpreted and brought to life.
+Inverse relationship of 'hasGenre.' It specifies that a MusicGenre is attributed or associated with a MusicArtist.
+https://w3id.org/polifonia/ontology/music-meta/isFormTypeOf
+Is form type of
+http://www.w3.org/2002/07/owl#versionIRI
+http://www.w3.org/2002/07/owl#imports
+owl imports
+https://w3id.org/polifonia/ontology/music-meta/isFormationPlaceOf
+Inverse relationship of 'wasFormedIn.' Establishes the connection from the place's perspective, highlighting its significance as the location where the ensemble was formed or established. It provides information about the historical and geographical association between the place and the formation of music ensembles, emphasizing the role of the place in shaping the ensemble's origin and identity.
+http://www.w3.org/2002/07/owl#FunctionalProperty
+A recorded performance or rendition of a musical composition. It refers to the capturing of sound, whether in a studio or live setting, for the purpose of creating a permanent audio representation of a musical performance.
+https://w3id.org/polifonia/ontology/music-meta/hasLicense
+file:///C:/Users/sgwmorli/internship/animl_ontology/domain
+https://w3id.org/polifonia/ontology/music-meta/isRealisedBy
+https://w3id.org/polifonia/ontology/music-meta/hasDedicationStatement
+Has dedication statement
+http://creativecommons.org/ns#license
+Has score part
+Is formation place of
+The relation between a music artist and a situation in which such entity is member of a collection.
+https://w3id.org/polifonia/ontology/music-meta/CollectionConcept
+An abstract or conceptual grouping of musical works or related entities. It encompasses a conceptual framework or idea that serves as the basis for organizing and categorizing musical compositions, recordings, scores, or other music-related items.
+https://w3id.org/polifonia/ontology/core/involvesAgent
+Is publication situation of
+A self-contained section within a larger musical composition, typically found in multi-movement works such as symphonies, sonatas, or concertos. It encompasses a distinct and coherent portion of the composition that is characterized by its own unique musical ideas, structure, and expression.
+https://w3id.org/polifonia/ontology/music-meta/isRealisedIn
+Specifies the relationship between a MusicEnsembleMembership and a MusicEnsemble, indicating that the membership involves or includes the specified music ensemble.
+Represents the relationship between a CreativeProcess and the MusicEntity that is produced or brought into existence as a result of the process. It indicates that the CreativeProcess is responsible for generating, composing, producing, or otherwise creating the mentioned MusicEntity.
+Music Genre
+Broadcasting Situation
+https://w3id.org/polifonia/ontology/music-meta/DedicationStatement
+https://w3id.org/polifonia/ontology/music-meta/MusicGenre
+owl Reflexive Property
+owl Object Property
+Is publisher of
+Specifies that a MusicEntity has an OpusStatement associated with it. This property represents the relationship between a MusicEntity and its corresponding OpusStatement. It indicates that the MusicEntity is identified or labeled with a specific OpusStatement, which typically includes information such as the opus number, title, composer, and other relevant details related to the work's cataloging or classification.
+https://w3id.org/polifonia/ontology/music-meta/Key
+Specifies that a MusicArtist has received a specific Award. It indicates that the MusicArtist has been honored or recognized with the mentioned Award, highlighting their achievement or excellence in the music industry.
+rdf-schema label
+https://w3id.org/polifonia/ontology/music-meta/MusicAlgorithm
+Specifies the involvement of an agent or agents in a particular activity, process, or event. This property represents the relationship between an entity or event and the agent or agents that are actively engaged or participating in it. It indicates that the agent(s) play a role or contribute to the execution, performance, or realization of the associated entity or event.
+https://w3id.org/polifonia/ontology/music-meta/RecordingEquipment
+owl Ontology
+https://w3id.org/polifonia/ontology/music-meta/AnnotationMethod
+An annotation method refers to the nature of the procedure used for producing annotation on an artifact.
+https://w3id.org/polifonia/ontology/music-meta/BroadcastingSituation
+Inverse relationship of 'hasLicense.' It indicates that a License is associated with a specific Recording, Release, or Score. This property establishes the connection from the License's perspective, indicating that it governs the usage and distribution of the mentioned Recording, Release, or Score.
+https://w3id.org/polifonia/ontology/music-meta/isCompositionPartOf
+Inverse relationship of 'hasFormType.' It indicates that a FormType is associated with a specific AbstractScore. This property establishes the connection from the FormType's perspective, indicating that it characterizes the overall musical structure or form of the corresponding AbstractScore.
+Text
+https://w3id.org/polifonia/ontology/music-meta/isDedicatedTo
+https://w3id.org/polifonia/ontology/music-meta/DedicationStatement
+https://w3id.org/polifonia/ontology/music-meta/Release
+https://w3id.org/polifonia/ontology/music-meta/Publisher
+Publisher
+https://w3id.org/polifonia/ontology/core/AgentRole
+Represents the relationship between an AbstractScore or Instrumentation and the Score or ScorePart that brings it to life in a tangible or performable form. It signifies that the AbstractScore or Instrumentation is manifested or rendered into a concrete representation or performance through the mentioned Score or ScorePart.
+Opus number
+Music Ensenble
+Is realized by
+https://w3id.org/polifonia/ontology/core/hasAgentRole
+https://w3id.org/polifonia/ontology/music-meta/MediumOfPerformance
+Specifies that a DedicationStatement is dedicated to a specific Person. This property represents the relationship between a DedicationStatement, typically found in musical works, and the person or entity to whom the dedication is addressed. It indicates that the DedicationStatement is intended as a tribute or honor to the mentioned Person.
+https://w3id.org/polifonia/ontology/music-meta/LivePerformance
+A musical performance that takes place in real-time and is witnessed by an audience. It encompasses the act of performing music in a live setting, such as a concert, recital, or music festival, where the performers and audience interact directly.
+owl inverse Of
+vann preferred Namespace Uri
+Has license
+Received award
+Inverse relationship of 'producesRecording.' It indicates that a Recording is produced by a specific RecordingProcess. This property establishes the connection from the Recording's perspective, indicating that it is the result or output of the mentioned RecordingProcess.
+https://w3id.org/polifonia/ontology/core/MusicDataset
+Is medium of
+owl on Property
+https://w3id.org/polifonia/ontology/core/isDerivedFrom
+core is Derived From
+owl Functional Property
+Represents a specific situation or context related to broadcasting activities. It encompasses various scenarios, conditions, or events that may impact the broadcast of music or other content. It can include properties such as location, time, and specific conditions.
+core activity End Date
+An action or process involving creativity, imagination, and artistic expression. It encompasses activities related to the creation, production, or development of artistic works, including music. It can include properties such as creator, medium, and result.
+https://w3id.org/polifonia/ontology/music-meta/hasMode
+Has mode
+An algorithm or computational process used in the creation, analysis, or manipulation of music. It encompasses algorithms designed to generate musical compositions, analyze musical patterns, apply effects or transformations to audio, or perform other computational tasks related to music.
+Inverse relationship of 'hasText.' It indicates that a Text is associated with a specific AbstractScore. This property establishes the connection from the Text's perspective, indicating that it is the textual content or annotations specifically intended for the corresponding AbstractScore.
+Is realised by
+The distribution and availability of a recorded musical work to the public. It encompasses the act of officially making a recorded music product, such as an album or single, available for purchase, streaming, or other forms of consumption.
+Has composition part
+A statement or expression of dedication, typically found in music albums, books, or other creative works. It is a declaration of gratitude, acknowledgment, or special recognition towards individuals, groups, or causes. It can include properties such as text, creator, and recipient.
+Specifies that a RecordingProcess involves a specific RecordingEquipment. This property represents the relationship between a RecordingProcess and the equipment used in the recording process. It indicates that the mentioned RecordingProcess utilizes the mentioned RecordingEquipment for capturing or producing the recorded content.
+Involves music ensemble
+https://w3id.org/polifonia/ontology/core/text
+core text
+Is opus statement of
+Specifies that a CreativeProcess involves a CreativeAction. This property represents the relationship between a CreativeProcess and the CreativeAction that is part of or integral to the process.
+An entity or organization responsible for publishing or distributing musical works, scores, recordings, or other music-related content. It encompasses companies, labels, or individuals that handle the production, promotion, and dissemination of music to the public.
+terms modified
+Is license of
+22-rdf-syntax-ns first
+Has key
+Music Sheet
+Is text fragment of
+Specifies that a Recording, Release, or Score is associated with a specific License. This property represents the relationship between a musical recording, a release of music, or a musical score, and the license that governs its usage and distribution. It indicates that the mentioned Recording, Release, or Score is subject to the terms and conditions defined by the mentioned License.
+Composition Part
+This class represents an Information Object, which is defined as the sum of all the elements that make up a piece of music. A music entity abstract a musical work, as it may results from a composition process, an improvisation, or be the result of non-written transmission.
+https://w3id.org/polifonia/ontology/core/isRealizedBy
+https://w3id.org/polifonia/ontology/core/Person
+Section
+Creates
+Collection
+Has score
+Has genre
+Music Ensamble Membership
+Describes a series of actions, steps, or stages involved in the creative development or production of artistic works, including music. It encompasses the process of generating ideas, exploring concepts, refining techniques, and producing the final creative output. It can include properties such as participants, duration, and output.
+order number
+Iverse relationship of 'hasPublisher.' It indicates that a Publisher is associated with a specific PublicationSituation. This property establishes the connection from the Publisher's perspective, indicating that they are responsible for publishing the content in the mentioned PublicationSituation.
+Inverse relationship of 'hasKey.' It indicates that a Key is associated with a specific AbstractScore. This property establishes the connection from the Key's perspective, indicating that it is the key signature or tonal center assigned to the corresponding AbstractScore.
+A specific interval or duration within a musical composition that is annotated or marked with additional information.
+https://w3id.org/polifonia/ontology/music-meta/MusicEnsembleMembership
+https://w3id.org/polifonia/ontology/core/isRealizedBy
+owl Annotation Property
+nverse relationship of 'hasMedium.' It indicates that a MediumOfPerformance is associated with a specific ScorePart. This property establishes the connection from the MediumOfPerformance's perspective, indicating that it is the performance medium or instrument for which the mentioned ScorePart is intended.
+Inverse relationship of 'hasCompositionPart.' It indicates that a CompositionPart, such as a Movement or Section, is a component or part of a specific AbstractScore. This property establishes the connection from the CompositionPart's perspective, indicating its membership or inclusion within the larger AbstractScore.
+https://w3id.org/polifonia/ontology/music-meta/OpusStatement
+A statement or declaration related to a musical opus or composition. It is typically used to provide information about the creation, purpose, or significance of a specific musical work.
+22-rdf-syntax-ns rest
+ns license
+A curated or organized grouping of musical works or related entities. It encompasses a cohesive set of musical compositions, recordings, scores, or other music-related items that are brought together based on a specific theme, genre, artist, or any other organizing principle.
+Inverse relationship of 'creates.' It indicates that a MusicEntity is created by a specific CreativeProcess. This property establishes the connection from the MusicEntity's perspective, indicating the creative process that is responsible for the entity's generation, composition, production, or creation.
+DigitalScore
+https://w3id.org/polifonia/ontology/core/Agent
+Has collaborated with
+Music Artist
+Nominated for award
+Publication situation
+Specifies that a Score includes a specific ScorePart. This property represents the relationship between a Score and its constituent ScoreParts, which are individual sections or components of the overall musical notation. It indicates that the Score comprises the mentioned ScorePart, which can represent a particular instrument's part, vocal line, or other segmented elements within the musical composition.
+Inverse relationship of 'hasEquipment.' It indicates that a RecordingEquipment is associated with a specific RecordingProcess. This property establishes the connection from the RecordingEquipment's perspective, indicating that it is the equipment used in the mentioned RecordingProcess.
+Recording
+A live or recorded rendition of a musical composition. It encompasses the act of performing music, whether by musicians, singers, or other performers, to convey the intended artistic expression and interpretation of the composition.
+core name
+A specific part or section within a musical score. It refers to a distinct musical line or voice within a composition that is intended to be performed by a particular instrument or group of instruments.
+Is involved in creative process
+Broadcaster
+Indicates that an AbstractScore has a specific FormType associated with it. This property represents the relationship between an AbstractScore and its designated FormType, which categorizes the overall structure or musical form of the composition. It signifies that the AbstractScore conforms to the mentioned FormType, which could include classifications such as Sonata, Symphony, Concerto, or other recognized musical forms.
+Is key of
+Inverse relationship of 'hasTextFragment.' It indicates that a TextFragment is associated with a specific Text. This property establishes the connection from the TextFragment's perspective, indicating that it is a fragment or segment of the larger Text.
+https://w3id.org/polifonia/ontology/core/Alias
+https://w3id.org/polifonia/ontology/core/Alias
+Has recording
+Inverse relationship of 'hasBroadcaster.' It indicates that a Broadcaster is associated with a specific BroadcastingSituation. This property establishes the connection from the Broadcaster's perspective, indicating that they are responsible for broadcasting the content in the mentioned BroadcastingSituation.
+Is created by
+owl Named Individual
+https://w3id.org/polifonia/ontology/core/involves
+A fragment or excerpt of text within a larger textual component of a musical composition. It encapsulates a specific portion of the lyrics, libretto, or other textual elements associated with the music. A TextFragment provides a smaller unit of textual content that can be individually referenced or analyzed within the context of the composition.
+Inverse relationship of 'hasInstrumentation.' It indicates that an Instrumentation is associated with a specific AbstractScore. This property establishes the connection from the Instrumentation's perspective, indicating that it is the specified instrumentation or vocal arrangement intended for the corresponding AbstractScore.
+Mode
+https://w3id.org/polifonia/ontology/core/involves
+Descibes the situation or context in which a musical work or recording is published or made publicly available. A PublicationSituation encompasses various aspects related to the publication of music, including the timing, location, medium, format, and associated entities involved in the publication process.
+https://w3id.org/polifonia/ontology/core/hasAgentRole
+Live Performance
+Is produced by recording process
+Is equipment of
+Represents the relationship between an AbstractScore and its constituent CompositionParts, such as Movements or Sections. It signifies that the AbstractScore includes or comprises the mentioned CompositionPart, which can be a distinct musical section, movement, or other structural elements within the composition.
+Has text
+121
+core involves Agent
+https://w3id.org/polifonia/ontology/music-meta/Note
+Note
+Is composition part of
+is dedicated to
+Lyrics
+https://w3id.org/polifonia/ontology/music-meta/FormType
+Musician
+Specifies that a Text has a TextFragment associated with it. This property represents the relationship between a Text, such as lyrics or written text, and its corresponding TextFragment. It indicates that the Text contains or includes the mentioned TextFragment, which represents a portion or segment of the overall Text.
+Specifies the relationship between a MusicEntity and its constituent parts or components. This property represents the connection between a MusicEntity and the individual parts or components that comprise it. It indicates that the MusicEntity is composed of or includes the mentioned parts, which may consist of specific sections, movements, instrumental or vocal parts, or other structural elements that contribute to the overall composition.
+Is score part of
+Specifies that a ScorePart is performed using a specific MediumOfPerformance. This property represents the relationship between a ScorePart and the medium or instrument through which it is intended to be performed. It indicates that the ScorePart is designed or written for the mentioned MediumOfPerformance, which could include instruments, voices, or other performance mediums.
+Specifies that a Recording is part of a specific Release. This property represents the relationship between a recorded musical content and the larger release or collection in which it is included. It indicates that the mentioned Recording is a component or part of the mentioned Release.
+owl Transitive Property
+Creative Action
+https://w3id.org/polifonia/ontology/core/InformationObject
+Is realised in
+Recording Process
+https://w3id.org/polifonia/ontology/core/InformationObject
+A written or textual component of a musical composition. It encompasses the textual elements, such as lyrics or libretto, that accompany or form part of a musical work.
+61
+Is part of music entity
+Is broadcasted in
+description
+https://w3id.org/polifonia/ontology/music-meta/MusicalPerformance
+Is influenced by
+Inverse relationship of 'involvesCreativeAction.' It indicates that a CreativeAction is involved in a specific CreativeProcess. This property establishes the connection from the CreativeAction's perspective, indicating its active involvement or participation within the context of the CreativeProcess.
+Music Annotation Time Interval
+Award
+Dedication Statement
+Opus sub number
+Creative Process
+music-meta has Agent Role
+Specifies that a PublicationSituation involves a specific Publisher. This property represents the relationship between a publication situation and the entity or organization responsible for publishing the content. It indicates that the mentioned PublicationSituation is associated with the mentioned Publisher, who is responsible for releasing or making the content available to the public.
+An individual or group involved in creating, performing, or producing music. It encompasses musicians, singers, bands, composers, conductors, producers, and other artistic entities within the music industry.
+title
+A musical performance that takes place in a recording studio or controlled environment specifically designed for audio recording. It encompasses the act of performing music with the purpose of capturing high-quality audio for later production, mixing, and mastering.
+The process of capturing and creating a recorded version of a musical performance or composition. It encompasses the various stages and techniques involved in recording, editing, mixing, and mastering the audio to produce a finalized recording.
+Abstract Score
+Involves member of music ensemble
+Is part of release
+owl Restriction
+Opus Stantement
+Specifies that an AbstractScore has an Instrumentation associated with it. This property represents the relationship between an AbstractScore and its corresponding Instrumentation. It indicates that the AbstractScore is intended to be performed by the instruments or voices specified in the Instrumentation.
+Music Algorithm
+Is instrumentation of
+The arrangement or combination of musical instruments used in a composition, performance, or recording. It describes the specific instruments, their roles, and how they interact to create the overall sound and texture of the music. It can include properties such as instruments used, roles, and techniques.
+https://w3id.org/polifonia/ontology/core/isInvolvedIn
+Has medium
+License
+Collection Concept
+Specifies that a MusicAlgorithm has been trained on a specific MusicDataset. This property indicates the relationship between a MusicAlgorithm and the dataset it was trained on, highlighting the input data used to train and develop the algorithm's functionality and knowledge in the field of music.
+owl Datatype Property
+Form Type
+Has form type
+owl version IRI
+Specifies that a Score or Recording is associated with a specific PublicationSituation. This property represents the relationship between a musical score or recording and the situation or context in which it is published or made publicly available. It indicates that the mentioned Score or Recording is subject to the conditions and circumstances defined by the mentioned PublicationSituation.
+owl union Of
+Inverse relationship of 'hasMusicEntityPart.' It indicates that a MusicEntity part or component is part of a specific MusicEntity. This property establishes the connection from the MusicEntity part's perspective, indicating its inclusion or membership within the larger MusicEntity. The inverse property 'isPartOfMusicEntity' allows for the modeling and description of the hierarchical or structural relationships between MusicEntity parts and the MusicEntities they belong to.
+Specifies that a MusicArtist is influenced by another MusicArtist. This property represents the relationship between a MusicArtist and the MusicArtist(s) who have had a significant impact on their artistic development or musical style. It indicates that the MusicArtist has been influenced by the ideas, techniques, or musical expressions of the mentioned MusicArtist(s), which have played a role in shaping their own musical approach or creative output.
+Inverse relationship of 'isRecordedBy.' It indicates that a RecordingProcess is associated with a specific MusicEntity or MusicalPerformance. This property establishes the connection from the RecordingProcess's perspective, indicating that it is the process responsible for capturing or documenting the mentioned MusicEntity or MusicalPerformance.
+owl Symmetric Property
+An abstract concept that allows to refer to the actual musical content of a MusicEntity. This makes it possible to describe musical properties that imply the existence of a hypothetical score, which may not be necessarily, or formally, materialised by the creators of the musical entity.
+Annotation Method
+http://www.w3.org/2001/XMLSchema#string
+Medium cardinality
+Text Fragment
+has genre
+Inverse relationship of 'hasScore.' It indicates that a Score is associated with a specific Instrumentation. This property establishes the connection from the Score's perspective, indicating that it serves as the musical notation for the mentioned Instrumentation.
+Movement
+https://w3id.org/polifonia/ontology/music-meta/CreativeAction
+A distinct and identifiable segment within a musical composition. It encompasses smaller divisions within a composition that contribute to its overall structure, such as verses, choruses, bridges, or any other delineated portions of the music.
 https://w3id.org/polifonia/ontology/core/Task
+Specifies the relationship between a MusicEnsemble and a Place, indicating that the ensemble was formed or established in a particular location. This property highlights the geographical origin or location where the ensemble came into existence or was initially established, providing information about its place of formation.
+The equipment and tools used in the process of recording music. It encompasses the various devices, instruments, and technologies employed to capture and produce high-quality audio recordings.

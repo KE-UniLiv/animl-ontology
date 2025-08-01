@@ -311,7 +311,7 @@ class Endpoint:
             number_hops-=1
             for next_node in next_nodes:
                 if next_node not in self.visited_nodes and is_valid_uri(next_node):
-                    describe += self.describe_(next_node,number_hops,limit_by_property)[0]
+                    describe += str(self.describe_(next_node,number_hops,limit_by_property)[0])
         return describe,is_class
     
     def camel_case_split(self,identifier):

@@ -86,56 +86,36 @@ def triplet_extraction(ontology,file_name):
 
 stop_event = threading.Event()
 
-class SafeThread(threading.Thread):
-    def __init__(self, target, args=()):
-        super().__init__()
-        self._target = target
-        self._args = args
-        self.exception = None
-        
-    def run(self):
-        if stop_event.is_set():
-            return
-        try:
-            self._target(*self._args)
-        except Exception as e:
-            self.exception = e
-            stop_event.set()  # Signal all threads to stop
 
 
 def error_maker():
     print('error maker started')
     time.sleep(40)
+    stop_event.set()
     raise ValueError('derliberate error')
 
 def evaluation_runner(metrics):
     for metric in metrics:
         output_queue = queue.Queue()
         metric['parameters']['initialisation_step'] = 1
-        target=globals()[metric['name']](metric['parameters'],0,output_queue)
+        target=globals()[metric['name']](metric['parameters'],0,output_queue,stop_event)
         metric['parameters']['initialisation_step'] = 0
         parameters = output_queue.get()
         if not(parameters['paralleism_blocker'] == True):
             
             threads = []
             for i in range(1, 5):
-                thread = SafeThread(target=globals()[metric['name']], args=(parameters, i, output_queue))
+                thread = threading.Thread(target=globals()[metric['name']], args=(parameters, i, output_queue,stop_event))
                 thread.start()
                 threads.append(thread)
+            thread = threading.Thread(target=error_maker(),args=(stop_event))
+            thread.start()
+            threads.append(thread)
         else:
             thread=globals()[metric['name']](metric['parameters'],0,output_queue)
             thread.start()
             threads.append(thread)
         result = []
-
-        
-        while any(t.is_alive() for t in threads):
-            for t in threads:
-                print('thread' + str(t) + 'is checking that no other threads have raised an exception')
-                if t.exception:
-                    stop_event.set()  # Signal all threads to stop
-                    raise t.exception
-            time.sleep(1)  # Avoid busy waiting
 
         for thread in threads:
             thread.join()

@@ -118,22 +118,30 @@ class QuestionHandler:
             # print(f"output:{selection}")
             # print("--------------\n"*10)
             # return
+            selection_number = -1
+            sparql_selected = """
+                    SELECT ?s ?p ?o WHERE {
+                     ?s ?p ?o .
+                    FILTER(false)
+                    }
+                 """
             try:
                 selection_number = [int(s) for s in re.findall(r'\b\d+\b', selection)] [0]
-                if selection_number == -1:
-                    sparql_selected = """
-                        SELECT ?s ?p ?o WHERE {
-                         ?s ?p ?o .
-                        FILTER(false)
-                        }
-                     """
-                    results_selected = []
-                else:
-                    sparql_selected = sparqls[selection_number]
-                    result_selected = results[selection_number]
             except:
-                raise RuntimeError('gpt failed to produce a selection for the best sparql query')
-                selection_number = 0 
+                selection_number = -1
+            if selection_number == -1:
+                sparql_selected = """
+                    SELECT ?s ?p ?o WHERE {
+                     ?s ?p ?o .
+                    FILTER(false)
+                    }
+                 """
+                results_selected = []
+            else:
+                print('this is the selected sparql array' + str(sparql_selected))
+                print('this is the selection number' + str(selection_number))
+                sparql_selected = sparqls[selection_number]
+                result_selected = results[selection_number]
 
             self.messagesTranslater.add({"role":"assistant",
                  "content":f"""
