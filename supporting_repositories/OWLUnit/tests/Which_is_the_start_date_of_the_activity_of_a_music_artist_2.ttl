@@ -1,0 +1,20 @@
+
+            @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+            @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+            @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+            owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	            owlunit:hasCompetencyQuestion "Which is the start date of the activity of a music artist?" ;
+ 	            owlunit:hasSPARQLUnitTest """
+	            
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns1: <http://www.kgqa.com/>
+PREFIX music-ontology: <http://example.org/music-ontology#>
+
+SELECT ?musicArtist ?startDate WHERE {
+    ?musicArtist a music-ontology:MusicArtist .  # Assuming MusicArtist is the class for music artists
+    ?musicArtist music-ontology:hasStartTime ?startDate .  # Using the hasStartTime property
+}
+""" ;
+	            owlunit:testsOntology <../../../data/ontologies/synthetic_small_test.ttl> .

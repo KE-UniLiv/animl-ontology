@@ -16,7 +16,7 @@ def autoUnit(parameters,thread_number,output_queue):
         overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/{parameters['ontology']}.ttl"')
         createIndexes()
         parameters['model'] = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-        parameters['paralleism_blocker'] = False
+        parameters['paralleism_blocker'] = True
         print('skideedle skidoodle your arms are now a noodle')
         output_queue.put(parameters)
     else:

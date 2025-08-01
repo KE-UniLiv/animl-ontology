@@ -19,5 +19,5 @@ xmltodict==0.13.0
 validators==0.33.0
 google
 google.genai
-tf-keras=2.19.0
+tf-keras==2.19.0
 deeponto

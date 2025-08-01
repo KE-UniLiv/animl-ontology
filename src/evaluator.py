@@ -9,6 +9,7 @@ import os
 import threading
 import queue
 import statistics
+import time
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from src.input_output import save_to_csv
 from metrics.autoUnit import autoUnit
@@ -102,7 +103,10 @@ class SafeThread(threading.Thread):
             stop_event.set()  # Signal all threads to stop
 
 
-
+def error_maker():
+    print('error maker started')
+    time.sleep(40)
+    raise ValueError('derliberate error')
 
 def evaluation_runner(metrics):
     for metric in metrics:
@@ -123,12 +127,20 @@ def evaluation_runner(metrics):
             thread.start()
             threads.append(thread)
         result = []
+
+        
+        while any(t.is_alive() for t in threads):
+            for t in threads:
+                print('thread' + str(t) + 'is checking that no other threads have raised an exception')
+                if t.exception:
+                    stop_event.set()  # Signal all threads to stop
+                    raise t.exception
+            time.sleep(1)  # Avoid busy waiting
+
         for thread in threads:
             thread.join()
             while not output_queue.empty():
                 result.append(output_queue.get())
-        if thread.exception:
-            raise thread.exception  # Raise the first exception encountered
         mean = statistics.mean(result)
         print('mean:' +str(mean))
         standard_deviation = statistics.stdev(result)

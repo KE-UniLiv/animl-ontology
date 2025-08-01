@@ -1,4 +1,4 @@
-ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/real_small_test.ttl"
+ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/synthetic_small_test.ttl"
 EXTRACT_T_BOX = True # The script will perform queries on ENDPOINT_KNOWLEDGE_GRAPH_URL to extract the necessary information that would form the T-Box. The triples will be saved in the file ENDPOINT_T_BOX_URL. If you already have the T-Box separated, set this value to False.
 ENDPOINT_T_BOX_URL = "supporting_repositories/Auto_KGQA/sparql/temp/t_box.ttl" # Change this line only if you already have the T-Box separated, you need to set EXTRACT_T_BOX = False. Set the value to a local file when extracting the T-Box
 

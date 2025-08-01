@@ -44,7 +44,7 @@ def call_gemini_api(prompt,system_prompt,n=1,temperature=0):
 
 def call_openai_api(prompt,system_prompt,n=1,temperature=0):
     try:
-        result = OpenAI(api_key = os.getenv("OPENAI_API_KEY")).chat.completions.create(model='gpt-4o',messages=prompt,n=n,temperature=temperature)
+        result = OpenAI(api_key = os.getenv("OPENAI_API_KEY")).chat.completions.create(model='gpt-4o-mini',messages=prompt,n=n,temperature=temperature)
         print(result)
         return result
     except:

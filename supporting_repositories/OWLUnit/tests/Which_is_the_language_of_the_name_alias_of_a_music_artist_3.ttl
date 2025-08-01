@@ -1,0 +1,21 @@
+
+            @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+            @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+            @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+            owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	            owlunit:hasCompetencyQuestion "Which is the language of the name/alias of a music artist?" ;
+ 	            owlunit:hasSPARQLUnitTest """
+	            
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX music-ontology: <http://example.org/music-ontology#>
+
+SELECT ?artist ?language WHERE {
+    ?artist a music-ontology:MusicArtist .  # Selecting resources of type MusicArtist
+    ?artist music-ontology:hasNameAlias ?nameAlias .  # Assuming hasNameAlias is the property for the name/alias
+    ?nameAlias rdfs:label ?label .  # Getting the label of the name/alias
+    BIND(lang(?label) AS ?language)  # Binding the language of the label to a variable
+}
+""" ;
+	            owlunit:testsOntology <../../../data/ontologies/synthetic_small_test.ttl> .

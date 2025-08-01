@@ -1,0 +1,20 @@
+
+            @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+            @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+            @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
+
+            owlunittest:primary  a owlunit:CompetencyQuestionVerification ;
+ 	            owlunit:hasCompetencyQuestion "Which award has a music artist received a nomination for?" ;
+ 	            owlunit:hasSPARQLUnitTest """
+	            
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX music-ontology: <http://example.org/music-ontology#>
+
+SELECT ?artist ?award WHERE {
+    ?artist music-ontology:receivedNominationFor ?nomination.
+    OPTIONAL { ?nomination music-ontology:receivedAward ?award. }
+}
+""" ;
+	            owlunit:testsOntology <../../../data/ontologies/synthetic_small_test.ttl> .

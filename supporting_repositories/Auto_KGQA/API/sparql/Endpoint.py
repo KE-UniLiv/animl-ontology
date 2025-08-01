@@ -252,6 +252,8 @@ class Endpoint:
         # print(query)
         triples = self.run_sparql(query)
         #outgoing properties
+        if triples==None:
+            return [], False
         for triple in triples:
             # print(triple)
             if self.filterProperty(triple["?p"]):

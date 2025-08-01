@@ -123,22 +123,24 @@ class QuestionHandler:
                 sparql_selected = sparqls[selection_number]
                 result_selected = results[selection_number]
             except:
-                #print("Escolha deu errado!: "+selection)
-                selection_number = 0
+                raise RuntimeError('gpt failed to produce a selection for the best sparql query')
+                selection_number = 0 
+
             self.messagesTranslater.add({"role":"assistant",
-                                             "content":f"""
-                                                ```sparql
-                                                    {sparql_selected}
-                                                ```
-                                                """
-                                            })
-                
+                 "content":f"""
+                    ```sparql
+                        {sparql_selected}
+                       ```
+                    """
+                })       
         else: 
             self.messagesTranslater.add({"role":"assistant",
                                          "content":""})
             return None
         return [sparqls,results,selection_number]
     
+
+
 
     def generateNLResponse(self,question,sparql_selected,results_selected):
         question_forumlated = f"""
