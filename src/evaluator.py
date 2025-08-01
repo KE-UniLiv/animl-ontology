@@ -83,38 +83,52 @@ def triplet_extraction(ontology,file_name):
         data.append([sub, pre, obj])
     save_to_csv(data,f'data/extracted_triplets/{file_name}.csv') 
 
+stop_event = threading.Event()
+
+class SafeThread(threading.Thread):
+    def __init__(self, target, args=()):
+        super().__init__()
+        self._target = target
+        self._args = args
+        self.exception = None
+        
+    def run(self):
+        if stop_event.is_set():
+            return
+        try:
+            self._target(*self._args)
+        except Exception as e:
+            self.exception = e
+            stop_event.set()  # Signal all threads to stop
+
+
+
+
 def evaluation_runner(metrics):
     for metric in metrics:
         output_queue = queue.Queue()
         metric['parameters']['initialisation_step'] = 1
         target=globals()[metric['name']](metric['parameters'],0,output_queue)
         metric['parameters']['initialisation_step'] = 0
-        threads_number = 0
         parameters = output_queue.get()
         if not(parameters['paralleism_blocker'] == True):
-            threads_number = 2
+            
             threads = []
-            #todo, a multi threading helper function that runs on gpu if avialble, and creates threads otherwise
-            one = threading.Thread(target=globals()[metric['name']], args=(parameters,1,output_queue))
-            one.start()
-            threads.append(one)
-            two = threading.Thread(target=globals()[metric['name']], args=(parameters,2,output_queue))
-            two.start()
-            threads.append(two)
-            three = threading.Thread(target=globals()[metric['name']], args=(parameters,3,output_queue))
-            three.start()
-            threads.append(three)
-            four = threading.Thread(target=globals()[metric['name']], args=(parameters,4,output_queue))
-            four.start()
-            threads.append(four)
+            for i in range(1, 5):
+                thread = SafeThread(target=globals()[metric['name']], args=(parameters, i, output_queue))
+                thread.start()
+                threads.append(thread)
         else:
-            threads_number = 1
-            target=globals()[metric['name']](metric['parameters'],0,output_queue)
-        for t in threads:
-            t.join()
+            thread=globals()[metric['name']](metric['parameters'],0,output_queue)
+            thread.start()
+            threads.append(thread)
         result = []
-        while not output_queue.empty():
-            result.append(output_queue.get())
+        for thread in threads:
+            thread.join()
+            while not output_queue.empty():
+                result.append(output_queue.get())
+        if thread.exception:
+            raise thread.exception  # Raise the first exception encountered
         mean = statistics.mean(result)
         print('mean:' +str(mean))
         standard_deviation = statistics.stdev(result)
