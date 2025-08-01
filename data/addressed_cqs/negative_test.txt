@@ -2,9 +2,9 @@
 {'question': 'what series did datapoints in infrastructure originate from?', 'correctness': False}
 {'question': 'for a parameter blueprint, what is the blueprint for the category within which the corresponding parameter resides?', 'correctness': False}
 {'question': 'for a series, what type of datapoints does it contain?', 'correctness': False}
-{'question': 'for a technique, what techniques extend it?', 'correctness': False}
+{'question': 'for a technique, what techniques extend it?', 'correctness': True}
 {'question': 'for a sample, which step produced it and which step consumes it?', 'correctness': True}
-{'question': 'when a sample is referenced in infrastrustructure, is that sample derived in a previous step?', 'correctness': False}
-{'question': 'which items can have signatures attached to them?', 'correctness': False}
-{'question': 'what are the different data types present in a series?', 'correctness': False}
-{'question': 'what is the first value in a series?', 'correctness': False}
+{'question': 'when a sample is referenced in infrastrustructure, is that sample derived in a previous step?', 'correctness': True}
+{'question': 'which items can have signatures attached to them?', 'correctness': True}
+{'question': 'what are the different data types present in a series?', 'correctness': True}
+{'question': 'what is the first value in a series?', 'correctness': True}
