@@ -57,7 +57,7 @@ inaccuracy_accepting_restriction = """
     - Declare filters on strings (like labels and names) as filters operations over REGEX function using the case insensitive flag."""
 
 class ContextTranslator(ContextDialog):
-    restrictions = original_restriction
+    restrictions = generalisation_restriction
     def __init__(self,graph,length=SIZE_CONTEXT_WINDOW_TRANSLATE,language="en"):
         super().__init__(length,language)
         self.changeGraph(graph)
@@ -95,7 +95,7 @@ def build_original_best_selection(question,structured_results):
             prompt_best_selection+= f"""{idx}:{structured_result},\n"""
         
         prompt_best_selection+= f"""}}```
-        Use the following criteria to evaluate the options: {ContextTranslator.restrictions}
+        Use the following criteria to evaluate the options: {original_restriction}
         Return only the number of the selected option and nothing more!"""
         # print(prompt_best_selection)
 
@@ -155,7 +155,7 @@ class ContextChooseBestSPARQL(ContextDialog):
         self.system.append({"role":"system","content":"Consider the following RDF graph written in Turtle syntax: "+str(graph)})
 
     def changeQuestion(self,question,structured_results):
-        self.system.append({"role":"system","content":build_inaccuracy_accepting_best_selection(question,structured_results)})
+        self.system.append({"role":"system","content":build_original_best_selection(question,structured_results)})
 
 
      

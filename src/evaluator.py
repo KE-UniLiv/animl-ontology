@@ -73,7 +73,6 @@ def triplet_extraction(ontology,file_name):
         if (subj, pred, obj) not in projected_ontology:
             raise Exception("It better be!")
 
-    #--- Print the number of "triples" in the Graph
 
     # extract s, p, o and save it to the list to be saved in csv file
     data= []
@@ -89,7 +88,6 @@ stop_event = threading.Event()
 
 
 def error_maker():
-    print('error maker started')
     time.sleep(40)
     stop_event.set()
     raise ValueError('derliberate error')
@@ -109,7 +107,7 @@ def evaluation_runner(metrics):
                 thread.start()
                 threads.append(thread)
         else:
-            thread=globals()[metric['name']](metric['parameters'],0,output_queue)
+            thread=globals()[metric['name']](metric['parameters'],0,output_queue,stop_event)
             thread.start()
             threads.append(thread)
         result = []

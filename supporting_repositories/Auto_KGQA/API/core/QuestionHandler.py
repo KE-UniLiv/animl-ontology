@@ -91,6 +91,7 @@ class QuestionHandler:
         # print(self.messagesTranslater.to_list())
         #client = OpenAI()
         completion = call_generator('gpt',self.messagesTranslater.to_list(),n=5,temperature=TEMPERATURE_TRANSLATE)
+        print('these are the candidate messages -----------------' + str(completion))
         results = []
         sparqls = []
         structured_results = []
@@ -108,6 +109,7 @@ class QuestionHandler:
                     continue
                
         if len(results) > 0:
+
             self.messagesChooseBest.changeQuestion(question,structured_results)
             completion = call_generator('gpt',self.messagesChooseBest.to_list(),temperature=TEMPERATURE_SELECT)
             selection = completion.choices[0].message.content
@@ -115,6 +117,7 @@ class QuestionHandler:
                 selection_number = [int(s) for s in re.findall(r'-?\d+', selection)] [0]
             except:
                 selection_number = -1
+            print('the selection is' + str(selection_number))
             if selection_number == -1:
                 sparql_selected = """
                     this question was not answered correctly
@@ -212,5 +215,5 @@ def run_question(question,model):
     Handler = QuestionHandler(model,Endpoint(ENDPOINT_KNOWLEDGE_GRAPH_URL),endpoint_t_box,t_box_index,normalizer,a_box_index=a_box_index,)
     result = Handler.processQuestion(question)
     print(' it terminated without error')
-    #print(result['sparql'])
+    print('that ')
     return result
