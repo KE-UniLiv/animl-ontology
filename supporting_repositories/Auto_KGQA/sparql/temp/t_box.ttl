@@ -183,7 +183,7 @@ owl:versionInfo a rdf:Property ;
     rdfs:label "Collection" ;
     kgqa:count 1 ;
     rdfs:comment "A curated or organized grouping of musical works or related entities. It encompasses a cohesive set of musical compositions, recordings, scores, or other music-related items that are brought together based on a specific theme, genre, artist, or any other organizing principle." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/CollectionConcept> a owl:Class ;
     rdfs:label "Collection Concept" ;
@@ -240,7 +240,7 @@ owl:versionInfo a rdf:Property ;
     rdfs:label "Musician" ;
     kgqa:count 1 ;
     rdfs:comment "An individual who is skilled in playing a musical instrument, singing, or composing music. It encompasses instrumentalists, vocalists, composers, conductors, and other individuals actively engaged in the creation, performance, or production of music." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/core/Person>,
         <https://w3id.org/polifonia/ontology/music-meta/MusicArtist> .
 
@@ -340,7 +340,7 @@ owl:versionInfo a rdf:Property ;
     rdfs:label "Has license" ;
     kgqa:count 1 ;
     rdfs:comment "Specifies that a Recording, Release, or Score is associated with a specific License. This property represents the relationship between a musical recording, a release of music, or a musical score, and the license that governs its usage and distribution. It indicates that the mentioned Recording, Release, or Score is subject to the terms and conditions defined by the mentioned License." ;
-    rdfs:domain <file:///C:/Users/wilfm/animl_ontology_1/domain> ;
+    rdfs:domain <file:///C:/Users/wilfm/animl_ontology/domain> ;
     rdfs:range <https://w3id.org/polifonia/ontology/music-meta/License> .
 
 <https://w3id.org/polifonia/ontology/music-meta/hasMedium> a rdf:Property ;
@@ -359,7 +359,7 @@ owl:versionInfo a rdf:Property ;
     kgqa:count 1 ;
     rdfs:comment "Specifies the relationship between a MusicEntity and its constituent parts or components. This property represents the connection between a MusicEntity and the individual parts or components that comprise it. It indicates that the MusicEntity is composed of or includes the mentioned parts, which may consist of specific sections, movements, instrumental or vocal parts, or other structural elements that contribute to the overall composition." ;
     rdfs:domain <https://w3id.org/polifonia/ontology/music-meta/MusicEntity> ;
-    rdfs:range <file:///C:/Users/wilfm/animl_ontology_1/range> ;
+    rdfs:range <file:///C:/Users/wilfm/animl_ontology/range> ;
     rdfs:subClassOf <https://w3id.org/polifonia/ontology/core/hasPart> .
 
 <https://w3id.org/polifonia/ontology/music-meta/hasOpusStatement> a rdf:Property ;
@@ -373,7 +373,7 @@ owl:versionInfo a rdf:Property ;
     rdfs:label "Publication situation" ;
     kgqa:count 1 ;
     rdfs:comment "Specifies that a Score or Recording is associated with a specific PublicationSituation. This property represents the relationship between a musical score or recording and the situation or context in which it is published or made publicly available. It indicates that the mentioned Score or Recording is subject to the conditions and circumstances defined by the mentioned PublicationSituation." ;
-    rdfs:domain <file:///C:/Users/wilfm/animl_ontology_1/domain> ;
+    rdfs:domain <file:///C:/Users/wilfm/animl_ontology/domain> ;
     rdfs:range <https://w3id.org/polifonia/ontology/music-meta/PublicationSituation> .
 
 <https://w3id.org/polifonia/ontology/music-meta/hasPublisher> a rdf:Property ;
@@ -429,7 +429,7 @@ owl:versionInfo a rdf:Property ;
     rdfs:label "Involves agent" ;
     kgqa:count 1 ;
     rdfs:comment "Specialises the involvesAgent property for agents with musical roles." ;
-    rdfs:domain <file:///C:/Users/wilfm/animl_ontology_1/domain> ;
+    rdfs:domain <file:///C:/Users/wilfm/animl_ontology/domain> ;
     rdfs:range <https://w3id.org/polifonia/ontology/music-meta/MusicArtist> ;
     rdfs:subClassOf <https://w3id.org/polifonia/ontology/core/involvesAgent> .
 
@@ -560,7 +560,7 @@ owl:versionInfo a rdf:Property ;
     kgqa:count 1 ;
     rdfs:comment "Inverse relationship of 'hasLicense.' It indicates that a License is associated with a specific Recording, Release, or Score. This property establishes the connection from the License's perspective, indicating that it governs the usage and distribution of the mentioned Recording, Release, or Score." ;
     rdfs:domain <https://w3id.org/polifonia/ontology/music-meta/License> ;
-    rdfs:range <file:///C:/Users/wilfm/animl_ontology_1/range> .
+    rdfs:range <file:///C:/Users/wilfm/animl_ontology/range> .
 
 <https://w3id.org/polifonia/ontology/music-meta/isMediumOf> a rdf:Property ;
     rdfs:label "Is medium of" ;
@@ -608,7 +608,7 @@ owl:versionInfo a rdf:Property ;
     kgqa:count 1 ;
     rdfs:comment "Inverse relationship of 'hasPublicationSituation.' It indicates that a PublicationSituation is associated with a specific Score or Recording. This property establishes the connection from the PublicationSituation's perspective, indicating that it defines the conditions and circumstances under which the mentioned Score or Recording is published or made publicly available." ;
     rdfs:domain <https://w3id.org/polifonia/ontology/music-meta/PublicationSituation> ;
-    rdfs:range <file:///C:/Users/wilfm/animl_ontology_1/range> .
+    rdfs:range <file:///C:/Users/wilfm/animl_ontology/range> .
 
 <https://w3id.org/polifonia/ontology/music-meta/isPublisherOf> a rdf:Property ;
     rdfs:label "Is publisher of" ;
@@ -621,8 +621,8 @@ owl:versionInfo a rdf:Property ;
     rdfs:label "Is realisation of" ;
     kgqa:count 1 ;
     rdfs:comment "Iverse relationship of 'isRealisedBy.' It indicates that a Score or ScorePart is a realisation or tangible representation of a specific AbstractScore or Instrumentation. This property establishes the connection from the Score or ScorePart's perspective, indicating that it materializes or embodies the musical content or instrumentation described in the corresponding AbstractScore or Instrumentation." ;
-    rdfs:domain <file:///C:/Users/wilfm/animl_ontology_1/domain> ;
-    rdfs:range <file:///C:/Users/wilfm/animl_ontology_1/range> .
+    rdfs:domain <file:///C:/Users/wilfm/animl_ontology/domain> ;
+    rdfs:range <file:///C:/Users/wilfm/animl_ontology/range> .
 
 <https://w3id.org/polifonia/ontology/music-meta/isRealisedBy> a rdf:Property ;
     rdfs:label "Is realised by",
@@ -635,14 +635,14 @@ owl:versionInfo a rdf:Property ;
     rdfs:label "Is realised in" ;
     kgqa:count 1 ;
     rdfs:comment "Represents the relationship between an AbstractScore or Instrumentation and the Score or ScorePart that brings it to life in a tangible or performable form. It signifies that the AbstractScore or Instrumentation is manifested or rendered into a concrete representation or performance through the mentioned Score or ScorePart." ;
-    rdfs:domain <file:///C:/Users/wilfm/animl_ontology_1/domain> ;
-    rdfs:range <file:///C:/Users/wilfm/animl_ontology_1/range> .
+    rdfs:domain <file:///C:/Users/wilfm/animl_ontology/domain> ;
+    rdfs:range <file:///C:/Users/wilfm/animl_ontology/range> .
 
 <https://w3id.org/polifonia/ontology/music-meta/isRecordedBy> a rdf:Property ;
     rdfs:label "Is recorded by" ;
     kgqa:count 1 ;
     rdfs:comment "Specifies that a MusicEntity or MusicalPerformance is recorded through a RecordingProcess. This property represents the relationship between a MusicEntity or MusicalPerformance and the process of recording it, typically involving capturing the audio or video performance in a recorded format." ;
-    rdfs:domain <file:///C:/Users/wilfm/animl_ontology_1/domain> ;
+    rdfs:domain <file:///C:/Users/wilfm/animl_ontology/domain> ;
     rdfs:range <https://w3id.org/polifonia/ontology/music-meta/RecordingProcess> .
 
 <https://w3id.org/polifonia/ontology/music-meta/isRecordingProcessOf> a rdf:Property ;
@@ -650,7 +650,7 @@ owl:versionInfo a rdf:Property ;
     kgqa:count 1 ;
     rdfs:comment "Inverse relationship of 'isRecordedBy.' It indicates that a RecordingProcess is associated with a specific MusicEntity or MusicalPerformance. This property establishes the connection from the RecordingProcess's perspective, indicating that it is the process responsible for capturing or documenting the mentioned MusicEntity or MusicalPerformance." ;
     rdfs:domain <https://w3id.org/polifonia/ontology/music-meta/RecordingProcess> ;
-    rdfs:range <file:///C:/Users/wilfm/animl_ontology_1/range> .
+    rdfs:range <file:///C:/Users/wilfm/animl_ontology/range> .
 
 <https://w3id.org/polifonia/ontology/music-meta/isScoreOf> a rdf:Property ;
     rdfs:label "Is score of" ;
@@ -788,7 +788,7 @@ owl:TransitiveProperty a owl:Class ;
     rdfs:label "Broadcaster" ;
     kgqa:count 1 ;
     rdfs:comment "A class representing an entity or organization involved in broadcasting or transmitting audio or video content, including music." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/core/Agent> .
 
 <https://w3id.org/polifonia/ontology/music-meta/FormType> a owl:Class ;
@@ -810,45 +810,45 @@ owl:TransitiveProperty a owl:Class ;
     rdfs:label "Medium of Performance" ;
     kgqa:count 1 ;
     rdfs:comment "The specific ensemble, group, or combination of instruments or voices used in a musical performance or recording. It describes the medium through which the musical composition is interpreted and brought to life." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/MusicAlgorithm> a owl:Class ;
     rdfs:label "Music Algorithm" ;
     kgqa:count 1 ;
     rdfs:comment "An algorithm or computational process used in the creation, analysis, or manipulation of music. It encompasses algorithms designed to generate musical compositions, analyze musical patterns, apply effects or transformations to audio, or perform other computational tasks related to music." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/music-meta/MusicArtist> .
 
 <https://w3id.org/polifonia/ontology/music-meta/MusicEnsembleMembership> a owl:Class ;
     rdfs:label "Music Ensamble Membership" ;
     kgqa:count 1 ;
     rdfs:comment "The membership of a musician in a music ensemble. It captures the association between a musician and a specific ensemble, indicating that the musician is a member of the ensemble." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/MusicGenre> a owl:Class ;
     rdfs:label "Music Genre" ;
     kgqa:count 1 ;
     rdfs:comment "A specific category or classification of music that shares common characteristics, styles, or cultural origins. It encompasses distinct musical traditions, styles, or movements that define a particular genre." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/Publisher> a owl:Class ;
     rdfs:label "Publisher" ;
     kgqa:count 1 ;
     rdfs:comment "An entity or organization responsible for publishing or distributing musical works, scores, recordings, or other music-related content. It encompasses companies, labels, or individuals that handle the production, promotion, and dissemination of music to the public." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/core/Agent> .
 
 <https://w3id.org/polifonia/ontology/music-meta/RecordingEquipment> a owl:Class ;
     rdfs:label "Recording Equipment" ;
     kgqa:count 1 ;
     rdfs:comment "The equipment and tools used in the process of recording music. It encompasses the various devices, instruments, and technologies employed to capture and produce high-quality audio recordings." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/Release> a owl:Class ;
     rdfs:label "Release" ;
     kgqa:count 1 ;
     rdfs:comment "The distribution and availability of a recorded musical work to the public. It encompasses the act of officially making a recorded music product, such as an album or single, available for purchase, streaming, or other forms of consumption." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/TextFragment> a owl:Class ;
     rdfs:label "Text Fragment" ;
@@ -869,7 +869,7 @@ owl:Restriction a owl:Class ;
     rdfs:label "Broadcasting Situation" ;
     kgqa:count 1 ;
     rdfs:comment "Represents a specific situation or context related to broadcasting activities. It encompasses various scenarios, conditions, or events that may impact the broadcast of music or other content. It can include properties such as location, time, and specific conditions." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/core/Situation> .
 
 <https://w3id.org/polifonia/ontology/music-meta/DedicationStatement> a owl:Class ;
@@ -887,7 +887,7 @@ owl:Restriction a owl:Class ;
     rdfs:label "Musical Performance" ;
     kgqa:count 1 ;
     rdfs:comment "A live or recorded rendition of a musical composition. It encompasses the act of performing music, whether by musicians, singers, or other performers, to convey the intended artistic expression and interpretation of the composition." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/core/InformationRealization>,
         <https://w3id.org/polifonia/ontology/music-meta/CreativeProcess> .
 
@@ -919,64 +919,64 @@ owl:ObjectProperty a owl:Class ;
     rdfs:label "Publication Situation" ;
     kgqa:count 1 ;
     rdfs:comment "Descibes the situation or context in which a musical work or recording is published or made publicly available. A PublicationSituation encompasses various aspects related to the publication of music, including the timing, location, medium, format, and associated entities involved in the publication process." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/core/Situation> .
 
 <https://w3id.org/polifonia/ontology/music-meta/Instrumentation> a owl:Class ;
     rdfs:label "Instrumentation" ;
     kgqa:count 1 ;
     rdfs:comment "The arrangement or combination of musical instruments used in a composition, performance, or recording. It describes the specific instruments, their roles, and how they interact to create the overall sound and texture of the music. It can include properties such as instruments used, roles, and techniques." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/ScorePart> a owl:Class ;
     rdfs:label "Score Part" ;
     kgqa:count 1 ;
     rdfs:comment "A specific part or section within a musical score. It refers to a distinct musical line or voice within a composition that is intended to be performed by a particular instrument or group of instruments." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/Recording> a owl:Class ;
     rdfs:label "Recording" ;
     kgqa:count 1 ;
     rdfs:comment "A recorded performance or rendition of a musical composition. It refers to the capturing of sound, whether in a studio or live setting, for the purpose of creating a permanent audio representation of a musical performance." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/RecordingProcess> a owl:Class ;
     rdfs:label "Recording Process" ;
     kgqa:count 1 ;
     rdfs:comment "The process of capturing and creating a recorded version of a musical performance or composition. It encompasses the various stages and techniques involved in recording, editing, mixing, and mastering the audio to produce a finalized recording." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/music-meta/CreativeProcess> .
 
 <https://w3id.org/polifonia/ontology/music-meta/Score> a owl:Class ;
     rdfs:label "Score" ;
     kgqa:count 1 ;
     rdfs:comment "A written, printed or digital document that contains the musical notation of a composition. It encompasses the musical score, which serves as a visual representation of the music, including the arrangement of notes, rhythms, dynamics, and other musical symbols." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/CreativeProcess> a owl:Class ;
     rdfs:label "Creative Process" ;
     kgqa:count 1 ;
     rdfs:comment "Describes a series of actions, steps, or stages involved in the creative development or production of artistic works, including music. It encompasses the process of generating ideas, exploring concepts, refining techniques, and producing the final creative output. It can include properties such as participants, duration, and output." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/Text> a owl:Class ;
     rdfs:label "Text" ;
     kgqa:count 1 ;
     rdfs:comment "A written or textual component of a musical composition. It encompasses the textual elements, such as lyrics or libretto, that accompany or form part of a musical work." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 <https://w3id.org/polifonia/ontology/music-meta/MusicEntity> a owl:Class ;
     rdfs:label "Music Entity" ;
     kgqa:count 1 ;
     rdfs:comment "This class represents an Information Object, which is defined as the sum of all the elements that make up a piece of music. A music entity abstract a musical work, as it may results from a composition process, an improvisation, or be the result of non-written transmission." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass>,
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass>,
         <https://w3id.org/polifonia/ontology/core/InformationObject> .
 
 <https://w3id.org/polifonia/ontology/music-meta/AbstractScore> a owl:Class ;
     rdfs:label "Abstract Score" ;
     kgqa:count 1 ;
     rdfs:comment "An abstract concept that allows to refer to the actual musical content of a MusicEntity. This makes it possible to describe musical properties that imply the existence of a hypothetical score, which may not be necessarily, or formally, materialised by the creators of the musical entity." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 owl:Ontology a owl:Class ;
     rdfs:label "owl Ontology" ;
@@ -986,7 +986,7 @@ owl:Ontology a owl:Class ;
     rdfs:label "Music Artist" ;
     kgqa:count 1 ;
     rdfs:comment "An individual or group involved in creating, performing, or producing music. It encompasses musicians, singers, bands, composers, conductors, producers, and other artistic entities within the music industry." ;
-    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology_1/superclass> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl_ontology/superclass> .
 
 owl:Class a owl:Class ;
     rdfs:label "owl Class" ;

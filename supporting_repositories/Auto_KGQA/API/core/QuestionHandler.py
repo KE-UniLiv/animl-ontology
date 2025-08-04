@@ -12,6 +12,7 @@ from supporting_repositories.Auto_KGQA.API.sparql.Utils import convertToTurtle, 
 from supporting_repositories.Auto_KGQA.API.sparql.Filter_Triples import Filter_Triples
 from supporting_repositories.Auto_KGQA.API.nlp.parsers import *
 from supporting_repositories.Auto_KGQA.API.context.ContextLLM import *
+from supporting_repositories.Auto_KGQA.API.context.ContextLLM import build_discriminator_prompt
 from supporting_repositories.Auto_KGQA.API.configs import NUMBER_HOPS,LIMIT_BY_PROPERTY,FILTER_GRAPH,RELEVANCE_THRESHOLD,MAX_HITS_RATE,PRINT_HITS,TEMPERATURE_TRANSLATE,TEMPERATURE_SELECT,TEMPERATURE_FINAL_ANSWER,USE_A_BOX_INDEX
 from supporting_repositories.Auto_KGQA.API.core.Configs_loader import load_configs
 from supporting_repositories.Auto_KGQA.API.configs import *
@@ -90,57 +91,62 @@ class QuestionHandler:
         self.generalConversation.add({"role":"user","content":question})
         # print(self.messagesTranslater.to_list())
         #client = OpenAI()
-        completion = call_generator('gpt',self.messagesTranslater.to_list(),n=5,temperature=TEMPERATURE_TRANSLATE)
-        print('these are the candidate messages -----------------' + str(completion))
-        results = []
-        sparqls = []
-        structured_results = []
-        for choice in completion.choices:
-            sparql = self.extractSPARQL(choice.message.content)
-            with warnings.catch_warnings():
-                warnings.simplefilter('ignore')
+        completion = call_generator('gpt',build_discriminator_prompt(question,ttl),n=1,temperature=0.3)
+        coveredness = (m := re.search(r'\b(?:True|False)\b', completion.choices[0].message.content)) and m.group().lower()
+        if coveredness == 'True':
+            completion = call_generator('gpt',self.messagesTranslater.to_list(),n=5,temperature=TEMPERATURE_TRANSLATE)
+            print('these are the candidate messages -----------------' + str(completion))
+            results = []
+            sparqls = []
+            structured_results = []
+            for choice in completion.choices:
+                sparql = self.extractSPARQL(choice.message.content)
+                with warnings.catch_warnings():
+                    warnings.simplefilter('ignore')
+                    try:
+                        question_formulated,query_results = self.endpoint.struct_result_query(sparql)
+                        if not query_results  is None:
+                            structured_results.append(question_formulated)
+                            results.append(query_results)
+                            sparqls.append(sparql)
+                    except:
+                        continue
+                        
+            if len(results) > 0:
+
+                self.messagesChooseBest.changeQuestion(question,structured_results)
+                completion = call_generator('gpt',self.messagesChooseBest.to_list(),temperature=TEMPERATURE_SELECT)
+                selection = completion.choices[0].message.content
                 try:
-                    question_formulated,query_results = self.endpoint.struct_result_query(sparql)
-                    if not query_results  is None:
-                        structured_results.append(question_formulated)
-                        results.append(query_results)
-                        sparqls.append(sparql)
+                    selection_number = [int(s) for s in re.findall(r'-?\d+', selection)] [0]
                 except:
-                    continue
-               
-        if len(results) > 0:
+                    selection_number = -1
+                print('the selection is' + str(selection_number))
+                if selection_number == -1:
+                    sparql_selected = """
+                        this question was not answered correctly
+                     """
+                    results_selected = []
+                    print('bruh')
+                else:
+                    print('if this printed with bruh then shit is fucked')
+                    sparql_selected = sparqls[selection_number]
+                    result_selected = results[selection_number]
 
-            self.messagesChooseBest.changeQuestion(question,structured_results)
-            completion = call_generator('gpt',self.messagesChooseBest.to_list(),temperature=TEMPERATURE_SELECT)
-            selection = completion.choices[0].message.content
-            try:
-                selection_number = [int(s) for s in re.findall(r'-?\d+', selection)] [0]
-            except:
-                selection_number = -1
-            print('the selection is' + str(selection_number))
-            if selection_number == -1:
-                sparql_selected = """
-                    this question was not answered correctly
-                 """
-                results_selected = []
-                print('bruh')
-            else:
-                print('if this printed with bruh then shit is fucked')
-                sparql_selected = sparqls[selection_number]
-                result_selected = results[selection_number]
-
-            self.messagesTranslater.add({"role":"assistant",
-                 "content":f"""
-                    ```sparql
-                        {sparql_selected}
-                       ```
-                    """
-                })      
-        else: 
-            self.messagesTranslater.add({"role":"assistant",
-                                         "content":""})
-            return None
-        return [sparqls,results,sparql_selected]
+                self.messagesTranslater.add({"role":"assistant",
+                     "content":f"""
+                        ```sparql
+                            {sparql_selected}
+                           ```
+                        """
+                    })      
+            else: 
+                self.messagesTranslater.add({"role":"assistant",
+                                             "content":""})
+                return None
+            return [sparqls,results,sparql_selected]
+        else:
+            return [[],[],'our discriminator agent believes that this cq is not covered']
     
 
 

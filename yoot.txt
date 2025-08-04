@@ -1,1 +1,1 @@
-{rdflib.term.URIRef('https://w3id.org/polifonia/ontology/music-meta/MusicArtist')}
+{rdflib.term.URIRef('https://w3id.org/polifonia/ontology/music-meta/Award'), rdflib.term.URIRef('https://w3id.org/polifonia/ontology/music-meta/nominatedForAward'), rdflib.term.URIRef('https://w3id.org/polifonia/ontology/music-meta/MusicArtist')}

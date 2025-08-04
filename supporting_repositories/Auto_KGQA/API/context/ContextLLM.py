@@ -29,6 +29,29 @@ class ContextDialog:
     def __str__(self):
         return str(self.system + self.content)
     
+def build_discriminator_prompt(question,graph):
+    discriminator_prompt = f"""you are an ontology engineer
+    You are asked to infer if the ontology described at the bottom of the prompt can address
+     the competency question above it
+
+     in order to fully address a competency question the ontology must be able to
+
+        model all the relationships and conditions mentioned,
+        and otherwise express the entire question without simplification
+
+    please respond True for expressable questions, and False otherwise
+
+    question:
+    {question}
+
+    ontology:
+    {graph}
+    """
+    return discriminator_prompt
+    
+
+
+
 original_restriction  = """
     - Use only classes and properties defined in the RDF graph, for this is important to use the same URIs for the properties and classes as defined in the original graph;
     - Include all the the prefixes used in the SPARQL query;
