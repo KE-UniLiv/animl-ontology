@@ -2,8 +2,8 @@ from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_distances
 import numpy as np
 import torch
-from deeponto.onto import Ontology
-from deeponto.onto.projection import OntologyProjector
+# from deeponto.onto import Ontology
+# from deeponto.onto.projection import OntologyProjector
 import sys
 import os
 import threading
@@ -108,9 +108,6 @@ def evaluation_runner(metrics):
                 thread = threading.Thread(target=globals()[metric['name']], args=(parameters, i, output_queue,stop_event))
                 thread.start()
                 threads.append(thread)
-            thread = threading.Thread(target=error_maker(),args=(stop_event))
-            thread.start()
-            threads.append(thread)
         else:
             thread=globals()[metric['name']](metric['parameters'],0,output_queue)
             thread.start()

@@ -107,39 +107,22 @@ class QuestionHandler:
                 except:
                     continue
                
-        # sparql = fixQuery(sparql)
-        # print(sparql)
-        # print(results)
         if len(results) > 0:
             self.messagesChooseBest.changeQuestion(question,structured_results)
             completion = call_generator('gpt',self.messagesChooseBest.to_list(),temperature=TEMPERATURE_SELECT)
             selection = completion.choices[0].message.content
-            # print(f"input:{prompt_best_selection}")
-            # print(f"output:{selection}")
-            # print("--------------\n"*10)
-            # return
-            selection_number = -1
-            sparql_selected = """
-                    SELECT ?s ?p ?o WHERE {
-                     ?s ?p ?o .
-                    FILTER(false)
-                    }
-                 """
             try:
-                selection_number = [int(s) for s in re.findall(r'\b\d+\b', selection)] [0]
+                selection_number = [int(s) for s in re.findall(r'-?\d+', selection)] [0]
             except:
                 selection_number = -1
             if selection_number == -1:
                 sparql_selected = """
-                    SELECT ?s ?p ?o WHERE {
-                     ?s ?p ?o .
-                    FILTER(false)
-                    }
+                    this question was not answered correctly
                  """
                 results_selected = []
+                print('bruh')
             else:
-                print('this is the selected sparql array' + str(sparql_selected))
-                print('this is the selection number' + str(selection_number))
+                print('if this printed with bruh then shit is fucked')
                 sparql_selected = sparqls[selection_number]
                 result_selected = results[selection_number]
 
@@ -149,12 +132,12 @@ class QuestionHandler:
                         {sparql_selected}
                        ```
                     """
-                })       
+                })      
         else: 
             self.messagesTranslater.add({"role":"assistant",
                                          "content":""})
             return None
-        return [sparqls,results,selection_number]
+        return [sparqls,results,sparql_selected]
     
 
 
@@ -186,9 +169,7 @@ class QuestionHandler:
         ttl = self.getRelevantGraph(question,number_hops,limit_by_property,filter_graph,last_question=last_question)
         textToSPARQL_return = self.textToSPARQL(question,ttl)
         if textToSPARQL_return != None:
-            sparqls,results,selection_number = textToSPARQL_return
-            sparql_selected = sparqls[selection_number]
-            results_selected = results[selection_number]
+            sparqls,results,sparql_selected = textToSPARQL_return
             #answer = self.generateNLResponse(question,sparql_selected,results_selected)
             llmAnswer = {'question':question,
                          'sparql':sparql_selected,

@@ -36,6 +36,18 @@ original_restriction  = """
     - DO NOT use specific resources in the query;
     - Declare filters on strings (like labels and names) as filters operations over REGEX function using the case insensitive flag."""
 
+generalisation_restriction  = """
+    - Use only classes and properties defined in the RDF graph, for this is important to use the same URIs for the properties and classes as defined in the original graph;
+    - Include all the the prefixes used in the SPARQL query;
+    - Declare non-essential properties to the question as OPTIONAL if needed;
+    - DO NOT use specific resources in the query;
+    - Declare filters on strings (like labels and names) as filters operations over REGEX function using the case insensitive flag.
+    - Do not include foundational concepts like Thing
+    - you must not ignore any of the logical restrictions expressed by the cq in order to make your query work, nor otherwise create query expressinhg a simplified version of the question
+        - for example, if a cq asks 'what is a companies most popular product' you may not write a query that simply returns all their products
+    
+    - if you cannot follow all of these rules and still produce a valid sparql query, simply return 'I cannot answer this question'"""
+
 inaccuracy_accepting_restriction = """
     - where possible you should use the classes and properties defined in the RDF graph, however (only when it is impossible to reasonably approximate the original question with existing resources) you may invent new classes and properties to use in your query;
     - when using existing classes and properties it is important to use the same URIs for the properties and classes as defined in the original graph;
@@ -92,6 +104,29 @@ def build_original_best_selection(question,structured_results):
 def build_inaccuracy_accepting_best_selection(question,structured_results):
         prompt_best_selection = f"""
         Given the question: "{question}"
+        determine whether any of the given sparql queries and sufficient to completley answer an unsimpliefed version of the question:
+        ```json
+        {{"""
+
+        for idx,structured_result in enumerate(structured_results):
+            prompt_best_selection+= f"""{idx}:{structured_result},\n"""
+        
+        prompt_best_selection+= f"""}}```
+        if none are acceptable in this way then return the number -1,
+
+        otherwise,
+        Select the number of the option that better representes a SPARQL query for the given question
+
+        Use the following criteria to evaluate the options: {ContextTranslator.restrictions}
+        Return only the number of the selected option and nothing more!"""
+        # print(prompt_best_selection)
+
+        return prompt_best_selection
+
+
+def build_(question,structured_results):
+        prompt_best_selection = f"""
+        Given the question: "{question}"
         determine whether any of the given options represent an accpetable sparql query for the given question:
         ```json
         {{"""
@@ -120,7 +155,7 @@ class ContextChooseBestSPARQL(ContextDialog):
         self.system.append({"role":"system","content":"Consider the following RDF graph written in Turtle syntax: "+str(graph)})
 
     def changeQuestion(self,question,structured_results):
-        self.system.append({"role":"system","content":build_original_best_selection(question,structured_results)})
+        self.system.append({"role":"system","content":build_inaccuracy_accepting_best_selection(question,structured_results)})
 
 
      

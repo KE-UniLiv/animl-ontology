@@ -31,8 +31,6 @@ def main_loop(ontology, workflow, parameters):
 
 
 
-
-
 if __name__ == "__main__":
     args = sys.argv[1:]  # Skip the script name
     print(args)

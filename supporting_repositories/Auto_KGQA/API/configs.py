@@ -1,4 +1,4 @@
-ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/real_small_test.ttl"
+ENDPOINT_KNOWLEDGE_GRAPH_URL = 'animl_ontology/data/ontologies/negative_small_test.ttl'
 EXTRACT_T_BOX = True # The script will perform queries on ENDPOINT_KNOWLEDGE_GRAPH_URL to extract the necessary information that would form the T-Box. The triples will be saved in the file ENDPOINT_T_BOX_URL. If you already have the T-Box separated, set this value to False.
 ENDPOINT_T_BOX_URL = "supporting_repositories/Auto_KGQA/sparql/temp/t_box.ttl" # Change this line only if you already have the T-Box separated, you need to set EXTRACT_T_BOX = False. Set the value to a local file when extracting the T-Box
 
@@ -14,7 +14,7 @@ USE_A_BOX_INDEX = True # Indicates whether to use the A-Box index. For very larg
 INDEX_A_BOX = "WHOOSH" # Value "FAISS": Index based in vector distance using langchain.faiss; "WHOOSH": Index based in text similarity using whoosh; "SPOTLIGHT"
 
 LLM_MODEL = "gpt-4o-mini" # Exemples: "gpt-3.5-turbo","gpt-3.5-turbo-16k","gpt-4","gpt-4o","gpt-4-turbo","gpt-4o-mini"
-TEMPERATURE_TRANSLATE = 1 # LLM temperature to generate SPARQL
+TEMPERATURE_TRANSLATE = 0.6 # LLM temperature to generate SPARQL
 SIZE_CONTEXT_WINDOW_TRANSLATE = 7 # Number of messages passed by LLM when generating SPARQL
 TEMPERATURE_SELECT = 0.3 # LLM temperature to select best SPARQL
 SIZE_CONTEXT_WINDOW_SELECT  = 7 # Number of messages passed by LLM when selecting the best SPARQL

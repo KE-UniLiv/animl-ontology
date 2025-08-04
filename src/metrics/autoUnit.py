@@ -13,14 +13,14 @@ def autoUnit(parameters,thread_number,output_queue,stop_event):
     if parameters['initialisation_step'] == 1:
 
         nltk.download('punkt')
-        overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",f'ENDPOINT_KNOWLEDGE_GRAPH_URL = "animl_ontology/data/ontologies/{parameters['ontology']}.ttl"')
+        overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",(f"ENDPOINT_KNOWLEDGE_GRAPH_URL = " +  f"'animl_ontology/data/ontologies/{parameters['''ontology''']}.ttl'"))
         createIndexes()
         parameters['model'] = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
         parameters['paralleism_blocker'] = False
         print('skideedle skidoodle your arms are now a noodle')
         output_queue.put(parameters)
     else:
-        cqs = read_lines_from_file(f'data/input_cqs/{parameters['ontology']}.txt')
+        cqs = read_lines_from_file(f"data/input_cqs/{parameters['ontology']}.txt")
         average = 0
         library = []
         for cq in cqs:
@@ -29,7 +29,7 @@ def autoUnit(parameters,thread_number,output_queue,stop_event):
                     print('the question is being run')
                     result = run_question(cq,parameters['model'])
                     print(result['sparql'])
-                    write_string_to_file(f'supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}_{thread_number}.ttl',f'''
+                    write_string_to_file(f"supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}_{thread_number}.ttl",f'''
                     @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
                     @prefix foaf: <http://xmlns.com/foaf/0.1/> .
                     @prefix owlunittest: <https://w3id.org/OWLunit/test/> .
@@ -60,4 +60,4 @@ def autoUnit(parameters,thread_number,output_queue,stop_event):
         average = average/len(cqs)
         print(average)
         output_queue.put(average)
-        save_array_to_file(library,f'data/addressed_cqs/{parameters['ontology']}.txt')
+        save_array_to_file(library,f"data/addressed_cqs/{parameters['ontology']}.txt")

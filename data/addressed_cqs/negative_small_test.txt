@@ -1,10 +1,10 @@
-In which year did a music artist achieve their highest popularity within a music ensemble?
-For which category did a music artist lose an award?
-Is a music artist currently touring?
-Does a music algorithm favor a specific genre?
-Who are the parents of a music artist?
-On which streaming platforms can I find a recording?
-When was the album first sold?
-What is the cover art of a release?
-What is the ISNI code associated to a music artist?
-What is the current average price of a release?
+{'question': 'To which record label is a music ensemble currently signed?', 'correctness': False}
+{'question': 'To which music artist has a music artist been compared?', 'correctness': False}
+{'question': "What is the title of a music artist's most popular song?", 'correctness': True}
+{'question': 'Which emotions does the musical piece attempt to evoke?', 'correctness': True}
+{'question': 'Where did a music artist study?', 'correctness': True}
+{'question': 'On which streaming platforms can I find a recording?', 'correctness': True}
+{'question': 'Is a piece similar to another?', 'correctness': False}
+{'question': 'What is the cover art of a release?', 'correctness': True}
+{'question': 'In which language has a song been translated?', 'correctness': True}
+{'question': 'What is the current average price of a release?', 'correctness': True}
