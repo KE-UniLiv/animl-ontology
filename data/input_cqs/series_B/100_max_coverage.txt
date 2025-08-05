@@ -1,0 +1,41 @@
+Which award has a music artist received a nomination for?
+Which award has a music artist received?
+Which recording is produced during a recording process?
+Which equipment is involved in a recording process?
+Which is the recording process that recorded a musical performance?
+Which are the agents involved in a creative process?
+Which are the creative actions of a creative process?
+Which is the process that led to the creation of a musical piece?
+When did the creation process took place?
+Where did the creation process took place?
+Which music entity is created during a musical performance?
+Which person is a dedication statement dedicated to?
+Which is the form type of an abstract score?
+Which is the music genre associated with/attributed to a music artist?
+Which is the instrumentation associated with an abstract score?
+Which is the key an abstract score is composed or written in?
+Which is the license of a release?
+Which is the license of a score?
+Which is the license of a recording?
+Which is the opus statement associated with a music entity?
+Which is the publisher involved in a publication situation?
+When did a publication situation happen?
+Where did a publication situation happen?
+Which is the recording of a music entity?
+Which is the text that is source of another text?
+Which is the text associated with an abstract score?
+Which is the broadcaster involved in a broadcasting situation?
+When did a broadcasting situation happen?
+Where did a broadcasting situation happen?
+Which music dataset has a music algorithm been trained on?
+Where a music ensemble was formed?
+Which music artist has a music artist collaborated with?
+Which music artist was a music artist influenced by?
+Which role did a music artist play within a music ensemble?
+In which time interval has a music artist been a member of a music ensemble?
+Which are the members of a music ensemble?
+Which is the start date of the activity of a music artist?
+Which is the end date of the activity of a music artist?
+Which is the name of a music artist?
+Which is the alias of a music artist?
+
