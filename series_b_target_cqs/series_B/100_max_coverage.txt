@@ -39,5 +39,3 @@ Which is the end date of the activity of a music artist?
 Which is the name of a music artist?
 Which is the alias of a music artist?
 
-
-

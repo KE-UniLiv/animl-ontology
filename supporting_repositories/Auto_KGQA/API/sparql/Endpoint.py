@@ -603,9 +603,13 @@ class Endpoint:
         """
         results = self.run_sparql(query)
         classes = []
-        for result in results:
-            if "?class" in result: 
-                classes.append(result["?class"])
+
+        if not isinstance(results, type(None)):
+            for result in results:
+                if "?class" in result: 
+                    classes.append(result["?class"])
+        else:
+            classes = []
         return classes
     
     def get_resource_comments(self,uri):

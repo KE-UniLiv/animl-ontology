@@ -54,7 +54,7 @@ class QuestionHandler:
                 properties.append(match['content']['?term'])
             else:
                 nodes.append(match['content']['?term'])
-            triples+= self.endpoint.describe(match["content"]["?term"],number_hops,limit_by_property)
+            triples+= str(self.endpoint.describe(match["content"]["?term"],number_hops,limit_by_property))
         return triples,nodes,properties
 
     def getRelevantGraph(self,question,number_hops=NUMBER_HOPS,limit_by_property=LIMIT_BY_PROPERTY,filter_graph= FILTER_GRAPH,last_question=None,use_a_box_index=USE_A_BOX_INDEX):
@@ -129,7 +129,13 @@ class QuestionHandler:
                      """
                     results_selected = []
                 else:
-                    sparql_selected = sparqls[selection_number]
+                    try:
+                        sparql_selected = sparqls[selection_number]
+                    except:
+                        sparql_selected = """
+                        this question was not answered correctly
+                     """
+                        results_selected = []
 
                 self.messagesTranslater.add({"role":"assistant",
                      "content":f"""
