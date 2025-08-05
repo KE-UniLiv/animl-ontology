@@ -74,7 +74,7 @@ Define an ontology using an overall procedure based on understanding each compet
 
     design an ontology that comprehensively answers the compentecy questions passed to you in the user prompt.
 
-    When you're done send me only the whole ontology you've designed in turtle syntax, not including any text outside of the ontology"""
+    When you're done send me only the whole ontology you've designed in Notation3 syntax, not including any text outside of the ontology"""
 
 retrofit_cq_prompt = f"""As an ontology engineer, Provide competency questions focused on the context provided; avoid using narrative questions. competency questions are the questions that outline the scope of an ontology and provide an idea about the knowledge that needs to be entailed in the ontology.
 

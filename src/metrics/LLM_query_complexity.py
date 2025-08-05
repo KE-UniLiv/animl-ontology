@@ -13,7 +13,10 @@ from src.input_output import read_file_as_string, read_lines_from_file
 from src.generator import call_generator
 from prompts import SQARQL_prompt, benchmark_SPARQL
 
-def LLM_query_complexity(addressed_cqs, model,ontology):
+def LLM_query_complexity(parameters,thread_number,output_queue):
+    addressed_cqs = parameters[0]
+    model =  parameters[1]
+    ontology = parameters[2]
     average = 0
     for counter in range (0,(len(addressed_cqs))):
         print('this is the cq' + str(addressed_cqs[counter]))
@@ -26,7 +29,7 @@ def LLM_query_complexity(addressed_cqs, model,ontology):
         time.sleep(10)
         match = re.search(r'PREFIX.*?\}', SQARQL_query, re.DOTALL)
         if match:
-            print(match)
+            #print(match)
             print('this is the stripped query' +str(match.group(0)))
             functionality = query_checker(ontology,match.group(0))
             if functionality == True:
@@ -43,9 +46,7 @@ def query_checker(ontology,SPARQL_query):
         g.parse(data=ontology, format="xml") 
         results = g.query(SPARQL_query)
         print('these are the results:')
-        print(results.askAnswer)
-        for row in results:
-            print(row)
+        #print(results.askAnswer)
         return results.askAnswer
     except:
         print('malformed sparql')

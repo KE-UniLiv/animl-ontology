@@ -1,0 +1,10 @@
+To which record label is a music ensemble currently signed?
+To which music artist has a music artist been compared?
+What is the title of a music artist's most popular song?
+Which emotions does the musical piece attempt to evoke?
+Where did a music artist study?
+On which streaming platforms can I find a recording?
+Is a piece similar to another?
+What is the cover art of a release?
+In which language has a song been translated?
+What is the current average price of a release?

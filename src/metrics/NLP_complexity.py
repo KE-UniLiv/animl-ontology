@@ -8,7 +8,9 @@ from src.evaluator import nearest_neighbors
 
 # somewhat useful, unknown level of error due to NLP.
 
-def query_complexity(covered_cqs,triplets):
+def query_complexity(parameters,thread_number,output_queue):
+    covered_cqs = parameters[0]
+    triplets = parameters[1]
     nlp = spacy.load("en_core_web_lg")
     average = 0
     shortest_paths = []
