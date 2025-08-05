@@ -1,0 +1,10 @@
+{'question': 'To which record label is a music ensemble currently signed?', 'correctness': False}
+{'question': 'To which music artist has a music artist been compared?', 'correctness': False}
+{'question': "What is the title of a music artist's most popular song?", 'correctness': True}
+{'question': 'Which emotions does the musical piece attempt to evoke?', 'correctness': False}
+{'question': 'Where did a music artist study?', 'correctness': False}
+{'question': 'On which streaming platforms can I find a recording?', 'correctness': False}
+{'question': 'Is a piece similar to another?', 'correctness': False}
+{'question': 'What is the cover art of a release?', 'correctness': True}
+{'question': 'In which language has a song been translated?', 'correctness': False}
+{'question': 'What is the current average price of a release?', 'correctness': False}

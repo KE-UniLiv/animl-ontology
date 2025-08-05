@@ -1,0 +1,43 @@
+What experiment steps are included in a result?
+for a parameter blueprint, what is the blueprint for the category within which the corresponding parameter resides?
+for a technique, what techniques extend it?
+when a sample is referenced in infrastrustructure, is that sample derived in a previous step?
+what are the different data types present in a series?
+what actions has an author performed?
+which parameters in a category are optional?
+which categories are sub categories?
+do any human authors have versions?
+is a series contained in a sub category?
+which experiment steps where present in the previous version of a document?
+which experiment steps is a technique used in?
+for a datappoint in a series, what is the value at the equivalent position in the other series in the same serieset?
+are any samples derived from derived experiment steps?
+which parameters are tied to experiment steps and which are tied to samples?
+what is the version two versions before a current version?
+would any part of a template violate any part of the techqniue for any of the experiment steps using it?
+which series sets contain empty series?
+does a document have at least one of every relation type it can have?
+who is the author of a revision during which a series was created that violated a technique?
+What is the ID of the container that a sample is in?
+What is the name and value of a tag associated with an object?
+Which samples are derived?
+what result data points are included in an infrastructure?
+which experiment steps are included in a result?
+What is the URI of a techniqu?
+What is the phone number of an author?
+What is the id of a device?
+What is the length of a series?
+For a series with auto-incremented values, what is the increment between values?
+What is the offset value for a derived SI unit's definition?
+What was the scope of a change recorded in a diff entry (element or attributes)?
+which results reference a given experiment step?
+Which experiment steps make use of a specific template ID?
+which extensions can an extension extend?
+how many experiment steps can be in an infrastructure according to a technique?
+what is the documentation for an object?
+what are the units for a parameter?
+what is the infrastructure for a template / experiment step?
+what is the result for a template / experiment step?
+
+
+

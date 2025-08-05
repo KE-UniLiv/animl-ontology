@@ -1,0 +1,189 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/music-ontology#> .
+
+ex:MusicOntology a owl:Ontology ;
+    rdfs:comment "An ontology for music-related processes, awards, and entities, designed to answer specific competency questions." .
+
+# Classes
+ex:Agent a owl:Class ;
+    rdfs:comment "An entity capable of action, such as a person or organization." .
+
+ex:Artist a owl:Class ;
+    rdfs:subClassOf ex:Agent ;
+    rdfs:comment "A person who creates works of art." .
+
+ex:MusicArtist a owl:Class ;
+    rdfs:subClassOf ex:Artist ;
+    rdfs:comment "An artist specializing in music." .
+
+ex:Award a owl:Class ;
+    rdfs:comment "A recognition or prize given for achievement." .
+
+ex:Process a owl:Class ;
+    rdfs:comment "A series of actions or steps taken in order to achieve a particular end." .
+
+ex:CreativeProcess a owl:Class ;
+    rdfs:subClassOf ex:Process ;
+    rdfs:comment "A process that leads to the creation of a new work, such as a musical piece." .
+
+ex:RecordingProcess a owl:Class ;
+    rdfs:subClassOf ex:Process ;
+    rdfs:comment "A process involving the capture of sound or visual data." .
+
+ex:RecordingProcessThatRecordedMusicalPerformance a owl:Class ;
+    rdfs:subClassOf ex:RecordingProcess ;
+    rdfs:comment "A specific type of recording process that captured a musical performance." ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty ex:recorded ;
+        owl:someValuesFrom ex:MusicalPerformance
+    ] .
+
+ex:Recording a owl:Class ;
+    rdfs:comment "A captured audio or visual artifact, typically produced by a recording process." .
+
+ex:Equipment a owl:Class ;
+    rdfs:comment "Tools or machinery used in a process." .
+
+ex:MusicalPerformance a owl:Class ;
+    rdfs:comment "The act of performing music." .
+
+ex:MusicalPiece a owl:Class ;
+    rdfs:comment "An abstract musical composition or work." .
+
+ex:CreativeAction a owl:Class ;
+    rdfs:comment "A specific action or step within a creative process." .
+
+ex:Location a owl:Class ;
+    rdfs:comment "A geographical or abstract place." .
+
+# Object Properties
+ex:receivedNominationFor a owl:ObjectProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:Award ;
+    rdfs:comment "Relates a music artist to an award they were nominated for." .
+
+ex:receivedAward a owl:ObjectProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:Award ;
+    rdfs:subPropertyOf ex:receivedNominationFor ;
+    rdfs:comment "Relates a music artist to an award they have received." .
+
+ex:produces a owl:ObjectProperty ;
+    rdfs:domain ex:RecordingProcess ;
+    rdfs:range ex:Recording ;
+    rdfs:comment "Relates a recording process to the recording it produces." .
+
+ex:involvesEquipment a owl:ObjectProperty ;
+    rdfs:domain ex:RecordingProcess ;
+    rdfs:range ex:Equipment ;
+    rdfs:comment "Relates a recording process to the equipment used in it." .
+
+ex:recorded a owl:ObjectProperty ;
+    rdfs:domain ex:RecordingProcess ;
+    rdfs:range ex:MusicalPerformance ;
+    rdfs:comment "Relates a recording process to the musical performance it recorded." .
+
+ex:involvesAgent a owl:ObjectProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range ex:Agent ;
+    rdfs:comment "Relates a creative process to an agent involved in it." .
+
+ex:hasCreativeAction a owl:ObjectProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range ex:CreativeAction ;
+    rdfs:comment "Relates a creative process to its constituent creative actions." .
+
+ex:creates a owl:ObjectProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range ex:MusicalPiece ;
+    rdfs:comment "Relates a creative process to the musical piece it creates." .
+
+ex:hasLocation a owl:ObjectProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range ex:Location ;
+    rdfs:comment "Relates a process to its location." .
+
+# Datatype Properties
+ex:hasStartTime a owl:DatatypeProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The start time of a creative process." .
+
+ex:hasEndTime a owl:DatatypeProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The end time of a creative process." .
+
+# Restrictions
+ex:RecordingProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:produces ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:comment "Every RecordingProcess must produce at least one Recording."
+] .
+
+ex:RecordingProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:involvesEquipment ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+    rdfs:comment "A RecordingProcess may involve equipment."
+] .
+
+ex:RecordingProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:recorded ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+    rdfs:comment "A RecordingProcess may record a musical performance."
+] .
+
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:involvesAgent ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:comment "Every CreativeProcess must involve at least one Agent."
+] .
+
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasCreativeAction ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:comment "Every CreativeProcess must have at least one CreativeAction."
+] .
+
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:creates ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:comment "Every CreativeProcess must create at least one MusicalPiece."
+] .
+
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasStartTime ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+    rdfs:comment "A CreativeProcess may have a start time."
+] .
+
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasEndTime ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+    rdfs:comment "A CreativeProcess may have an end time."
+] .
+
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasLocation ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+    rdfs:comment "A CreativeProcess may have a location."
+] .
+
+# Disjoint Classes
+ex:Award owl:disjointWith ex:Process .
+ex:Agent owl:disjointWith ex:Equipment .
+ex:MusicalPiece owl:disjointWith ex:Recording .
+ex:MusicalPerformance owl:disjointWith ex:MusicalPiece .
+ex:MusicalPerformance owl:disjointWith ex:Recording .

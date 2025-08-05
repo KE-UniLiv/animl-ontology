@@ -7,4 +7,4 @@ def Blank(parameters,cqs,ontology):
     parameters.insert(-1, batches)
     parameters.insert(-1, [])
     parameters[len(parameters)-1] = 1
-    return read_file_as_string(f'data/ontologies/{ontology}.txt'),parameters
+    return read_file_as_string(f'data/ontologies/{ontology}.ttl'),parameters

@@ -3,9 +3,16 @@ __pycache__/
 *.py[codz]
 *$py.class
 *.env
-
+*.pyc
+*.obj
+*.toc
 # C extensions
 *.so
+log.txt
+
+#temporary files folder
+supporting_repositories/OWLUnit/tests/
+
 
 # Distribution / packaging
 .Python
