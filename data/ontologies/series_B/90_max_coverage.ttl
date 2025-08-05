@@ -1,0 +1,467 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/music-ontology#> .
+
+ex:MusicOntology a owl:Ontology .
+
+# Classes
+ex:Agent a owl:Class .
+ex:Person a owl:Class ;
+    rdfs:subClassOf ex:Agent .
+ex:MusicArtist a owl:Class ;
+    rdfs:subClassOf ex:Person .
+ex:Publisher a owl:Class ;
+    rdfs:subClassOf ex:Agent .
+ex:Broadcaster a owl:Class ;
+    rdfs:subClassOf ex:Agent .
+ex:MusicEnsemble a owl:Class ;
+    rdfs:subClassOf ex:Agent .
+
+ex:Recognition a owl:Class .
+ex:Award a owl:Class ;
+    rdfs:subClassOf ex:Recognition .
+
+ex:Process a owl:Class .
+ex:RecordingProcess a owl:Class ;
+    rdfs:subClassOf ex:Process .
+ex:CreativeProcess a owl:Class ;
+    rdfs:subClassOf ex:Process .
+
+ex:MusicEntity a owl:Class .
+ex:Recording a owl:Class ;
+    rdfs:subClassOf ex:MusicEntity .
+ex:MusicalPiece a owl:Class ;
+    rdfs:subClassOf ex:MusicEntity .
+ex:Score a owl:Class ;
+    rdfs:subClassOf ex:MusicEntity .
+ex:AbstractScore a owl:Class ;
+    rdfs:subClassOf ex:Score .
+ex:Release a owl:Class ;
+    rdfs:subClassOf ex:MusicEntity .
+
+ex:Device a owl:Class .
+ex:Equipment a owl:Class ;
+    rdfs:subClassOf ex:Device .
+
+ex:Event a owl:Class .
+ex:Performance a owl:Class ;
+    rdfs:subClassOf ex:Event .
+ex:MusicalPerformance a owl:Class ;
+    rdfs:subClassOf ex:Performance .
+ex:PublicationSituation a owl:Class ;
+    rdfs:subClassOf ex:Event .
+ex:BroadcastingSituation a owl:Class ;
+    rdfs:subClassOf ex:Event .
+
+ex:Action a owl:Class .
+ex:CreativeAction a owl:Class ;
+    rdfs:subClassOf ex:Action .
+
+ex:Statement a owl:Class .
+ex:DedicationStatement a owl:Class ;
+    rdfs:subClassOf ex:Statement .
+
+ex:Type a owl:Class .
+ex:FormType a owl:Class ;
+    rdfs:subClassOf ex:Type .
+ex:Role a owl:Class ;
+    rdfs:subClassOf ex:Type .
+
+ex:Genre a owl:Class .
+ex:MusicGenre a owl:Class ;
+    rdfs:subClassOf ex:Genre .
+
+ex:Instrumentation a owl:Class .
+ex:Key a owl:Class .
+
+ex:LegalDocument a owl:Class .
+ex:License a owl:Class ;
+    rdfs:subClassOf ex:LegalDocument .
+
+ex:Place a owl:Class .
+
+ex:InformationContentEntity a owl:Class .
+ex:Text a owl:Class ;
+    rdfs:subClassOf ex:InformationContentEntity .
+
+ex:TemporalEntity a owl:Class .
+ex:TimeInterval a owl:Class ;
+    rdfs:subClassOf ex:TemporalEntity .
+
+ex:Association a owl:Class .
+ex:EnsembleMembership a owl:Class ;
+    rdfs:subClassOf ex:Association .
+
+# Object Properties
+ex:hasReceivedNominationFor a owl:ObjectProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:Award .
+
+ex:hasReceived a owl:ObjectProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:Award .
+
+ex:produces a owl:ObjectProperty ;
+    rdfs:domain ex:RecordingProcess ;
+    rdfs:range ex:Recording .
+
+ex:involvesEquipment a owl:ObjectProperty ;
+    rdfs:domain ex:RecordingProcess ;
+    rdfs:range ex:Equipment .
+
+ex:recorded a owl:ObjectProperty ;
+    rdfs:domain ex:RecordingProcess ;
+    rdfs:range ex:MusicalPerformance .
+
+ex:involvesAgent a owl:ObjectProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range ex:Agent .
+
+ex:hasCreativeAction a owl:ObjectProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range ex:CreativeAction .
+
+ex:ledToCreationOf a owl:ObjectProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range ex:MusicalPiece .
+
+ex:creates a owl:ObjectProperty ;
+    rdfs:domain ex:MusicalPerformance ;
+    rdfs:range ex:Recording .
+
+ex:isDedicatedTo a owl:ObjectProperty ;
+    rdfs:domain ex:DedicationStatement ;
+    rdfs:range ex:Person .
+
+ex:hasFormType a owl:ObjectProperty ;
+    rdfs:domain ex:AbstractScore ;
+    rdfs:range ex:FormType .
+
+ex:hasGenre a owl:ObjectProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:MusicGenre .
+
+ex:hasInstrumentation a owl:ObjectProperty ;
+    rdfs:domain ex:AbstractScore ;
+    rdfs:range ex:Instrumentation .
+
+ex:hasKey a owl:ObjectProperty ;
+    rdfs:domain ex:AbstractScore ;
+    rdfs:range ex:Key .
+
+ex:hasLicense a owl:ObjectProperty ;
+    rdfs:domain ex:Release ;
+    rdfs:domain ex:Score ;
+    rdfs:domain ex:Recording ;
+    rdfs:range ex:License .
+
+ex:involvesPublisher a owl:ObjectProperty ;
+    rdfs:domain ex:PublicationSituation ;
+    rdfs:range ex:Publisher .
+
+ex:happenedAtPlace a owl:ObjectProperty ;
+    rdfs:domain ex:Event ;
+    rdfs:range ex:Place .
+
+ex:hasRecording a owl:ObjectProperty ;
+    rdfs:domain ex:MusicEntity ;
+    rdfs:range ex:Recording ;
+    owl:inverseOf ex:isRecordingOf .
+
+ex:isRecordingOf a owl:ObjectProperty ;
+    rdfs:domain ex:Recording ;
+    rdfs:range ex:MusicEntity .
+
+ex:isSourceOf a owl:ObjectProperty ;
+    rdfs:domain ex:Text ;
+    rdfs:range ex:Text .
+
+ex:hasAssociatedText a owl:ObjectProperty ;
+    rdfs:domain ex:AbstractScore ;
+    rdfs:range ex:Text .
+
+ex:involvesBroadcaster a owl:ObjectProperty ;
+    rdfs:domain ex:BroadcastingSituation ;
+    rdfs:range ex:Broadcaster .
+
+ex:wasFormedAt a owl:ObjectProperty ;
+    rdfs:domain ex:MusicEnsemble ;
+    rdfs:range ex:Place .
+
+ex:collaboratedWith a owl:ObjectProperty ;
+    a owl:SymmetricProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:MusicArtist .
+
+ex:influencedBy a owl:ObjectProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:MusicArtist .
+
+ex:hasMembership a owl:ObjectProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range ex:EnsembleMembership .
+
+ex:involvesEnsemble a owl:ObjectProperty ;
+    rdfs:domain ex:EnsembleMembership ;
+    rdfs:range ex:MusicEnsemble .
+
+ex:hasRole a owl:ObjectProperty ;
+    rdfs:domain ex:EnsembleMembership ;
+    rdfs:range ex:Role .
+
+ex:hasTimeInterval a owl:ObjectProperty ;
+    rdfs:domain ex:EnsembleMembership ;
+    rdfs:range ex:TimeInterval .
+
+ex:hasMember a owl:ObjectProperty ;
+    rdfs:domain ex:MusicEnsemble ;
+    rdfs:range ex:MusicArtist .
+
+# Datatype Properties
+ex:hasTime a owl:DatatypeProperty ;
+    rdfs:domain ex:CreativeProcess ;
+    rdfs:range xsd:dateTime .
+
+ex:happenedAtTime a owl:DatatypeProperty ;
+    rdfs:domain ex:Event ;
+    rdfs:range xsd:dateTime .
+
+ex:hasStartDateOfActivity a owl:DatatypeProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range xsd:date .
+
+ex:hasEndDateOfActivity a owl:DatatypeProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range xsd:date .
+
+ex:hasName a owl:DatatypeProperty ;
+    rdfs:domain ex:MusicArtist ;
+    rdfs:range xsd:string .
+
+# Restrictions (minCardinality)
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasReceivedNominationFor ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasReceived ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:RecordingProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:produces ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:RecordingProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:involvesEquipment ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:RecordingProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:recorded ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:involvesAgent ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasCreativeAction ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:ledToCreationOf ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:CreativeProcess rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasTime ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicalPerformance rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:creates ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:DedicationStatement rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:isDedicatedTo ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:AbstractScore rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasFormType ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasGenre ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:AbstractScore rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasInstrumentation ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:AbstractScore rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasKey ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:Release rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasLicense ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:Score rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasLicense ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:Recording rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasLicense ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:PublicationSituation rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:involvesPublisher ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:PublicationSituation rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:happenedAtTime ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:PublicationSituation rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:happenedAtPlace ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:Recording rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:isRecordingOf ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:MusicEntity rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasRecording ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:Text rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:isSourceOf ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:AbstractScore rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasAssociatedText ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:BroadcastingSituation rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:involvesBroadcaster ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:BroadcastingSituation rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:happenedAtTime ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:BroadcastingSituation rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:happenedAtPlace ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicEnsemble rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:wasFormedAt ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:collaboratedWith ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:influencedBy ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasMembership ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:EnsembleMembership rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:involvesEnsemble ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:EnsembleMembership rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasRole ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:EnsembleMembership rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasTimeInterval ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicEnsemble rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasMember ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasStartDateOfActivity ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasEndDateOfActivity ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+ex:MusicArtist rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty ex:hasName ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+# Disjoint Classes
+ex:MusicArtist owl:disjointWith ex:Award .
+ex:RecordingProcess owl:disjointWith ex:Recording .
+ex:RecordingProcess owl:disjointWith ex:Equipment .
+ex:RecordingProcess owl:disjointWith ex:MusicalPerformance .
+ex:CreativeProcess owl:disjointWith ex:Agent .
+ex:CreativeProcess owl:disjointWith ex:CreativeAction .
+ex:CreativeProcess owl:disjointWith ex:MusicalPiece .
+ex:MusicalPerformance owl:disjointWith ex:Recording .
+ex:DedicationStatement owl:disjointWith ex:Person .
+ex:AbstractScore owl:disjointWith ex:FormType .
+ex:MusicArtist owl:disjointWith ex:MusicGenre .
+ex:AbstractScore owl:disjointWith ex:Instrumentation .
+ex:AbstractScore owl:disjointWith ex:Key .
+ex:Release owl:disjointWith ex:License .
+ex:Score owl:disjointWith ex:License .
+ex:Recording owl:disjointWith ex:License .
+ex:PublicationSituation owl:disjointWith ex:Publisher .
+ex:PublicationSituation owl:disjointWith ex:Place .
+ex:AbstractScore owl:disjointWith ex:Text .
+ex:BroadcastingSituation owl:disjointWith ex:Broadcaster .
+ex:BroadcastingSituation owl:disjointWith ex:Place .
+ex:MusicEnsemble owl:disjointWith ex:Place .
+ex:EnsembleMembership owl:disjointWith ex:MusicArtist .
+ex:EnsembleMembership owl:disjointWith ex:MusicEnsemble .
+ex:EnsembleMembership owl:disjointWith ex:Role .
+ex:EnsembleMembership owl:disjointWith ex:TimeInterval .
+ex:MusicEnsemble owl:disjointWith ex:MusicArtist .
