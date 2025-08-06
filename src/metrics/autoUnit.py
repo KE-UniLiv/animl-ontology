@@ -41,7 +41,7 @@ def autoUnit(parameters,thread_number,output_queue,stop_event):
 	                owlunit:testsOntology <../../../data/ontologies/{parameters['ontology']}.ttl> .''')
         
                     print("Current working directory:", os.getcwd())
-                    output = subprocess.run(["java", "-jar", 'supporting_repositories/OWLUnit/OWLUnit-0.3.2.jar', "--test-case", "https://w3id.org/OWLunit/test/primary","--filepath",f"supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}_{thread_number}.ttl"], capture_output = True)
+                    output = subprocess.run(["C:/Users/sgwmorli/jdk1.21.0_007/bin/java.exe", "-jar", 'supporting_repositories/OWLUnit/OWLUnit-0.3.2.jar', "--test-case", "https://w3id.org/OWLunit/test/primary","--filepath",f"supporting_repositories/OWLUnit/tests/{(cq[:-1].replace(' ','_')).replace('/','_')}_{thread_number}.ttl"], capture_output = True)
                     print(output)
                     if str(output).__contains__('PASSED'):
                         average += 1
