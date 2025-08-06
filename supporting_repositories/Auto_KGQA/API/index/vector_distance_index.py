@@ -4,8 +4,9 @@ from langchain_community.embeddings import SentenceTransformerEmbeddings
 # from langchain.vectorstores import FAISS
 from langchain_community.vectorstores import FAISS
 from langchain_community.vectorstores.faiss import DistanceStrategy
+import threading
 
-
+lock = threading.Lock()
 
 class Index:
     def __init__(self,path_index,endpoint,normalizer,model) -> None:
@@ -51,16 +52,20 @@ class Index:
         faiss.save_local(self.path_index)
         return faiss
 
+
+
     def search(self,term,hits=5):
         # print("search: "+term)
-        results = []
-        results = self.index.similarity_search_with_score(term,hits)
-        r = []
-        for i in results:
-            metadata = i[0].metadata
-            r.append({'label':metadata['?label'],'content':metadata,'score':float(i[1])})
-        results = r
-        return results
+        with lock:
+            print('if this appears multiple times consecutively before an error')
+            results = []
+            results = self.index.similarity_search_with_score(term,hits)
+            r = []
+            for i in results:
+                metadata = i[0].metadata
+                r.append({'label':metadata['?label'],'content':metadata,'score':float(i[1])})
+            results = r
+            return results
     
     def exists(self):
         try:
