@@ -4,480 +4,442 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/music-ontology#collaboratedWith> a rdf:Property ;
-    rdfs:label "music-ontology collaborated With" ;
+<http://www.example.org/test#Cl_CD> a owl:Class ;
+    rdfs:label "test Cl CD" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
-    rdfs:range <http://example.org/music-ontology#MusicArtist> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
 
-<http://example.org/music-ontology#creates> a rdf:Property ;
-    rdfs:label "music-ontology creates" ;
+<http://www.example.org/test#Cl_Nurse> a owl:Class ;
+    rdfs:label "test Cl Nurse" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicalPerformance> ;
-    rdfs:range <http://example.org/music-ontology#Recording> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Employee> .
 
-<http://example.org/music-ontology#happenedAtPlace> a rdf:Property ;
-    rdfs:label "music-ontology happened At Place" ;
+<http://www.example.org/test#Cl_SeniorDoctor> a owl:Class ;
+    rdfs:label "test Cl Senior Doctor" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#Event> ;
-    rdfs:range <http://example.org/music-ontology#Place> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Doctor> .
 
-<http://example.org/music-ontology#happenedAtTime> a rdf:Property ;
-    rdfs:label "music-ontology happened At Time" ;
+<http://www.example.org/test#P_hasDate> a rdf:Property ;
+    rdfs:label "test P has Date" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#Event> ;
-    rdfs:range xsd:dateTime .
-
-<http://example.org/music-ontology#hasAssociatedText> a rdf:Property ;
-    rdfs:label "music-ontology has Associated Text" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#AbstractScore> ;
-    rdfs:range <http://example.org/music-ontology#Text> .
-
-<http://example.org/music-ontology#hasCreativeAction> a rdf:Property ;
-    rdfs:label "music-ontology has Creative Action" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#CreativeProcess> ;
-    rdfs:range <http://example.org/music-ontology#CreativeAction> .
-
-<http://example.org/music-ontology#hasEndDateOfActivity> a rdf:Property ;
-    rdfs:label "music-ontology has End Date Of Activity" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
+    rdfs:domain <http://www.example.org/test#Cl_SeminarEvent> ;
     rdfs:range xsd:date .
 
-<http://example.org/music-ontology#hasFormType> a rdf:Property ;
-    rdfs:label "music-ontology has Form Type" ;
+<http://www.example.org/test#P_isInCity> a rdf:Property ;
+    rdfs:label "test P is In City" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#AbstractScore> ;
-    rdfs:range <http://example.org/music-ontology#FormType> .
+    rdfs:domain <http://www.example.org/test#Cl_Location> ;
+    rdfs:range <http://www.example.org/test#Cl_City> .
 
-<http://example.org/music-ontology#hasGenre> a rdf:Property ;
-    rdfs:label "music-ontology has Genre" ;
+<http://www.example.org/test#P_isOccurrenceOf> a rdf:Property ;
+    rdfs:label "test P is Occurrence Of" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
-    rdfs:range <http://example.org/music-ontology#MusicGenre> .
+    rdfs:domain <http://www.example.org/test#Cl_SeminarEvent> ;
+    rdfs:range <http://www.example.org/test#Cl_Seminar> .
 
-<http://example.org/music-ontology#hasInstrumentation> a rdf:Property ;
-    rdfs:label "music-ontology has Instrumentation" ;
+<http://www.example.org/test#P_occursAt> a rdf:Property ;
+    rdfs:label "test P occurs At" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#AbstractScore> ;
-    rdfs:range <http://example.org/music-ontology#Instrumentation> .
+    rdfs:domain <http://www.example.org/test#Cl_SeminarEvent> ;
+    rdfs:range <http://www.example.org/test#Cl_Location> .
 
-<http://example.org/music-ontology#hasKey> a rdf:Property ;
-    rdfs:label "music-ontology has Key" ;
+<http://www.example.org/test#cityName> a rdf:Property ;
+    rdfs:label "test city Name" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#AbstractScore> ;
-    rdfs:range <http://example.org/music-ontology#Key> .
-
-<http://example.org/music-ontology#hasLicense> a rdf:Property ;
-    rdfs:label "music-ontology has License" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#Recording>,
-        <http://example.org/music-ontology#Release>,
-        <http://example.org/music-ontology#Score> ;
-    rdfs:range <http://example.org/music-ontology#License> .
-
-<http://example.org/music-ontology#hasMember> a rdf:Property ;
-    rdfs:label "music-ontology has Member" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicEnsemble> ;
-    rdfs:range <http://example.org/music-ontology#MusicArtist> .
-
-<http://example.org/music-ontology#hasMembership> a rdf:Property ;
-    rdfs:label "music-ontology has Membership" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
-    rdfs:range <http://example.org/music-ontology#EnsembleMembership> .
-
-<http://example.org/music-ontology#hasName> a rdf:Property ;
-    rdfs:label "music-ontology has Name" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
+    rdfs:domain <http://www.example.org/test#Cl_City> ;
     rdfs:range xsd:string .
 
-<http://example.org/music-ontology#hasReceived> a rdf:Property ;
-    rdfs:label "music-ontology has Received" ;
+<http://www.example.org/test#conducts_evaluation_event> a rdf:Property ;
+    rdfs:label "test conducts evaluation event" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
-    rdfs:range <http://example.org/music-ontology#Award> .
+    rdfs:domain <http://www.example.org/test#Cl_Doctor> ;
+    rdfs:range <http://www.example.org/test#Cl_EvaluationEvent> .
 
-<http://example.org/music-ontology#hasReceivedNominationFor> a rdf:Property ;
-    rdfs:label "music-ontology has Received Nomination For" ;
+<http://www.example.org/test#containsArticle> a rdf:Property ;
+    rdfs:label "test contains Article" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
-    rdfs:range <http://example.org/music-ontology#Award> .
+    rdfs:domain <http://www.example.org/test#Cl_Publication> ;
+    rdfs:range <http://www.example.org/test#Cl_Article> .
 
-<http://example.org/music-ontology#hasRecording> a rdf:Property ;
-    rdfs:label "music-ontology has Recording" ;
+<http://www.example.org/test#countryName> a rdf:Property ;
+    rdfs:label "test country Name" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicEntity> ;
-    rdfs:range <http://example.org/music-ontology#Recording> .
+    rdfs:domain <http://www.example.org/test#Cl_Country> ;
+    rdfs:range xsd:string .
 
-<http://example.org/music-ontology#hasRole> a rdf:Property ;
-    rdfs:label "music-ontology has Role" ;
+<http://www.example.org/test#degreeDate> a rdf:Property ;
+    rdfs:label "test degree Date" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#EnsembleMembership> ;
-    rdfs:range <http://example.org/music-ontology#Role> .
-
-<http://example.org/music-ontology#hasStartDateOfActivity> a rdf:Property ;
-    rdfs:label "music-ontology has Start Date Of Activity" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
+    rdfs:domain <http://www.example.org/test#Cl_PersonDegree> ;
     rdfs:range xsd:date .
 
-<http://example.org/music-ontology#hasTime> a rdf:Property ;
-    rdfs:label "music-ontology has Time" ;
+<http://www.example.org/test#employmentStartDate> a rdf:Property ;
+    rdfs:label "test employment Start Date" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#CreativeProcess> ;
+    rdfs:domain <http://www.example.org/test#Cl_EmploymentEvent> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#evaluation_text> a rdf:Property ;
+    rdfs:label "test evaluation text" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_EvaluationEvent> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#hasArticlePresentationEvent> a rdf:Property ;
+    rdfs:label "test has Article Presentation Event" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Article> ;
+    rdfs:range <http://www.example.org/test#Cl_ArticlePresentation> .
+
+<http://www.example.org/test#hasDate> a rdf:Property ;
+    rdfs:label "test has Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_SeminarOccurrence> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#hasDegree> a rdf:Property ;
+    rdfs:label "test has Degree" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_PersonDegree> ;
+    rdfs:range <http://www.example.org/test#Cl_MedicalDegree> .
+
+<http://www.example.org/test#hasEmployee> a rdf:Property ;
+    rdfs:label "test has Employee" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_UnionMembership> ;
+    rdfs:range <http://www.example.org/test#Cl_Employee> .
+
+<http://www.example.org/test#hasEmploymentEvent> a rdf:Property ;
+    rdfs:label "test has Employment Event" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Employee> ;
+    rdfs:range <http://www.example.org/test#Cl_EmploymentEvent> .
+
+<http://www.example.org/test#hasEmploymentEventAtHospital> a rdf:Property ;
+    rdfs:label "test has Employment Event At Hospital" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Hospital> ;
+    rdfs:range <http://www.example.org/test#Cl_EmploymentEvent> .
+
+<http://www.example.org/test#hasEndDate> a rdf:Property ;
+    rdfs:label "test has End Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_TimePeriod> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#hasNumberOfPages> a rdf:Property ;
+    rdfs:label "test has Number Of Pages" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Book> ;
+    rdfs:range xsd:integer .
+
+<http://www.example.org/test#hasPerson> a rdf:Property ;
+    rdfs:label "test has Person" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_PersonDegree> ;
+    rdfs:range <http://www.example.org/test#Cl_Person> .
+
+<http://www.example.org/test#hasPresentedArticle> a rdf:Property ;
+    rdfs:label "test has Presented Article" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Seminar> ;
+    rdfs:range <http://www.example.org/test#Cl_Article> .
+
+<http://www.example.org/test#hasSeminarPresentationEvent> a rdf:Property ;
+    rdfs:label "test has Seminar Presentation Event" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Seminar> ;
+    rdfs:range <http://www.example.org/test#Cl_ArticlePresentation> .
+
+<http://www.example.org/test#hasStartDate> a rdf:Property ;
+    rdfs:label "test has Start Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_TimePeriod> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#hasTimePoint> a rdf:Property ;
+    rdfs:label "test has Time Point" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_UnionMembership> ;
+    rdfs:range <http://www.example.org/test#Cl_TimePoint> .
+
+<http://www.example.org/test#hasUnion> a rdf:Property ;
+    rdfs:label "test has Union" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_UnionMembership> ;
+    rdfs:range <http://www.example.org/test#Cl_Union> .
+
+<http://www.example.org/test#hasUnionRoleAssignment> a rdf:Property ;
+    rdfs:label "test has Union Role Assignment" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Person> ;
+    rdfs:range <http://www.example.org/test#Cl_UnionRoleAssignment> .
+
+<http://www.example.org/test#isAssignmentInUnionGroup> a rdf:Property ;
+    rdfs:label "test is Assignment In Union Group" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_UnionGroup> ;
+    rdfs:range <http://www.example.org/test#Cl_UnionRoleAssignment> .
+
+<http://www.example.org/test#isAssignmentOfRole> a rdf:Property ;
+    rdfs:label "test is Assignment Of Role" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Role> ;
+    rdfs:range <http://www.example.org/test#Cl_UnionRoleAssignment> .
+
+<http://www.example.org/test#isBookVersionOf> a rdf:Property ;
+    rdfs:label "test is Book Version Of" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Book> ;
+    rdfs:range <http://www.example.org/test#Cl_ArticleCollection> .
+
+<http://www.example.org/test#isDegreeOfStudyEvent> a rdf:Property ;
+    rdfs:label "test is Degree Of Study Event" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Degree> ;
+    rdfs:range <http://www.example.org/test#Cl_StudyEvent> .
+
+<http://www.example.org/test#isLocatedIn> a rdf:Property ;
+    rdfs:label "test is Located In" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_City> ;
+    rdfs:range <http://www.example.org/test#Cl_Country> .
+
+<http://www.example.org/test#isPeriodOfStudyEvent> a rdf:Property ;
+    rdfs:label "test is Period Of Study Event" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_TimePeriod> ;
+    rdfs:range <http://www.example.org/test#Cl_StudyEvent> .
+
+<http://www.example.org/test#locatedInCity> a rdf:Property ;
+    rdfs:label "test located In City" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Hospital> ;
+    rdfs:range <http://www.example.org/test#Cl_City> .
+
+<http://www.example.org/test#participatedInStudyEvent> a rdf:Property ;
+    rdfs:label "test participated In Study Event" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Person> ;
+    rdfs:range <http://www.example.org/test#Cl_StudyEvent> .
+
+<http://www.example.org/test#publication_date> a rdf:Property ;
+    rdfs:label "test publication date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Publication> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#relatesToSeminar> a rdf:Property ;
+    rdfs:label "test relates To Seminar" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_SeminarOccurrence> ;
+    rdfs:range <http://www.example.org/test#Cl_Seminar> .
+
+<http://www.example.org/test#startDate> a rdf:Property ;
+    rdfs:label "test start Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_UnionRoleAssignment> ;
     rdfs:range xsd:dateTime .
 
-<http://example.org/music-ontology#hasTimeInterval> a rdf:Property ;
-    rdfs:label "music-ontology has Time Interval" ;
+<http://www.example.org/test#timeValue> a rdf:Property ;
+    rdfs:label "test time Value" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#EnsembleMembership> ;
-    rdfs:range <http://example.org/music-ontology#TimeInterval> .
+    rdfs:domain <http://www.example.org/test#Cl_TimePoint> ;
+    rdfs:range xsd:dateTime .
 
-<http://example.org/music-ontology#influencedBy> a rdf:Property ;
-    rdfs:label "music-ontology influenced By" ;
+<http://www.example.org/test#title> a rdf:Property ;
+    rdfs:label "test title" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicArtist> ;
-    rdfs:range <http://example.org/music-ontology#MusicArtist> .
+    rdfs:domain <http://www.example.org/test#Cl_Publication> ;
+    rdfs:range xsd:string .
 
-<http://example.org/music-ontology#involvesAgent> a rdf:Property ;
-    rdfs:label "music-ontology involves Agent" ;
+<http://www.example.org/test#tookPlaceAt> a rdf:Property ;
+    rdfs:label "test took Place At" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#CreativeProcess> ;
-    rdfs:range <http://example.org/music-ontology#Agent> .
+    rdfs:domain <http://www.example.org/test#Cl_SeminarOccurrence> ;
+    rdfs:range <http://www.example.org/test#Cl_Location> .
 
-<http://example.org/music-ontology#involvesBroadcaster> a rdf:Property ;
-    rdfs:label "music-ontology involves Broadcaster" ;
+<http://www.example.org/test#undergoes_evaluation_event> a rdf:Property ;
+    rdfs:label "test undergoes evaluation event" ;
     kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#BroadcastingSituation> ;
-    rdfs:range <http://example.org/music-ontology#Broadcaster> .
-
-<http://example.org/music-ontology#involvesEnsemble> a rdf:Property ;
-    rdfs:label "music-ontology involves Ensemble" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#EnsembleMembership> ;
-    rdfs:range <http://example.org/music-ontology#MusicEnsemble> .
-
-<http://example.org/music-ontology#involvesEquipment> a rdf:Property ;
-    rdfs:label "music-ontology involves Equipment" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#RecordingProcess> ;
-    rdfs:range <http://example.org/music-ontology#Equipment> .
-
-<http://example.org/music-ontology#involvesPublisher> a rdf:Property ;
-    rdfs:label "music-ontology involves Publisher" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#PublicationSituation> ;
-    rdfs:range <http://example.org/music-ontology#Publisher> .
-
-<http://example.org/music-ontology#isDedicatedTo> a rdf:Property ;
-    rdfs:label "music-ontology is Dedicated To" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#DedicationStatement> ;
-    rdfs:range <http://example.org/music-ontology#Person> .
-
-<http://example.org/music-ontology#isRecordingOf> a rdf:Property ;
-    rdfs:label "music-ontology is Recording Of" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#Recording> ;
-    rdfs:range <http://example.org/music-ontology#MusicEntity> .
-
-<http://example.org/music-ontology#isSourceOf> a rdf:Property ;
-    rdfs:label "music-ontology is Source Of" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#Text> ;
-    rdfs:range <http://example.org/music-ontology#Text> .
-
-<http://example.org/music-ontology#ledToCreationOf> a rdf:Property ;
-    rdfs:label "music-ontology led To Creation Of" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#CreativeProcess> ;
-    rdfs:range <http://example.org/music-ontology#MusicalPiece> .
-
-<http://example.org/music-ontology#produces> a rdf:Property ;
-    rdfs:label "music-ontology produces" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#RecordingProcess> ;
-    rdfs:range <http://example.org/music-ontology#Recording> .
-
-<http://example.org/music-ontology#recorded> a rdf:Property ;
-    rdfs:label "music-ontology recorded" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#RecordingProcess> ;
-    rdfs:range <http://example.org/music-ontology#MusicalPerformance> .
-
-<http://example.org/music-ontology#wasFormedAt> a rdf:Property ;
-    rdfs:label "music-ontology was Formed At" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://example.org/music-ontology#MusicEnsemble> ;
-    rdfs:range <http://example.org/music-ontology#Place> .
-
-owl:Ontology a owl:Class ;
-    rdfs:label "owl Ontology" ;
-    kgqa:count 1 .
-
-owl:disjointWith a rdf:Property ;
-    rdfs:label "owl disjoint With" ;
-    kgqa:count 27 ;
-    rdfs:domain owl:Class ;
-    rdfs:range owl:Class .
-
-owl:inverseOf a rdf:Property ;
-    rdfs:label "owl inverse Of" ;
-    kgqa:count 1 ;
-    rdfs:domain owl:ObjectProperty ;
-    rdfs:range owl:ObjectProperty .
-
-owl:minCardinality a rdf:Property ;
-    rdfs:label "owl min Cardinality" ;
-    kgqa:count 39 ;
-    rdfs:domain owl:Restriction .
-
-owl:onProperty a rdf:Property ;
-    rdfs:label "owl on Property" ;
-    kgqa:count 39 ;
-    rdfs:domain owl:Restriction ;
-    rdfs:range owl:DatatypeProperty,
-        owl:ObjectProperty,
-        owl:SymmetricProperty .
-
-<http://example.org/music-ontology#Action> a owl:Class ;
-    rdfs:label "music-ontology Action" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#Association> a owl:Class ;
-    rdfs:label "music-ontology Association" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#Broadcaster> a owl:Class ;
-    rdfs:label "music-ontology Broadcaster" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Agent> .
-
-<http://example.org/music-ontology#BroadcastingSituation> a owl:Class ;
-    rdfs:label "music-ontology Broadcasting Situation" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Event> .
-
-<http://example.org/music-ontology#CreativeAction> a owl:Class ;
-    rdfs:label "music-ontology Creative Action" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Action> .
-
-<http://example.org/music-ontology#DedicationStatement> a owl:Class ;
-    rdfs:label "music-ontology Dedication Statement" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Statement> .
-
-<http://example.org/music-ontology#Device> a owl:Class ;
-    rdfs:label "music-ontology Device" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#Equipment> a owl:Class ;
-    rdfs:label "music-ontology Equipment" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Device> .
-
-<http://example.org/music-ontology#FormType> a owl:Class ;
-    rdfs:label "music-ontology Form Type" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Type> .
-
-<http://example.org/music-ontology#Genre> a owl:Class ;
-    rdfs:label "music-ontology Genre" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#InformationContentEntity> a owl:Class ;
-    rdfs:label "music-ontology Information Content Entity" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#Instrumentation> a owl:Class ;
-    rdfs:label "music-ontology Instrumentation" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#Key> a owl:Class ;
-    rdfs:label "music-ontology Key" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#LegalDocument> a owl:Class ;
-    rdfs:label "music-ontology Legal Document" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#License> a owl:Class ;
-    rdfs:label "music-ontology License" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#LegalDocument> .
-
-<http://example.org/music-ontology#MusicGenre> a owl:Class ;
-    rdfs:label "music-ontology Music Genre" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Genre> .
-
-<http://example.org/music-ontology#MusicalPiece> a owl:Class ;
-    rdfs:label "music-ontology Musical Piece" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#MusicEntity> .
-
-<http://example.org/music-ontology#Performance> a owl:Class ;
-    rdfs:label "music-ontology Performance" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Event> .
-
-<http://example.org/music-ontology#PublicationSituation> a owl:Class ;
-    rdfs:label "music-ontology Publication Situation" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Event> .
-
-<http://example.org/music-ontology#Publisher> a owl:Class ;
-    rdfs:label "music-ontology Publisher" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Agent> .
-
-<http://example.org/music-ontology#Recognition> a owl:Class ;
-    rdfs:label "music-ontology Recognition" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#Release> a owl:Class ;
-    rdfs:label "music-ontology Release" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#MusicEntity> .
-
-<http://example.org/music-ontology#Role> a owl:Class ;
-    rdfs:label "music-ontology Role" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Type> .
-
-<http://example.org/music-ontology#Statement> a owl:Class ;
-    rdfs:label "music-ontology Statement" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#TemporalEntity> a owl:Class ;
-    rdfs:label "music-ontology Temporal Entity" ;
-    kgqa:count 1 .
-
-<http://example.org/music-ontology#TimeInterval> a owl:Class ;
-    rdfs:label "music-ontology Time Interval" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#TemporalEntity> .
+    rdfs:domain <http://www.example.org/test#Cl_Employee> ;
+    rdfs:range <http://www.example.org/test#Cl_EvaluationEvent> .
 
 owl:DatatypeProperty a owl:Class ;
     rdfs:label "owl Datatype Property" ;
     kgqa:count 1 .
 
-owl:SymmetricProperty a owl:Class ;
-    rdfs:label "owl Symmetric Property" ;
+owl:FunctionalProperty a owl:Class ;
+    rdfs:label "owl Functional Property" ;
     kgqa:count 1 .
 
-<http://example.org/music-ontology#Award> a owl:Class ;
-    rdfs:label "music-ontology Award" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Recognition> .
+owl:disjointWith a rdf:Property ;
+    rdfs:label "owl disjoint With" ;
+    kgqa:count 2 ;
+    rdfs:domain owl:Class ;
+    rdfs:range owl:Class .
 
-<http://example.org/music-ontology#MusicalPerformance> a owl:Class ;
-    rdfs:label "music-ontology Musical Performance" ;
+owl:onProperty a rdf:Property ;
+    rdfs:label "owl on Property" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Performance> .
+    rdfs:domain owl:Restriction ;
+    rdfs:range owl:ObjectProperty .
 
-<http://example.org/music-ontology#Person> a owl:Class ;
-    rdfs:label "music-ontology Person" ;
+owl:someValuesFrom a rdf:Property ;
+    rdfs:label "owl some Values From" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <http://example.org/music-ontology#Agent> .
+    rdfs:domain owl:Restriction ;
+    rdfs:range owl:Class .
 
-<http://example.org/music-ontology#Place> a owl:Class ;
-    rdfs:label "music-ontology Place" ;
+<http://www.example.org/test#Cl_ArticleCollection> a owl:Class ;
+    rdfs:label "test Cl Article Collection" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
+
+<http://www.example.org/test#Cl_Degree> a owl:Class ;
+    rdfs:label "test Cl Degree" ;
     kgqa:count 1 .
 
-<http://example.org/music-ontology#Process> a owl:Class ;
-    rdfs:label "music-ontology Process" ;
+<http://www.example.org/test#Cl_GeographicalLocation> a owl:Class ;
+    rdfs:label "test Cl Geographical Location" ;
     kgqa:count 1 .
 
-<http://example.org/music-ontology#Score> a owl:Class ;
-    rdfs:label "music-ontology Score" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#MusicEntity> .
+<http://www.example.org/test#Cl_MedicalDegree> a owl:Class ;
+    rdfs:label "test Cl Medical Degree" ;
+    kgqa:count 1 .
 
-<http://example.org/music-ontology#Type> a owl:Class ;
-    rdfs:label "music-ontology Type" ;
+<http://www.example.org/test#Cl_MedicalFacility> a owl:Class ;
+    rdfs:label "test Cl Medical Facility" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Organization> a owl:Class ;
+    rdfs:label "test Cl Organization" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Role> a owl:Class ;
+    rdfs:label "test Cl Role" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Union> a owl:Class ;
+    rdfs:label "test Cl Union" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_UnionGroup> a owl:Class ;
+    rdfs:label "test Cl Union Group" ;
+    kgqa:count 1 .
+
+owl:ObjectProperty a owl:Class ;
+    rdfs:label "owl Object Property" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_ArticlePresentation> a owl:Class ;
+    rdfs:label "test Cl Article Presentation" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
+
+<http://www.example.org/test#Cl_Book> a owl:Class ;
+    rdfs:label "test Cl Book" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
+
+<http://www.example.org/test#Cl_Country> a owl:Class ;
+    rdfs:label "test Cl Country" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Doctor> a owl:Class ;
+    rdfs:label "test Cl Doctor" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Employee> .
+
+<http://www.example.org/test#Cl_Hospital> a owl:Class ;
+    rdfs:label "test Cl Hospital" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Location>,
+        <http://www.example.org/test#Cl_MedicalFacility>,
+        <http://www.example.org/test#Cl_Organization> .
+
+<http://www.example.org/test#Cl_TimePoint> a owl:Class ;
+    rdfs:label "test Cl Time Point" ;
     kgqa:count 1 .
 
 owl:Restriction a owl:Class ;
     rdfs:label "owl Restriction" ;
     kgqa:count 1 .
 
-<http://example.org/music-ontology#MusicEnsemble> a owl:Class ;
-    rdfs:label "music-ontology Music Ensemble" ;
+<http://www.example.org/test#Cl_Article> a owl:Class ;
+    rdfs:label "test Cl Article" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Agent> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
 
-<http://example.org/music-ontology#RecordingProcess> a owl:Class ;
-    rdfs:label "music-ontology Recording Process" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Process> .
-
-<http://example.org/music-ontology#Text> a owl:Class ;
-    rdfs:label "music-ontology Text" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#InformationContentEntity> .
-
-owl:ObjectProperty a owl:Class ;
-    rdfs:label "owl Object Property" ;
+<http://www.example.org/test#Cl_EmploymentEvent> a owl:Class ;
+    rdfs:label "test Cl Employment Event" ;
     kgqa:count 1 .
 
-<http://example.org/music-ontology#AbstractScore> a owl:Class ;
-    rdfs:label "music-ontology Abstract Score" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Score> .
-
-<http://example.org/music-ontology#CreativeProcess> a owl:Class ;
-    rdfs:label "music-ontology Creative Process" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Process> .
-
-<http://example.org/music-ontology#EnsembleMembership> a owl:Class ;
-    rdfs:label "music-ontology Ensemble Membership" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Association> .
-
-<http://example.org/music-ontology#Agent> a owl:Class ;
-    rdfs:label "music-ontology Agent" ;
+<http://www.example.org/test#Cl_EvaluationEvent> a owl:Class ;
+    rdfs:label "test Cl Evaluation Event" ;
     kgqa:count 1 .
 
-<http://example.org/music-ontology#Event> a owl:Class ;
-    rdfs:label "music-ontology Event" ;
+<http://www.example.org/test#Cl_PersonDegree> a owl:Class ;
+    rdfs:label "test Cl Person Degree" ;
     kgqa:count 1 .
 
-<http://example.org/music-ontology#Recording> a owl:Class ;
-    rdfs:label "music-ontology Recording" ;
+<http://www.example.org/test#Cl_SeminarEvent> a owl:Class ;
+    rdfs:label "test Cl Seminar Event" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
+
+<http://www.example.org/test#Cl_SeminarOccurrence> a owl:Class ;
+    rdfs:label "test Cl Seminar Occurrence" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
+
+<http://www.example.org/test#Cl_StudyEvent> a owl:Class ;
+    rdfs:label "test Cl Study Event" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_TimePeriod> a owl:Class ;
+    rdfs:label "test Cl Time Period" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_UnionMembership> a owl:Class ;
+    rdfs:label "test Cl Union Membership" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_City> a owl:Class ;
+    rdfs:label "test Cl City" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_GeographicalLocation> .
+
+<http://www.example.org/test#Cl_Event> a owl:Class ;
+    rdfs:label "test Cl Event" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Location> a owl:Class ;
+    rdfs:label "test Cl Location" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Person> a owl:Class ;
+    rdfs:label "test Cl Person" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Seminar> a owl:Class ;
+    rdfs:label "test Cl Seminar" ;
     kgqa:count 1 ;
     rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#MusicEntity> .
+        <http://www.example.org/test#Cl_Event> .
 
-<http://example.org/music-ontology#MusicEntity> a owl:Class ;
-    rdfs:label "music-ontology Music Entity" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass> .
+<http://www.example.org/test#Cl_UnionRoleAssignment> a owl:Class ;
+    rdfs:label "test Cl Union Role Assignment" ;
+    kgqa:count 1 .
 
-<http://example.org/music-ontology#MusicArtist> a owl:Class ;
-    rdfs:label "music-ontology Music Artist" ;
+<http://www.example.org/test#Cl_Employee> a owl:Class ;
+    rdfs:label "test Cl Employee" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://example.org/music-ontology#Person> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Person> .
+
+<http://www.example.org/test#Cl_Publication> a owl:Class ;
+    rdfs:label "test Cl Publication" ;
+    kgqa:count 1 .
 
 owl:Class a owl:Class ;
     rdfs:label "owl Class" ;

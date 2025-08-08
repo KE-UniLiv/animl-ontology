@@ -550,11 +550,17 @@ class Endpoint:
     
     def uri_to_label(self, uri):
         # print(uri)
+        if uri == '':
+            return 'anonymous'
+        print('------------------------------------------------------------------------------')
+        print('this is the uri' + str(uri))
         slices = uri.split("/")
+        print('these are the slices' + str(slices))
+        print('------------------------------------------------------------------------------')
         raw_label = slices[-1]
         if "#" in raw_label:
             raw_label = raw_label.replace("#"," ")
-        elif not "." in slices[-2]:
+        elif (len(slices) >= 2) and (not "." in slices[-2]):
             raw_label = slices[-2]+" "+raw_label
 
         label_from_uri = self.camel_case_split(raw_label).replace("_"," ").strip()
