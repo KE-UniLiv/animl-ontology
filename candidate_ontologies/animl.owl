@@ -273,16 +273,6 @@
     </owl:ObjectProperty>
     
 
-
-    <!-- https://w3id.org/animl/hasContainerType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasMember">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/container"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/containerType"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/animl/hasMember -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasMember">
@@ -368,7 +358,7 @@
 
     <!-- https://w3id.org/animl/hasSubCategory -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/animlhasType">
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasSubCategory">
         <rdfs:domain rdf:resource="https://w3id.org/animl/category"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
     </owl:ObjectProperty>
@@ -388,8 +378,10 @@
     <!-- https://w3id.org/animl/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasType">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/container"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/agent"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/change"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/containerType"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/agentType"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/changeType"/>
     </owl:ObjectProperty>
@@ -1298,8 +1290,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/animl/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/Category"/>
+                <owl:onProperty rdf:resource="https://w3id.org/animl/hasSubCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/category"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
