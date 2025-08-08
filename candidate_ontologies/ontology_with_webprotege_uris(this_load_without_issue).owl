@@ -1,0 +1,2258 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:webprotege:ontology:b44762d6-fab9-482c-af9c-f4ddd9eaff37#"
+     xml:base="urn:webprotege:ontology:b44762d6-fab9-482c-af9c-f4ddd9eaff37"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webprotege="http://webprotege.stanford.edu/">
+    <owl:Ontology rdf:about="http://w3id.org/animl/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8H74a68w6y0QGbk8nib731 -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R8H74a68w6y0QGbk8nib731">
+        <rdfs:label xml:lang="owl">aml:timeStamp</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9Aws8MEe97B5d7TtHn6XK8 -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R9Aws8MEe97B5d7TtHn6XK8">
+        <rdfs:label xml:lang="owl">aml:animlVersion</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RsgfcKalhzNGIqCV95TFWG -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RsgfcKalhzNGIqCV95TFWG">
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#anysimpletype -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#anysimpletype">
+        <rdfs:label xml:lang="owl">xsd:anysimpletype</rdfs:label>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/animl/consumedBy -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/consumedBy">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/consumes -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/consumes">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/technique"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/derivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/derivedFrom">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/derives -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/derives">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/technique"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/extends -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/extends">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/extension"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/hasDataType -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasDataType">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/parameterSpecification"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/hasExtension -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasExtension">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/technique"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/extension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasFunction">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasPart">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:domain rdf:resource="http://w3id.org/animl/role"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Category"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Parameter"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SeriesSet"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/method"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/result"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/series"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/itemSpecification"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/parameterSpecification"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/seriesSpecifcation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/hasPlotScale -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasPlotScale">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/seriesSpecifcation"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/plotScale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasRole">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/hasUnits -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasUnits">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/parameterSpecification"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/units"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/isPartOf">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/itemSpecification"/>
+        <rdfs:domain rdf:resource="http://w3id.org/animl/parameterSpecification"/>
+        <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+        <rdfs:domain rdf:resource="http://w3id.org/animl/seriesSpecifcation"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/role"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Category"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Parameter"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/method"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/result"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/lookingWithin -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/lookingWithin">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/referenceSet"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/experiment"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/sampleSet"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/animl/pointsTo -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/animl/pointsTo">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/datapoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/affects -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/affects">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/change"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/denotedBy -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/denotedBy">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experiment"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/denotes -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/denotes">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/document"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/experiment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/directlyPreeceds -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/directlyPreeceds">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/version"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/version"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/directlyfollows -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/directlyfollows">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/version"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/version"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasAgent -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasAgent">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/method"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/version"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:label xml:lang="owl">aml:hasAgent</rdfs:label>
+        <rdfs:label xml:lang="owl">hasAgent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasContainerType -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasContainerType">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/container"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasMember">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/units"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SeriesSet"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/TagSet"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/referenceSet"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/sampleSet"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/series"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Sample"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/series"/>
+        <rdfs:label xml:lang="owl">odp:hasMember</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasMethodCategory -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasMethodCategory">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/method"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasParameter">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Category"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasPart">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/template"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasResultCategory -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasResultCategory">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/result"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasSampleCategory -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasSampleCategory">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Sample"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasSampleSet -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasSampleSet">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/document"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/sampleSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasStep -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasStep">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experiment"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:label xml:lang="owl">hasStep</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasSubCategory -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasSubCategory">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Category"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasTags -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasTags">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Sample"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/TagSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasType -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasType">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/change"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/agentType"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/changeType"/>
+        <rdfs:label xml:lang="owl">aml:hasType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasVersion">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/versionHistory"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/version"/>
+        <rdfs:label xml:lang="owl">aml:hasVersion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/includes -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/includes">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/infrastructure"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/result"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/specification"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/referenceSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/includesInfrastructure -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/includesInfrastructure">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/infrastructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/isContained -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/isContained">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Sample"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/SampleInContainer"/>
+        <rdfs:label xml:lang="owl">aml:isContained</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/isContainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/isContainedBy">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SampleInContainer"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/container"/>
+        <rdfs:label xml:lang="owl">aml:isContainedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/isMemberOf">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/signature"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/units"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/referenceSet"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/signatureSet"/>
+        <rdfs:label xml:lang="owl">ismemberof</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/makesChange -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/makesChange">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/version"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/change"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/producesResult -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/producesResult">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/result"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/references -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/references">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/signature"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/usesMethod -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/usesMethod">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/method"/>
+        <rdfs:label xml:lang="owl">aml:usesMethod</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/usesTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/usesTechnique">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://w3id.org/animl/technique"/>
+        <rdfs:label xml:lang="owl">aml:usesTechnique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/animl/URI -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/URI">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/abstract">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/endValue -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/endValue">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/exponent -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/exponent">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/factor -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/factor">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/label -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/label">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/units"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/name -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/name">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/offset -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/offset">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/quantity">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/units"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/references -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/references">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/startValue -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/startValue">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/token -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/token">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/animl/version -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/version">
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Scope -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/Scope">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/change"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/animlVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/animlVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/barcode -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/barcode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Sample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="owl">barcode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/comment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/containerId -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/containerId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/container"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/containerRow -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/containerRow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SampleInContainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/containmentColumn -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/containmentColumn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/SampleInContainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/email -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/email">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/encodedValue -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/encodedValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#base64Binary"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/identifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/includes -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/includes"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/label -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/label">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/location -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/name -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/tag"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/template"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/newValue -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/newValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/change"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/oldValue -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/oldValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/change"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/operatingSystem -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/operatingSystem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/organisation -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/organisation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/phone -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/phone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/pointValue -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/pointValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Parameter"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anysimpletype"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/quantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/reason -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/reason">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/version"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/role -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/role">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="owl">role</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/sampleSet -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/sampleSet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/sourceDataLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/sourceDataLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/Sample"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/template"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="owl">sourceDataLocation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/stepNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/stepNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/timeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/timeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/infrastructure"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/version"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/value -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/value">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/tag"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/version -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/version">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/visability -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/visability">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/animl/dataType -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/dataType"/>
+    
+
+
+    <!-- http://w3id.org/animl/datapoint -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/datapoint"/>
+    
+
+
+    <!-- http://w3id.org/animl/definition -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/definition">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/includes"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/specification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/extension -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/extension">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/extends"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/technique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/function -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/function"/>
+    
+
+
+    <!-- http://w3id.org/animl/itemSpecification -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/itemSpecification">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/result"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/parameterSpecification -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/parameterSpecification">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasDataType"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/dataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasUnits"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/units"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/plotScale -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/plotScale"/>
+    
+
+
+    <!-- http://w3id.org/animl/reference -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/reference">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasFunction"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasRole"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/pointsTo"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/datapoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/pointsTo"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/pointsTo"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/series"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/isMemberOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/referenceSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/referenceSpecification -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/referenceSpecification">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/consumedBy"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/technique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/derivedFrom"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/technique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/reference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/role -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/role">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/itemSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/sIUnit -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/sIUnit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyPreeceds"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/units"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyfollows"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/units"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/isMemberOf"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/units"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/seriesSpecifcation -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/seriesSpecifcation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasDataType"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/dataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPlotScale"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/plotScale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasUnits"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/units"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/series"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/specification -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/specification"/>
+    
+
+
+    <!-- http://w3id.org/animl/technique -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/technique">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/consumes"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/derives"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasExtension"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/extension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/animl/units -->
+
+    <owl:Class rdf:about="http://w3id.org/animl/units">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/sIUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/AutoincrementeddataPoint -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/AutoincrementeddataPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/datapoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyPreeceds"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyfollows"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">AutoincrementeddataPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Category -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Category">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/itemSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasParameter"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasSubCategory"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/ContainerType -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/ContainerType">
+        <rdfs:label xml:lang="owl">ContainerType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Parameter -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Parameter">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/parameterSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">Parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Sample -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Sample">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasSampleCategory"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasTags"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/TagSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/isContained"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/SampleInContainer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/SampleInContainer -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/SampleInContainer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/isContainedBy"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/container"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">SampleInContainer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/SeriesSet -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/SeriesSet">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/itemSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/series"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">SeriesSet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/TagSet -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/TagSet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/tag"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">TagSet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/agent -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasType"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/agentType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/agentType -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/agentType">
+        <rdfs:label xml:lang="owl">agentType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/change -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/change">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/affects"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasType"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/changeType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/changeType -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/changeType">
+        <rdfs:label xml:lang="owl">changeType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/container -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/container">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Sample"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasContainerType"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">container</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/document -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/document">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/denotes"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/experiment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasSampleSet"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/sampleSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/encodedDataPoint -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/encodedDataPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/datapoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyPreeceds"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyfollows"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">encodedDataPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/experiment -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/experiment">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/denotedBy"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasStep"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/experimentStep -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/experimentStep">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/itemSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyPreeceds"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyfollows"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/template"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasTags"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/TagSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/includesInfrastructure"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/infrastructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/producesResult"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/result"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/usesMethod"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/usesTechnique"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/technique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/indivdualDataPoint -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/indivdualDataPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/datapoint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyPreeceds"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyfollows"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/series"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">individualDataPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/infrastructure -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/infrastructure">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/includes"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/referenceSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/method -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/method">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/itemSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasAgent"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMethodCategory"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/referenceSet -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/referenceSet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/lookingWithin"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/experiment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/lookingWithin"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/sampleSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/lookingWithin"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/series"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/reference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/result -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/result">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/itemSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasResultCategory"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/includes"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/referenceSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/sampleSet -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/sampleSet">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/series -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/series">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/seriesSpecifcation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/AutoincrementeddataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/encodedDataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/indivdualDataPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/signableItem -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/signableItem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="owl">signableItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/signature -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/signature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/isMemberOf"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/signatureSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/references"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">signature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/signatureSet -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/signatureSet">
+        <rdfs:label xml:lang="owl">signatureSet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/tag -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/tag">
+        <rdfs:label xml:lang="owl">tag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/technique -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/technique">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:label xml:lang="owl">technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/template -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/template">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/experimentStep"/>
+        <rdfs:label xml:lang="owl">template</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/version -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/version">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyPreeceds"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/version"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/directlyfollows"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/version"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasAgent"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/makesChange"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/change"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/versionHistory -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/versionHistory">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/signableItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/hasVersion"/>
+                <owl:allValuesFrom rdf:resource="http://webprotege.stanford.edu/version"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="owl">versionHistory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <webprotege:RsgfcKalhzNGIqCV95TFWG>xsd:string</webprotege:RsgfcKalhzNGIqCV95TFWG>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/animl/A -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/A">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/Boolean -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/Boolean">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/DateTime -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/DateTime">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/EmbeddedXML -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/EmbeddedXML">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/Float32 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/Float32">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/Int32 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/Int32">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/Int64 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/Int64">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/K -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/K">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/PNG -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/PNG">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/SVG -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/SVG">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/String -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/String">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/cd -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/cd">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/determinate -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/determinate">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/float64 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/float64">
+        <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/indeterminate -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/indeterminate">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/kg -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/kg">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/linear -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/linear">
+        <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/ln -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/ln">
+        <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/log -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/log">
+        <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/m -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/m">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/mol -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/mol">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/none -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/none">
+        <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/rectangular_tray -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/rectangular_tray">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/s -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/s">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/simple -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/simple">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/1 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/1">
+        <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/1536_wells -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/1536_wells">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/24_wells -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/24_wells">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/384_wells -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/384_wells">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/6_wells -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/6_wells">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/animl/96_wells -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/animl/96_wells">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/creation -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/creation">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/changeType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/deletion -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/deletion">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/changeType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/humanCreatorAgent -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/humanCreatorAgent">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/agentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/modification -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/modification">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/changeType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/platformAgent -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/platformAgent">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/agentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/softwareCreatorAgent -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/softwareCreatorAgent">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/agentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/toolAgent -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/toolAgent">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/agentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/includes">
+        <rdfs:label xml:lang="owl">includes</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

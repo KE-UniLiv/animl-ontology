@@ -57,7 +57,6 @@ class Index:
     def search(self,term,hits=5):
         # print("search: "+term)
         with lock:
-            print('if this appears multiple times consecutively before an error')
             results = []
             results = self.index.similarity_search_with_score(term,hits)
             r = []

@@ -91,7 +91,7 @@ class QuestionHandler:
         self.generalConversation.add({"role":"user","content":question})
         # print(self.messagesTranslater.to_list())
         #client = OpenAI()
-        completion = call_generator('gpt',build_discriminator_prompt(question,ttl),n=1,temperature=0.3)
+        completion = call_generator('gpt',build_discriminator_prompt(question,ttl),n=1,temperature=0.9)
         coveredness = (m := re.search(r'\b(?:True|False)\b', completion.choices[0].message.content)) and m.group().lower()
         print(coveredness)
         if (coveredness == 'True') or (coveredness == 'true'):

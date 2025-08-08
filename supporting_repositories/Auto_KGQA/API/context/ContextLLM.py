@@ -28,9 +28,9 @@ class ContextDialog:
         self.content[i] = v
     def __str__(self):
         return str(self.system + self.content)
-    
-def build_discriminator_prompt(question,graph):
-    discriminator_prompt = f"""you are an ontology engineer
+
+
+original_discriminator_prompt = """you are an ontology engineer
     You are asked to infer if the ontology described at the bottom of the prompt can address
      the competency question above it
 
@@ -40,13 +40,23 @@ def build_discriminator_prompt(question,graph):
         and otherwise express the entire question without simplification
 
     please respond True for expressable questions, and False otherwise
-
-    question:
-    {question}
-
-    ontology:
-    {graph}
     """
+
+complexity_discriminator_prompt = """you are an ontology engineer
+    You are asked to infer if it is feasible for an LLm based system to fully map the provided question
+    to a sparql query upon the provided ontology
+
+     in order to do this well you should consider
+
+        how many entities are involved
+        if any of the relationships denoted in the question are implicit or reified in the ontology
+        the general complexity of the statement 
+
+    please respond True for expressable questions, and False otherwise
+    """
+    
+def build_discriminator_prompt(question,graph):
+    discriminator_prompt = f"{complexity_discriminator_prompt}  {f' question: {question} ontology: {graph}'}"
     print(discriminator_prompt)
     return discriminator_prompt
     
