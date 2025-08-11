@@ -1,0 +1,2 @@
+FROM llama3
+PARAMETER temperature 0.7

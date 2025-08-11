@@ -39,7 +39,9 @@
     
 
 
-    <!-- http://w3id.org/animl/consumedBy -->
+    <!-- denotes the relationship contained within the context of the specification for a referenced item,
+    a relationship which indicates the requirement for the referenced item to have been consumed in a particular technique
+    here technique may be viewed in its form as a specification for an experiment step -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/consumedBy">
         <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSpecification"/>
@@ -48,7 +50,9 @@
     
 
 
-    <!-- http://w3id.org/animl/consumes -->
+    <!-- this is the inverse of the above relation, and denotes the requirement for a technique to consume the referenced item of a referenec
+    in order for that item to be referenced
+    this relationship is not entirely intuitive, but it is necessary to preserve expressivity found in the original xml -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/consumes">
         <rdfs:domain rdf:resource="http://w3id.org/animl/technique"/>
@@ -57,7 +61,9 @@
     
 
 
-    <!-- http://w3id.org/animl/derivedFrom -->
+    <!-- denotes the relationship contained within the context of the specification for a referenced item,
+    a relationship which indicates the requirement for the referenced item to have been derived from a particular technique
+    here technique may be viewed in its form as a specification for an experiment step  -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/derivedFrom">
         <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSpecification"/>
@@ -66,7 +72,9 @@
     
 
 
-    <!-- http://w3id.org/animl/derives -->
+    <!-- this is the inverse of the above relation, and denotes the requirement for a technique to derive the referenced item of a referenec
+    in order for that item to be referenced
+    this relationship is not entirely intuitive, but it is necessary to preserve expressivity found in the original xml -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/derives">
         <rdfs:domain rdf:resource="http://w3id.org/animl/technique"/>
@@ -75,7 +83,9 @@
     
 
 
-    <!-- http://w3id.org/animl/extends -->
+    <!-- this relationship denotes that the 'extension' (itself a subclass of technique) exists to:
+    extend the technqiue if you consider techniques as independent
+    complete the specification for an experiment step, if you consider technqieus as specifications for experiment steps -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/extends">
         <rdfs:domain rdf:resource="http://w3id.org/animl/extension"/>
@@ -84,7 +94,10 @@
     
 
 
-    <!-- http://w3id.org/animl/hasDataType -->
+    <!-- conceptually this relationship is the property of being bound to a specific data type, which forces classes representing data containers
+    to have individuals that only contain data of specific types
+    
+    however it is attached to the specification for such containers, since the type of data a container may hold is governed by its specification -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasDataType">
         <rdfs:domain rdf:resource="http://w3id.org/animl/parameterSpecification"/>
