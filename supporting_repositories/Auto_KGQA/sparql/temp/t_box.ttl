@@ -4,44 +4,81 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.example.org/test#Cl_CD> a owl:Class ;
-    rdfs:label "test Cl CD" ;
+<http://www.example.org/test#Cl_AlbumRecording> a owl:Class ;
+    rdfs:label "test Cl Album Recording" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Recording> .
 
-<http://www.example.org/test#Cl_Nurse> a owl:Class ;
-    rdfs:label "test Cl Nurse" ;
+<http://www.example.org/test#Cl_MusicCritic> a owl:Class ;
+    rdfs:label "test Cl Music Critic" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Employee> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Critic> .
 
-<http://www.example.org/test#Cl_SeniorDoctor> a owl:Class ;
-    rdfs:label "test Cl Senior Doctor" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Doctor> .
+<http://www.example.org/test#Cl_MusicProduction> a owl:Class ;
+    rdfs:label "test Cl Music Production" ;
+    kgqa:count 1 .
 
-<http://www.example.org/test#P_hasDate> a rdf:Property ;
-    rdfs:label "test P has Date" ;
+<http://www.example.org/test#Cl_MusicRecord> a owl:Class ;
+    rdfs:label "test Cl Music Record" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_SeminarEvent> ;
-    rdfs:range xsd:date .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Record> .
 
-<http://www.example.org/test#P_isInCity> a rdf:Property ;
-    rdfs:label "test P is In City" ;
+<http://www.example.org/test#Cl_Oregon> a owl:Class ;
+    rdfs:label "test Cl Oregon" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Location> ;
-    rdfs:range <http://www.example.org/test#Cl_City> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl-ontology/superclass>,
+        <http://www.example.org/test#Cl_Region> .
 
-<http://www.example.org/test#P_isOccurrenceOf> a rdf:Property ;
-    rdfs:label "test P is Occurrence Of" ;
+<http://www.example.org/test#Cl_Portland> a owl:Class ;
+    rdfs:label "test Cl Portland" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_SeminarEvent> ;
-    rdfs:range <http://www.example.org/test#Cl_Seminar> .
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl-ontology/superclass>,
+        <http://www.example.org/test#Cl_City> .
 
-<http://www.example.org/test#P_occursAt> a rdf:Property ;
-    rdfs:label "test P occurs At" ;
+<http://www.example.org/test#Cl_Region_Location> a owl:Class ;
+    rdfs:label "test Cl Region Location" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_SeminarEvent> ;
-    rdfs:range <http://www.example.org/test#Cl_Location> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Location> .
+
+<http://www.example.org/test#Cl_US> a owl:Class ;
+    rdfs:label "test Cl US" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Country> .
+
+<http://www.example.org/test#Cl_Vocalist> a owl:Class ;
+    rdfs:label "test Cl Vocalist" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Musician> .
+
+<http://www.example.org/test#about> a rdf:Property ;
+    rdfs:label "test about" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Review> ;
+    rdfs:range <http://www.example.org/test#Cl_Record> .
+
+<http://www.example.org/test#albumName> a rdf:Property ;
+    rdfs:label "test album Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Album> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#albumTrack> a rdf:Property ;
+    rdfs:label "test album Track" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Album> ;
+    rdfs:range <http://www.example.org/test#Cl_AlbumTrack> .
+
+<http://www.example.org/test#atTime> a rdf:Property ;
+    rdfs:label "test at Time" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_MemberRole> ;
+    rdfs:range <http://www.example.org/test#Cl_TimePeriod> .
+
+<http://www.example.org/test#bandName> a rdf:Property ;
+    rdfs:label "test band Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Band> ;
+    rdfs:range xsd:string .
 
 <http://www.example.org/test#cityName> a rdf:Property ;
     rdfs:label "test city Name" ;
@@ -49,397 +86,641 @@
     rdfs:domain <http://www.example.org/test#Cl_City> ;
     rdfs:range xsd:string .
 
-<http://www.example.org/test#conducts_evaluation_event> a rdf:Property ;
-    rdfs:label "test conducts evaluation event" ;
+<http://www.example.org/test#composedOn> a rdf:Property ;
+    rdfs:label "test composed On" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Doctor> ;
-    rdfs:range <http://www.example.org/test#Cl_EvaluationEvent> .
-
-<http://www.example.org/test#containsArticle> a rdf:Property ;
-    rdfs:label "test contains Article" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Publication> ;
-    rdfs:range <http://www.example.org/test#Cl_Article> .
-
-<http://www.example.org/test#countryName> a rdf:Property ;
-    rdfs:label "test country Name" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Country> ;
-    rdfs:range xsd:string .
-
-<http://www.example.org/test#degreeDate> a rdf:Property ;
-    rdfs:label "test degree Date" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_PersonDegree> ;
+    rdfs:domain <http://www.example.org/test#Cl_SongComposition> ;
     rdfs:range xsd:date .
 
-<http://www.example.org/test#employmentStartDate> a rdf:Property ;
-    rdfs:label "test employment Start Date" ;
+<http://www.example.org/test#containsTrack> a rdf:Property ;
+    rdfs:label "test contains Track" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_EmploymentEvent> ;
+    rdfs:domain <http://www.example.org/test#Cl_Record> ;
+    rdfs:range <http://www.example.org/test#Cl_Track> .
+
+<http://www.example.org/test#date> a rdf:Property ;
+    rdfs:label "test date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Date> ;
     rdfs:range xsd:date .
 
-<http://www.example.org/test#evaluation_text> a rdf:Property ;
-    rdfs:label "test evaluation text" ;
+<http://www.example.org/test#endDate> a rdf:Property ;
+    rdfs:label "test end Date" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_EvaluationEvent> ;
-    rdfs:range xsd:string .
-
-<http://www.example.org/test#hasArticlePresentationEvent> a rdf:Property ;
-    rdfs:label "test has Article Presentation Event" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Article> ;
-    rdfs:range <http://www.example.org/test#Cl_ArticlePresentation> .
-
-<http://www.example.org/test#hasDate> a rdf:Property ;
-    rdfs:label "test has Date" ;
-    kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_SeminarOccurrence> ;
+    rdfs:domain <http://www.example.org/test#Cl_Membership>,
+        <http://www.example.org/test#Cl_TimePeriod> ;
     rdfs:range xsd:date .
 
-<http://www.example.org/test#hasDegree> a rdf:Property ;
-    rdfs:label "test has Degree" ;
+<http://www.example.org/test#features> a rdf:Property ;
+    rdfs:label "test features" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_PersonDegree> ;
-    rdfs:range <http://www.example.org/test#Cl_MedicalDegree> .
+    rdfs:domain <http://www.example.org/test#Cl_Performance> ;
+    rdfs:range <http://www.example.org/test#Cl_Song> .
 
-<http://www.example.org/test#hasEmployee> a rdf:Property ;
-    rdfs:label "test has Employee" ;
+<http://www.example.org/test#givenBy> a rdf:Property ;
+    rdfs:label "test given By" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_UnionMembership> ;
-    rdfs:range <http://www.example.org/test#Cl_Employee> .
+    rdfs:domain <http://www.example.org/test#Cl_Review> ;
+    rdfs:range <http://www.example.org/test#Cl_Critic> .
 
-<http://www.example.org/test#hasEmploymentEvent> a rdf:Property ;
-    rdfs:label "test has Employment Event" ;
+<http://www.example.org/test#hasAlbum> a rdf:Property ;
+    rdfs:label "test has Album" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Employee> ;
-    rdfs:range <http://www.example.org/test#Cl_EmploymentEvent> .
+    rdfs:domain <http://www.example.org/test#Cl_Band>,
+        <http://www.example.org/test#Cl_MusicBand>,
+        <http://www.example.org/test#Cl_Recording> ;
+    rdfs:range <http://www.example.org/test#Cl_Album>,
+        <http://www.example.org/test#Cl_MusicAlbum> .
 
-<http://www.example.org/test#hasEmploymentEventAtHospital> a rdf:Property ;
-    rdfs:label "test has Employment Event At Hospital" ;
+<http://www.example.org/test#hasBand> a rdf:Property ;
+    rdfs:label "test has Band" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Hospital> ;
-    rdfs:range <http://www.example.org/test#Cl_EmploymentEvent> .
+    rdfs:domain <http://www.example.org/test#Cl_MusicAlbum>,
+        <http://www.example.org/test#Cl_Musician> ;
+    rdfs:range <http://www.example.org/test#Cl_Band>,
+        <http://www.example.org/test#Cl_MusicBand> .
 
-<http://www.example.org/test#hasEndDate> a rdf:Property ;
-    rdfs:label "test has End Date" ;
+<http://www.example.org/test#hasBandMember> a rdf:Property ;
+    rdfs:label "test has Band Member" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_TimePeriod> ;
-    rdfs:range xsd:date .
+    rdfs:domain <http://www.example.org/test#Cl_Band> ;
+    rdfs:range <http://www.example.org/test#Cl_Musician> .
 
-<http://www.example.org/test#hasNumberOfPages> a rdf:Property ;
-    rdfs:label "test has Number Of Pages" ;
+<http://www.example.org/test#hasComposition> a rdf:Property ;
+    rdfs:label "test has Composition" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Book> ;
-    rdfs:range xsd:integer .
+    rdfs:domain <http://www.example.org/test#Cl_Song> ;
+    rdfs:range <http://www.example.org/test#Cl_SongComposition> .
 
-<http://www.example.org/test#hasPerson> a rdf:Property ;
-    rdfs:label "test has Person" ;
+<http://www.example.org/test#hasCountry> a rdf:Property ;
+    rdfs:label "test has Country" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_PersonDegree> ;
-    rdfs:range <http://www.example.org/test#Cl_Person> .
+    rdfs:domain <http://www.example.org/test#Cl_Location> ;
+    rdfs:range <http://www.example.org/test#Cl_Country> .
 
-<http://www.example.org/test#hasPresentedArticle> a rdf:Property ;
-    rdfs:label "test has Presented Article" ;
+<http://www.example.org/test#hasMember> a rdf:Property ;
+    rdfs:label "test has Member" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Seminar> ;
-    rdfs:range <http://www.example.org/test#Cl_Article> .
+    rdfs:domain <http://www.example.org/test#Cl_Band> ;
+    rdfs:range <http://www.example.org/test#Cl_Membership>,
+        <http://www.example.org/test#Cl_Person> .
 
-<http://www.example.org/test#hasSeminarPresentationEvent> a rdf:Property ;
-    rdfs:label "test has Seminar Presentation Event" ;
+<http://www.example.org/test#hasMusician> a rdf:Property ;
+    rdfs:label "test has Musician" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Seminar> ;
-    rdfs:range <http://www.example.org/test#Cl_ArticlePresentation> .
+    rdfs:domain <http://www.example.org/test#Cl_Band> ;
+    rdfs:range <http://www.example.org/test#Cl_Musician> .
 
-<http://www.example.org/test#hasStartDate> a rdf:Property ;
-    rdfs:label "test has Start Date" ;
+<http://www.example.org/test#hasPerformance> a rdf:Property ;
+    rdfs:label "test has Performance" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_TimePeriod> ;
-    rdfs:range xsd:date .
+    rdfs:domain <http://www.example.org/test#Cl_Band> ;
+    rdfs:range <http://www.example.org/test#Cl_Performance> .
 
-<http://www.example.org/test#hasTimePoint> a rdf:Property ;
-    rdfs:label "test has Time Point" ;
+<http://www.example.org/test#hasPerformanceEvent> a rdf:Property ;
+    rdfs:label "test has Performance Event" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_UnionMembership> ;
-    rdfs:range <http://www.example.org/test#Cl_TimePoint> .
+    rdfs:domain <http://www.example.org/test#Cl_Band> ;
+    rdfs:range <http://www.example.org/test#Cl_PerformanceEvent> .
 
-<http://www.example.org/test#hasUnion> a rdf:Property ;
-    rdfs:label "test has Union" ;
+<http://www.example.org/test#hasRecording> a rdf:Property ;
+    rdfs:label "test has Recording" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_UnionMembership> ;
-    rdfs:range <http://www.example.org/test#Cl_Union> .
+    rdfs:domain <http://www.example.org/test#Cl_Album> ;
+    rdfs:range <http://www.example.org/test#Cl_Recording> .
 
-<http://www.example.org/test#hasUnionRoleAssignment> a rdf:Property ;
-    rdfs:label "test has Union Role Assignment" ;
+<http://www.example.org/test#hasRegion> a rdf:Property ;
+    rdfs:label "test has Region" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Location> ;
+    rdfs:range <http://www.example.org/test#Cl_Region> .
+
+<http://www.example.org/test#hasReleaseDate> a rdf:Property ;
+    rdfs:label "test has Release Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_MusicAlbum> ;
+    rdfs:range <http://www.example.org/test#Cl_AlbumRelease> .
+
+<http://www.example.org/test#hasRole> a rdf:Property ;
+    rdfs:label "test has Role" ;
     kgqa:count 1 ;
     rdfs:domain <http://www.example.org/test#Cl_Person> ;
-    rdfs:range <http://www.example.org/test#Cl_UnionRoleAssignment> .
+    rdfs:range <http://www.example.org/test#Cl_MemberRole> .
 
-<http://www.example.org/test#isAssignmentInUnionGroup> a rdf:Property ;
-    rdfs:label "test is Assignment In Union Group" ;
+<http://www.example.org/test#hasSong> a rdf:Property ;
+    rdfs:label "test has Song" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_UnionGroup> ;
-    rdfs:range <http://www.example.org/test#Cl_UnionRoleAssignment> .
+    rdfs:domain <http://www.example.org/test#Cl_Album>,
+        <http://www.example.org/test#Cl_PlayedSong>,
+        <http://www.example.org/test#Cl_TrackRecording> ;
+    rdfs:range <http://www.example.org/test#Cl_Song> .
 
-<http://www.example.org/test#isAssignmentOfRole> a rdf:Property ;
-    rdfs:label "test is Assignment Of Role" ;
+<http://www.example.org/test#hasTrack> a rdf:Property ;
+    rdfs:label "test has Track" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Role> ;
-    rdfs:range <http://www.example.org/test#Cl_UnionRoleAssignment> .
+    rdfs:domain <http://www.example.org/test#Cl_Album> ;
+    rdfs:range <http://www.example.org/test#Cl_Track> .
 
-<http://www.example.org/test#isBookVersionOf> a rdf:Property ;
-    rdfs:label "test is Book Version Of" ;
+<http://www.example.org/test#instrument> a rdf:Property ;
+    rdfs:label "test instrument" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Book> ;
-    rdfs:range <http://www.example.org/test#Cl_ArticleCollection> .
+    rdfs:domain <http://www.example.org/test#Cl_Instrumentalist> ;
+    rdfs:range <http://www.example.org/test#Cl_Instrument> .
 
-<http://www.example.org/test#isDegreeOfStudyEvent> a rdf:Property ;
-    rdfs:label "test is Degree Of Study Event" ;
+<http://www.example.org/test#instrumentName> a rdf:Property ;
+    rdfs:label "test instrument Name" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Degree> ;
-    rdfs:range <http://www.example.org/test#Cl_StudyEvent> .
+    rdfs:domain <http://www.example.org/test#Cl_Instrument> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#instrumentPerson> a rdf:Property ;
+    rdfs:label "test instrument Person" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Instrument> ;
+    rdfs:range <http://www.example.org/test#Cl_PersonInstrument> .
+
+<http://www.example.org/test#isCompositionOf> a rdf:Property ;
+    rdfs:label "test is Composition Of" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_SongComposition> ;
+    rdfs:range <http://www.example.org/test#Cl_Song> .
 
 <http://www.example.org/test#isLocatedIn> a rdf:Property ;
     rdfs:label "test is Located In" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_City> ;
+    rdfs:domain <http://www.example.org/test#Cl_Region> ;
     rdfs:range <http://www.example.org/test#Cl_Country> .
 
-<http://www.example.org/test#isPeriodOfStudyEvent> a rdf:Property ;
-    rdfs:label "test is Period Of Study Event" ;
+<http://www.example.org/test#isMemberOf> a rdf:Property ;
+    rdfs:label "test is Member Of" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_TimePeriod> ;
-    rdfs:range <http://www.example.org/test#Cl_StudyEvent> .
+    rdfs:domain <http://www.example.org/test#Cl_Musician> ;
+    rdfs:range <http://www.example.org/test#Cl_Membership> .
 
-<http://www.example.org/test#locatedInCity> a rdf:Property ;
-    rdfs:label "test located In City" ;
+<http://www.example.org/test#isTrackOf> a rdf:Property ;
+    rdfs:label "test is Track Of" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Hospital> ;
-    rdfs:range <http://www.example.org/test#Cl_City> .
+    rdfs:domain <http://www.example.org/test#Cl_Track> ;
+    rdfs:range <http://www.example.org/test#Cl_Album> .
 
-<http://www.example.org/test#participatedInStudyEvent> a rdf:Property ;
-    rdfs:label "test participated In Study Event" ;
+<http://www.example.org/test#locatedAt> a rdf:Property ;
+    rdfs:label "test located At" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Event> ;
+    rdfs:range <http://www.example.org/test#Cl_Location> .
+
+<http://www.example.org/test#locatedIn> a rdf:Property ;
+    rdfs:label "test located In" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_City> ;
+    rdfs:range <http://www.example.org/test#Cl_Region> .
+
+<http://www.example.org/test#locationName> a rdf:Property ;
+    rdfs:label "test location Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Location> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#member> a rdf:Property ;
+    rdfs:label "test member" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Membership> ;
+    rdfs:range <http://www.example.org/test#Cl_Musician> .
+
+<http://www.example.org/test#memberOf> a rdf:Property ;
+    rdfs:label "test member Of" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Membership>,
+        <http://www.example.org/test#Cl_Person> ;
+    rdfs:range <http://www.example.org/test#Cl_Band> .
+
+<http://www.example.org/test#musicianName> a rdf:Property ;
+    rdfs:label "test musician Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Musician> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#name> a rdf:Property ;
+    rdfs:label "test name" ;
     kgqa:count 1 ;
     rdfs:domain <http://www.example.org/test#Cl_Person> ;
-    rdfs:range <http://www.example.org/test#Cl_StudyEvent> .
+    rdfs:range xsd:string .
 
-<http://www.example.org/test#publication_date> a rdf:Property ;
-    rdfs:label "test publication date" ;
+<http://www.example.org/test#partOf> a rdf:Property ;
+    rdfs:label "test part Of" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Publication> ;
+    rdfs:domain <http://www.example.org/test#Cl_Region>,
+        <http://www.example.org/test#Cl_Song> ;
+    rdfs:range <http://www.example.org/test#Cl_Album>,
+        <http://www.example.org/test#Cl_Country> .
+
+<http://www.example.org/test#performanceDate> a rdf:Property ;
+    rdfs:label "test performance Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Performance>,
+        <http://www.example.org/test#Cl_PerformanceEvent> ;
+    rdfs:range xsd:date,
+        xsd:dateTime .
+
+<http://www.example.org/test#performanceEvent> a rdf:Property ;
+    rdfs:label "test performance Event" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Performance> ;
+    rdfs:range <http://www.example.org/test#Cl_PerformanceEvent> .
+
+<http://www.example.org/test#performanceEventDate> a rdf:Property ;
+    rdfs:label "test performance Event Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_PerformanceEvent> ;
     rdfs:range xsd:date .
 
-<http://www.example.org/test#relatesToSeminar> a rdf:Property ;
-    rdfs:label "test relates To Seminar" ;
+<http://www.example.org/test#performanceLocation> a rdf:Property ;
+    rdfs:label "test performance Location" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_SeminarOccurrence> ;
-    rdfs:range <http://www.example.org/test#Cl_Seminar> .
+    rdfs:domain <http://www.example.org/test#Cl_Performance> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#performedAt> a rdf:Property ;
+    rdfs:label "test performed At" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Performance>,
+        <http://www.example.org/test#Cl_PerformanceEvent> ;
+    rdfs:range <http://www.example.org/test#Cl_Location>,
+        <http://www.example.org/test#Cl_Venue> .
+
+<http://www.example.org/test#performedBy> a rdf:Property ;
+    rdfs:label "test performed By" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_MusicAlbum>,
+        <http://www.example.org/test#Cl_Performance>,
+        <http://www.example.org/test#Cl_Song> ;
+    rdfs:range <http://www.example.org/test#Cl_Band>,
+        <http://www.example.org/test#Cl_Musician> .
+
+<http://www.example.org/test#performedOn> a rdf:Property ;
+    rdfs:label "test performed On" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Performance>,
+        <http://www.example.org/test#Cl_PerformanceEvent> ;
+    rdfs:range <http://www.example.org/test#Cl_Date>,
+        xsd:date .
+
+<http://www.example.org/test#performs> a rdf:Property ;
+    rdfs:label "test performs" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Band> ;
+    rdfs:range <http://www.example.org/test#Cl_Performance> .
+
+<http://www.example.org/test#personInstrument> a rdf:Property ;
+    rdfs:label "test person Instrument" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Person> ;
+    rdfs:range <http://www.example.org/test#Cl_PersonInstrument> .
+
+<http://www.example.org/test#playedIn> a rdf:Property ;
+    rdfs:label "test played In" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Song> ;
+    rdfs:range <http://www.example.org/test#Cl_PlayedSong> .
+
+<http://www.example.org/test#playedOn> a rdf:Property ;
+    rdfs:label "test played On" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_PlayedSong> ;
+    rdfs:range xsd:dateTime .
+
+<http://www.example.org/test#plays> a rdf:Property ;
+    rdfs:label "test plays" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Musician>,
+        <http://www.example.org/test#Cl_Person> ;
+    rdfs:range <http://www.example.org/test#Cl_Instrument> .
+
+<http://www.example.org/test#playsInstrument> a rdf:Property ;
+    rdfs:label "test plays Instrument" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Instrumentalist> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#recordingPeriod> a rdf:Property ;
+    rdfs:label "test recording Period" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Recording> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#regionName> a rdf:Property ;
+    rdfs:label "test region Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Region> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#releaseDate> a rdf:Property ;
+    rdfs:label "test release Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Album>,
+        <http://www.example.org/test#Cl_AlbumRelease> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#reviewDate> a rdf:Property ;
+    rdfs:label "test review Date" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Review> ;
+    rdfs:range xsd:date .
+
+<http://www.example.org/test#reviewText> a rdf:Property ;
+    rdfs:label "test review Text" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Review> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#reviewedBy> a rdf:Property ;
+    rdfs:label "test reviewed By" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Record> ;
+    rdfs:range <http://www.example.org/test#Cl_Review> .
+
+<http://www.example.org/test#roleName> a rdf:Property ;
+    rdfs:label "test role Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Role> ;
+    rdfs:range xsd:string .
+
+<http://www.example.org/test#songName> a rdf:Property ;
+    rdfs:label "test song Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Song> ;
+    rdfs:range xsd:string .
 
 <http://www.example.org/test#startDate> a rdf:Property ;
     rdfs:label "test start Date" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_UnionRoleAssignment> ;
-    rdfs:range xsd:dateTime .
+    rdfs:domain <http://www.example.org/test#Cl_Membership>,
+        <http://www.example.org/test#Cl_TimePeriod> ;
+    rdfs:range xsd:date .
 
-<http://www.example.org/test#timeValue> a rdf:Property ;
-    rdfs:label "test time Value" ;
+<http://www.example.org/test#trackCount> a rdf:Property ;
+    rdfs:label "test track Count" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_TimePoint> ;
-    rdfs:range xsd:dateTime .
+    rdfs:domain <http://www.example.org/test#Cl_Album> ;
+    rdfs:range xsd:integer .
 
-<http://www.example.org/test#title> a rdf:Property ;
-    rdfs:label "test title" ;
+<http://www.example.org/test#trackName> a rdf:Property ;
+    rdfs:label "test track Name" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Publication> ;
+    rdfs:domain <http://www.example.org/test#Cl_Track> ;
     rdfs:range xsd:string .
 
-<http://www.example.org/test#tookPlaceAt> a rdf:Property ;
-    rdfs:label "test took Place At" ;
+<http://www.example.org/test#trackNumber> a rdf:Property ;
+    rdfs:label "test track Number" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_SeminarOccurrence> ;
-    rdfs:range <http://www.example.org/test#Cl_Location> .
+    rdfs:domain <http://www.example.org/test#Cl_Track> ;
+    rdfs:range xsd:integer .
 
-<http://www.example.org/test#undergoes_evaluation_event> a rdf:Property ;
-    rdfs:label "test undergoes evaluation event" ;
+<http://www.example.org/test#trackOf> a rdf:Property ;
+    rdfs:label "test track Of" ;
     kgqa:count 1 ;
-    rdfs:domain <http://www.example.org/test#Cl_Employee> ;
-    rdfs:range <http://www.example.org/test#Cl_EvaluationEvent> .
+    rdfs:domain <http://www.example.org/test#Cl_Track> ;
+    rdfs:range <http://www.example.org/test#Cl_Album> .
+
+<http://www.example.org/test#venueName> a rdf:Property ;
+    rdfs:label "test venue Name" ;
+    kgqa:count 1 ;
+    rdfs:domain <http://www.example.org/test#Cl_Venue> ;
+    rdfs:range xsd:string .
+
+owl:DataProperty a owl:Class ;
+    rdfs:label "owl Data Property" ;
+    kgqa:count 1 .
+
+owl:allValuesFrom a rdf:Property ;
+    rdfs:label "owl all Values From" ;
+    kgqa:count 2 ;
+    rdfs:domain owl:Restriction ;
+    rdfs:range owl:Class .
+
+owl:cardinality a rdf:Property ;
+    rdfs:label "owl cardinality" ;
+    kgqa:count 1 ;
+    rdfs:domain owl:Restriction .
+
+owl:inverseOf a rdf:Property ;
+    rdfs:label "owl inverse Of" ;
+    kgqa:count 5 ;
+    rdfs:domain owl:ObjectProperty,
+        owl:Property ;
+    rdfs:range owl:ObjectProperty,
+        owl:Property .
+
+owl:minCardinality a rdf:Property ;
+    rdfs:label "owl min Cardinality" ;
+    kgqa:count 1 ;
+    rdfs:domain owl:Restriction .
+
+owl:onClass a rdf:Property ;
+    rdfs:label "owl on Class" ;
+    kgqa:count 1 ;
+    rdfs:domain owl:Restriction ;
+    rdfs:range owl:Class .
+
+owl:onProperty a rdf:Property ;
+    rdfs:label "owl on Property" ;
+    kgqa:count 10 ;
+    rdfs:domain owl:Restriction ;
+    rdfs:range owl:DatatypeProperty,
+        owl:ObjectProperty,
+        owl:Property .
+
+owl:property a rdf:Property ;
+    rdfs:label "owl property" ;
+    kgqa:count 2 ;
+    rdfs:domain owl:Class ;
+    rdfs:range owl:ObjectProperty .
+
+owl:someValuesFrom a rdf:Property ;
+    rdfs:label "owl some Values From" ;
+    kgqa:count 6 ;
+    rdfs:domain owl:Restriction ;
+    rdfs:range owl:Class .
+
+<http://www.example.org/test#Cl_AlbumTrack> a owl:Class ;
+    rdfs:label "test Cl Album Track" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Album> .
+
+<http://www.example.org/test#Cl_BandMember> a owl:Class ;
+    rdfs:label "test Cl Band Member" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Composition> a owl:Class ;
+    rdfs:label "test Cl Composition" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_TrackRecording> a owl:Class ;
+    rdfs:label "test Cl Track Recording" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Track> .
 
 owl:DatatypeProperty a owl:Class ;
     rdfs:label "owl Datatype Property" ;
     kgqa:count 1 .
 
-owl:FunctionalProperty a owl:Class ;
-    rdfs:label "owl Functional Property" ;
-    kgqa:count 1 .
-
-owl:disjointWith a rdf:Property ;
-    rdfs:label "owl disjoint With" ;
-    kgqa:count 2 ;
-    rdfs:domain owl:Class ;
-    rdfs:range owl:Class .
-
-owl:onProperty a rdf:Property ;
-    rdfs:label "owl on Property" ;
+<http://www.example.org/test#Cl_AlbumRelease> a owl:Class ;
+    rdfs:label "test Cl Album Release" ;
     kgqa:count 1 ;
-    rdfs:domain owl:Restriction ;
-    rdfs:range owl:ObjectProperty .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
 
-owl:someValuesFrom a rdf:Property ;
-    rdfs:label "owl some Values From" ;
+<http://www.example.org/test#Cl_Critic> a owl:Class ;
+    rdfs:label "test Cl Critic" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Date> a owl:Class ;
+    rdfs:label "test Cl Date" ;
     kgqa:count 1 ;
-    rdfs:domain owl:Restriction ;
-    rdfs:range owl:Class .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Time> .
 
-<http://www.example.org/test#Cl_ArticleCollection> a owl:Class ;
-    rdfs:label "test Cl Article Collection" ;
+<http://www.example.org/test#Cl_Instrumentalist> a owl:Class ;
+    rdfs:label "test Cl Instrumentalist" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Musician> .
 
-<http://www.example.org/test#Cl_Degree> a owl:Class ;
-    rdfs:label "test Cl Degree" ;
-    kgqa:count 1 .
+<http://www.example.org/test#Cl_MemberRole> a owl:Class ;
+    rdfs:label "test Cl Member Role" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Role> .
 
-<http://www.example.org/test#Cl_GeographicalLocation> a owl:Class ;
-    rdfs:label "test Cl Geographical Location" ;
-    kgqa:count 1 .
+<http://www.example.org/test#Cl_MusicBand> a owl:Class ;
+    rdfs:label "test Cl Music Band" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Group> .
 
-<http://www.example.org/test#Cl_MedicalDegree> a owl:Class ;
-    rdfs:label "test Cl Medical Degree" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_MedicalFacility> a owl:Class ;
-    rdfs:label "test Cl Medical Facility" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_Organization> a owl:Class ;
-    rdfs:label "test Cl Organization" ;
+<http://www.example.org/test#Cl_PersonInstrument> a owl:Class ;
+    rdfs:label "test Cl Person Instrument" ;
     kgqa:count 1 .
 
 <http://www.example.org/test#Cl_Role> a owl:Class ;
     rdfs:label "test Cl Role" ;
     kgqa:count 1 .
 
-<http://www.example.org/test#Cl_Union> a owl:Class ;
-    rdfs:label "test Cl Union" ;
+<http://www.example.org/test#Cl_Venue> a owl:Class ;
+    rdfs:label "test Cl Venue" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Location> .
+
+<http://www.example.org/test#Cl_City> a owl:Class ;
+    rdfs:label "test Cl City" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Location> .
+
+<http://www.example.org/test#Cl_PlayedSong> a owl:Class ;
+    rdfs:label "test Cl Played Song" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Performance> .
+
+<http://www.example.org/test#Cl_SongComposition> a owl:Class ;
+    rdfs:label "test Cl Song Composition" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Composition> .
+
+<http://www.example.org/test#Cl_TimePeriod> a owl:Class ;
+    rdfs:label "test Cl Time Period" ;
     kgqa:count 1 .
 
-<http://www.example.org/test#Cl_UnionGroup> a owl:Class ;
-    rdfs:label "test Cl Union Group" ;
+owl:Property a owl:Class ;
+    rdfs:label "owl Property" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Country> a owl:Class ;
+    rdfs:label "test Cl Country" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Event> a owl:Class ;
+    rdfs:label "test Cl Event" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Instrument> a owl:Class ;
+    rdfs:label "test Cl Instrument" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Entity> .
+
+<http://www.example.org/test#Cl_MusicAlbum> a owl:Class ;
+    rdfs:label "test Cl Music Album" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Artwork> .
+
+<http://www.example.org/test#Cl_Record> a owl:Class ;
+    rdfs:label "test Cl Record" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Album> .
+
+<http://www.example.org/test#Cl_Recording> a owl:Class ;
+    rdfs:label "test Cl Recording" ;
     kgqa:count 1 .
 
 owl:ObjectProperty a owl:Class ;
     rdfs:label "owl Object Property" ;
     kgqa:count 1 .
 
-<http://www.example.org/test#Cl_ArticlePresentation> a owl:Class ;
-    rdfs:label "test Cl Article Presentation" ;
+<http://www.example.org/test#Cl_Review> a owl:Class ;
+    rdfs:label "test Cl Review" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Membership> a owl:Class ;
+    rdfs:label "test Cl Membership" ;
     kgqa:count 1 ;
     rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
 
-<http://www.example.org/test#Cl_Book> a owl:Class ;
-    rdfs:label "test Cl Book" ;
+<http://www.example.org/test#Cl_PerformanceEvent> a owl:Class ;
+    rdfs:label "test Cl Performance Event" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
 
-<http://www.example.org/test#Cl_Country> a owl:Class ;
-    rdfs:label "test Cl Country" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_Doctor> a owl:Class ;
-    rdfs:label "test Cl Doctor" ;
+<http://www.example.org/test#Cl_Region> a owl:Class ;
+    rdfs:label "test Cl Region" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Employee> .
-
-<http://www.example.org/test#Cl_Hospital> a owl:Class ;
-    rdfs:label "test Cl Hospital" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Location>,
-        <http://www.example.org/test#Cl_MedicalFacility>,
-        <http://www.example.org/test#Cl_Organization> .
-
-<http://www.example.org/test#Cl_TimePoint> a owl:Class ;
-    rdfs:label "test Cl Time Point" ;
-    kgqa:count 1 .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Location> .
 
 owl:Restriction a owl:Class ;
     rdfs:label "owl Restriction" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_Article> a owl:Class ;
-    rdfs:label "test Cl Article" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Publication> .
-
-<http://www.example.org/test#Cl_EmploymentEvent> a owl:Class ;
-    rdfs:label "test Cl Employment Event" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_EvaluationEvent> a owl:Class ;
-    rdfs:label "test Cl Evaluation Event" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_PersonDegree> a owl:Class ;
-    rdfs:label "test Cl Person Degree" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_SeminarEvent> a owl:Class ;
-    rdfs:label "test Cl Seminar Event" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
-
-<http://www.example.org/test#Cl_SeminarOccurrence> a owl:Class ;
-    rdfs:label "test Cl Seminar Occurrence" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Event> .
-
-<http://www.example.org/test#Cl_StudyEvent> a owl:Class ;
-    rdfs:label "test Cl Study Event" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_TimePeriod> a owl:Class ;
-    rdfs:label "test Cl Time Period" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_UnionMembership> a owl:Class ;
-    rdfs:label "test Cl Union Membership" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_City> a owl:Class ;
-    rdfs:label "test Cl City" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_GeographicalLocation> .
-
-<http://www.example.org/test#Cl_Event> a owl:Class ;
-    rdfs:label "test Cl Event" ;
-    kgqa:count 1 .
-
-<http://www.example.org/test#Cl_Location> a owl:Class ;
-    rdfs:label "test Cl Location" ;
     kgqa:count 1 .
 
 <http://www.example.org/test#Cl_Person> a owl:Class ;
     rdfs:label "test Cl Person" ;
     kgqa:count 1 .
 
-<http://www.example.org/test#Cl_Seminar> a owl:Class ;
-    rdfs:label "test Cl Seminar" ;
+<http://www.example.org/test#Cl_Track> a owl:Class ;
+    rdfs:label "test Cl Track" ;
     kgqa:count 1 ;
-    rdfs:subClassOf <file:///C:/Users/sgwmorli/animl_ontology/superclass>,
-        <http://www.example.org/test#Cl_Event> .
+    rdfs:subClassOf <http://www.example.org/test#Cl_Song> .
 
-<http://www.example.org/test#Cl_UnionRoleAssignment> a owl:Class ;
-    rdfs:label "test Cl Union Role Assignment" ;
+<http://www.example.org/test#Cl_Location> a owl:Class ;
+    rdfs:label "test Cl Location" ;
     kgqa:count 1 .
 
-<http://www.example.org/test#Cl_Employee> a owl:Class ;
-    rdfs:label "test Cl Employee" ;
-    kgqa:count 1 ;
-    rdfs:subClassOf <http://www.example.org/test#Cl_Person> .
-
-<http://www.example.org/test#Cl_Publication> a owl:Class ;
-    rdfs:label "test Cl Publication" ;
+<http://www.example.org/test#Cl_Song> a owl:Class ;
+    rdfs:label "test Cl Song" ;
     kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Musician> a owl:Class ;
+    rdfs:label "test Cl Musician" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <http://www.example.org/test#Cl_Band>,
+        <http://www.example.org/test#Cl_BandMember>,
+        <http://www.example.org/test#Cl_Person>,
+        owl:Thing .
+
+<http://www.example.org/test#Cl_Performance> a owl:Class ;
+    rdfs:label "test Cl Performance" ;
+    kgqa:count 1 .
+
+<http://www.example.org/test#Cl_Band> a owl:Class ;
+    rdfs:label "test Cl Band" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf owl:Thing .
+
+<http://www.example.org/test#Cl_Album> a owl:Class ;
+    rdfs:label "test Cl Album" ;
+    kgqa:count 1 ;
+    rdfs:subClassOf <file:///C:/Users/wilfm/animl-ontology/superclass> .
 
 owl:Class a owl:Class ;
     rdfs:label "owl Class" ;

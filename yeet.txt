@@ -1,0 +1,270 @@
+http://www.example.org/test#hasTrack
+test has Track
+http://www.w3.org/2002/07/owl#minCardinality
+owl min Cardinality
+http://www.example.org/test#trackOf
+http://www.example.org/test#Cl_Album
+http://www.example.org/test#hasCountry
+test has Country
+http://www.example.org/test#venueName
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://www.example.org/test#Cl_PersonInstrument
+1
+http://www.example.org/test#Cl_Band
+http://www.w3.org/2002/07/owl#Thing
+http://www.example.org/test#instrumentPerson
+http://www.example.org/test#reviewedBy
+http://www.example.org/test#Cl_PerformanceEvent
+http://www.example.org/test#date
+http://www.w3.org/2002/07/owl#cardinality
+owl cardinality
+http://www.example.org/test#Cl_Membership
+http://www.w3.org/2002/07/owl#Class
+http://www.example.org/test#hasSong
+http://www.example.org/test#Cl_Event
+http://www.example.org/test#Cl_Oregon
+http://www.example.org/test#bandName
+http://www.example.org/test#Cl_Date
+http://www.example.org/test#performanceDate
+test performance Date
+http://www.example.org/test#Cl_Role
+test Cl Role
+http://www.example.org/test#Cl_Review
+test Cl Review
+http://www.example.org/test#hasBand
+http://www.example.org/test#Cl_Musician
+http://www.example.org/test#hasReleaseDate
+http://www.example.org/test#Cl_AlbumRelease
+owl Class
+http://www.example.org/test#partOf
+http://www.example.org/test#Cl_Country
+http://www.w3.org/2001/XMLSchema#date
+http://www.example.org/test#startDate
+http://www.example.org/test#Cl_TimePeriod
+http://www.example.org/test#hasRole
+http://www.example.org/test#Cl_MemberRole
+http://www.example.org/test#hasPerformanceEvent
+http://www.example.org/test#trackName
+http://www.example.org/test#Cl_Track
+http://www.example.org/test#Cl_Venue
+test Cl Venue
+http://www.example.org/test#performedAt
+http://www.example.org/test#cityName
+http://www.example.org/test#instrument
+test instrument
+http://www.example.org/test#Cl_MusicAlbum
+test Cl Music Album
+http://www.example.org/test#roleName
+http://www.example.org/test#releaseDate
+http://www.w3.org/2002/07/owl#allValuesFrom
+owl all Values From
+http://www.example.org/test#Cl_PlayedSong
+http://www.example.org/test#Cl_Vocalist
+http://www.example.org/test#Cl_MusicBand
+http://www.example.org/test#atTime
+http://www.example.org/test#Cl_MusicCritic
+http://www.example.org/test#Cl_Critic
+http://www.example.org/test#isLocatedIn
+http://www.example.org/test#endDate
+http://www.example.org/test#performedBy
+http://www.example.org/test#name
+test name
+http://www.example.org/test#isTrackOf
+http://www.example.org/test#hasPerformance
+http://www.example.org/test#Cl_Instrument
+test Cl Instrument
+http://www.example.org/test#Cl_Instrumentalist
+http://www.example.org/test#performanceEvent
+test has Song
+http://www.example.org/test#Cl_Location
+http://www.example.org/test#member
+test member
+http://www.w3.org/2002/07/owl#onClass
+owl on Class
+http://www.w3.org/2002/07/owl#inverseOf
+http://www.example.org/test#Cl_MusicRecord
+test Cl Album
+http://www.example.org/test#about
+http://www.example.org/test#Cl_Performance
+http://www.example.org/test#musicianName
+test musician Name
+http://www.w3.org/2002/07/owl#ObjectProperty
+http://www.example.org/test#plays
+http://www.w3.org/2002/07/owl#onProperty
+http://www.w3.org/2002/07/owl#DatatypeProperty
+test Cl Vocalist
+http://www.example.org/test#playedOn
+http://www.example.org/test#Cl_Song
+http://www.example.org/test#composedOn
+http://www.example.org/test#Cl_SongComposition
+http://www.w3.org/2002/07/owl#Property
+owl Property
+http://www.example.org/test#Cl_AlbumTrack
+http://www.example.org/test#hasAlbum
+http://www.example.org/test#locatedAt
+http://www.example.org/test#Cl_Time
+http://www.w3.org/2002/07/owl#DataProperty
+http://www.w3.org/2001/XMLSchema#string
+http://www.example.org/test#hasComposition
+http://www.example.org/test#Cl_Recording
+test Cl Recording
+http://www.example.org/test#locatedIn
+test track Of
+http://www.example.org/test#trackCount
+test track Count
+http://www.example.org/test#locationName
+http://www.example.org/test#performedOn
+test Cl Critic
+http://www.example.org/test#features
+http://www.example.org/test#reviewDate
+test located At
+http://www.example.org/test#instrumentName
+test Cl Date
+test has Album
+http://www.w3.org/2002/07/owl#Restriction
+http://www.w3.org/2002/07/owl#property
+http://www.example.org/test#albumTrack
+http://www.example.org/test#reviewText
+test Cl Track
+http://www.example.org/test#playedIn
+http://www.example.org/test#songName
+test reviewed By
+http://www.example.org/test#performanceLocation
+test review Text
+http://www.example.org/test#Cl_Region
+http://www.example.org/test#memberOf
+http://www.example.org/test#hasMember
+http://www.example.org/test#Cl_Person
+http://www.example.org/test#containsTrack
+http://www.example.org/test#Cl_Record
+http://www.example.org/test#regionName
+http://www.example.org/test#givenBy
+http://www.example.org/test#isMemberOf
+http://www.example.org/test#recordingPeriod
+http://www.example.org/test#albumName
+http://www.example.org/test#playsInstrument
+http://www.example.org/test#Cl_AlbumRecording
+http://www.example.org/test#Cl_BandMember
+http://www.example.org/test#performanceEventDate
+test performance Event Date
+http://www.example.org/test#Cl_Entity
+test performed By
+http://www.example.org/test#hasMusician
+test has Musician
+http://www.example.org/test#hasRecording
+test has Recording
+http://www.example.org/test#isCompositionOf
+test is Composition Of
+test Cl Album Recording
+http://www.example.org/test#Cl_Portland
+test given By
+http://www.example.org/test#trackNumber
+http://www.example.org/test#hasRegion
+http://www.example.org/test#Cl_Region_Location
+http://www.example.org/test#Cl_City
+test Cl Oregon
+owl property
+file:///C:/Users/wilfm/animl-ontology/superclass
+http://www.example.org/test#personInstrument
+http://www.w3.org/2001/XMLSchema#integer
+2
+http://www.example.org/test#Cl_TrackRecording
+http://www.example.org/test#hasBandMember
+http://www.example.org/test#Cl_Composition
+test Cl Instrumentalist
+http://www.example.org/test#performs
+test performs
+http://www.w3.org/2002/07/owl#someValuesFrom
+http://www.example.org/test#Cl_Group
+test release Date
+test instrument Person
+test plays
+test Cl Membership
+test Cl Musician
+test played In
+test Cl Record
+test part Of
+test performance Location
+owl Data Property
+test is Track Of
+test song Name
+test has Performance Event
+test Cl Region Location
+test Cl Band
+http://www.example.org/test#Cl_MusicProduction
+owl inverse Of
+test role Name
+test recording Period
+test is Located In
+test composed On
+test track Number
+test Cl Time Period
+5
+http://www.example.org/test#Cl_US
+test Cl Country
+test has Member
+test has Band Member
+test Cl Performance
+owl Datatype Property
+test start Date
+http://www.w3.org/2001/XMLSchema#dateTime
+test is Member Of
+test Cl Music Band
+test Cl Band Member
+test Cl Played Song
+test review Date
+test contains Track
+test Cl Region
+test track Name
+test Cl Member Role
+test Cl Person Instrument
+test Cl Song
+owl some Values From
+test has Composition
+test end Date
+test features
+test date
+owl on Property
+test Cl City
+test Cl Performance Event
+test has Role
+test about
+test instrument Name
+test album Track
+test venue Name
+test Cl Music Record
+test Cl Track Recording
+test performed On
+test has Performance
+test plays Instrument
+test Cl Song Composition
+test at Time
+test located In
+http://www.example.org/test#Cl_Artwork
+10
+test location Name
+test has Band
+test Cl Location
+test Cl Music Critic
+owl Restriction
+test played On
+test has Region
+test region Name
+test Cl Music Production
+test performance Event
+test person Instrument
+test album Name
+test Cl Person
+test has Release Date
+6
+test Cl Portland
+test Cl Composition
+test Cl Event
+test Cl Album Track
+test city Name
+test Cl US
+test member Of
+test band Name
+test Cl Album Release
+test performed At
+owl Object Property

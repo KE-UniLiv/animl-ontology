@@ -13,7 +13,7 @@ def autoUnit(parameters,thread_number,output_queue,stop_event):
     if parameters['initialisation_step'] == 1:
 
         nltk.download('punkt')
-        overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",(f"ENDPOINT_KNOWLEDGE_GRAPH_URL = " +  f"'animl-ontology-1/data/ontologies/{parameters['''ontology''']}.ttl'"))
+        overwrite_first_line("supporting_repositories/Auto_KGQA/API/configs.py",(f"ENDPOINT_KNOWLEDGE_GRAPH_URL = " +  f"'animl-ontology/data/ontologies/{parameters['''ontology''']}.ttl'"))
         createIndexes()
         parameters['model'] = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
         parameters['paralleism_blocker'] = False

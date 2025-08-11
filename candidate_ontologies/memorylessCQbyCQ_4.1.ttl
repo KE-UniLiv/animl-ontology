@@ -1,0 +1,2688 @@
+@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+:Cl_ExperimentStep a owl:Class .
+:Cl_Result a owl:Class .
+
+:hasExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Classes
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_Result rdf:type owl:Class .
+:Cl_DataPoint rdf:type owl:Class .
+:Cl_Infrastructure rdf:type owl:Class .
+:Cl_Series rdf:type owl:Class .
+
+# Pivot class for reification
+:Cl_DataPointOrigin rdf:type owl:Class .
+
+# Hierarchies (if any)
+# (No explicit hierarchies given in the questions)
+
+# Object Properties
+:includesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+:originatedFromSeries rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_DataPointOrigin ;
+    rdfs:range :Cl_Series .
+
+:originatedFromInfrastructure rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_DataPointOrigin ;
+    rdfs:range :Cl_Infrastructure .
+
+:hasDataPoint rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_DataPointOrigin ;
+    rdfs:range :Cl_DataPoint .
+
+# To connect DataPoint, Infrastructure, and Series via the pivot class
+:hasOrigin rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_DataPoint ;
+    rdfs:range :Cl_DataPointOrigin .
+
+# Disjointness (optional, but good practice)
+:Cl_ExperimentStep owl:disjointWith :Cl_Result, :Cl_DataPoint, :Cl_Infrastructure, :Cl_Series, :Cl_DataPointOrigin .
+:Cl_Result owl:disjointWith :Cl_DataPoint, :Cl_Infrastructure, :Cl_Series, :Cl_DataPointOrigin .
+:Cl_DataPoint owl:disjointWith :Cl_Infrastructure, :Cl_Series, :Cl_DataPointOrigin .
+:Cl_Infrastructure owl:disjointWith :Cl_Series, :Cl_DataPointOrigin .
+:Cl_Series owl:disjointWith :Cl_DataPointOrigin .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Classes
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_Result rdf:type owl:Class .
+
+### Object Properties
+:includesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+### Hierarchies
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Classes
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_Result rdf:type owl:Class .
+:Cl_Series rdf:type owl:Class .
+:Cl_Datapoint rdf:type owl:Class .
+:Cl_Infrastructure rdf:type owl:Class .
+:Cl_ParameterBlueprint rdf:type owl:Class .
+:Cl_Category rdf:type owl:Class .
+:Cl_DatapointType rdf:type owl:Class .
+
+### Pivot Classes (for reification)
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+:Cl_DatapointSeriesOrigin rdf:type owl:Class .
+:Cl_ParameterBlueprintCategoryBlueprintRelation rdf:type owl:Class .
+:Cl_SeriesDatapointTypeContainment rdf:type owl:Class .
+
+### Hierarchies (if any)
+# (No explicit subclassing required at this stage)
+
+### Object Properties
+
+# For CQ1: What experiment steps are included in a result?
+:resultIncludesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+:includedInResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+:hasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# For CQ2: what series did datapoints in infrastructure originate from?
+:datapointOriginatesFromSeries rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_DatapointSeriesOrigin ;
+    rdfs:range :Cl_Series .
+:originDatapoint rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Datapoint ;
+    rdfs:range :Cl_DatapointSeriesOrigin .
+:originInfrastructure rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_DatapointSeriesOrigin ;
+    rdfs:range :Cl_Infrastructure .
+
+# For CQ3: for a parameter blueprint, what is the blueprint for the category within which the corresponding parameter resides?
+:parameterBlueprintCategoryRelation rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ParameterBlueprintCategoryBlueprintRelation ;
+    rdfs:range :Cl_ParameterBlueprint .
+:categoryOfParameterBlueprint rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ParameterBlueprint ;
+    rdfs:range :Cl_ParameterBlueprintCategoryBlueprintRelation .
+:categoryInBlueprintRelation rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ParameterBlueprintCategoryBlueprintRelation ;
+    rdfs:range :Cl_Category .
+
+# For CQ4: for a series, what type of datapoints does it contain?
+:seriesContainsDatapointType rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_SeriesDatapointTypeContainment ;
+    rdfs:range :Cl_DatapointType .
+:containedInSeries rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Series ;
+    rdfs:range :Cl_SeriesDatapointTypeContainment .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStepRelation rdf:type owl:Class .
+
+### Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+### Hierarchies
+:Cl_ResultExperimentStepRelation rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:hasResult rdfs:domain :Cl_ResultExperimentStepRelation ; rdfs:range :Cl_Result ; rdf:type owl:ObjectProperty .
+:hasExperimentStep rdfs:domain :Cl_ResultExperimentStepRelation ; rdfs:range :Cl_ExperimentStep ; rdf:type owl:ObjectProperty .
+
+### Restrictions
+:Cl_ResultExperimentStepRelation owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:intersectionOf (
+        [ rdf:type owl:Restriction ; owl:onProperty :hasResult ; owl:someValuesFrom :Cl_Result ]
+        [ rdf:type owl:Restriction ; owl:onProperty :hasExperimentStep ; owl:someValuesFrom :Cl_ExperimentStep ]
+    )
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_Result rdf:type owl:Class .
+
+# Hierarchies (if any)
+:Cl_ResultStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+
+# Object Properties
+:resultStepInclusion_hasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:resultStepInclusion_hasExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optionally, inverse properties
+:resultIsIncludedInStepInclusion rdf:type owl:ObjectProperty ;
+    owl:inverseOf :resultStepInclusion_hasResult ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultStepInclusion .
+
+:experimentStepIsIncludedInStepInclusion rdf:type owl:ObjectProperty ;
+    owl:inverseOf :resultStepInclusion_hasExperimentStep ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStep a owl:Class .
+
+# Classes
+:Cl_Result a owl:Class .
+:Cl_ExperimentStep a owl:Class .
+
+# Hierarchy
+:Cl_ResultExperimentStep rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties for reification
+:result_includes_experiment_step a owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStep .
+
+:experiment_step_in_result a owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStep .
+
+:has_experiment_step a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStep ;
+    rdfs:range :Cl_ExperimentStep .
+
+:has_result a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStep ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# General class axiom: Every Cl_ResultExperimentStepInclusion must be linked to a Cl_ExperimentStep
+:Cl_ResultExperimentStepInclusion
+    owl:equivalentClass [
+        rdf:type owl:Restriction ;
+        owl:onProperty :included_experiment_step ;
+        owl:someValuesFrom :Cl_ExperimentStep
+    ] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# To connect a result to its included experiment steps via the pivot class
+:has_result_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:has_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_ResultStepInclusion rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object properties for reification
+:resultStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultStepInclusion .
+
+:includedStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optional: inverse properties
+:stepIncludedInResult rdf:type owl:ObjectProperty ;
+    owl:inverseOf :resultStepInclusion ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_ResultStepInclusion rdf:type owl:Class .
+
+# Hierarchy
+:Cl_ResultStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:resultInclusion_hasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:resultInclusion_hasStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# For direct navigation (optional, for convenience)
+:result_includes_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: A result includes only experiment steps via the reification
+:Cl_Result owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:onProperty :result_includes_step ;
+    owl:allValuesFrom :Cl_ExperimentStep
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepRelation rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if any)
+:Cl_ResultExperimentStepRelation rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties
+:hasResultExperimentStepRelation rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepRelation .
+
+:relatesToExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepRelation ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optional: Inverse properties
+:isIncludedInResult rdf:type owl:ObjectProperty ;
+    owl:inverseOf :hasResultExperimentStepRelation ;
+    rdfs:domain :Cl_ResultExperimentStepRelation ;
+    rdfs:range :Cl_Result .
+
+:isStepOfResult rdf:type owl:ObjectProperty ;
+    owl:inverseOf :relatesToExperimentStep ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepRelation .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultStepInclusion
+
+:Cl_ResultStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_Result rdf:type owl:Class .
+
+# Hierarchy (if any)
+:Cl_ResultStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+
+# Object Properties
+:includesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:includedInResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Each Cl_ResultStepInclusion instance connects a Cl_Result and a Cl_ExperimentStep
+# (i.e.@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_ResultStepInclusion rdf:type owl:Class .
+
+# Hierarchy
+:Cl_ResultStepInclusion rdfs:subClassOf owl:Thing .
+
+# Object Properties
+:includesStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:includedInResult a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# The pivot class connects Result and ExperimentStep
+:hasResultStepInclusion a owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultStepInclusion .
+
+:hasStepInclusionForStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for Result-ExperimentStep inclusion
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Main classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object properties for reification
+:hasResultExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:includedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:includedInResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Additional object property for direct query (optional, for convenience)
+:includesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: A ResultExperimentStepInclusion must link a Result and an ExperimentStep
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :includedExperimentStep ;
+    owl:someValuesFrom :Cl_ExperimentStep
+] , [
+    rdf:type owl:Restriction ;
+    owl:onProperty :includedInResult ;
+    owl:someValuesFrom :Cl_Result
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:inclusion_of_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Optional: inverse property for clarity
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepRelation rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed, can be expanded in later stages)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object Properties
+:hasResultExperimentStepRelation rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepRelation .
+
+:relatesToExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepRelation ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Direct property for simple query (if needed)
+:includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification:
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Main classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if any)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optional: inverse properties
+:has_included_experiment_step rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_inclusion_experimentStep ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: A Cl_ResultExperimentStepInclusion must relate a result and an experiment step
+:Cl_ResultExperimentStepInclusion
+    owl:equivalentClass [
+        rdf:type owl:Class ;
+        owl:intersectionOf (
+            [ rdf:type owl:Restriction ;
+              owl:onProperty :result_inclusion_result ;
+              owl:someValuesFrom :Cl_Result ]
+            [ rdf:type owl:Restriction ;
+              owl:onProperty :result_inclusion_experimentStep ;
+              owl:someValuesFrom :Cl_ExperimentStep ]
+        )
+    ] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# To connect a result to its included experiment steps via the pivot class
+:has_result_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:has_experiment_step_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for Result-ExperimentStep inclusion
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Core classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if any)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties
+:result_includes_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_inclusion_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# (Optional) Inverse properties
+:included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step_inclusion ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:included_experiment_step_in_inclusion rdf:type owl:ObjectProperty ;
+    owl:inverseOf :experiment_step_inclusion_includes_experiment_step ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification:
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+### Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+### Hierarchies
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:resultIncludesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:includedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:inclusionForResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+### Restrictions
+:Cl_ResultExperimentStepInclusion owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:intersectionOf (
+        [ rdf:type owl:Restriction ; owl:onProperty :includedExperimentStep ; owl:someValuesFrom :Cl_ExperimentStep ]
+        [ rdf:type owl:Restriction ; owl:onProperty :inclusionForResult ; owl:someValuesFrom :Cl_Result ]
+    )
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Link from Cl_Result to Cl_ResultExperimentStepInclusion
+:has_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# Link from Cl_ExperimentStep to Cl_ResultExperimentStepInclusion
+:is_included_in_result_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_inclusion_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Direct object property for convenience (not reified, but for simple queries)
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: All experiment steps included in a result must be via Cl_ResultExperimentStepInclusion
+:Cl_Result owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:onProperty :result_includes_experiment_step_inclusion ;
+    owl:allValuesFrom :Cl_ResultExperimentStepInclusion
+] .
+
+:Cl_ResultExperimentStepInclusion owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:onProperty :experiment_step_inclusion_includes_experiment_step ;
+    owl:allValuesFrom :Cl_ExperimentStep
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+### Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+### Object Properties
+:includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    owl:inverseOf :includes_experiment_step .
+
+:has_result_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:result_of_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    owl:inverseOf :has_result_experiment_step_inclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# General object property for inclusion (optional, for direct navigation)
+:includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: If a Cl_Result includes an experiment step, it does so via Cl_ResultExperimentStepInclusion
+:Cl_Result owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:onProperty :includes_experiment_step ;
+    owl:allValuesFrom :Cl_ExperimentStep
+] .
+
+# Link the reification to the direct property
+:includes_experiment_step owl:propertyChainAxiom ( :result_inclusion_result :result_inclusion_experimentStep ) .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+### Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+### Hierarchy (if any)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:inclusion_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Object Properties
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    owl:inverseOf :result_includes_experiment_step .
+
+:result_has_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_inclusion_of_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    owl:inverseOf :result_has_experiment_step_inclusion .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if any, none yet)
+
+# Object Properties
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_Result ;
+    owl:inverseOf :result_includes_experiment_step .
+
+# Reification properties (for pivot class)
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification:
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:resultIncludesExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experimentStepIncludedInResultInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:inclusionRelatesToResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:inclusionRelatesToExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+### Restrictions (optional, for clarity)
+:Cl_ResultExperimentStepInclusion owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:intersectionOf (
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :inclusionRelatesToResult ;
+          owl:someValuesFrom :Cl_Result ]
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :inclusionRelatesToExperimentStep ;
+          owl:someValuesFrom :Cl_ExperimentStep ]
+    )
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed, can be expanded in later stages)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties
+:result_includes_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_inclusion_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# (Optional) Inverse properties
+:experiment_step_inclusion_of_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step_inclusion ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:experiment_step_included_in_inclusion rdf:type owl:ObjectProperty ;
+    owl:inverseOf :experiment_step_inclusion_includes_experiment_step ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if any, none yet)
+
+# Object Properties
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_Result ;
+    owl:inverseOf :result_includes_experiment_step .
+
+# Reification (pivot) properties
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:including_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification:
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result Experiment Step Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:resultIncludesExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result includes experiment step inclusion" .
+
+:experimentStepIncludedInResultInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "experiment step included in result inclusion" .
+
+:inclusionHasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    rdfs:label "inclusion has result" ;
+    owl:inverseOf :resultIncludesExperimentStepInclusion .
+
+:inclusionHasExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "inclusion has experiment step" ;
+    owl:inverseOf :experimentStepIncludedInResultInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:resultIncludesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:includedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for experiment step inclusion in a result
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Core classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:inclusion_of_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Restrictions (optional, for clarity)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :included_experiment_step ;
+    owl:someValuesFrom :Cl_ExperimentStep
+] ;
+rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :inclusion_of_result ;
+    owl:someValuesFrom :Cl_Result
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed, can be expanded in later stages)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties for reification
+:resultInclusion_hasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:resultInclusion_hasExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# To allow querying "What experiment steps are included in a result?"
+:result_includes_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Link the pivot class to the direct property for convenience (optional, for reasoning)
+:result_includes_experimentStep owl:propertyChainAxiom ( :resultInclusion_hasResult :resultInclusion_hasExperimentStep ) .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification:
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result Experiment Step Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:resultIncludesExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result includes experiment step inclusion" .
+
+:experimentStepIncludedInResultInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "experiment step included in result inclusion" .
+
+:inclusionRelatesToResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    rdfs:label "inclusion relates to result" .
+
+:inclusionRelatesToExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "inclusion relates to experiment step" .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification:
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result-ExperimentStep Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:resultIncludesExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result includes experiment step inclusion" .
+
+:experimentStepIncludedInResultInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "experiment step included in result inclusion" .
+
+:hasIncludedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "has included experiment step" .
+
+:hasIncludingResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    rdfs:label "has including result" .
+
+### Restrictions (optional, for clarity)
+:Cl_ResultExperimentStepInclusion owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:intersectionOf (
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasIncludedExperimentStep ;
+          owl:someValuesFrom :Cl_ExperimentStep ]
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasIncludingResult ;
+          owl:someValuesFrom :Cl_Result ]
+    )
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for experiment step inclusion in result
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Core classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# The pivot class connects a result and an experiment step
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :result_includes_experiment_step ;
+    owl:someValuesFrom :Cl_Result
+] ;
+rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :included_experiment_step ;
+    owl:someValuesFrom :Cl_ExperimentStep
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification:
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "ResultExperimentStepInclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "ExperimentStep" ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:result_includes_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_inclusion_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+### Optional: Inverse properties
+:included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step_inclusion ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    owl:inverseOf :experiment_step_inclusion_includes_experiment_step ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for Result-ExperimentStep inclusion
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties for reification
+:result_inclusion_result a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_experimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if any)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties
+:result_includes_experimentstep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experimentstep_in_resultinclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# The pivot class connects both Result and ExperimentStep
+:has_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:has_experimentstep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Main classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object properties for reification
+:result_inclusion_hasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_hasExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Link from Result to reification node (optional, for navigation)
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# Link from ExperimentStep to reification node (optional, for navigation)
+:experiment_step_in_result_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed, can be expanded in later stages)
+# (No superclass specified yet for these two)
+
+# Object Properties
+:result_includes_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_inclusion_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# The pivot class connects a result to the experiment steps it includes via reification.@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStep a owl:Class ;
+    rdfs:label "ResultExperimentStep" ;
+    rdfs:subClassOf owl:Thing .
+
+# Main classes
+:Cl_Result a owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep a owl:Class ;
+    rdfs:label "ExperimentStep" ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:hasResult a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStep ;
+    rdfs:range :Cl_Result .
+
+:hasExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStep ;
+    rdfs:range :Cl_ExperimentStep .
+
+# General object property for direct containment (optional, for convenience)
+:includesExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: All experiment steps included in a result are via the reification node
+:Cl_Result owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:equivalentClass [
+        rdf:type owl:Restriction ;
+        owl:onProperty :includesExperimentStep ;
+        owl:allValuesFrom :Cl_ExperimentStep
+    ]
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStep a owl:Class ;
+    rdfs:label "ResultExperimentStep" ;
+    rdfs:subClassOf owl:Thing .
+
+# Main classes
+:Cl_Result a owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep a owl:Class ;
+    rdfs:label "ExperimentStep" ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:hasResult a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStep ;
+    rdfs:range :Cl_Result .
+
+:hasExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStep ;
+    rdfs:range :Cl_ExperimentStep .
+
+# General object property for direct containment (if needed)
+:includesExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: All experiment steps included in a result must be via the reification class
+:Cl_Result owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:equivalentClass [
+        rdf:type owl:Restriction ;
+        owl:onProperty :includesExperimentStep ;
+        owl:allValuesFrom :Cl_ExperimentStep
+    ]
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:resultIncludesExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experimentStepIncludedInResultInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:inclusionRelatesToResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:inclusionRelatesToExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+### Restrictions (optional, for clarity)
+:Cl_ResultExperimentStepInclusion owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:intersectionOf (
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :inclusionRelatesToResult ;
+          owl:someValuesFrom :Cl_Result ]
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :inclusionRelatesToExperimentStep ;
+          owl:someValuesFrom :Cl_ExperimentStep ]
+    )
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if any)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .
+
+# Object Properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:inclusion_of_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+### Restrictions (if needed)
+:Cl_ResultExperimentStepInclusion owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:intersectionOf (
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :included_experiment_step ;
+          owl:someValuesFrom :Cl_ExperimentStep ]
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :inclusion_of_result ;
+          owl:someValuesFrom :Cl_Result ]
+    )
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optional: inverse properties
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object Properties
+:hasResultExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:includedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:includedInResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    owl:inverseOf :hasResultExperimentStepInclusion .
+
+# Restrictions (optional, for clarity)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :includedExperimentStep ;
+    owl:someValuesFrom :Cl_ExperimentStep
+] ;
+rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :includedInResult ;
+    owl:someValuesFrom :Cl_Result
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optionally, inverse properties
+:has_included_experimentStep rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_inclusion_experimentStep ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+:included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_inclusion_result ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Inverse properties
+:included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:experiment_step_included_in rdf:type owl:ObjectProperty ;
+    owl:inverseOf :included_experiment_step ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:resultIncludedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experimentStepIncludedInResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# The pivot class links both Result and ExperimentStep
+:hasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:hasExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_Result rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:resultIncludedIn rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experimentStepIncluded rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# The pivot class connects both Result and ExperimentStep
+:hasIncludedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:hasIncludingResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optionally, inverse properties
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# Inverse properties
+:included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    owl:inverseOf :included_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optional: Inverse properties
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optional: Inverse properties
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optionally, inverse properties
+:experiment_step_included_in_result rdf:type owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Disjointness
+:Cl_Result owl:disjointWith :Cl_ExperimentStep .
+:Cl_ResultExperimentStepInclusion owl:disjointWith :Cl_Result .
+:Cl_ResultExperimentStepInclusion owl:disjointWith :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# For completeness, allow navigation from Result to the inclusion
+:has_experimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+# And from ExperimentStep to the inclusion
+:included_in_resultInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result a owl:Class .
+:Cl_ExperimentStep a owl:Class .
+
+:Cl_ResultExperimentStepInclusion a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experiment_step a owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Optional: Inverse properties
+:experiment_step_included_in_result a owl:ObjectProperty ;
+    owl:inverseOf :result_includes_experiment_step ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStep a owl:Class ;
+    rdfs:label "ResultExperimentStep" ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result a owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep a owl:Class ;
+    rdfs:label "ExperimentStep" ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:hasResultExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStep .
+
+:hasExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStep ;
+    rdfs:range :Cl_ExperimentStep .
+
+:includedInResult a owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_Result ;
+    owl:inverseOf :hasResultExperimentStep .
+
+### Restrictions
+:Cl_ResultExperimentStep owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:intersectionOf (
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :hasExperimentStep ;
+          owl:someValuesFrom :Cl_ExperimentStep
+        ]
+        [ rdf:type owl:Restriction ;
+          owl:onProperty :includedInResult ;
+          owl:someValuesFrom :Cl_Result
+        ]
+    )
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:result_inclusion_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Object Properties
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Object Properties
+:hasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+:hasExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Object Properties
+:includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:included_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ExperimentEntity rdf:type owl:Class .
+:Cl_Result rdfs:subClassOf :Cl_ExperimentEntity .
+:Cl_ExperimentStep rdfs:subClassOf :Cl_ExperimentEntity .
+
+# Object Properties
+:resultIncludesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+:hasResultExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:includedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+:inclusionOfResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result .
+
+# Inverse properties
+:includedInResult rdf:type owl:ObjectProperty ;
+    owl:inverseOf :resultIncludesExperimentStep ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_Result .
+
+# Restrictions (soft, for clarity)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :includedExperimentStep ;
+    owl:someValuesFrom :Cl_ExperimentStep
+] ;
+rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :inclusionOfResult ;
+    owl:someValuesFrom :Cl_Result
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class .
+
+# Classes
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+# Object Properties
+:result_includes_experiment_step_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:experiment_step_inclusion_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Hierarchy (if needed for future expansion)
+:Cl_ResultExperimentStepInclusion rdfs:subClassOf owl:Thing .
+:Cl_Result rdfs:subClassOf owl:Thing .
+:Cl_ExperimentStep rdfs:subClassOf owl:Thing .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result Experiment Step Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+### Classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+### Object Properties
+:resultIncludesExperimentStepInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result includes experiment step inclusion" .
+
+:experimentStepIncludedInResultInclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "experiment step included in result inclusion" .
+
+:inclusionHasResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    rdfs:label "inclusion has result" .
+
+:inclusionHasExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "inclusion has experiment step" .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result Experiment Step Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+# Main classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:resultIncludedInExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    rdfs:label "result included in experiment step inclusion" .
+
+:experimentStepIncludedInResult rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "experiment step included in result" .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification: Cl_ResultExperimentStepInclusion
+
+:Cl_Result rdf:type owl:Class .
+:Cl_ExperimentStep rdf:type owl:Class .
+
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:resultIncludesExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion .
+
+:includedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Additional object property for direct query (optional, for convenience)
+:hasIncludedExperimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep .
+
+# Restriction: All experiment steps included in a result must be via Cl_ResultExperimentStepInclusion
+:Cl_Result owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:onProperty :resultIncludesExperimentStep ;
+    owl:allValuesFrom :Cl_ResultExperimentStepInclusion
+] .
+
+:Cl_ResultExperimentStepInclusion owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:onProperty :includedExperimentStep ;
+    owl:allValuesFrom :Cl_ExperimentStep
+] .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result Experiment Step Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+# Main classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_inclusion_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result_inclusion_result" .
+
+:result_inclusion_experimentStep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result_inclusion_experimentStep" .
+
+# Object property for direct inclusion (for simple queries)
+:includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "includes experiment step" .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result-ExperimentStep Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+### Main classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+### Object properties for reification
+:result_includes_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result includes experiment step (pivot)" .
+
+:included_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "included experiment step (pivot)" .
+
+:inclusion_in_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    rdfs:label "inclusion in result" .
+
+:inclusion_of_experiment_step rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "inclusion of experiment step" .@prefix : <http://www.example.org/test#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Pivot class for reification
+:Cl_ResultExperimentStepInclusion rdf:type owl:Class ;
+    rdfs:label "Result-ExperimentStep Inclusion" ;
+    rdfs:subClassOf owl:Thing .
+
+# Main classes
+:Cl_Result rdf:type owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:subClassOf owl:Thing .
+
+:Cl_ExperimentStep rdf:type owl:Class ;
+    rdfs:label "Experiment Step" ;
+    rdfs:subClassOf owl:Thing .
+
+# Object properties for reification
+:result_includes_experimentstep_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_Result ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "result includes experiment step inclusion" .
+
+:experimentstep_included_in_result_inclusion rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ExperimentStep ;
+    rdfs:range :Cl_ResultExperimentStepInclusion ;
+    rdfs:label "experiment step included in result inclusion" .
+
+:inclusion_has_experimentstep rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_ExperimentStep ;
+    rdfs:label "inclusion has experiment step" .
+
+:inclusion_has_result rdf:type owl:ObjectProperty ;
+    rdfs:domain :Cl_ResultExperimentStepInclusion ;
+    rdfs:range :Cl_Result ;
+    rdfs:label "inclusion has result" .
