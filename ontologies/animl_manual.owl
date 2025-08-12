@@ -36,25 +36,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-    
-
-
     <!-- this is a re-implementation of the common 'hasPart' relationship, which denotes that the range is a component of the domain -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasPart">
@@ -112,7 +93,7 @@
 
 
 
-    <!-- https://w3id.org/animl/affects -->
+    <!-- this relationship indicates the object, conceptually the area of the animl document describing that object, that a change has been made to -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/affects">
         <rdfs:domain rdf:resource="https://w3id.org/animl/change"/>
@@ -121,7 +102,15 @@
     
 
 
-    <!-- https://w3id.org/animl/denotedBy -->
+    <!-- this relationship shows that an animl document contains all the information regarding (e.i denotes) a particular experiment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/denotes">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/document"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/experiment"/>
+    </owl:ObjectProperty>
+
+
+    <!--  -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/denotedBy">
         <rdfs:domain rdf:resource="https://w3id.org/animl/experiment"/>
@@ -130,16 +119,11 @@
     
 
 
-    <!-- https://w3id.org/animl/denotes -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/denotes">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/document"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/experiment"/>
-    </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/animl/directlyPreeceds -->
+    <!-- this is a re-implementation of the common 'directlyPreecedes' relationship, which denotes that one object of a class is directly before another in
+    a sequence or other ordered structure -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/directlyPreeceds">
         <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -158,7 +142,8 @@
     
 
 
-    <!-- https://w3id.org/animl/directlyfollows -->
+        <!-- this is a re-implementation of the common 'directlyFollows' relationship, which denotes that one object of a class is directly after another in
+    a sequence or other ordered structure -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/directlyfollows">
         <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -177,7 +162,8 @@
     
 
 
-    <!-- https://w3id.org/animl/hasAgent -->
+    <!-- this property denotes that an object of a class has an agent associated with it, this generalises asociations to several classes
+    of objects that are now generalised as agents -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasAgent">
         <rdfs:domain rdf:resource="https://w3id.org/animl/method"/>
@@ -186,7 +172,7 @@
     </owl:ObjectProperty>
     
 
-    <!-- https://w3id.org/animl/hasMember -->
+    <!-- this is a re-implementation of the common 'hasMember' relationship, which denotes the relation of a class acting as a set or sequence to one of its members  -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasMember">
         <rdfs:domain rdf:resource="http://w3id.org/animl/units"/>
@@ -203,153 +189,10 @@
         <rdfs:range rdf:resource="https://w3id.org/animl/indivdualDataPoint"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/series"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- https://w3id.org/animl/hasMethodCategory -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasStep">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/method"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasParameter -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasParameter">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/category"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/parameter"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasPart -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasPart">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/template"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasResultCategory -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasResultCategory">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/result"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasSampleCategory -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasSampleCategory">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasSampleSet -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasSampleSet">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/document"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/sampleSet"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasStep -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasStep">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/experiment"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/experimentStep"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasSubCategory -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasSubCategory">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/category"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasTags -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasTags">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/tagSet"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasType">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/container"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/agent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/change"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/containerType"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/agentType"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/changeType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/hasVersion -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasVersion">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/versionHistory"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/versionHistory"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/includes -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/isContained">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/infrastructure"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/result"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/specification"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/result"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/includesInfrastructure -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/includesInfrastructure">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/infrastructure"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/isContained -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/isContained">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/sampleInContainer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/isContainedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/isContainedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/sampleInContainer"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/container"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/animl/isMemberOf -->
+      <!-- this is the inverse of the above relation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/isMemberOf">
         <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
@@ -368,43 +211,163 @@
     
 
 
-    <!-- https://w3id.org/animl/makesChange -->
+    <!-- this denotes the relationship of an experiment to its experiment steps -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/usesMethod">
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasStep">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/experiment"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/experimentStep"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this denotes that a category includes a parameter -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasParameter">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/category"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/parameter"/>
+    </owl:ObjectProperty>
+
+
+    <!-- this denotes the relationship between a result and a category -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasResultCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/result"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this denotes the relationship between a sample and a category -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasSampleCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this denotes the inclusion of a set of samples in a document, they are attached to the doucment as samples exist outside of the  -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasSampleSet">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/document"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/sampleSet"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- this denotes the relationship of a category object with another of the same class,
+     where the information of one category may be a component of another broader one -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasSubCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/category"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this denotes the property of have tags attached to you, as well as specifying the set of tags for which this is true -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasTags">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
+        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/tagSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this is distinct from the concept of data type
+    
+    where a classes equivalent in the animl xml was bound by an attribute to one of a set of enumerated types,
+    we have reified that attribute and created type classes whose individuals are the possible settings of type for the relevant class.
+    
+    this relationship is the relation between a class and its type class -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasType">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/container"/>
+        <rdfs:domain rdf:resource="https://w3id.org/animl/agent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/animl/change"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/containerType"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/agentType"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/changeType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this is the property linking a document to its version history -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasVersion">
         <rdfs:domain rdf:resource="https://w3id.org/animl/versionHistory"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/versionHistory"/>
+    </owl:ObjectProperty>
+    
+    <!-- this property is designed to link an experiment step to is associated infrastructure -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/includesInfrastructure">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/infrastructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this property does not make complete sense at a human level
+    it ties a sample into the sampleincontainer situation since a sample in that situation has the property of being contained
+     -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/isContained">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/sampleInContainer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- this is not the inverse of the above property, it links a sampleIncontainer situation to a container as the object
+    doing the containing within the situation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/isContainedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/sampleInContainer"/>
+        <rdfs:range rdf:resource="https://w3id.org/animl/container"/>
+    </owl:ObjectProperty>
+
+    <!-- this relation indicates that it is at a particular version that a change is made -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/makesChange">
+        <rdfs:domain rdf:resource="https://w3id.org/animl/version"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/change"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/animl/producesResult -->
+    <!-- this relation is to link an experimentStep to its results, and also to indicate that said results are created in the step -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/producesResult">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
+        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/result"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/animl/references -->
+    <!-- this relation links a signature to the signableitem, conceptually an area of the animl file (or one of the files it represents),
+    it is attached it. it also indicates that the given signable item is watermarked by the signature-->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/references">
+    <owl:ObjectProperty rdf:about="https://w3id.org/animl/marks">
         <rdfs:domain rdf:resource="https://w3id.org/animl/signature"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/signableItem"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/animl/usesMethod -->
+    <!-- this denotes the inclusion of a method in an experiment step, and also indicates that a method is something that is utilised
+    in an exmperiment step rather than being part of it -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/usesMethod">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
+        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
         <rdfs:range rdf:resource="https://w3id.org/animl/method"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/animl/usesTechnique -->
+    <!-- this denotes the inclusion of a technique in an experiment step, and also indicates that a technique is something that is utilised
+    in an exmperiment step rather than being part of it -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/usesTechnique">
         <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
@@ -421,16 +384,9 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- http://w3id.org/animl/version -->
-
-    <owl:DatatypeProperty rdf:about="http://w3id.org/animl/versionHistory">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
 
 
-    <!-- https://w3id.org/animl/Scope -->
+    <!-- this is used to indicate effects an attribute, or an entire element -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/scope">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -440,7 +396,7 @@
     
 
 
-    <!-- https://w3id.org/animl/animlVersion -->
+    <!-- this is used to indicate which version of the animl markup language was used to create the document -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/animlVersion">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -450,7 +406,7 @@
     
 
 
-    <!-- https://w3id.org/animl/barcode -->
+    <!-- this is used to store the characters underlying the barcode for a sample -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/barcode">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -459,9 +415,9 @@
     </owl:DatatypeProperty>
     
 
+ <!-- this exists to enable human readable comments to be attached to all objects in the ontology -->
 
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/animl/role">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/animl/comment">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -469,7 +425,7 @@
     
 
 
-    <!-- https://w3id.org/animl/containerId -->
+    <!-- this expresses the Id which a container is given to allow it be found in a group of containers -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/containerId">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -479,7 +435,7 @@
     
 
 
-    <!-- https://w3id.org/animl/containerRow -->
+    <!-- this represents the row position of a sample in a container, within the reified sampleInContainer situation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/containerRow">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -489,7 +445,7 @@
     
 
 
-    <!-- https://w3id.org/animl/containmentColumn -->
+    <!-- this represents the column position of a sample in a container, within the reified sampleInContainer situation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/containmentColumn">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -499,7 +455,7 @@
     
 
 
-    <!-- https://w3id.org/animl/email -->
+    <!-- this represents the email address of an agent -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/email">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -509,7 +465,7 @@
     
 
 
-    <!-- https://w3id.org/animl/encodedValue -->
+    <!-- this property represents the actual data corresponding to a datapoint object of the encoded sub class -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/encodedValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -519,7 +475,7 @@
     
 
 
-    <!-- https://w3id.org/animl/identifier -->
+    <!-- this is any machine readable code not assigned within the system, for example if an agent has an employee number -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/identifier">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -527,15 +483,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
-
-
-    <!-- https://w3id.org/animl/includes -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/animlisContained"/>
-    
-
-
-    <!-- https://w3id.org/animl/location -->
+    <!-- this represents a human readable physical location (typically an address, site number, or building space ref) for an agent -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/location">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -545,11 +493,13 @@
     
 
 
-    <!-- https://w3id.org/animl/name -->
+    <!-- this is a generalisation of name,model, etc meaning the human understood identifier for something  -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/agent"/>
+        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
+        <rdfs:domain rdf:resource="http://w3id.org/animl/ItemSpecification"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/tag"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/template"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -557,7 +507,7 @@
     
 
 
-    <!-- https://w3id.org/animl/newValue -->
+    <!-- this represents as a string literal the post change state of an item changed in a change -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/newValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -567,7 +517,7 @@
     
 
 
-    <!-- https://w3id.org/animl/oldValue -->
+    <!-- this represents as a string literal the per change state of an item changed in a change -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/oldValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -577,7 +527,8 @@
     
 
 
-    <!-- https://w3id.org/animl/operatingSystem -->
+    <!-- this is an optional property recording the operating system of an agent, where an agent is human, or
+    a piece of mechanical hardware this value will be none. -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/operatingSystem">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -587,7 +538,8 @@
     
 
 
-    <!-- https://w3id.org/animl/organisation -->
+    <!-- this denotes the organisation to which an agent belongs, this can be the employer of a human agent
+    , or the owner of a non human agent. -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/organisation">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -597,7 +549,7 @@
     
 
 
-    <!-- https://w3id.org/animl/phone -->
+    <!-- this is an optional property denoting the phone number of an agent, where the agent is not human this will be none -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/phone">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -607,7 +559,7 @@
     
 
 
-    <!-- https://w3id.org/animl/pointValue -->
+    <!-- this property represents the actual data corresponding to a datapoint object of the individual sub class -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/pointValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -618,7 +570,7 @@
     
 
 
-    <!-- https://w3id.org/animl/quantity -->
+    <!-- this is a natural language description of the type of objects, or of measurements, that a set of units may be applied to -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/quantity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -628,7 +580,7 @@
     
 
 
-    <!-- https://w3id.org/animl/reason -->
+    <!-- this is a natural language description justifying a change  -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/reason">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -638,7 +590,7 @@
     
 
 
-    <!-- https://w3id.org/animl/role -->
+    <!-- this is a natural langguage description of the position or purpose of an agent within their organisation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/role">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -646,36 +598,18 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
-
-
-
-
-    
-
-
-    <!-- https://w3id.org/animl/sourceDataLocation -->
+    <!-- this is an optional parameter which points outside of the file to the location of storage for the raw data that was later
+    translated into a sample or experimentStep -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/sourceDataLocation">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
+        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/template"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
-
-
-    <!-- https://w3id.org/animl/stepNumber -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/animl/autoIncrementedDataPoint">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/animl/timeStamp -->
+    <!-- this is a dataTime indicating the exact point in time at which an object was created -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/timeStamp">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -686,7 +620,7 @@
     
 
 
-    <!-- https://w3id.org/animl/value -->
+    <!-- this is an untyped string serving as a container for any data that may need to be included in a tag -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/value">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
@@ -696,9 +630,9 @@
     
 
 
-    <!-- https://w3id.org/animl/version -->
+    <!-- this is an optional parameter representing the version of an agent, if an agent is human this will be None -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/animl/versionHistory">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/animl/version">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/animl/agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -706,7 +640,8 @@
     
 
 
-    <!-- https://w3id.org/animl/visability -->
+    <!-- this is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be 
+    used to display animl data -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/visability">
         <rdfs:domain rdf:resource="https://w3id.org/animl/series"/>
@@ -723,117 +658,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- http://w3id.org/animl/datapoint -->
+    <!-- this is a container for a single piece of data -->
 
     <owl:Class rdf:about="http://w3id.org/animl/datapoint"/>
 
-    <!-- http://w3id.org/animl/reference -->
-
-<owl:Class rdf:about="http://w3id.org/animl/reference">
-    <rdfs:subClassOf>
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="http://w3id.org/animl/hasFunction"/>
-            <owl:allValuesFrom rdf:resource="http://w3id.org/animl/function"/>
-        </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="http://w3id.org/animl/hasPart"/>
-            <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
-        </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="http://w3id.org/animl/hasRole"/>
-            <owl:allValuesFrom rdf:resource="http://w3id.org/animl/role"/>
-        </owl:Restriction>
-    </rdfs:subClassOf>
-
-    <!-- Combined allValuesFrom restriction using owl:unionOf -->
-    <rdfs:subClassOf>
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="http://w3id.org/animl/pointsTo"/>
-            <owl:allValuesFrom>
-                <owl:Class>
-                    <owl:unionOf rdf:parseType="Collection">
-                        <rdf:Description rdf:about="http://w3id.org/animl/datapoint"/>
-                        <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
-                        <rdf:Description rdf:about="https://w3id.org/animl/sample"/>
-                    </owl:unionOf>
-                </owl:Class>
-            </owl:allValuesFrom>
-        </owl:Restriction>
-    </rdfs:subClassOf>
-
-    <!-- Max cardinality restriction -->
-    <rdfs:subClassOf>
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="http://w3id.org/animl/pointsTo"/>
-            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-        </owl:Restriction>
-    </rdfs:subClassOf>
-
-    <rdfs:subClassOf>
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="https://w3id.org/animl/isMemberOf"/>
-            <owl:allValuesFrom rdf:resource="https://w3id.org/animl/referenceSet"/>
-        </owl:Restriction>
-    </rdfs:subClassOf>
-</owl:Class>
-    
-
-    
-
-
-
-    
-
-
-    
-
-
-
-    
-
-
-    <!-- http://w3id.org/animl/specification -->
-
-    <owl:Class rdf:about="http://w3id.org/animl/specification"/>
-    
-
-
-    <!-- http://w3id.org/animl/technique -->
-
-   <owl:AllDisjointProperties>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://w3id.org/animl/derives"/>
-            <rdf:Description rdf:about="http://w3id.org/animl/consumes"/>
-        </owl:members>
-    </owl:AllDisjointProperties>
-
-    <owl:Class rdf:about="http://w3id.org/animl/technique">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/animl/definition"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/animl/consumes"/>
-                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/animl/derives"/>
-                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/animl/hasExtension"/>
-                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/extension"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-
-    <!-- https://w3id.org/animl/AutoincrementeddataPoint -->
+    <!-- a subclass of datapoint which contains, instead of a freely assignable value, an integer which is increased by a set
+    value every time it is queried -->
 
     <owl:Class rdf:about="https://w3id.org/animl/autoIncrementedDataPoint">
         <rdfs:subClassOf rdf:resource="http://w3id.org/animl/datapoint"/>
@@ -853,7 +683,9 @@
     
 
 
-    <!-- https://w3id.org/animl/Category -->
+    <!-- a container for all the parameter and seriesSet data structures associated with something
+    since it contains data structures, and thus is a data structure, a category may also contain another
+    category as a sub-category -->
 
     <owl:Class rdf:about="https://w3id.org/animl/category">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -879,14 +711,16 @@
     
 
 
-    <!-- https://w3id.org/animl/ContainerType -->
+    <!-- this is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class,
+    in this case the individuals for this class correspond to the possible types of a container object -->
 
     <owl:Class rdf:about="https://w3id.org/animl/containerType">
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/animl/Parameter -->
+    <!-- a container for a datapoint, despite transitively being a container for a single datapoint, this is not equivalent
+    to a datapoint, as it is independent of an enclosing data structure -->
 
     <owl:Class rdf:about="https://w3id.org/animl/parameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -900,7 +734,9 @@
     
 
 
-    <!-- https://w3id.org/animl/Sample -->
+    <!--a sample is any item which is used, or that data regarding which is used, in an experiment in the document,
+    they are often the subject of referencing to indicate that they are used in an experimentstep, however their
+    set is attached to the document itself since they exist outside the context of the experiments described -->
 
     <owl:Class rdf:about="https://w3id.org/animl/sample">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -927,7 +763,9 @@
     
 
 
-    <!-- https://w3id.org/animl/SeriesSet -->
+    <!-- this is an ordered set of series data structures, series generally appear in sets
+    when it is necessary to express multiple dimensions of data captured over the same interval
+    or otherwise in the same context window -->
 
     <owl:Class rdf:about="https://w3id.org/animl/seriesSet">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -947,7 +785,7 @@
     
 
 
-    <!-- https://w3id.org/animl/TagSet -->
+    <!-- this is the set of tags which exist in the document -->
 
     <owl:Class rdf:about="https://w3id.org/animl/tagSet">
         <rdfs:subClassOf>
@@ -960,7 +798,7 @@
     
 
 
-    <!-- https://w3id.org/animl/agent -->
+    <!-- an agent is a generalisation of several classes, author, software, device etc and may denote any external intentional object that acts on the system -->
 
     <owl:Class rdf:about="https://w3id.org/animl/agent">
         <rdfs:subClassOf>
@@ -973,14 +811,16 @@
     
 
 
-    <!-- https://w3id.org/animl/agentType -->
+    <!-- this is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class,
+    in this case the individuals for this class correspond to the possible types of intentional objects that could interact with the system -->
 
     <owl:Class rdf:about="https://w3id.org/animl/agentType">
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/animl/change -->
+    <!-- this denotes the conceptual object of a change to the document, and is used to link to information regarding the context of a change
+    as well as the state of the system before and after it -->
 
     <owl:Class rdf:about="https://w3id.org/animl/change">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1000,7 +840,9 @@
     
 
 
-    <!-- https://w3id.org/animl/changeType -->
+    <!-- this is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class,
+    in this case the individuals for this class correspond to the possible types of actions that could have been perfromed on
+    an area of the document to consistute a change -->
 
     <owl:Class rdf:about="https://w3id.org/animl/changeType">
     </owl:Class>
@@ -1016,7 +858,9 @@
     </owl:Class>
 
 
-    <!-- https://w3id.org/animl/container -->
+    <!-- this is a subclass / special case of sample which is used to denote a sample which contains other samples,
+    it is pointed to by the sampleincontinare situation to indicate the containing sample without allowing samples
+    to directly contain themselves or force them to have a containerid when they may not always have one -->
 
     <owl:Class rdf:about="https://w3id.org/animl/container">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/sampleInContainer"/>
@@ -1030,7 +874,7 @@
     
 
 
-    <!-- https://w3id.org/animl/document -->
+    <!-- this is the root node of the document, and links into its major componentw -->
 
     <owl:Class rdf:about="https://w3id.org/animl/document">
         <rdfs:subClassOf>
@@ -1049,7 +893,7 @@
     
 
 
-    <!-- https://w3id.org/animl/encodedDataPoint -->
+    <!--  a subclass of datapoint which contains, a freely assignable value, converted into base 64 binary --> 
 
     <owl:Class rdf:about="https://w3id.org/animl/encodedDataPoint">
         <rdfs:subClassOf rdf:resource="http://w3id.org/animl/datapoint"/>
@@ -1069,7 +913,8 @@
     
 
 
-    <!-- https://w3id.org/animl/experiment -->
+    <!-- this is a conceptual representation of an experiment in which operations occur, and a container
+    for the ordered set of experiment steps -->
 
     <owl:Class rdf:about="https://w3id.org/animl/experiment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1089,7 +934,9 @@
     
 
 
-    <!-- https://w3id.org/animl/experimentStep -->
+    <!-- this is the root for the largest subsections of the document, it is a representation
+    of a single action undertaken during an experiment, and consists of several components, external
+    supporting factors, and outputs -->
 
     <owl:Class rdf:about="https://w3id.org/animl/individualDataPoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1151,7 +998,7 @@
     
 
 
-    <!-- https://w3id.org/animl/indivdualDataPoint -->
+    <!--  a subclass of datapoint which contains a freely assignable value. -->
 
     <owl:Class rdf:about="https://w3id.org/animl/indivdualDataPoint">
         <rdfs:subClassOf rdf:resource="http://w3id.org/animl/datapoint"/>
@@ -1177,7 +1024,14 @@
     
 
 
-    <!-- https://w3id.org/animl/infrastructure -->
+    <!-- this is a container for all the data needed to begin / which consitute, an experiment,
+    this is expected to include a set of sample and can also include previous results, or any component
+    of a previous experiment.
+    
+    this is deliberately vague so that whatever information is deemed relevant may be include,
+    
+    for example you may or may not wish to store the fact that a piece of machinary has finished 
+    moving an is free to be acquired. -->
 
     <owl:Class rdf:about="https://w3id.org/animl/infrastructure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1191,7 +1045,11 @@
     
 
 
-    <!-- https://w3id.org/animl/method -->
+    <!-- this broadly denotes the procedure employed to carry out the experiment, and typically
+    consists of a set of parameters describing the steps involved.
+    
+    however since this component contains a category (a largely unrestricted data container)
+    it may take a variety of forms -->
 
     <owl:Class rdf:about="https://w3id.org/animl/method">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1209,7 +1067,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/animl/hasStep"/>
+                <owl:onProperty rdf:resource="https://w3id.org/animl/hasMethodCategory"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/animl/category"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1219,7 +1077,12 @@
     
 
 
-    <!-- https://w3id.org/animl/result -->
+    <!-- this is a container for any subset of data that is output from an experimentstep,
+    though conventionally the salient 'results'
+    
+    as with the other direct components of experimentstep its sturcutre allows for 
+    freely assigned data to be introduced though sub elements, allowing this to take a
+    variety of forms -->
 
     <owl:Class rdf:about="https://w3id.org/animl/result">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1245,7 +1108,7 @@
     
 
 
-    <!-- https://w3id.org/animl/sampleSet -->
+    <!-- this is a container for the set of samples used in the experiment -->
 
     <owl:Class rdf:about="https://w3id.org/animl/sampleSet">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1259,7 +1122,8 @@
     
 
 
-    <!-- https://w3id.org/animl/series -->
+    <!-- a series is a data sturcture containing ordered data points, a series may contain data points of any of the 
+    three data point subclasses, but the subclass of all the datapoints in a series must be the same -->
 
     <owl:Class rdf:about="https://w3id.org/animl/series">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
@@ -1297,7 +1161,8 @@
     
 
 
-    <!-- https://w3id.org/animl/signableItem -->
+    <!-- this is the superclass for many of the most common classes in the document, largely the components of an experiment step
+    it exists purely to indicate that all its subclasses can be marked by a signature -->
 
     <owl:Class rdf:about="https://w3id.org/animl/signableItem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -1305,7 +1170,7 @@
     
 
 
-    <!-- https://w3id.org/animl/signature -->
+    <!-- this is a member of a set of signatures which, when linked to a signable item, causes it to be watermarked -->
 
     <owl:Class rdf:about="https://w3id.org/animl/signature">
         <rdfs:subClassOf>
@@ -1316,54 +1181,48 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/animl/references"/>
+                <owl:onProperty rdf:resource="https://w3id.org/animl/marks"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/animl/signableItem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
 
-
-    <!-- https://w3id.org/animl/signatureSet -->
+    <!-- this is a container for the set of signatures present in the document -->
 
     <owl:Class rdf:about="https://w3id.org/animl/signatureSet">
     </owl:Class>
-    
 
-
-    <!-- https://w3id.org/animl/tag -->
+    <!-- this is a loosely governed container which can be attached to an experiment step or sample to provide
+    additional data about them, where said data is not otherwise expressable -->
 
     <owl:Class rdf:about="https://w3id.org/animl/tag">
     </owl:Class>
     
-
-
-
-    
-
-
-    <!-- https://w3id.org/animl/template -->
+    <!-- this is a subclass of experimentstep used in place of its superclass when the author wishes to denote
+    that the experiment is an example of / specification for a type of experimentstep -->
 
     <owl:Class rdf:about="https://w3id.org/animl/template">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/individualDataPoint"/>
     </owl:Class>
     
+    <!-- this is a specific version, representing the state of the document at a particular moment in time,
+    it links to an unordered collection of changes (denoting the difference between this and the previous version)
+    , as well as indicating its own relative position by pointing to the previous and next version.
+    
+    it also has metadata attributes and links to the agents responsible for it -->
 
-
-    <!-- https://w3id.org/animl/version -->
-
-    <owl:Class rdf:about="https://w3id.org/animl/versionHistory">
+    <owl:Class rdf:about="https://w3id.org/animl/version">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/animl/directlyPreeceds"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/versionHistory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/version"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/animl/directlyFollows"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/versionHistory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/version"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1374,7 +1233,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/animl/usesMethod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/animl/makesChange"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/animl/change"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1382,21 +1241,21 @@
     
 
 
-    <!-- https://w3id.org/animl/versionHistory -->
+    <!-- this is the set of versions of a document ,as well as the structure allowing navigation between them -->
 
     <owl:Class rdf:about="https://w3id.org/animl/versionHistory">
         <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/animl/hasVersion"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/versionHistory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/animl/version"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
+    <!-- the fundamental root element for all ontologies -->
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
     </rdf:Description>
@@ -1411,31 +1270,26 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- http://w3id.org/animl/determinate -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/determinate">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
     </owl:NamedIndividual>
     
-    <!-- http://w3id.org/animl/indeterminate -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/indeterminate">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
     </owl:NamedIndividual>
     
-    <!-- http://w3id.org/animl/rectangular_tray -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/rectangular_Tray">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
     </owl:NamedIndividual>
     
-    <!-- http://w3id.org/animl/simple -->
 
-    <owl:NamedIndividual rdf:about="http://w3id.org/animl/simple">
-        <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
-    </owl:NamedIndividual>
-
-    <!-- http://w3id.org/animl/1536_wells -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/1536_Wells">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
@@ -1443,7 +1297,7 @@
     
 
 
-    <!-- http://w3id.org/animl/24_wells -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/24_Wells">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
@@ -1451,7 +1305,7 @@
     
 
 
-    <!-- http://w3id.org/animl/384_wells -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/384_Wells">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
@@ -1459,7 +1313,7 @@
     
 
 
-    <!-- http://w3id.org/animl/6_wells -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/6_Wells">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
@@ -1467,7 +1321,7 @@
     
 
 
-    <!-- http://w3id.org/animl/96_wells -->
+    <!-- a type of sample containing sample -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/animl/96_Wells">
         <rdf:type rdf:resource="https://w3id.org/animl/ContainerType"/>
@@ -1475,7 +1329,7 @@
     
 
 
-    <!-- https://w3id.org/animl/creation -->
+    <!-- a type of change to a an element of a document -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/animl/creation">
         <rdf:type rdf:resource="https://w3id.org/animl/changeType"/>
@@ -1483,7 +1337,7 @@
     
 
 
-    <!-- https://w3id.org/animl/deletion -->
+    <!-- a type of change to a an element of a document -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/animl/deletion">
         <rdf:type rdf:resource="https://w3id.org/animl/changeType"/>
@@ -1491,7 +1345,7 @@
     
 
 
-    <!-- https://w3id.org/animl/humanCreatorAgent -->
+    <!-- a type of agent, and a subtype of creator agent -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/animl/humanCreatorAgent">
         <rdf:type rdf:resource="https://w3id.org/animl/agentType"/>
@@ -1499,7 +1353,7 @@
     
 
 
-    <!-- https://w3id.org/animl/modification -->
+    <!-- a type of change to a an element of a document -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/animl/modification">
         <rdf:type rdf:resource="https://w3id.org/animl/changeType"/>
@@ -1507,7 +1361,7 @@
     
 
 
-    <!-- https://w3id.org/animl/platformAgent -->
+    <!-- a type of agent -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/animl/platformAgent">
         <rdf:type rdf:resource="https://w3id.org/animl/agentType"/>
@@ -1515,7 +1369,7 @@
     
 
 
-    <!-- https://w3id.org/animl/softwareCreatorAgent -->
+    <!-- a type of agent, and a subtype of creator agent -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/animl/softwareCreatorAgent">
         <rdf:type rdf:resource="https://w3id.org/animl/agentType"/>
@@ -1523,7 +1377,7 @@
     
 
 
-    <!-- https://w3id.org/animl/toolAgent -->
+    <!-- a type of agent -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/animl/toolAgent">
         <rdf:type rdf:resource="https://w3id.org/animl/agentType"/>
@@ -1652,7 +1506,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-         <!-- http://w3id.org/animl/offset -->
+         <!-- a constant value added to the equation resulting from the combination of data with units -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/offset">
             <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -1661,36 +1515,28 @@
     
 
 
-        <!-- http://w3id.org/animl/quantity -->
+        <!-- an english language description of type of objects or measurements to which units may be assigned -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/quantity">
             <rdfs:domain rdf:resource="http://w3id.org/animl/units"/>
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         </owl:DatatypeProperty>
 
-        <!-- http://w3id.org/animl/exponent -->
+        <!-- a raised power, typically used to raise the dimensionality of spacial data -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/exponent">
             <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         </owl:DatatypeProperty>
     
-        <!-- http://w3id.org/animl/factor -->
+        <!-- a coefficient upon a set of units, typically an order of magnitude -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/factor">
             <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         </owl:DatatypeProperty>
 
-        <!-- http://w3id.org/animl/name -->
-
-        <owl:DatatypeProperty rdf:about="http://w3id.org/animl/name">
-            <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
-            <rdfs:domain rdf:resource="http://w3id.org/animl/ItemSpecification"/>
-            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        </owl:DatatypeProperty>
-
-        <!-- http://w3id.org/animl/references -->
+        <!-- a string space for the bibliography related to an object -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/references">
             <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
@@ -1698,28 +1544,28 @@
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         </owl:DatatypeProperty>
 
-        <!-- http://w3id.org/animl/dependency -->
+        <!-- a string space for a software requirement enumeration for an object -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/dependency">
             <rdfs:domain rdf:resource="http://w3id.org/animl/seriesSpecification"/>
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         </owl:DatatypeProperty>
 
-        <!-- http://w3id.org/animl/URI -->
+        <!-- the semantic web identifier for a the superclass of technique and extension, used as a path to import an ATDD to an animl file -->
 
-        <owl:DatatypeProperty rdf:about="http://w3id.org/animl/barcode">
+        <owl:DatatypeProperty rdf:about="http://w3id.org/animl/URI">
             <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         </owl:DatatypeProperty>
 
-        <!-- http://w3id.org/animl/abstract -->
+        <!-- a boolean denoting whether or not a technique or extension will work without being extended -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/abstract">
             <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         </owl:DatatypeProperty>
 
-        <!-- http://w3id.org/animl/token -->
+        <!-- a unique token used to authenticate identity of an ATDD for security purposes -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/token">
             <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
@@ -1735,16 +1581,23 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-         <!-- http://w3id.org/animl/itemSpecification -->  
-        <owl:Class rdf:about="http://w3id.org/animl/itemSpecification">
-            <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
-            <!-- Cardinality constraint: exactly one isPartOf -->
+         <!-- this is the generic superclass for specifications, those objects which represent components of animl-core classes which
+        are governed by the relevant ATDD file,each specification may be a part of exactly one other object -->
+
+        <owl:Class rdf:about="http://w3id.org/animl/specification"/>
             <rdfs:subClassOf>
                 <owl:Restriction>
                     <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
                     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
                 </owl:Restriction>
             </rdfs:subClassOf>
+
+
+         <!-- a simple class which exists only to be a component of those classes whose only governed components are those in specification
+         these classes (A) cannot be directly part of specification, as then it would be possible for classes in A to have part to the more complex
+         and specialised subclasses of specification   -->  
+        <owl:Class rdf:about="http://w3id.org/animl/itemSpecification">
+            <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
 
             <!-- AllValuesFrom constraint over a union of classes -->
 
@@ -1769,7 +1622,8 @@
 
 
 
-        <!-- http://w3id.org/animl/parameterSpecification -->
+        <!-- this is the subclass of specification which applies to parameters, and includes additional attribute restrictions,
+        as well as indicating that the data in a parameter must be linked to a certain set of units -->
 
         <owl:Class rdf:about="http://w3id.org/animl/parameterSpecification">
             <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
@@ -1794,7 +1648,8 @@
         </owl:Class>
 
 
-        <!-- http://w3id.org/animl/seriesSpecifcation -->
+        <!-- this is the subclass of specification which applies to series, and includes additional attribute restrictions,
+        as well as indicating that the data points of a series must all have a common set of units -->
 
         <owl:Class rdf:about="http://w3id.org/animl/seriesSpecifcation">
             <rdfs:subClassOf rdf:resource="http://w3id.org/animl/specification"/>
@@ -1824,7 +1679,13 @@
             </rdfs:subClassOf>
         </owl:Class>
 
-        <!-- http://w3id.org/animl/referenceSpecification -->
+        <!-- this is the specification subclass for a reference, it may have either a consumedby or derived from relation to any 
+        technique (and exactly one of each relation). this is because the technique of an experimentstep governs whether a
+        sample is produced or consumed during it.
+        
+        this could be considered to be a property of a sample specification, except that samples are understood to exist outside
+        of the context of the experiment (especially since some are neither consumed or produced in the experiment) and as such the ATDD
+        can only govern the way in which they are linked into the experiment. -->
 
         <owl:AllDisjointProperties>
             <owl:members rdf:parseType="Collection">
@@ -1868,18 +1729,21 @@
         </owl:Class>
 
 
-        <!-- http://w3id.org/animl/dataType -->
+        <!-- this is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class,
+        in this case the individuals for this class correspond to the possible data types for a datapoint -->
 
         <owl:Class rdf:about="http://w3id.org/animl/dataType"/>
 
 
-        <!-- http://w3id.org/animl/plotScale -->
+        <!-- this is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class,
+        in this case the individuals for this class correspond to the possible kinds of scale a datapoint with units
+        may be on. e.i it determines whether a datapoint is on a linear, logarithmic, or other kind of scale -->
 
         <owl:Class rdf:about="http://w3id.org/animl/plotScale"/>
 
 
 
-        <!-- http://w3id.org/animl/units -->
+        <!-- this is an ordered collection of Siunits which acts to create a compound unit -->
 
         <owl:Class rdf:about="http://w3id.org/animl/units">
             <rdfs:subClassOf>
@@ -1890,7 +1754,9 @@
             </rdfs:subClassOf>
         </owl:Class>
 
-        <!-- http://w3id.org/animl/sIUnit -->
+        <!-- this is unique in the document in that it is both an enumeration class, e.i a class that  reifies the enumeration of a property of another class,
+        and links to members of its own class to indicate its position in an ordered set. this is because it is known that its individuals must correspond to one of the
+        limited set of Siunits, but those units can still be combined in an intractable number of ways, making direct enumeration of options impossible. -->
 
         <owl:Class rdf:about="http://w3id.org/animl/sIUnit">
             <rdfs:subClassOf>
@@ -1914,24 +1780,60 @@
         </owl:Class>
 
 
-        <!-- http://w3id.org/animl/definition -->
+        <!-- this is the superclass of technique and extension, which houses their common attributes and expresses
+        the fact that the two classes are the same apart from extensions extending techniques -->
 
         <owl:Class rdf:about="http://w3id.org/animl/definition">
             <rdfs:subClassOf>
                 <owl:Restriction>
-                    <owl:onProperty rdf:resource="https://w3id.org/animl/isContained"/>
+                    <owl:onProperty rdf:resource="https://w3id.org/animl/includes"/>
                     <owl:allValuesFrom rdf:resource="http://w3id.org/animl/specification"/>
                 </owl:Restriction>
             </rdfs:subClassOf>
         </owl:Class>
 
-        <!-- https://w3id.org/animl/technique -->
+        <!-- this is a container for all the specification objects that exist in the ATDD governance component of a
+        animl KB. conceptually it is 
+        also the broader specification for an experiment step, it is identical to its superclass of definition
+         except in that it can be extended by extensions,
+        and can have derive and consume relations, which express the ability of an ATDD to govern when samples
+        are created or destroyed during experiment steps.
+        
+        as with their inverses, a technique may not have a derive and consume relation to the same reference specification.
+        however unlike a reference specification, it may have multiple derive and consume relations over all.  -->
 
-        <owl:Class rdf:about="https://w3id.org/animl/technique">
-            <rdfs:subClassOf rdf:resource="https://w3id.org/animl/signableItem"/>
+        <owl:AllDisjointProperties>
+            <owl:members rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://w3id.org/animl/derives"/>
+                <rdf:Description rdf:about="http://w3id.org/animl/consumes"/>
+            </owl:members>
+        </owl:AllDisjointProperties>
+
+        <owl:Class rdf:about="http://w3id.org/animl/technique">
+            <rdfs:subClassOf rdf:resource="http://w3id.org/animl/definition"/>
+            <rdfs:subClassOf>
+                <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://w3id.org/animl/consumes"/>
+                    <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+                </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+                <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://w3id.org/animl/derives"/>
+                    <owl:allValuesFrom rdf:resource="http://w3id.org/animl/referenceSpecification"/>
+                </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+                <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://w3id.org/animl/hasExtension"/>
+                    <owl:allValuesFrom rdf:resource="http://w3id.org/animl/extension"/>
+                </owl:Restriction>
+            </rdfs:subClassOf>
         </owl:Class>
 
-        <!-- http://w3id.org/animl/extension -->
+        <!-- this is a subclass of definition which is identical to it, with the exception
+        that it can only be present in an ATDD when extending a technique, and cannot have
+        derives or consumes relations -->
 
         <owl:Class rdf:about="http://w3id.org/animl/extension">
             <rdfs:subClassOf rdf:resource="http://w3id.org/animl/definition"/>
@@ -1952,7 +1854,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-         <!-- http://w3id.org/animl/A -->
+         <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/includes">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -1960,7 +1862,7 @@
         
 
 
-        <!-- http://w3id.org/animl/Boolean -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/boolean">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -1968,7 +1870,7 @@
         
 
 
-        <!-- http://w3id.org/animl/DateTime -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/dateTime">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -1976,7 +1878,7 @@
         
 
 
-        <!-- http://w3id.org/animl/EmbeddedXML -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/embeddedXML">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -1984,7 +1886,7 @@
         
 
 
-        <!-- http://w3id.org/animl/Float32 -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/float32">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -1992,7 +1894,7 @@
         
 
 
-        <!-- http://w3id.org/animl/Int32 -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/int32">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -2000,7 +1902,7 @@
         
 
 
-        <!-- http://w3id.org/animl/Int64 -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/int64">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -2008,7 +1910,7 @@
         
 
 
-        <!-- http://w3id.org/animl/K -->
+        <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/k">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -2016,7 +1918,7 @@
         
 
 
-        <!-- http://w3id.org/animl/PNG -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/pNG">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -2024,7 +1926,7 @@
         
 
 
-        <!-- http://w3id.org/animl/SVG -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/sVG">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -2032,7 +1934,7 @@
         
 
 
-        <!-- http://w3id.org/animl/String -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/string">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
@@ -2040,20 +1942,20 @@
         
 
 
-        <!-- http://w3id.org/animl/cd -->
+        <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/cD">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
         </owl:NamedIndividual>
 
 
-        <!-- http://w3id.org/animl/float64 -->
+        <!-- a data type -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/float64">
             <rdf:type rdf:resource="http://w3id.org/animl/dataType"/>
         </owl:NamedIndividual>
 
-        <!-- http://w3id.org/animl/kg -->
+        <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/kG">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -2061,7 +1963,7 @@
         
 
 
-        <!-- http://w3id.org/animl/linear -->
+        <!-- a type of graphical scale -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/linear">
             <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
@@ -2069,7 +1971,7 @@
         
 
 
-        <!-- http://w3id.org/animl/ln -->
+        <!-- a type of graphical scale -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/ln">
             <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
@@ -2077,7 +1979,7 @@
         
 
 
-        <!-- http://w3id.org/animl/log -->
+        <!-- a type of graphical scale -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/log">
             <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
@@ -2085,7 +1987,7 @@
         
 
 
-        <!-- http://w3id.org/animl/m -->
+        <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/m">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -2093,25 +1995,25 @@
         
 
 
-        <!-- http://w3id.org/animl/mol -->
+        <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/mol">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
         </owl:NamedIndividual>
 
-            <!-- http://w3id.org/animl/none -->
+            <!-- an indication that a data point has no units of measurement -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/none">
             <rdf:type rdf:resource="http://w3id.org/animl/plotScale"/>
         </owl:NamedIndividual>
 
-            <!-- http://w3id.org/animl/s -->
+            <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/s">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
         </owl:NamedIndividual>
 
-            <!-- http://w3id.org/animl/1 -->
+            <!-- a fundamental scientific unit -->
 
         <owl:NamedIndividual rdf:about="http://w3id.org/animl/1">
             <rdf:type rdf:resource="http://w3id.org/animl/sIUnit"/>
@@ -2141,7 +2043,8 @@
      a class which references other classes includes a reference set-->
 
         <!--object properties-->
-            <!-- http://w3id.org/animl/lookingWithin -->
+            <!-- this relation denotes that the referenceset in the domain contains references to data within a data structure
+            of the range class -->
 
             <owl:ObjectProperty rdf:about="http://w3id.org/animl/lookingWithin">
                 <rdfs:domain rdf:resource="https://w3id.org/animl/referenceSet"/>
@@ -2151,7 +2054,7 @@
             </owl:ObjectProperty>
 
 
-            <!-- http://w3id.org/animl/pointsTo -->
+            <!-- this indicates that the domain reference points to something of the range class -->
 
             <owl:ObjectProperty rdf:about="http://w3id.org/animl/pointsTo">
                 <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
@@ -2180,23 +2083,26 @@
 
         <!--data properties-->
 
-            <!-- http://w3id.org/animl/startValue -->
+            <!-- this indicates the first position in an ordered set that a contained item
+            will be pointed to by a reference in the domain reference set  -->
 
             <owl:DatatypeProperty rdf:about="http://w3id.org/animl/startValue">
-                <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+                <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSet"/>
                 <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
             </owl:DatatypeProperty>
 
-            <!-- http://w3id.org/animl/endValue -->
+            <!-- this indicates the last position in an ordered set that a contained item
+            will be pointed to by a reference in the domain reference set -->
 
             <owl:DatatypeProperty rdf:about="http://w3id.org/animl/endValue">
-                <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
+                <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSet"/>
                 <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
             </owl:DatatypeProperty>
 
         <!--objects-->
 
-            <!-- https://w3id.org/animl/referenceSet -->
+            <!-- this is a reference set as discussed in the header for this odp, note that it can only look
+            within one data structure -->
 
             <owl:Class rdf:about="https://w3id.org/animl/referenceSet">
                 <rdfs:subClassOf>
@@ -2230,7 +2136,8 @@
                 </rdfs:subClassOf>
             </owl:Class>
 
-            <!-- http://w3id.org/animl/reference -->
+            <!-- this is a referenec as discussed in the header for this odp, note that it can
+            only point to one piece of data -->
 
             <owl:Class rdf:about="http://w3id.org/animl/reference">
                 <rdfs:subClassOf>
@@ -2267,8 +2174,25 @@
                         </owl:allValuesFrom>
                     </owl:Restriction>
                 </rdfs:subClassOf>
+
+
+                <!-- Max cardinality restriction -->
+                <rdfs:subClassOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/animl/pointsTo"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </rdfs:subClassOf>
+
+                <rdfs:subClassOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/animl/isMemberOf"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/animl/referenceSet"/>
+                    </owl:Restriction>
+                </rdfs:subClassOf>
+            </owl:Class>
             
-            <!-- http://w3id.org/animl/role -->
+            <!-- this is a reified natural language field for the 'role' of data when being referenced  -->
 
             <owl:Class rdf:about="http://w3id.org/animl/role">
                 <rdfs:subClassOf>
@@ -2280,7 +2204,7 @@
             </owl:Class>
 
 
-            <!-- http://w3id.org/animl/function -->
+            <!-- this is a reified natural language field for the 'function' of data when being referenced -->
 
             <owl:Class rdf:about="http://w3id.org/animl/function"/>
 
