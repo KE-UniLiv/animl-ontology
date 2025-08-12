@@ -1,0 +1,450 @@
+@prefix : <http://example.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ExperimentStep a owl:Class .
+:Result a owl:Class .
+:Series a owl:Class .
+:DataPoint a owl:Class .
+:Infrastructure a owl:Class .
+:ParameterBlueprint a owl:Class .
+:Category a owl:Class .
+:Technique a owl:Class .
+:Sample a owl:Class .
+:Container a owl:Class .
+:Signature a owl:Class .
+:SeriesSet a owl:Class .
+:Author a owl:Class .
+:Software a owl:Class .
+:Device a owl:Class .
+:Parameter a owl:Class .
+:Change a owl:Class .
+:Version a owl:Class .
+:Template a owl:Class .
+:Tag a owl:Class .
+:Reference a owl:Class .
+:DiffEntry a owl:Class .
+:SIUnit a owl:Class .
+:SampleRoleBlueprint a owl:Class .
+:Extension a owl:Class .
+:LiteratureReference a owl:Class .
+:Method a owl:Class .
+:Document a owl:Class .
+
+:hasExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Result ;
+    rdfs:range :ExperimentStep .
+
+:hasSeries a owl:ObjectProperty ;
+    rdfs:domain :Result, :ExperimentStep, :SeriesSet ;
+    rdfs:range :Series .
+
+:originatesFromSeries a owl:ObjectProperty ;
+    rdfs:domain :DataPoint ;
+    rdfs:range :Series .
+
+:hasParameterBlueprint a owl:ObjectProperty ;
+    rdfs:domain :Category ;
+    rdfs:range :ParameterBlueprint .
+
+:hasCategory a owl:ObjectProperty ;
+    rdfs:domain :ParameterBlueprint ;
+    rdfs:range :Category .
+
+:containsDataPoint a owl:ObjectProperty ;
+    rdfs:domain :Series ;
+    rdfs:range :DataPoint .
+
+:hasDataType a owl:DatatypeProperty ;
+    rdfs:domain :Series, :Parameter ;
+    rdfs:range xsd:string .
+
+:extendsTechnique a owl:ObjectProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range :Technique .
+
+:producedByStep a owl:ObjectProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range :ExperimentStep .
+
+:consumedByStep a owl:ObjectProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range :ExperimentStep .
+
+:isDerivedFromSample a owl:ObjectProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range :Sample .
+
+:referencedInInfrastructure a owl:ObjectProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range :Infrastructure .
+
+:hasSignature a owl:ObjectProperty ;
+    rdfs:domain :Sample, :Result, :ExperimentStep, :Series, :Document ;
+    rdfs:range :Signature .
+
+:hasFirstValue a owl:DatatypeProperty ;
+    rdfs:domain :Series ;
+    rdfs:range xsd:string .
+
+:performedAction a owl:ObjectProperty ;
+    rdfs:domain :Author ;
+    rdfs:range :Change .
+
+:runOnDevice a owl:ObjectProperty ;
+    rdfs:domain :Software ;
+    rdfs:range :Device .
+
+:isOptionalParameter a owl:DatatypeProperty ;
+    rdfs:domain :Parameter ;
+    rdfs:range xsd:boolean .
+
+:commonParameter a owl:ObjectProperty ;
+    rdfs:domain :SeriesSet ;
+    rdfs:range :Parameter .
+
+:subCategoryOf a owl:ObjectProperty ;
+    rdfs:domain :Category ;
+    rdfs:range :Category .
+
+:hasVersion a owl:ObjectProperty ;
+    rdfs:domain :Author, :Software, :Document ;
+    rdfs:range :Version .
+
+:relatesToResult a owl:ObjectProperty ;
+    rdfs:domain :Series ;
+    rdfs:range :Result .
+
+:relatesToMethod a owl:ObjectProperty ;
+    rdfs:domain :Series ;
+    rdfs:range :Method .
+
+:relatesToSample a owl:ObjectProperty ;
+    rdfs:domain :Series ;
+    rdfs:range :Sample .
+
+:containedInCategory a owl:ObjectProperty ;
+    rdfs:domain :Series ;
+    rdfs:range :Category .
+
+:containerOfReference a owl:ObjectProperty ;
+    rdfs:domain :Reference ;
+    rdfs:range :Container .
+
+:presentInVersion a owl:ObjectProperty ;
+    rdfs:domain :ExperimentStep ;
+    rdfs:range :Version .
+
+:timestampReferenced a owl:DatatypeProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range xsd:dateTime .
+
+:usedInStep a owl:ObjectProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range :ExperimentStep .
+
+:parentDataReferenceSet a owl:ObjectProperty ;
+    rdfs:domain :ExperimentStep ;
+    rdfs:range :Sample .
+
+:hasConstraint a owl:ObjectProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range :ExperimentStep .
+
+:equivalentPositionValue a owl:ObjectProperty ;
+    rdfs:domain :DataPoint ;
+    rdfs:range :DataPoint .
+
+:sharesSeriesWith a owl:ObjectProperty ;
+    rdfs:domain :Result ;
+    rdfs:range :ExperimentStep .
+
+:derivedFromStep a owl:ObjectProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range :ExperimentStep .
+
+:occupiedPosition a owl:ObjectProperty ;
+    rdfs:domain :Container ;
+    rdfs:range xsd:integer .
+
+:tiedToExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Parameter ;
+    rdfs:range :ExperimentStep .
+
+:tiedToSample a owl:ObjectProperty ;
+    rdfs:domain :Parameter ;
+    rdfs:range :Sample .
+
+:involvedInChange a owl:ObjectProperty ;
+    rdfs:domain :Software ;
+    rdfs:range :Change .
+
+:previousVersion a owl:ObjectProperty ;
+    rdfs:domain :Version ;
+    rdfs:range :Version .
+
+:affectsVersion a owl:ObjectProperty ;
+    rdfs:domain :Change ;
+    rdfs:range :Version .
+
+:violatesTechnique a owl:ObjectProperty ;
+    rdfs:domain :Template ;
+    rdfs:range :Technique .
+
+:sharedTag a owl:ObjectProperty ;
+    rdfs:domain :Tag ;
+    rdfs:range :Sample, :Result, :ExperimentStep, :Series, :Document .
+
+:containsEmptySeries a owl:ObjectProperty ;
+    rdfs:domain :SeriesSet ;
+    rdfs:range :Series .
+
+:requiredDataType a owl:DatatypeProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range xsd:string .
+
+:hasRelationType a owl:ObjectProperty ;
+    rdfs:domain :Document ;
+    rdfs:range :Reference .
+
+:isBothExtendedAndExtension a owl:DatatypeProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range xsd:boolean .
+
+:authorOfRevision a owl:ObjectProperty ;
+    rdfs:domain :Author ;
+    rdfs:range :Version .
+
+:createdSeries a owl:ObjectProperty ;
+    rdfs:domain :Version ;
+    rdfs:range :Series .
+
+:queriesOwnResults a owl:ObjectProperty ;
+    rdfs:domain :Infrastructure ;
+    rdfs:range :Result .
+
+:containerId a owl:DatatypeProperty ;
+    rdfs:domain :Container ;
+    rdfs:range xsd:string .
+
+:comment a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
+:tagName a owl:DatatypeProperty ;
+    rdfs:domain :Tag ;
+    rdfs:range xsd:string .
+
+:tagValue a owl:DatatypeProperty ;
+    rdfs:domain :Tag ;
+    rdfs:range xsd:string .
+
+:containsSample a owl:ObjectProperty ;
+    rdfs:domain :Container ;
+    rdfs:range :Sample .
+
+:isDerived a owl:DatatypeProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range xsd:boolean .
+
+:roleOfReference a owl:DatatypeProperty ;
+    rdfs:domain :Reference ;
+    rdfs:range xsd:string .
+
+:includedDataPoint a owl:ObjectProperty ;
+    rdfs:domain :Infrastructure ;
+    rdfs:range :DataPoint .
+
+:referencedDataId a owl:DatatypeProperty ;
+    rdfs:domain :Reference ;
+    rdfs:range xsd:string .
+
+:experimentStepProducedOrConsumed a owl:DatatypeProperty ;
+    rdfs:domain :ExperimentStep ;
+    rdfs:range xsd:string .
+
+:techniqueURI a owl:DatatypeProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range xsd:anyURI .
+
+:techniqueSHA256 a owl:DatatypeProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range xsd:string .
+
+:authorPhoneNumber a owl:DatatypeProperty ;
+    rdfs:domain :Author ;
+    rdfs:range xsd:string .
+
+:authorAddress a owl:DatatypeProperty ;
+    rdfs:domain :Author ;
+    rdfs:range xsd:string .
+
+:deviceId a owl:DatatypeProperty ;
+    rdfs:domain :Device ;
+    rdfs:range xsd:string .
+
+:manufacturer a owl:DatatypeProperty ;
+    rdfs:domain :Software ;
+    rdfs:range xsd:string .
+
+:seriesLength a owl:DatatypeProperty ;
+    rdfs:domain :Series ;
+    rdfs:range xsd:integer .
+
+:autoIncrementStart a owl:DatatypeProperty ;
+    rdfs:domain :Series ;
+    rdfs:range xsd:integer .
+
+:autoIncrementStep a owl:DatatypeProperty ;
+    rdfs:domain :Series ;
+    rdfs:range xsd:integer .
+
+:encodedNumericValue a owl:DatatypeProperty ;
+    rdfs:domain :DataPoint ;
+    rdfs:range xsd:double .
+
+:offsetValue a owl:DatatypeProperty ;
+    rdfs:domain :SIUnit ;
+    rdfs:range xsd:double .
+
+:createdBySoftware a owl:ObjectProperty ;
+    rdfs:domain :DiffEntry ;
+    rdfs:range :Software .
+
+:scopeOfChange a owl:DatatypeProperty ;
+    rdfs:domain :DiffEntry ;
+    rdfs:range xsd:string .
+
+:usedInExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Sample ;
+    rdfs:range :ExperimentStep .
+
+:referencesExperimentStep a owl:ObjectProperty ;
+    rdfs:domain :Result ;
+    rdfs:range :ExperimentStep .
+
+:referencesSeries a owl:ObjectProperty ;
+    rdfs:domain :Result ;
+    rdfs:range :Series .
+
+:usesTemplate a owl:ObjectProperty ;
+    rdfs:domain :ExperimentStep ;
+    rdfs:range :Template .
+
+:canExtendTechnique a owl:ObjectProperty ;
+    rdfs:domain :Extension ;
+    rdfs:range :Technique .
+
+:canExtendExtension a owl:ObjectProperty ;
+    rdfs:domain :Extension ;
+    rdfs:range :Extension .
+
+:definedCategoryBlueprint a owl:ObjectProperty ;
+    rdfs:domain :SampleRoleBlueprint ;
+    rdfs:range :Category .
+
+:maxExperimentSteps a owl:DatatypeProperty ;
+    rdfs:domain :Infrastructure ;
+    rdfs:range xsd:integer .
+
+:maxResultsPerStep a owl:DatatypeProperty ;
+    rdfs:domain :ExperimentStep ;
+    rdfs:range xsd:integer .
+
+:documentation a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
+:maxSeriesOfBlueprint a owl:DatatypeProperty ;
+    rdfs:domain :SeriesSet ;
+    rdfs:range xsd:integer .
+
+:parameterUnit a owl:DatatypeProperty ;
+    rdfs:domain :Parameter ;
+    rdfs:range xsd:string .
+
+:hasLiteratureReference a owl:ObjectProperty ;
+    rdfs:domain :Technique ;
+    rdfs:range :LiteratureReference .
+
+:infrastructureOf a owl:ObjectProperty ;
+    rdfs:domain :Template, :ExperimentStep ;
+    rdfs:range :Infrastructure .
+
+:methodOf a owl:ObjectProperty ;
+    rdfs:domain :Template, :ExperimentStep ;
+    rdfs:range :Method .
+
+:resultOf a owl:ObjectProperty ;
+    rdfs:domain :Template, :ExperimentStep ;
+    rdfs:range :Result .
+
+:techniqueOf a owl:ObjectProperty ;
+    rdfs:domain :Template, :ExperimentStep ;
+    rdfs:range :Technique .
+
+# Restrictions and Disjointness
+
+:Sample rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty :producedByStep ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] , [
+    a owl:Restriction ;
+    owl:onProperty :consumedByStep ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+
+:Parameter rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty :isOptionalParameter ;
+    owl:allValuesFrom xsd:boolean
+] .
+
+:Series rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty :containsDataPoint ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+
+:Technique rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty :extendsTechnique ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+
+:Category rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty :subCategoryOf ;
+    owl:minCardinality "0"^^xsd:nonNegativeInteger
+] .
+
+:Author owl:disjointWith :Software, :Device, :Sample, :Technique, :Result, :ExperimentStep, :Series, :Container, :Parameter, :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+:Sample owl:disjointWith :Device, :Software, :Technique, :Result, :ExperimentStep, :Series, :Container, :Parameter, :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+:Series owl:disjointWith :Device, :Software, :Technique, :Result, :ExperimentStep, :Container, :Parameter, :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+:Result owl:disjointWith :Device, :Software, :Technique, :ExperimentStep, :Container, :Parameter, :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+:ExperimentStep owl:disjointWith :Device, :Software, :Technique, :Container, :Parameter, :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+:Device owl:disjointWith :Software, :Technique, :Container, :Parameter, :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+:Software owl:disjointWith :Technique, :Container, :Parameter, :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+:Parameter owl:disjointWith :Change, :Version, :Template, :Tag, :Reference, :DiffEntry, :SIUnit, :SampleRoleBlueprint, :Extension, :LiteratureReference, :Method, :Document, :Infrastructure, :Category, :ParameterBlueprint, :Signature, :SeriesSet, :DataPoint .
+
+# Equivalent Classes
+
+:ParameterBlueprint owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf ( :ParameterBlueprint [ a owl:Restriction ; owl:onProperty :hasCategory ; owl:someValuesFrom :Category ] )
+] .
+
+:SeriesSet owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf ( :SeriesSet [ a owl:Restriction ; owl:onProperty :hasSeries ; owl:someValuesFrom :Series ] )
+] .
