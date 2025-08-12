@@ -1,2 +1,0 @@
-# Lumibot
-Created with CodeSandbox
