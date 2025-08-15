@@ -1,5 +1,5 @@
 model: bertmap
-output_path: D:\GitHub\XAnIML
+output_path: D:\GitHub\animl-ontology\alignment\outputs\bertmap
 annotation_property_iris:
 - http://www.w3.org/2000/01/rdf-schema#label
 - http://www.geneontology.org/formats/oboInOwl#hasSynonym

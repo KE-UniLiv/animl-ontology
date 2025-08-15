@@ -67,7 +67,7 @@ def run_logmap_direct(source_ontology, target_ontology, output_path) -> bool:
         "MATCHER", 
         "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AniML/animl.owl",
         "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AFO-2025_06/afo/voc/afo/merged/REC/2025/06/merged-without-qudt.xml",
-        "/mnt/d/GitHub/animl-ontology/alignment/outputs/logmap2_mappings.owl",
+        "/mnt/d/GitHub/animl-ontology/alignment/outputs/logmap/logmap2_mappings.owl",
         "false"
     ]
 
