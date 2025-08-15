@@ -1395,7 +1395,7 @@
 
     <rdf:Description rdf:about="https://w3id.org/animl/isContained">
     </rdf:Description>
-</rdf:RDF>
+
 
     <!--animl_technique-->
 
@@ -2207,7 +2207,7 @@
             <!-- this is a reified natural language field for the 'function' of data when being referenced -->
 
             <owl:Class rdf:about="http://w3id.org/animl/function"/>
-
+</rdf:RDF>
 
 
 
