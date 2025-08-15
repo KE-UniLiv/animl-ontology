@@ -39,36 +39,63 @@
     <!-- this is a re-implementation of the common 'hasPart' relationship, which denotes that the range is a component of the domain -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/hasPart">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
-        <rdfs:domain rdf:resource="http://w3id.org/animl/role"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/category"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/parameter"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/seriesSet"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/method"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/result"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/series"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/itemSpecification"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/parameterSpecification"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/referenceSpecification"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/seriesSpecifcation"/>
+    <rdfs:domain>
+        <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://w3id.org/animl/reference"/>
+                <rdf:Description rdf:about="http://w3id.org/animl/role"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/category"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/parameter"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/seriesSet"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/method"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/result"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/series"/>
+            </owl:unionOf>
+        </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range>
+        <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://w3id.org/animl/itemSpecification"/>
+                <rdf:Description rdf:about="http://w3id.org/animl/parameterSpecification"/>
+                <rdf:Description rdf:about="http://w3id.org/animl/referenceSpecification"/>
+                <rdf:Description rdf:about="http://w3id.org/animl/seriesSpecifcation"/>
+            </owl:unionOf>
+        </owl:Class>
+    </rdfs:range>
     </owl:ObjectProperty>
     
     <!-- this is the inverse of the above property -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/animl/isPartOf">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/itemSpecification"/>
-        <rdfs:domain rdf:resource="http://w3id.org/animl/parameterSpecification"/>
-        <rdfs:domain rdf:resource="http://w3id.org/animl/referenceSpecification"/>
-        <rdfs:domain rdf:resource="http://w3id.org/animl/seriesSpecifcation"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/reference"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/role"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/category"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/parameter"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/method"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/result"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/series"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/animl/itemSpecification"/>
+                    <rdf:Description rdf:about="http://w3id.org/animl/parameterSpecification"/>
+                    <rdf:Description rdf:about="http://w3id.org/animl/referenceSpecification"/>
+                    <rdf:Description rdf:about="http://w3id.org/animl/seriesSpecifcation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/animl/reference"/>
+                    <rdf:Description rdf:about="http://w3id.org/animl/role"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/category"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/parameter"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/seriesSet"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/method"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/result"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
 
 
@@ -126,18 +153,31 @@
     a sequence or other ordered structure -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/directlyPreeceds">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/autoIncrementedDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/encodedDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/versionHistory"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/sIUnit"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/autoIncrementedDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/encodedDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/versionHistory"/>
+    <rdfs:domain>
+        <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://w3id.org/animl/sIUnit"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/autoIncrementedDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/encodedDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/versionHistory"/>
+            </owl:unionOf>
+        </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range>
+        <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://w3id.org/animl/sIUnit"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/autoIncrementedDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/encodedDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/versionHistory"/>
+            </owl:unionOf>
+        </owl:Class>
+    </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -146,18 +186,31 @@
     a sequence or other ordered structure -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/directlyfollows">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/autoIncrementedDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/encodedDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/versionHistory"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/sIUnit"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/autoIncrementedDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/encodedDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/versionHistory"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/animl/sIUnit"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/autoIncrementedDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/encodedDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/versionHistory"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/animl/sIUnit"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/autoIncrementedDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/encodedDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/versionHistory"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -166,47 +219,80 @@
     of objects that are now generalised as agents -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasAgent">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/method"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/versionHistory"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/method"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/versionHistory"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/animl/agent"/>
     </owl:ObjectProperty>
     
 
     <!-- this is a re-implementation of the common 'hasMember' relationship, which denotes the relation of a class acting as a set or sequence to one of its members  -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasMember">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/units"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/seriesSet"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/tagSet"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/result"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/sampleSet"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/series"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/reference"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/autoIncrementedDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/sample"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/encodedDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/series"/>
-    </owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/animl/hasMember">
+    <rdfs:domain>
+        <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://w3id.org/animl/units"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/seriesSet"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/tagSet"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/result"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/sampleSet"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/series"/>
+            </owl:unionOf>
+        </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range>
+        <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://w3id.org/animl/reference"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/autoIncrementedDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/sample"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/encodedDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                <rdf:Description rdf:about="https://w3id.org/animl/series"/>
+            </owl:unionOf>
+        </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
 
 
 
       <!-- this is the inverse of the above relation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/isMemberOf">
-        <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
-        <rdfs:domain rdf:resource="http://w3id.org/animl/sIUnit"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/signature"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/series"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/autoIncrementedDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/encodedDataPoint"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
-        <rdfs:range rdf:resource="http://w3id.org/animl/units"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/referenceSet"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/signatureSet"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/seriesSet"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/series"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/animl/reference"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/autoIncrementedDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/sample"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/encodedDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/animl/units"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/seriesSet"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/tagSet"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/result"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/sampleSet"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -268,8 +354,14 @@
     <!-- this denotes the property of have tags attached to you, as well as specifying the set of tags for which this is true -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasTags">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/sample"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/animl/tagSet"/>
     </owl:ObjectProperty>
     
@@ -283,12 +375,24 @@
     this relationship is the relation between a class and its type class -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/animl/hasType">
-        <rdfs:domain rdf:resource="https://w3id.org/animl/container"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/agent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/change"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/containerType"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/agentType"/>
-        <rdfs:range rdf:resource="https://w3id.org/animl/changeType"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/container"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/agent"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/change"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/containerType"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/agentType"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/changeType"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -497,11 +601,17 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/agent"/>
-        <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
-        <rdfs:domain rdf:resource="http://w3id.org/animl/ItemSpecification"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/tag"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/template"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/agent"/>
+                    <rdf:Description rdf:about="http://w3id.org/animl/definition"/>
+                    <rdf:Description rdf:about="http://w3id.org/animl/ItemSpecification"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/tag"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/template"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -562,9 +672,23 @@
     <!-- this property represents the actual data corresponding to a datapoint object of the individual sub class -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/pointValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/parameter"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/parameter"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/individualDataPoint"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/parameter"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/individualDataPoint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anysimpletype"/>
     </owl:DatatypeProperty>
     
@@ -572,11 +696,6 @@
 
     <!-- this is a natural language description of the type of objects, or of measurements, that a set of units may be applied to -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/animl/quantity">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/series"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -603,9 +722,15 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/sourceDataLocation">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/sample"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/experimentStep"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/template"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/sample"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/template"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -613,8 +738,14 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/animl/timeStamp">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/infrastructure"/>
-        <rdfs:domain rdf:resource="https://w3id.org/animl/versionHistory"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/animl/infrastructure"/>
+                    <rdf:Description rdf:about="https://w3id.org/animl/versionHistory"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -849,6 +980,7 @@
     
 
     <owl:Class rdf:about="http://w3id.org/animl/sampleInContainer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/isContainedBy"/>
@@ -1539,8 +1671,14 @@
         <!-- a string space for the bibliography related to an object -->
 
         <owl:DatatypeProperty rdf:about="http://w3id.org/animl/references">
-            <rdfs:domain rdf:resource="http://w3id.org/animl/definition"/>
-            <rdfs:domain rdf:resource="http://w3id.org/animl/ItemSpecification"/>
+            <rdfs:domain>
+                <owl:Class>
+                    <owl:unionOf rdf:parseType="Collection">
+                        <rdf:Description rdf:about="http://w3id.org/animl/definition"/>
+                        <rdf:Description rdf:about="http://w3id.org/animl/ItemSpecification"/>
+                    </owl:unionOf>
+                </owl:Class>
+            </rdfs:domain>
             <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         </owl:DatatypeProperty>
 
@@ -2049,9 +2187,15 @@
 
             <owl:ObjectProperty rdf:about="http://w3id.org/animl/lookingWithin">
                 <rdfs:domain rdf:resource="https://w3id.org/animl/referenceSet"/>
-                <rdfs:range rdf:resource="https://w3id.org/animl/experiment"/>
-                <rdfs:range rdf:resource="https://w3id.org/animl/sampleSet"/>
-                <rdfs:range rdf:resource="https://w3id.org/animl/series"/>
+                <rdfs:range>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/animl/experiment"/>
+                            <rdf:Description rdf:about="https://w3id.org/animl/sampleSet"/>
+                            <rdf:Description rdf:about="https://w3id.org/animl/series"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </rdfs:range>
             </owl:ObjectProperty>
 
 
@@ -2059,9 +2203,15 @@
 
             <owl:ObjectProperty rdf:about="http://w3id.org/animl/pointsTo">
                 <rdfs:domain rdf:resource="http://w3id.org/animl/reference"/>
-                <rdfs:range rdf:resource="http://w3id.org/animl/dataPoint"/>
-                <rdfs:range rdf:resource="https://w3id.org/animl/experimentStep"/>
-                <rdfs:range rdf:resource="https://w3id.org/animl/sample"/>
+                <rdfs:range>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/animl/dataPoint"/>
+                            <rdf:Description rdf:about="https://w3id.org/animl/experimentStep"/>
+                            <rdf:Description rdf:about="https://w3id.org/animl/sample"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </rdfs:range>
             </owl:ObjectProperty>
 
 
