@@ -46,7 +46,7 @@ if __name__ == "__main__":
     mousehumanref = get_ontologies()["mouse-human-reference"]
     fishref = get_ontologies()["fishref"]
     ## -- DeepOnto methods
-    run_logmap_direct(source_ontology, target_ontology) if oamethod == "logmap" else None
+    run_logmap_direct(source_ontology, target_ontology, os.path.join(os.getcwd(), "alignment", "outputs", "logmap", "logmap_mappings.xml")) if oamethod == "logmap" else None
     run_bertmap_direct(source_ontology, target_ontology) if oamethod == "bertmap" else None
 
     ## -- Ontoaligner methods

@@ -2,6 +2,25 @@ import re
 import pandas as pd
 import os
 from rdflib import Graph
+import yaml
+
+# If running from a script, use the script's directory to find the config file
+config_path = os.path.join(os.path.dirname(__file__), "alignment_config.yml")
+
+def get_key(service, config_file="api_config.yml"):
+    """
+    Get the API key for the given service from a config file in YAML format. For
+    example, `get_key("openai")` will return the OpenAI API key.
+    """
+
+    if not os.path.exists(config_file):
+        # If the config file does not exist from some entry point, use a path correction
+        config_file = config_path
+
+    ## -- Read the YML file first and get the right entry
+    with open(config_file, "r") as f:
+        config = yaml.safe_load(f)
+    return config[service]["key"]
 
 def extract_label(entity_uri: str, content: str) -> str:
     """

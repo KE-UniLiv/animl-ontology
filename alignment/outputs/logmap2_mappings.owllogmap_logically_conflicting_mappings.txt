@@ -1,0 +1,5 @@
+https://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/equipment#AFE_0002278|<|0.7|CLS
+https://w3id.org/animl/container|http://purl.allotrope.org/ontologies/equipment#AFE_0000407|<|0.5|CLS
+https://w3id.org/animl/container|http://purl.allotrope.org/ontologies/process#AFP_0003306|<|0.46|CLS
+http://w3id.org/animl/role|http://purl.allotrope.org/ontologies/role#AFRL_0000012|>|0.7|CLS
+https://w3id.org/animl/agent|http://purl.allotrope.org/ontologies/role#AFRL_0000095|>|0.7|CLS

@@ -19,7 +19,7 @@ from utils import ensure_text_field
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from sklearn.linear_model import LogisticRegression
-from xaniml.utils import get_key
+from utils import get_key
 
 import torch
 import utils

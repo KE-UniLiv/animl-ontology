@@ -6,6 +6,8 @@ It includes functions to run different alignment techniques such as LogMap, BERT
 """
 
 from alignment_dependencies import *
+from utils import insert_labels_for_classes
+
 configpath = os.path.join(os.getcwd(), "alignment", "alignment_configs.yml")
 
 wandb.login(key=get_key("wandb", config_file=configpath))
@@ -35,6 +37,7 @@ def get_ontologies() -> dict:
 
     return ontologies
 
+# TODO, can parameterise
 def run_logmap_direct(source_ontology, target_ontology, output_path) -> bool:
     """
     Run LogMap directly with an Ubuntu call 
@@ -62,9 +65,9 @@ def run_logmap_direct(source_ontology, target_ontology, output_path) -> bool:
         "-Xms500m", "-Xmx10g", "-DentityExpansionLimit=100000000",
         "-jar", "/mnt/c/Users/ellio/AppData/Local/Programs/Python/Python313/Lib/site-packages/deeponto/align/logmap/logmap-matcher-4.0.jar",
         "MATCHER", 
-        "file:///mnt/d/GitHub/XAnIML/alignment/ontologies/MusicMeta/musicmeta.owl",
-        "file:///mnt/d/GitHub/XAnIML/alignment/ontologies/TheMusicOntology/moowl.rdf",
-        "/mnt/d/GitHub/XAnIML/alignment/outputs/logmap2_mappings.owl",
+        "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AniML/animl.owl",
+        "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AFO-2025_06/afo/voc/afo/merged/REC/2025/06/merged-without-qudt.xml",
+        "/mnt/d/GitHub/animl-ontology/alignment/outputs/logmap2_mappings.owl",
         "false"
     ]
 
@@ -97,10 +100,21 @@ def run_bertmap_direct(source_ontology_path: str, target_ontology_path: str) -> 
 
 
     """
+    
+    # Create temporary copies of ontologies with labels added
+    source_with_labels = source_ontology_path.replace('.owl', '_with_labels.owl')
+    
+    # Add labels to source ontology if it doesn't have them
+    print(f"Adding labels to source ontology: {source_ontology_path}")
+    insert_labels_for_classes(source_ontology_path, source_with_labels)
+    
+    # Add labels to target ontology if it doesn't have them
+    #print(f"Adding labels to target ontology: {target_ontology_path}")
+    #insert_labels_for_classes(target_ontology_path, target_with_labels)
 
     config = BERTMapPipeline.load_bertmap_config(DEFAULT_CONFIG_FILE)
 
-    source = source_ontology_path
+    source = source_with_labels
     target = target_ontology_path
 
     ontolsource = Ontology(source)

@@ -1,0 +1,17 @@
+http://w3id.org/animl/units|http://qudt.org/schema/qudt#Unit|=|0.51|CLS
+http://w3id.org/animl/specification|http://purl.allotrope.org/ontologies/result#AFR_0000957|=|0.52|CLS
+http://w3id.org/animl/function|http://purl.allotrope.org/ontologies/function#AFFN_0000139|=|0.51|CLS
+http://w3id.org/animl/reference|http://purl.allotrope.org/ontologies/role#AFRL_0000258|=|0.51|CLS
+http://w3id.org/animl/reference|http://purl.allotrope.org/ontologies/result#AFR_0002008|=|0.51|CLS
+https://w3id.org/animl/agent|http://purl.allotrope.org/ontologies/role#AFRL_0000448|=|0.51|CLS
+http://w3id.org/animl/function|http://purl.obolibrary.org/obo/BFO_0000034|=|0.51|CLS
+https://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0001987|=|0.51|CLS
+http://w3id.org/animl/series|http://purl.allotrope.org/ontologies/common#AFC_0000162|=|0.51|CLS
+https://w3id.org/animl/signature|http://purl.allotrope.org/ontologies/role#AFRL_0000438|=|0.51|CLS
+https://w3id.org/animl/agent|http://purl.allotrope.org/ontologies/result#AFR_0003144|=|0.51|CLS
+http://w3id.org/animl/role|http://purl.obolibrary.org/obo/BFO_0000023|=|0.51|CLS
+http://w3id.org/animl/itemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001638|=|0.63|CLS
+http://w3id.org/animl/specification|http://purl.allotrope.org/ontologies/result#AFR_0001532|=|0.59|CLS
+http://w3id.org/animl/parameterSpecification|http://purl.allotrope.org/ontologies/result#AFR_0000977|=|0.63|CLS
+https://w3id.org/animl/document|http://purl.obolibrary.org/obo/IAO_0000310|=|0.51|CLS
+https://w3id.org/animl/signature|http://purl.allotrope.org/ontologies/result#AFR_0001963|=|0.51|CLS
