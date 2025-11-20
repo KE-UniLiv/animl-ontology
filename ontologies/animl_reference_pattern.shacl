@@ -1,0 +1,90 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Ensure this namespace matches your Graffoo prefix definition
+@prefix aml: <http://www.animl.org/aml#> . 
+
+# -------------------------------------------------------------------
+# SHAPE: AnimlReferenceSet Constraints
+# -------------------------------------------------------------------
+# This shape targets every instance of aml:AnimlReferenceSet.
+# It enforces that the set must satisfy ONE of the three valid 
+# configuration blocks (Sample, Experiment, or Series).
+# -------------------------------------------------------------------
+
+aml:AnimlReferenceSetShape
+    a sh:NodeShape ;
+    sh:targetClass aml:AnimlReferenceSet ;
+    sh:or (
+        aml:SampleSetConfiguration
+        aml:ExperimentConfiguration
+        aml:SeriesConfiguration
+    ) ;
+    sh:message "Invalid Reference Set Configuration: The Subject type does not match the Reference target type." .
+
+# -------------------------------------------------------------------
+# CONFIGURATION 1: SampleSet -> Sample
+# IF subject is a SampleSet, THEN members must point to a Sample.
+# -------------------------------------------------------------------
+aml:SampleSetConfiguration
+    a sh:NodeShape ;
+    sh:property [
+        sh:path aml:subject ;
+        sh:class aml:SampleSet ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path aml:hasMember ;
+        sh:node [
+            a sh:NodeShape ;
+            sh:property [
+                sh:path aml:pointsTo ;
+                sh:class aml:Sample ;
+            ]
+        ]
+    ] .
+
+# -------------------------------------------------------------------
+# CONFIGURATION 2: Experiment -> ExperimentStep
+# IF subject is an Experiment, THEN members must point to an ExperimentStep.
+# -------------------------------------------------------------------
+aml:ExperimentConfiguration
+    a sh:NodeShape ;
+    sh:property [
+        sh:path aml:subject ;
+        sh:class aml:Experiment ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path aml:hasMember ;
+        sh:node [
+            a sh:NodeShape ;
+            sh:property [
+                sh:path aml:pointsTo ;
+                sh:class aml:ExperimentStep ;
+            ]
+        ]
+    ] .
+
+# -------------------------------------------------------------------
+# CONFIGURATION 3: Series -> DataPoint
+# IF subject is a Series, THEN members must point to a DataPoint.
+# -------------------------------------------------------------------
+aml:SeriesConfiguration
+    a sh:NodeShape ;
+    sh:property [
+        sh:path aml:subject ;
+        sh:class aml:Series ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path aml:hasMember ;
+        sh:node [
+            a sh:NodeShape ;
+            sh:property [
+                sh:path aml:pointsTo ;
+                sh:class aml:DataPoint ;
+            ]
+        ]
+    ] .
