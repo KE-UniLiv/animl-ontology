@@ -22,7 +22,8 @@ def get_ontologies() -> dict:
     ontologies = {
         "MusicMeta": os.path.join(os.getcwd(), "alignment", "ontologies", "MusicMeta", "musicmeta.owl"),
         "TheMusicOntology": os.path.join(os.getcwd(), "alignment", "ontologies", "TheMusicOntology", "moowl.owl"),
-        "AniML": os.path.join(os.getcwd(), "alignment", "ontologies", "AniML", "animl.owl"),
+        "AnIML": os.path.join(os.getcwd(), "ontologies", "animl_manual.owl"),
+        "AnIML (Skeleton)": os.path.join(os.getcwd(), "alignment", "ontologies", "AniML", "skeleton_ontology.rdf"),
         "Allotrope": os.path.join(os.getcwd(), "alignment", "ontologies", "AFO-2025_06", "afo", "voc", "afo", "merged", "REC", "2025", "06", "merged-without-qudt.xml"),
         "mouse-human-source": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "source.xml"),
         "mouse-human-target": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "target.xml"),
@@ -59,16 +60,17 @@ def run_logmap_direct(source_ontology, target_ontology, output_path) -> bool:
     print(f"LogMap JAR path: {jar_path}")
 
 
-    # Build the command for MATCHER mode (to create initial mappings)
+    ## -- Build the command for MATCHER mode (to create initial mappings)
+    # Output directory is folder only
     cmd = [
         "wsl", "java", "--add-opens", "java.base/java.lang=ALL-UNNAMED",
         "-Xms500m", "-Xmx10g", "-DentityExpansionLimit=100000000",
         "-jar", "/mnt/c/Users/ellio/AppData/Local/Programs/Python/Python313/Lib/site-packages/deeponto/align/logmap/logmap-matcher-4.0.jar",
         "MATCHER", 
-        "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AniML/animl.owl",
+        "file:///mnt/d/GitHub/animl-ontology/ontologies/animl_manual.rdf",
         "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AFO-2025_06/afo/voc/afo/merged/REC/2025/06/merged-without-qudt.xml",
-        "/mnt/d/GitHub/animl-ontology/alignment/outputs/logmap/logmap2_mappings.owl",
-        "false"
+        "/mnt/d/GitHub/animl-ontology/alignment/outputs/logmap/",
+        "true"
     ]
 
     print("Running command:", " ".join(cmd))
@@ -175,10 +177,8 @@ def run_rag_large_ontoaligner(source_ontology: str, target_ontology: str, refere
     'max_length': 300, 
     "max_new_tokens": 10, 
     "batch_size": 15,
-    'huggingface_access_token': "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",
-    'token': "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",
     'use_auth_token': True
-}
+    }
 
     model = MistralLLMBERTRetrieverRAG(retriever_config=retriever_config, llm_config=llmconfig)
     model.load(llm_path="mistralai/Mistral-7B-v0.3", ir_path="all_MiniLM-L6-v2")
@@ -194,7 +194,7 @@ def run_rag_large_ontoaligner(source_ontology: str, target_ontology: str, refere
     open(output_path, "w", encoding="utf-8").write(xml_str)
 
 def run_lightweight_ontoaligner(source_ontology: str, target_ontology: str, output_path: str, typeof: str, 
-                                threshold: float = 0.7, task=FishZooplanktonOMDataset()) -> None:
+                                threshold: float = 0.7, task=AniMLAllotropeOMDataset()) -> None:
     """
     
     Run a lightweight OA method with a given threshold.
@@ -365,12 +365,6 @@ def run_kge_ontoaligner(source_ontology: str, target_ontology: str, output_path:
 
     kge_parameters = {
         'device': 'cpu',
-        'embedding_dim': 300,
-        'num_epochs': 30,
-        'train_batch_size': 128,
-        'eval_batch_size': 64,
-        'num_negs_per_pos': 5,
-        'random_seed': 42,
     }
 
     aligner = ConvEAligner(**kge_parameters) if method == "ConvE" else \
@@ -386,6 +380,7 @@ def run_kge_ontoaligner(source_ontology: str, target_ontology: str, output_path:
 
     processed = graph_postprocessor(predicts=matchings, threshold=0.5)   
 
+    """
     evaluation.compute_evaluation(predicts_pre=matchings, predicts_post=processed, 
                                          reference=dataset['reference'], 
                                          filepath=os.path.dirname(output_path),
@@ -394,7 +389,7 @@ def run_kge_ontoaligner(source_ontology: str, target_ontology: str, output_path:
                                          target=reverse_ontologies.get(target_ontology))
 
 
-
+    """
     xml_str = xmlify.xml_alignment_generator(matchings=processed)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(xml_str)

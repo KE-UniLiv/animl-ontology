@@ -10,12 +10,12 @@ if __name__ == "__main__":
 
     source_ontology_str = questionary.select(
         "Choose a source ontology",
-        choices=["AniML", "FishS+", "FishS", "Allotrope", "MusicMeta", "TheMusicOntology", "mouse-human-source", "mouse-human-target"]
+        choices=["AnIML", "AnIML (Skeleton)", "FishS+", "FishS", "Allotrope", "MusicMeta", "TheMusicOntology", "mouse-human-source", "mouse-human-target"]
     ).ask()
 
     target_ontology_str = questionary.select(
         "Choose a target ontology",
-        choices=["AniML", "FishT+", "FishT", "Allotrope", "MusicMeta", "TheMusicOntology", "mouse-human-source", "mouse-human-target"]
+        choices=["AnIML", "AnIML (Skeleton)", "FishT+", "FishT", "Allotrope", "MusicMeta", "TheMusicOntology", "mouse-human-source", "mouse-human-target"]
     ).ask()
 
     oamethod = questionary.select(
