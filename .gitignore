@@ -215,3 +215,4 @@ marimo/_lsp/
 __marimo__/
 alignment/alignment_configs.yml
 logmap-log.out
+bertmap/config.yaml
