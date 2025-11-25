@@ -1,0 +1,9 @@
+# CQ-4: What is the unique ID of an experiment step?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?stepID
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:id ?stepID .
+}

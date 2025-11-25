@@ -1,0 +1,18 @@
+# CQ-51: Was a sample in an experiment step inherited from a parent step?
+# This query checks if a sample used in the current step (via Infrastructure) is defined or produced in a previous/parent step, implying inheritance via the workflow.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+ASK {
+    # Current step uses a sample
+    ?currentStep a aml:ExperimentStep ;
+                 aml:hasInfrastructure ?infra .
+    ?infra aml:includes/aml:hasMember/aml:pointsTo ?sample .
+
+    # A different step produced/defined that sample
+    ?parentStep a aml:ExperimentStep ;
+                aml:hasResult ?result .
+    ?result aml:includes/aml:hasMember/aml:pointsTo ?sample .
+
+    FILTER (?currentStep != ?parentStep)
+}

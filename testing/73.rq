@@ -1,0 +1,10 @@
+# CQ-73: What is the name of a result?
+# The Core Module shows that aml:Result (like most AnIML entities) has a aml:name data property used for labeling (e.g., "UV-Vis Spectrum").
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?resultName
+WHERE {
+    ?result a aml:Result ;
+            aml:name ?resultName .
+}

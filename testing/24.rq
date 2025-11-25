@@ -1,0 +1,14 @@
+# CQ-23: What series are defined in a series set blueprint for a technique?
+# Based on the Technique Module, the technique contains specifications. A Series Set Blueprint aggregates Series Blueprints.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?role
+WHERE {
+    # The reference exists within the current step's context
+    ?reference a aml:AnimlReference ;
+               aml:pointsTo ?previousStep ;
+               aml:hasFunction ?role .
+               
+    ?previousStep a aml:ExperimentStep .
+}

@@ -1,0 +1,13 @@
+# CQ-54: Who was the author of the method?
+# The Core Module links aml:Method to aml:Agent (actors responsible for the method). This relationship identifies the author or performer.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?author
+WHERE {
+    ?method a aml:Method ;
+            aml:hasAgent ?author .
+    
+    # Optional: Filter for human agents if "author" implies a person
+    # ?author a aml:HumanAgent .
+}

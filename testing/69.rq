@@ -1,0 +1,10 @@
+# CQ-69: What literature references are cited in a technique definition?
+# The Technique Module includes the aml:citation data property on the aml:Technique class to handle bibliographic references.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?citation
+WHERE {
+    ?technique a aml:Technique ;
+               aml:citation ?citation .
+}

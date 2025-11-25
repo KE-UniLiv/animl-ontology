@@ -1,0 +1,10 @@
+# CQ-82: Who is the manufacturer of the software?
+# In the Core Module, software is represented by the aml:SoftwareAgent class (a subclass of aml:Agent). Similar to hardware agents, software agents carry vendor information via the aml:manufacturer data property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?manufacturer
+WHERE {
+    ?software a aml:SoftwareAgent ;
+              aml:manufacturer ?manufacturer .
+}

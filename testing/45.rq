@@ -1,0 +1,10 @@
+# CQ-45: What physical quantity does a unit represent?
+# The Technique Module shows the aml:Units class (and its subclass aml:SIUnit) linked to the aml:quantity data property (e.g., "Length", "Temperature").
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?quantity
+WHERE {
+    ?unit a aml:Units ;
+          aml:quantity ?quantity .
+}

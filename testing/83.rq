@@ -1,0 +1,11 @@
+# CQ-83: Is a given technique definition abstract, requiring an extension?
+# The AnIML technique schema uses the extension attribute (boolean) to indicate if a technique file is intended as a partial definition (extension) rather than a standalone technique. In the ontology, this is mapped to a boolean data property on the Technique class.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?isAbstract
+WHERE {
+    ?technique a aml:Technique ;
+               aml:isAbstract ?isAbstract . 
+    # Or aml:isExtension depending on exact mapping of the "extension" attribute
+}

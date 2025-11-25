@@ -1,0 +1,18 @@
+# CQ-16: Which samples were consumed in an experiment step?
+# Based on the Core Module, data "taken in" (consumed) is modelled by the aml:Infrastructure class (inputs), whereas data produced is in aml:Result (outputs). We query the Reference Set within the Infrastructure.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?consumedSample
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasInfrastructure ?infrastructure .
+          
+    ?infrastructure aml:includes ?referenceSet .
+    
+    ?referenceSet aml:hasMember ?reference .
+    
+    ?reference aml:pointsTo ?consumedSample .
+    
+    ?consumedSample a aml:Sample .
+}

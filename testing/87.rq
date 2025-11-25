@@ -1,0 +1,10 @@
+# CQ-87: What is the start value for an auto-incremented series?
+# In the Technique Module, the aml:AutoIncrementedEncodingType is a subclass of aml:EncodingType. To function, it requires a base value, mapped to aml:startValue.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?startValue
+WHERE {
+    ?autoIncrementedEncoding a aml:AutoIncrementedEncodingType ;
+                             aml:startValue ?startValue .
+}

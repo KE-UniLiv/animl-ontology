@@ -1,0 +1,19 @@
+# CQ-35: Which other experiment steps' data were used as input for the current step?
+# This utilizes the Reference Pattern. Input data is contained in the aml:Infrastructure of a step. We look for references pointing to a previous aml:ExperimentStep (or its results).
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?inputStep
+WHERE {
+    ?currentStep a aml:ExperimentStep ;
+                 aml:hasInfrastructure ?infrastructure .
+
+    ?infrastructure aml:includes ?referenceSet .
+
+    ?referenceSet aml:hasMember ?reference .
+
+    ?reference a aml:AnimlReference ;
+               aml:pointsTo ?inputStep .
+
+    ?inputStep a aml:ExperimentStep .
+}

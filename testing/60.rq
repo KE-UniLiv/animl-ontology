@@ -1,0 +1,10 @@
+# CQ-60: What is the unit of a parameter?
+# Parameters in AnIML are often physical quantities. In the ontology, aml:Parameter is linked to aml:Unit (or aml:SIUnit from the Technique Module) via the aml:hasUnit property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?unit
+WHERE {
+    ?parameter a aml:Parameter ;
+               aml:hasUnit ?unit .
+}

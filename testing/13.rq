@@ -1,0 +1,10 @@
+# CQ-13: What is the conversion factor for a unit to its SI base representation?
+# The Technique Module explicitly models aml:SIUnit with properties to define conversions, specifically aml:factor (along with aml:exponent and aml:offset).
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?conversionFactor
+WHERE {
+    ?unit a aml:SIUnit ;
+          aml:factor ?conversionFactor .
+}

@@ -1,0 +1,10 @@
+# CQ-74: What are the results of an experiment step?
+# The Core Module depicts aml:ExperimentStep linked to aml:Result via the aml:hasResult object property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?result
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasResult ?result .
+}

@@ -1,0 +1,11 @@
+# CQ-37: What is the allowed numeric range for a parameter in a technique definition?
+# The Technique Module shows aml:ParameterSpecification. Constraints such as ranges are typically modelled via min/max value properties on the specification.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?minValue ?maxValue
+WHERE {
+    ?paramSpec a aml:ParameterSpecification ;
+               aml:hasMinValue ?minValue ;
+               aml:hasMaxValue ?maxValue .
+}

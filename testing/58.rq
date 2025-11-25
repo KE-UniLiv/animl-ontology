@@ -1,0 +1,10 @@
+# CQ-58: What is the new value of an item that was changed?
+# In the Core Module, the aml:Change class captures the state transition of an item. The new state is stored in the aml:newValue data property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?newValue
+WHERE {
+    ?change a aml:Change ;
+            aml:newValue ?newValue .
+}

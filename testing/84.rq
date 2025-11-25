@@ -1,0 +1,10 @@
+# CQ-84: What is the ID of a specific template?
+# The Core Module shows the aml:Template class connected to aml:ExperimentStep. Like other major entities, it is identified by the aml:id property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?templateID
+WHERE {
+    ?template a aml:Template ;
+              aml:id ?templateID .
+}

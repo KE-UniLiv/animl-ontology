@@ -1,0 +1,14 @@
+# CQ-66: What parameters are defined in the method section of an experiment step?
+# According to the Core Module and the text, a Method organizes data into Categories. Parameters reside within these Categories.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?parameter
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasMethod ?method .
+          
+    ?method aml:hasCategory ?category .
+    
+    ?category aml:hasParameter ?parameter .
+}

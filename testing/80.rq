@@ -1,0 +1,10 @@
+# CQ-80: What is the data type of a parameter?
+# To determine the data type of an instantiated aml:Parameter (from the Core Module), we can inspect the datatype of its literal value.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT (datatype(?value) AS ?dataType)
+WHERE {
+    ?parameter a aml:Parameter ;
+               aml:value ?value .
+}

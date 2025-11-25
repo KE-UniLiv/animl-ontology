@@ -1,0 +1,10 @@
+# CQ-59: On which operating system was the software running?
+# Software is modelled as aml:SoftwareAgent (a subclass of aml:Agent in the Core Module). Standard AnIML metadata includes the operating system environment, mapped to aml:operatingSystem.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?operatingSystem
+WHERE {
+    ?software a aml:SoftwareAgent ;
+              aml:operatingSystem ?operatingSystem .
+}

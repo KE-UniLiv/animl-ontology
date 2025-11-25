@@ -1,0 +1,12 @@
+# CQ-12: What is the user type of an author (human, device, software)?
+# According to the Core Module, agents are typed using the aml:AgentType class (with instances like aml:HumanAgent, aml:SoftwareAgent, etc.) linked via the aml:hasType property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?userType
+WHERE {
+    ?agent a aml:Agent ;
+           aml:hasType ?userType .
+           
+    # ?userType will be instances like aml:HumanAgent, aml:SoftwareAgent, etc.
+}

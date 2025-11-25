@@ -1,0 +1,10 @@
+# CQ-39: What is the name of an experiment step?
+# The Core Module explicitly connects aml:ExperimentStep to xsd:string via the aml:name property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?stepName
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:name ?stepName .
+}
