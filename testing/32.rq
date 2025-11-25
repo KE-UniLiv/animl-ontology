@@ -1,0 +1,10 @@
+# CQ-32: Who is the manufacturer of the device?
+# Based on the Core Module, devices are represented as aml:HardwareAgent.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?manufacturer
+WHERE {
+    ?device a aml:HardwareAgent ;
+            aml:manufacturer ?manufacturer .
+}

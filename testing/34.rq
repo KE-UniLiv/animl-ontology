@@ -1,0 +1,10 @@
+# CQ-34: What is the original source data location for a sample?
+# In AnIML, samples often reference an external origin. In the Core Module, aml:Sample entities carry metadata properties.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?sourceLocation
+WHERE {
+    ?sample a aml:Sample ;
+            aml:sourceDataLocation ?sourceLocation .
+}

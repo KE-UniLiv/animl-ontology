@@ -1,0 +1,12 @@
+# CQ-76: How is a unit defined using SI base units?
+# The Technique Module shows aml:SIUnit linked to aml:factor, aml:exponent, and aml:offset to define conversions to base units.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?factor ?exponent ?offset
+WHERE {
+    ?unit a aml:SIUnit ;
+          aml:factor ?factor ;
+          aml:exponent ?exponent ;
+          aml:offset ?offset .
+}

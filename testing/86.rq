@@ -1,0 +1,10 @@
+# CQ-86: What is the URI for a specific technique extension?
+# The Technique Module explicitly models inheritance via the aml:extends object property. The value returned is the URI of the parent technique.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?parentTechniqueURI
+WHERE {
+    ?extensionTechnique a aml:Technique ;
+                        aml:extends ?parentTechniqueURI .
+}

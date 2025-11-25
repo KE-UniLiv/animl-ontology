@@ -1,0 +1,12 @@
+# CQ-28: What sample roles are defined as blueprints for a technique?
+# In the Technique Module, the technique definition acts as a container for blueprints, including aml:Role definitions (e.g., "Experiment Data Role Blueprint" in XML).
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?roleBlueprint
+WHERE {
+    ?technique a aml:Technique ;
+               aml:hasPart ?roleBlueprint .
+               
+    ?roleBlueprint a aml:Role .
+}

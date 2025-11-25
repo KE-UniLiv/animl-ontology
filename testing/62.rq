@@ -1,0 +1,10 @@
+# CQ-62: What units are allowed for a specific quantity in a technique definition?
+# In the Technique Module, the aml:Units class (and aml:SIUnit) is linked to the aml:quantity data property (e.g., "Voltage", "Length"). This property defines the physical quantity the unit measures.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?unit
+WHERE {
+    ?unit a aml:Units ;
+          aml:quantity "QuantityNamePlaceholder" .
+}

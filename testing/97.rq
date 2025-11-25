@@ -1,0 +1,10 @@
+# CQ-97: What is the name of a template?
+# The Core Module shows the aml:Template class. Like other major entities in the ontology, it uses the aml:name data property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?templateName
+WHERE {
+    ?template a aml:Template ;
+              aml:name ?templateName .
+}

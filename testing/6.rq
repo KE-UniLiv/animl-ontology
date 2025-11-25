@@ -1,0 +1,10 @@
+# CQ-6: What is the unique identifier of the device?
+# According to the Core Module, devices are modelled as aml:HardwareAgent (a subclass of aml:Agent). The standard unique identifier for equipment in this domain is the serial number.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?deviceID
+WHERE {
+    ?device a aml:HardwareAgent ;
+            aml:serialNumber ?deviceID .
+}

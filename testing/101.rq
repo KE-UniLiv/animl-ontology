@@ -1,0 +1,14 @@
+# CQ-102: What is the defined format of a sample container, such as the number of wells in a microtiter plate?
+# In the Core Module, specific container configurations (like a 96-well plate) are defined by the aml:ContainerType class (e.g., aml:RectangularTrayContainerType). Structural dimensions are data properties on this type definition.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?container ?rowCount ?colCount
+WHERE {
+    ?container a aml:Container ;
+               aml:hasType ?containerType .
+               
+    ?containerType a aml:RectangularTrayContainerType ;
+                   aml:rowCount ?rowCount ;
+                   aml:colCount ?colCount .
+}

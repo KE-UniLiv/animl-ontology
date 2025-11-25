@@ -1,0 +1,13 @@
+# CQ-56: What is the data type of the values in a series?
+# The Technique Module shows that the aml:SeriesSpecification defines the structure of a series, linking to aml:DataType via the aml:hasType property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?dataType
+WHERE {
+    ?series a aml:Series ;
+            aml:hasSpecification ?specification .
+            
+    ?specification aml:hasType ?dataType .
+    # ?dataType will be instances like aml:float32, aml:int64
+}

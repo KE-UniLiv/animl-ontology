@@ -1,0 +1,18 @@
+# CQ-10: Which samples were produced in an experiment step?
+# Using the Reference Pattern and the Core text, samples produced by a step are referenced within that step's aml:Result.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?sample
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasResult ?result .
+          
+    ?result aml:includes ?referenceSet .
+    
+    ?referenceSet aml:hasMember ?reference .
+    
+    ?reference aml:pointsTo ?sample .
+    
+    ?sample a aml:Sample .
+}

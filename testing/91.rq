@@ -1,0 +1,12 @@
+# CQ-91: What is the URI for a cited literature reference in a technique definition?
+# The Technique Module includes aml:citation on the aml:Technique class. While the diagram shows it as a string, in a Linked Data context, this property (or rdfs:seeAlso) often contains the URI/DOI of the reference.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?referenceURI
+WHERE {
+    ?technique a aml:Technique ;
+               aml:citation ?referenceURI . 
+    # Alternatively check rdfs:seeAlso
+}

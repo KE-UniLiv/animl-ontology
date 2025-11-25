@@ -1,0 +1,10 @@
+# CQ-30: What is the physical location of an author?
+# The Core Module lists data properties for aml:Agent. While the diagram text is small, aml:location is the standard property for address/location information in this context.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?location
+WHERE {
+    ?author a aml:Agent ;
+            aml:location ?location .
+}

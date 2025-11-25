@@ -1,0 +1,10 @@
+# CQ-93: What is the unit associated with a series?
+# The Core Module explicitly depicts a green arrow connecting aml:Series to aml:Unit (or aml:SIUnit via the Technique definition) using the aml:hasUnit property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?unit
+WHERE {
+    ?series a aml:Series ;
+            aml:hasUnit ?unit .
+}

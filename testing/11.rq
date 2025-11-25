@@ -1,0 +1,11 @@
+# CQ-11: Who made a specific change in the audit trail?
+# The Core Module shows the aml:AuditTrail tracks versions. An aml:AuditTrailEntry contains aml:Change objects and links to an aml:Agent (the author) responsible for that entry.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?author
+WHERE {
+    ?entry a aml:AuditTrailEntry ;
+           aml:hasChange <http://example.org/specific_change_uri> ;
+           aml:hasAuthor ?author .
+}

@@ -1,0 +1,17 @@
+# CQ-47: When was an experiment step performed?
+# Timestamps for steps are typically recorded as parameters within the step's result metadata (e.g., "Start Time"). We query the Core Module structure: aml:Result -> aml:Category -> aml:Parameter.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?startTime
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasResult ?result .
+          
+    ?result aml:hasCategory ?category .
+    
+    ?category aml:hasParameter ?parameter .
+    
+    ?parameter aml:name "Start Time" ;
+               aml:value ?startTime .
+}

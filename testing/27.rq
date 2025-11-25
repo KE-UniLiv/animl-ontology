@@ -1,0 +1,12 @@
+# CQ-27: What role did a specific sample play in an experiment step?
+# Similar to CQ-24, this relies on the Reference Pattern. An Experiment Step references a Sample via aml:AnimlReference, and the aml:hasFunction property defines the sample's role (e.g., "analyte", "blank").
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?role
+WHERE {
+    # Match the reference linking a specific sample
+    ?reference a aml:AnimlReference ;
+               aml:pointsTo <http://example.org/specific_sample> ;
+               aml:hasFunction ?role .
+}

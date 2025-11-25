@@ -1,0 +1,13 @@
+# CQ-53: Is a specific result required by a technique's definition?
+# In the Technique Module, blueprints such as aml:ResultSpecification (inferred from the general specification pattern and XML examples) carry constraints. The aml:modality property defines whether the item is "required" or "optional".
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?modality
+WHERE {
+    ?technique aml:hasPart ?resultBlueprint .
+    
+    ?resultBlueprint a aml:ResultSpecification ; # Subclass of Specification
+                     aml:name "SpecificResultName" ;
+                     aml:modality ?modality .
+}

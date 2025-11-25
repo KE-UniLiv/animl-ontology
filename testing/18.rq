@@ -1,0 +1,10 @@
+# CQ-18: What technique was applied in an experiment step?
+# The Core Module shows a direct relationship aml:hasTechnique connecting aml:ExperimentStep to aml:Technique.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?technique
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasTechnique ?technique .
+}

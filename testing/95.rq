@@ -1,0 +1,10 @@
+# CQ-95: What is the unique ID of a specific sample?
+# Following your previous correction and the Core Module, we use the generic aml:id property (inherited from owl:Thing in Graffoo) rather than a specific sample-only ID property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?sampleID
+WHERE {
+    ?sample a aml:Sample ;
+            aml:id ?sampleID .
+}
