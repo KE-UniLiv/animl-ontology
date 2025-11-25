@@ -4,7 +4,6 @@ http://w3id.org/animl/Specification	http://purl.allotrope.org/ontologies/result#
 http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item	http://purl.allotrope.org/ontologies/common#AFC_0000161	0.51
 http://w3id.org/animl/Reference	http://purl.allotrope.org/ontologies/result#AFR_0002008	0.51
 http://w3id.org/animl/Role	http://purl.allotrope.org/ontologies/role#AFRL_0000012	0.51
-http://w3id.org/animl/Agent	http://purl.allotrope.org/ontologies/role#AFRL_0000095	0.51
 http://w3id.org/animl/Signature	http://purl.allotrope.org/ontologies/role#AFRL_0000438	0.51
 http://w3id.org/animl/Parameter	http://purl.allotrope.org/ontologies/role#AFRL_0000019	0.51
 http://w3id.org/animl/Parameter	http://purl.allotrope.org/ontologies/role#AFRL_0000478	0.51

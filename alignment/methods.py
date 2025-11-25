@@ -24,7 +24,7 @@ def get_ontologies() -> dict:
         "TheMusicOntology": os.path.join(os.getcwd(), "alignment", "ontologies", "TheMusicOntology", "moowl.owl"),
         "AnIML": os.path.join(os.getcwd(), "ontologies", "animl_ontology.owl"),
         "AnIML (Skeleton)": os.path.join(os.getcwd(), "alignment", "ontologies", "AniML", "skeleton_ontology.rdf"),
-        "Allotrope": os.path.join(os.getcwd(), "alignment", "ontologies", "AFO-2025_06", "afo", "voc", "afo", "merged", "REC", "2025", "06", "merged-without-qudt.xml"),
+        "Allotrope": os.path.join(os.getcwd(), "alignment", "ontologies", "AFO-2025_06", "afo", "voc", "afo", "merged", "REC", "2025", "06", "merged-without-qudt.owl"),
         "mouse-human-source": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "source.xml"),
         "mouse-human-target": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "target.xml"),
         "mouse-human-reference": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "reference.xml"),
@@ -68,7 +68,7 @@ def run_logmap_direct(source_ontology, target_ontology, output_path) -> bool:
         "-jar", "/mnt/c/Users/ellio/AppData/Local/Programs/Python/Python313/Lib/site-packages/deeponto/align/logmap/logmap-matcher-4.0.jar",
         "MATCHER", 
         "file:///mnt/d/GitHub/animl-ontology/ontologies/animl_ontology.owl",
-        "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AFO-2025_06/afo/voc/afo/merged/REC/2025/06/merged-without-qudt.xml",
+        "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AFO-2025_06/afo/voc/afo/merged/REC/2025/06/merged-without-qudt.owl",
         "/mnt/d/GitHub/animl-ontology/alignment/outputs/logmap/",
         "true"
     ]

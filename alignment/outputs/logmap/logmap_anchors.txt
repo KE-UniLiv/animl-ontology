@@ -4,7 +4,6 @@ http://w3id.org/animl/Specification|http://purl.allotrope.org/ontologies/result#
 http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item|http://purl.allotrope.org/ontologies/common#AFC_0000161|=|0.51|CLS
 http://w3id.org/animl/Reference|http://purl.allotrope.org/ontologies/result#AFR_0002008|=|0.51|CLS
 http://w3id.org/animl/Role|http://purl.allotrope.org/ontologies/role#AFRL_0000012|=|0.51|CLS
-http://w3id.org/animl/Agent|http://purl.allotrope.org/ontologies/role#AFRL_0000095|=|0.51|CLS
 http://w3id.org/animl/Signature|http://purl.allotrope.org/ontologies/role#AFRL_0000438|=|0.51|CLS
 http://w3id.org/animl/Parameter|http://purl.allotrope.org/ontologies/role#AFRL_0000019|=|0.51|CLS
 http://w3id.org/animl/Parameter|http://purl.allotrope.org/ontologies/role#AFRL_0000478|=|0.51|CLS
@@ -13,7 +12,7 @@ http://w3id.org/animl/Reference|http://purl.allotrope.org/ontologies/role#AFRL_0
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001638|=|0.63|CLS
 http://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0001987|=|0.51|CLS
 http://w3id.org/animl/Change|http://purl.allotrope.org/ontologies/function#AFFN_0000136|=|0.51|CLS
-http://w3id.org/animl/Agent|http://purl.allotrope.org/ontologies/role#AFRL_0000448|<|0.51|CLS
+http://w3id.org/animl/Agent|http://purl.allotrope.org/ontologies/role#AFRL_0000448|=|0.51|CLS
 http://w3id.org/animl/ParameterSpecification|http://purl.allotrope.org/ontologies/result#AFR_0000977|=|0.63|CLS
 http://w3id.org/animl/Document|http://purl.obolibrary.org/obo/IAO_0000310|=|0.51|CLS
 http://w3id.org/animl/Signature|http://purl.allotrope.org/ontologies/result#AFR_0001963|=|0.51|CLS

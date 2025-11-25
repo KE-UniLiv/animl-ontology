@@ -66,8 +66,8 @@ http://w3id.org/animl/SeriesSpecification|http://purl.allotrope.org/ontologies/r
 http://w3id.org/animl/SampleInContainer|http://purl.allotrope.org/ontologies/result#AFR_0002083|=|0.4|CLS
 http://w3id.org/animl/DataPointSpecification|http://purl.allotrope.org/ontologies/result#AFR_0002657|=|0.4|CLS
 http://w3id.org/animl/ChangeType|http://purl.allotrope.org/ontologies/result#AFR_0002254|=|0.4|CLS
-http://w3id.org/animl/ChangeType|http://purl.allotrope.org/ontologies/result#AFR_0002253|=|0.4|CLS
 http://w3id.org/animl/ChangeType|http://purl.allotrope.org/ontologies/result#AFR_0001285|=|0.4|CLS
+http://w3id.org/animl/ChangeType|http://purl.allotrope.org/ontologies/result#AFR_0002253|=|0.4|CLS
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/result#AFR_0001880|=|0.4|CLS
 http://w3id.org/animl/DataPointSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001560|=|0.4|CLS
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/result#AFR_0002600|=|0.4|CLS
@@ -146,8 +146,8 @@ http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/process#AFP_
 http://w3id.org/animl/SeriesSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001558|=|0.4|CLS
 http://w3id.org/animl/SampleInContainer|http://purl.allotrope.org/ontologies/result#AFR_0002610|=|0.4|CLS
 http://w3id.org/animl/ReferenceSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001285|=|0.4|CLS
-http://w3id.org/animl/ReferenceSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001286|=|0.4|CLS
 http://w3id.org/animl/ReferenceSpecification|http://purl.obolibrary.org/obo/IAO_0000005|=|0.4|CLS
+http://w3id.org/animl/ReferenceSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001286|=|0.4|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0002031|=|0.4|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0002395|=|0.4|CLS
 http://w3id.org/animl/SampleSet|http://purl.allotrope.org/ontologies/process#AFP_0003813|<|0.2|CLS
@@ -194,7 +194,7 @@ http://w3id.org/animl/ParameterSpecification|http://purl.allotrope.org/ontologie
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/result#AFR_0000958|=|0.4|CLS
 http://w3id.org/animl/SeriesSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001639|=|0.4|CLS
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/role#AFRL_0000333|=|0.4|CLS
-http://w3id.org/animl/Agent|http://purl.allotrope.org/ontologies/role#AFRL_0000448|<|1.0|CLS
+http://w3id.org/animl/Agent|http://purl.allotrope.org/ontologies/role#AFRL_0000448|=|1.0|CLS
 http://w3id.org/animl/SeriesSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001638|=|0.4|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/role#AFRL_0000313|=|0.4|CLS
 http://w3id.org/animl/SeriesSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001637|=|0.4|CLS
@@ -204,7 +204,7 @@ http://w3id.org/animl/SampleSet|http://purl.allotrope.org/ontologies/process#AFP
 http://w3id.org/animl/ReferenceSet|http://purl.allotrope.org/ontologies/role#AFRL_0000335|=|0.4|CLS
 http://w3id.org/animl/ParameterSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001058|=|0.4|CLS
 http://w3id.org/animl/SampleInContainer|http://purl.allotrope.org/ontologies/equipment#AFE_0002278|=|0.4|CLS
-http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/process#AFP_0003598|>|0.2|CLS
+http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/process#AFP_0003598|<|0.2|CLS
 http://w3id.org/animl/SignatureSet|http://purl.allotrope.org/ontologies/result#AFR_0002546|=|0.4|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0003164|=|0.4|CLS
 http://w3id.org/animl/SampleInContainer|http://purl.allotrope.org/ontologies/result#AFR_0002821|=|0.4|CLS
@@ -227,8 +227,8 @@ http://w3id.org/animl/ChangeType|http://purl.allotrope.org/ontologies/result#AFR
 http://w3id.org/animl/ChangeType|http://purl.allotrope.org/ontologies/result#AFR_0003070|=|0.4|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001124|=|0.4|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001005|=|0.4|CLS
-http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0003146|=|0.4|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0002299|=|0.4|CLS
+http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0003146|=|0.4|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0003023|=|0.4|CLS
 http://w3id.org/animl/Role|http://purl.obolibrary.org/obo/BFO_0000023|<|0.2|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0003142|=|0.4|CLS
@@ -318,8 +318,8 @@ http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/result#AFR_
 http://w3id.org/animl/Method|http://purl.allotrope.org/ontologies/result#AFR_0001501|=|0.8|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001554|=|0.4|CLS
 http://w3id.org/animl/SampleInContainer|http://purl.allotrope.org/ontologies/equipment#AFE_0000022|=|0.4|CLS
-http://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0002253|=|0.4|CLS
 http://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0001285|=|0.4|CLS
+http://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0002253|=|0.4|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0001278|=|0.4|CLS
 http://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0002254|=|0.4|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/result#AFR_0001279|=|0.4|CLS
@@ -373,7 +373,7 @@ http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/role#AFRL_0
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/result#AFR_0003006|=|0.4|CLS
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/process#AFP_0003656|<|0.2|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001640|=|0.4|CLS
-http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/process#AFP_0003655|<|0.2|CLS
+http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/process#AFP_0003655|>|0.2|CLS
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/result#AFR_0003008|=|0.4|CLS
 http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/process#AFP_0002296|=|0.4|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001641|=|0.4|CLS
@@ -393,7 +393,7 @@ http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/role#AFRL_00
 http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/result#AFR_0002891|=|0.4|CLS
 http://w3id.org/animl/ParameterSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001640|=|0.4|CLS
 http://w3id.org/animl/ParameterSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001641|=|0.4|CLS
-http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/process#AFP_0003722|<|0.2|CLS
+http://w3id.org/animl/DataPoint|http://purl.allotrope.org/ontologies/process#AFP_0003722|>|0.2|CLS
 http://w3id.org/animl/ReferenceSpecification|http://purl.allotrope.org/ontologies/result#AFR_0000980|=|0.4|CLS
 http://w3id.org/animl/AgentType|http://purl.allotrope.org/ontologies/result#AFR_0002229|=|0.4|CLS
 http://w3id.org/animl/ReferenceSpecification|http://purl.allotrope.org/ontologies/result#AFR_0000982|=|0.4|CLS
@@ -419,8 +419,8 @@ http://w3id.org/animl/DataType|http://purl.allotrope.org/ontologies/role#AFRL_00
 http://w3id.org/animl/DataPointSpecification|http://purl.obolibrary.org/obo/IAO_0000098|=|0.4|CLS
 http://w3id.org/animl/AgentType|http://purl.allotrope.org/ontologies/result#AFR_0003109|=|0.4|CLS
 http://w3id.org/animl/SeriesSpecification|http://purl.allotrope.org/ontologies/common#AFC_0000163|=|0.4|CLS
-http://w3id.org/animl/Agent|http://purl.allotrope.org/ontologies/role#AFRL_0000095|=|1.0|CLS
 http://w3id.org/animl/SampleSet|http://purl.allotrope.org/ontologies/result#AFR_0001982|=|0.4|CLS
+http://w3id.org/animl/Agent|http://purl.allotrope.org/ontologies/role#AFRL_0000095|>|0.2|CLS
 http://w3id.org/animl/Signature|http://purl.allotrope.org/ontologies/role#AFRL_0000438|=|1.0|CLS
 http://w3id.org/animl/ParameterSpecification|http://purl.allotrope.org/ontologies/result#AFR_0001501|=|0.4|CLS
 http://w3id.org/animl/AgentType|http://purl.allotrope.org/ontologies/result#AFR_0002205|=|0.4|CLS
@@ -475,8 +475,8 @@ http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/res
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0000976|=|0.4|CLS
 http://w3id.org/animl/AgentType|http://purl.allotrope.org/ontologies/result#AFR_0002254|=|0.4|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0000979|=|0.4|CLS
-http://w3id.org/animl/AgentType|http://purl.allotrope.org/ontologies/result#AFR_0002253|=|0.4|CLS
 http://w3id.org/animl/AgentType|http://purl.allotrope.org/ontologies/result#AFR_0001285|=|0.4|CLS
+http://w3id.org/animl/AgentType|http://purl.allotrope.org/ontologies/result#AFR_0002253|=|0.4|CLS
 http://w3id.org/animl/ItemSpecification|http://purl.allotrope.org/ontologies/result#AFR_0000978|=|0.4|CLS
 http://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0002624|=|0.4|CLS
 http://w3id.org/animl/ContainerType|http://purl.allotrope.org/ontologies/result#AFR_0002625|=|0.4|CLS

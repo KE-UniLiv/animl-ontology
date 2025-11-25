@@ -61,14 +61,6 @@
 </map>
 <map>
 	<Cell>
-		<entity1 rdf:resource="http://w3id.org/animl/Agent"/>
-		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000095"/>
-		<measure rdf:datatype="xsd:float">0.51</measure>
-		<relation>=</relation>
-	</Cell>
-</map>
-<map>
-	<Cell>
 		<entity1 rdf:resource="http://w3id.org/animl/Signature"/>
 		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000438"/>
 		<measure rdf:datatype="xsd:float">0.51</measure>
@@ -136,7 +128,7 @@
 		<entity1 rdf:resource="http://w3id.org/animl/Agent"/>
 		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000448"/>
 		<measure rdf:datatype="xsd:float">0.51</measure>
-		<relation>&lt;</relation>
+		<relation>=</relation>
 	</Cell>
 </map>
 <map>
