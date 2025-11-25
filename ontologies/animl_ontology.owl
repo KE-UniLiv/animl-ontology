@@ -778,10 +778,14 @@
                 <owl:onProperty rdf:resource="http://w3id.org/animl/hasType"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/animl/AgentType"/>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>      
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/animl/Role"/>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>  
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://w3id.org/animl/hasAuditTrail"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/animl/AuditTrail"/>
@@ -790,7 +794,12 @@
     </owl:Class>
 
 
-    <!-- this is the concept of a role that an object in the system may need an agent to fulfil-->
+    <!-- this is the concept of a role that an object in the system may need an agent to fulfil
+    
+                <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/Role"/>
+            </owl:Restriction>-->
     <owl:Class rdf:about="http://w3id.org/animl/Role">
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1161,10 +1170,12 @@
     <!-- this is a subclass of experimentstep used in place of its superclass when the author wishes to denote
     that the experiment is an example of / specification for a type of experimentstep -->
     <owl:Class rdf:about="http://w3id.org/animl/Template">
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
-            <owl:allValuesFrom rdf:resource="http://w3id.org/animl/ExperimentStep"/>
-        </owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/animl/ExperimentStep"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
     <!-- this is a specific version, representing the state of the document at a particular moment in time,
@@ -1659,17 +1670,19 @@
                     <owl:allValuesFrom rdf:resource="http://w3id.org/animl/DataPointType"/>
                 </owl:Restriction>
             </rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/animl/usedBy"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://w3id.org/animl/DataPoint"/>
-                            <rdf:Description rdf:about="http://w3id.org/animl/SeriesSpecification"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
+            <rdfs:subClassOf>
+                <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://w3id.org/animl/usedBy"/>
+                    <owl:allValuesFrom>
+                        <owl:Class>
+                            <owl:unionOf rdf:parseType="Collection">
+                                <rdf:Description rdf:about="http://w3id.org/animl/DataPoint"/>
+                                <rdf:Description rdf:about="http://w3id.org/animl/SeriesSpecification"/>
+                            </owl:unionOf>
+                        </owl:Class>
+                    </owl:allValuesFrom>
+                </owl:Restriction>
+            </rdfs:subClassOf>
             <rdfs:subClassOf>
                 <owl:Restriction>
                     <owl:onProperty rdf:resource="http://w3id.org/animl/isPartOf"/>
