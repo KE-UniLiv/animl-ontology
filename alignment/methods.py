@@ -22,7 +22,7 @@ def get_ontologies() -> dict:
     ontologies = {
         "MusicMeta": os.path.join(os.getcwd(), "alignment", "ontologies", "MusicMeta", "musicmeta.owl"),
         "TheMusicOntology": os.path.join(os.getcwd(), "alignment", "ontologies", "TheMusicOntology", "moowl.owl"),
-        "AnIML": os.path.join(os.getcwd(), "ontologies", "animl_manual.owl"),
+        "AnIML": os.path.join(os.getcwd(), "ontologies", "animl_ontology.owl"),
         "AnIML (Skeleton)": os.path.join(os.getcwd(), "alignment", "ontologies", "AniML", "skeleton_ontology.rdf"),
         "Allotrope": os.path.join(os.getcwd(), "alignment", "ontologies", "AFO-2025_06", "afo", "voc", "afo", "merged", "REC", "2025", "06", "merged-without-qudt.xml"),
         "mouse-human-source": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "source.xml"),
@@ -67,7 +67,7 @@ def run_logmap_direct(source_ontology, target_ontology, output_path) -> bool:
         "-Xms500m", "-Xmx10g", "-DentityExpansionLimit=100000000",
         "-jar", "/mnt/c/Users/ellio/AppData/Local/Programs/Python/Python313/Lib/site-packages/deeponto/align/logmap/logmap-matcher-4.0.jar",
         "MATCHER", 
-        "file:///mnt/d/GitHub/animl-ontology/ontologies/animl_manual.rdf",
+        "file:///mnt/d/GitHub/animl-ontology/ontologies/animl_ontology.owl",
         "file:///mnt/d/GitHub/animl-ontology/alignment/ontologies/AFO-2025_06/afo/voc/afo/merged/REC/2025/06/merged-without-qudt.xml",
         "/mnt/d/GitHub/animl-ontology/alignment/outputs/logmap/",
         "true"

@@ -1,1 +1,0 @@
-http://w3id.org/animl/reference|http://purl.allotrope.org/ontologies/role#AFRL_0000022|=|0.51|CLS
