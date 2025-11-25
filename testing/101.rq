@@ -1,14 +1,15 @@
-# CQ-102: What is the defined format of a sample container, such as the number of wells in a microtiter plate?
-# In the Core Module, specific container configurations (like a 96-well plate) are defined by the aml:ContainerType class (e.g., aml:RectangularTrayContainerType). Structural dimensions are data properties on this type definition.
+# CQ-101: What is the location of a sample within its container, if specified?
+# The Core Module uses the aml:SampleInContainer situation class to model the relationship between a sample and its holder. This class carries the specific positional data (e.g., "A1", "Row 3") via the aml:position property.
 
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 
-SELECT ?container ?rowCount ?colCount
+SELECT ?sample ?container ?row ?column
 WHERE {
-    ?container a aml:Container ;
-               aml:hasType ?containerType .
-               
-    ?containerType a aml:RectangularTrayContainerType ;
-                   aml:rowCount ?rowCount ;
-                   aml:colCount ?colCount .
+    # The situation links the sample to the container
+    ?sample a aml:Sample ;
+            aml:isContained ?situation .
+    ?situation a aml:SampleInContainer ;
+            aml:isContainedBy ?container ;
+            aml:containerRow ?row ;
+            aml:containerColumn ?column .
 }
