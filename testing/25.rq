@@ -1,0 +1,10 @@
+# CQ-25: What is the SHA256 checksum of the technique definition file?
+# The Technique Module explicitly depicts the aml:sha256 data property connected to the aml:Technique class.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?checksum
+WHERE {
+    ?technique a aml:Technique ;
+               aml:sha256 ?checksum .
+}

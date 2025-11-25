@@ -1,0 +1,10 @@
+# CQ-40: What is the end value of a parent data point reference?
+# The Reference Pattern explicitly defines aml:startValue and aml:endValue on the aml:AnimlReference class to support data slicing.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?endValue
+WHERE {
+    ?reference a aml:AnimlReference ;
+               aml:endValue ?endValue .
+}

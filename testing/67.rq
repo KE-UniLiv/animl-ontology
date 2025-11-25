@@ -1,0 +1,14 @@
+# CQ-67: What device was used to perform the experiment?
+# In the Core Module, the aml:Method links to aml:Agent. We filter for aml:HardwareAgent to identify devices.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?device
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasMethod ?method .
+          
+    ?method aml:hasAgent ?device .
+    
+    ?device a aml:HardwareAgent .
+}

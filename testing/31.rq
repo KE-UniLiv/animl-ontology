@@ -1,0 +1,10 @@
+# CQ-31: What was the old value of an item that was changed?
+# The Core Module depicts aml:Change with specific data properties for value tracking, specifically aml:oldValue (and aml:newValue).
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?oldValue
+WHERE {
+    ?change a aml:Change ;
+            aml:oldValue ?oldValue .
+}

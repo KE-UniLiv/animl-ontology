@@ -1,0 +1,10 @@
+# CQ-49: What is the start value of a parent data point reference?
+# The Reference Pattern explicitly includes the aml:startValue data property on the aml:AnimlReference class, used for defining data slices.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?startValue
+WHERE {
+    ?reference a aml:AnimlReference ;
+               aml:startValue ?startValue .
+}

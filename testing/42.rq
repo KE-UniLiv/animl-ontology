@@ -1,0 +1,13 @@
+# CQ-42: Is a sample with a specific role required or optional for a technique?
+# In the Technique Module, blueprints (specifications) such as aml:Role carry constraints. The XML attribute modality ("required" or "optional") is mapped to the aml:modality data property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?modality
+WHERE {
+    ?technique aml:hasPart ?roleBlueprint .
+    
+    ?roleBlueprint a aml:Role ;
+                   aml:name "SpecificRoleName" ;
+                   aml:modality ?modality .
+}

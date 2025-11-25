@@ -1,0 +1,10 @@
+# CQ-29: What is the role of an author within their organization?
+# In the Core Module, the aml:Agent class is linked to aml:Role. While typically used for experimental roles, this relationship can also capture organizational roles if defined in the metadata.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?organizationRole
+WHERE {
+    ?author a aml:Agent ;
+            aml:hasRole ?organizationRole .
+}

@@ -1,0 +1,10 @@
+# CQ-20: What is the version of the software?
+# While aml:SoftwareAgent is defined in the Core Module, standard versioning properties are implied. Additionally, the Technique Module shows aml:Technique has a aml:version property. We apply this same property to the software agent.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?softwareVersion
+WHERE {
+    ?software a aml:SoftwareAgent ;
+              aml:version ?softwareVersion .
+}

@@ -1,0 +1,14 @@
+# CQ-15: What type of action was performed during an audit trail event (e.g., created, modified)?
+# The Core Module shows aml:Change linked to aml:ChangeType via the aml:hasType property. The diagram lists instances such as aml:Modification, aml:Creation, and aml:Deletion.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?actionType
+WHERE {
+    ?auditEntry aml:hasChange ?change .
+    
+    ?change a aml:Change ;
+            aml:hasType ?actionType .
+            
+    # ?actionType will be aml:Creation, aml:Modification, etc.
+}

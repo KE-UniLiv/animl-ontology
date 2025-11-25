@@ -1,0 +1,10 @@
+# CQ-72: What is the ID of a specific series?
+# In the Core Module, aml:Series is a generic entity that inherits the standard identification property. Following the correction made previously, we use aml:id.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?seriesID
+WHERE {
+    ?series a aml:Series ;
+            aml:id ?seriesID .
+}

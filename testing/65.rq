@@ -1,0 +1,10 @@
+# CQ-65: What is the email address of an author?
+# The Core Module lists data properties for the aml:Agent class, explicitly showing aml:email.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?email
+WHERE {
+    ?author a aml:Agent ;
+            aml:email ?email .
+}

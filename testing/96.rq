@@ -1,0 +1,13 @@
+# CQ-96: What is the start index for a specific value set in a series?
+# This refers to the Reference Pattern, which allows pointing to a subset (slice) of data within a series. The aml:startValue property on the reference defines the starting index of this slice.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?startIndex
+WHERE {
+    ?reference a aml:AnimlReference ;
+               aml:pointsTo ?series ;
+               aml:startValue ?startIndex .
+               
+    ?series a aml:Series .
+}

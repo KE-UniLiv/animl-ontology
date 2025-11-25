@@ -1,0 +1,16 @@
+# CQ-1: Who digitally signed a specific part of the document?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?signer
+WHERE {
+    # Match a Signature instance
+    ?signature a aml:Signature .
+    # The signature references a specific item (the SignableItem)
+    ?signature aml:references ?signedItem .
+    # The signature has an author/signer (Agent)
+    ?signature aml:hasAuthor ?signer .
+    # Optional: Filter for a specific item URI if needed
+    # FILTER (?signedItem = <http://example.org/specific_experiment_step>)
+}

@@ -1,0 +1,14 @@
+# CQ-7: What documentation is provided for a specific sample role in a technique?
+# The Technique Module shows that aml:Technique has parts (via aml:hasPart) that can be aml:Roles. The text examples show <Documentation> tags associated with these definitions.
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?documentation
+WHERE {
+    ?technique a aml:Technique ;
+               aml:hasPart ?role .
+    
+    ?role a aml:Role ;
+          aml:name "SpecificRoleName" ;
+          rdfs:comment ?documentation .
+}

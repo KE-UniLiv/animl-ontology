@@ -1,0 +1,10 @@
+# CQ-64: What is the URI of the technique definition used in an experiment step?
+# The Core Module shows that aml:ExperimentStep links to aml:Technique. In RDF/OWL, the URI is the identifier of the technique resource itself.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?techniqueURI
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasTechnique ?techniqueURI .
+}

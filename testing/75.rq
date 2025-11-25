@@ -1,0 +1,12 @@
+# CQ-75: What technique extensions were applied in an experiment step?
+# In the Technique Module, techniques can build upon others using aml:extends. If an experiment step uses a technique that extends another, that extension is effectively applied.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?baseTechnique
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:usesTechnique ?appliedTechnique .
+          
+    ?appliedTechnique aml:extends ?baseTechnique .
+}

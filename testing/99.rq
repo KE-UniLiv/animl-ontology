@@ -1,0 +1,10 @@
+# CQ-99: Which organization is an author affiliated with?
+# In the Core Module, the aml:Agent class includes metadata about the actor. Affiliation is typically captured via the aml:organisation property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?organization
+WHERE {
+    ?author a aml:Agent ;
+            aml:organisation ?organization .
+}

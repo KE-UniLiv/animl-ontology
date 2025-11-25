@@ -1,0 +1,10 @@
+# CQ-89: What is the name of a series?
+# The Core Module shows aml:Series (contained within aml:SeriesSet) has a aml:name property, used to label the dimension (e.g., "Time", "Absorbance").
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?seriesName
+WHERE {
+    ?series a aml:Series ;
+            aml:name ?seriesName .
+}
