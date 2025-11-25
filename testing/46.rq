@@ -1,0 +1,12 @@
+# CQ-46: Which item in the document was affected by an audit trail change?
+# In the Core Module, an aml:Change is linked to an aml:SignableItem (the superclass for ExperimentSteps, Samples, etc.) via the aml:affects object property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?affectedItem
+WHERE {
+    ?change a aml:Change ;
+            aml:affects ?affectedItem .
+            
+    ?affectedItem a aml:SignableItem .
+}

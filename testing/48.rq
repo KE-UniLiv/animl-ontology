@@ -1,0 +1,12 @@
+# CQ-48: What was the reason given for a change in the audit trail?
+# The Core Module indicates that aml:Change objects store metadata. The standard property for the change justification is aml:reason.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?reason
+WHERE {
+    ?entry a aml:AuditTrailEntry ;
+           aml:hasChange ?change .
+           
+    ?change aml:reason ?reason .
+}

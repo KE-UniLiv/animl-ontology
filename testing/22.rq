@@ -1,0 +1,12 @@
+# CQ-22: What is the maximum number of samples allowed for a given role in a technique definition?
+# The AnIML Technique schemas use maxOccurs to constrain roles. In the ontology, this is modelled as a cardinality data property on the aml:Role (or its specification wrapper) within the Technique.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?maxSamples
+WHERE {
+    ?technique aml:hasPart ?role .
+    
+    ?role a aml:Role ;
+          aml:maxCardinality ?maxSamples .
+}

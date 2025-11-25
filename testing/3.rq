@@ -1,0 +1,7 @@
+# CQ-3: Is a specific sample derived from another sample?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+ASK {
+    # Check if specific_sample has a derivation link to another_sample
+    <http://example.org/specific_sample> aml:derivedFrom <http://example.org/another_sample> .
+}

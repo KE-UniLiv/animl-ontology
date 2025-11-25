@@ -1,0 +1,10 @@
+# CQ-63: What is the firmware version of the device?
+# Based on the Core Module, a device is modelled as an aml:HardwareAgent. The standard AnIML property for versioning hardware is aml:firmwareVersion (consistent with aml:version on SoftwareAgents).
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?firmwareVersion
+WHERE {
+    ?device a aml:HardwareAgent ;
+            aml:firmwareVersion ?firmwareVersion .
+}

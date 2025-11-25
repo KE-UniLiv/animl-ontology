@@ -1,0 +1,9 @@
+# CQ-2: What is the phone number of an author?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?phoneNumber
+WHERE {
+    ?agent a aml:Agent ;
+           aml:phone ?phoneNumber .
+}

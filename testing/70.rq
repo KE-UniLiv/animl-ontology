@@ -1,0 +1,12 @@
+# CQ-70: What is the name of the method used in an experiment step?
+# In the Core Module, the aml:Method class (like most AnIML entities) has an aml:name property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?methodName
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasMethod ?method .
+          
+    ?method aml:name ?methodName .
+}

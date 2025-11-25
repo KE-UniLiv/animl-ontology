@@ -1,0 +1,11 @@
+# CQ-43: Are there nested experiment steps within a result?
+# While standard AnIML typically nests data series within results, this query tests if the ontology permits structural nesting of steps within results (a potential edge case). We use aml:includes or aml:hasPart.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+ASK {
+    ?result a aml:Result ;
+            aml:hasPart ?nestedStep .
+            
+    ?nestedStep a aml:ExperimentStep .
+}

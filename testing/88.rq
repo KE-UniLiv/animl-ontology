@@ -1,0 +1,10 @@
+# CQ-88: What is the barcode associated with a sample?
+# In the Core Module, the aml:Sample class is associated with identification properties. Based on the correction regarding sample IDs, we query the aml:barCode data property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?barcode
+WHERE {
+    ?sample a aml:Sample ;
+            aml:barCode ?barcode .
+}

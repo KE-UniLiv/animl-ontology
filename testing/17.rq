@@ -1,0 +1,10 @@
+# CQ-17: What is the label of a unit?
+# The Technique Module shows aml:Units (and aml:SIUnit) linked to xsd:string via the aml:label property.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?label
+WHERE {
+    ?unit a aml:Units ; # or aml:SIUnit
+          aml:label ?label .
+}

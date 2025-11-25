@@ -1,0 +1,13 @@
+# CQ-85: According to the technique blueprint, is a sample in a specific role expected to be produced or consumed?
+# As seen in the XML examples and implied by the Technique Module structure, aml:Role blueprints (e.g., "ExperimentDataRoleBlueprint") define the flow of data. This is mapped to the aml:purpose property (values: "consumed" or "produced").
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?purpose
+WHERE {
+    ?technique aml:hasPart ?roleBlueprint .
+    
+    ?roleBlueprint a aml:Role ;
+                   aml:name "SpecificRoleName" ;
+                   aml:purpose ?purpose .
+}

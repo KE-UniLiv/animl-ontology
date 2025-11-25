@@ -1,0 +1,12 @@
+# CQ-61: What software was used in the method?
+# The Core Module associates aml:Method with aml:Agent. To identify the software, we filter for agents that are instances of aml:SoftwareAgent.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?software
+WHERE {
+    ?method a aml:Method ;
+            aml:hasAgent ?software .
+            
+    ?software a aml:SoftwareAgent .
+}

@@ -1,0 +1,11 @@
+# CQ-50: What is the version of the AnIML Core Schema used in a document?
+# The version of the schema itself is typically an attribute of the root element. In the ontology, we query the aml:version property of the central aml:Document instance.
+
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?version
+WHERE {
+    ?doc a aml:Document ;
+         aml:version ?version .
+}

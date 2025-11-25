@@ -1,0 +1,10 @@
+# CQ-77: What categories of information are defined for a sample?
+# In the Core Module, aml:Sample is a container that can hold various metadata grouped into aml:Category objects.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?category
+WHERE {
+    ?sample a aml:Sample ;
+            aml:hasCategory ?category .
+}

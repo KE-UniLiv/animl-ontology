@@ -1,0 +1,13 @@
+# CQ-21: When was a specific change made?
+# In the Core Module, the timestamp is associated with the aml:AuditTrailEntry containing the change, via the aml:date property (shown connecting to xsd:dateTime).
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?timestamp
+WHERE {
+    ?auditEntry a aml:AuditTrailEntry ;
+                aml:hasChange ?change ;
+                aml:date ?timestamp .
+                
+    # FILTER (?change = <http://example.org/specific_change>)
+}
