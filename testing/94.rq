@@ -1,0 +1,14 @@
+# CQ-94: What is the value of a specific parameter within a result category?This query follows the standard AnIML data hierarchy shown in the Core Module: Result $\to$ Category $\to$ Parameter.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?value
+WHERE {
+    ?result a aml:Result ;
+            aml:hasCategory ?category .
+            
+    ?category aml:hasParameter ?parameter .
+    
+    ?parameter aml:name "SpecificParameterName" ;
+               aml:value ?value .
+}

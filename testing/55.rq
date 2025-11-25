@@ -1,0 +1,18 @@
+# CQ-55: What data points from a parent result were referenced by a child experiment step?
+# This requires traversing the Reference Pattern. We identify references in the child step's infrastructure that point to data points contained within a result of a different (parent) step.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?dataPoint
+WHERE {
+    # Child step consumes data via Infrastructure
+    ?childStep aml:hasInfrastructure/aml:includes/aml:hasMember ?reference .
+    
+    ?reference aml:pointsTo ?dataPoint .
+    ?dataPoint a aml:DataPoint .
+    
+    # The data point belongs to a Series in a Result of the Parent Step
+    ?parentStep aml:hasResult/aml:hasCategory/aml:hasSeries/aml:hasMember ?dataPoint .
+    
+    FILTER (?childStep != ?parentStep)
+}

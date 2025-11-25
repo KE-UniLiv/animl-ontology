@@ -1,90 +1,102 @@
-human:
-
-What experiment steps are included in a result?
-what series did datapoints in infrastructure originate from?
-for a parameter blueprint, what is the blueprint for the category within which the corresponding parameter resides?
-for a series, what type of datapoints does it contain?
-for a technique, what techniques extend it?
-for a sample, which step produced it and which step consumes it?
-when a sample is referenced in infrastrustructure, is that sample derived in a previous step?
-which items can have signatures attached to them?
-what are the different data types present in a series?
-what is the first value in a series?
-what actions has an author performed?
-what software has been run on a device?
-which parameters in a category are optional?
-which parameters are common between allowed series blueprints in a series set blueprint?
-which categories are sub categories
-is a samples (A) container (B) produced in the same experiment step as sample (A) is consumed?
-do any human authors have versions?
-does a series relate to a result, method, or sample?
-is a series contained in a sub category?
-what is the container of an item pointed to by a reference?
-which experiment steps where present in the previous version of a document?
-what is the timestamp at which a sample is referenced?
-which experiment steps is a technique used in?
-how many samples can be in the parentdatareferenceset for an experiment before the constraints of its technqiue are violated?
-for a datappoint in a series, what is the value at the equivalent position in the other series in the same serieset?
-can a result share series with an experimentstep it references?
-are any samples derived from derived experiment steps?
-which positions in a container are occupied?
-which parameters are tied to experiment steps and which are tied to samples?
-which changes has software been involved in
-what is the version two versions before a current version?
-do an changes effect versions?
-would any part of a template violate any part of the techqniue for any of the experiment steps using it?
-is the any tag shared by at least two instances of different classes?
-which series sets contain empty series?
-what is the data type (required by the technqiue) for a series?
-does a document have at least one of every relation type it can have?
-is a technique both extended and an extension?
-who is the author of a revision during which a series was created that violated a technique?
-which pieces of infrastructure query data from their own experiment steps results?
-
-
-AI-generated, human reviewed:
-
-What is the ID of the container that a sample is in?
-What is the comment for an object?
-What is the name and value of a tag associated with an object?
-Which samples are does a container contain?
-Which samples are derived?
-what is the role of a reference?
-what result data points are included in an infrastructure?
-What is the id for referenced data?
-which experiment steps are included in a result?
-are experiment steps included in a result to be produced or consumed?
-What is the URI of a techniqu?
-What is the SHA256 checksum of a technique?
+Who digitally signed a specific part of the document?
 What is the phone number of an author?
-What is the address of an author?
-What is the id of a device?
-Who is the manufacturer of a piece of software?
-What is the length of a series?
-For a series with auto-incremented values, what is the starting value?
-For a series with auto-incremented values, what is the increment between values?
-what is the numeric value of an encoded data point?
-What is the offset value for a derived SI unit's definition?
-What software was used to create a diff in the version history?
-What was the scope of a change recorded in a diff entry (element or attributes)?
-Which experiment steps is a sample used in?
-which results reference a given experiment step?
-which results reference a given series?
-Which experiment steps make use of a specific template ID?
-which techniques can an extension extend?
-which extensions can an extension extend?
-What are the category blueprints defined within a specific sample role blueprint?
-how many experiment steps can be in an infrastructure according to a technique?
-how many results can one experiment step have?
-what is the documentation for an object?
-how many series of a certain blueprint can occur in a set?
-what are the units for a parameter?
-what are the literature references for a technique?
-what is the infrastructure for a template / experiment step?
-what is the method for a template / expierment step?
-what is the result for a template / experiment step?
-what is technique for a template / experiment step?
-what data types are present in a series?
-
-
-
+Is a specific sample derived from another sample?
+What is the unique ID of an experiment step?
+Is a series dependent or independent?
+What is the unique identifier of the device?
+What documentation is provided for a specific sample role in a technique?
+What are the individual 32-bit integer values in a series?
+What is the sample ID of the container in which a sample is located?
+Which samples were produced in an experiment step?
+Who made a specific change in the audit trail?
+What is the user type of an author (human, device, software)?
+What is the conversion factor for a unit to its SI base representation?
+What is the increment value for an auto-incremented series?
+What type of action was performed during an audit trail event (e.g., created, modified)?
+Which samples were consumed in an experiment step?
+What is the label of a unit?
+What technique was applied in an experiment step?
+What is the required data type for a series in a technique definition?
+What is the version of the software?
+When was a specific change made?
+What is the maximum number of samples allowed for a given role in a technique definition?
+What series are defined in a series set blueprint for a technique?
+What role did the data from a previous experiment step play?
+What is the SHA256 checksum of the technique definition file?
+What changes have been recorded in the audit trail?
+What role did a specific sample play in an experiment step?
+What sample roles are defined as blueprints for a technique?
+What is the role of an author within their organization?
+What is the physical location of an author?
+What was the old value of an item that was changed?
+Who is the manufacturer of the device?
+What is the container type for a sample?
+What is the original source data location for a sample?
+Which other experiment steps' data were used as input for the current step?
+What is the expected dependency (independent/dependent) for a series in a technique?
+What is the allowed numeric range for a parameter in a technique definition?
+What are the individual string values in a series?
+What is the name of an experiment step?
+What is the end value of a parent data point reference?
+What is the maximum number of times a specific result can occur according to its blueprint?
+Is a sample with a specific role required or optional for a technique?
+Are there nested experiment steps within a result?
+Which series does a parent data point reference point to?
+What physical quantity does a unit represent?
+Which item in the document was affected by an audit trail change?
+When was an experiment step performed?
+What was the reason given for a change in the audit trail?
+What is the start value of a parent data point reference?
+What is the version of the AnIML Core Schema used in a document?
+Was a sample in an experiment step inherited from a parent step?
+Was the data from a referenced experiment step consumed or produced?
+Is a specific result required by a technique's definition?
+Who was the author of the method?
+What data points from a parent result were referenced by a child experiment step?
+What is the data type of the values in a series?
+What is the recommended plot scale for a series?
+What is the new value of an item that was changed?
+On which operating system was the software running?
+What is the unit of a parameter?
+What software was used in the method?
+What units are allowed for a specific quantity in a technique definition?
+What is the firmware version of the device?
+What is the URI of the technique definition used in an experiment step?
+What is the email address of an author?
+What parameters are defined in the method section of an experiment step?
+What device was used to perform the experiment?
+How many data points are in a given series set?
+What literature references are cited in a technique definition?
+What is the name of the method used in an experiment step?
+What is the serial number of the device?
+What is the ID of a specific series?
+What is the name of a result?
+What are the results of an experiment step?
+What technique extensions were applied in an experiment step?
+How is a unit defined using SI base units?
+What categories of information are defined for a sample?
+What parameters are defined in a category blueprint for a technique?
+Is a series intended to be visible by default in a plot?
+What is the data type of a parameter?
+What is the name of a technique definition?
+Who is the manufacturer of the software?
+Is a given technique definition abstract, requiring an extension?
+What is the ID of a specific template?
+According to the technique blueprint, is a sample in a specific role expected to be produced or consumed?
+What is the URI for a specific technique extension?
+What is the start value for an auto-incremented series?
+What is the barcode associated with a sample?
+What is the name of a series?
+What are the allowed enumerated values for a string parameter in a technique definition?
+What is the URI for a cited literature reference in a technique definition?
+What is the name of a series set within a result?
+What is the unit associated with a series?
+What is the value of a specific parameter within a result category?
+What is the unique ID of a specific sample?D
+What is the start index for a specific value set in a series?
+What is the name of a template?
+Which template was used for a specific experiment step?
+Which organization is an author affiliated with?
+What are the names of the result definitions specified by a technique?
+What is the location of a sample within its container, if specified?
+What is the defined format of a sample container, such as the number of wells in a microtiter plate?

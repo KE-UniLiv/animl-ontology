@@ -1,0 +1,10 @@
+# CQ-90: What are the allowed enumerated values for a string parameter in a technique definition?
+# Technique definitions restrict parameter values using "AllowedValue" lists (as seen in the XML examples). In the ontology Technique Module, aml:ParameterSpecification uses the aml:hasAllowedValue property to list these valid string literals.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?allowedValue
+WHERE {
+    ?paramSpec a aml:ParameterSpecification ;
+               aml:hasAllowedValue ?allowedValue .
+}

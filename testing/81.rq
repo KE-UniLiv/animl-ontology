@@ -1,0 +1,10 @@
+# CQ-81: What is the name of a technique definition?
+# The Technique Module shows aml:Technique with a aml:name data property (e.g., "Heat/Cool", "Nitrogen-Phosphorus Detector").
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?name
+WHERE {
+    ?technique a aml:Technique ;
+               aml:name ?name .
+}

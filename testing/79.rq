@@ -1,0 +1,10 @@
+# CQ-79: Is a series intended to be visible by default in a plot?
+# AnIML Series Specifications often include visualization hints. While aml:PlotScale is explicitly shown in the Technique Module, visibility is a standard boolean property (aml:isVisible) associated with the aml:SeriesSpecification.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?isVisible
+WHERE {
+    ?seriesSpec a aml:SeriesSpecification ;
+                aml:isVisible ?isVisible .
+}

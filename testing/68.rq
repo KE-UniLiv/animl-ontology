@@ -1,0 +1,14 @@
+# CQ-68: How many data points are in a given series set?
+# The Core Module shows the hierarchy: aml:SeriesSet contains aml:Series, which contains aml:DataPoint. We aggregate the count of data points.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT (COUNT(?dataPoint) AS ?count)
+WHERE {
+    ?seriesSet a aml:SeriesSet ;
+               aml:hasMember ?series .
+               
+    ?series aml:hasMember ?dataPoint .
+    
+    ?dataPoint a aml:DataPoint .
+}

@@ -1,0 +1,13 @@
+# CQ-26: What changes have been recorded in the audit trail?
+# The Core Module shows the hierarchy: aml:AuditTrail contains aml:AuditTrailEntry, which links to aml:Change.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?change
+WHERE {
+    ?auditTrail a aml:AuditTrail ;
+                aml:hasMember ?entry .
+                
+    ?entry a aml:AuditTrailEntry ;
+           aml:hasChange ?change .
+}

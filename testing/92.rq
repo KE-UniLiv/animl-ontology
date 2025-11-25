@@ -1,0 +1,14 @@
+# CQ-92: What is the name of a series set within a result?
+# In the Core Module, results are organized into Categories, which contain Series Sets. We traverse this hierarchy to find the name.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?seriesSetName
+WHERE {
+    ?result a aml:Result ;
+            aml:hasCategory ?category .
+            
+    ?category aml:hasSeriesSet ?seriesSet .
+    
+    ?seriesSet aml:name ?seriesSetName .
+}

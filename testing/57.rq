@@ -1,0 +1,13 @@
+# CQ-57: What is the recommended plot scale for a series?
+# The Technique Module depicts aml:SeriesSpecification connected to aml:PlotScale via the aml:hasPlotScale property, defining whether the series should be visualized using linear or log scales.
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?plotScale
+WHERE {
+    ?series a aml:Series ;
+            aml:hasSpecification ?specification .
+            
+    ?specification aml:hasPlotScale ?plotScale .
+    # ?plotScale will be instances like aml:linear, aml:log
+}

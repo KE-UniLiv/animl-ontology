@@ -1,0 +1,18 @@
+# CQ-33: What is the container type for a sample?
+# The Core Module models this relationship through the aml:SampleInContainer situation. The Container itself is linked to a aml:ContainerType class (which contains instances like aml:RectangularTrayContainerType).
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?containerType
+WHERE {
+    ?sample a aml:Sample ;
+            aml:isContained ?situation .
+
+    ?situation a aml:SampleInContainer ;
+               aml:isContainedBy ?container .
+
+    ?container a aml:Container ;
+               aml:hasContainerType ?containerType .
+               
+    ?containerType a aml:ContainerType .
+}
