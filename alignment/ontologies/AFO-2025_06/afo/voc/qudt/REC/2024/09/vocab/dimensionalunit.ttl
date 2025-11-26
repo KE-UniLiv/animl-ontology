@@ -1,3 +1,736 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2dd0aa313960be29854606442e5af9c822514a42e6045ce3732880f9b6d10c23
-size 21172
+@prefix : <http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/dimensionalunit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+@prefix qudt-dimensionalunit-1.1: <http://qudt.org/1.1/vocab/dimensionalunit#> .
+@base <http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/dimensionalunit#> .
+
+<http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/dimensionalunit> rdf:type owl:Ontology ;
+                                                                        owl:versionIRI <http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/dimensionalunit> ;
+                                                                        owl:imports <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/dimension> ,
+                                                                                    <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt> ,
+                                                                                    <http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/quantity> ;
+                                                                        dct:contributor <http://www.allotrope.org> ,
+                                                                                        <http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen> ,
+                                                                                        <http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> ,
+                                                                                        <http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> ;
+                                                                        dct:creator <http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> ;
+                                                                        dct:issued "2024-09-27T12:00:00Z"^^xsd:dateTime ;
+                                                                        dct:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
+                                                                        dct:modified "2024-09-06T12:00:00Z"^^xsd:dateTime ;
+                                                                        dct:publisher <http://www.allotrope.org> ;
+                                                                        dct:rights <http://purl.allotrope.org/voc/qudt/rights> ;
+                                                                        dct:subject "Units of Measure with Dimensional Analysis" ;
+                                                                        dct:title "QUDT Dimensional Units (REC/2024/09)" ;
+                                                                        rdfs:label "QUDT Dimensional Units" ;
+                                                                        owl:priorVersion <http://purl.allotrope.org/voc/qudt/REC/2021/06/vocab/dimensionalunit> ;
+                                                                        owl:versionInfo "Allotrope REC/2024/09" ;
+                                                                        prov:derivedFrom <http://qudt.org/1.1/vocab/dimensionalunit> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/qudt/rights
+<http://purl.allotrope.org/voc/qudt/rights> rdf:type dct:RightsStatement ;
+                                            dct:description "The QUDT Ontologies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to NASA Ames Research Center and TopQuadrant, Inc." .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen
+<http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen> rdf:type foaf:Person ;
+                                                                 foaf:name "Daniel Mekonnen" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff
+<http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> rdf:type foaf:Person ;
+                                                                foaf:name "Irene Polikoff" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters
+<http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> rdf:type foaf:Person ;
+                                                                foaf:name "James E. Masters" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson
+<http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> rdf:type foaf:Person ;
+                                                               foaf:name "Ralph Hodgson" .
+
+
+###  http://qudt.org/vocab/unit#Acre
+unit:Acre qudt:uneceCommonCode "ACR" .
+
+
+###  http://qudt.org/vocab/unit#Ampere
+unit:Ampere qudt:uneceCommonCode "AMP" .
+
+
+###  http://qudt.org/vocab/unit#AmpereHour
+unit:AmpereHour qudt:uneceCommonCode "AMH" .
+
+
+###  http://qudt.org/vocab/unit#Angstrom
+unit:Angstrom qudt:uneceCommonCode "A11" .
+
+
+###  http://qudt.org/vocab/unit#Are
+unit:Are qudt:uneceCommonCode "ARE" .
+
+
+###  http://qudt.org/vocab/unit#AstronomicalUnit
+unit:AstronomicalUnit qudt:uneceCommonCode "A12" .
+
+
+###  http://qudt.org/vocab/unit#AtmosphereStandard
+unit:AtmosphereStandard qudt:uneceCommonCode "ATM" .
+
+
+###  http://qudt.org/vocab/unit#AtmosphereTechnical
+unit:AtmosphereTechnical qudt:uneceCommonCode "ATT" .
+
+
+###  http://qudt.org/vocab/unit#AtomicMassUnit
+unit:AtomicMassUnit qudt:quantityKind <http://qudt.org/vocab/quantity#MolecularMass> .
+
+
+###  http://qudt.org/vocab/unit#Barn
+unit:Barn qudt:uneceCommonCode "A14" .
+
+
+###  http://qudt.org/vocab/unit#Becquerel
+unit:Becquerel qudt:uneceCommonCode "BQL" .
+
+
+###  http://qudt.org/vocab/unit#Candela
+unit:Candela qudt:uneceCommonCode "CDL" .
+
+
+###  http://qudt.org/vocab/unit#Centipoise
+unit:Centipoise qudt:uneceCommonCode "C7" .
+
+
+###  http://qudt.org/vocab/unit#Centistokes
+unit:Centistokes qudt:uneceCommonCode "4C" .
+
+
+###  http://qudt.org/vocab/unit#Clo
+unit:Clo qudt:uneceCommonCode "J83" .
+
+
+###  http://qudt.org/vocab/unit#Coulomb
+unit:Coulomb qudt:uneceCommonCode "COU" .
+
+
+###  http://qudt.org/vocab/unit#CoulombPerKilogram
+unit:CoulombPerKilogram qudt:uneceCommonCode "CKG" .
+
+
+###  http://qudt.org/vocab/unit#CoulombPerMole
+unit:CoulombPerMole qudt:uneceCommonCode "A32" .
+
+
+###  http://qudt.org/vocab/unit#CubicFoot
+unit:CubicFoot qudt:uneceCommonCode "FTQ" .
+
+
+###  http://qudt.org/vocab/unit#CubicFootPerMinute
+unit:CubicFootPerMinute qudt:uneceCommonCode "2L" .
+
+
+###  http://qudt.org/vocab/unit#CubicInch
+unit:CubicInch qudt:uneceCommonCode "INQ" .
+
+
+###  http://qudt.org/vocab/unit#CubicInchPerMinute
+unit:CubicInchPerMinute qudt:uneceCommonCode "G57" .
+
+
+###  http://qudt.org/vocab/unit#CubicYard
+unit:CubicYard qudt:uneceCommonCode "YDQ" .
+
+
+###  http://qudt.org/vocab/unit#CubicYardPerMinute
+unit:CubicYardPerMinute qudt:uneceCommonCode "M15" .
+
+
+###  http://qudt.org/vocab/unit#Curie
+unit:Curie qudt:uneceCommonCode "CUR" .
+
+
+###  http://qudt.org/vocab/unit#Day
+unit:Day qudt:uneceCommonCode "DAY" .
+
+
+###  http://qudt.org/vocab/unit#Decibel
+unit:Decibel qudt:uneceCommonCode "2N" .
+
+
+###  http://qudt.org/vocab/unit#DegreeCelsius
+unit:DegreeCelsius qudt:uneceCommonCode "CEL" .
+
+
+###  http://qudt.org/vocab/unit#DegreeCelsiusPerHour
+unit:DegreeCelsiusPerHour qudt:uneceCommonCode "H12" .
+
+
+###  http://qudt.org/vocab/unit#DegreeCelsiusPerMinute
+unit:DegreeCelsiusPerMinute qudt:uneceCommonCode "H13" .
+
+
+###  http://qudt.org/vocab/unit#DegreeCelsiusPerSecond
+unit:DegreeCelsiusPerSecond qudt:uneceCommonCode "H14" .
+
+
+###  http://qudt.org/vocab/unit#DegreeFahrenheit
+unit:DegreeFahrenheit qudt:uneceCommonCode "FAH" .
+
+
+###  http://qudt.org/vocab/unit#DegreeFahrenheitPerHour
+unit:DegreeFahrenheitPerHour qudt:uneceCommonCode "J23" .
+
+
+###  http://qudt.org/vocab/unit#DegreeFahrenheitPerMinute
+unit:DegreeFahrenheitPerMinute qudt:uneceCommonCode "J24" .
+
+
+###  http://qudt.org/vocab/unit#DegreeFahrenheitPerSecond
+unit:DegreeFahrenheitPerSecond qudt:uneceCommonCode "J25" .
+
+
+###  http://qudt.org/vocab/unit#DegreePerSecond
+unit:DegreePerSecond qudt:uneceCommonCode "E96" .
+
+
+###  http://qudt.org/vocab/unit#DegreeRankine
+unit:DegreeRankine qudt:uneceCommonCode "A48" .
+
+
+###  http://qudt.org/vocab/unit#DegreeRankinePerHour
+unit:DegreeRankinePerHour qudt:uneceCommonCode "J28" .
+
+
+###  http://qudt.org/vocab/unit#DegreeRankinePerMinute
+unit:DegreeRankinePerMinute qudt:uneceCommonCode "J29" .
+
+
+###  http://qudt.org/vocab/unit#DegreeRankinePerSecond
+unit:DegreeRankinePerSecond qudt:uneceCommonCode "J30" .
+
+
+###  http://qudt.org/vocab/unit#Dyne
+unit:Dyne qudt:uneceCommonCode "DU" .
+
+
+###  http://qudt.org/vocab/unit#Erg
+unit:Erg qudt:uneceCommonCode "A57" .
+
+
+###  http://qudt.org/vocab/unit#ErgPerGram
+unit:ErgPerGram qudt:uneceCommonCode "A61" .
+
+
+###  http://qudt.org/vocab/unit#ErgPerSecond
+unit:ErgPerSecond qudt:uneceCommonCode "A63" .
+
+
+###  http://qudt.org/vocab/unit#Farad
+unit:Farad qudt:uneceCommonCode "FAR" .
+
+
+###  http://qudt.org/vocab/unit#Fathom
+unit:Fathom qudt:uneceCommonCode "AK" .
+
+
+###  http://qudt.org/vocab/unit#Foot
+unit:Foot qudt:uneceCommonCode "FOT" .
+
+
+###  http://qudt.org/vocab/unit#FootOfWater
+unit:FootOfWater qudt:uneceCommonCode "K24" .
+
+
+###  http://qudt.org/vocab/unit#FootPerHour
+unit:FootPerHour qudt:uneceCommonCode "K14" .
+
+
+###  http://qudt.org/vocab/unit#FootPerMinute
+unit:FootPerMinute qudt:uneceCommonCode "FR" .
+
+
+###  http://qudt.org/vocab/unit#FootPerSecond
+unit:FootPerSecond qudt:uneceCommonCode "FS" .
+
+
+###  http://qudt.org/vocab/unit#FootPerSecondSquared
+unit:FootPerSecondSquared qudt:uneceCommonCode "A73" .
+
+
+###  http://qudt.org/vocab/unit#Gal
+unit:Gal qudt:uneceCommonCode "A76" .
+
+
+###  http://qudt.org/vocab/unit#GallonUSPerMinute
+unit:GallonUSPerMinute qudt:uneceCommonCode "G2" .
+
+
+###  http://qudt.org/vocab/unit#GigaHertz
+unit:GigaHertz qudt:uneceCommonCode "A86" .
+
+
+###  http://qudt.org/vocab/unit#Gon
+unit:Gon qudt:uneceCommonCode "A91" .
+
+
+###  http://qudt.org/vocab/unit#Grade
+unit:Grade qudt:uneceCommonCode "A91" .
+
+
+###  http://qudt.org/vocab/unit#Grain
+unit:Grain qudt:uneceCommonCode "GRN" .
+
+
+###  http://qudt.org/vocab/unit#Gram
+unit:Gram qudt:uneceCommonCode "GRM" .
+
+
+###  http://qudt.org/vocab/unit#Gray
+unit:Gray qudt:uneceCommonCode "A95" .
+
+
+###  http://qudt.org/vocab/unit#GrayPerSecond
+unit:GrayPerSecond qudt:uneceCommonCode "A96" .
+
+
+###  http://qudt.org/vocab/unit#Hectare
+unit:Hectare qudt:uneceCommonCode "HAR" .
+
+
+###  http://qudt.org/vocab/unit#Henry
+unit:Henry qudt:uneceCommonCode "81" .
+
+
+###  http://qudt.org/vocab/unit#Hertz
+unit:Hertz qudt:uneceCommonCode "HTZ" .
+
+
+###  http://qudt.org/vocab/unit#Hour
+unit:Hour qudt:uneceCommonCode "HUR" .
+
+
+###  http://qudt.org/vocab/unit#Inch
+unit:Inch qudt:uneceCommonCode "INH" .
+
+
+###  http://qudt.org/vocab/unit#InchOfMercury
+unit:InchOfMercury qudt:uneceCommonCode "F79" .
+
+
+###  http://qudt.org/vocab/unit#InchOfWater
+unit:InchOfWater qudt:uneceCommonCode "F78" .
+
+
+###  http://qudt.org/vocab/unit#InchPerSecond
+unit:InchPerSecond qudt:uneceCommonCode "IU" .
+
+
+###  http://qudt.org/vocab/unit#InchPerSecondSquared
+unit:InchPerSecondSquared qudt:uneceCommonCode "IV" .
+
+
+###  http://qudt.org/vocab/unit#Joule
+unit:Joule qudt:uneceCommonCode "JOU" .
+
+
+###  http://qudt.org/vocab/unit#JoulePerKelvin
+unit:JoulePerKelvin qudt:uneceCommonCode "JE" .
+
+
+###  http://qudt.org/vocab/unit#JoulePerKilogram
+unit:JoulePerKilogram qudt:uneceCommonCode "J2" .
+
+
+###  http://qudt.org/vocab/unit#JoulePerKilogramKelvin
+unit:JoulePerKilogramKelvin qudt:uneceCommonCode "B11" .
+
+
+###  http://qudt.org/vocab/unit#JoulePerMole
+unit:JoulePerMole qudt:uneceCommonCode "B15" .
+
+
+###  http://qudt.org/vocab/unit#JoulePerMoleKelvin
+unit:JoulePerMoleKelvin qudt:uneceCommonCode "B16" .
+
+
+###  http://qudt.org/vocab/unit#JouleSecond
+unit:JouleSecond qudt:uneceCommonCode "B18" .
+
+
+###  http://qudt.org/vocab/unit#Katal
+unit:Katal qudt:uneceCommonCode "KAT" .
+
+
+###  http://qudt.org/vocab/unit#Kelvin
+unit:Kelvin qudt:uneceCommonCode "KEL" .
+
+
+###  http://qudt.org/vocab/unit#KelvinPerHour
+unit:KelvinPerHour qudt:uneceCommonCode "F10" .
+
+
+###  http://qudt.org/vocab/unit#KelvinPerMinute
+unit:KelvinPerMinute qudt:uneceCommonCode "F11" .
+
+
+###  http://qudt.org/vocab/unit#KelvinPerSecond
+unit:KelvinPerSecond qudt:uneceCommonCode "F12" .
+
+
+###  http://qudt.org/vocab/unit#KelvinPerWatt
+unit:KelvinPerWatt qudt:uneceCommonCode "B21" .
+
+
+###  http://qudt.org/vocab/unit#KiloHertz
+unit:KiloHertz qudt:uneceCommonCode "KHZ" .
+
+
+###  http://qudt.org/vocab/unit#KiloPascal
+unit:KiloPascal qudt:uneceCommonCode "KPA" .
+
+
+###  http://qudt.org/vocab/unit#KiloPond
+unit:KiloPond qudt:uneceCommonCode "B51" .
+
+
+###  http://qudt.org/vocab/unit#Kilogram
+unit:Kilogram qudt:uneceCommonCode "KGM" .
+
+
+###  http://qudt.org/vocab/unit#KilogramPerHour
+unit:KilogramPerHour qudt:uneceCommonCode "E93" .
+
+
+###  http://qudt.org/vocab/unit#KilogramPerMole
+unit:KilogramPerMole qudt:uneceCommonCode "D74" .
+
+
+###  http://qudt.org/vocab/unit#KilogramPerSecond
+unit:KilogramPerSecond qudt:uneceCommonCode "KGS" .
+
+
+###  http://qudt.org/vocab/unit#Kilowatt
+unit:Kilowatt qudt:uneceCommonCode "KWT" .
+
+
+###  http://qudt.org/vocab/unit#Knot
+unit:Knot qudt:uneceCommonCode "KNT" .
+
+
+###  http://qudt.org/vocab/unit#LightYear
+unit:LightYear qudt:uneceCommonCode "B57" .
+
+
+###  http://qudt.org/vocab/unit#Lumen
+unit:Lumen qudt:uneceCommonCode "LUM" .
+
+
+###  http://qudt.org/vocab/unit#LumenPerWatt
+unit:LumenPerWatt qudt:uneceCommonCode "B61" .
+
+
+###  http://qudt.org/vocab/unit#LumenSecond
+unit:LumenSecond qudt:uneceCommonCode "B62" .
+
+
+###  http://qudt.org/vocab/unit#Lux
+unit:Lux qudt:uneceCommonCode "LUX" .
+
+
+###  http://qudt.org/vocab/unit#MegaHertz
+unit:MegaHertz qudt:uneceCommonCode "MHZ" .
+
+
+###  http://qudt.org/vocab/unit#Mho
+unit:Mho qudt:uneceCommonCode "NQ" .
+
+
+###  http://qudt.org/vocab/unit#MicroFarad
+unit:MicroFarad qudt:uneceCommonCode "4O" .
+
+
+###  http://qudt.org/vocab/unit#MicroHenry
+unit:MicroHenry qudt:uneceCommonCode "B90" .
+
+
+###  http://qudt.org/vocab/unit#MicroSecond
+unit:MicroSecond qudt:uneceCommonCode "B98" .
+
+
+###  http://qudt.org/vocab/unit#MilePerHour
+unit:MilePerHour qudt:uneceCommonCode "HM" .
+
+
+###  http://qudt.org/vocab/unit#MilliHenry
+unit:MilliHenry qudt:uneceCommonCode "C14" .
+
+
+###  http://qudt.org/vocab/unit#MilliSecond
+unit:MilliSecond qudt:uneceCommonCode "C26" .
+
+
+###  http://qudt.org/vocab/unit#Millibar
+unit:Millibar qudt:uneceCommonCode "MBR" .
+
+
+###  http://qudt.org/vocab/unit#Mole
+unit:Mole qudt:uneceCommonCode "C34" .
+
+
+###  http://qudt.org/vocab/unit#MolePerKilogram
+unit:MolePerKilogram qudt:uneceCommonCode "C19" .
+
+
+###  http://qudt.org/vocab/unit#NanoFarad
+unit:NanoFarad qudt:uneceCommonCode "C41" .
+
+
+###  http://qudt.org/vocab/unit#NauticalMile
+unit:NauticalMile qudt:uneceCommonCode "NMI" .
+
+
+###  http://qudt.org/vocab/unit#Newton
+unit:Newton qudt:uneceCommonCode "NEW" .
+
+
+###  http://qudt.org/vocab/unit#Ohm
+unit:Ohm qudt:uneceCommonCode "OHM" .
+
+
+###  http://qudt.org/vocab/unit#OuncePerSquareFoot
+unit:OuncePerSquareFoot qudt:uneceCommonCode "37" .
+
+
+###  http://qudt.org/vocab/unit#OuncePerSquareYard
+unit:OuncePerSquareYard qudt:uneceCommonCode "ON" .
+
+
+###  http://qudt.org/vocab/unit#Parsec
+unit:Parsec qudt:uneceCommonCode "C63" .
+
+
+###  http://qudt.org/vocab/unit#Pascal
+unit:Pascal qudt:uneceCommonCode "PAL" .
+
+
+###  http://qudt.org/vocab/unit#PascalSecond
+unit:PascalSecond qudt:uneceCommonCode "C65" .
+
+
+###  http://qudt.org/vocab/unit#PicoFarad
+unit:PicoFarad qudt:uneceCommonCode "4T" .
+
+
+###  http://qudt.org/vocab/unit#Poise
+unit:Poise qudt:uneceCommonCode "89" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerCubicFoot
+unit:PoundPerCubicFoot qudt:uneceCommonCode "87" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerCubicInch
+unit:PoundPerCubicInch qudt:uneceCommonCode "LA" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerCubicYard
+unit:PoundPerCubicYard qudt:uneceCommonCode "K84" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerFoot
+unit:PoundPerFoot qudt:uneceCommonCode "P2" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerFootHour
+unit:PoundPerFootHour qudt:uneceCommonCode "K67" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerFootSecond
+unit:PoundPerFootSecond qudt:uneceCommonCode "K68" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerHour
+unit:PoundPerHour qudt:uneceCommonCode "4U" .
+
+
+###  http://qudt.org/vocab/unit#PoundPerSquareFoot
+unit:PoundPerSquareFoot qudt:uneceCommonCode "FP" .
+
+
+###  http://qudt.org/vocab/unit#Rad
+unit:Rad qudt:uneceCommonCode "C80" .
+
+
+###  http://qudt.org/vocab/unit#Radian
+unit:Radian qudt:uneceCommonCode "C81" .
+
+
+###  http://qudt.org/vocab/unit#RadianPerMinute
+unit:RadianPerMinute qudt:uneceCommonCode "2A" .
+
+
+###  http://qudt.org/vocab/unit#RadianPerSecond
+unit:RadianPerSecond qudt:uneceCommonCode "2A" .
+
+
+###  http://qudt.org/vocab/unit#RadianPerSecondSquared
+unit:RadianPerSecondSquared qudt:uneceCommonCode "2B" .
+
+
+###  http://qudt.org/vocab/unit#Rem
+unit:Rem qudt:uneceCommonCode "D91" .
+
+
+###  http://qudt.org/vocab/unit#Roentgen
+unit:Roentgen qudt:uneceCommonCode "2C" .
+
+
+###  http://qudt.org/vocab/unit#Siemens
+unit:Siemens qudt:uneceCommonCode "SIE" .
+
+
+###  http://qudt.org/vocab/unit#Sievert
+unit:Sievert qudt:uneceCommonCode "D13" .
+
+
+###  http://qudt.org/vocab/unit#Slug
+unit:Slug qudt:uneceCommonCode "F13" .
+
+
+###  http://qudt.org/vocab/unit#SlugPerCubicFoot
+unit:SlugPerCubicFoot qudt:uneceCommonCode "L65" .
+
+
+###  http://qudt.org/vocab/unit#SlugPerFootSecond
+unit:SlugPerFootSecond qudt:uneceCommonCode "L64" .
+
+
+###  http://qudt.org/vocab/unit#SlugPerSecond
+unit:SlugPerSecond qudt:uneceCommonCode "L68" .
+
+
+###  http://qudt.org/vocab/unit#SquareFoot
+unit:SquareFoot qudt:uneceCommonCode "FTK" .
+
+
+###  http://qudt.org/vocab/unit#SquareFootPerSecond
+unit:SquareFootPerSecond qudt:uneceCommonCode "S3" .
+
+
+###  http://qudt.org/vocab/unit#SquareInch
+unit:SquareInch qudt:uneceCommonCode "INK" .
+
+
+###  http://qudt.org/vocab/unit#SquareMile
+unit:SquareMile qudt:uneceCommonCode "MIK" .
+
+
+###  http://qudt.org/vocab/unit#SquareYard
+unit:SquareYard qudt:uneceCommonCode "YDK" .
+
+
+###  http://qudt.org/vocab/unit#Steradian
+unit:Steradian qudt:uneceCommonCode "D27" .
+
+
+###  http://qudt.org/vocab/unit#Stere
+unit:Stere qudt:uneceCommonCode "G26" .
+
+
+###  http://qudt.org/vocab/unit#Stokes
+unit:Stokes qudt:uneceCommonCode "91" .
+
+
+###  http://qudt.org/vocab/unit#Tesla
+unit:Tesla qudt:uneceCommonCode "D33" .
+
+
+###  http://qudt.org/vocab/unit#Torr
+unit:Torr qudt:uneceCommonCode "UA" .
+
+
+###  http://qudt.org/vocab/unit#UnifiedAtomicMassUnit
+unit:UnifiedAtomicMassUnit qudt:uneceCommonCode "D43" .
+
+
+###  http://qudt.org/vocab/unit#Volt
+unit:Volt qudt:uneceCommonCode "VLT" .
+
+
+###  http://qudt.org/vocab/unit#VoltPerSecond
+unit:VoltPerSecond qudt:uneceCommonCode "H46" .
+
+
+###  http://qudt.org/vocab/unit#Watt
+unit:Watt qudt:uneceCommonCode "WTT" .
+
+
+###  http://qudt.org/vocab/unit#WattPerSteradian
+unit:WattPerSteradian qudt:uneceCommonCode "D57" .
+
+
+###  http://qudt.org/vocab/unit#Weber
+unit:Weber qudt:uneceCommonCode "WEB" .
+
+
+###  http://qudt.org/vocab/unit#Yard
+unit:Yard qudt:uneceCommonCode "YRD" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+unit:SystemOfUnits_CGS-ESU dct:description "The electrostatic system of units is a system of units used to measure electrical quantities of electric charge, current, and voltage, within the centimeter gram second (or \"CGS\") metric system of units. In electrostatic units, electrical charge is defined via the force it exerts on other charges." .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

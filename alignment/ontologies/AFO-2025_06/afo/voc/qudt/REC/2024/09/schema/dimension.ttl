@@ -1,3 +1,203 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:75a42e5263a8b0fb6a184b57da163a500b07566b398863c493d3158481bb098c
-size 11394
+@prefix : <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/dimension#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://qudt.org/1.1/schema/dimension#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dimension: <http://qudt.org/schema/dimension#> .
+@prefix creativecommons: <http://creativecommons.org/ns#> .
+@base <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/dimension#> .
+
+<http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/dimension> rdf:type owl:Ontology ;
+                                                                   owl:versionIRI <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/dimension> ;
+                                                                   owl:imports <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt> ;
+                                                                   dct:contributor <http://www.allotrope.org> ,
+                                                                                   <http://purl.allotrope.org/voc/qudt/contributors/DavidPrice> ,
+                                                                                   <http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> ,
+                                                                                   <http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> ;
+                                                                   dct:creator <http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> ;
+                                                                   dct:issued "2024-09-27T12:00:00Z"^^xsd:dateTime ;
+                                                                   dct:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
+                                                                   dct:modified "2024-09-06T12:00:00Z"^^xsd:dateTime ;
+                                                                   dct:publisher <http://www.allotrope.org> ;
+                                                                   dct:rights <http://purl.allotrope.org/voc/qudt/rights> ;
+                                                                   dct:subject "Quantities, Units, and Dimensions" ;
+                                                                   dct:title "QUDT Dimension Ontology (REC/2024/09)" ;
+                                                                   rdfs:label "QUDT Dimension Ontology" ;
+                                                                   owl:priorVersion <http://purl.allotrope.org/voc/qudt/REC/2021/06/schema/dimension> ;
+                                                                   owl:versionInfo "Allotrope REC/2024/09" ;
+                                                                   prov:derivedFrom <http://qudt.org/1.1/schema/dimension> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://qudt.org/schema/qudt#dimensionInverse
+qudt:dimensionInverse rdf:type owl:ObjectProperty ;
+                      owl:inverseOf qudt:dimensionInverse ;
+                      rdf:type owl:FunctionalProperty ,
+                               owl:InverseFunctionalProperty ,
+                               owl:SymmetricProperty ;
+                      rdfs:label "dimension inverse" ;
+                      skos:altLabel "dimension inverse" ;
+                      skos:prefLabel "has dimension inverse" .
+
+
+###  http://qudt.org/schema/qudt#dimensionVector
+qudt:dimensionVector rdf:type owl:ObjectProperty ;
+                     rdfs:label "dimension vector" ;
+                     skos:altLabel "dimension vector" ;
+                     skos:prefLabel "has dimension vector" .
+
+
+###  http://qudt.org/schema/qudt#referenceQuantity
+qudt:referenceQuantity rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf qudt:referenceThing ;
+                       rdfs:label "reference quantity" ;
+                       skos:altLabel "reference quantity" ;
+                       skos:prefLabel "has reference quantity" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt#Dimension
+qudt:Dimension rdf:type owl:Class ;
+               rdfs:subClassOf qudt:EnumeratedValue ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty qudt:dimensionVector ;
+                                 owl:allValuesFrom qudt:DimensionVector
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty qudt:referenceQuantity ;
+                                 owl:allValuesFrom qudt:QuantityKind
+                               ] ;
+               dct:description "A dimension is a relationship between a quantity system, a quantity kind of that system, and one or more dimension vectors. There is one dimension vector for each of the system's base quantity kinds. The vector's magnitude determines the exponent of the base dimension for the referenced quantity kind." ;
+               rdfs:label "Dimension" ;
+               skos:definition "A dimension is a relationship between a quantity system, a quantity kind of that system, and one or more dimension vectors. There is one dimension vector for each of the system's base quantity kinds. The vector's magnitude determines the exponent of the base dimension for the referenced quantity kind." ;
+               skos:prefLabel "dimension" .
+
+
+###  http://qudt.org/schema/qudt#DimensionVector
+qudt:DimensionVector rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:basisElement ;
+                                       owl:allValuesFrom qudt:QuantityKind
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:basisElement ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass qudt:QuantityKind
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:vectorMagnitude ;
+                                       owl:allValuesFrom xsd:float
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:vectorMagnitude ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:float
+                                     ] ;
+                     dct:description "A dimension vector is an association between a quantity kind and a rational number. The quantity kind serves as the basis vector in an abstract vector space, and the rational number is the vector magnitude. The abstract vector space is determined by the chosen set of base quantity kinds for a quantity system." ;
+                     rdfs:label "Dimension Vector" ;
+                     skos:definition "A dimension vector is an association between a quantity kind and a rational number. The quantity kind serves as the basis vector in an abstract vector space, and the rational number is the vector magnitude. The abstract vector space is determined by the chosen set of base quantity kinds for a quantity system." ;
+                     skos:prefLabel "dimension vector" .
+
+
+###  http://qudt.org/schema/qudt#EnumeratedValue
+qudt:EnumeratedValue rdf:type owl:Class ;
+                     skos:prefLabel "enumerated value" .
+
+
+###  http://qudt.org/schema/qudt#QuantityKind
+qudt:QuantityKind rdf:type owl:Class ;
+                  skos:prefLabel "quantity kind" .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/qudt/rights
+<http://purl.allotrope.org/voc/qudt/rights> rdf:type dct:RightsStatement ;
+                                            dct:description "The QUDT Ontologies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to NASA Ames Research Center and TopQuadrant, Inc." .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/DavidPrice
+<http://purl.allotrope.org/voc/qudt/contributors/DavidPrice> rdf:type foaf:Person ;
+                                                             foaf:name "David Price" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff
+<http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> rdf:type foaf:Person ;
+                                                                foaf:name "Irene Polikoff" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters
+<http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> rdf:type foaf:Person ;
+                                                                foaf:name "James E. Masters" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson
+<http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> rdf:type foaf:Person ;
+                                                               foaf:name "Ralph Hodgson" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

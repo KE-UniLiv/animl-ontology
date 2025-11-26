@@ -1,3 +1,177 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5507eababf08f34aa6a6d0e38a731065fb9b6628acfdca630ad95169d6f4bf09
-size 9601
+@prefix : <http://purl.allotrope.org/voc/adf/REC/2024/12/manifest#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-mf: <http://purl.allotrope.org/ontologies/manifest#> .
+@base <http://purl.allotrope.org/voc/adf/REC/2024/12/manifest#> .
+
+<http://purl.allotrope.org/voc/adf/REC/2024/12/manifest> rdf:type owl:Ontology ;
+                                                          owl:versionIRI <http://purl.allotrope.org/voc/adf/REC/2024/12/manifest> ;
+                                                          dct:contributor <http://www.allotrope.org> ;
+                                                          dct:description "Ontology for describing manifests in ADF. (REC/2024/12)" ;
+                                                          dct:issued "2024-12-18T12:00:00Z"^^xsd:dateTime ;
+                                                          dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                          dct:modified "2024-12-08T12:00:00Z"^^xsd:dateTime ;
+                                                          dct:publisher <http://www.allotrope.org> ;
+                                                          dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                     <http://purl.allotrope.org/voc/copyright> ;
+                                                          dct:title "The Allotrope ADF Manifest Ontology (REC/2024/12)" ;
+                                                          rdfs:label "The Allotrope ADF Manifest Ontology (REC/2024/12)" ;
+                                                          owl:priorVersion <http://purl.allotrope.org/voc/adf/REC/2021/09/manifest> ;
+                                                          owl:versionInfo "REC/2024/12" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/manifest#json-schemas
+af-mf:json-schemas rdf:type owl:AnnotationProperty ;
+                   skos:definition "This annotation on the manifest refers to a JSON schema for an Allotrope Simple Model (ASM). [Allotrope]" ;
+                   skos:prefLabel "JSON schemas" .
+
+
+###  http://purl.allotrope.org/ontologies/manifest#shapes
+af-mf:shapes rdf:type owl:AnnotationProperty ;
+             skos:definition "This annotation on the manifest refers to a data model (shape library) that should be used with the data description. It is used with together with owl:imports. [Allotrope]" ;
+             skos:prefLabel "shapes" .
+
+
+###  http://purl.allotrope.org/ontologies/manifest#vocabulary
+af-mf:vocabulary rdf:type owl:AnnotationProperty ;
+                 skos:definition "This annotation on the manifest refers to a vocabulary (ontologies, taxonomies) that should be used with the data description. It is used with together with owl:imports. [Allotrope]" ;
+                 skos:prefLabel "vocabulary" .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/manifest#Manifest
+af-mf:Manifest rdf:type owl:Class ;
+               skos:definition "A manifest is metadata about the content of an ADF file. The ADF manifest describes the data model the data description supports and optionally the vocabulary used. [Allotrope]" ;
+               skos:editorialNote "A manifest is a meta-class like owl:Ontology, and not a class. It uses owl:imports to import ontologies and SHACL files into the ADF RDF model. It is defined as an rdfs:Class. Be careful when using this class in reasoners, as it is outside OWL DL." ;
+               skos:prefLabel "manifest" .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2024 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2024 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2024 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

@@ -1,3 +1,468 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e6cad0a57af653d74f3a6754bb139c73fd95b699e0c8cbbc8cc7a1f32eb2787e
-size 27705
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/calibration#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/xml/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ncbi: <http://purl.obolibrary.org/obo/NCBITaxon> .
+@prefix ncit: <http://purl.obolibrary.org/obo/NCIT> .
+@prefix omit: <http://purl.obolibrary.org/obo/OMIT> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-sp: <http://purl.allotrope.org/ontologies/spatial#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@prefix af-math: <http://purl.allotrope.org/ontologies/math#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/calibration#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/calibration> rdf:type owl:Ontology ;
+                                                                              owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/calibration> ;
+                                                                              owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ;
+                                                                              dct:contributor <http://www.allotrope.org> ;
+                                                                              dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                              dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                              dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                              dct:publisher <http://www.allotrope.org> ;
+                                                                              dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                         <http://purl.allotrope.org/voc/copyright> ;
+                                                                              dct:rightsHolder <http://www.allotrope.org> ;
+                                                                              dct:title "AFO Calibration Domain Ontology (REC/2025/06)" ;
+                                                                              owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/calibration> ;
+                                                                              owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003693
+af-p:AFP_0003693 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003695 ;
+                 skos:definition "A linear calibration is an analyte calibration that applies curve fitting  of the calibration curve to a linear function. [Allotrope]" ;
+                 skos:prefLabel "linear calibration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003694
+af-p:AFP_0003694 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003706 ;
+                 skos:altLabel "power calibration" ;
+                 skos:definition "An exponential calibration is an analyte calibration that applies curve fitting  of the calibration curve to an exponential function. [Allotrope]" ;
+                 skos:prefLabel "exponential calibration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003695
+af-p:AFP_0003695 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003706 ;
+                 skos:definition "A polynomial calibration is an analyte calibration that applies curve fitting  of the calibration curve to a polynomial function. [Allotrope]" ;
+                 skos:prefLabel "polynomial calibration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003701
+af-p:AFP_0003701 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000144 ;
+                 skos:altLabel "reference profile" ;
+                 skos:definition "A calibration reference profile is a process profile with a known, repeatable temporal pattern, that is a reference for calibration of a time or rate measurement device. [Allotrope]" ;
+                 skos:prefLabel "calibration reference profile" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003706
+af-p:AFP_0003706 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003717
+af-p:AFP_0003717 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003282 ;
+                 skos:altLabel "interpolation" ;
+                 skos:definition "Interpolation is a calculation that calculates a calculated measure from a primary measure by applying a measurement function that is derived from a calibration curve. [Allotrope]" ;
+                 skos:prefLabel "interpolation (calibration)" ;
+                 skos:scopeNote "The measurement function of a calibration curve can be got by curve fitting a function to a set of calibration points. Applying the function at abscissa coordinates that are part of the discrete calibration points, can be interpreted as interpolation. [Allotrope]" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001217
+af-r:AFR_0001217 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001839 ;
+                 skos:changeNote "2020-04-28 Add subclass of calibration result." .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001620
+af-r:AFR_0001620 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000937 ;
+                 skos:altLabel "calibration date" ;
+                 skos:definition "A calibration time is a time that indicates when a calibration is done. [Allotrope]" ;
+                 skos:prefLabel "calibration time" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001825
+af-r:AFR_0001825 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000922 ;
+                 skos:definition "A calibration report is a description of the outcome of calibration and subsequent assessments and adjustments. [Allotrope]" ;
+                 skos:prefLabel "calibration report" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001826
+af-r:AFR_0001826 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001836 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-e:AFE_0000354
+                                 ] ;
+                 skos:definition "The calibration assessment is an assessment about the calibrated instrument whether it is within the specification of the calibration method. [Allotrope]" ;
+                 skos:prefLabel "calibration assessment" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001828
+af-r:AFR_0001828 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000304 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-e:AFE_0000354
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000056 ;
+                                                                               owl:someValuesFrom af-p:AFP_0002294
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A calibration certificate is a certificate that states that a specific item has been calibrated by some organization. [Allotrope]" ;
+                 skos:prefLabel "calibration certificate" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001829
+af-r:AFR_0001829 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000937 ;
+                 skos:altLabel "due date" ;
+                 skos:definition "The due date is a time that specifies when the next calibration run is due. [Allotrope]" ;
+                 skos:prefLabel "due date (calibration)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001830
+af-r:AFR_0001830 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000951 ;
+                 skos:definition "The calibration interval is the duration between two consecutive calibrations. [Allotrope]" ;
+                 skos:prefLabel "calibration interval" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001831
+af-r:AFR_0001831 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001732 ;
+                 skos:definition "The calibration frequency is the frequency of how often calibrations are done in a time interval. [Allotrope]" ;
+                 skos:prefLabel "calibration frequency" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001835
+af-r:AFR_0001835 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000050 ;
+                 skos:definition "A calibration assessment code is a code indicating a calibration assessment about the performance of an instrument. [Allotrope]" ;
+                 skos:prefLabel "calibration assessment code" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001836
+af-r:AFR_0001836 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001839
+af-r:AFR_0001839 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000922 ;
+                 skos:definition "A calibration result is a relation between a nominal reference quantity or quantity distribution over time or a sample population and the measure of that quantity or distribution as it is found in the calibration of the instrument. [Allotrope]" ;
+                 skos:prefLabel "calibration result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001849
+af-r:AFR_0001849 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000936 ;
+                 skos:definition "The calibration level is number of calibration points used to fit a function to a calibration curve. [Allotrope]" ;
+                 skos:prefLabel "calibration level" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001938
+af-r:AFR_0001938 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0002389
+                                 ] ;
+                 skos:definition "A calibration facet is a facet that is information about a calibration. [Allotrope]" ;
+                 skos:prefLabel "calibration facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001939
+af-r:AFR_0001939 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001938 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002730 ;
+                                   owl:someValuesFrom af-rl:AFRL_0000478
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-r:AFR_0000788
+                                 ] ;
+                 skos:definition "A calibration facet that is about a parameter for calibration. [Allotrope]" ;
+                 skos:prefLabel "calibration curve parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001940
+af-r:AFR_0001940 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000064 ;
+                 skos:altLabel "calibration curve type" ;
+                 skos:definition "A calibration algorithm is an algorithm about calibration that specifies the way a calibration curve is generated. [Allotrope]" ;
+                 skos:prefLabel "calibration algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001941
+af-r:AFR_0001941 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001939 ;
+                 skos:definition "Order zero parameter is a calibration curve parameter that specifies the zeroth order algorithmic parameter for defining calibration regression. [Allotrope]" ;
+                 skos:prefLabel "order zero parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001942
+af-r:AFR_0001942 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001939 ;
+                 skos:definition "Order one parameter is a calibration curve parameter that specifies the first order algorithmic parameter for defining calibration regression. [Allotrope]" ;
+                 skos:prefLabel "order one parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001943
+af-r:AFR_0001943 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001939 ;
+                 skos:definition "Order two parameter is a calibration curve parameter that specifies the second order algorithmic parameter for defining calibration regression. [Allotrope]" ;
+                 skos:prefLabel "order two parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001944
+af-r:AFR_0001944 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001939 ;
+                 skos:definition "Order three parameter is a calibration curve parameter that specifies the third order algorithmic parameter for defining calibration regression. [Allotrope]" ;
+                 skos:prefLabel "order three parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002063
+af-r:AFR_0002063 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000917 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002717 ;
+                                   owl:someValuesFrom af-r:AFR_0001828
+                                 ] ;
+                 skos:altLabel "calibration certificate id" ;
+                 skos:changeNote "Replaced deprecated AFR_0002069 with AFR_0001828" ;
+                 skos:definition "A calibration certificate identifier is an identifier that identifies the calibration certificate for the piece of equipment used in a measurement. [Allotrope]" ;
+                 skos:prefLabel "calibration certificate identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002180
+af-r:AFR_0002180 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001839 ,
+                                 af-r:AFR_0002204 ;
+                 skos:definition "A calibration result deviation is a calibration result representing the deviation between the nominal and measured values for the standard as a percentage. [Allotrope]" ;
+                 skos:prefLabel "calibration result deviation" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002204
+af-r:AFR_0002204 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002809
+af-r:AFR_0002809 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000917 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002717 ;
+                                   owl:someValuesFrom af-r:AFR_0000788
+                                 ] ;
+                 skos:altLabel "calibration curve id" ,
+                               "standard curve id" ,
+                               "standard curve identifier" ;
+                 skos:definition "A calibration curve identifier is an identifier that identifies a particular calibration curve. [Allotrope]" ;
+                 skos:prefLabel "calibration curve identifier" .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001832
+af-r:AFR_0001832 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001835 ;
+                 skos:altLabel "pass" ;
+                 skos:definition "Pass is the calibration assessment code, that indicates that the calibrated instrument measures within the specification of the calibration method. [Allotrope]" ;
+                 skos:prefLabel "pass (calibration)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001833
+af-r:AFR_0001833 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001835 ;
+                 skos:altLabel "fail" ;
+                 skos:definition "Fail is the calibration assessment code, that indicates the calibrated instrument does not measure within the specification of the calibration method. [Allotrope]" ;
+                 skos:prefLabel "fail (calibration)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001834
+af-r:AFR_0001834 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001835 ;
+                 skos:altLabel "indeterminate" ;
+                 skos:definition "Indeterminate is the calibration assessment code, that indicates it cannot be clearly stated whether the calibrated instrument does measure within the specification of the calibration method or not. [Allotrope]" ;
+                 skos:prefLabel "indeterminate (calibration)" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+af-r:AFR_0001847 dct:source <https://www.bipm.org/en/publications/guides/vim.html> .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

@@ -1,3 +1,1019 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1ab2ddac97a3a6133d80795558a51e71f7ae1069933e680ba58ca8b250517b54
-size 46958
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://example.org/Anitology> a owl:Ontology .
+
+<http://example.org/Anitology/Action> a rdfs:Class ;
+    rdfs:comment "Type of change made (created, modified, ...)" .
+
+<http://example.org/Anitology/Affiliation> a rdfs:Class ;
+    rdfs:comment "Organization the Author is affiliated with." .
+
+<http://example.org/Anitology/AnIML> a rdfs:Class ;
+    rdfs:comment "ComplexType for the root element of an AnIML document." .
+
+<http://example.org/Anitology/AuditTrailEntry> a rdfs:Class ;
+    rdfs:comment "Describes a set of changes made to the particular AnIML document by one user at a given time." .
+
+<http://example.org/Anitology/AuditTrailEntrySet> a rdfs:Class ;
+    rdfs:comment "Container for audit trail entries describing changes to this document." .
+
+<http://example.org/Anitology/Author> a rdfs:Class ;
+    rdfs:comment "Information about a person, a device or a piece of software authoring AnIML files." .
+
+<http://example.org/Anitology/AutoIncrementedValueSet> a rdfs:Class ;
+    rdfs:comment "Multiple values given in form of a start value and an increment." .
+
+<http://example.org/Anitology/Boolean> a rdfs:Class ;
+    rdfs:comment "Individual boolean value." .
+
+<http://example.org/Anitology/Category> a rdfs:Class ;
+    rdfs:comment "Defines a category of Parameters and SeriesSets. Used to model hierarchies." .
+
+<http://example.org/Anitology/Comment> a rdfs:Class ;
+    rdfs:comment "Human-readable comment further explaining the changes." .
+
+<http://example.org/Anitology/ContainerTypeType> a rdfs:Class ;
+    rdfs:comment "Microtiter plate or tray with 1536 positions." .
+
+<http://example.org/Anitology/D> a rdfs:Class ;
+    rdfs:comment "Individual 64-bit floating point value." .
+
+<http://example.org/Anitology/DateTime> a rdfs:Class ;
+    rdfs:comment "Individual ISO date/time value." .
+
+<http://example.org/Anitology/DependencyType> a rdfs:Class ;
+    rdfs:comment "Specified that the Series is dependent." .
+
+<http://example.org/Anitology/Device> a rdfs:Class ;
+    rdfs:comment "Device used to perform experiment." .
+
+<http://example.org/Anitology/DeviceIdentifier> a rdfs:Class ;
+    rdfs:comment "Unique name or identifier of the device." .
+
+<http://example.org/Anitology/Diff> a rdfs:Class ;
+    rdfs:comment "Machine-readable description of changes made." .
+
+<http://example.org/Anitology/Email> a rdfs:Class ;
+    rdfs:comment "RFC822-compliant email address." .
+
+<http://example.org/Anitology/EmbeddedXML> a rdfs:Class ;
+    rdfs:comment "Value governed by a different XML Schema." .
+
+<http://example.org/Anitology/EmbeddedXMLType> a rdfs:Class ;
+    rdfs:comment "Value governed by a different XML Schema." .
+
+<http://example.org/Anitology/EncodedValueSet> a rdfs:Class ;
+    rdfs:comment "Multiple numeric values encoded as a base64 binary string. Uses little-endian byte order." .
+
+<http://example.org/Anitology/EndValue> a rdfs:Class ;
+    rdfs:comment "Upper boundary of an interval." .
+
+<http://example.org/Anitology/ExperimentDataBulkReference> a rdfs:Class ;
+    rdfs:comment "Prefix-based reference to a set of Experiment Steps whose data are consumed." .
+
+<http://example.org/Anitology/ExperimentDataPurposeType> a rdfs:Class .
+
+<http://example.org/Anitology/ExperimentDataReference> a rdfs:Class ;
+    rdfs:comment "Reference to an Experiment Step whose data is consumed." .
+
+<http://example.org/Anitology/ExperimentDataReferenceSet> a rdfs:Class ;
+    rdfs:comment "Set of Experiment Steps consumed by this Experiment Step." .
+
+<http://example.org/Anitology/ExperimentStep> a rdfs:Class ;
+    rdfs:comment "Container that documents a step in an experiment. Use one ExperimentStep per application of a Technique." .
+
+<http://example.org/Anitology/ExperimentStepSet> a rdfs:Class ;
+    rdfs:comment "Container for multiple ExperimentSteps that describe the process and results." .
+
+<http://example.org/Anitology/Extension> a rdfs:Class ;
+    rdfs:comment "Reference to an Extension to amend the active Technique Definition." .
+
+<http://example.org/Anitology/F> a rdfs:Class ;
+    rdfs:comment "Individual 32-bit floating point value." .
+
+<http://example.org/Anitology/FirmwareVersion> a rdfs:Class ;
+    rdfs:comment "Version identifier of firmware release." .
+
+<http://example.org/Anitology/I> a rdfs:Class ;
+    rdfs:comment "Individual integer value (32 bits, signed)." .
+
+<http://example.org/Anitology/Increment> a rdfs:Class ;
+    rdfs:comment "Increment value" .
+
+<http://example.org/Anitology/IndividualValueSet> a rdfs:Class ;
+    rdfs:comment "Multiple Values explicitly specified." .
+
+<http://example.org/Anitology/Infrastructure> a rdfs:Class ;
+    rdfs:comment "Contains references to the context of this Experiment." .
+
+<http://example.org/Anitology/L> a rdfs:Class ;
+    rdfs:comment "Individual long integer value (64 bits, signed)." .
+
+<http://example.org/Anitology/LabelType> a rdfs:Class ;
+    rdfs:comment "String representation of a particular Unit." .
+
+<http://example.org/Anitology/Location> a rdfs:Class ;
+    rdfs:comment "Location or physical address." .
+
+<http://example.org/Anitology/Manufacturer> a rdfs:Class ;
+    rdfs:comment "Company name." .
+
+<http://example.org/Anitology/Method> a rdfs:Class ;
+    rdfs:comment "Describes how this Experiment was performed." .
+
+<http://example.org/Anitology/Name> a rdfs:Class ;
+    rdfs:comment "Common name." .
+
+<http://example.org/Anitology/NewValue> a rdfs:Class ;
+    rdfs:comment "Value after the change." .
+
+<http://example.org/Anitology/NonNegativeIntType> a rdfs:Class ;
+    rdfs:comment "Individual non-negative Integer Value (32 bits, signed)" .
+
+<http://example.org/Anitology/OldValue> a rdfs:Class ;
+    rdfs:comment "Value before the change." .
+
+<http://example.org/Anitology/OperatingSystem> a rdfs:Class ;
+    rdfs:comment "Operating system the software was running on." .
+
+<http://example.org/Anitology/PNG> a rdfs:Class ;
+    rdfs:comment "Base 64 encoded PNG image." .
+
+<http://example.org/Anitology/Parameter> a rdfs:Class ;
+    rdfs:comment "Name/Value Pair." .
+
+<http://example.org/Anitology/ParameterTypeType> a rdfs:Class ;
+    rdfs:comment "Value governed by the SVG DTD. Used to represent vector graphic images." .
+
+<http://example.org/Anitology/ParentDataPointReference> a rdfs:Class ;
+    rdfs:comment "Reference to a data point or value range in an independent Series in the parent Result." .
+
+<http://example.org/Anitology/ParentDataPointReferenceSet> a rdfs:Class ;
+    rdfs:comment "Contains references to the parent Result." .
+
+<http://example.org/Anitology/Phone> a rdfs:Class ;
+    rdfs:comment "Phone number." .
+
+<http://example.org/Anitology/PlotScaleType> a rdfs:Class ;
+    rdfs:comment "Specifies that this Series is not plottable." .
+
+<http://example.org/Anitology/QuantityType> a rdfs:Class ;
+    rdfs:comment "Quantity a Unit is applicable to." .
+
+<http://example.org/Anitology/Reason> a rdfs:Class ;
+    rdfs:comment "Explanation why changes were made." .
+
+<http://example.org/Anitology/Reference> a rdfs:Class ;
+    rdfs:comment "ID of the SignableItem that was affected. If none is specified, entire document is covered." .
+
+<http://example.org/Anitology/Result> a rdfs:Class ;
+    rdfs:comment "Container for Data derived from Experiment." .
+
+<http://example.org/Anitology/Role> a rdfs:Class ;
+    rdfs:comment "Role the Author plays within the organization." .
+
+<http://example.org/Anitology/S> a rdfs:Class ;
+    rdfs:comment "Individual string value." .
+
+<http://example.org/Anitology/SIUnit> a rdfs:Class ;
+    rdfs:comment "Combination of SI Units used to represent Scientific unit" .
+
+<http://example.org/Anitology/SVG> a rdfs:Class ;
+    rdfs:comment "Value governed by the SVG DTD. Used to represent vector graphic images." .
+
+<http://example.org/Anitology/Sample> a rdfs:Class ;
+    rdfs:comment "Individual Sample, referenced from other parts of this AnIML document." .
+
+<http://example.org/Anitology/SampleInheritance> a rdfs:Class ;
+    rdfs:comment "Indicates that a Sample was inherited from the parent ExperimentStep." .
+
+<http://example.org/Anitology/SamplePurposeType> a rdfs:Class .
+
+<http://example.org/Anitology/SampleReference> a rdfs:Class ;
+    rdfs:comment "Reference to a Sample used in this Experiment." .
+
+<http://example.org/Anitology/SampleReferenceSet> a rdfs:Class ;
+    rdfs:comment "Set of Samples used in this Experiment." .
+
+<http://example.org/Anitology/SampleSet> a rdfs:Class ;
+    rdfs:comment "Container for Samples used in this AnIML document." .
+
+<http://example.org/Anitology/ScopeType> a rdfs:Class ;
+    rdfs:comment "This diff only describes a change in attributes. The child elements remain unchanged (and are not reflected in the diff to save space)." .
+
+<http://example.org/Anitology/SerialNumber> a rdfs:Class ;
+    rdfs:comment "Unique serial number of device." .
+
+<http://example.org/Anitology/Series> a rdfs:Class ;
+    rdfs:comment "Container for multiple Values." .
+
+<http://example.org/Anitology/SeriesSet> a rdfs:Class ;
+    rdfs:comment "Container for n-dimensional Data." .
+
+<http://example.org/Anitology/SeriesTypeType> a rdfs:Class ;
+    rdfs:comment "Names of Data Types for Series." .
+
+<http://example.org/Anitology/ShortStringType> a rdfs:Class ;
+    rdfs:comment "String with up to 1024 characters" .
+
+<http://example.org/Anitology/ShortTokenType> a rdfs:Class ;
+    rdfs:comment "Token with up to 1024 characters" .
+
+<http://example.org/Anitology/Signature> a rdfs:Class ;
+    rdfs:comment "Digital Signature that has been applied to a part of this AnIML document. Uses the W3C XML-DSIG specification." .
+
+<http://example.org/Anitology/SignatureSet> a rdfs:Class ;
+    rdfs:comment "Container for digital signatures covering parts of this AnIML document." .
+
+<http://example.org/Anitology/Software> a rdfs:Class ;
+    rdfs:comment "Software used to author this." .
+
+<http://example.org/Anitology/StartValue> a rdfs:Class ;
+    rdfs:comment "Lower boundary of an interval or ValueSet." .
+
+<http://example.org/Anitology/Tag> a rdfs:Class ;
+    rdfs:comment "Tag to mark related data items. When a value is given, it may also serve as a reference to an external data system." .
+
+<http://example.org/Anitology/TagSet> a rdfs:Class ;
+    rdfs:comment "Set of Tag elements." .
+
+<http://example.org/Anitology/Technique> a rdfs:Class ;
+    rdfs:comment "Reference to Technique Definition used in this Experiment." .
+
+<http://example.org/Anitology/Template> a rdfs:Class ;
+    rdfs:comment "Represents a template for an ExperimentStep." .
+
+<http://example.org/Anitology/Timestamp> a rdfs:Class ;
+    rdfs:comment "Date and time of modification." .
+
+<http://example.org/Anitology/Unit> a rdfs:Class ;
+    rdfs:comment "Definition of a Scientific Unit." .
+
+<http://example.org/Anitology/UserTypeType> a rdfs:Class ;
+    rdfs:comment "Specifies that the user is a software system." .
+
+<http://example.org/Anitology/Version> a rdfs:Class ;
+    rdfs:comment "Version identifier of software release." .
+
+<http://example.org/Anitology/VisibleType> a rdfs:Class ;
+    rdfs:comment "Specifes whether a Series should be displayed by default." .
+
+<http://example.org/Anitology/barcode> a rdfs:Class ;
+    rdfs:comment "Value of barcode label that is attached to sample container." .
+
+<http://example.org/Anitology/changedItem> a rdfs:Class ;
+    rdfs:comment "ID of the SignableItem that was changed" .
+
+<http://example.org/Anitology/comment> a rdfs:Class ;
+    rdfs:comment "Unstructured text comment to further describe the ExperimentStep.",
+        "Unstructured text comment to further describe the Sample." .
+
+<http://example.org/Anitology/containerID> a rdfs:Class ;
+    rdfs:comment "Sample ID of container in which this sample is located." .
+
+<http://example.org/Anitology/containerType> a rdfs:Class ;
+    rdfs:comment "Whether this sample is also a container for other samples. Set to \"simple\" if not." .
+
+<http://example.org/Anitology/dataPurpose> a rdfs:Class .
+
+<http://example.org/Anitology/dependency> a rdfs:Class ;
+    rdfs:comment "Specified whether the Series is independent or dependent." .
+
+<http://example.org/Anitology/derived> a rdfs:Class ;
+    rdfs:comment "Indicates whether this is a derived Sample. A derived Sample is a Sample that has been created by applying a Technique. (Sub-Sampling, Processing, ...)" .
+
+<http://example.org/Anitology/ds:SignatureType> a rdfs:Class .
+
+<http://example.org/Anitology/endIndex> a rdfs:Class ;
+    rdfs:comment "Zero-based index of the last entry in this Value Set. The specification is inclusive." .
+
+<http://example.org/Anitology/experimentStepID> a rdfs:Class ;
+    rdfs:comment "Unique identifier for this ExperimentStep. Used to point to this step from an ExperimentDataReference." .
+
+<http://example.org/Anitology/experimentStepIDPrefix> a rdfs:Class .
+
+<http://example.org/Anitology/exponent> a rdfs:Class .
+
+<http://example.org/Anitology/factor> a rdfs:Class .
+
+<http://example.org/Anitology/id> a rdfs:Class ;
+    rdfs:comment "Anchor point for digital signature. This identifier is referred to from the \"Reference\" element in a Signature. Unique per document." .
+
+<http://example.org/Anitology/label> a rdfs:Class ;
+    rdfs:comment "Defines the visual representation of a particular Unit." .
+
+<http://example.org/Anitology/length> a rdfs:Class ;
+    rdfs:comment "Number of data points each Series contains." .
+
+<http://example.org/Anitology/locationInContainer> a rdfs:Class ;
+    rdfs:comment "Coordinates of this sample within the enclosing container. In case of microplates or trays, the row is identified by letters and the column is identified by numbers (1-based) while in landscape orientation. Examples: A10 = 1st row, 10th column, Z1 = 26th row, 1st column, AB2 = 28th row, 2nd column." .
+
+<http://example.org/Anitology/name> a rdfs:Class ;
+    rdfs:comment "Name of Extension to be used. Must match Name given in Extension Definition file.",
+        "Optional method name, as defined in the instrument software.",
+        "Plain-text name of this item." .
+
+<http://example.org/Anitology/offset> a rdfs:Class .
+
+<http://example.org/Anitology/parameterType> a rdfs:Class ;
+    rdfs:comment "Data type of this parameter" .
+
+<http://example.org/Anitology/plotScale> a rdfs:Class ;
+    rdfs:comment "Specifies whether the data in this Series is typically plotted on a linear or logarithmic scale." .
+
+<http://example.org/Anitology/quantity> a rdfs:Class ;
+    rdfs:comment "Quantity the unit can be applied to" .
+
+<http://example.org/Anitology/role> a rdfs:Class ;
+    rdfs:comment "Role this sample plays within the current ExperimentStep." .
+
+<http://example.org/Anitology/sampleID> a rdfs:Class ;
+    rdfs:comment "SampleID of the Sample used in the current ExperimentStep. Refers to the sampleID within the SampleSet section of the document." .
+
+<http://example.org/Anitology/samplePurpose> a rdfs:Class ;
+    rdfs:comment "Specifies whether the referenced sample is produced or consumed by the current ExperimentStep." .
+
+<http://example.org/Anitology/scope> a rdfs:Class ;
+    rdfs:comment "Scope of diff. May be \"element\" or \"attribute\"." .
+
+<http://example.org/Anitology/seriesID> a rdfs:Class ;
+    rdfs:comment "Contains the ID of the Series referenced.",
+        "Identifies the Series. Used in References from subordinate ExperimentSteps. Unique per SeriesSet." .
+
+<http://example.org/Anitology/seriesType> a rdfs:Class ;
+    rdfs:comment "Data type used by all values in this Series." .
+
+<http://example.org/Anitology/sha256> a rdfs:Class ;
+    rdfs:comment "SHA256 checksum of the referenced Extension. Hex encoded, lower cased. Similar to the output of the sha256 unix command.",
+        "SHA256 checksum of the referenced Technique Definition. Hex encoded, lower cased. Similar to the output of the sha256 unix command." .
+
+<http://example.org/Anitology/sourceDataLocation> a rdfs:Class ;
+    rdfs:comment "Points to the original data source. May be a file name, uri, database ID, etc." .
+
+<http://example.org/Anitology/startIndex> a rdfs:Class ;
+    rdfs:comment "Zero-based index of the first entry in this Value Set. The specification is inclusive." .
+
+<http://example.org/Anitology/templateID> a rdfs:Class .
+
+<http://example.org/Anitology/templateUsed> a rdfs:Class .
+
+<http://example.org/Anitology/uri> a rdfs:Class ;
+    rdfs:comment "URI where Extension file can be fetched.",
+        "URI where Technique Definition file can be fetched." .
+
+<http://example.org/Anitology/userType> a rdfs:Class ;
+    rdfs:comment "Type of user (human, device, software)" .
+
+<http://example.org/Anitology/value> a rdfs:Class .
+
+<http://example.org/Anitology/version> a rdfs:Class ;
+    rdfs:comment "Version number of the AnIML Core Schema used in this document. Must be \"0.90\"." .
+
+<http://example.org/Anitology/visible> a rdfs:Class ;
+    rdfs:comment "Specifies whether data in this Series is to be displayed to the user by default." .
+
+<http://example.org/Anitology/xsd:ID> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:IDREF> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:anyURI> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:base64Binary> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:boolean> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:dateTime> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:double> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:float> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:int> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:long> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:string> a rdfs:Class .
+
+<http://example.org/Anitology/xsd:token> a rdfs:Class .
+
+<http://example.org/Anitology/belongsToCategory> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Sample> ;
+    rdfs:range <http://example.org/Anitology/Category> .
+
+<http://example.org/Anitology/contains> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/SignatureSet>,
+        <http://example.org/Anitology/TagSet> ;
+    rdfs:range <http://example.org/Anitology/Signature>,
+        <http://example.org/Anitology/Tag> .
+
+<http://example.org/Anitology/datatype> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Action>,
+        <http://example.org/Anitology/Affiliation>,
+        <http://example.org/Anitology/Boolean>,
+        <http://example.org/Anitology/ContainerTypeType>,
+        <http://example.org/Anitology/D>,
+        <http://example.org/Anitology/DateTime>,
+        <http://example.org/Anitology/DependencyType>,
+        <http://example.org/Anitology/DeviceIdentifier>,
+        <http://example.org/Anitology/Email>,
+        <http://example.org/Anitology/EmbeddedXML>,
+        <http://example.org/Anitology/EmbeddedXMLType>,
+        <http://example.org/Anitology/FirmwareVersion>,
+        <http://example.org/Anitology/I>,
+        <http://example.org/Anitology/L>,
+        <http://example.org/Anitology/Location>,
+        <http://example.org/Anitology/Manufacturer>,
+        <http://example.org/Anitology/Name>,
+        <http://example.org/Anitology/OldValue>,
+        <http://example.org/Anitology/OperatingSystem>,
+        <http://example.org/Anitology/PNG>,
+        <http://example.org/Anitology/ParameterTypeType>,
+        <http://example.org/Anitology/PlotScaleType>,
+        <http://example.org/Anitology/QuantityType>,
+        <http://example.org/Anitology/Reason>,
+        <http://example.org/Anitology/Reference>,
+        <http://example.org/Anitology/SVG>,
+        <http://example.org/Anitology/ScopeType>,
+        <http://example.org/Anitology/SerialNumber>,
+        <http://example.org/Anitology/SeriesTypeType>,
+        <http://example.org/Anitology/ShortStringType>,
+        <http://example.org/Anitology/Timestamp>,
+        <http://example.org/Anitology/UserTypeType>,
+        <http://example.org/Anitology/Version>,
+        <http://example.org/Anitology/VisibleType>,
+        <http://example.org/Anitology/barcode>,
+        <http://example.org/Anitology/changedItem>,
+        <http://example.org/Anitology/comment>,
+        <http://example.org/Anitology/containerID>,
+        <http://example.org/Anitology/containerType>,
+        <http://example.org/Anitology/dataPurpose>,
+        <http://example.org/Anitology/dependency>,
+        <http://example.org/Anitology/derived>,
+        <http://example.org/Anitology/experimentStepID>,
+        <http://example.org/Anitology/experimentStepIDPrefix>,
+        <http://example.org/Anitology/exponent>,
+        <http://example.org/Anitology/factor>,
+        <http://example.org/Anitology/id>,
+        <http://example.org/Anitology/label>,
+        <http://example.org/Anitology/locationInContainer>,
+        <http://example.org/Anitology/name>,
+        <http://example.org/Anitology/offset>,
+        <http://example.org/Anitology/parameterType>,
+        <http://example.org/Anitology/plotScale>,
+        <http://example.org/Anitology/quantity>,
+        <http://example.org/Anitology/sampleID>,
+        <http://example.org/Anitology/scope>,
+        <http://example.org/Anitology/seriesID>,
+        <http://example.org/Anitology/seriesType>,
+        <http://example.org/Anitology/sourceDataLocation>,
+        <http://example.org/Anitology/startIndex>,
+        <http://example.org/Anitology/templateID>,
+        <http://example.org/Anitology/templateUsed>,
+        <http://example.org/Anitology/uri>,
+        <http://example.org/Anitology/userType>,
+        <http://example.org/Anitology/value>,
+        <http://example.org/Anitology/visible> ;
+    rdfs:range <http://example.org/Anitology/ContainerTypeType>,
+        <http://example.org/Anitology/DependencyType>,
+        <http://example.org/Anitology/EmbeddedXMLType>,
+        <http://example.org/Anitology/ExperimentDataPurposeType>,
+        <http://example.org/Anitology/LabelType>,
+        <http://example.org/Anitology/NonNegativeIntType>,
+        <http://example.org/Anitology/ParameterTypeType>,
+        <http://example.org/Anitology/PlotScaleType>,
+        <http://example.org/Anitology/QuantityType>,
+        <http://example.org/Anitology/ScopeType>,
+        <http://example.org/Anitology/SeriesTypeType>,
+        <http://example.org/Anitology/ShortStringType>,
+        <http://example.org/Anitology/ShortTokenType>,
+        <http://example.org/Anitology/UserTypeType>,
+        <http://example.org/Anitology/VisibleType>,
+        <http://example.org/Anitology/xsd:ID>,
+        <http://example.org/Anitology/xsd:IDREF>,
+        <http://example.org/Anitology/xsd:anyURI>,
+        <http://example.org/Anitology/xsd:base64Binary>,
+        <http://example.org/Anitology/xsd:boolean>,
+        <http://example.org/Anitology/xsd:dateTime>,
+        <http://example.org/Anitology/xsd:double>,
+        <http://example.org/Anitology/xsd:int>,
+        <http://example.org/Anitology/xsd:long>,
+        <http://example.org/Anitology/xsd:string> .
+
+<http://example.org/Anitology/hasAction> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry> ;
+    rdfs:range <http://example.org/Anitology/Action> .
+
+<http://example.org/Anitology/hasAffiliation> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Author> ;
+    rdfs:range <http://example.org/Anitology/Affiliation> .
+
+<http://example.org/Anitology/hasAssociatedStepSet> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Result> ;
+    rdfs:range <http://example.org/Anitology/ExperimentStepSet> .
+
+<http://example.org/Anitology/hasAuthor> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry> ;
+    rdfs:range <http://example.org/Anitology/Author> .
+
+<http://example.org/Anitology/hasBarcode> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Sample> ;
+    rdfs:range <http://example.org/Anitology/barcode> .
+
+<http://example.org/Anitology/hasChangedItem> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Diff> ;
+    rdfs:range <http://example.org/Anitology/changedItem> .
+
+<http://example.org/Anitology/hasComment> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry>,
+        <http://example.org/Anitology/Sample> ;
+    rdfs:range <http://example.org/Anitology/Comment>,
+        <http://example.org/Anitology/comment> .
+
+<http://example.org/Anitology/hasContainerId> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Sample> ;
+    rdfs:range <http://example.org/Anitology/containerID> .
+
+<http://example.org/Anitology/hasContainerType> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Sample> ;
+    rdfs:range <http://example.org/Anitology/containerType> .
+
+<http://example.org/Anitology/hasDataReference> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentDataReferenceSet> ;
+    rdfs:range <http://example.org/Anitology/ExperimentDataReference> .
+
+<http://example.org/Anitology/hasDatatype> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Comment>,
+        <http://example.org/Anitology/NewValue>,
+        <http://example.org/Anitology/Phone>,
+        <http://example.org/Anitology/Role>,
+        <http://example.org/Anitology/S>,
+        <http://example.org/Anitology/ShortTokenType>,
+        <http://example.org/Anitology/Signature>,
+        <http://example.org/Anitology/endIndex>,
+        <http://example.org/Anitology/length>,
+        <http://example.org/Anitology/role>,
+        <http://example.org/Anitology/samplePurpose>,
+        <http://example.org/Anitology/sha256>,
+        <http://example.org/Anitology/startIndex>,
+        <http://example.org/Anitology/version> ;
+    rdfs:range <http://example.org/Anitology/NonNegativeIntType>,
+        <http://example.org/Anitology/SamplePurposeType>,
+        <http://example.org/Anitology/ShortStringType>,
+        <http://example.org/Anitology/ShortTokenType>,
+        <http://example.org/Anitology/ds:SignatureType>,
+        <http://example.org/Anitology/xsd:string>,
+        <http://example.org/Anitology/xsd:token> .
+
+<http://example.org/Anitology/hasDependency> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/dependency> .
+
+<http://example.org/Anitology/hasEmail> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Author> ;
+    rdfs:range <http://example.org/Anitology/Email> .
+
+<http://example.org/Anitology/hasEndIndex> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AutoIncrementedValueSet>,
+        <http://example.org/Anitology/EncodedValueSet>,
+        <http://example.org/Anitology/IndividualValueSet> ;
+    rdfs:range <http://example.org/Anitology/endIndex> .
+
+<http://example.org/Anitology/hasEntry> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntrySet> ;
+    rdfs:range <http://example.org/Anitology/AuditTrailEntry> .
+
+<http://example.org/Anitology/hasExperimentDataReferenceSet> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Infrastructure> ;
+    rdfs:range <http://example.org/Anitology/ExperimentDataReferenceSet> .
+
+<http://example.org/Anitology/hasExperimentStepSet> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AnIML> ;
+    rdfs:range <http://example.org/Anitology/ExperimentStepSet> .
+
+<http://example.org/Anitology/hasExponent> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/SIUnit> ;
+    rdfs:range <http://example.org/Anitology/exponent> .
+
+<http://example.org/Anitology/hasFirmwareVersion> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Device> ;
+    rdfs:range <http://example.org/Anitology/FirmwareVersion> .
+
+<http://example.org/Anitology/hasId> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry>,
+        <http://example.org/Anitology/AuditTrailEntrySet>,
+        <http://example.org/Anitology/ExperimentDataBulkReference>,
+        <http://example.org/Anitology/ExperimentDataReference>,
+        <http://example.org/Anitology/ExperimentDataReferenceSet>,
+        <http://example.org/Anitology/Sample>,
+        <http://example.org/Anitology/SampleInheritance>,
+        <http://example.org/Anitology/SampleReference>,
+        <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/id>,
+        <http://example.org/Anitology/sampleID>,
+        <http://example.org/Anitology/seriesID> .
+
+<http://example.org/Anitology/hasIdentifier> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Device> ;
+    rdfs:range <http://example.org/Anitology/DeviceIdentifier> .
+
+<http://example.org/Anitology/hasIncrement> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AutoIncrementedValueSet> ;
+    rdfs:range <http://example.org/Anitology/Increment> .
+
+<http://example.org/Anitology/hasLabel> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Unit> ;
+    rdfs:range <http://example.org/Anitology/label> .
+
+<http://example.org/Anitology/hasLength> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/SeriesSet> ;
+    rdfs:range <http://example.org/Anitology/length> .
+
+<http://example.org/Anitology/hasLocationInContainer> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Sample> ;
+    rdfs:range <http://example.org/Anitology/locationInContainer> .
+
+<http://example.org/Anitology/hasManufacturer> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Device>,
+        <http://example.org/Anitology/Software> ;
+    rdfs:range <http://example.org/Anitology/Manufacturer> .
+
+<http://example.org/Anitology/hasMember> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStepSet>,
+        <http://example.org/Anitology/ParentDataPointReferenceSet>,
+        <http://example.org/Anitology/SampleReferenceSet>,
+        <http://example.org/Anitology/SampleSet>,
+        <http://example.org/Anitology/SeriesSet> ;
+    rdfs:range <http://example.org/Anitology/ExperimentStep>,
+        <http://example.org/Anitology/ParentDataPointReference>,
+        <http://example.org/Anitology/Sample>,
+        <http://example.org/Anitology/SampleReference>,
+        <http://example.org/Anitology/Series> .
+
+<http://example.org/Anitology/hasName> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Category>,
+        <http://example.org/Anitology/Device>,
+        <http://example.org/Anitology/Extension>,
+        <http://example.org/Anitology/Parameter>,
+        <http://example.org/Anitology/Result>,
+        <http://example.org/Anitology/Sample>,
+        <http://example.org/Anitology/Series>,
+        <http://example.org/Anitology/Software>,
+        <http://example.org/Anitology/Technique>,
+        <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/Name>,
+        <http://example.org/Anitology/name> .
+
+<http://example.org/Anitology/hasOffset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/SIUnit> ;
+    rdfs:range <http://example.org/Anitology/offset> .
+
+<http://example.org/Anitology/hasOperatingSystem> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Software> ;
+    rdfs:range <http://example.org/Anitology/OperatingSystem> .
+
+<http://example.org/Anitology/hasPurpose> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentDataReference>,
+        <http://example.org/Anitology/SampleReference> ;
+    rdfs:range <http://example.org/Anitology/dataPurpose>,
+        <http://example.org/Anitology/samplePurpose> .
+
+<http://example.org/Anitology/hasRole> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentDataReference>,
+        <http://example.org/Anitology/SampleInheritance>,
+        <http://example.org/Anitology/SampleReference> ;
+    rdfs:range <http://example.org/Anitology/role> .
+
+<http://example.org/Anitology/hasSampleSet> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AnIML> ;
+    rdfs:range <http://example.org/Anitology/SampleSet> .
+
+<http://example.org/Anitology/hasSerialNumber> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Device> ;
+    rdfs:range <http://example.org/Anitology/SerialNumber> .
+
+<http://example.org/Anitology/hasSeriesId> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ParentDataPointReference> ;
+    rdfs:range <http://example.org/Anitology/seriesID> .
+
+<http://example.org/Anitology/hasSeriesSet> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Result> ;
+    rdfs:range <http://example.org/Anitology/SeriesSet> .
+
+<http://example.org/Anitology/hasSha256> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Extension> ;
+    rdfs:range <http://example.org/Anitology/sha256> .
+
+<http://example.org/Anitology/hasSourceDataLocation> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep>,
+        <http://example.org/Anitology/Sample>,
+        <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/sourceDataLocation> .
+
+<http://example.org/Anitology/hasStartIndex> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AutoIncrementedValueSet> ;
+    rdfs:range <http://example.org/Anitology/startIndex> .
+
+<http://example.org/Anitology/hasStartvalue> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AutoIncrementedValueSet> ;
+    rdfs:range <http://example.org/Anitology/StartValue> .
+
+<http://example.org/Anitology/hasStepId> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentDataReference> ;
+    rdfs:range <http://example.org/Anitology/experimentStepID> .
+
+<http://example.org/Anitology/hasSubcategory> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Category> ;
+    rdfs:range <http://example.org/Anitology/Category> .
+
+<http://example.org/Anitology/hasTagSet> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Sample>,
+        <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/TagSet> .
+
+<http://example.org/Anitology/hasTechnique> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep> ;
+    rdfs:range <http://example.org/Anitology/Technique> .
+
+<http://example.org/Anitology/hasTimestamp> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry>,
+        <http://example.org/Anitology/Infrastructure> ;
+    rdfs:range <http://example.org/Anitology/Timestamp> .
+
+<http://example.org/Anitology/hasUnit> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Parameter> ;
+    rdfs:range <http://example.org/Anitology/Unit> .
+
+<http://example.org/Anitology/hasUri> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Technique> ;
+    rdfs:range <http://example.org/Anitology/uri> .
+
+<http://example.org/Anitology/hasVersion> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AnIML> ;
+    rdfs:range <http://example.org/Anitology/version> .
+
+<http://example.org/Anitology/hasaudittrailentryset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AnIML> ;
+    rdfs:range <http://example.org/Anitology/AuditTrailEntrySet> .
+
+<http://example.org/Anitology/hasauthor> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Method> ;
+    rdfs:range <http://example.org/Anitology/Author> .
+
+<http://example.org/Anitology/hasautoincrementedvalueset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/AutoIncrementedValueSet> .
+
+<http://example.org/Anitology/hascategory> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Method>,
+        <http://example.org/Anitology/Result> ;
+    rdfs:range <http://example.org/Anitology/Category> .
+
+<http://example.org/Anitology/hascomment> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep> ;
+    rdfs:range <http://example.org/Anitology/comment> .
+
+<http://example.org/Anitology/hasdatapurpose> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentDataBulkReference> ;
+    rdfs:range <http://example.org/Anitology/dataPurpose> .
+
+<http://example.org/Anitology/hasdevice> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Method> ;
+    rdfs:range <http://example.org/Anitology/Device> .
+
+<http://example.org/Anitology/hasdiff> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry> ;
+    rdfs:range <http://example.org/Anitology/Diff> .
+
+<http://example.org/Anitology/hasencodedvalueset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/EncodedValueSet> .
+
+<http://example.org/Anitology/hasendvalue> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ParentDataPointReference> ;
+    rdfs:range <http://example.org/Anitology/EndValue> .
+
+<http://example.org/Anitology/hasexperimentdatabulkreference> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentDataReferenceSet> ;
+    rdfs:range <http://example.org/Anitology/ExperimentDataBulkReference> .
+
+<http://example.org/Anitology/hasexperimentstepid> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep> ;
+    rdfs:range <http://example.org/Anitology/experimentStepID> .
+
+<http://example.org/Anitology/hasexperimentstepidprefix> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentDataBulkReference> ;
+    rdfs:range <http://example.org/Anitology/experimentStepIDPrefix> .
+
+<http://example.org/Anitology/hasextension> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Technique> ;
+    rdfs:range <http://example.org/Anitology/Extension> .
+
+<http://example.org/Anitology/hasfactor> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/SIUnit> ;
+    rdfs:range <http://example.org/Anitology/factor> .
+
+<http://example.org/Anitology/hasid> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStepSet>,
+        <http://example.org/Anitology/Infrastructure>,
+        <http://example.org/Anitology/Method>,
+        <http://example.org/Anitology/ParentDataPointReference>,
+        <http://example.org/Anitology/SampleReference>,
+        <http://example.org/Anitology/SampleReferenceSet>,
+        <http://example.org/Anitology/SampleSet> ;
+    rdfs:range <http://example.org/Anitology/id> .
+
+<http://example.org/Anitology/hasindividualvalueset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/IndividualValueSet> .
+
+<http://example.org/Anitology/hasinfrastructure> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/Infrastructure> .
+
+<http://example.org/Anitology/haslocation> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Author> ;
+    rdfs:range <http://example.org/Anitology/Location> .
+
+<http://example.org/Anitology/hasmethod> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/Method> .
+
+<http://example.org/Anitology/hasname> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Author>,
+        <http://example.org/Anitology/ExperimentStep>,
+        <http://example.org/Anitology/Method>,
+        <http://example.org/Anitology/SeriesSet>,
+        <http://example.org/Anitology/Tag> ;
+    rdfs:range <http://example.org/Anitology/Name>,
+        <http://example.org/Anitology/name> .
+
+<http://example.org/Anitology/hasnewvalue> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Diff> ;
+    rdfs:range <http://example.org/Anitology/NewValue> .
+
+<http://example.org/Anitology/hasoldvalue> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Diff> ;
+    rdfs:range <http://example.org/Anitology/OldValue> .
+
+<http://example.org/Anitology/hasparameter> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Category> ;
+    rdfs:range <http://example.org/Anitology/Parameter> .
+
+<http://example.org/Anitology/hasparametertype> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Parameter> ;
+    rdfs:range <http://example.org/Anitology/parameterType> .
+
+<http://example.org/Anitology/hasparentdatapointreferenceset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Infrastructure> ;
+    rdfs:range <http://example.org/Anitology/ParentDataPointReferenceSet> .
+
+<http://example.org/Anitology/hasphone> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Author> ;
+    rdfs:range <http://example.org/Anitology/Phone> .
+
+<http://example.org/Anitology/hasplotscale> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/plotScale> .
+
+<http://example.org/Anitology/hasreason> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry> ;
+    rdfs:range <http://example.org/Anitology/Reason> .
+
+<http://example.org/Anitology/hasreference> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry> ;
+    rdfs:range <http://example.org/Anitology/Reference> .
+
+<http://example.org/Anitology/hasresult> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/Result> .
+
+<http://example.org/Anitology/hasrole> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Author>,
+        <http://example.org/Anitology/ExperimentDataBulkReference> ;
+    rdfs:range <http://example.org/Anitology/Role>,
+        <http://example.org/Anitology/role> .
+
+<http://example.org/Anitology/hassampleinheritance> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/SampleReferenceSet> ;
+    rdfs:range <http://example.org/Anitology/SampleInheritance> .
+
+<http://example.org/Anitology/hassamplepurpose> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/SampleInheritance> ;
+    rdfs:range <http://example.org/Anitology/samplePurpose> .
+
+<http://example.org/Anitology/hassamplereferenceset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Infrastructure> ;
+    rdfs:range <http://example.org/Anitology/SampleReferenceSet> .
+
+<http://example.org/Anitology/hasscope> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Diff> ;
+    rdfs:range <http://example.org/Anitology/scope> .
+
+<http://example.org/Anitology/hasseriesset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Category> ;
+    rdfs:range <http://example.org/Anitology/SeriesSet> .
+
+<http://example.org/Anitology/hasseriestype> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/seriesType> .
+
+<http://example.org/Anitology/hassha256> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Technique> ;
+    rdfs:range <http://example.org/Anitology/sha256> .
+
+<http://example.org/Anitology/hassignatureset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AnIML> ;
+    rdfs:range <http://example.org/Anitology/SignatureSet> .
+
+<http://example.org/Anitology/hassiunit> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Unit> ;
+    rdfs:range <http://example.org/Anitology/SIUnit> .
+
+<http://example.org/Anitology/hassoftware> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/AuditTrailEntry>,
+        <http://example.org/Anitology/Method> ;
+    rdfs:range <http://example.org/Anitology/Software> .
+
+<http://example.org/Anitology/hasstartindex> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/EncodedValueSet>,
+        <http://example.org/Anitology/IndividualValueSet> ;
+    rdfs:range <http://example.org/Anitology/startIndex> .
+
+<http://example.org/Anitology/hasstartvalue> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ParentDataPointReference> ;
+    rdfs:range <http://example.org/Anitology/StartValue> .
+
+<http://example.org/Anitology/hastagset> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep> ;
+    rdfs:range <http://example.org/Anitology/TagSet> .
+
+<http://example.org/Anitology/hastechnique> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/Technique> .
+
+<http://example.org/Anitology/hastemplateid> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Template> ;
+    rdfs:range <http://example.org/Anitology/templateID> .
+
+<http://example.org/Anitology/hasunit> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/Unit> .
+
+<http://example.org/Anitology/hasuri> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Extension> ;
+    rdfs:range <http://example.org/Anitology/uri> .
+
+<http://example.org/Anitology/hasusertype> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Author> ;
+    rdfs:range <http://example.org/Anitology/userType> .
+
+<http://example.org/Anitology/hasvalue> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Tag> ;
+    rdfs:range <http://example.org/Anitology/value> .
+
+<http://example.org/Anitology/hasversion> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Software> ;
+    rdfs:range <http://example.org/Anitology/Version> .
+
+<http://example.org/Anitology/isATypeOf> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/LabelType>,
+        <http://example.org/Anitology/NonNegativeIntType> ;
+    rdfs:range <http://example.org/Anitology/ShortTokenType>,
+        <http://example.org/Anitology/xsd:int> .
+
+<http://example.org/Anitology/isDatatype> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/F> ;
+    rdfs:range <http://example.org/Anitology/xsd:float> .
+
+<http://example.org/Anitology/isDerivedFrom> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Sample> ;
+    rdfs:range <http://example.org/Anitology/derived> .
+
+<http://example.org/Anitology/isVisibleIn> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Series> ;
+    rdfs:range <http://example.org/Anitology/visible> .
+
+<http://example.org/Anitology/measures> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/Unit> ;
+    rdfs:range <http://example.org/Anitology/quantity> .
+
+<http://example.org/Anitology/produces> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep> ;
+    rdfs:range <http://example.org/Anitology/Result> .
+
+<http://example.org/Anitology/usesMethod> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep> ;
+    rdfs:range <http://example.org/Anitology/Method> .
+
+<http://example.org/Anitology/usesTemplate> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep>,
+        <http://example.org/Anitology/ExperimentStepSet> ;
+    rdfs:range <http://example.org/Anitology/Template>,
+        <http://example.org/Anitology/templateUsed> .
+
+<http://example.org/Anitology/utilizesInfrastructure> a rdf:Property ;
+    rdfs:domain <http://example.org/Anitology/ExperimentStep> ;
+    rdfs:range <http://example.org/Anitology/Infrastructure> .
+

@@ -1,3 +1,153 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:abdba233ab29525c1c29b79db30c42d8ab4637a68efc46c2de995e137f6f20a6
-size 10164
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc-uv#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc-uv#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc-uv> rdf:type owl:Ontology ;
+                                                                        owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc-uv> ;
+                                                                        owl:imports <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography> ,
+                                                                                    <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc> ,
+                                                                                    <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/uv> ;
+                                                                        dct:contributor <http://www.allotrope.org> ;
+                                                                        dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                        dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                        dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                        dct:publisher <http://www.allotrope.org> ;
+                                                                        dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                   <http://purl.allotrope.org/voc/copyright> ;
+                                                                        dct:rightsHolder <http://www.allotrope.org> ;
+                                                                        dct:title "AFO LC-UV Domain Ontology (REC/2025/06)" ;
+                                                                        owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/lc-uv> ;
+                                                                        owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000090
+af-e:AFE_0000090 rdfs:subClassOf af-e:AFE_0002200 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000711
+af-e:AFE_0000711 rdfs:subClassOf af-e:AFE_0002200 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002144
+af-e:AFE_0002144 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002197 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000972 ;
+                                   owl:someValuesFrom af-e:AFE_0000711
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:changeNote "2020-03-24 Changed equiventClass to subClass. [Allotrope]" ;
+                 skos:definition "A LC-UV system is a device system that has a liquid chromatograph and an ultra-violet detector component. [Allotrope]" ;
+                 skos:prefLabel "LC-UV system" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003679
+af-p:AFP_0003679 rdf:type owl:Class ;
+                 rdfs:subClassOf obi:_0000011 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000057 ;
+                                   owl:someValuesFrom af-e:AFE_0002144
+                                 ] ;
+                 skos:definition "A process that is executed by an LC-UV system. [Allotrope]" ;
+                 skos:prefLabel "LC-UV system process" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001653
+af-r:AFR_0001653 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001556 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom af-p:AFP_0003679
+                                 ] ;
+                 skos:altLabel "instrument method" ;
+                 skos:definition "A plan specification that specifies an LC-UV system process. [Allotrope]" ;
+                 skos:prefLabel "LC-UV system method" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

@@ -1,3 +1,620 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3ee9a457eb3df37bffd68152196626e163d4d9049b43ec0a8aa35c66282dc9e
-size 41461
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/nmr#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/nmr#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/nmr> rdf:type owl:Ontology ;
+                                                                      owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/nmr> ;
+                                                                      owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ;
+                                                                      dct:contributor <http://www.allotrope.org> ;
+                                                                      dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                      dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ,
+                                                                                  <http://purl.allotrope.org/voc/iupac-license> ;
+                                                                      dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                      dct:publisher <http://www.allotrope.org> ;
+                                                                      dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                 <http://purl.allotrope.org/voc/copyright> ;
+                                                                      dct:rightsHolder <http://www.allotrope.org> ;
+                                                                      dct:title "AFO NMR Domain Ontology (REC/2020/12)" ;
+                                                                      owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/nmr> ;
+                                                                      owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002280
+af-e:AFE_0002280 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000857 ;
+                 skos:altLabel "NMR spectrometer" ;
+                 skos:definition "A nuclear magnetic resonance spectrometer is a measurement device used to conduct NMR experiments consisting of a magnet housing a sample space surrounded by two coils which act to transmit radio frequency radiation to the sample and to detect the response of the sample. [CHMO]" ;
+                 skos:prefLabel "nuclear magnetic resonance spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002281
+af-e:AFE_0002281 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000718 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000056 ;
+                                   owl:someValuesFrom af-p:AFP_0000326
+                                 ] ;
+                 skos:altLabel "NMR tube" ;
+                 skos:definition "A nuclear magnetic resonance tube is a tube that is used in an NMR experiment. [Allotrope]" ;
+                 skos:prefLabel "nuclear magnetic resonance tube" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001135
+af-m:AFM_0001135 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000087 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-rl:AFRL_0000269
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty bfo:_0000054 ;
+                                                                               owl:someValuesFrom af-p:AFP_0000326
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:altLabel "NMR solvent" ;
+                 skos:definition "A nuclear magnetic resonance solvent is a solution used to dissolve a sample in an NMR assay. It typically has all / most hydrogen atoms replaced with deuterium atoms. [Allotrope]" ;
+                 skos:prefLabel "nuclear magnetic resonance solvent" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003767
+af-p:AFP_0003767 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000326 ,
+                                 af-p:AFP_0001185 ;
+                 skos:altLabel "qNMR" ;
+                 skos:definition "Quantitative NMR spectroscopy is an analytic assay that applies nuclear magnetic resonance spectroscopy for quantity analysis. [Allotrope]" ;
+                 skos:prefLabel "quantitative nuclear magnetic resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003844
+af-p:AFP_0003844 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000326 ;
+                 skos:altLabel "solution-state NMR" ,
+                               "solution-state NMR spectroscopy" ;
+                 skos:definition "A solution-state nuclear magnetic resonance spectroscopy is a nuclear magnetic resonance spectroscopy where the response of nuclei with non-zero spin, in a sample dissolved in a deuterated solvent, to a perturbing magnetic field is detected. Each experiment consists of a sequence of radio frequency pulses with delay periods in between them. [CHMO]" ;
+                 skos:prefLabel "solution-state nuclear magnetic resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003845
+af-p:AFP_0003845 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003356 ;
+                 skos:definition "A J-coupling is a coupling between two nuclei spins, mediated through chemical bonds. [Allotrope]" ;
+                 skos:prefLabel "J-coupling" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002137
+af-r:AFR_0002137 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000226
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty af-x:AFX_0002863 ;
+                                                                               owl:someValuesFrom af-p:AFP_0000326
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A nucleus scan type is a classification datum classifying the nucleus/nuclei used in the magnetic resonance method. [Allotrope]" ;
+                 skos:prefLabel "nucleus scan type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002139
+af-r:AFR_0002139 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom af-r:AFR_0002142
+                                 ] ;
+                 skos:definition "An inter scan relaxation delay setting is a setting that specifies the inter scan relaxation delay. [Allotrope]" ;
+                 skos:prefLabel "inter scan relaxation delay setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002140
+af-r:AFR_0002140 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001603 ,
+                                 af-r:AFR_0002371 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002699 ;
+                                   owl:someValuesFrom af-q:AFQ_0000209
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002734 ;
+                                   owl:someValuesFrom af-p:AFP_0003767
+                                 ] ;
+                 skos:definition "A qNMR purity result is an analysis assay result facet quantifying the purity of a substance by quantitative NMR. [Allotrope]" ;
+                 skos:prefLabel "qNMR purity result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002142
+af-r:AFR_0002142 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001625 ;
+                 skos:definition "An inter scan relaxation delay is a time period which ensures that entire signal from spins is detectable. [Allotrope]" ;
+                 skos:prefLabel "inter scan relaxation delay" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002366
+af-r:AFR_0002366 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001583 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom af-q:AFQ_0000319
+                                 ] ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC. Compendium of Chemical Terminology, 2nd ed. (the \"Gold Book\"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997)" ;
+                 skos:definition "A chemical shift is a quality quantification facet quantifying the fractional variation of the resonance frequency of a nucleus in nuclear magnetic resonance (NMR) spectroscopy in consequence of its magnetic environment of a nucleus. The chemical shift of a nucleus, δ, is expressed as a ratio involving its frequency, ν_cpd, relative to that of a standard, ν_ref, and defined as: δ = (ν_cpd - ν_ref)/ν_ref. [IUPAC]" ;
+                 skos:prefLabel "chemical shift" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002372
+af-r:AFR_0002372 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000231 ;
+                 skos:altLabel "nuclear magnetic resonance multiplet" ;
+                 skos:definition "An NMR multiplet is a peak group in a NMR spectrum, all of which are associated with a single nuclei but for which the signal has been split due to interactions with neighboring nuclei. [Allotrope]" ;
+                 skos:prefLabel "NMR multiplet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002373
+af-r:AFR_0002373 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000984 ;
+                 skos:definition "An associated nuclei count is a count that indicates the number of nuclei associated with a NMR multiplet. [Allotrope]" ;
+                 skos:prefLabel "associated nuclei count" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002416
+af-r:AFR_0002416 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002255 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0000263
+                                 ] ;
+                 skos:altLabel "NMR spectrum data cube" ;
+                 skos:definition "Nuclear magnetic resonance spectrum data cube is a data cube that is a representation of a nuclear magnetic resonance spectrum. [Allotrope]" ;
+                 skos:prefLabel "nuclear magnetic resonance spectrum data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002966
+af-r:AFR_0002966 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002967
+                                 ] ;
+                 skos:altLabel "solution-state NMR aggregate document" ,
+                               "solution-state NMR spectroscopy aggregate document" ;
+                 skos:definition "A solution-state nuclear magnetic resonance spectroscopy aggregate document is a document that aggregates solution-state nuclear magnetic resonance documents. [Allotrope]" ;
+                 skos:prefLabel "solution-state nuclear magnetic resonance spectroscopy aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002967
+af-r:AFR_0002967 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0003844
+                                 ] ;
+                 skos:altLabel "solution-state NMR document" ,
+                               "solution-state NMR spectroscopy document" ;
+                 skos:definition "A solution-state nuclear magnetic resonance spectroscopy document is a document that encompasses the information associated with a solution-state nuclear magnetic resonance spectroscopy run. [Allotrope]" ;
+                 skos:prefLabel "solution-state nuclear magnetic resonance spectroscopy document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002970
+af-r:AFR_0002970 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001732 ;
+                 skos:altLabel "NMR frequency" ;
+                 skos:definition "A nuclear magnetic resonance frequency is the frequency at which NMR active nuclei absorb electromagnetic radiation. It is characteristic of the isotope and is proportional to the strength of the magnetic field of the instrument. [Wikipedia]" ;
+                 skos:prefLabel "nuclear magnetic resonance frequency" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002971
+af-r:AFR_0002971 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom af-m:AFM_0001135
+                                 ] ;
+                 skos:altLabel "NMR solvent type" ;
+                 skos:definition "A nuclear magnetic resonance solvent type is a classification datum that classifies the solvent used in a solution-state nuclear magnetic resonance assay. [Allotrope]" ;
+                 skos:prefLabel "nuclear magnetic resonance solvent type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002972
+af-r:AFR_0002972 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001505 ;
+                 skos:definition "A nuclear magnetic resonance setting is a setting that specifies some configuration of a nuclear magnetic resonance spectrometer. [Allotrope]" ;
+                 skos:prefLabel "nuclear magnetic resonance setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002973
+af-r:AFR_0002973 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002972 ;
+                 skos:definition "A spectral width setting is a nuclear magnetic resonance setting that describes the range over which data is to be collected. [Allotrope]" ;
+                 skos:prefLabel "spectral width setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002974
+af-r:AFR_0002974 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002972 ;
+                 skos:definition "A pulse sequence setting is a nuclear magnetic resonance setting that describes a series of radio frequency pulses applied to the sample, such that the free induction decay is related to the characteristic frequencies of the desired signals. [Wikipedia]" ;
+                 skos:prefLabel "pulse sequence setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002975
+af-r:AFR_0002975 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001815 ,
+                                 af-r:AFR_0002972 ;
+                 skos:altLabel "pulse width setting" ;
+                 skos:definition "A pulse duration setting is a nuclear magnetic resonance setting that specifies the duration of time the NMR applies the radio pulse per scan in order to flip the spin states of the active nuclei to be measured. [Allotrope]" ;
+                 skos:prefLabel "pulse duration setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002976
+af-r:AFR_0002976 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001815 ,
+                                 af-r:AFR_0002972 ;
+                 skos:altLabel "scan delay setting" ;
+                 skos:definition "A relaxation delay setting is a nuclear magnetic resonance setting that specifies the duration of time the NMR allocates for the nuclei spin states to return to their original state after being exposed to the radio pulse. [Allotrope]" ;
+                 skos:prefLabel "relaxation delay setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002977
+af-r:AFR_0002977 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002972 ,
+                                 af-r:AFR_0002997 ;
+                 skos:definition "A presaturation frequency setting is a nuclear magnetic resonance setting that specifies the frequency of an initial low power pulse generally applied to suppress the signal associated with the solvent. [Allotrope]" ;
+                 skos:prefLabel "presaturation frequency setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002978
+af-r:AFR_0002978 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002255 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0002979
+                                 ] ;
+                 skos:altLabel "FID data cube" ,
+                               "FID spectrum data cube" ;
+                 skos:definition "A free induction decay spectrum data cube is a data cube that is a representation of a free induction decay spectrum. [Allotrope]" ;
+                 skos:prefLabel "free induction decay spectrum data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002979
+af-r:AFR_0002979 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000263 ;
+                 skos:altLabel "FID spectra" ,
+                               "FID spectrum" ,
+                               "free induction decay spectra" ;
+                 skos:definition "A free induction decay spectrum is a nuclear magnetic resonance spectrum that quantifies the combined decay of aligned nuclear spins after excitation with a short radio-frequency pulse (data before the Fourier transform to the frequency domain). [Allotrope]" ;
+                 skos:prefLabel "free induction decay spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002980
+af-r:AFR_0002980 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000553 ;
+                                   owl:someValuesFrom af-p:AFP_0003703
+                                 ] ;
+                 skos:altLabel "constant phase correction" ,
+                               "constant phase correction setting" ,
+                               "frequency independent phase correction" ,
+                               "frequency independent phase correction setting" ,
+                               "ph0" ,
+                               "ph0 setting" ;
+                 skos:definition "A zero-order phase adjustment setting is a data processing setting to counter the linear phase shift effect of delay time δ on an NMR signal. [Allotrope]" ;
+                 skos:prefLabel "zero-order phase adjustment setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002981
+af-r:AFR_0002981 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000553 ;
+                                   owl:someValuesFrom af-p:AFP_0003703
+                                 ] ;
+                 skos:altLabel "frequency dependent phase correction" ,
+                               "frequency dependent phase correction setting" ,
+                               "ph1" ,
+                               "ph1 setting" ;
+                 skos:definition "A first-order phase adjustment setting is a data processing setting to counter the effect that different resonances in a spectrum may not experience the same flip angle from magnetization. [Allotrope]" ;
+                 skos:prefLabel "first-order phase adjustment setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002982
+af-r:AFR_0002982 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002983
+                                 ] ;
+                 skos:altLabel "nuclear magnetic resonance multiplet aggregate document" ;
+                 skos:definition "An NMR multiplet aggregate document is a document that aggregates NMR multiplet documents. [Allotrope]" ;
+                 skos:prefLabel "NMR multiplet aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002983
+af-r:AFR_0002983 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-r:AFR_0002372
+                                 ] ;
+                 skos:altLabel "nuclear magnetic resonance multiplet document" ;
+                 skos:definition "An NMR multiplet document is a document that encompasses the information associated with an NMR multiplet. [Allotrope]" ;
+                 skos:prefLabel "NMR multiplet document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002984
+af-r:AFR_0002984 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom af-r:AFR_0002372
+                                 ] ;
+                 skos:altLabel "nuclear magnetic resonance multiplet type" ;
+                 skos:definition "An NMR multiplet type is a classification datum that classifies a multiplet in a nuclear magnetic resonance assay. [Allotrope]" ;
+                 skos:prefLabel "NMR multiplet type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002985
+af-r:AFR_0002985 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002986
+                                 ] ;
+                 skos:definition "A J-coupling aggregate document is a document that aggregates J-coupling documents. [Allotrope]" ;
+                 skos:prefLabel "J-coupling aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002986
+af-r:AFR_0002986 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0003845
+                                 ] ;
+                 skos:definition "A J-coupling document is a document that encompasses the information associated with a J-coupling. [Allotrope]" ;
+                 skos:prefLabel "J-coupling document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002987
+af-r:AFR_0002987 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ,
+                                 af-r:AFR_0002280 ;
+                 skos:definition "An inversion enabled setting is a data processing setting specifying if a complex-conjugate of the data is performed before the protocol and FT is applied. [Allotrope]" ;
+                 skos:prefLabel "inversion enabled setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002988
+af-r:AFR_0002988 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A data shuffling algorithm setting is a data processing setting specifying the algorithm used to process phase sensitive two-dimensional spectra. [Allotrope]" ;
+                 skos:prefLabel "data shuffling algorithm setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002989
+af-r:AFR_0002989 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A quadrature setting is a data processing setting to distinguish the negative frequencies from the positive ones by the detection and summation of the in-phase and ninety degree out-of-phase magnetizations (two-channel mode). [Allotrope]" ;
+                 skos:prefLabel "quadrature setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002990
+af-r:AFR_0002990 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ,
+                                 af-r:AFR_0002280 ;
+                 skos:definition "A real Fourier transform enabled setting is a data processing setting specifying that a real Fourier Transform is executed as opposed to the conventional Discreet Fourier Transform. [Allotrope]" ;
+                 skos:prefLabel "real Fourier transform enabled setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002991
+af-r:AFR_0002991 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ,
+                                 af-r:AFR_0002280 ;
+                 skos:definition "A swap IR II enabled setting is a data processing setting specifying that the IR and II quadrants are swapped before performing the Fourier transform to cover Relay_CH coefficients 1 0 1 0 0 1 0 1. [Allotrope]" ;
+                 skos:prefLabel "swap IR II enabled setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002992
+af-r:AFR_0002992 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ,
+                                 af-r:AFR_0002280 ;
+                 skos:definition "A change II sign enabled setting is a data processing setting specifying that the sign of the II quadrant is flipped before the Fourier transform to cover Relay_2CH coefficients 1 0 -1 0 0 1 0 -1. [Allotrope]" ;
+                 skos:prefLabel "change II sign enabled setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002993
+af-r:AFR_0002993 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-e:AFE_0002281
+                                 ] ;
+                 skos:definition "A nuclear magnetic resonance tube document is a document that encompasses the information associated with a nuclear magnetic resonance tube. [Allotrope]" ;
+                 skos:prefLabel "nuclear magnetic resonance tube document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003000
+af-r:AFR_0003000 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002255 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0003053
+                                 ] ;
+                 skos:altLabel "multi-dimensional FID data cube" ,
+                               "multi-dimensional FID spectrum data cube" ,
+                               "multi-dimensional free induction decay data cube" ,
+                               "multi-dimensional free induction decay spectrum data cube" ;
+                 skos:definition "A multi-dimensional free induction decay spectrum data cube is a representation of a free induction decay spectrum with more than one dimension. [Allotrope]" ;
+                 skos:prefLabel "multi-dimensional free induction decay spectrum data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003001
+af-r:AFR_0003001 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002255 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0003052
+                                 ] ;
+                 skos:altLabel "multi-dimensional NMR data cube" ,
+                               "multi-dimensional NMR spectrum data cube" ;
+                 skos:definition "A multi-dimensional nuclear magnetic resonance spectrum data cube is a representation of a nuclear magnetic resonance spectrum with more than one dimension. [Allotrope]" ;
+                 skos:prefLabel "multi-dimensional nuclear magnetic resonance spectrum data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003004
+af-r:AFR_0003004 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0003022 ;
+                 skos:definition "A J-coupling constant is a data region facet that quantifies the horizontal distance on a spectrum between two peaks in the same NMR multiplet. [Allotrope]" ;
+                 skos:prefLabel "J-coupling constant" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003052
+af-r:AFR_0003052 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001060 ,
+                                 af-r:AFR_0002255 ;
+                 skos:altLabel "NMR spectra" ,
+                               "NMR spectrum" ,
+                               "multi dimensional NMR spectrum" ,
+                               "nuclear magnetic resonance spectra" ,
+                               "nuclear magnetic resonance spectrum" ;
+                 skos:definition "A multi-dimensional nuclear magnetic resonance spectrum is a spectrum with multiple dimensions that shows the response of spin-active nuclei to radio frequency radiation in an applied magnetic field. [CHMO]" ;
+                 skos:prefLabel "multi-dimensional nuclear magnetic resonance spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003053
+af-r:AFR_0003053 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0003052 ;
+                 skos:altLabel "FID spectra" ,
+                               "FID spectrum" ,
+                               "free induction decay spectra" ,
+                               "free induction decay spectrum" ,
+                               "multi dimensional FID spectrum" ;
+                 skos:definition "A multi-dimensional free induction decay spectrum is a nuclear magnetic resonance spectrum with multiple dimensions that quantifies the combined decay of aligned nuclear spins after excitation with a short radio-frequency pulse (data before the Fourier transform to the frequency domain. [Allotrope]" ;
+                 skos:prefLabel "multi-dimensional free induction decay spectrum" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/iupac-copyright
+<http://purl.allotrope.org/voc/iupac-copyright> rdf:type owl:NamedIndividual ,
+                                                         dct:RightsStatement ;
+                                                dct:description "Copyright (c) 2019 International Union of Pure Applied Chemistry" .
+
+
+###  http://purl.allotrope.org/voc/iupac-license
+<http://purl.allotrope.org/voc/iupac-license> rdf:type owl:NamedIndividual ,
+                                                       dct:LicenseDocument ;
+                                              dct:description "Reproduced by permission of International Union of Pure and Applied Chemistry" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

@@ -1,3 +1,2672 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cbf49da0a29a112c779af7238e589a2848eea84f9fd2b9763b30151d29597bd
-size 182733
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/synthesis#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/synthesis#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/synthesis> rdf:type owl:Ontology ;
+                                                                           owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/synthesis> ;
+                                                                           owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                           dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                           dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                      <http://purl.allotrope.org/voc/copyright> ;
+                                                                           dct:title "AFO Synthesis Domain Ontology (WD/2025/06)" ;
+                                                                           owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2019/06/synthesis> ;
+                                                                           owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+iao:_0000114 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002747
+af-x:AFX_0002747 rdf:type owl:ObjectProperty ;
+                 skos:definition "P has output c if and only if c is a participant in p, c is present at the end of p, and c is not present at the beginning of p. [RO]" ;
+                 skos:prefLabel "produces" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000009
+af-p:AFP_0000009 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001095 ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then exposed to a pattern of intense UV light generated by the interference of multiple coherent lasers. A post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "multiple-laser-beam interference lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000013
+af-p:AFP_0000013 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001823 ;
+                 skos:altLabel "Al metallisation"@en-gb ,
+                               "Al metalization" ,
+                               "Al metallization" ,
+                               "aluminium metallization" ,
+                               "aluminum metalization" ;
+                 skos:definition "The deposition of a layer of aluminium on a substrate (usually to provide electrical contacts in devices). A number of techniques may be used for metallization including evaporation and sputter coating. [CHMO]" ;
+                 skos:prefLabel "aluminium metallisation"@en-gb ,
+                                "aluminum metallization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000036
+af-p:AFP_0000036 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:definition "Any process in which the molecular structure of a hydrocarbon is rearranged to alter its properties (e.g. its combustion characteristics). [CHMO]" ;
+                 skos:prefLabel "reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000043
+af-p:AFP_0000043 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002705 ;
+                 rdfs:subClassOf af-p:AFP_0003536 ;
+                 skos:altLabel "Bonnemann colloidal method" ,
+                               "Bonnemann method" ,
+                               "Bonnemann's method" ;
+                 skos:definition "A method for producing metal nanoparticles by the reduction of metal salts with tetraalkylammonium hydrotriorganoborates. The resulting colloids are highly active hydrogenation catalysts. [CHMO]" ;
+                 skos:prefLabel "Bonnemann method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000082
+af-p:AFP_0000082 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000553 ;
+                 skos:altLabel "CFL" ,
+                               "continuous flow lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. Shuttered pulses (30-100 ms) of mask-defined UV (365 nm) light are flashed into a continuous stream of resist inside a microchannel, leading to the formation of solid structures almost instantaneously. [CHMO]" ;
+                 skos:prefLabel "continuous-flow lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000083
+af-p:AFP_0000083 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001735 ;
+                 skos:altLabel "conventional emulsion polymerisation"@en-gb ,
+                               "conventional emulsion polymerization" ;
+                 skos:definition "A polymer preparation technique in which monomer (usually acrylic) droplets are dispersed in a continuous aqueous phase and are kept colloidally stable through the use of a surfactant. [CHMO]" ;
+                 skos:prefLabel "emulsion polymerisation"@en-gb ,
+                                "emulsion polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000096
+af-p:AFP_0000096 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002120 ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then immersed in a liquid with RI >1 (e.g. highly purified water) and exposed to a pattern of intense UV light. A post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "immersion lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000105
+af-p:AFP_0000105 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001735 ;
+                 skos:altLabel "surface initiated polymerisation"@en-gb ,
+                               "SIP" ,
+                               "surface initiated polymerization" ;
+                 skos:definition "An experimental method used to prepare polymer samples (e.g. polymer brushes) using a surface-imobilised monomer. [CHMO]" ;
+                 skos:prefLabel "surface-initiated polymerisation"@en-gb ,
+                                "surface-initiated polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000113
+af-p:AFP_0000113 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:altLabel "CFL" ;
+                 skos:definition "A process for shaping pliable thermoplastic polymers. An elastomeric mould is placed on a polymer that has been spin-coated onto a substrate. The system is then heated above the glass transition temperature of the polymer. Capillary force allows the polymer melt to fill up the void space between the polymer and the mould. After cooling to ambient temperature, the mould is removed, generating the negative replica of the mould pattern. [CHMO]" ;
+                 skos:prefLabel "capillary force lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000125
+af-p:AFP_0000125 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001421 ;
+                 skos:altLabel "ultrasonic GJD" ,
+                               "ultrasonic JVD" ,
+                               "ultrasonic VJD" ,
+                               "ultrasonic jet vapor deposition" ,
+                               "ultrasonic jet vapour deposition" ,
+                               "ultrasonic vapor jet deposition" ,
+                               "ultrasonic vapour jet deposition" ;
+                 skos:definition "A synthesis method where a flow of carrier gas (moving faster than the speed of sound) containing vaporised precursors is projected onto a surface, resulting in a deposit. [CHMO]" ;
+                 skos:prefLabel "ultrasonic gas jet deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000133
+af-p:AFP_0000133 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "HIPIMS" ,
+                               "HPPMS" ,
+                               "high hower pulsed magnetron sputter deposition" ,
+                               "high hower pulsed magnetron sputtering" ,
+                               "high impact power magnetron sputter deposition" ,
+                               "high impact power magnetron sputtering" ,
+                               "high power impulse magnetron sputter deposition" ,
+                               "high power impulse magnetron sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) generated in a magnetron (a device that uses electrical and magnetic fields to generate heat) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. The ionization process uses extremely high power densities of the order of kW cm-2 in short pulses. [CHMO]" ;
+                 skos:prefLabel "high power impulse magnetron sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000134
+af-p:AFP_0000134 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001779 ;
+                 skos:altLabel "T-NIL" ;
+                 skos:definition "A synthesis technique that uses mechanical deformation to transfer a pattern to a substrate. A solution of resist (a thermoplastic polymer) is deposited on the substrate by spin coating. A mould containing the desired (nanosized) pattern on its surface is then pressed into the resist, whilst both the substrate and mould are heated to the glass transition temperature of the polymer. The resist is then cooled and any residual resist in the cast area is removed by an anisotropic etching process such as reactive ion etching. [CHMO]" ;
+                 skos:prefLabel "thermoplastic nanoimprint lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000141
+af-p:AFP_0000141 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:altLabel "PXL" ,
+                               "XL" ,
+                               "proximity X-ray lithography" ;
+                 skos:definition "A synthesis technique which uses X-rays to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a beam of X-rays is scanned across a patterned mask. The mask consists of an X-ray absorber (e.g. Au) on a membrane that is transparent to X-rays (e.g. SiC). The X-rays induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). [CHMO]" ;
+                 skos:prefLabel "X-ray lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000146
+af-p:AFP_0000146 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001662 ;
+                 skos:altLabel "lithographic patterning" ;
+                 skos:definition "Any synthesis technique involving the transfer of a pattern to a material (a 'resist') by selective exposure to a radiation source (e.g. light or X-rays) or to a beam of charged particles. Upon irradiation, the material experiences a change in its physical properties. Excess material is then removed, by a liquid 'developer' or an etching process. [CHMO]" ;
+                 skos:prefLabel "lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000147
+af-p:AFP_0000147 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001700 ;
+                 skos:altLabel "PLA deposition" ,
+                               "PLD" ,
+                               "laser ablation growth" ,
+                               "pulsed laser ablation deposition" ,
+                               "pulsed-laser ablation deposition" ,
+                               "pulsed-laser deposition" ;
+                 skos:definition "A synthesis technique where a high-power pulsed laser beam is focused (inside a vacuum chamber) onto a target of the desired composition. Material is then vaporized from the target ('ablation') and deposited as a thin film on a substrate facing the target. [CHMO]" ;
+                 skos:prefLabel "pulsed laser deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000169
+af-p:AFP_0000169 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "Pt sputtering" ,
+                               "platinum sputtering" ;
+                 skos:definition "A synthesis technique where a Pt metal target is bombarded with energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin film of Pt, on a substrate. [CHMO]" ;
+                 skos:prefLabel "platinum sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000173
+af-p:AFP_0000173 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001036 ;
+                 skos:altLabel "RTCVD" ,
+                               "rapid thermal CVD" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ;
+                 skos:definition "A synthesis method where a rapidly heated substrate is exposed to one or more volatile precursors, which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "rapid thermal chemical vapour deposition"@en-gb ,
+                                "rapid thermal chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000174
+af-p:AFP_0000174 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:definition "Any synthesis method used to grow crystals. [CHMO]" ;
+                 skos:prefLabel "crystal growth method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000200
+af-p:AFP_0000200 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002213 ;
+                 rdfs:subClassOf af-p:AFP_0001348 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002747 ;
+                                   owl:someValuesFrom chebi:_60027
+                                 ] ;
+                 skos:altLabel "polymer synthesis method" ;
+                 skos:definition "Any method used to prepare a polymer. [CHMO]" ;
+                 skos:prefLabel "polymer synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000205
+af-p:AFP_0000205 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000174 ;
+                 skos:altLabel "Lely technique" ;
+                 skos:definition "A method for crystal growth where polycrystalline SiC lumps are carefully packed between two concentric graphite tubes. The inner tube is then withdrawn leaving a porous SiC layer inside the outer tube. The outer tube is then heated (~2500 deg. C) in Ar, causing the SiC powder to sublime and nucleate on a cooler surface. [CHMO]" ;
+                 skos:prefLabel "Lely method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000209
+af-p:AFP_0000209 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000545 ;
+                 skos:altLabel "ultrasonically-assisted polyol method" ;
+                 skos:definition "The synthesis of metal-containing compounds in poly(ethylene glycol) which is irradiated with ultrasonic (>20 kHz) waves. The ethylene glycols act as both the solvent and reducing agent. [CHMO]" ;
+                 skos:prefLabel "ultrasound-assisted polyol method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000238
+af-p:AFP_0000238 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001343 ;
+                 skos:altLabel "melt-spinning" ;
+                 skos:definition "A process used to create polymer fibers. Molten polymer is forced through a spinneret (a multi-pored device similar to a shower head) and cooled to form multiple continuous filaments. [CHMO]" ;
+                 skos:prefLabel "melt spinning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000244
+af-p:AFP_0000244 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "HPCVD" ;
+                 skos:definition "A synthesis method that involves both the chemical decomposition of a precursor gas and the vaporization of a solid source e.g. the growth of MgB2 involves both diborane gas and solid Mg. [CHMO]" ;
+                 skos:prefLabel "hybrid physical-chemical vapour deposition"@en-gb ,
+                                "hybrid physical-chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000255
+af-p:AFP_0000255 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001508 ;
+                 skos:altLabel "two-step UV-assisted CFL" ,
+                               "two-step UV-assisted capillary force lithography" ,
+                               "two-step UV-assisted capillary force lithography (CFL)" ;
+                 skos:definition "A process for shaping pliable thermoplastic polymers. An elastomeric (polyurethane acrylate) mould is placed on a UV-curable polymer that has been spin- or drop-coated onto a substrate and partially cured using UV light (200-400 nm). Capillary force allows the polymer melt to fill up the void space between the polymer and the mould, generating a negative replica of the mould pattern. The process is repeated with a second mould and exposure to UV light. Two-step UV-assisted capillary force lithography is used to generate micro/nanoscale combined hierarchical structures. [CHMO]" ;
+                 skos:prefLabel "two-step UV-assisted capillary force lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000279
+af-p:AFP_0000279 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001954 ;
+                 skos:altLabel "SMD" ;
+                 skos:definition "A development method where the substrate is first immersed in a colloidal gold solution (containing negatively charged gold particles) at low pH. Gold subsequently deposits on any organic molecules containing postively charged groups at this pH. In the second step, the surface is treated with another solution containing gold chloride and hydroxylamine which causes the reduction of gold ion, producing a further gold deposit on the exisiting gold layer. Single-metal deposition is used to enhance latent fingermarks. [CHMO]" ;
+                 skos:prefLabel "single-metal deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000286
+af-p:AFP_0000286 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000554 ;
+                 skos:definition "A synthesis technique involving the transfer of a nanosized pattern to a material using a micelle solution of a block copolymer. A glass or silicon substrate is dipped into the solution, retrieved, and the solvent is allowed to evaporate in air. A plasma treatment (O2, H2 or Ar) is performed to remove the polymer shell leaving a pattern. [CHMO]" ;
+                 skos:prefLabel "block copolymer micelle nanolithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000315
+af-p:AFP_0000315 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002629 ;
+                 rdfs:subClassOf af-p:AFP_0003536 ;
+                 skos:altLabel "Brust nanoparticle synthesis" ,
+                               "Brust synthesis" ;
+                 skos:definition "A method for synthesising gold nanoparticles from HAuCl4 in non-aqueous solution (e.g. toluene) using tetraoctylammonium bromide as a phase-transfer catalyst and sodium borohydride to reduce Au(III) to Au(0). [CHMO]" ;
+                 skos:prefLabel "Brust method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000343
+af-p:AFP_0000343 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "MPL" ,
+                               "micro-pen lithography" ;
+                 skos:definition "A synthesis method where a pattern or ink layer is dpolymern on a substrate using a liquid dispensed through a microsized conical nozzle. The movement of the 'micropen' is controlled by a computer program. [CHMO]" ;
+                 skos:prefLabel "micropen lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000375
+af-p:AFP_0000375 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001003 ;
+                 skos:altLabel "MOMBE" ,
+                               "metal-organic MBE" ,
+                               "metal-organic molecular beam epitaxy" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from a molecular beam of organometallic precursors) on a monocrystalline substrate under high vacuum (<10^{-8} Pa). Molecular beam epitaxy is very slow, with a deposition rate of <1000 nm per hour. [CHMO]" ;
+                 skos:prefLabel "metal-organic molecular beam epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000394
+af-p:AFP_0000394 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002236 ;
+                 skos:altLabel "nTM" ,
+                               "nano TM" ,
+                               "nano-transfer molding" ,
+                               "nano-transfer moulding" ,
+                               "nanotransfer moulding" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ;
+                 skos:definition "A process for shaping pliable polymer materials using a nanosized rigid frame or model called a 'mould'. The mould is filled with a prepolymer then the whole assembly is transferred to a flat substrate where the prepolymer is cross-linked and the mould removed. [CHMO]" ;
+                 skos:prefLabel "nanotransfer molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000410
+af-p:AFP_0000410 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001094 ;
+                 skos:altLabel "thermocuring" ;
+                 skos:definition "A chemical process in which a prepolymer is converted into a polymer and then into a network, upon application of heat. [CHMO]" ;
+                 skos:prefLabel "thermal curing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000411
+af-p:AFP_0000411 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:definition "A process for shaping pliable thermoplastic or thermosetting plastics using a rigid frame or model called a 'mould'. The plastic is fed into a heated barrel, mixed, and forced into a mould where it cools and hardens to the configuration of the mould. [CHMO]" ;
+                 skos:prefLabel "injection moulding"@en-gb ,
+                                "injection molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000426
+af-p:AFP_0000426 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001704 ;
+                 skos:altLabel "Pickering emulsification" ,
+                               "Pickering emulsion process" ,
+                               "Pickering emulsion processing" ;
+                 skos:definition "A method for dispersing two or more immiscible liquid by shaking, stirring or homogenising the mixture. The emulsion is stablised by adding finely divided insoluble solid particles (e.g. latex or silica). [CHMO]" ;
+                 skos:prefLabel "Pickering emulsion method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000437
+af-p:AFP_0000437 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001343 ;
+                 skos:altLabel "electro-spinning" ;
+                 skos:definition "A process used to created very fine (µm or nm scale) fibres from a liquid. A high voltage is applied to a droplet of the liquid sample which is drawn out into fibres and cooled in air. [CHMO]" ;
+                 skos:prefLabel "electrospinning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000439
+af-p:AFP_0000439 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "reactive sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'). The ejected atoms then react with a gas that is introduced into the chamber and the products deposit, as a thin-film, on a substrate. [CHMO]" ;
+                 skos:prefLabel "reactive sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000462
+af-p:AFP_0000462 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001092 ;
+                 skos:altLabel "IPL" ,
+                               "ion-projection lithography" ;
+                 skos:definition "A synthesis technique that uses ions to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a focused ion beam (75 keV He ions) is scanned across a patterned mask inducing chemical reactions in the resist. The desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). [CHMO]" ;
+                 skos:prefLabel "ion projection lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000464
+af-p:AFP_0000464 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001779 ;
+                 skos:altLabel "P-NIL" ;
+                 skos:definition "A synthesis technique that uses mechanical deformation and cross-linking to transfer a pattern to a substrate. A solution of photosensitive resist (a polymer) is deposited on the substrate by spin coating. A transparent stamp (e.g. fused silica) containing the desired (nanosized) pattern on its surface is then pressed into the resist, which is exposed to UV light. Any unexposed areas of polymer are removed by reactive ion etching. [CHMO]" ;
+                 skos:prefLabel "photo nanoimprint lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000470
+af-p:AFP_0000470 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001159 ,
+                                 af-p:AFP_0001348 ;
+                 skos:definition "A synthesis method where an electrical discharge is passed under reduced pressure between two electrodes. [CHMO]" ;
+                 skos:prefLabel "glow discharge synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000483
+af-p:AFP_0000483 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000200 ;
+                 skos:altLabel "phase inversion method" ,
+                               "phase inversion precipitation technique" ,
+                               "phase-inversion method" ,
+                               "phase-inversion technique" ;
+                 skos:definition "Any method for the synthesis of polymer membranes that involves the polymer transforming from the liquid phase of the cast solution to the solid phase. [CHMO]" ;
+                 skos:prefLabel "phase inversion technique" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000507
+af-p:AFP_0000507 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001505 ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from, a gas. [CHMO]" ;
+                 skos:prefLabel "gas-phase infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000514
+af-p:AFP_0000514 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001851 ;
+                 skos:altLabel "micro-emulsion polymerisation"@en-gb ,
+                               "micro-emulsion polymerization" ;
+                 skos:definition "A polymer preparation technique in which monomer (usually acrylic) <100 nm droplets are dispersed in a continuous aqueous phase and are kept colloidally stable through the use of a surfactant and a cosurfactant e.g. hexanol. [CHMO]" ;
+                 skos:prefLabel "microemulsion polymerisation"@en-gb ,
+                                "microemulsion polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000517
+af-p:AFP_0000517 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002320 ;
+                 skos:altLabel "P-CVI" ,
+                               "pressure pulsed CVI" ,
+                               "pressure-pulsed CVI" ,
+                               "pressure-pulsed chemical vapour infiltration" ;
+                 skos:changeNote "2016-02-03 Added altLabel [OSTHUS]" ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from, a vapour which is applied as a series of high pressure pulses. This results in a multilayer structure. [CHMO]" ;
+                 skos:prefLabel "pressure-pulsed chemical vapor infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000543
+af-p:AFP_0000543 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "HFCVD" ,
+                               "HWCVD" ,
+                               "cat-CVD" ,
+                               "catalytic CVD" ,
+                               "catalytic chemical vapor deposition" ,
+                               "catalytic chemical vapour deposition" ,
+                               "hot filament CVD" ,
+                               "hot filament chemical vapor deposition" ,
+                               "hot filament chemical vapour deposition" ,
+                               "hot wire CVD" ,
+                               "hot wire chemical vapour deposition" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors, which react or decompose (catalysed by a hot filament) on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "hot wire chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000545
+af-p:AFP_0000545 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000950 ;
+                 skos:altLabel "polyol process" ;
+                 skos:definition "The synthesis of metal-containing compounds in poly(ethylene glycol)s. The ethylene glycol acts as both the solvent and reducing agent. [CHMO]" ;
+                 skos:prefLabel "polyol method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000546
+af-p:AFP_0000546 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000553 ;
+                 skos:altLabel "contact printing" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. A mask ('photomask') with the desired pattern is then placed in contact with the substrate and both are exposed to intense UV light. A post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "contact lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000547
+af-p:AFP_0000547 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "JD" ;
+                 skos:definition "A synthesis method where a flow of precursors is projected onto a surface, resulting in a deposit. [CHMO]" ;
+                 skos:prefLabel "jet deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000551
+af-p:AFP_0000551 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001639 ;
+                 skos:altLabel "MMM" ,
+                               "multi layer micromolding" ,
+                               "multi layer micromoulding" ,
+                               "multi-layer micromoulding" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ;
+                 skos:definition "A process for shaping pliable polymer material using multiple microsized rigid frames or models called 'moulds'. The polymer material (in liquid form) is injected into a mould using a small diameter piston and then allowed to harden or set inside the mould, adopting its shape. [CHMO]" ;
+                 skos:prefLabel "multi-layer micromolding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000553
+af-p:AFP_0000553 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002120 ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then exposed to a pattern of intense UV light and a post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "ultraviolet lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000554
+af-p:AFP_0000554 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:definition "Any synthesis technique involving the transfer of a nanosized pattern to a material. [CHMO]" ;
+                 skos:prefLabel "nanolithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000565
+af-p:AFP_0000565 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000553 ;
+                 skos:altLabel "LRL" ,
+                               "lock release lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. Shuttered pulses (30-100 ms) of mask-defined UV (365 nm) light are flashed into a stationery layer of monomer inside microchannel. Objects generated by this process are 'locked' by relief structures in the channel, before being flushed out. The process is then repeated in a cyclic manner. [CHMO]" ;
+                 skos:prefLabel "lock-release lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000582
+af-p:AFP_0000582 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002208 ;
+                 skos:altLabel "VMD" ,
+                               "vacuum-metal deposition" ;
+                 skos:definition "A development technique where the substrate is placed in a vacuum (10^{-4} Pa) and two metal electrodes are melted and evaporated (sequentionally) by passing a current through them. When the metal atoms hit the (much cooler) substrate they condense into nanoscale particles, forming a thin deposit on the surface. When vacuum metal deposition is used to enhance latent fingermarks on polymer surfaces, a Au layer is applied first, followed by a much thicker Zn layer (which does not deposit on the fingermark ridges). [CHMO]" ;
+                 skos:prefLabel "vacuum metal deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000586
+af-p:AFP_0000586 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "atomic-layer chemical vapour deposition"@en-gb ,
+                               "ALCVD" ,
+                               "atomic layer CVD" ,
+                               "atomic-layer CVD" ,
+                               "atomic-layer chemical vapor deposition" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors, which react or decompose on the surface to produce a monolayer deposit. The surface reaction is self-limiting resulting in a nanometre thickness of film. [CHMO]" ;
+                 skos:prefLabel "atomic layer chemical vapour deposition"@en-gb ,
+                                "atomic layer chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000601
+af-p:AFP_0000601 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "thin film deposition" ;
+                 skos:definition "Any technique for depositing a thin film of material onto a substrate or onto previously deposited layers. [CHMO]" ;
+                 skos:prefLabel "thin-film deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000609
+af-p:AFP_0000609 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "e-beam sputtering" ,
+                               "e-beam sputtering deposition" ,
+                               "electron beam sputtering" ,
+                               "electron sputter deposition" ,
+                               "electron-beam sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with electrons causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. [CHMO]" ;
+                 skos:prefLabel "electron-beam sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000613
+af-p:AFP_0000613 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:definition "A type of lithography where electrons or ions are used to generate pattern, which is transferred to a resist. [CHMO]" ;
+                 skos:prefLabel "particle-beam lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000622
+af-p:AFP_0000622 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "plasma sputter coating" ,
+                               "plasma sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. Ionization of the neutral gas atoms requires a plasma (a partially ionized gas containing free electrons) source to be generated by passing an electrical discharge through the chamber, with the target acting as the cathode. [CHMO]" ;
+                 skos:prefLabel "plasma sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000624
+af-p:AFP_0000624 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002420 ;
+                 skos:altLabel "laser furnace method" ;
+                 skos:definition "A method for the synthesis of carbon nanotubes where a laser beam (typically a YAG laser) is focused onto a graphite-metal target located in a quartz tube surrounded by a furnace. The target is vaporised in high temperature Ar gas producing single-walled and double-walled carbon nanotubes which are collected at a trap. [CHMO]" ;
+                 skos:prefLabel "laser vaporisation method"@en-gb ,
+                                "laser vaporization method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000632
+af-p:AFP_0000632 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001549 ;
+                 skos:altLabel "DSA" ,
+                               "DSL" ,
+                               "directed self assembly" ,
+                               "directional self assembly" ,
+                               "directional self-assembly" ;
+                 skos:definition "A synthesis method in which the components of the sample spontaneously (and reversibly) associate by non-covalent interactions, taking the form of an existing lithographically templated structure or pattern. [CHMO]" ;
+                 skos:prefLabel "directed self-assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000633
+af-p:AFP_0000633 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000134 ;
+                 skos:altLabel "LISA" ,
+                               "lithographically-induced self-assembly" ;
+                 skos:definition "A synthesis technique that uses mechanical deformation to transfer a pattern to a substrate. A solution of resist (a thermoplastic polymer) is deposited on the substrate by spin coating. A mould containing the desired (nanosized) pattern on its surface is then held above the resist, whilst both the substrate and mould are heated to the glass transition temperature of the polymer. The resist is then cooled and any residual resist in the cast area is removed by an anisotropic etching process such as reactive ion etching. During the heat-cool cycle the initially flat polymer film self-assembles into periodic supramolecular pillar arrays. [CHMO]" ;
+                 skos:prefLabel "lithographically induced self-assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000644
+af-p:AFP_0000644 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002232 ;
+                 skos:altLabel "REP" ;
+                 skos:definition "A technique that utlilises the movement of particles under the influence of an electric field (e.g. electroosmosis or electrophoresis) in conjunction with illumination of a photosensitive substrate to form a pattern. Particles suspended in DI water are placed between two parallel ITO electrodes biased with an AC signal. Light of wavelength 1064 nm is used to heat the fluid sample and induce an electrohydrodynamic microvortex, bringing the particles towards its centre, forming a pattern. [CHMO]" ;
+                 skos:prefLabel "rapid electrokinetic patterning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000660
+af-p:AFP_0000660 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001905 ;
+                 skos:altLabel "hydride vapour phase epitaxy"@en-gb ,
+                               "HVPE" ,
+                               "hydride vapor phase epitaxy" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film, from vapour-phase precursors (in hydrogen or ammonia carrier gases), on a monocrystalline substrate. [CHMO]" ;
+                 skos:prefLabel "hydride vapour-phase epitaxy"@en-gb ,
+                                "hydride vapor-phase epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000685
+af-p:AFP_0000685 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000200 ;
+                 skos:altLabel "SVA" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ,
+                                 "2016-02-25 fixed translation [OSTHUS]" ;
+                 skos:definition "A method applied to polymer films to increase polymer chain mobility. The film is exposed to a solvent atmosphere at room-temperature causing it to swell. [CHMO]" ;
+                 skos:prefLabel "solvent vapour annealing"@en-gb ,
+                                "solvent vapor annealing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000699
+af-p:AFP_0000699 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000807 ;
+                 skos:altLabel "SR" ,
+                               "hydrogen reforming" ;
+                 skos:definition "The reaction of hydrocarbons with steam at high temperature (700-1000 deg. C) in order to produce hydrogen. [CHMO]" ;
+                 skos:prefLabel "steam reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000702
+af-p:AFP_0000702 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001954 ;
+                 skos:altLabel "MMD" ,
+                               "multi-metal-deposition" ,
+                               "multimetal deposition" ;
+                 skos:definition "A development method where the substrate is first immersed in a colloidal gold solution (containing negatively charged gold particles) at low pH. Gold subsequently deposits on any organic molecules containing postively charged groups at this pH. In the second step, the surface is treated with a solution containing silver acetate and hydroquinone which causes the reduction of silver ions, producing a silver deposit on the exisiting gold layer. Multi-metal deposition is used to enhance latent fingermarks. [CHMO]" ;
+                 skos:prefLabel "multi-metal deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000712
+af-p:AFP_0000712 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001700 ;
+                 skos:altLabel "sputter coating" ,
+                               "sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with electrons or energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. [CHMO]" ;
+                 skos:prefLabel "sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000723
+af-p:AFP_0000723 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:altLabel "rotomoulding"@en-gb ,
+                               "rotomolding" ;
+                 skos:definition "A process for shaping pliable thermoplastic or thermosetting plastics using a rigid frame or model called a 'mould'. The plastic is placed in a heated mould, which is slowly rotated causing the melted plastic to flow into to the mould and stick to its walls. [CHMO]" ;
+                 skos:prefLabel "rotational moulding"@en-gb ,
+                                "rotational molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000728
+af-p:AFP_0000728 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001343 ;
+                 skos:definition "A process used to create polymer fibers. Polymer dissolved in a solvent is forced through a spinneret (a multi-pored device similar to a shower head) and the solvent is removed from the polymer fibres by evaporation. [CHMO]" ;
+                 skos:prefLabel "dry spinning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000730
+af-p:AFP_0000730 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001712 ;
+                 skos:definition "A synthesis method in which a film of solid metal is deposited from a solution of ions onto an electrically conducting surface (an electrode). Three electrodes are required (working, counter and reference) and when sufficient current is passed through the solution, accompanied by irradiation with UV light, metal ions are reduced at the working electrode. [CHMO]" ;
+                 skos:prefLabel "photoelectrochemical deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000754
+af-p:AFP_0000754 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001117 ;
+                 skos:altLabel "H2 arc discharge method" ,
+                               "H2 dc arc-discharge method" ,
+                               "hydrogen arc discharge method" ,
+                               "hydrogen direct current arc-discharge method" ,
+                               "hydrogen direct-current arc discharge" ,
+                               "hydrogen direct-current arc-discharge method" ;
+                 skos:definition "A method for the synthesis of carbon nanotubes where a direct-current arc voltage is applied across two graphite electrodes immersed in H2 gas. When pure graphite rods are used, fullerenes are deposited as soot inside the chamber, and multi-walled carbon nanotubes are deposited on the cathode. When a graphite anode containing a metal catalyst (Fe or Co) is used with a pure graphite cathode single-walled carbon nanotubes are generated in the form of soot. [CHMO]" ;
+                 skos:prefLabel "hydrogen arc-discharge method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000771
+af-p:AFP_0000771 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000553 ;
+                 skos:altLabel "deep ultraviolet lithography" ,
+                               "deep-UV lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then exposed to a pattern of intense UV (240 nm) light and a post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "deep-ultraviolet lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000779
+af-p:AFP_0000779 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000174 ;
+                 skos:altLabel "Bridgman technique" ,
+                               "Bridgman-Stockbarger technique" ;
+                 skos:definition "A method of growing a single crystal 'ingot' or 'boule'. The polycrystalline sample is heated in a container above its melting point and slowly cooled from one end where a seed crystal is located. Single crystal material is then progressively formed along the length of the container. [CHMO]" ;
+                 skos:prefLabel "Bridgeman technique" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000784
+af-p:AFP_0000784 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001505 ;
+                 skos:altLabel "LPI" ,
+                               "PIP" ,
+                               "polymer infiltration and pyrolysis" ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with polymer precursors. [CHMO]" ;
+                 skos:prefLabel "liquid polymer infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000793
+af-p:AFP_0000793 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000464 ;
+                 skos:altLabel "SFIL" ,
+                               "step and flash imprint lithography" ;
+                 skos:definition "A synthesis technique that uses mechanical deformation and cross-linking to transfer a pattern to a substrate. A solution of photosensitive organosilicon resist (a polymer) is deposited on the substrate by spin coating. A transparent stamp (e.g. quartz) containing the desired (nanosized) pattern on its surface is then pressed into the resist, which is exposed to UV light. Any unexposed areas of polymer are removed by reactive ion etching. [CHMO]" ;
+                 skos:prefLabel "step-and-flash imprint lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000807
+af-p:AFP_0000807 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000036 ;
+                 skos:definition "Any process in which the molecular structure of a hydrocarbon is rearranged to alter its properties (e.g. its combustion characteristics) by exposing the hydrocarbons to high pressures and temperatures. [CHMO]" ;
+                 skos:prefLabel "thermal reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000821
+af-p:AFP_0000821 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001094 ;
+                 skos:altLabel "photocuring" ;
+                 skos:definition "A chemical process in which a prepolymer is converted into a polymer and then into a network, upon irradiation with light. [CHMO]" ;
+                 skos:prefLabel "photochemical curing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000828
+af-p:AFP_0000828 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000547 ;
+                 skos:altLabel "plasma JD" ;
+                 skos:definition "A synthesis method where a plasma (a partially ionized gas containing free electrons) containing precursors is projected onto a surface, resulting in a deposit. [CHMO]" ;
+                 skos:prefLabel "plasma jet deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000837
+af-p:AFP_0000837 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000174 ;
+                 skos:altLabel "modified Lely method" ,
+                               "seed sublimation" ,
+                               "seeded sublimation method" ,
+                               "seeded sublimation technique" ,
+                               "seeded-sublimation growth technique" ,
+                               "seeded-sublimation method" ,
+                               "seeded-sublimation technique" ;
+                 skos:definition "A technique for growing crystals of SiC by heating a source (polycrystalline SiC or powder) at high temperature (1800-2600 deg. C) and low pressure in an Ar atmosphere causing it to sublime. The vapours then condense on a single crystal of SiC (the 'seed'). [CHMO]" ;
+                 skos:prefLabel "seeded sublimation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000874
+af-p:AFP_0000874 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000200 ;
+                 skos:definition "A process for forming thermoplastic polymer samples by dipping a mould into a solution of the polymer and drawing off the solvent to leave a polymer film adhering to the mould. [CHMO]" ;
+                 skos:prefLabel "solvent casting" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000883
+af-p:AFP_0000883 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001003 ;
+                 skos:altLabel "CBE" ,
+                               "chemical beam epitaxy" ,
+                               "chemical-beam epitaxy" ,
+                               "gas source MBE" ,
+                               "gas source molecular beam epitaxy" ,
+                               "gas-source MBE" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from a molecular beam of reactive gases) on a monocrystalline substrate under high vacuum (<10^{-8} Pa). Molecular beam epitaxy is very slow, with a deposition rate of <1000 nm per hour. [CHMO]" ;
+                 skos:prefLabel "gas-source molecular beam epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000889
+af-p:AFP_0000889 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001754 ;
+                 skos:altLabel "ethanol steam reforming" ;
+                 skos:definition "The reaction of ethanol with steam at high temperature (700-1000 deg. C) in the presence of a nickel catalyst, in order to produce hydrogen. [CHMO]" ;
+                 skos:prefLabel "catalytic steam reforming of ethanol" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000909
+af-p:AFP_0000909 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000961 ;
+                 skos:altLabel "mCP" ,
+                               "micro CP" ,
+                               "micro contact printing" ,
+                               "micro-contact printing" ;
+                 skos:definition "A synthesis method for transferring a pattern to a gold surface. A PDMS stamp is coated in an alkanethiol and then brought into contact with a gold surface. Thiol from the wet region generates patterned features of SAMs on the gold surface. [CHMO]" ;
+                 skos:prefLabel "microcontact printing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000917
+af-p:AFP_0000917 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:altLabel "NFPSL" ,
+                               "near field optical lithography" ,
+                               "near field phase shift lithography" ,
+                               "near field photolithography" ,
+                               "near-field conformational photolithography" ,
+                               "near-field optical lithography" ,
+                               "near-field phase-shift lithography" ,
+                               "near-field photolithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. A transparent PDMS mask with the desired pattern (in relief) on its surface is placed in contact with the photoresist layer. UV light (300-460 nm) is then used to cross-link the polymer. Light passing through the stamp is modulated in the near-field by the relief of the mask such that the edges of the relief structures correspond to nulls in the intensity of the light. The polymer is cross-linked in the remaining areas. [CHMO]" ;
+                 skos:prefLabel "near-field phase shift lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000929
+af-p:AFP_0000929 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002320 ;
+                 skos:altLabel "temperature gradient chemical vapour infiltration"@en-gb ,
+                               "TG-CVI" ,
+                               "temperature gradient CVI" ,
+                               "temperature gradient chemical vapor infiltration" ,
+                               "temperature-gradient CVI" ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from a vapour, accelerated by a temperature gradient. [CHMO]" ;
+                 skos:prefLabel "temperature-gradient chemical vapour infiltration"@en-gb ,
+                                "temperature-gradient chemical vapor infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000935
+af-p:AFP_0000935 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002236 ;
+                 skos:altLabel "micro-transfer moulding"@en-gb ,
+                               "micro TM" ,
+                               "micro-transfer molding" ;
+                 skos:definition "A process for shaping pliable polymer materials using a microsized rigid frame or model called a 'mould'. The mould is filled with a prepolymer then the whole assembly is transferred to a flat substrate where the prepolymer is cross-linked and the mould removed. [CHMO]" ;
+                 skos:prefLabel "microtransfer moulding"@en-gb ,
+                                "microtransfer molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000947
+af-p:AFP_0000947 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "IAD" ,
+                               "IBAD" ,
+                               "ion beam assisted deposition" ,
+                               "ion-beam-assisted deposition" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'), which deposit, as a thin-film, on a substrate. A secondary ion beam is then used to remove any partially bound atoms from the substrate surface. [CHMO]" ;
+                 skos:prefLabel "ion-assisted deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000948
+af-p:AFP_0000948 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001700 ;
+                 skos:altLabel "TE" ,
+                               "evaporative deposition)" ,
+                               "filament evaporation" ,
+                               "thermal deposition" ,
+                               "vacuum condensation" ,
+                               "vacuum thermal evporation" ;
+                 skos:definition "A synthesis technique where the material to be deposited is heated until evaporation in a vacuum (<10^{-4} Pa) and eventually deposits as a thin film by condensing on a (cold) substrate. [CHMO]" ;
+                 skos:prefLabel "thermal evaporation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000950
+af-p:AFP_0000950 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002747 ;
+                                   owl:someValuesFrom af-m:AFM_0001044
+                                 ] ;
+                 skos:altLabel "colloid method" ;
+                 skos:definition "Any method for the synthesis or processing of colloids (mixtures where one substance is dispersed evenly throughout another). [CHMO]" ;
+                 skos:prefLabel "colloid synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000956
+af-p:AFP_0000956 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:definition "Any synthesis technique involving the transfer of a microsized pattern to a material (a 'resist') by selective exposure to a radiation source (e.g. light or X-rays) or to a beam of charged particles. Upon irradiation, the material experiences a change in its physical properties which changes its response to a developer solution (making it either soluble or insoluble). The desired pattern is then obtained by removing any excess resist with the developer. [CHMO]" ;
+                 skos:prefLabel "microlithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000961
+af-p:AFP_0000961 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:definition "Any synthesis technique which uses elastomeric stamps, moulds, and conformable photomasks prepared from liquid polymer precursors. [CHMO]" ;
+                 skos:prefLabel "soft lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001003
+af-p:AFP_0001003 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001451 ;
+                 skos:altLabel "MBE" ,
+                               "molecular-beam epitaxy" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from a molecular beam) on a monocrystalline substrate under high vacuum (<10^{-8} Pa). Molecular beam epitaxy is very slow, with a deposition rate of <1000 nm per hour. [CHMO]" ;
+                 skos:prefLabel "molecular beam epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001016
+af-p:AFP_0001016 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "plasma assisted chemical vapour deposition"@en-gb ,
+                               "plasma-enhanced chemical vapour deposition"@en-gb ,
+                               "PACVD" ,
+                               "PECVD" ,
+                               "plasma assisted CVD" ,
+                               "plasma assisted chemical vapor deposition" ,
+                               "plasma enhanced CVD" ,
+                               "plasma-assisted CVD" ,
+                               "plasma-enhanced CVD" ,
+                               "plasma-enhanced chemical vapor deposition" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors, in the presence of a plasma (a partially ionized gas, containing free electrons), which react or decompose on the surface to produce a deposit. The plasma enhances the rate of reaction on the substrate surface. [CHMO]" ;
+                 skos:prefLabel "plasma-assisted chemical vapour deposition"@en-gb ,
+                                "plasma-assisted chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001017
+af-p:AFP_0001017 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000807 ;
+                 skos:altLabel "ATR" ;
+                 skos:definition "The reaction of hydrocarbons with oxygen and carbon dioxide at 950-1100 deg. C to form syngas. [CHMO]" ;
+                 skos:prefLabel "autothermal reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001036
+af-p:AFP_0001036 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "TCVD" ,
+                               "thermal CVD" ;
+                 skos:definition "A synthesis method where a substrate is placed in a heated atmosphere (600-800 deg. C) and exposed to one or more volatile precursors, which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "thermal chemical vapour deposition"@en-gb ,
+                                "thermal chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001042
+af-p:AFP_0001042 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ,
+                                 "2016-02-25 fix translation [OSTHUS]" ;
+                 skos:definition "A process for shaping pliable polymer material using a rigid frame or model called a 'mould'. The pre-heated material is first placed in an open, heated mould which is then closed before pressure is applied to it. The applied pressure forces the softened polymer to adopt the shape of the mould. [CHMO]" ;
+                 skos:prefLabel "compression moulding"@en-gb ,
+                                "compression molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001064
+af-p:AFP_0001064 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "RSD" ,
+                               "flame-assisted deposition" ;
+                 skos:definition "A synthesis technique where a metal-containing precursor, dissolved in a solvent, is atomised and ignited. During combustion the flame is directed at the substrate resulting in the deposition of a thin layer of metal. [CHMO]" ;
+                 skos:prefLabel "reactive spray deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001078
+af-p:AFP_0001078 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:altLabel "hydrothermal method" ,
+                               "hydrothermal process" ,
+                               "hydrothermal reaction" ;
+                 skos:definition "A synthesis method for growing single crystals from an aqueous solution in an autoclave (a thick-walled steel vessel) at high temperature (400 deg. C) and pressure. [CHMO]" ;
+                 skos:prefLabel "hydrothermal synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001090
+af-p:AFP_0001090 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001735 ;
+                 skos:altLabel "pulsed-laser polymerisation"@en-gb ,
+                               "PLP" ,
+                               "pulsed-laser polymerization" ;
+                 skos:definition "A polymerization which is initiated by laser pulses at a constant repetition rate. [CHMO]" ;
+                 skos:prefLabel "pulsed laser polymerisation"@en-gb ,
+                                "pulsed laser polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001092
+af-p:AFP_0001092 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000613 ;
+                 skos:altLabel "ion beam lithography" ;
+                 skos:definition "A synthesis technique that uses ions to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a focused ion beam (75 keV He ions) is scanned across it in a patterned fashion. The ions induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). [CHMO]" ;
+                 skos:prefLabel "ion-beam lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001094
+af-p:AFP_0001094 rdf:type owl:Class ;
+                 skos:definition "A chemical process in which a prepolymer or polymer is converted into a polymer of higher molar mass and then into a network. [CHMO]" ;
+                 skos:prefLabel "curing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001095
+af-p:AFP_0001095 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002120 ;
+                 skos:altLabel "HIL" ,
+                               "holographic interference lithography" ,
+                               "holographic lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then exposed to a pattern of intense UV light generated by the interference of two or more coherent light sources. A post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "interference lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001098
+af-p:AFP_0001098 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001016 ;
+                 skos:altLabel "MPCVD" ,
+                               "microwave plasma assisted CVD" ,
+                               "microwave plasma enhanced CVD" ,
+                               "microwave plasma-assisted CVD" ,
+                               "microwave plasma-enhanced CVD" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors, in the presence of a microwave-induced plasma (a partially ionized gas containing free electrons), which react or decompose on the surface to produce a deposit. The plasma enhances the rate of reaction on the substrate surface. [CHMO]" ;
+                 skos:prefLabel "microwave plasma-assisted chemical vapour deposition"@en-gb ,
+                                "microwave plasma-assisted chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001117
+af-p:AFP_0001117 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002420 ;
+                 skos:altLabel "arc discharge method" ,
+                               "arc method" ,
+                               "arc-evaporation of graphite" ,
+                               "dc arc-discharge method" ,
+                               "direct current arc-discharge method" ,
+                               "direct-current arc-discharge method" ;
+                 skos:definition "A method for the synthesis of carbon nanotubes where a direct-current arc voltage is applied across two graphite electrodes immersed in an inert gas such as He. When pure graphite rods are used, fullerenes are deposited as soot inside the chamber, and multi-walled carbon nanotubes are deposited on the cathode. When a graphite anode containing a metal catalyst (Fe or Co) is used with a pure graphite cathode single-walled carbon nanotubes are generated in the form of soot. [CHMO]" ;
+                 skos:prefLabel "arc-discharge method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001118
+af-p:AFP_0001118 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001754 ;
+                 skos:altLabel "UMR" ;
+                 skos:definition "The reaction of natural gas or syngas with steam at high temperature (700-1000 deg. C) in the presence of a nickel catalyst, in order to produce hydrogen. The nickel catalyst is then oxidised with air and finally reduced back to the metal using more hydrocarbon gas. [CHMO]" ;
+                 skos:prefLabel "unmixed reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001124
+af-p:AFP_0001124 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001640 ;
+                 skos:altLabel "ESA" ,
+                               "ESD" ,
+                               "LBL" ,
+                               "LBL assembly" ,
+                               "LbL" ,
+                               "LbL assembly" ,
+                               "electrostatic self-assembly" ,
+                               "electrostatic self-assembly deposition" ,
+                               "layer-by-layer adsorption" ;
+                 skos:definition "A synthesis method in which thin films of oppositely charged layers are deposited in sequence. Positive or negative charged species are adsorbed onto the sample surface by dipping the substrate into solutions. The excess solution, after each adsorption step, is rinsed with solvent. [CHMO]" ;
+                 skos:prefLabel "layer-by-layer assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001130
+af-p:AFP_0001130 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001735 ;
+                 skos:definition "A polymerization process where the hydrophilic monomer is solubilised inside surfactant reverse micelle structures. [CHMO]" ;
+                 skos:prefLabel "reverse micelle polymerisation"@en-gb ,
+                                "reverse micelle polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001140
+af-p:AFP_0001140 rdf:type owl:Class ;
+                 skos:altLabel "carbo reduction" ,
+                               "carboreduction" ;
+                 skos:definition "A process in which a metal oxide is reduced in the presence of carbon or a carbon-containing compound. [CHMO]" ;
+                 skos:prefLabel "carbo-reduction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001163
+af-p:AFP_0001163 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001549 ;
+                 skos:altLabel "molecular self-assembly" ;
+                 skos:changeNote "2016-02-03 Fixed typo [OSTHUS]" ;
+                 skos:definition "A process where molecules spontaneously adopt a defined arrangement. [CHMO]" ;
+                 skos:prefLabel "molecular self assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001169
+af-p:AFP_0001169 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000483 ;
+                 skos:altLabel "Loeb-Sourirajan method" ,
+                               "Loeb-Sourirajan technique" ,
+                               "dry-wet phase inversion technique" ;
+                 skos:definition "A technique for preparing a polymer membrane by mixing polymer and solvent, then casting this solution onto a surface and allowing the solvent to partially evaporate. The film is them immersed in a nonsolvent causing solidification. [CHMO]" ;
+                 skos:prefLabel "dry-wet phase inversion technique" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001170
+af-p:AFP_0001170 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001735 ;
+                 skos:definition "Any experimental method used to prepare polymer samples where the monomer is suspended as liquid droplets in a continuous water phase by means of strong agitation and the presence of a suspending agent. [CHMO]" ;
+                 skos:prefLabel "suspension polymerisation"@en-gb ,
+                                "suspension polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001172
+af-p:AFP_0001172 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001359 ;
+                 skos:altLabel "ECR" ;
+                 skos:definition "Any process in which the molecular structure of a hydrocarbon is rearranged to alter its properties (e.g. its combustion characteristics) in the presence of a metal catalyst and under a high pressure of H2 gas. An electric current is used to heat the catalyst. [CHMO]" ;
+                 skos:prefLabel "electrochemical catalytic reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001178
+af-p:AFP_0001178 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "CBD" ,
+                               "CSD" ,
+                               "chemical bath deposition" ,
+                               "chemical deposition" ,
+                               "chemical-bath deposition" ,
+                               "chemical-solution deposition" ;
+                 skos:definition "The process of the settling of particles (atoms or molecules) from a solution or suspension onto a pre-existing surface, resulting in the growth of a new phase. [CHMO]" ;
+                 skos:prefLabel "chemical solution deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001186
+af-p:AFP_0001186 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000821 ;
+                 skos:altLabel "UV curing" ,
+                               "UV irradiation curing" ,
+                               "UV-assisted curing" ;
+                 skos:definition "A chemical process in which a prepolymer is converted into a polymer and then into a network, upon irradiation with light in the range 190-400 nm. [CHMO]" ;
+                 skos:prefLabel "ultraviolet curing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001218
+af-p:AFP_0001218 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001704 ;
+                 skos:altLabel "microemulsion methods" ,
+                               "microemulsion technique" ;
+                 skos:definition "A method for dispersing two or more immiscible liquids as µm-sized droplets by shaking, stirring or homogenising the mixture. [CHMO]" ;
+                 skos:prefLabel "microemulsion method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001220
+af-p:AFP_0001220 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001640 ;
+                 skos:altLabel "Co-assembly" ,
+                               "coassembly" ;
+                 skos:definition "The process of two individual components of a sample associating to form a new pattern or structure. [CHMO]" ;
+                 skos:prefLabel "co-assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001232
+af-p:AFP_0001232 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001343 ;
+                 skos:altLabel "dry-wet spinning" ;
+                 skos:definition "A process used to create polymer fibers. Polymer in a gel state is forced through a spinneret (a multi-pored device similar to a shower head). The fibres are then air dried and cooled in a liquid bath. [CHMO]" ;
+                 skos:prefLabel "gel spinning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001243
+af-p:AFP_0001243 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002609 ,
+                                     [ owl:intersectionOf ( af-p:AFP_0001348
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002747 ;
+                                                              owl:someValuesFrom chebi:_33418
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:definition "The conversion of an organic material in an inert atmosphere at temperatures in excess of 1800 °C to produce a graphite crystal structure. [CHMO]" ;
+                 skos:prefLabel "graphitisation"@en-gb ,
+                                "graphitization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001256
+af-p:AFP_0001256 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "supercritical fluid molecular spray film deposition" ;
+                 skos:definition "A synthesis method where a solid material is dissolved in a supercritical fluid (at elevated pressure) which is forced through a small orifice into a region of relatively low pressure. This produces a molecular spray which is directed against a substrate where it deposits as a thin film. [CHMO]" ;
+                 skos:prefLabel "supercritical spray deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001260
+af-p:AFP_0001260 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "EPD" ;
+                 skos:definition "Any synthesis process where colloidal particles suspended in a liquid medium migrate under the influence of an electric field and are deposited on an electrode. [CHMO]" ;
+                 skos:prefLabel "electrophoretic deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001262
+af-p:AFP_0001262 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "barrel sputtering" ,
+                               "barrel-sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. The substrate is held in a barrel which is swung from side-to-side to ensure even deposition. [CHMO]" ;
+                 skos:prefLabel "barrel sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001288
+af-p:AFP_0001288 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002320 ;
+                 skos:altLabel "forced-flow CVI" ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from a vapour held at high pressure. [CHMO]" ;
+                 skos:prefLabel "forced-flow chemical vapour infiltration"@en-gb ,
+                                "forced-flow chemical vapor infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001293
+af-p:AFP_0001293 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002476 ;
+                 rdfs:subClassOf af-p:AFP_0003536 ;
+                 skos:altLabel "EEW" ,
+                               "EEW method" ,
+                               "WEE" ,
+                               "WEE method" ,
+                               "electrical explosion of wire" ,
+                               "electrical explosion of wire method" ;
+                 skos:definition "A synthesis method for metal nanopowders that consists of passing a pulse of a high-density current (104-n106 A/mm2) through a wire causing the explosive disintegration of the metal (accompanied by a bright flash of light, a shock wave, the dispersion of the metal, and the fast expansion of a mixture of boiling metal droplets and vapour to the surrounding medium) and the production of metal , particles with characteristic sizes of tens of  µm to a few nm. [CHMO]" ;
+                 skos:prefLabel "wire electrical explosion method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001337
+af-p:AFP_0001337 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:altLabel "supramolecular assistance to covalent synthesis" ,
+                               "template-directed covalent synthesis" ;
+                 skos:definition "A synthesis method which relies on the use of reversible noncovalent bonding interactions between molecular building blocks in order to preorganise them into a certain relative geometry as a prelude to covalent bond formation. [CHMO]" ;
+                 skos:prefLabel "template-directed synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001341
+af-p:AFP_0001341 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001779 ;
+                 skos:altLabel "LADI" ,
+                               "laser assisted direct imprint" ,
+                               "laser assisted direct imprint lithography" ,
+                               "laser assisted direct imprinting" ,
+                               "laser-assisted direct imprint" ,
+                               "laser-assisted direct imprinting" ;
+                 skos:definition "A synthesis technique that uses mechanical deformation to transfer a pattern to a substrate. A solution of photosensitive resist (a polymer) is deposited on a silicon substrate by spin coating. A transparent stamp (e.g. quartz) containing the desired (nanosized) pattern on its surface is then pressed into the resist and a single laser pulse (XeCl excimer laser) is applied to melt the top layer of silicon. The molten silicon flows into the pattern then rapidly solidifies. [CHMO]" ;
+                 skos:prefLabel "laser-assisted direct imprint lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001343
+af-p:AFP_0001343 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000451 ,
+                                 af-p:AFP_0001735 ;
+                 skos:definition "A process used to create polymer fibers using a spinneret (a multi-pored device similar to a shower head) to form multiple continuous filaments. [CHMO]" ;
+                 skos:prefLabel "spinning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001353
+af-p:AFP_0001353 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:altLabel "SPL" ;
+                 skos:definition "Any synthesis technique where a scanning probe microscope is used to pattern surfaces either constructively (by depositing a substance) or destructively (by etching a pattern in a surface). [CHMO]" ;
+                 skos:prefLabel "scanning probe lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001359
+af-p:AFP_0001359 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000036 ;
+                 skos:definition "Any process in which the molecular structure of a hydrocarbon is rearranged to alter its properties (e.g. its combustion characteristics) in the presence of a catalyst and under a high pressure of H2 gas. [CHMO]" ;
+                 skos:prefLabel "catalytic reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001360
+af-p:AFP_0001360 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001003 ;
+                 skos:altLabel "solid source MBE" ,
+                               "solid-source MBE" ,
+                               "solid-source molecular beam epitaxy" ,
+                               "solid-source molecular-beam epitaxy" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from a beam of evapourated metal particles) on a monocrystalline substrate under high vacuum (<10^{-8} Pa). Molecular beam epitaxy is very slow, with a deposition rate of <1000 nm per hour. [CHMO]" ;
+                 skos:prefLabel "solid-source molecular beam epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001374
+af-p:AFP_0001374 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "PD" ;
+                 skos:definition "A synthesis technique where a monomer is irradiated with UV light, causing cross-linking and the deposition of a polymer film on a substrate. [CHMO]" ;
+                 skos:prefLabel "photodeposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001386
+af-p:AFP_0001386 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001533 ;
+                 skos:altLabel "sol-gel template synthesis" ,
+                               "sol-gel template synthesis method" ,
+                               "sol-gel templating" ;
+                 skos:definition "The process of the settling of (nm sized) particles from a colloidal suspension onto a pre-existing surface, resulting in a ceramic thin film. The desired solid particles (e.g. metal alkoxides) are suspended in a liquid, forming the 'sol', which is deposited on a membrane template or mould by spinning, dipping or coating, The particles in the sol are polymerised by partial evaporation of the solvent, or addition of an initiator, forming the 'gel', which is then heated at high temperature to give the final solid product. [CHMO]" ;
+                 skos:prefLabel "sol-gel template synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001389
+af-p:AFP_0001389 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000961 ;
+                 skos:altLabel "MSL" ,
+                               "multi layer soft lithography" ;
+                 skos:definition "Any synthesis technique which uses elastomeric stamps, molds, and conformable photomasks prepared from multiple liquid polymer precursors. [CHMO]" ;
+                 skos:prefLabel "multi-layer soft lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001394
+af-p:AFP_0001394 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001700 ;
+                 skos:altLabel "EB deposition" ,
+                               "EBD" ,
+                               "EBID" ,
+                               "electron beam deposition" ,
+                               "electron beam-induced deposition" ,
+                               "electron-beam deposition" ;
+                 skos:definition "A synthesis method where an electron beam is used to decompose gaseous molecules leading to deposition of a solid on a nearby substrate. [CHMO]" ;
+                 skos:prefLabel "electron-beam-induced deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001421
+af-p:AFP_0001421 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000547 ;
+                 skos:altLabel "jet vapour deposition"@en-gb ,
+                               "jet-vapour deposition"@en-gb ,
+                               "vapour jet deposition"@en-gb ,
+                               "vapour-jet deposition"@en-gb ,
+                               "GJD" ,
+                               "JVD" ,
+                               "PJD" ,
+                               "VJD" ,
+                               "gas-jet deposition" ,
+                               "jet vapor deposition" ,
+                               "jet-vapor deposition" ,
+                               "physical JD" ,
+                               "physical jet deposition" ,
+                               "physical-jet deposition" ,
+                               "vapor jet deposition" ,
+                               "vapor-jet deposition" ;
+                 skos:definition "A synthesis method where a flow of carrier gas (moving at the speed of sound) containing vaporised precursors is projected onto a surface, resulting in a deposit. [CHMO]" ;
+                 skos:prefLabel "gas jet deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001422
+af-p:AFP_0001422 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001905 ;
+                 skos:altLabel "metal organic vapour phase epitaxy"@en-gb ,
+                               "metalorganic vapour phase epitaxy"@en-gb ,
+                               "organometallic vapour phase epitaxy"@en-gb ,
+                               "MOVPE" ,
+                               "OMVPE" ,
+                               "metal organic vapor phase epitaxy" ,
+                               "metalorganic vapor phase epitaxy" ,
+                               "organometallic vapor phase epitaxy" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film, from organometallic vapour-phase precursors, on a monocrystalline substrate. [CHMO]" ;
+                 skos:prefLabel "metal-organic vapour-phase epitaxy"@en-gb ,
+                                "metal-organic vapor-phase epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001438
+af-p:AFP_0001438 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000553 ;
+                 skos:altLabel "EUV lithography" ,
+                               "EUVL" ,
+                               "extreme ultraviolet (EUV) lithography" ,
+                               "extreme-ultraviolet lithography" ,
+                               "soft X-ray reflective lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then exposed to a pattern of intense EUV (13.5 nm) light in a vacuum. A post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "extreme ultraviolet lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001451
+af-p:AFP_0001451 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from liquid or gaseous precursors) on a monocrystalline substrate. [CHMO]" ;
+                 skos:prefLabel "epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001455
+af-p:AFP_0001455 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000553 ;
+                 skos:altLabel "SFL" ,
+                               "stop flow lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. Shuttered pulses (30-100 ms) of mask-defined UV (365 nm) light are flashed into a stationery layer of monomer, which is sandwiched inside a microchannel before being flushed out. The process is then repeated in a cyclic manner. [CHMO]" ;
+                 skos:prefLabel "stop-flow lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001461
+af-p:AFP_0001461 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001754 ;
+                 skos:altLabel "SMR" ;
+                 skos:definition "The reaction of natural gas with steam at high temperature (700-1000 deg. C) in the presence of a nickel catalyst, in order to produce hydrogen. [CHMO]" ;
+                 skos:prefLabel "steam methane reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001494
+af-p:AFP_0001494 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000961 ;
+                 skos:definition "Any process for shaping pliable polymer materials using a rigid frame or model called a 'mould'. The polymer material (in liquid form) hardens or sets inside the mould, adopting its shape. [CHMO]" ;
+                 skos:prefLabel "moulding"@en-gb ,
+                                "molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001505
+af-p:AFP_0001505 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from, a liquid or vapor. [CHMO]" ;
+                 skos:prefLabel "infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001506
+af-p:AFP_0001506 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000950 ;
+                 skos:altLabel "aerosol process" ,
+                               "aerosol processing" ;
+                 skos:definition "A method for the synthesis of solid particles from an aerosol. The desired solid particles are suspended in a liquid, which is heated to 275-330 deg. C under pressure and passed through an orifice so that an aerosol forms. The particles in the aerosol are polymerised by partial evaporation of the solvent. [CHMO]" ;
+                 skos:prefLabel "aerosol method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001507
+af-p:AFP_0001507 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:altLabel "blow forming" ;
+                 skos:definition "A process for shaping pliable thermoplastic or thermosetting plastics using a rigid frame or model called a 'mould'. The plastic is heated and shaped into a tube then a pressurized gas, usually air, is used to expand the plastic and press it against the mould. [CHMO]" ;
+                 skos:prefLabel "blow moulding"@en-gb ,
+                                "blow molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001508
+af-p:AFP_0001508 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000113 ;
+                 skos:altLabel "UV-assisted CFL" ;
+                 skos:definition "A process for shaping pliable thermoplastic polymers. An elastomeric (polyurethane acrylate) mould is placed on a UV-curable polymer that has been spin- or drop-coated onto a substrate and partially cured using UV light (200-400 nm). The system is then further exposed to UV light and capillary force allows the polymer melt to fill up the void space between the polymer and the mould. After cooling to ambient temperature, the mould is removed, generating the negative replica of the mould pattern. [CHMO]" ;
+                 skos:prefLabel "UV-assisted capillary force lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001519
+af-p:AFP_0001519 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "RF sputter deposition" ,
+                               "RF sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) generated in a magnetron (a device that uses electrical and magnetic fields to generate heat) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. The sign of the anode-cathode bias is varied at a high rate to avoid charge build-up on insulating targets. [CHMO]" ;
+                 skos:prefLabel "radio frequency sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001527
+af-p:AFP_0001527 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000613 ;
+                 skos:altLabel "EB lithography" ,
+                               "EBDW" ,
+                               "EBL" ,
+                               "EPL" ,
+                               "e-beam lithography" ,
+                               "e-beam patterning" ,
+                               "electron beam (EB) lithography" ,
+                               "electron beam lithography" ,
+                               "electron beam patterning" ,
+                               "electron projection lithography" ,
+                               "electron-beam direct-write lithography" ,
+                               "electron-beam patterning" ,
+                               "electron-projection lithography" ;
+                 skos:definition "A synthesis technique that uses electrons to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a beam of electrons (10-20 keV) is scanned across it in a patterned fashion. The electrons induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). The electron beam can be focused using either electric or magnetic fields. [CHMO]" ;
+                 skos:prefLabel "electron-beam lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001531
+af-p:AFP_0001531 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000174 ;
+                 skos:definition "A method of producing large single crystals (of semiconductors or metals) by inserting a small seed crystal into a crucible filled with similar molten material, then slowly pulling the seed up from the melt while rotating it. [CHMO]" ;
+                 skos:prefLabel "Czochralski process" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001532
+af-p:AFP_0001532 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "atmospheric pressure chemical vapour deposition"@en-gb ,
+                               "APCVD" ,
+                               "atmospheric pressure CVD" ,
+                               "atmospheric pressure chemical vapor deposition" ,
+                               "atmospheric-pressure CVD" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors, at atmospheric pressure, which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "atmospheric-pressure chemical vapour deposition"@en-gb ,
+                                "atmospheric-pressure chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001533
+af-p:AFP_0001533 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000950 ;
+                 skos:altLabel "colloid process" ,
+                               "colloidal processing" ,
+                               "sol-gel method" ,
+                               "sol-gel process" ,
+                               "sol-gel processing" ,
+                               "solgel method" ,
+                               "solgel process" ,
+                               "solgel processing" ;
+                 skos:definition "The process of the settling of (nm sized) particles from a colloidal suspension onto a pre-existing surface, resulting in ceramic materials. The desired solid particles (e.g. metal alkoxides) are suspended in a liquid, forming the 'sol', which is deposited on a substrate by spinning, dipping or coating, or transferred to a mould. The particles in the sol are polymerised by partial evaporation of the solvent, or addition of an initiator, forming the 'gel', which is then heated at high temperature to give the final solid product. [CHMO]" ;
+                 skos:prefLabel "sol-gel method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001540
+af-p:AFP_0001540 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001549 ;
+                 skos:altLabel "convective assembly" ;
+                 skos:definition "A synthesis method in which colloidal particle suspensions in thin evaporating films spontaneously (and reversibly) associate by non-covalent interactions. [CHMO]" ;
+                 skos:prefLabel "convective self-assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001549
+af-p:AFP_0001549 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001640 ;
+                 skos:altLabel "SA" ;
+                 skos:definition "A process where the components of a sample spontaneously (and reversibly) associate by non-covalent interactions, forming an organised structure or pattern. Individual building blocks associate into more complex (higher-order) structures during self-assembly. [CHMO]" ;
+                 skos:prefLabel "self-assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001551
+af-p:AFP_0001551 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "IBS" ,
+                               "ion-assisted sputtering" ,
+                               "ion-beam sputtering" ,
+                               "ion-beam-assisted sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. Ionization of the neutral gas atoms requires an external ion source, which generates a focused ion beam. [CHMO]" ;
+                 skos:prefLabel "ion-beam sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001564
+af-p:AFP_0001564 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000961 ;
+                 skos:altLabel "PENs" ;
+                 skos:definition "A process for shaping pliable polymer material using a microsized rigid frame or model called a 'mould'. A PDMS mould is etched with a fluoride-containing substance (breaking Si-O bonds at the surface). The fresh PDMS surface then reacts with a prepolymer. [CHMO]" ;
+                 skos:prefLabel "patterning by etching at the nanoscale" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001576
+af-p:AFP_0001576 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "aerosol-assisted chemical vapour deposition"@en-gb ,
+                               "AACVD" ,
+                               "aerosol assisted CVD" ,
+                               "aerosol-assisted CVD" ,
+                               "aerosol-assisted chemical vapor deposition" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more involatile precursors, suspended in a liquid-gas aerosol (generated ultrasonically), which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "aerosol assisted chemical vapour deposition"@en-gb ,
+                                "aerosol assisted chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001599
+af-p:AFP_0001599 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001527 ;
+                 skos:altLabel "SCALPEL" ;
+                 skos:definition "A synthesis technique that uses electrons to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a beam of electrons (100 keV) is scanned across an ultrathin (<150 nm thickness) low-atomic-number patterned mask. Many of the electrons are scattered by the mask, so the image is formed only by those electrons that pass through the membrane without scattering. The electrons induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). [CHMO]" ;
+                 skos:prefLabel "scattering with angular limitation projection electron-beam lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001605
+af-p:AFP_0001605 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001823 ;
+                 skos:altLabel "DNA metalization" ;
+                 skos:definition "The deposition of a layer of metal on DNA by chemically reducing DNA-complexed metal salts (e.g., Ag, Pd, Pt, and Cu). [CHMO]" ;
+                 skos:prefLabel "DNA metallisation"@en-gb ,
+                                "DNA metallization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001621
+af-p:AFP_0001621 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001639 ;
+                 skos:altLabel "SAMIM" ;
+                 skos:definition "A process for shaping pliable polymer materials using a microsized rigid frame or model called a 'mould'. The mould is wetted with a thin layer of solvent. When the polymer is brought into contact with the mould, the top layer of polymer dissolves and expands, filling the mould. The solvent is then allowed to evaporate. [CHMO]" ;
+                 skos:prefLabel "solvent-assisted micromoulding"@en-gb ,
+                                "solvent-assisted micromolding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001624
+af-p:AFP_0001624 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001662 ;
+                 skos:altLabel "NSL" ;
+                 skos:definition "A patterning technique that involves the self-assembly of nanospheres into a two-dimensional mask (by e.g.  spin coating or drop coating). Following self-assembly, a metal is then deposited (e.g. by thermal evaporation, electron beam deposition or pulsed laser deposition) and the nanosphere mask is removed by sonicating the entire sample in a solvent, leaving behind the pattern. [CHMO]" ;
+                 skos:prefLabel "nanosphere lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001639
+af-p:AFP_0001639 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:definition "A process for shaping pliable polymer material using a microsized rigid frame or model called a 'mould'. The polymer material (in liquid form) is injected into a mould using a small diameter piston and then allowed to harden or set inside the mould, adopting its shape. [CHMO]" ;
+                 skos:prefLabel "micromoulding"@en-gb ,
+                                "micromolding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001641
+af-p:AFP_0001641 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:changeNote "2024-09-12 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "Cell culture is a synthesis method for cells. It involves the dispersal of cells in an artificial environment composed of nutrient solutions. [Allotrope]" ;
+                 skos:prefLabel "cell culture" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001642
+af-p:AFP_0001642 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001016 ;
+                 skos:altLabel "remote plasma assisted chemical vapour deposition"@en-gb ,
+                               "remote plasma enhanced chemical vapour deposition"@en-gb ,
+                               "RPECVD" ,
+                               "remote plasma assisted chemical vapor deposition" ,
+                               "remote plasma enhanced chemical vapor deposition" ,
+                               "remote plasma-assisted CVD" ,
+                               "remote plasma-enhanced CVD" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors which react or decompose in a plasma (a partially ionized gas, containing free electrons) and are then transferred to the surface to produce a deposit. The plasma enhances the rate of reaction. [CHMO]" ;
+                 skos:prefLabel "remote plasma-enhanced chemical vapour deposition"@en-gb ,
+                                "remote plasma-enhanced chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001654
+af-p:AFP_0001654 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000470 ;
+                 skos:definition "A synthesis method where an electrical discharge is passed under reduced pressure between two cathodes. One cathode is the source (or target) composed of the elements required to prepare the sample via sputtering, and the other cathode is the substrate material. When two different (negative) voltages are applied to the two cathodes, glow discharge occurs, causing a build up of the sample on the substrate cathode. [CHMO]" ;
+                 skos:prefLabel "double-cathode glow discharge synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001662
+af-p:AFP_0001662 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:definition "Any synthesis technique involving the transfer of a pattern to a sample. [CHMO]" ;
+                 skos:prefLabel "patterning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001668
+af-p:AFP_0001668 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000174 ;
+                 skos:altLabel "flame fusion" ;
+                 skos:definition "A method for preparing synthetic gemstones. A finely powdered sample is melted in an hydrogen-oxygen flame (2000 deg. C) and crystallising the melted droplets on a boule (a single crystal). [CHMO]" ;
+                 skos:prefLabel "Verneuil process" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001681
+af-p:AFP_0001681 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:altLabel "material deposition" ,
+                               "sample deposition" ;
+                 skos:definition "The process of the settling of particles (atoms or molecules) from a solution, suspension or vapour onto a pre-existing surface, resulting in the growth of a new phase. [CHMO]" ;
+                 skos:prefLabel "deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001684
+af-p:AFP_0001684 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001700 ;
+                 skos:altLabel "FIBID" ,
+                               "IBID" ,
+                               "focused-ion-beam-induced deposition" ,
+                               "focussed-ion-beam-induced deposition" ,
+                               "ion beam induced deposition" ,
+                               "ion-beam-induced deposition" ;
+                 skos:definition "A synthesis method where an ion beam (e.g. Ga+) is used to decompose gaseous molecules leading to deposition on a nearby substrate. [CHMO]" ;
+                 skos:prefLabel "ion beam-induced deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001700
+af-p:AFP_0001700 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "PVD" ;
+                 skos:definition "A synthesis technique where vaporized molecules or atoms condense on a surface, forming a thin layer. The process is purely physical; no chemical reaction occurs at the surface. [CHMO]" ;
+                 skos:prefLabel "physical vapour deposition"@en-gb ,
+                                "physical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001704
+af-p:AFP_0001704 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000950 ;
+                 skos:altLabel "emulsion method" ,
+                               "emulsion process" ,
+                               "emulsion processing" ;
+                 skos:definition "A method for dispersing two or more immiscible liquids by shaking, stirring or homogenising the mixture. [CHMO]" ;
+                 skos:prefLabel "emulsification" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001706
+af-p:AFP_0001706 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002420 ;
+                 skos:definition "A synthesis method for carbon nanotubes where a hydrocarbon vapor (such as methane) is thermally decomposed in a tube furnace in the presence of a metal catalyst. Carbon nanotubes grow over the catalyst and are collected upon cooling. Low temperatures yield multi-walled carbon nanotubes, whereas high temperatures favour single-walled carbon nanotubes. [CHMO]" ;
+                 skos:prefLabel "chemical vapor deposition synthesis of carbon nanotubes" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001712
+af-p:AFP_0001712 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001260 ;
+                 skos:altLabel "cathodic electrodeposition" ,
+                               "electrocoating" ,
+                               "electrodeposition" ,
+                               "electroplating" ;
+                 skos:definition "A synthesis method in which a film of solid metal is deposited from a solution of ions onto an electrically conducting surface (an electrode). Three electrodes are required (working, counter and reference) and when sufficient current is passed through the solution, metal ions are reduced at the working electrode. [CHMO]" ;
+                 skos:prefLabel "electrochemical deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001725
+af-p:AFP_0001725 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001640 ;
+                 skos:altLabel "Langmuir-Blodgett assembly" ,
+                               "Langmuir-Blodgett technique" ;
+                 skos:definition "A method of depositing crystalline films one molecular layer at a time, by dipping the substrate into water containing a polymer that forms a single layer of molecular chains on the surface. This layer is then transferred from the water to the substrate. [CHMO]" ;
+                 skos:prefLabel "Langmuir-Blodgett assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001732
+af-p:AFP_0001732 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001178 ;
+                 skos:altLabel "metal ion deposition" ;
+                 skos:definition "The process of the settling of metal ions from a solution or suspension onto a pre-existing surface. [CHMO]" ;
+                 skos:prefLabel "metal-ion deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001735
+af-p:AFP_0001735 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001159 ,
+                                 af-p:AFP_0001348 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "Any experimental method used to prepare polymer samples. [CHMO]" ;
+                 skos:prefLabel "polymer preparation method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001740
+af-p:AFP_0001740 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:altLabel "solvothermal method" ,
+                               "solvothermal process" ,
+                               "solvothermal reaction" ,
+                               "solvothermal treatment" ;
+                 skos:definition "A synthesis method for growing single crystals from a non-aqueous solution in an autoclave (a thick-walled steel vessel) at high temperature (400 deg. C) and pressure. [CHMO]" ;
+                 skos:prefLabel "solvothermal synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001746
+af-p:AFP_0001746 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001353 ;
+                 skos:altLabel "DPN" ;
+                 skos:definition "A synthesis technique where an atomic force microscope is used to pattern surfaces with molecules or particles. An AFM tip is coated with a chemical compound or biomolecule and put in contact with a substrate, where transfer takes place. [CHMO]" ;
+                 skos:prefLabel "dip-pen nanolithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001754
+af-p:AFP_0001754 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000699 ;
+                 skos:altLabel "CSR" ;
+                 skos:definition "The reaction of hydrocarbons with steam at high temperature (700-1000 deg. C) in the presence of a nickel catalyst, in order to produce hydrogen. [CHMO]" ;
+                 skos:prefLabel "catalytic steam reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001755
+af-p:AFP_0001755 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001343 ;
+                 skos:altLabel "wet-spinning" ;
+                 skos:definition "A process used to create polymer fibers. Polymer dissolved in a solvent is forced through a spinneret (a multi-pored device similar to a shower head) into a chemical bath which causes the polymer to precipitate as it emerges. [CHMO]" ;
+                 skos:prefLabel "wet spinning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001779
+af-p:AFP_0001779 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000554 ;
+                 skos:altLabel "NIL" ,
+                               "nano-imprinting lithography" ,
+                               "nanoimprinting lithography" ;
+                 skos:definition "A synthesis technique that uses mechanical deformation to transfer a pattern to a substrate. A solution of resist (a polymer) is deposited on the substrate by spin coating. A mould containing the desired (nanosized) pattern on its surface is then pressed into the resist and any residual resist in the cast area is removed by an anisotropic etching process such as reactive ion etching. [CHMO]" ;
+                 skos:prefLabel "nanoimprint lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001800
+af-p:AFP_0001800 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001505 ;
+                 skos:altLabel "melt infiltration" ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from, a liquid. [CHMO]" ;
+                 skos:prefLabel "liquid-phase infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001813
+af-p:AFP_0001813 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001451 ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from liquid or gaseous precursors) of one substance, on a monocrystalline substrate of a different substance. [CHMO]" ;
+                 skos:prefLabel "heteroepitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001818
+af-p:AFP_0001818 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001451 ;
+                 skos:altLabel "LPE" ,
+                               "liquid phase epitaxy" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from liquid or melt precursors) on a monocrystalline substrate. [CHMO]" ;
+                 skos:prefLabel "liquid-phase epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001821
+af-p:AFP_0001821 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002420 ;
+                 skos:altLabel "vapor phase deposition"@en-gb ,
+                               "vapour phase growth"@en-gb ,
+                               "vapour-phase decomposition"@en-gb ,
+                               "vapour-phase deposition"@en-gb ,
+                               "VPG" ,
+                               "vapor phase deposition" ,
+                               "vapor phase growth" ,
+                               "vapor-phase decomposition" ,
+                               "vapor-phase deposition" ;
+                 skos:definition "A synthesis method for carbon nanotubes where an organometallic precursor (typically tungsten-based) is vaporised then heated in an Ar and C2H2 atmosphere to 950 deg. C. [CHMO]" ;
+                 skos:prefLabel "vapour-phase growth"@en-gb ,
+                                "vapor-phase growth" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001823
+af-p:AFP_0001823 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "metal deposition" ,
+                               "metalisation" ,
+                               "metalization" ;
+                 skos:definition "The deposition of a layer of metal on a substrate (usually to provide electrical contacts in devices). A number of techniques may be used for metallization including evaporation and sputter coating. [CHMO]" ;
+                 skos:prefLabel "metallisation"@en-gb ,
+                                "metallization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001825
+af-p:AFP_0001825 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001662 ;
+                 skos:definition "Any patterning technique that utlilises the movement of particles under the influence of an electric field (e.g. electroosmosis or electrophoresis). [CHMO]" ;
+                 skos:prefLabel "electrokinetic patterning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001826
+af-p:AFP_0001826 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000483 ;
+                 skos:altLabel "TIPS" ,
+                               "thermally-induced phase separation" ;
+                 skos:definition "A method for preparing a polymer membrane by mixing the polymer with a substance that acts as a solvent a high temperature and casting the solution into a film. When the solution is cooled, solidification occurs. [CHMO]" ;
+                 skos:prefLabel "thermally induced phase separation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001838
+af-p:AFP_0001838 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000134 ;
+                 skos:definition "A synthesis technique that uses mechanical deformation to transfer a pattern to a substrate. A solution of resist (a thermoplastic polymer) is deposited on the substrate by spin coating. A stamp containing the desired (nanosized) pattern on its surface is placed on the substrate. A roller, heated to the glass transition temperature of the resist, is then used to press the stamp into the resist. The resist is cooled and any residual resist in the cast area is removed by an anisotropic etching process such as reactive ion etching. [CHMO]" ;
+                 skos:prefLabel "roller nanoimprint lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001851
+af-p:AFP_0001851 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000083 ;
+                 skos:altLabel "mini-emulsion polymerisation"@en-gb ,
+                               "mini-emulsion polymerization" ;
+                 skos:definition "A polymer preparation technique in which monomer (usually acrylic) 50-500 nm droplets are dispersed in a continuous aqueous phase and are kept colloidally stable through the use of a surfactant and are stablised against Ostwald ripening using a costabiliser such as hexadecane. [CHMO]" ;
+                 skos:prefLabel "miniemulsion polymerisation"@en-gb ,
+                                "miniemulsion polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001853
+af-p:AFP_0001853 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001735 ;
+                 skos:definition "A polymer preparation technique in which an insoluble polymer is dispersed in a continuous organic phase. [CHMO]" ;
+                 skos:prefLabel "dispersion polymerisation"@en-gb ,
+                                "dispersion polymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001855
+af-p:AFP_0001855 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001549 ;
+                 skos:altLabel "TSA" ,
+                               "templated self assembly" ;
+                 skos:definition "A synthesis method in which the components of the sample spontaneously (and reversibly) associate by non-covalent interactions, forming a organised structure or pattern on a physical template. Individual building blocks associate into more complex (higher-order) structures during self-assembly. [CHMO]" ;
+                 skos:prefLabel "templated self-assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001858
+af-p:AFP_0001858 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000950 ;
+                 skos:altLabel "LASiS" ,
+                               "LASiS technique" ;
+                 skos:definition "A method for obtaining colloidal solutions of nanoparticles by the condensation of a plasma plume formed by the laser ablation of a bulk metal plate dipped in a solution. [CHMO]" ;
+                 skos:prefLabel "laser ablation synthesis in solution" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001895
+af-p:AFP_0001895 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "ALD" ,
+                               "atomic-layer deposition" ;
+                 skos:definition "A thin film deposition technique based on the sequential reaction of gaseous precursors at a surface to produce a monolayer. [CHMO]" ;
+                 skos:prefLabel "atomic layer deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001905
+af-p:AFP_0001905 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001451 ;
+                 skos:altLabel "vapour phase epitaxy"@en-gb ,
+                               "vapour-phase epitaxial growth"@en-gb ,
+                               "VPE" ,
+                               "vapor phase epitaxy" ,
+                               "vapor-phase epitaxial growth" ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from vapour-phase precursors) on a monocrystalline substrate. [CHMO]" ;
+                 skos:prefLabel "vapour-phase epitaxy"@en-gb ,
+                                "vapor-phase epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001912
+af-p:AFP_0001912 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000545 ;
+                 skos:altLabel "MW-polyol method" ,
+                               "microwave-assisted polyol method" ,
+                               "microwave-polyol method" ;
+                 skos:definition "The synthesis of metal-containing compounds in poly(ethylene glycol)s heated by microwave irradiation. The ethylene glycols act as both the solvent and reducing agent. [CHMO]" ;
+                 skos:prefLabel "microwave-polyol method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001924
+af-p:AFP_0001924 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000712 ;
+                 skos:altLabel "magnetron sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) generated in a magnetron (a device that uses electrical and magnetic fields to generate heat) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. [CHMO]" ;
+                 skos:prefLabel "magnetron sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001935
+af-p:AFP_0001935 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:definition "A synthesis method for growing single crystals from an ionic liquid in an autoclave (a thick-walled steel vessel) at high temperature (400 deg. C) and pressure. [CHMO]" ;
+                 skos:prefLabel "ionothermal synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001937
+af-p:AFP_0001937 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:altLabel "REM" ;
+                 skos:definition "A process for shaping pliable polymer materials using a microsized rigid frame or model called a 'mould'. A mould is cast from the object to be replicated. This mould is then filled with a prepolymer, which is cross-linked and the resulting polymer is peeled off the mould. Using a mould, rather than the object itself, allows multiple copies to be made without damaging the original. [CHMO]" ;
+                 skos:prefLabel "replica moulding"@en-gb ,
+                                "replica molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001954
+af-p:AFP_0001954 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001178 ,
+                                 af-p:AFP_0001823 ;
+                 skos:definition "A synthesis method in which a film of solid metal is deposited from a solution of ions onto an electrically conducting surface. No external power source is required, but a reductant is added to the solution to initiate the reduction of the metal ions. [CHMO]" ;
+                 skos:prefLabel "electroless metal deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001965
+af-p:AFP_0001965 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001735 ;
+                 skos:altLabel "distillation precipitation copolymerisation"@en-gb ,
+                               "distillation precipitation copolymerization" ;
+                 skos:definition "A polymer preparation technique in which two different types of monomer are dissolved in an organic solvent and distilled until a precipitate of the corresponding copolymer is formed. [CHMO]" ;
+                 skos:prefLabel "distillation-precipitation copolymerisation"@en-gb ,
+                                "distillation-precipitation copolymerization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001980
+af-p:AFP_0001980 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000200 ;
+                 skos:definition "A synthesis method in which polymer spheres are assembled into a colloidal crystal on a substrate by evaporation induced self-assembly. The free spaces between the spheres are subsequently infiltrated with a metal by electrodeposition, and the colloidal particles are selectively removed by dissolution in a solvent (e.g. toluene) leaving behind a periodic arrangement of spherical voids embedded in a solid macroporous matrix. [CHMO]" ;
+                 skos:prefLabel "colloidal crystal templating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001996
+af-p:AFP_0001996 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002420 ;
+                 skos:altLabel "HiPCO" ,
+                               "HiPCO method" ,
+                               "HiPco" ,
+                               "HiPco method" ,
+                               "high-pressure CO conversion" ;
+                 skos:definition "A synthesis method for carbon nanotubes that involves mixing high pressure (e.g. 30 atmospheres) CO that has been preheated (1000 deg. C) and a catalyst precursor gas (metal carbonyl or metallocene). Under these conditions the precursor decomposes forming metal particle clusters on which carbon nanotubes nucleate and grow. The carbon nanotubes are 99% single-walled carbon nanotubes with small diameters (e.g., (5,5) tubes). [CHMO]" ;
+                 skos:prefLabel "high-pressure carbon monoxide method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001999
+af-p:AFP_0001999 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001754 ;
+                 skos:altLabel "CSRM" ,
+                               "methanol steam reforming" ;
+                 skos:definition "The reaction of methanol with steam at high temperature (700-1000 deg. C) in the presence of a nickel catalyst, in order to produce hydrogen. [CHMO]" ;
+                 skos:prefLabel "catalytic steam reforming of methanol" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002010
+af-p:AFP_0002010 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002420 ;
+                 skos:altLabel "gas phase plasma hydrocarbonation" ;
+                 skos:definition "A synthesis method for semiconducting single-walled carbon nanotubes where as-grown single-walled carbon nanotubes are treated with a methane plasma at 400-600 deg. C in a vacuum and the metallic single-walled carbon nanotubes are selectively etched. [CHMO]" ;
+                 skos:prefLabel "gas-phase plasma hydrocarbonation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002030
+af-p:AFP_0002030 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:altLabel "SNP" ;
+                 skos:definition "A synthesis method which uses light and a self-assembled monolayer (SAM) to transfer a pattern to a substrate. A solution of an alkanethiol is deposited on the substrate, forming a SAM. UV light (244 nm) from a scanning near-field optical microscope (aperture size = 50 nm) is then used to oxidise the SAM in certain areas. Either the oxidised areas of the SAM, or the gold corresponding to those areas, is then removed by etching. [CHMO]" ;
+                 skos:prefLabel "scanning near-field photolithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002040
+af-p:AFP_0002040 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000547 ;
+                 skos:altLabel "AJD" ,
+                               "aerosol JD" ;
+                 skos:definition "A synthesis method where an aerosol containing precursors is projected onto a surface, resulting in a deposit. [CHMO]" ;
+                 skos:prefLabel "aerosol jet deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002055
+af-p:AFP_0002055 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001800 ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from, liquid silicon. [CHMO]" ;
+                 skos:prefLabel "liquid silicon infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002073
+af-p:AFP_0002073 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000174 ;
+                 skos:altLabel "CVT" ;
+                 skos:definition "A crystal growth method for metal dichalcogenides in which the starting materials (high purity metal and chalcogen) are placed in a quartz ampoule together with a transport agent (e.g. iodine) and heated in a furnace under a temperature gradient. [CHMO]" ;
+                 skos:prefLabel "chemical vapour transport"@en-gb ,
+                                "chemical vapor transport" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002078
+af-p:AFP_0002078 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001639 ;
+                 skos:altLabel "MIMIC" ;
+                 skos:definition "A process for shaping pliable polymer materials using a microsized rigid frame or model called a 'mould'. The mould is brought into contact with a rigid substrate, forming microchannels. The polymer material (in fluid form) fills these microchannels by capillary action. The polymer material is then cooled or cross-linked. [CHMO]" ;
+                 skos:prefLabel "micromoulding in capillaries"@en-gb ,
+                                "micromolding in capillaries" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002080
+af-p:AFP_0002080 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001527 ;
+                 skos:altLabel "LEEPL" ,
+                               "e-beam proximity lithography" ,
+                               "ebeam proximity lithography" ,
+                               "electron-beam proximity lithography" ;
+                 skos:definition "A synthesis technique that uses electrons to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a beam of moderately low energy electrons (2 keV) is scanned across a patterned mask (held up to 50 µm from the substrate surface). The electrons induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). [CHMO]" ;
+                 skos:prefLabel "low-energy e-beam proximity lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002088
+af-p:AFP_0002088 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:definition "A synthesis method in which the reaction outcome is determined by the use of mechanical constraints to direct reactive molecules to specific molecular sites. [CHMO]" ;
+                 skos:prefLabel "mechanosynthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002097
+af-p:AFP_0002097 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001527 ;
+                 skos:altLabel "EPL" ,
+                               "e-beam projection lithography" ,
+                               "ebeam projection lithography" ;
+                 skos:definition "A synthesis technique that uses electrons to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a beam of electrons (100 keV) is scanned across a patterned mask. The electrons induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). The electron beam can be focused using either electric or magnetic fields. [CHMO]" ;
+                 skos:prefLabel "electron-beam projection lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002101
+af-p:AFP_0002101 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002073 ;
+                 skos:altLabel "surface assisted chemical vapour transport"@en-gb ,
+                               "surface-assisted chemical-vapour-transport"@en-gb ,
+                               "SA-CVT" ,
+                               "SACVT" ,
+                               "surface assisted CVT" ,
+                               "surface assisted chemical vapor transport" ,
+                               "surface-assisted CVT" ,
+                               "surface-assisted chemical-vapor-transport" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ,
+                                 "2016-02-25 fix translation [OSTHUS]" ;
+                 skos:definition "A crystal growth method for metal dichalcogenides in which the starting materials (high-purity metal and chalcogen powders) are placed in one half of a quartz ampoule together with a transport agent (e.g. iodine) and heated in a furnace under a temperature gradient. The product crystals are grown on the surface of a sheet of high-purity metal in the other half of the ampoule. [CHMO]" ;
+                 skos:prefLabel "surface-assisted chemical vapour transport"@en-gb ,
+                                "surface-assisted chemical vapor transport" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002111
+af-p:AFP_0002111 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001094 ;
+                 skos:altLabel "E-beam curing" ,
+                               "EB curing" ,
+                               "e-beam curing" ,
+                               "electron-beam curing" ;
+                 skos:definition "A chemical process in which a prepolymer is converted into a polymer and then into a network, upon irradiation with an electron beam. [CHMO]" ;
+                 skos:prefLabel "electron beam curing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002113
+af-p:AFP_0002113 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001451 ;
+                 skos:altLabel "ALE" ,
+                               "atomic-layer epitaxy" ;
+                 skos:definition "A synthesis method that consists of depositing alternating monolayers of two elements onto a substrate. The deposition is self-limiting and is completed when all available chemisorption sites are occupied. Film thickness is controlled by the number of precursor cycles. [CHMO]" ;
+                 skos:prefLabel "atomic layer epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002120
+af-p:AFP_0002120 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:altLabel "optical lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then exposed to a pattern of intense (typically UV) light and a post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "photolithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002137
+af-p:AFP_0002137 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001549 ;
+                 skos:altLabel "EISA" ,
+                               "evaporation induced self assembly" ,
+                               "evaporation induced self-assembly" ;
+                 skos:definition "A synthesis method in which a drop of solvent is placed on the components to be assembled and allowed to dry freely in air. The solvent evaporation causes the spontaneous association of individual components into an organised structure or pattern. [CHMO]" ;
+                 skos:prefLabel "evaporation-induced self-assembly" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002139
+af-p:AFP_0002139 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002097 ;
+                 rdfs:comment "2016-02-24 fix pref label [OSTHUS]" ;
+                 skos:altLabel "PREVAIL" ;
+                 skos:definition "A synthesis technique that uses electrons to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a beam of electrons (100 keV) is scanned across a patterned mask. The electrons induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). The lens system used to focus the electron beam has a 4-times magnification and a 250 µm2 exposure field, and was developed by IBM and Nikon. [CHMO]" ;
+                 skos:prefLabel "projection reduction exposure with variable axis immersion lenses" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002152
+af-p:AFP_0002152 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000146 ;
+                 skos:definition "Any synthesis technique involving the transfer of a pattern to a material (a 'resist') by exposure to a radiation source (e.g. light or X-rays) or to a beam of charged particles through a mask composed of a close-packed colloidal array. Upon irradiation, the material experiences a change in its physical properties. Excess material is then removed, by a liquid 'developer' or an etching process. [CHMO]" ;
+                 skos:prefLabel "colloidal lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002161
+af-p:AFP_0002161 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001527 ;
+                 skos:altLabel "LEEB" ,
+                               "LEEBI" ,
+                               "LEEBL" ,
+                               "LVEBL" ,
+                               "low energy electron beam irradiation" ,
+                               "low energy electron-beam irradiation" ,
+                               "low-energy electron-beam irradiation" ,
+                               "low-voltage electron beam lithography" ,
+                               "low-voltage energy beam lithography" ;
+                 skos:definition "A synthesis technique that uses electrons to transfer a pattern to a substrate. The substrate is coated with a film (or 'resist) and a beam of electrons (1 keV) is scanned across it in a patterned fashion. The electrons induce chemical reactions in the resist and the desired pattern is obtained by selectively removing either exposed or non-exposed regions of the resist ('developing'). The electron beam can be focused using either electric or magnetic fields. [CHMO]" ;
+                 skos:prefLabel "low-energy electron-beam lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002174
+af-p:AFP_0002174 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "laser assisted chemical vapour deposition"@en-gb ,
+                               "laser-assisted chemical vapour deposition"@en-gb ,
+                               "laser-induced chemical vapour deposition"@en-gb ,
+                               "LCVD" ,
+                               "laser CVD" ,
+                               "laser assisted CVD" ,
+                               "laser assisted chemical vapor deposition" ,
+                               "laser induced CVD" ,
+                               "laser-assisted CVD" ,
+                               "laser-assisted chemical vapor deposition" ,
+                               "laser-induced CVD" ,
+                               "laser-induced chemical vapor deposition" ;
+                 skos:definition "A synthesis method where a laser-heated substrate is exposed to one or more volatile precursors, which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "laser chemical vapour deposition"@en-gb ,
+                                "laser chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002179
+af-p:AFP_0002179 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "direct-liquid-injection chemical vapour deposition"@en-gb ,
+                               "DLICVD" ,
+                               "direct liquid injection CVD" ,
+                               "direct-liquid-injection CVD" ,
+                               "direct-liquid-injection chemical vapor deposition" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more liquid precursors, which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "direct liquid injection chemical vapour deposition"@en-gb ,
+                                "direct liquid injection chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002199
+af-p:AFP_0002199 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "LPCVD" ,
+                               "low pressure CVD" ,
+                               "low pressure chemical vapor deposition" ,
+                               "low pressure chemical vapour deposition" ,
+                               "low-pressure CVD" ,
+                               "low-pressure chemical vapour deposition" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors, at less than atmospheric pressure, which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "low-pressure chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002208
+af-p:AFP_0002208 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000948 ,
+                                 af-p:AFP_0001823 ;
+                 skos:altLabel "ME" ,
+                               "MET" ,
+                               "metal evaporation technique" ,
+                               "metal shadowing" ;
+                 skos:definition "A synthesis technique where the substrate is placed in a vacuum (<10^{-4} Pa) and a metal electrode (e.g. Au, Cr, Zn or Pt) is melted and evaporated by passing a current through it. When the metal atoms hit the (much cooler) substrate they condense into nanoscale particles, forming a thin deposit on the surface. [CHMO]" ;
+                 skos:prefLabel "metal evaporation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002213
+af-p:AFP_0002213 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000837 ;
+                 skos:altLabel "SSM" ,
+                               "close space sublimation" ,
+                               "close-space sublimation" ,
+                               "sandwich sublimation method" ,
+                               "sandwich sublimation technique" ,
+                               "sandwich-sublimation method" ,
+                               "sublimation sandwich method" ,
+                               "sublimation-sandwich method" ;
+                 skos:definition "A technique for growing thick (µm) epitaxial layers of SiC by heating a source (polycrystalline SiC or powder) at high temperature (1800-2600 deg. C) and low pressure in an Ar atmosphere causing it to sublime. The vapours then condense on a single crystal of SiC (the 'seed') placed a few mm away. [CHMO]" ;
+                 skos:prefLabel "sandwich sublimation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002214
+af-p:AFP_0002214 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002260 ;
+                 skos:altLabel "metalorganic chemical vapour deposition"@en-gb ,
+                               "organometallic chemical vapour deposition"@en-gb ,
+                               "MOCVD" ,
+                               "OMCVD" ,
+                               "metalorganic CVD" ,
+                               "metalorganic chemical vapor deposition" ,
+                               "organometallic chemical vapor deposition" ;
+                 skos:changeNote "2016-02-03 Switched labels [OSTHUS]" ,
+                                 "2016-02-25 fix translation [OSTHUS]" ;
+                 skos:definition "A synthesis method where the substrate is exposed to volatile precursors (one of which is an organometallic compound) which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "metal-organic chemical vapour deposition"@en-gb ,
+                                "metal-organic chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002220
+af-p:AFP_0002220 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:definition "The deposition of a layer of silane-like molecules on a surface (e.g. glass or mica) through self-assembly. [CHMO]" ;
+                 skos:prefLabel "silanisation"@en-gb ,
+                                "silanization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002232
+af-p:AFP_0002232 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001825 ;
+                 skos:altLabel "optically-induced electrokinetic patterning" ,
+                               "opto-electrokinetic patterning" ,
+                               "optoelectrokinetic patterning" ;
+                 skos:definition "Any technique that utlilises the movement of particles under the influence of an electric field (e.g. electroosmosis or electrophoresis) in conjunction with illumination of a photosensitive substrate to form a pattern. [CHMO]" ;
+                 skos:prefLabel "optically induced electrokinetic patterning" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002236
+af-p:AFP_0002236 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001494 ;
+                 skos:altLabel "TM" ;
+                 skos:definition "A process for shaping pliable polymer materials using a rigid frame or model called a 'mould'. The mould is filled with a prepolymer then the whole assembly is transferred to a flat substrate where the prepolymer is cross-linked and the mould removed. [CHMO]" ;
+                 skos:prefLabel "transfer moulding"@en-gb ,
+                                "transfer molding" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002252
+af-p:AFP_0002252 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001700 ;
+                 skos:altLabel "arc physical vapor deposition" ,
+                               "arc physical vapour deposition" ,
+                               "arc-PVD" ,
+                               "arc-physical vapor deposition" ,
+                               "arc-physical vapour deposition" ;
+                 skos:definition "A synthesis technique where an electric arc is used to vaporize material from a cathode target. The vaporized material then condenses on a substrate, forming a thin film. [CHMO]" ;
+                 skos:prefLabel "cathodic arc deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002256
+af-p:AFP_0002256 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000200 ;
+                 skos:altLabel "BF method" ,
+                               "breath figure method" ,
+                               "breath figure templating" ,
+                               "breath figure-driven templating" ,
+                               "breath-figure method" ,
+                               "breath-figure templating" ;
+                 skos:definition "The method of using hexagonally-packed water microspheres as templates for the fabrication of microporous polymer films. [CHMO]" ;
+                 skos:prefLabel "breath-figure templating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002257
+af-p:AFP_0002257 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001451 ;
+                 skos:definition "A synthesis method which consists of depositing a monocrystalline film (from liquid or gaseous precursors) on a monocrystalline substrate of the same substance. [CHMO]" ;
+                 skos:prefLabel "homoepitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002260
+af-p:AFP_0002260 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:altLabel "CVD (chemical vapour deposition) synthesis"@en-gb ,
+                               "chemical-vapour deposition"@en-gb ,
+                               "CVD" ,
+                               "CVD (chemical vapor deposition) synthesis" ,
+                               "chemical-vapor deposition" ;
+                 skos:definition "A synthesis method where the substrate is exposed to one or more volatile precursors, which react or decompose on the surface to produce a deposit. [CHMO]" ;
+                 skos:prefLabel "chemical vapour deposition"@en-gb ,
+                                "chemical vapor deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002268
+af-p:AFP_0002268 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001451 ;
+                 skos:altLabel "SPE" ,
+                               "solid phase epitaxy" ;
+                 skos:definition "A synthesis method which consists of depositing an amorphous film on a monocrystalline substrate, then heating the substrate to crystallise the film. [CHMO]" ;
+                 skos:prefLabel "solid-phase epitaxy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002275
+af-p:AFP_0002275 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001159 ,
+                                 af-p:AFP_0001348 ;
+                 skos:altLabel "deflocculation" ;
+                 skos:definition "Reversal of coagulation or flocculation, i.e., the dispersion of aggregates to form a colloidally stable suspension or emulsion. [CHMO]" ;
+                 skos:prefLabel "peptisation"@en-gb ,
+                                "peptization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002282
+af-p:AFP_0002282 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000874 ;
+                 skos:altLabel "SCPL" ;
+                 skos:definition "A process for forming thermoplastic polymer samples by dipping a mould into a solution of the polymer and particles of known dimension, and drawing off the solvent to leave a composite polymer-particle film adhering to the mould. [CHMO]" ;
+                 skos:prefLabel "solvent casting and particulate leaching" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002306
+af-p:AFP_0002306 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002120 ;
+                 skos:altLabel "DPL" ,
+                               "double-patterning lithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. The photoresist is then exposed to two different patterns of intense (typically UV) light using two different masks. A post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "double patterning lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002316
+af-p:AFP_0002316 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000622 ;
+                 skos:altLabel "high-target-utilisation sputtering"@en-gb ,
+                               "high-target-utilization sputtering" ;
+                 skos:definition "A synthesis technique where a solid target is bombarded with energetic ions (e.g. Ar+) causing atoms to be ejected ('sputtering'). The ejected atoms then deposit, as a thin-film, on a substrate. Ionization of the neutral gas atoms requires an external plasma (a partially ionized gas containing free electrons) source, which generates an ion beam. [CHMO]" ;
+                 skos:prefLabel "high-target-utilisation sputter deposition"@en-gb ,
+                                "high-target-utilization sputter deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002320
+af-p:AFP_0002320 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001505 ;
+                 skos:altLabel "CVI" ;
+                 skos:definition "The process of filling in the pores of a material (e.g. a ceramic) by reaction with, or deposition from, a vapour. [CHMO]" ;
+                 skos:prefLabel "chemical vapour infiltration"@en-gb ,
+                                "chemical vapor infiltration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002329
+af-p:AFP_0002329 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001779 ;
+                 skos:altLabel "electrochemical nanoimprinting" ,
+                               "superionic electrochemical nanoimprinting" ;
+                 skos:definition "A synthesis technique that uses an electrochemical reaction to transfer a pattern to a substrate. A superionic conductor (e.g. Ag2S) stamp containing the desired (nanosized) pattern on its surface is pressed onto a metal substrate. When a voltage is applied across the substrate and stamp, metal ions move from the substrate to the stamp leaving behind the complementary pattern. [CHMO]" ;
+                 skos:prefLabel "electrochemical nanoimprint lithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002347
+af-p:AFP_0002347 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000036 ;
+                 skos:altLabel "APR" ,
+                               "aqueous phase reforming" ;
+                 skos:definition "The reaction of biomass-derived oxygenated compounds (e.g. glycerol) in aqueous solution at low temperature in the presence of a platinum catalyst to produce hydrogen. [CHMO]" ;
+                 skos:prefLabel "aqueous-phase reforming" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002358
+af-p:AFP_0002358 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001681 ;
+                 skos:definition "The process of the settling of particles (atoms or molecules) from a gas or vapor onto a pre-existing surface, resulting in the growth of a new phase. [CHMO]" ;
+                 skos:prefLabel "dry deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002360
+af-p:AFP_0002360 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002120 ;
+                 skos:altLabel "MPP" ,
+                               "MPPL" ,
+                               "microscope-projection photolithography" ;
+                 skos:definition "A synthesis method that uses light to transfer a pattern to a substrate. A solution of photoresist (a polymer) is deposited on the substrate by spin coating. The photoresist-coated substrate is then heated to drive off excess solvent ('soft-baked', 'prebaked', 'post-application baked', PAB), typically at 90-100 deg. C. A reduced image of the desired pattern is then projected on the photoresist using a microscope and the substrate is exposed to intense (typically UV) light. A post-exposure bake (PEB) at 120-180 deg. C is performed before immersing the substrate in a 'developer' which removes excess photoresist. Positive photoresist becomes soluble in the developer when exposed; negative photoresist becomes insoluble in the developer. Finally the substrate is baked again ('hard-baked') to solidify the remaining photoresist. [CHMO]" ;
+                 skos:prefLabel "microscope projection photolithography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002420
+af-p:AFP_0002420 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002239 ,
+                                     [ owl:intersectionOf ( af-p:AFP_0003537
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002747 ;
+                                                              owl:someValuesFrom chebi:_50594
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf af-p:AFP_0003537 ;
+                 skos:definition "Any method used to synthesise carbon nanotubes. [CHMO]" ;
+                 skos:prefLabel "carbon nanotube synthesis method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002428
+af-p:AFP_0002428 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000174 ;
+                 skos:altLabel "Acheson technique" ;
+                 skos:definition "A method for growing low-purity polycrystalline SiC. A mixture of silica, carbon, sawdust and NaCl is heated to 2700 deg. C in a furnace, and the temperature gradually decreased. [CHMO]" ;
+                 skos:prefLabel "Acheson method" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003536
+af-p:AFP_0003536 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002837 ,
+                                     [ owl:intersectionOf ( af-p:AFP_0003537
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002747 ;
+                                                              owl:someValuesFrom chebi:_50803
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:prefLabel "nanoparticle synthesis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003537
+af-p:AFP_0003537 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0002838 ,
+                                     [ owl:intersectionOf ( af-p:AFP_0001348
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002747 ;
+                                                              owl:someValuesFrom chebi:_50795
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:prefLabel "nanostructure synthesis" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33418
+chebi:_33418 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_50594
+chebi:_50594 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_50795
+chebi:_50795 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_50803
+chebi:_50803 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_60027
+chebi:_60027 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0001301
+chmo:_0001301 rdf:type owl:Class ;
+              rdfs:subClassOf af-p:AFP_0001348 ,
+                              obi:_0000094 ;
+              skos:changeNote "2017-09-27 Curated term to align with AFO. [OSTHUS]" ;
+              skos:definition "A method used to synthesise a sample. [CHMO]" ;
+              skos:prefLabel "synthesis method" .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002213
+chmo:_0002213 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002239
+chmo:_0002239 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002476
+chmo:_0002476 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002609
+chmo:_0002609 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002629
+chmo:_0002629 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002705
+chmo:_0002705 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002837
+chmo:_0002837 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0002838
+chmo:_0002838 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000094
+obi:_0000094 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000652
+obi:_0000652 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty obi:_0000417 ;
+                                   owl:someValuesFrom obi:_0000686
+                                 ] ;
+             rdfs:subClassOf af-p:AFP_0001348 ,
+                             obi:_0000094 ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty obi:_0000293 ;
+                               owl:someValuesFrom bfo:_0000040
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty obi:_0000299 ;
+                               owl:someValuesFrom bfo:_0000040
+                             ] ;
+             iao:_0000114 iao:_0000122 ;
+             skos:changeNote "2017-09-27 Curated term to align with AFO. [OSTHUS]" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000686
+obi:_0000686 rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "(c) 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

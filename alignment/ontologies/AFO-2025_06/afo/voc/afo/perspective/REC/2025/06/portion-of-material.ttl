@@ -1,3 +1,491 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:85d392699040c5e15419565096c66fec9532f1f6b4f52545ed03c89cd0336e05
-size 32808
+@prefix : <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix ops: <http://www.openphacts.org/units/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ncit: <http://purl.obolibrary.org/obo/NCIT> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix afs-c: <http://purl.allotrope.org/shapes/common#> .
+@prefix afs-q: <http://purl.allotrope.org/shapes/qudt#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@prefix afs-dc: <http://purl.allotrope.org/shapes/datacube#> .
+@prefix afs-hr: <http://purl.allotrope.org/shapes/resources#> .
+@prefix af-math: <http://purl.allotrope.org/ontologies/math#> .
+@prefix af-ec-001: <http://purl.allotrope.org/ontologies/equipment/codelist/001#> .
+@prefix af-ec-002: <http://purl.allotrope.org/ontologies/equipment/codelist/002#> .
+@prefix af-ec-003: <http://purl.allotrope.org/ontologies/equipment/codelist/003#> .
+@prefix af-ec-004: <http://purl.allotrope.org/ontologies/equipment/codelist/004#> .
+@prefix af-ec-005: <http://purl.allotrope.org/ontologies/equipment/codelist/005#> .
+@prefix af-ec-006: <http://purl.allotrope.org/ontologies/equipment/codelist/006#> .
+@base <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material#> .
+
+<http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material> rdf:type owl:Ontology ;
+                                                                                           owl:versionIRI <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material> ;
+                                                                                           owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/curation> ,
+                                                                                                       <http://purl.allotrope.org/voc/bfo/REC/2018/04/bfo-2-0> ;
+                                                                                           dct:contributor <http://www.allotrope.org> ;
+                                                                                           dct:description "Taxonomy of materials (stuff, matter) under its physical composition perspective and their roles" ;
+                                                                                           dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                           dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ,
+                                                                                                       <http://purl.allotrope.org/voc/iupac-license> ;
+                                                                                           dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                           dct:publisher <http://www.allotrope.org> ;
+                                                                                           dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                                      <http://purl.allotrope.org/voc/copyright> ;
+                                                                                           dct:rightsHolder <http://www.allotrope.org> ;
+                                                                                           dct:source """Keet, C.M. A core ontology of macroscopic stuff. 19th International Conference on Knowledge Engineering and Knowledge Management (EKAW'14). K. Janowicz et al. (Eds.). 24-28 Nov, 2014, Linkoping, Sweden. Springer LNAI vol. 8876, 209-224.
+http://www.meteck.org/stuff.html""" ;
+                                                                                           dct:title "AFT Portion of Material Perspective (REC/2025/06)" ;
+                                                                                           void:feature <http://www.w3.org/ns/formats/Turtle> ;
+                                                                                           owl:priorVersion <http://purl.allotrope.org/voc/afo/perspective/REC/2025/03/portion-of-material> ;
+                                                                                           owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://rdfs.org/ns/void#feature
+void:feature rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000012
+af-m:AFM_0000012 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001035 ;
+                 af-x:AFX_0002796 af-r:AFR_0001223 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:replaces af-e:AFE_0002103 ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "Orange Book: IUPAC Compendium of Analytical Nomenclature. Second Edition, Blackwell Scientific Publications, Oxford, 1987." ,
+                            "PAC, 1994, 66, 533 (Standard quantities in chemical thermodynamics. Fugacities, activities and equilibrium constants for pure and mixed phases (IUPAC Recommendations 1994))" ;
+                 skos:definition "A solution is a homogeneous mixture composed of one phase where particles  are not visible to the naked eye and the solution does not scatter a light beam. [Allotrope]" ;
+                 skos:prefLabel "solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000105
+af-m:AFM_0000105 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001060 ;
+                 af-x:AFX_0002796 af-r:AFR_0001223 ;
+                 af-x:AFX_0002808 chebi:_15377 ;
+                 skos:altLabel "water" ;
+                 skos:definition "Water is a transparent fluid which forms the world's streams, lakes, oceans and rain, and is the major constituent of the fluids of living things. [Wikipedia]" ;
+                 skos:prefLabel "portion of water" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000275
+af-m:AFM_0000275 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000040 ;
+                 af-x:AFX_0002865 <http://purl.allotrope.org/taxonomy> ;
+                 skos:prefLabel "material" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000442
+af-m:AFM_0000442 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001034 ;
+                 skos:definition "A suspension is a heterogeneous mixture in which the solute particles do not dissolve but get suspended throughout the bulk of the medium. [Wikipedia]" ;
+                 skos:example "sea water with sand" ;
+                 skos:prefLabel "suspension" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000494
+af-m:AFM_0000494 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000442 ;
+                 af-x:AFX_0002796 af-r:AFR_0001223 ;
+                 skos:definition "A spray is a heterogeneous mixture where a small amount of liquid is dispersed into a gas. [Allotrope]" ;
+                 skos:prefLabel "spray" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001016
+af-m:AFM_0001016 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 skos:definition "An is a colloid where the continuous phase is a liquid and the dispersed phase is a liquid. [Allotrope]" ;
+                 skos:example "milk that is mixed oil in water" ;
+                 skos:prefLabel "emulsion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001030
+af-m:AFM_0001030 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001044 ;
+                 dct:source "Myers, D. (2002) Association Colloids: Micelles, Vesicles, and Membranes, in Surfaces, Interfaces, and Colloids: Principles and Applications, Second Edition, John Wiley & Sons, Inc., New York, USA. doi: 10.1002/0471234990.ch15" ;
+                 skos:definition "An association colloid is a homogeneous, non-structured substance composed of large molecules or ultramicroscopic suspended in a separate medium, which is largely comprised or reversible aggregations formed by the thermodynamics of molecular interactions. [Allotrope]" ;
+                 skos:prefLabel "association colloid" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001031
+af-m:AFM_0001031 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001044 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1972, 31, 577 (Manual of Symbols and Terminology for Physicochemical Quantities and Units, Appendix II: Definitions, Terminology and Symbols in Colloid and Surface Chemistry) on page 605" ;
+                 skos:altLabel "colloid dispersion" ,
+                               "colloidal dispersion" ;
+                 skos:definition "A dispersion colloid is a colloid that is a system in which particles of colloidal size of any nature (e.g. solid, liquid or gas) are dispersed in a continuous phase of a different composition (or state). [IUPAC]" ;
+                 skos:prefLabel "dispersion colloid" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001032
+af-m:AFM_0001032 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1972, 31, 577 (Manual of Symbols and Terminology for Physicochemical Quantities and Units, Appendix II: Definitions, Terminology and Symbols in Colloid and Surface Chemistry) on page 606" ;
+                 skos:definition "A foam is a colloid where the continuous phase is a liquid and the dispersed phase is a gas. [Allotrope]" ;
+                 skos:prefLabel "foam" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001033
+af-m:AFM_0001033 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 af-x:AFX_0002796 af-r:AFR_0001223 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 2007, 79, 1801 (Definitions of terms relating to the structure and processing of sols, gels, networks, and inorganic-organic hybrid materials (IUPAC Recommendations 2007)) on page 1806" ;
+                 skos:definition "A gel is a colloid where the continuous phase is a solid and the dispersed phase is a liquid. [Allotrope]" ;
+                 skos:prefLabel "gel" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001034
+af-m:AFM_0001034 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001038 ;
+                 skos:definition "A heterogeneous mixture is a portion of mixed material that is not uniform in composition, but proportions of its components vary throughout the sample. [Wikipedia]" ;
+                 skos:example "sea water with sand" ;
+                 skos:prefLabel "heterogeneous mixture" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001035
+af-m:AFM_0001035 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001038 ;
+                 skos:definition "A homogeneous mixture is a portion of mixed material that has the same proportions of its components throughout a given sample. Homogeneous mixture can have a variable composition. [Wikipedia]" ;
+                 skos:example "air" ,
+                              "sea water" ;
+                 skos:prefLabel "homogeneous mixture" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001036
+af-m:AFM_0001036 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 2007, 79, 1801 (Definitions of terms relating to the structure and processing of sols, gels, networks, and inorganic-organic hybrid materials (IUPAC Recommendations 2007)) on page 1805" ;
+                 skos:definition "A solid aerosol is an colloid where the continuous phase is a gas and the dispersed phase is a liquid. [Allotrope]" ;
+                 skos:prefLabel "liquid aerosol" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001037
+af-m:AFM_0001037 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001044 ;
+                 skos:definition "A molecular colloid is a type of colloid that consists of many molecules that combine to structures of colloidal size. [Allotrope]" ;
+                 skos:example "sulphur S8 colloid" ;
+                 skos:prefLabel "molecular colloid" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001038
+af-m:AFM_0001038 rdf:type owl:Class ;
+                 rdfs:subClassOf chmo:_0000993 ;
+                 skos:altLabel "blend" ,
+                               "mixture" ,
+                               "portion of mixture" ;
+                 skos:definition "An portion of mixed material is a material entity that consists of different kinds of grains if you inspect it at a higher level of granularity. [Allotrope]" ;
+                 skos:example "portion of milk" ,
+                              "sand" ,
+                              "sea water" ,
+                              "sea water with sand" ;
+                 skos:prefLabel "portion of mixed material" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001039
+af-m:AFM_0001039 rdf:type owl:Class ;
+                 rdfs:subClassOf chmo:_0000993 ;
+                 af-x:AFX_0002796 af-r:AFR_0001223 ;
+                 skos:definition "An portion of pure substance is a material entity that consists of one kind of grains if you inspect it at a higher level of granularity. [Allotrope]" ;
+                 skos:example "solution of distilled water" ;
+                 skos:prefLabel "portion of pure substance" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001041
+af-m:AFM_0001041 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 2007, 79, 1801 (Definitions of terms relating to the structure and processing of sols, gels, networks, and inorganic-organic hybrid materials (IUPAC Recommendations 2007)) on page 1805" ;
+                 skos:definition "A sol is a fluid colloidal system of two or more components. [IUPAC]" ;
+                 skos:prefLabel "sol" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001044
+af-m:AFM_0001044 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001035 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1972, 31, 577 (Manual of Symbols and Terminology for Physicochemical Quantities and Units, Appendix II: Definitions, Terminology and Symbols in Colloid and Surface Chemistry) on page 605" ;
+                 skos:altLabel "colloidal system" ;
+                 skos:definition "A colloid is a homogeneous mixture in which one substance of microscopically dispersed insoluble particles is suspended throughout another substance. A colloid has a dispersed phase (the suspended particles) and a continuous phase (the medium of suspension). The molecules or polymolecular particles dispersed in a medium have at least in one direction a dimension roughly between 1 nanometer and 1 micrometer, or in a system discontinuities are found at distances of that order. [IUPAC]" ;
+                 skos:prefLabel "colloid" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001060
+af-m:AFM_0001060 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001039 ;
+                 skos:altLabel "compound" ;
+                 skos:definition "A portion of material that has grain only the same kind of molecules, ignoring minor impurities. [Allotrope]" ;
+                 skos:example "portion of tablesugar" ,
+                              "portion of water" ;
+                 skos:prefLabel "portion of compound" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001061
+af-m:AFM_0001061 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001039 ;
+                 skos:altLabel "element" ;
+                 skos:definition "A portion of material that has grain only the same kind of atoms, ignoring minor impurities. [Allotrope]" ;
+                 skos:example "portion of gold" ,
+                              "portion of helium" ;
+                 skos:prefLabel "portion of element" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001064
+af-m:AFM_0001064 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001039 ;
+                 skos:definition "A portion of material that has grain some multi-molecular objects or particles. [Allotrope]" ;
+                 skos:example "bag of nuts" ,
+                              "packet of rice" ;
+                 skos:prefLabel "portion of bulk stuff" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001065
+af-m:AFM_0001065 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:definition "A gas mixture is a solution where the continuous phase is a gas and the dispersed phase is a gas. [Allotrope]" ;
+                 skos:example "air" ;
+                 skos:prefLabel "gas mixture" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001066
+af-m:AFM_0001066 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:definition "A gas in solid solution is a solution where the continuous phase is a solid and the dispersed phase is a gas. [Allotrope]" ;
+                 skos:example "hydrogen in paladium metal" ;
+                 skos:prefLabel "gas in solid solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001067
+af-m:AFM_0001067 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:altLabel "solution" ;
+                 skos:definition "A gas in liquid solution is a solution where the continuous phase is a liquid and the dispersed phase is a gas. [Allotrope]" ;
+                 skos:example "carbon dioxide in water" ;
+                 skos:prefLabel "gas in liquid solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001068
+af-m:AFM_0001068 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:altLabel "solution" ;
+                 skos:definition "A liquid in liquid solution is a solution where the mixture phase is a liquid and the dispersed phase is a liquid. [Allotrope]" ;
+                 skos:example "alcoholic beverages" ,
+                              "gasoline" ;
+                 skos:prefLabel "liquid in liquid solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001069
+af-m:AFM_0001069 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:altLabel "solution" ;
+                 skos:definition "A solid in liquid solution is a solution where the continuous phase is a solid and the dispersed phase is a liquid. [Allotrope]" ;
+                 skos:example "salt or sugar in water" ;
+                 skos:prefLabel "solid in liquid solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001070
+af-m:AFM_0001070 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:altLabel "solution" ;
+                 skos:definition "A liquid in solid solution is a solution where the continuous phase is a solid and the dispersed phase is a liquid. [Allotrope]" ;
+                 skos:example "hexane in paraffin wax" ,
+                              "mercury amalgam" ;
+                 skos:prefLabel "liquid in solid solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001071
+af-m:AFM_0001071 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:definition "A solid in solid solution is a solution where the continuous phase is a solid and the dispersed phase is a solid. [Allotrope]" ;
+                 skos:example "alloys" ;
+                 skos:prefLabel "solid in solid solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001076
+af-m:AFM_0001076 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "Everett, D. (2009). Manual of Symbols and Terminology for Physicochemical Quantities and Units, Appendix II: Definitions, Terminology and Symbols in Colloid and Surface Chemistry. Pure and Applied Chemistry, 31(4), pp. 577-638." ;
+                 skos:definition "A solid aerosol is an colloid where the continuous phase is a gas and the dispersed phase is a solid. [Allotrope]" ;
+                 skos:prefLabel "solid aerosol" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001077
+af-m:AFM_0001077 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 skos:definition "A solid foam is a colloid where the continuous phase is a solid and the dispersed phase is a gas. [Allotrope]" ;
+                 skos:prefLabel "solid foam" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001078
+af-m:AFM_0001078 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001031 ;
+                 skos:definition "A solid sol is a colloid where the continuous phase is a solid and the dispersed phase is a solid. [Allotrope]" ;
+                 skos:prefLabel "solid sol" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001105
+af-m:AFM_0001105 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001060 ;
+                 dct:source <https://en.wikipedia.org/wiki/Ionic_compound> ;
+                 skos:altLabel "salt" ;
+                 skos:definition "A portion of salt is a portion of compound where the compound is composed of ions held together by electrostatic forces termed ionic bonding. [Wikipedia]" ;
+                 skos:prefLabel "portion of salt" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001106
+af-m:AFM_0001106 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001105 ;
+                 af-x:AFX_0002808 chebi:_32130 ;
+                 skos:altLabel "silver (1+) nitrate" ,
+                               "silver nitrate" ;
+                 skos:definition "A portion of silver nitrate is a portion of salt composed of silver (1+) and nitrate ions. [Allotrope]" ;
+                 skos:prefLabel "portion of silver nitrate" .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0000993
+chmo:_0000993 rdf:type owl:Class ;
+              rdfs:subClassOf af-m:AFM_0000275 ;
+              skos:definition "An independent material continuant that is self-connected and retains its identity over time. [CHMO]" ;
+              skos:prefLabel "portion of material" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+iao:_0000030 rdfs:subClassOf bfo:_0000031 .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/iupac-copyright
+<http://purl.allotrope.org/voc/iupac-copyright> rdf:type owl:NamedIndividual ,
+                                                         dct:RightsStatement ;
+                                                dct:description "Copyright (c) 2019 International Union of Pure Applied Chemistry" .
+
+
+###  http://purl.allotrope.org/voc/iupac-license
+<http://purl.allotrope.org/voc/iupac-license> rdf:type owl:NamedIndividual ,
+                                                       dct:LicenseDocument ;
+                                              dct:description "Reproduced by permission of International Union of Pure and Applied Chemistry" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

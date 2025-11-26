@@ -1,3 +1,450 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c87c22c61bf29d1cb8c1371807ca8e34962282884d783ef1b9c1401ad43cf393
-size 23046
+@prefix : <http://purl.allotrope.org/voc/adf/REC/2020/06/datapackage#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
+@prefix hdf: <http://purl.allotrope.org/ontologies/hdf5/1.8#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix adf-dp: <http://purl.allotrope.org/ontologies/datapackage#> .
+@base <http://purl.allotrope.org/voc/adf/REC/2020/06/datapackage#> .
+
+<http://purl.allotrope.org/voc/adf/REC/2020/06/datapackage> rdf:type owl:Ontology ;
+                                                             owl:versionIRI <http://purl.allotrope.org/voc/adf/REC/2020/06/datapackage> ;
+                                                             owl:imports <http://purl.allotrope.org/voc/skos/REC/2018/10/skos> ;
+                                                             dct:contributor <http://www.allotrope.org> ;
+                                                             dct:description "Ontology for the Allotrope Data Format Data Package API. Provides the vocabulary for relations between files and folders and their metadata. Since 1.2.0 this also supports external files." ;
+                                                             dct:issued "2020-06-30T12:00:00Z"^^xsd:dateTime ;
+                                                             dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                             dct:modified "2019-09-17T12:00:00Z"^^xsd:dateTime ;
+                                                             dct:publisher <http://www.allotrope.org> ;
+                                                             dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                        <http://purl.allotrope.org/voc/copyright> ;
+                                                             dct:title "Allotrope Data Format Data Package Ontology (REC/2020/06)" ;
+                                                             owl:priorVersion <http://purl.allotrope.org/voc/adf/REC/2019/09/datapackage> ;
+                                                             owl:versionInfo "REC/2020/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datapackage#host
+adf-dp:host rdf:type owl:ObjectProperty ;
+            rdfs:domain adf-dp:Node ;
+            rdfs:range adf-dp:Computer ;
+            skos:definition "The computer at which the file or folder is located. [Allotrope]" ;
+            skos:prefLabel "hosted at" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#lineSeparator
+adf-dp:lineSeparator rdf:type owl:ObjectProperty ;
+                     rdfs:domain adf-dp:File ;
+                     rdfs:range adf-dp:LineSeparatorCode ;
+                     rdfs:comment "The specification of the line feed convention is required for a file, if the file format is text. [Allotrope]" ;
+                     rdfs:seeAlso "http://unicode.org/standard/reports/tr13/tr13-5.html" ;
+                     skos:changeNote "2017-04-12 Changed IRI to lowercase following AFO guidelines [Allotrope]" ;
+                     skos:definition "The line separator of the file. [Allotrope]" ;
+                     skos:prefLabel "line separator" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#modifiedBy
+adf-dp:modifiedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain adf-dp:Node ;
+                  rdfs:range dct:Agent ;
+                  skos:definition "The node was modified by the person (broader agent) specified by this property. [Allotrope]" ;
+                  skos:prefLabel "modified by" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#parent
+adf-dp:parent rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dct:isPartOf ;
+              rdfs:domain adf-dp:Node ;
+              rdfs:range adf-dp:Folder ;
+              skos:definition "Direct parent folder of a file or folder. [Allotrope]" ;
+              skos:prefLabel "parent" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#representedBy
+adf-dp:representedBy rdf:type owl:ObjectProperty ;
+                     rdfs:domain adf-dp:Node ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( hdf:Dataset
+                                                hdf:Group
+                                              )
+                                ] ;
+                     skos:definition "The node of the data package is represented by the dataset of the HDF file that has the absolute path as specified by this property. [Allotrope]" ;
+                     skos:prefLabel "represented by" .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:ObjectProperty ;
+            skos:prefLabel "created by" .
+
+
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:ObjectProperty ;
+           skos:prefLabel "format" .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dct:isPartOf rdf:type owl:ObjectProperty ;
+             skos:prefLabel "is part of" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datapackage#URL
+adf-dp:URL rdf:type owl:DatatypeProperty ;
+           skos:definition "An optional URL for retrieving the file or folder. For locally resolved ADF internal URLs the URL scheme adf://dp/ can be used to resolve nodes in the data package. [Allotrope]" ;
+           skos:example "adf://dp/folder/file.txt" ,
+                        "file://example.org/opt/data/file.txt" ,
+                        "http://example.org/files/myfile.txt" ;
+           skos:prefLabel "URL" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#charset
+adf-dp:charset rdf:type owl:DatatypeProperty ;
+               rdfs:domain adf-dp:File ;
+               rdfs:range xsd:string ;
+               rdfs:seeAlso "http://encoding.spec.whatwg.org" ,
+                            "http://tools.ietf.org/html/rfc3629" ,
+                            "http://www.iana.org/assignments/character-sets/character-sets.xhtml" ;
+               skos:changeNote "2017-04-12 Changed IRI to lowercase following AFO guidelines. [Allotrope]" ;
+               skos:definition "The character set of the file. [Allotrope]" ;
+               skos:note "The specification of the character set (encoding) is required for a file, if the file format is text. [Allotrope]" ;
+               skos:prefLabel "charset" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#domainName
+adf-dp:domainName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain adf-dp:Computer ;
+                  rdfs:range xsd:string ;
+                  dct:source "https://en.wikipedia.org/wiki/Domain_name" ,
+                             "https://tools.ietf.org/html/rfc4034" ;
+                  skos:definition "A domain name is an identification string that defines a realm of administrative autonomy, authority or control within the Internet. [Wikipedia]" ;
+                  skos:prefLabel "domain name" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#fileSize
+adf-dp:fileSize rdf:type owl:DatatypeProperty ;
+                rdfs:domain adf-dp:File ;
+                rdfs:range xsd:integer ;
+                skos:changeNote "2017-04-12 Changed IRI to lowercase following AFO guidelines. [Allotrope]" ;
+                skos:definition "The size of the file in bytes. [Allotrope]" ;
+                skos:prefLabel "file size" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#fullyQualifiedDomainName
+adf-dp:fullyQualifiedDomainName rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf adf-dp:domainName ;
+                                rdfs:domain adf-dp:Computer ;
+                                rdfs:range xsd:string ;
+                                dct:source "https://en.wikipedia.org/wiki/Domain_name" ,
+                                           "https://tools.ietf.org/html/rfc4034" ;
+                                skos:altLabel "FQDN" ;
+                                skos:definition "A fully qualified domain name (FQDN) is a domain name that is completely specified with all labels in the hierarchy of the DNS, having no parts omitted. [Wikipedia]" ;
+                                skos:prefLabel "fully qualified domain name" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#hostname
+adf-dp:hostname rdf:type owl:DatatypeProperty ;
+                rdfs:domain adf-dp:Computer ;
+                rdfs:range xsd:string ;
+                dct:source "https://en.wikipedia.org/wiki/Hostname" ,
+                           "https://tools.ietf.org/html/rfc1123" ;
+                skos:definition "In computer networking, a hostname is a label that is assigned to a device connected to a computer network and that is used to identify the device in various forms of electronic communication, such as the World Wide Web. [Wikipedia]" ;
+                skos:example "call uname -n on Linux" ;
+                skos:prefLabel "hostname" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#isCompressed
+adf-dp:isCompressed rdf:type owl:DatatypeProperty ;
+                    rdfs:domain adf-dp:File ;
+                    rdfs:range xsd:boolean ;
+                    skos:definition "A property to define whether a file is compressed or not. [Allotrope]" ;
+                    skos:prefLabel "is compressed" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#name
+adf-dp:name rdf:type owl:DatatypeProperty ;
+            rdfs:seeAlso dct:title ;
+            skos:definition "File or folder name within the parent path. [Allotrope]" ;
+            skos:editorialNote "This replaces the use of DC title." ;
+            skos:example "file.txt" ;
+            skos:prefLabel "name" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#path
+adf-dp:path rdf:type owl:DatatypeProperty ;
+            rdfs:domain adf-dp:Node ;
+            rdfs:range xsd:string ;
+            skos:definition "A (platform-dependent) path to the file or folder at the host. [Allotrope]" ;
+            skos:prefLabel "path" .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:DatatypeProperty ;
+            skos:prefLabel "created" .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datapackage#Computer
+adf-dp:Computer rdf:type owl:Class ;
+                skos:definition "A computer is a device that can be instructed to carry out an arbitrary set of arithmetic or logical operations automatically. [Wikipedia]" ;
+                skos:prefLabel "computer" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#File
+adf-dp:File rdf:type owl:Class ;
+            rdfs:subClassOf adf-dp:Node ,
+                            ldp:Resource ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty adf-dp:representedBy ;
+                              owl:someValuesFrom hdf:Dataset
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dct:format ;
+                              owl:someValuesFrom rdf:Resource
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty adf-dp:lineSeparator ;
+                              owl:allValuesFrom adf-dp:LineSeparatorCode
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty adf-dp:fileSize ;
+                              owl:someValuesFrom xsd:integer
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty adf-dp:charset ;
+                              owl:allValuesFrom xsd:string
+                            ] ;
+            skos:definition "A file is a node of information that is meant to store information electronically. The storage is durable in the way that the information is still available after the creating process has closed. [Allotrope]" ;
+            skos:prefLabel "file" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#Folder
+adf-dp:Folder rdf:type owl:Class ;
+              rdfs:subClassOf adf-dp:Node ,
+                              ldp:Container ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty adf-dp:representedBy ;
+                                owl:someValuesFrom hdf:Group
+                              ] ;
+              skos:definition "A folder is a special kind of node within the file system that is meant to create a hierarchical structure of resources by connecting to parent and child nodes. [Allotrope]" ;
+              skos:prefLabel "folder" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#LineSeparatorCode
+adf-dp:LineSeparatorCode rdf:type owl:Class ;
+                         skos:definition "The code of the line separator. [Allotrope]" ;
+                         skos:prefLabel "line separator code" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#Node
+adf-dp:Node rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty adf-dp:modifiedBy ;
+                              owl:someValuesFrom dct:Agent
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dct:creator ;
+                              owl:someValuesFrom dct:Agent
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dct:created ;
+                              owl:someValuesFrom xsd:dateTime
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dct:modified ;
+                              owl:someValuesFrom xsd:dateTime
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dct:title ;
+                              owl:someValuesFrom xsd:string
+                            ] ;
+            skos:changeNote "2017-04-12 removed dct:identifier" ;
+            skos:definition "A node is a resource within the data-package. [Allotrope]" ;
+            skos:prefLabel "node" .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset
+hdf:Dataset rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Group
+hdf:Group rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Agent
+dct:Agent rdf:type owl:Class .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource
+rdf:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/ldp#Container
+ldp:Container rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/ldp#Resource
+ldp:Resource rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datapackage
+<http://purl.allotrope.org/ontologies/datapackage> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#LineSeparatorCodeCR
+adf-dp:LineSeparatorCodeCR rdf:type owl:NamedIndividual ,
+                                    adf-dp:LineSeparatorCode ;
+                           skos:notation "CR" ;
+                           skos:altLabel "CR" ;
+                           skos:definition "The line separator code \"CR\" for carriage return. [Allotrope]" ;
+                           skos:prefLabel "line separator code CR" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#LineSeparatorCodeCRLF
+adf-dp:LineSeparatorCodeCRLF rdf:type owl:NamedIndividual ,
+                                      adf-dp:LineSeparatorCode ;
+                             skos:notation "CRLF" ;
+                             skos:altLabel "CRLF" ;
+                             skos:definition "the line separator code \"CRLF\" for carriage return and line feed. [Allotrope]" ;
+                             skos:prefLabel "line separator code CRLF" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#LineSeparatorCodeLF
+adf-dp:LineSeparatorCodeLF rdf:type owl:NamedIndividual ,
+                                    adf-dp:LineSeparatorCode ;
+                           skos:notation "LF" ;
+                           skos:altLabel "LF" ;
+                           skos:definition "The line separator code \"LF\" for line feed. [Allotrope]" ;
+                           skos:prefLabel "line separator code LF" .
+
+
+###  http://purl.allotrope.org/ontologies/datapackage#LineSeparatorCodeNEL
+adf-dp:LineSeparatorCodeNEL rdf:type owl:NamedIndividual ,
+                                     adf-dp:LineSeparatorCode ;
+                            skos:notation "NEL" ;
+                            skos:altLabel "NEL" ;
+                            skos:definition "The line separator code \"NEL\" for next line. [Allotrope]" ;
+                            skos:prefLabel "line separator code NEL" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2019 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dct:modified skos:prefLabel "modified" .
+
+
+dct:title skos:note "This is used for the file or folder name. [Allotrope]" ;
+          skos:prefLabel "title" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

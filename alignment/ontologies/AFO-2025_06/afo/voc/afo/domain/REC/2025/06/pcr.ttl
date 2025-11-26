@@ -1,3 +1,416 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e9c73d091d1976b113c2f68cf69b578d4550e726d4eaee6a824b96774ae8116
-size 27236
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/qpcr#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/qpcr#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/pcr> rdf:type owl:Ontology ;
+                                                                      owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/pcr> ;
+                                                                      owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ;
+                                                                      dct:contributor <http://www.allotrope.org> ;
+                                                                      dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                      dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                      dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                      dct:publisher <http://www.allotrope.org> ;
+                                                                      dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                 <http://purl.allotrope.org/voc/copyright> ;
+                                                                      dct:rightsHolder <http://www.allotrope.org> ;
+                                                                      dct:title "AFO Polymerase Chain Reaction (PCR) Domain Ontology (REC/2025/06)" ;
+                                                                      owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002240
+af-e:AFE_0002240 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002243 ;
+                 skos:definition "A array card block is a container that uses microfluidic cards to load and accept well plates. [Allotrope]" ;
+                 skos:prefLabel "array card block" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002243
+af-e:AFE_0002243 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000407 ;
+                 skos:altLabel "PCR block" ,
+                               "block" ,
+                               "qPCR block" ,
+                               "qPCR reaction block" ,
+                               "reaction block" ;
+                 skos:definition "A PCR reaction block is a container for samples used in PCR instruments. [Allotrope]" ;
+                 skos:prefLabel "PCR reaction block" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003842
+af-p:AFP_0003842 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003735 ;
+                 skos:definition "A PCR experiment is an experiment that uses PCR to achieve its goals. [Allotrope]" ;
+                 skos:prefLabel "PCR experiment" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002233
+af-r:AFR_0002233 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ;
+                 skos:definition "A PCR detection chemistry is a classification datum that classifies a PCR detection based on the fluorescent agent used and the specificity of detection. [Allotrope]" ;
+                 skos:prefLabel "PCR detection chemistry" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002234
+af-r:AFR_0002234 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001277 ,
+                                 af-r:AFR_0002278 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000085
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000537
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:altLabel "passive reference dye" ;
+                 skos:definition "A passive reference dye setting is a setting that classifies the passive reference dye used in the PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "passive reference dye setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002237
+af-r:AFR_0002237 rdfs:subClassOf af-r:AFR_0002278 .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002241
+af-r:AFR_0002241 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000922 ;
+                 skos:definition "A target DNA description is a description that describes the intended DNA target of the PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "target DNA description" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002243
+af-r:AFR_0002243 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001277 ,
+                                 af-r:AFR_0002278 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000085
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000536
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:altLabel "reporter dye" ;
+                 skos:definition "A reporter dye setting is a setting that classifies the reporter dye used in the PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "reporter dye setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002244
+af-r:AFR_0002244 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000085
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000538
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:altLabel "quencher dye" ;
+                 skos:definition "A quencher dye setting is a setting that classifies the quencher dye used in the PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "quencher dye setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002278
+af-r:AFR_0002278 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001505 ;
+                 skos:definition "A PCR setting is a setting for a PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "PCR setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002279
+af-r:AFR_0002279 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000207 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000353 ;
+                                   owl:someValuesFrom af-p:AFP_0003842
+                                 ] ;
+                 skos:definition "A PCR result is an assay result that is output of a PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "PCR result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002902
+af-r:AFR_0002902 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001255 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                        owl:onProperty ro:_0000056 ;
+                                                        owl:someValuesFrom af-p:AFP_0003840
+                                                      ]
+                                 ] ;
+                 skos:definition "A denaturing temperature setting is a temperature setting that specifies the intended temperature of some denaturing process. [Allotrope]" ;
+                 skos:prefLabel "denaturing temperature setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002903
+af-r:AFR_0002903 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001815 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                        owl:onProperty [ owl:inverseOf af-x:AFX_0000072
+                                                                       ] ;
+                                                        owl:someValuesFrom af-p:AFP_0003840
+                                                      ]
+                                 ] ;
+                 skos:definition "A denaturing duration setting is a duration setting that specifies the intended duration of some denaturing process. [Allotrope]" ;
+                 skos:prefLabel "denaturing duration setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002904
+af-r:AFR_0002904 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001255 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                        owl:onProperty ro:_0000056 ;
+                                                        owl:someValuesFrom af-p:AFP_0000792
+                                                      ]
+                                 ] ;
+                 skos:definition "An annealing temperature setting is a temperature setting that specifies the intended temperature of some annealing process. [Allotrope]" ;
+                 skos:prefLabel "annealing temperature setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002905
+af-r:AFR_0002905 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001815 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                        owl:onProperty [ owl:inverseOf af-x:AFX_0000072
+                                                                       ] ;
+                                                        owl:someValuesFrom af-p:AFP_0000792
+                                                      ]
+                                 ] ;
+                 skos:definition "An annealing duration setting is a duration setting that specifies the intended duration of some annealing process. [Allotrope]" ;
+                 skos:prefLabel "annealing duration setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002906
+af-r:AFR_0002906 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001255 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                        owl:onProperty ro:_0000056 ;
+                                                        owl:someValuesFrom af-p:AFP_0003841
+                                                      ]
+                                 ] ;
+                 skos:definition "A primer extension temperature setting is a temperature setting that specifies the intended temperature of some primer extension process. [Allotrope]" ;
+                 skos:prefLabel "primer extension temperature setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002907
+af-r:AFR_0002907 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001815 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                        owl:onProperty [ owl:inverseOf af-x:AFX_0000072
+                                                                       ] ;
+                                                        owl:someValuesFrom af-p:AFP_0003840
+                                                      ]
+                                 ] ;
+                 skos:definition "A primer extension duration setting is a duration setting that specifies the intended duration of some primer extension process. [Allotrope]" ;
+                 skos:prefLabel "primer extension duration setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002914
+af-r:AFR_0002914 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000922 ;
+                 skos:definition "A reference DNA description is a description that describes the DNA target of a reference gene or endogenous control within the PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "reference DNA description" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002925
+af-r:AFR_0002925 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000160 ,
+                                 iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002926
+                                 ] ;
+                 skos:definition "A PCR aggregate document is a document that aggregates PCR documents. [Allotrope]" ;
+                 skos:prefLabel "PCR aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002926
+af-r:AFR_0002926 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0003842
+                                 ] ;
+                 skos:definition "A PCR document is a document that encompasses the information associated with some PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "PCR document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002928
+af-r:AFR_0002928 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A fluorescence intensity threshold setting is a data processing setting that sets the fluorescence threshold value for objects within a measurement to be considered positive for a reporter. [Allotrope]" ;
+                 skos:prefLabel "fluorescence intensity threshold setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002931
+af-r:AFR_0002931 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002279 ;
+                 skos:definition "A reference DNA copy number is a PCR result specifying the DNA copy number of a reference gene or endogenous control within a PCR experiment. [Allotrope]" ;
+                 skos:prefLabel "reference DNA copy number" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000535
+af-rl:AFRL_0000535 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty bfo:_0000054 ;
+                                     owl:someValuesFrom af-p:AFP_0003842
+                                   ] ;
+                   skos:altLabel "polymerase chain reaction role" ;
+                   skos:definition "A PCR role is a role of a material used in a PCR experiment. [Allotrope]" ;
+                   skos:prefLabel "PCR role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000536
+af-rl:AFRL_0000536 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000535 ;
+                   skos:altLabel "reporter dye" ;
+                   skos:definition "Reporter dye role is the role of a dye in a PCR experiment that binds to target DNA molecules and is detected via fluorescence when it is cleaved free. The fluorescence signal is proportional to DNA concentration. [Allotrope]" ;
+                   skos:prefLabel "reporter dye role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000537
+af-rl:AFRL_0000537 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000022 ,
+                                   af-rl:AFRL_0000535 ;
+                   skos:altLabel "passive reference dye" ;
+                   skos:definition "Passive reference dye role of a dye in a PCR experiment to provide a baseline for normalization of the fluorescence signal. [Allotrope]" ;
+                   skos:prefLabel "passive reference dye role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000538
+af-rl:AFRL_0000538 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000535 ;
+                   skos:altLabel "quencher dye" ;
+                   skos:definition "Quencher dye role is the role of a dye in a PCR experiment that acts to suppress the fluorescence of a reporter dye in proximity. [Allotrope]" ;
+                   skos:prefLabel "quencher dye role" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

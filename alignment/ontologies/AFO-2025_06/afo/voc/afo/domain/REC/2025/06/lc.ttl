@@ -1,3 +1,425 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6ff3459b986b8d881af8422cf4b7b11b5867220648fe04898099a1ed2de1699a
-size 27116
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc> ;
+                                                                     owl:imports <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography> ;
+                                                                     dct:contributor <http://www.allotrope.org> ;
+                                                                     dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                     dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:publisher <http://www.allotrope.org> ;
+                                                                     dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                <http://purl.allotrope.org/voc/copyright> ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "AFO Liquid Chromatography Domain Ontology (REC/2025/06)" ;
+                                                                     owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/lc> ;
+                                                                     owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000171
+af-e:AFE_0000171 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000224 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000056 ;
+                                   owl:someValuesFrom af-p:AFP_0002059
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "RRLC" ,
+                               "RSLC" ,
+                               "UFLC" ,
+                               "UHPLC" ,
+                               "UPLC" ,
+                               "rapid resolution liquid chromatograph" ,
+                               "rapid separation liquid chromatograph" ,
+                               "ultra fast liquid chromatograph" ,
+                               "ultra performance liquid chromatograph" ;
+                 skos:changeNote "2020-03-20 Changed equivalentClass to subClass. [Allotrope]" ;
+                 skos:definition "Liquid chromatograph that implements the ultra high-performance liquid chromatography. [Allotrope]" ;
+                 skos:prefLabel "ultra high-performance liquid chromatograph" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000224
+af-e:AFE_0000224 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000808 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000056 ;
+                                   owl:someValuesFrom af-p:AFP_0000748
+                                 ] ;
+                 skos:altLabel "HPLC system" ,
+                               "high-performance liquid chromatography system" ;
+                 skos:changeNote "2020-03-20 Changed equivalentClass to subClass. [Allotrope]" ;
+                 skos:definition "A high-performance liquid chromatograph is an instrument used for HPLC that is a technique in analytical chemistry used to separate the components in a mixture, to identify each component, and to quantify each component. It has pumps to pass a pressurized liquid solvent containing the sample mixture through a column filled with a solid adsorbent material. Each component in the sample interacts slightly differently with the adsorbent material, causing different flow rates for the different components and leading to the separation of the components as they flow out the column. [Wikipedia]" ;
+                 skos:prefLabel "high-performance liquid chromatograph" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000231
+af-e:AFE_0000231 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000056 ;
+                                   owl:someValuesFrom af-p:AFP_0000748
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/CHMO_0000976> ;
+                 skos:altLabel "HPLC column" ;
+                 skos:definition "A chromatography column that contains very small particles and is capable of taking a high inlet pressure. [CHMO]" ;
+                 skos:prefLabel "high-performance liquid chromatography column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000363
+af-e:AFE_0000363 rdfs:subClassOf af-e:AFE_0002200 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000567
+af-e:AFE_0000567 rdfs:subClassOf af-e:AFE_0002200 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002197
+af-e:AFE_0002197 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000074 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000972 ;
+                                   owl:someValuesFrom af-e:AFE_0000808
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "liquid chromatography system" ;
+                 skos:definition "A LC system is a device system that has a liquid chromatograph component. [Allotrope]" ;
+                 skos:prefLabel "LC system" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002200
+af-e:AFE_0002200 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000246 ,
+                                 [ owl:intersectionOf ( af-e:AFE_0000317
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty ro:_0000056 ;
+                                                          owl:someValuesFrom af-p:AFP_0000225
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000939 ;
+                                   owl:someValuesFrom af-e:AFE_0002197
+                                 ] ;
+                 skos:altLabel "LC detector" ;
+                 skos:definition "A liquid chromatography detector is a detector that is used in liquid chromatography as component of a LC system. [Allotrope]" ;
+                 skos:prefLabel "liquid chromatography detector" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000021
+af-p:AFP_0000021 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000225 ;
+                 skos:altLabel "HILIC" ,
+                               "hydrophilic interaction liquid chromatography" ;
+                 skos:changeNote "2016-02-03 Added altLabel [OSTHUS]" ;
+                 skos:definition "Liquid chromatography where the stationary phase is hydrophilic, the mobile phase is organic and separation is achieved based on polarity. [CHMO]" ;
+                 skos:prefLabel "hydrophilic interaction chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000225
+af-p:AFP_0000225 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/CHMO_0001004> .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000698
+af-p:AFP_0000698 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000748 ;
+                 skos:altLabel "nHPLC" ,
+                               "nano HPLC" ,
+                               "nano flow HPLC" ,
+                               "nano high performance liquid chromatography" ,
+                               "nano high pressure liquid chromatography" ,
+                               "nano high-performance liquid chromatography" ,
+                               "nano high-pressure liquid chromatography" ,
+                               "nano-HPLC" ,
+                               "nanoHPLC" ,
+                               "nanoflow HPLC" ,
+                               "nanoflow high performance liquid chromatography" ,
+                               "nanoflow high pressure liquid chromatography" ,
+                               "nanoflow high-pressure liquid chromatography" ,
+                               "nanoflow-HPLC" ,
+                               "nanoflowHPLC" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid, the stationary phase consists of very small particles, the inlet pressure is relatively high and the flow rate is nL min-1. [CHMO]" ;
+                 skos:prefLabel "nanoflow high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000748
+af-p:AFP_0000748 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001192 ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/CHMO_0001009> ;
+                 skos:altLabel "HPLC" ,
+                               "high performance liquid chromatography" ,
+                               "high pressure liquid chromatography" ,
+                               "high-pressure liquid chromatography" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid, the stationary phase consists of very small particles and the inlet pressure is relatively high. [CHMO]" ;
+                 skos:prefLabel "high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001046
+af-p:AFP_0001046 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000225 ;
+                 skos:altLabel "LCCC" ,
+                               "liquid chromatography at critical conditions" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid held at or near its critical point. Liquid chromatography at the critical condition is used to determine functionality distributions in polymers. [CHMO]" ;
+                 skos:prefLabel "liquid chromatography at the critical condition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001192
+af-p:AFP_0001192 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/CHMO_0002318> .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001410
+af-p:AFP_0001410 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000225 ,
+                                 af-p:AFP_0002361 ;
+                 skos:altLabel "RPLC" ,
+                               "reversed phase liquid chromatography" ;
+                 skos:changeNote "2016-02-03 Removed altLabel [OSTHUS]" ;
+                 skos:definition "Liquid chromatography where the mobile phase is significantly more polar than the stationary phase, for example a microporous silica-based material with chemically bonded alkyl chains. [CHMO]" ;
+                 skos:prefLabel "reversed-phase liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001719
+af-p:AFP_0001719 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000748 ;
+                 skos:altLabel "RHPLC" ,
+                               "RP-HPLC" ,
+                               "gradient reverse HPLC" ,
+                               "gradient reverse high-performance liquid chromatography" ,
+                               "reverse phase  high performance liquid chromatography" ,
+                               "reversed phase high-performance liquid chromatography" ,
+                               "reversed-phase HPLC" ,
+                               "reversed-phase high pressure liquid chromatography" ,
+                               "reversed-phase high-pressure liquid chromatography" ;
+                 skos:definition "Liquid chromatography where the inlet pressure is relatively high and the mobile phase is significantly more polar than the stationary phase (which consists of very small particles), for example a microporous silica-based material with chemically bonded alkyl chains. [CHMO]" ;
+                 skos:prefLabel "reversed-phase high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001763
+af-p:AFP_0001763 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000748 ;
+                 skos:altLabel "capillary HPLC" ,
+                               "capillary high performance liquid chromatography" ,
+                               "capillary high pressure liquid chromatography" ,
+                               "capillary high-pressure liquid chromatography" ,
+                               "capillary-HPLC" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid, the stationary phase consists of very small particles held in a tube of diameter less than a millimeter, and the inlet pressure is relatively high. [CHMO]" ;
+                 skos:prefLabel "capillary high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002033
+af-p:AFP_0002033 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000748 ;
+                 skos:altLabel "NP-HPLC" ,
+                               "normal phase HPLC" ,
+                               "normal-phase HPLC" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid,  the stationary phase consists of very small particles, and the inlet pressure is relatively high. In normal-phase HPLC, the stationary phase is more polar than the mobile phase. [CHMO]" ;
+                 skos:prefLabel "normal-phase high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002059
+af-p:AFP_0002059 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000748 ;
+                 skos:altLabel "RRLC" ,
+                               "RSLC" ,
+                               "UFLC" ,
+                               "UHPLC" ,
+                               "UPLC" ,
+                               "rapid resolution liquid chromatography" ,
+                               "rapid separation liquid chromatography" ,
+                               "ultra fast liquid chromatography" ,
+                               "ultra performance liquid chromatography" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid, the stationary phase consists of very small (< 2 µm) particles and the inlet pressure is relatively high. [CHMO]" ;
+                 skos:prefLabel "ultra high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002142
+af-p:AFP_0002142 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000225 ;
+                 skos:altLabel "HIC" ;
+                 skos:definition "Separation using HIC is based on the reversible interaction between a protein and the hydrophobic ligand bound to the chromatography matrix. [Allotrope]" ;
+                 skos:prefLabel "hydrophobic interaction chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002243
+af-p:AFP_0002243 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000748 ;
+                 skos:altLabel "CSP HPLC" ,
+                               "CSP-HPLC" ,
+                               "HPLC on a chiral stationary phase" ,
+                               "chiral HPLC" ,
+                               "chiral stationary phase high-pressure liquid chromatography" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid, the stationary phase consists of very small chiral particles and the inlet pressure is relatively high. [CHMO]" ;
+                 skos:prefLabel "chiral stationary phase high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002305
+af-p:AFP_0002305 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000225 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "cap-LC" ,
+                               "capLC" ;
+                 skos:definition "Chromatography which takes place in a separation capillary and where the mobile phase is a liquid. [CHMO]" ;
+                 skos:prefLabel "capillary liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002328
+af-p:AFP_0002328 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000225 ,
+                                 af-p:AFP_0001183 ;
+                 skos:definition "Liquid chromatography where the stationary phase is more polar than the mobile phase. This is the default for liquid chromatography. [CHMO]" ;
+                 skos:prefLabel "normal-phase liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002423
+af-p:AFP_0002423 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000748 ;
+                 skos:altLabel "IE-HPLC" ,
+                               "IEX-HPLC" ,
+                               "ion exchange HPLC" ,
+                               "ion exchange high performance liquid chromatography" ,
+                               "ion-exchange HPLC" ,
+                               "ion-exchange high-pressure liquid chromatography" ;
+                 skos:definition "Column chromatography where the mobile phase is a liquid, the stationary phase consists of very small particles, the inlet pressure is relatively high and the separation is caused by differences in ion-exchange affinity. [CHMO]" ;
+                 skos:prefLabel "ion-exchange high-performance liquid chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003725
+af-p:AFP_0003725 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003726 ;
+                 skos:altLabel "HPLC system process" ;
+                 skos:definition "A high performance liquid chromatography system process is a process that is executed on a high performance liquid chromatography system. [Allotrope]" ;
+                 skos:prefLabel "high performance liquid chromatography system process" ;
+                 skos:scopeNote "The process is the technical implementation process on the HPLC system that implements the separation by HPLC. [Allotrope]" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001528
+af-r:AFR_0001528 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001556 ;
+                 skos:definition "A high-performance liquid chromatography system method is a device method that specifies how an HPLC system should be operated. [Allotrope]" ;
+                 skos:prefLabel "high-performance liquid chromatography system method" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002524
+af-r:AFR_0002524 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000160 ,
+                                 iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002525
+                                 ] ;
+                 skos:altLabel "LC aggregate document" ;
+                 skos:definition "A liquid chromatography aggregate document is a document that aggregates LC documents. [Allotrope]" ;
+                 skos:prefLabel "liquid chromatography aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002525
+af-r:AFR_0002525 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0000225
+                                 ] ;
+                 skos:altLabel "LC document" ;
+                 skos:definition "A liquid chromatography document is a document that encompasses the information associated with a liquid chromatography run. [Allotrope]" ;
+                 skos:prefLabel "liquid chromatography document" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000339
+af-rl:AFRL_0000339 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000011 ;
+                   af-x:AFX_0002798 "true"^^xsd:boolean ;
+                   skos:definition "The liquid mobile phase is a role of a liquid material that percolates through the stationary bed in chromatography. [Allotrope, CHMO]" ;
+                   skos:prefLabel "liquid mobile phase" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000918
+<http://purl.obolibrary.org/obo/PATO_0000918> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

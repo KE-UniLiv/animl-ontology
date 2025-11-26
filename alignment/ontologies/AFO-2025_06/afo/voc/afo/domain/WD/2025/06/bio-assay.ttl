@@ -1,3 +1,347 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dd0600b73e76b8758480435f1464d64aacc79e5f9dc0c600cb3e4e40440b6262
-size 21672
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/bio-assay#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/bio-assay#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/bio-assay> rdf:type owl:Ontology ;
+                                                                           owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/bio-assay> ;
+                                                                           owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                           dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                           dct:modified "2025-05-05T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                      <http://purl.allotrope.org/voc/copyright> ;
+                                                                           dct:title "AFO Bio-Assay Domain Ontology (WD/2025/06)" ;
+                                                                           owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2018/11/bio-assay> ;
+                                                                           owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000031
+af-e:AFE_0000031 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:altLabel "sodium sensor" ;
+                 skos:definition "A sodium ion sensor is a metabolite sensor that observes the concentration of a sodium ions within a solution. [Allotrope]" ;
+                 skos:prefLabel "sodium ion sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000230
+af-e:AFE_0000230 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:definition "A glutamate sensor is a metabolite sensor that observes the concentration of a glutamate within a solution. [Allotrope]" ;
+                 skos:prefLabel "glutamate sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000244
+af-e:AFE_0000244 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:altLabel "calcium sensor" ;
+                 skos:definition "A calcium ion sensor is a metabolite sensor that observes the concentration of a calcium ions within a solution. [Allotrope]" ;
+                 skos:prefLabel "calcium ion sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000264
+af-e:AFE_0000264 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:definition "A glutamine sensor is a metabolite sensor that observes the concentration of a glutamine within a solution. [Allotrope]" ;
+                 skos:prefLabel "glutamine sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000306
+af-e:AFE_0000306 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:definition "A lactate sensor is a metabolite sensor that observes the concentration of a lactate within a solution. [Allotrope]" ;
+                 skos:prefLabel "lactate sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000362
+af-e:AFE_0000362 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002145 ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A metabolite sensor is a sensor that observes the concentration of a dissolved metabolite within a solution. [Allotrope]" ;
+                 skos:example "glucose sensor, lactate sensor, glutamine sensor, glutamate sensor, sodium ion sensor, potassium ion sensor, ammonia sensor, calcium sensor" ;
+                 skos:prefLabel "metabolite sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000477
+af-e:AFE_0000477 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:altLabel "ammonia sensor" ;
+                 skos:definition "An ammonium sensor is a metabolite sensor that observes the concentration of a ammonium ions within a solution. [Allotrope]" ;
+                 skos:prefLabel "ammonium sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000530
+af-e:AFE_0000530 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "metabolite analyser"@en-gb ,
+                               "metabolite analyzer" ,
+                               "metabolite module" ,
+                               "nut met" ,
+                               "nut met module" ,
+                               "nutrient metabolite module" ,
+                               "nutrient module" ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ,
+                                 "2016-02-25 add en-gb translation [OSTHUS]" ;
+                 skos:definition "The metabolite analyzer is used for the analysis of metabolites. [Allotrope]" ;
+                 skos:prefLabel "nutrient metabolite analyser"@en-gb ,
+                                "nutrient metabolite analyzer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000569
+af-e:AFE_0000569 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:definition "A glucose sensor is a metabolite sensor that observes the concentration of a glucose within a solution. [Allotrope]" ;
+                 skos:prefLabel "glucose sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000807
+af-e:AFE_0000807 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000362 ;
+                 skos:altLabel "potassium sensor" ;
+                 skos:definition "A potassium ion sensor is a metabolite sensor that observes the concentration of a potassium ions within a solution. [Allotrope]" ;
+                 skos:prefLabel "potassium ion sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001637
+af-e:AFE_0001637 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "fortebio" ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ,
+                                 "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A bio-layer interferometer is a device that allows for measurements using bio-layer interferometry (BLI) which is a label-free technology for measuring biomolecular interactions within the interactome. [Wikipedia]" ;
+                 skos:prefLabel "bio-layer interferometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001638
+af-e:AFE_0001638 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "BLI biosensor tip" ,
+                               "biolayer interferometry biosensor tip" ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ,
+                                 "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A biosensor tip is coated with a layer of immobilized protein. [Wikipedia]" ;
+                 skos:prefLabel "biosensor tip" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001047
+af-p:AFP_0001047 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001251
+af-p:AFP_0001251 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-p:AFP_0002680
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002750 ;
+                                                              owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000099
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty ro:_0000087 ;
+                                                                                                          owl:someValuesFrom af-rl:AFRL_0000127
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ]
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002750 ;
+                                   owl:someValuesFrom af-m:AFM_0000099
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A cell culture analysis is the process of analyzing properties of a cell culture. [Allotrope]" ;
+                 skos:prefLabel "cell culture analysis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003631
+af-p:AFP_0003631 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003491 ;
+                 skos:changeNote "[2018-04-18] added to bioassay domain [OSTHUS]" ;
+                 skos:definition "A bioassay is an analytical method to determine concentration or potency of a substance by its effect on living cells or tissues. [Wikipedia]" ;
+                 skos:prefLabel "bioassay" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000492
+af-r:AFR_0000492 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000207 ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A cell culture analysis result is the result of a measurement for cell culture analysis. [Allotrope]" ;
+                 skos:prefLabel "cell culture analysis result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000654
+af-r:AFR_0000654 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000207 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "The result of a label free quantitation measurement. [Allotrope]" ;
+                 skos:prefLabel "label-free quantitation measurement result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001143
+af-r:AFR_0001143 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002730 ;
+                                   owl:someValuesFrom af-rl:AFRL_0000299
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty bfo:_0000050 ;
+                                   owl:someValuesFrom af-r:AFR_0001144
+                                 ] ;
+                 skos:changeNote "2018-04-18 Added to bioassay domain [OSTHUS]" ;
+                 skos:definition "A bioassay result data is a facet of a document that is about some result of a bioassay. [Allotrope]" ;
+                 skos:prefLabel "bioassay result data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001144
+af-r:AFR_0001144 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-r:AFR_0000207
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002734 ;
+                                                              owl:someValuesFrom af-p:AFP_0003631
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:changeNote "2018-04-18 Added to bioassay domain [OSTHUS]" ;
+                 skos:definition "A bioassay result is an assay result that results from a bioassay. [Allotrope]" ;
+                 skos:prefLabel "bioassay result" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2018 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "(c) 2018 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

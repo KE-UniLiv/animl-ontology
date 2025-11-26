@@ -1,3 +1,352 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b850cd1a9832b5a427cf78448968753d4f677884d5a7f511da71e766457e2aaa
-size 23434
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir-microscopy#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir-microscopy#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir-microscopy> rdf:type owl:Ontology ;
+                                                                               owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir-microscopy> ;
+                                                                               owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                           <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir> ;
+                                                                               dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                               dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                               dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                               dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                          <http://purl.allotrope.org/voc/copyright> ;
+                                                                               dct:title "AFO Infrared Microscopy Domain Ontology (WD/2025/06)" ;
+                                                                               owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/ir-microscopy> ;
+                                                                               owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000492
+af-e:AFE_0000492 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000825 ,
+                                 af-e:AFE_0001745 ;
+                 skos:altLabel "IR microscope" ;
+                 skos:definition "A piece of apparatus, consisting of an optical microscope coupled to a reflecting magnifying mirror system, which is used to collect spatially resolved infrared spectra of the surface of a specimen. [CHMO]" ;
+                 skos:prefLabel "infrared microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000093
+af-p:AFP_0000093 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000782 ;
+                 skos:altLabel "PTMS" ,
+                               "photothermal IR micro-spectroscopy" ,
+                               "photothermal IR microscopy" ,
+                               "photothermal IR microspectroscopy" ,
+                               "photothermal infrared microspectroscopy" ;
+                 skos:definition "The measurement of the photothermal response (temperature fluctuations) of a specimen exposed to the beam of a Fourier transform infrared spectrometer, using an atomic force microscope tip as the thermal probe. [CHMO]" ;
+                 skos:prefLabel "photothermal infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000121
+af-p:AFP_0000121 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000782 ;
+                 skos:altLabel " confocal infra-red chemical imaging spectroscopy" ,
+                               "confocal IR spectromicroscopy" ,
+                               "confocal IR-MSP" ,
+                               "confocal infra-red chemical imaging spectrometry" ,
+                               "confocal infra-red microscopy" ,
+                               "confocal infrared chemical imaging spectrometry" ,
+                               "confocal infrared chemical imaging spectroscopy" ,
+                               "confocal infrared mapping" ,
+                               "confocal infrared microspectrophotometry" ,
+                               "confocal infrared microspectroscopy" ,
+                               "confocal infrared spectromicroscopy" ;
+                 skos:definition "The collection of spatially resolved infrared spectra of a sample during optical microscopy. An aperture is used to discriminate between infrared signal coming from the laser spot and that coming from the out-of-focus region of the sample. [CHMO]" ;
+                 skos:prefLabel "confocal infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000336
+af-p:AFP_0000336 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000504 ;
+                 skos:altLabel "S-FTIR imaging" ,
+                               "S-FTIR mapping" ,
+                               "S-FTIR microscopy" ,
+                               "S-FTIR microspectroscopy" ,
+                               "SFT-IR imaging" ,
+                               "SFT-IR microscopy" ,
+                               "SFTIR-MSP" ,
+                               "synchrotron FTIR microspectroscopy" ,
+                               "synchrotron Fourier transform infra-red microscopy" ,
+                               "synchrotron Fourier transform infra-red microspectrometry" ,
+                               "synchrotron Fourier transform infra-red microspectroscopy" ,
+                               "synchrotron Fourier transform infrared microscopy" ,
+                               "synchrotron Fourier transform infrared microspectrometry" ,
+                               "synchrotron Fourier transform infrared microspectroscopy" ,
+                               "synchrotron-based FTIR microscopy" ,
+                               "synchrotron-based Fourier transform infrared microscopy" ;
+                 skos:definition "The collection of spatially resolved infrared spectra of a sample during optical microscopy. The infrared spectra are obtained by single pulse of infrared radiation, produced in a synchrotron, and are subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "synchrotron Fourier transform infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000504
+af-p:AFP_0000504 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000782 ;
+                 skos:altLabel "FT-IR imaging" ,
+                               "FT-IR microscopy" ,
+                               "FTIR imaging" ,
+                               "FTIR microscopy" ,
+                               "FTIR microspectroscopy" ,
+                               "FTIR spectromicroscopy" ,
+                               "FTIR-MSP" ,
+                               "Fourier transform infra-red microspectrometry" ,
+                               "Fourier transform infra-red microspectroscopy" ,
+                               "Fourier transform infrared microspectrometry" ,
+                               "Fourier transform infrared microspectroscopy" ,
+                               "Fourier transform infrared spectromicroscopy" ,
+                               "Fourier-transform infrared microscopy" ;
+                 skos:definition "The collection of spatially resolved infrared spectra of a sample during optical microscopy. The infrared spectra are obtained by single pulse of infrared radiation, and are subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "Fourier transform infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000594
+af-p:AFP_0000594 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000782 ;
+                 skos:altLabel "NIR chemical imaging spectrometry" ,
+                               "NIR chemical imaging spectroscopy" ,
+                               "NOIM" ,
+                               "near infra red chemical imaging spectrometry" ,
+                               "near infra red chemical imaging spectroscopy" ,
+                               "near infra-red chemical imaging spectrometry" ,
+                               "near infra-red chemical imaging spectroscopy" ,
+                               "near infra-red microscopy" ,
+                               "near infrared microscopy spectroscopy" ,
+                               "near infrared optical microscopy" ,
+                               "near-IR spectromicroscopy" ,
+                               "near-infra-red microscopy" ,
+                               "near-infrared microscopy" ,
+                               "near-infrared spectromicroscopy" ;
+                 skos:definition "The collection of spatially resolved near-infrared spectra (0.8-2 µm) of a sample during microscopy. [CHMO]" ;
+                 skos:prefLabel "near-infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000782
+af-p:AFP_0000782 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000403 ;
+                 skos:altLabel " infra-red chemical imaging spectroscopy" ,
+                               "IR microscopy" ,
+                               "IR spectromicroscopy" ,
+                               "IR-MSP" ,
+                               "IRI" ,
+                               "infra-red chemical imaging spectrometry" ,
+                               "infra-red microscopy" ,
+                               "infrared chemical imaging spectrometry" ,
+                               "infrared chemical imaging spectroscopy" ,
+                               "infrared mapping" ,
+                               "infrared microspectrophotometry" ,
+                               "infrared microspectroscopy" ,
+                               "infrared spectromicroscopy" ;
+                 skos:definition "The collection of spatially resolved infrared spectra of a sample during optical microscopy. [CHMO]" ;
+                 skos:prefLabel "infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002433
+af-p:AFP_0002433 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000782 ;
+                 skos:altLabel "mid infra red chemical imaging spectrometry" ,
+                               "mid infra red chemical imaging spectroscopy" ,
+                               "mid infra-red chemical imaging spectrometry" ,
+                               "mid infra-red chemical imaging spectroscopy" ,
+                               "mid infra-red microscopy" ,
+                               "mid infrared microscopy spectroscopy" ,
+                               "mid infrared optical microscopy" ,
+                               "mid-IR microscopy" ,
+                               "mid-IR spectromicroscopy" ,
+                               "mid-infra-red microscopy" ,
+                               "mid-infrared spectromicroscopy" ;
+                 skos:definition "The collection of spatially resolved mid-infrared spectra (3-8 µm) of a sample during microscopy. [CHMO]" ;
+                 skos:prefLabel "mid-infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002441
+af-p:AFP_0002441 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000782 ;
+                 skos:altLabel "S-IR imaging" ,
+                               "S-IR microscopy" ,
+                               "S-IR spectromicroscopy" ,
+                               "SIR imaging" ,
+                               "SIR microscopy" ,
+                               "SIR microspectroscopy" ,
+                               "SIR-MSP" ,
+                               "SIRM" ,
+                               "synchrotron infra-red microspectrometry" ,
+                               "synchrotron infra-red microspectroscopy" ,
+                               "synchrotron infrared microspectrometry" ,
+                               "synchrotron infrared microspectroscopy" ,
+                               "synchrotron infrared spectromicroscopy" ;
+                 skos:definition "The collection of spatially resolved infrared spectra of a sample during optical microscopy. The infrared spectra are obtained by single pulse of infrared radiation, produced in a synchrotron, and are subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "synchrotron infrared microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000290
+af-r:AFR_0000290 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000449 ;
+                 skos:altLabel "AFMIR chemical map" ,
+                               "AFMIR chemical mapping images" ,
+                               "AFMIR image" ,
+                               "atomic force microscopy infrared chemical map" ,
+                               "atomic force microscopy infrared images" ;
+                 skos:definition "A data set derived from AFMIR consisting of a three-dimensional image where two axes describe the x and y spatial dimensions and the third dimension represents the infrared wavelength. [CHMO]" ;
+                 skos:prefLabel "atomic force microscopy infrared image" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000449
+af-r:AFR_0000449 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000090 ;
+                 skos:altLabel "IR chemical map" ,
+                               "IR map" ,
+                               "IR microspectroscopic image" ,
+                               "IR spectral map" ,
+                               "infrared chemical map" ,
+                               "infrared map" ,
+                               "infrared microspectroscopic image" ,
+                               "infrared spectral map" ;
+                 skos:changeNote "2024-09-12 Add missing [CHMO] attribution." ;
+                 skos:definition "A data set derived from infrared microscopy consisting of a three-dimensional image where two axes describe the x and y spatial dimensions and the third dimension represents the infrared wavelength. The image is obtained by stacking one image per infrared wavelength sequentially. [CHMO]" ;
+                 skos:prefLabel "infrared map" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000498
+af-r:AFR_0000498 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000449 ;
+                 skos:altLabel "FT-IR map" ,
+                               "FT-IR microspectroscopic image" ,
+                               "FT-IR spectral map" ,
+                               "FTIR map" ,
+                               "FTIR microspectroscopic image" ,
+                               "FTIR spectral map" ;
+                 skos:definition "A data set derived from FTIR microscopy consisting of a three-dimensional image where two axes describe the x and y spatial dimensions and the third dimension represents the infrared wavelength. The image is obtained by stacking one image per infrared wavelength sequentially. [CHMO]" ;
+                 skos:prefLabel "Fourier transform infrared map" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2020 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2020 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

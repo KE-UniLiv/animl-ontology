@@ -1,3 +1,3039 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:00ab0b9d9143aea79d5ebaafe7ca97a26c5b31c6f264917d2835d63d15da6d52
-size 161653
+@prefix : <http://purl.allotrope.org/voc/afo/REC/2025/06/relation#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/REC/2025/06/relation#> .
+
+<http://purl.allotrope.org/voc/afo/REC/2025/06/relation> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <http://purl.allotrope.org/voc/afo/REC/2025/06/relation> ;
+                                                                    owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/aft> ,
+                                                                                <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material> ,
+                                                                                <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system> ;
+                                                                    dct:contributor <http://www.allotrope.org> ;
+                                                                    dct:description "Allotrope Ontology of standard relations. It is for the most part an adoption of the relation ontology (RO)." ;
+                                                                    dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                    dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:publisher <http://www.allotrope.org> ;
+                                                                    dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                               <http://purl.allotrope.org/voc/copyright> ;
+                                                                    dct:rightsHolder <http://www.allotrope.org> ;
+                                                                    dct:title "AFO Relation Ontology (REC/2025/06)" ;
+                                                                    owl:priorVersion <http://purl.allotrope.org/voc/afo/REC/2025/03/relation> ;
+                                                                    owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001144
+af-x:AFX_0001144 rdf:type owl:AnnotationProperty ;
+                 skos:altLabel "has predicate" ;
+                 skos:definition "A reference to an object or datatype property. [Allotrope]" ;
+                 skos:prefLabel "has property" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001166
+af-x:AFX_0001166 rdf:type owl:AnnotationProperty ;
+                 skos:definition "A relation to a class of individuals. [Allotrope]" ;
+                 skos:prefLabel "has class" ;
+                 rdfs:range rdfs:Class .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002841
+af-x:AFX_0002841 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Has coordination annotates a class with some defining differentia. [Allotrope]" ;
+                 skos:prefLabel "has coordination" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000072
+af-x:AFX_0000072 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002686 ;
+                 af-x:AFX_0002811 af-r:AFR_0000951 ;
+                 skos:altLabel "duration" ,
+                               "time" ;
+                 skos:definition "Time is a measure in which events can be ordered from the past through the present into the future, and also the measure of durations of events and the intervals between them. [Wikipedia]" ;
+                 skos:prefLabel "has duration" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000180
+af-x:AFX_0000180 rdf:type owl:ObjectProperty ;
+                 skos:altLabel "step size" ;
+                 skos:definition "The difference between two discrete points next to each other in a range of discrete values. [Allotrope]" ;
+                 skos:example "A device property can be set between a minimum and maximum value but only in steps of the increment value." ,
+                              "Step size of sweeping over 2Theta, unit °" ;
+                 skos:prefLabel "increment" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000197
+af-x:AFX_0000197 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000057 ;
+                 owl:inverseOf af-x:AFX_0002864 ;
+                 skos:altLabel "applies" ,
+                               "uses" ;
+                 skos:changeNote "2020-11-12 Added alternative label and changed definition. [Allotrope]" ;
+                 skos:definition "A planned process selects a participant if the participant is chosen to influence the process towards some objective but is itself not essentially changed by a process. [Allotrope]" ;
+                 skos:example "For the process of titration a pH meter is used as well as a sample and a standard solution. [Allotrope]" ;
+                 skos:prefLabel "selects" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000234
+af-x:AFX_0000234 rdf:type owl:ObjectProperty ;
+                 skos:definition "This relation indicates that the subject is a more concrete instance of the object. [Allotrope]" ;
+                 skos:prefLabel "refines" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000314
+af-x:AFX_0000314 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 skos:definition "The lowest value of a range or a set of values. [Allotrope]" ;
+                 skos:prefLabel "minimum" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000331
+af-x:AFX_0000331 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 skos:definition "Highest value of a range. [Allotrope]" ;
+                 skos:prefLabel "maximum" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000353
+af-x:AFX_0000353 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000056 ;
+                 owl:inverseOf af-x:AFX_0000395 ;
+                 skos:altLabel "is output of" ;
+                 skos:definition "Relates an output entity such as a material or information object with a process that exists at the end of the process. [Allotrope]" ;
+                 skos:prefLabel "output of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000354
+af-x:AFX_0000354 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000056 ;
+                 owl:inverseOf af-x:AFX_0000399 ;
+                 skos:altLabel "is input of" ;
+                 skos:definition "Relates an input entity such a material entity or information object with a process that exists at the start of the process. [Allotrope]" ;
+                 skos:prefLabel "input of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000355
+af-x:AFX_0000355 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 owl:inverseOf af-x:AFX_0000408 ;
+                 rdfs:domain af-c:AFC_0000090 ;
+                 skos:definition "A condition that restricts an entity. [Allotrope]" ;
+                 skos:prefLabel "is condition for" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000365
+af-x:AFX_0000365 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002793 ;
+                 owl:inverseOf af-x:AFX_0002845 ;
+                 rdfs:domain af-m:AFM_0001038 ;
+                 rdfs:range chmo:_0000993 ;
+                 af-x:AFX_0002811 af-rl:AFRL_0000249 ;
+                 skos:altLabel "component" ,
+                               "has component" ,
+                               "ingredient" ;
+                 skos:definition "An ingredient is a material that enters into a compound or is part of any combination or mixture. [Allotrope]" ;
+                 skos:prefLabel "has ingredient" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000386
+af-x:AFX_0000386 rdf:type owl:ObjectProperty ;
+                 skos:altLabel "shape" ;
+                 skos:definition "Inverse of SHACL targets e.g. sh:targetClass or sh:targetNode. [Allotrope]" ;
+                 skos:prefLabel "has shape" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000388
+af-x:AFX_0000388 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 skos:altLabel "in context" ,
+                               "in scope" ,
+                               "in situation" ,
+                               "scope" ;
+                 skos:definition "A scope defines a situation or context in which a dependent entity such as a condition or contextual role occurs or is valid. [Allotrope]" ;
+                 skos:prefLabel "has scope" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000395
+af-x:AFX_0000395 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000057 ;
+                 owl:propertyChainAxiom ( ro:_0002230
+                                          af-x:AFX_0000395
+                                        ) ;
+                 skos:changeNote "2020-06-08 Removed super property functionally related to. [Allotrope]" ;
+                 skos:definition "Relates a process with a continuant that participates in the process and exists at the end of the process. [Allotrope]" ;
+                 skos:prefLabel "has output" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000399
+af-x:AFX_0000399 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000057 ;
+                 owl:propertyChainAxiom ( ro:_0002224
+                                          af-x:AFX_0000399
+                                        ) ;
+                 skos:changeNote "2020-06-08 Removed super property functionally related to. [Allotrope]" ;
+                 skos:definition "Relates a process with a continuant that participates in the process and exists at the start of the process. [Allotrope]" ;
+                 skos:prefLabel "has input" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000408
+af-x:AFX_0000408 rdf:type owl:ObjectProperty ;
+                 rdfs:range af-c:AFC_0000090 ;
+                 skos:definition "An entity has a condition that restricts the entity in some way. [Allotrope]" ;
+                 skos:prefLabel "has condition" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000542
+af-x:AFX_0000542 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000399 ;
+                 owl:inverseOf af-x:AFX_0000553 ;
+                 rdfs:range iao:_0000030 ;
+                 skos:definition "Relates a process with an information object that participates in a process and exists the start of the process. [Allotrope]" ;
+                 skos:prefLabel "has data input" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000544
+af-x:AFX_0000544 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000395 ;
+                 owl:inverseOf af-x:AFX_0002734 ;
+                 rdfs:range iao:_0000030 ;
+                 skos:definition "Relates a process with an information object that participates in the process and exists the end of the process. [Allotrope]" ;
+                 skos:prefLabel "has data output" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000546
+af-x:AFX_0000546 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000395 ;
+                 owl:inverseOf af-x:AFX_0002735 ;
+                 rdfs:range bfo:_0000040 ;
+                 skos:definition "The material that is output of the process. [Allotrope]" ;
+                 skos:prefLabel "has material output" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000551
+af-x:AFX_0000551 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0002351 ;
+                 owl:inverseOf af-x:AFX_0002720 ;
+                 rdf:type owl:AsymmetricProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:domain af-c:AFC_0000166 ;
+                 rdfs:range af-c:AFC_0000167 ;
+                 skos:altLabel "item" ,
+                               "member" ;
+                 skos:definition "This property links a collection to a member item. [Allotrope]" ;
+                 skos:prefLabel "has item" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000553
+af-x:AFX_0000553 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000354 ;
+                 rdfs:domain iao:_0000030 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:altLabel "is data input of" ;
+                 skos:definition "Inverse of 'has data input'. [Allotrope]" ;
+                 skos:prefLabel "data input of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000554
+af-x:AFX_0000554 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000354 ;
+                 owl:inverseOf af-x:AFX_0000696 ;
+                 rdfs:domain af-m:AFM_0000275 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:altLabel "is material input of" ;
+                 skos:definition "Inverse of 'has material input'. [Allotrope]" ;
+                 skos:prefLabel "material input of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000557
+af-x:AFX_0000557 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000331 ;
+                 skos:definition "The highest value of a range excluding the boundary value. [Allotrope]" ;
+                 skos:prefLabel "maximum exclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000558
+af-x:AFX_0000558 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000331 ;
+                 skos:definition "The highest value of a range including the boundary value. [Allotrope]" ;
+                 skos:prefLabel "maximum inclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000560
+af-x:AFX_0000560 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000314 ;
+                 skos:definition "The lowest value of a range or set of values excluding the boundary value. [Allotrope]" ;
+                 skos:prefLabel "minimum exclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000561
+af-x:AFX_0000561 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000314 ;
+                 skos:definition "The lowest value of a range or set of values including the boundary value. [Allotrope]" ;
+                 skos:prefLabel "minimum inclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000696
+af-x:AFX_0000696 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000399 ;
+                 rdfs:range af-m:AFM_0000275 ;
+                 skos:definition "Refers to the material entity that is an input of a process. [Allotrope]" ;
+                 skos:prefLabel "has material input" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000834
+af-x:AFX_0000834 rdf:type owl:ObjectProperty ;
+                 owl:inverseOf af-x:AFX_0002855 ;
+                 rdfs:domain bfo:_0000015 ;
+                 rdfs:range af-r:AFR_0000900 ;
+                 skos:altLabel "has protocol" ,
+                               "log" ,
+                               "protocol" ;
+                 skos:definition "The relation between a process and its log. A log is a steadily updated information object containing data of events in time such as process executions. [Allotrope]" ;
+                 skos:example "log files, auto export file of cell counter devices" ;
+                 skos:prefLabel "has log" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000939
+af-x:AFX_0000939 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002846 ;
+                 owl:inverseOf af-x:AFX_0000972 ;
+                 rdf:type owl:TransitiveProperty ;
+                 rdfs:domain bfo:_0000040 ;
+                 rdfs:range bfo:_0000040 ;
+                 skos:altLabel "is component of" ;
+                 skos:definition "A physical object that is a component that is a physical part of another physical object that is a system. [Allotrope]" ;
+                 skos:editorialNote "part of relation in the system perspective" ;
+                 skos:prefLabel "component of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000940
+af-x:AFX_0000940 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf bfo:_0000051 ;
+                 skos:altLabel "consists of" ,
+                               "has material" ;
+                 skos:definition "The property specifies of which kind of general portion of material something is built of. [Allotrope]" ;
+                 skos:example "a weighing pan that is composed of platinum [Allotrope]" ;
+                 skos:prefLabel "composed of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000972
+af-x:AFX_0000972 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002793 ;
+                 rdf:type owl:TransitiveProperty ;
+                 rdfs:domain ro:_0002577 ;
+                 rdfs:range bfo:_0000040 ;
+                 skos:altLabel "has physical part" ;
+                 skos:definition "A physical object that forms a system that has as part a physical entity that is one of its components. [Allotrope]" ;
+                 skos:editorialNote "has part relation in the system perspective" ;
+                 skos:prefLabel "has component" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000974
+af-x:AFX_0000974 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000972 ;
+                 rdf:type owl:TransitiveProperty ;
+                 rdfs:range af-e:AFE_0000847 ;
+                 skos:definition "Relation between a system and a component of it that has the role of a port in the system though which material, energy or information flows in or out of the system. [Allotrope]" ;
+                 skos:prefLabel "has port" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000976
+af-x:AFX_0000976 rdf:type owl:ObjectProperty ;
+                 owl:inverseOf af-x:AFX_0002856 ;
+                 rdfs:range af-r:AFR_0001103 ;
+                 skos:altLabel "capability" ;
+                 skos:definition "The relation of an entity to a description of it which refers to the qualification of an entity to perform a certain function. [Allotrope]" ;
+                 skos:example "a part of a data sheet" ;
+                 skos:prefLabel "has capability" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001048
+af-x:AFX_0001048 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0001015 ;
+                 owl:inverseOf af-x:AFX_0001049 ;
+                 rdfs:domain af-e:AFE_0000407 ;
+                 rdfs:range bfo:_0000040 ;
+                 skos:definition "The relation between a container and its physical content. A material entity a contains a material entity b if b is located in some cavity of a. [Allotrope]" ;
+                 skos:prefLabel "contains" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001049
+af-x:AFX_0001049 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0001025 ;
+                 rdfs:domain bfo:_0000040 ;
+                 rdfs:range af-e:AFE_0000407 ;
+                 skos:definition "Inverse of contains. [Allotrope]" ;
+                 skos:prefLabel "contained in" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001154
+af-x:AFX_0001154 rdf:type owl:ObjectProperty ;
+                 owl:inverseOf af-x:AFX_0002806 ;
+                 rdfs:range af-r:AFR_0000916 ;
+                 skos:altLabel "classification" ,
+                               "classified by" ;
+                 skos:definition "A classification is a kind of categorization in order to differentiate between different classes of objects. [Allotrope]" ;
+                 skos:prefLabel "has classification" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001178
+af-x:AFX_0001178 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0002170 ;
+                 skos:altLabel "attached to source" ,
+                               "has source" ;
+                 skos:definition "A system that is attached to another system by an ingoing port. [Allotrope]" ;
+                 skos:prefLabel "connected to source" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001179
+af-x:AFX_0001179 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0002170 ;
+                 skos:altLabel "attached to destination" ,
+                               "has destination" ;
+                 skos:definition "A system that is attached to another system by an outgoing port. [Allotrope]" ;
+                 skos:prefLabel "connected to destination" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001550
+af-x:AFX_0001550 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 skos:altLabel "reference" ,
+                               "reference object" ;
+                 skos:definition "Reference object relates an entity A to some entity B that is taken as a reference for A in a certain context. [Allotrope]" ;
+                 skos:example "reference for comparison" ,
+                              "reference object" ,
+                              "reference process" ;
+                 skos:prefLabel "has reference" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002674
+af-x:AFX_0002674 rdf:type owl:ObjectProperty ;
+                 rdfs:domain af-r:AFR_0000991 ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( bfo:_0000015
+                                            bfo:_0000035
+                                          )
+                            ] ;
+                 skos:definition "The relation between a proposition about of a portion of reality and a process asserting that the process is described truthfully by the description. [Allotrope]" ;
+                 skos:prefLabel "satisfies" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002677
+af-x:AFX_0002677 rdf:type owl:ObjectProperty ;
+                 rdfs:domain bfo:_0000034 ;
+                 rdfs:range bfo:_0000034 ;
+                 skos:definition "The relation between a function with an objective and another function that when realized acts as a proxy to achieve the objective of the first. [Allotrope]" ;
+                 skos:prefLabel "by way of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002682
+af-x:AFX_0002682 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 owl:inverseOf af-x:AFX_0002685 ;
+                 rdfs:domain af-p:AFP_0003281 ;
+                 rdfs:range bfo:_0000019 ;
+                 skos:definition "A relation between a process profile and a changing determinable quality of some participant of the process of the profile. [Allotrope]" ;
+                 skos:example "An profile of the absorption in a chromatography is quality process profile of the quality absorption of some participating material. [Allotrope]" ;
+                 skos:note "The relation is usually used with punning of the quality." ;
+                 skos:prefLabel "tracks quality" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002684
+af-x:AFX_0002684 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002802 ;
+                 owl:inverseOf af-x:AFX_0002816 ;
+                 skos:altLabel "has quantity value" ;
+                 skos:definition "Relation of something that is quantified by some quantity value which expresses it relative to some other thing. [Allotrope]" ;
+                 skos:example "The duration of a process expressed as 60 sec expresses it in quantitative relation to the duration of some second defining process specified in the SI systems of units." ;
+                 skos:prefLabel "quantified by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002685
+af-x:AFX_0002685 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain bfo:_0000019 ;
+                 rdfs:range af-p:AFP_0003281 ;
+                 skos:definition "The relation between a quality and a process profile in which the quality is changing. [Allotrope]" ;
+                 skos:prefLabel "quality tracked by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002686
+af-x:AFX_0002686 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002718 ;
+                 rdfs:domain bfo:_0000015 ;
+                 skos:definition "Relation of some process that is quantified by some quantity value which expresses its duration relative to other process or a temporal aggregation function on the quantification of a quality of some participant over this duration. [Allotrope]" ;
+                 skos:example "The process of injection has a material flow profile of the injected material that is quantified by the volume of 1 mL/sec." ;
+                 skos:prefLabel "process quantified by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002687
+af-x:AFX_0002687 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002686 ;
+                 rdfs:domain bfo:_0000144 ;
+                 skos:definition "The quantity value that is the result of averaging a quality of some participant of the process over the duration of the process or the quantification of the participant's quality at the temporal granularity of the duration of the process. [Allotrope]" ;
+                 skos:prefLabel "profile mean quantified by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002688
+af-x:AFX_0002688 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002686 ;
+                 rdfs:domain bfo:_0000144 ;
+                 skos:definition "The temporal maximum quantified by is the maximum of the quantification of some quality of a participant that occurred during the process. [Allotrope]" ;
+                 skos:prefLabel "profile maximum quantified by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002689
+af-x:AFX_0002689 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002686 ;
+                 rdfs:domain bfo:_0000144 ;
+                 skos:definition "The temporal minimum quantified by is the minimum of the quantification of some quality of a participant that occurred during the process. [Allotrope]" ;
+                 skos:prefLabel "profile minimum quantified by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002690
+af-x:AFX_0002690 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002684 ;
+                 rdfs:domain bfo:_0000019 ;
+                 skos:definition "Quantification of some determinate quality which expresses it relative to some other (known) determinate quality. [Allotrope]" ;
+                 skos:example "A portion of water has some determinate temperature quality that is quantified by the quantity value of 15° C." ;
+                 skos:prefLabel "quality quantified by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002696
+af-x:AFX_0002696 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002803 ;
+                 rdfs:range af-c:AFC_0000021 ;
+                 skos:definition "Relation to a data item that describes the boundaries of possible or existing qualities, process profiles or process durations that can be ordered. [Allotrope]" ;
+                 skos:prefLabel "has range" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002699
+af-x:AFX_0002699 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 owl:inverseOf af-x:AFX_0002802 ;
+                 rdfs:domain af-r:AFR_0000922 ;
+                 skos:altLabel "description of" ;
+                 skos:definition "Describes is a property of an entity which has the ability to indicate or denote certain characteristics in another entity. [Allotrope]" ;
+                 skos:prefLabel "describes" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002703
+af-x:AFX_0002703 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf bfo:_0000133 ;
+                 rdfs:domain af-p:AFP_0003281 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:definition "The relation of a process profile of some changing quality to a process. [Allotrope]" ;
+                 skos:example "A pressure profile in chromatography. [Allotrope]" ;
+                 skos:prefLabel "quality profile of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002704
+af-x:AFX_0002704 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 owl:inverseOf af-x:AFX_0002805 ;
+                 rdfs:domain af-r:AFR_0000957 ;
+                 skos:definition "Specifies is a relation between a specification and the object specified. [Allotrope]" ;
+                 skos:prefLabel "specifies" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002716
+af-x:AFX_0002716 rdf:type owl:ObjectProperty ;
+                 owl:inverseOf af-x:AFX_0002717 ;
+                 skos:altLabel "identified by" ,
+                               "identifier" ,
+                               "is identified by" ;
+                 skos:definition "The relation of an entity to an identifier that denotes it. [Allotrope]" ;
+                 skos:prefLabel "has identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002717
+af-x:AFX_0002717 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000219 ;
+                 rdfs:domain af-r:AFR_0000917 ;
+                 skos:definition "The relation of an identifier to the entity it denotes. [Allotrope]" ;
+                 skos:prefLabel "identifies" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002718
+af-x:AFX_0002718 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002684 ;
+                 rdfs:domain bfo:_0000003 ;
+                 skos:definition "Occurrent quantified by relates an occurrent entity with an information content entity that is a quantification of the occurrent (duration, rate). [Allotrope]" ;
+                 skos:prefLabel "occurrent quantified by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002720
+af-x:AFX_0002720 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0002350 ;
+                 rdf:type owl:AsymmetricProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:range af-c:AFC_0000166 ;
+                 skos:altLabel "in collection" ,
+                               "is item in" ,
+                               "member of" ;
+                 skos:changeNote "2017-11-16 Changed pref label [OSTHUS]" ,
+                                 "2018-07-23 Change hierarchy, subproperty of member of [Allotrope]" ;
+                 skos:definition "In collection relates an item to a collection entity. [Allotrope]" ;
+                 skos:prefLabel "item of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002722
+af-x:AFX_0002722 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0002502 ;
+                 owl:inverseOf af-x:AFX_0002723 ;
+                 rdf:type owl:TransitiveProperty ;
+                 skos:altLabel "influenced by" ;
+                 skos:definition "Inverse of quality influences. [Allotrope]" ;
+                 skos:prefLabel "quality influenced by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002723
+af-x:AFX_0002723 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0002609 ;
+                 rdf:type owl:TransitiveProperty ;
+                 rdfs:domain bfo:_0000019 ;
+                 rdfs:range bfo:_0000019 ;
+                 skos:altLabel "influences" ;
+                 skos:definition "Holds between qualities a and b  such that if a process changes the quality to some other instance a' then for some a' it is necessary that b changes to another instance b'. [Allotrope]" ;
+                 skos:example "volume influences density" ;
+                 skos:prefLabel "quality influences" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002724
+af-x:AFX_0002724 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002723 ;
+                 skos:definition "Holds between qualities a and b  such that if a process changes the quality to some other instance a' != a then for all a' it is necessary that b changes to another instance b' != b. [Allotrope]" ;
+                 skos:prefLabel "quality strongly influences" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002725
+af-x:AFX_0002725 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002722 ;
+                 skos:altLabel "strongly influenced by" ;
+                 skos:definition "Inverse of quality strongly influences. [Allotrope]" ;
+                 skos:prefLabel "quality strongly influenced by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002726
+af-x:AFX_0002726 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 owl:inverseOf af-x:AFX_0002730 ;
+                 skos:altLabel "is contextual role of" ;
+                 skos:definition "Inverse of has contextual role. [Allotrope]" ;
+                 skos:prefLabel "contextual role of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002727
+af-x:AFX_0002727 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 dct:source "W. Ceusters, P. Elkin, B. Smith Referent Tracking: The Problem of Negative Findings 2006" ;
+                 skos:definition "Property describing the absence of a particular in relation to another particular depending on its spatio-temporal existence. [Allotrope]" ;
+                 skos:editorialNote "if punning to a universal class: A particular is not the instance of a given class at some given time. A particular is not related in a specific way to any instance of a universal at some given time." ;
+                 skos:prefLabel "lacks" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002729
+af-x:AFX_0002729 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 owl:inverseOf af-x:AFX_0002807 ;
+                 rdfs:domain af-r:AFR_0000923 ;
+                 rdfs:range iao:_0000030 ;
+                 skos:altLabel "concretized as" ,
+                               "facet concretized as" ,
+                               "facet represented as" ,
+                               "implemented as" ,
+                               "represented as" ;
+                 skos:definition "The relation between the abstract facet and a specific information that represents the facet. [Allotrope]" ;
+                 skos:example "a label facet can be implemented as a barcode or written text" ;
+                 skos:note "This relation is intended to bridge between different perspectives on the taxonomy of information content entities." ;
+                 skos:prefLabel "facet implemented as" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002730
+af-x:AFX_0002730 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 rdfs:domain iao:_0000030 ;
+                 rdfs:range af-rl:AFRL_0000166 ;
+                 skos:definition "The relation between an information object and its contextual role. [Allotrope]" ;
+                 skos:prefLabel "has contextual role" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002731
+af-x:AFX_0002731 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000388 ;
+                 rdfs:domain af-rl:AFRL_0000166 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:altLabel "has contextual role in process" ;
+                 skos:definition "The relation between a conceptual role and the process where the contextual role is realized. [Allotrope]" ;
+                 skos:prefLabel "in process" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002734
+af-x:AFX_0002734 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000353 ;
+                 rdfs:domain iao:_0000030 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:altLabel "is data output of" ;
+                 skos:definition "Inverse of 'has data output'. [Allotrope]" ;
+                 skos:prefLabel "data output of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002735
+af-x:AFX_0002735 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000353 ;
+                 rdfs:domain af-m:AFM_0000275 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:altLabel "is material output of" ;
+                 skos:definition "Inverse of 'has material output'. [Allotrope]" ;
+                 skos:prefLabel "material output of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002736
+af-x:AFX_0002736 rdf:type owl:ObjectProperty ;
+                 rdfs:domain iao:_0000030 ;
+                 rdfs:range af-r:AFR_0000991 ;
+                 skos:altLabel "has content" ;
+                 skos:definition "The relation between a representation and its content independent of form. [Allotrope]" ;
+                 skos:prefLabel "has proposition" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002737
+af-x:AFX_0002737 rdf:type owl:ObjectProperty ;
+                 rdfs:domain iao:_0000030 ;
+                 rdfs:range af-r:AFR_0000992 ;
+                 skos:definition "The relation between the information and the way it is represented. [Allotrope]" ;
+                 skos:prefLabel "has representation form" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002740
+af-x:AFX_0002740 rdf:type owl:ObjectProperty ;
+                 rdfs:domain af-m:AFM_0000880 ;
+                 rdfs:range bfo:_0000019 ;
+                 skos:definition "Has effort component relates an energy with its quality of effort. [Allotrope]" ;
+                 skos:prefLabel "has effort component" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002741
+af-x:AFX_0002741 rdf:type owl:ObjectProperty ;
+                 rdfs:domain af-m:AFM_0000880 ;
+                 rdfs:range bfo:_0000019 ;
+                 skos:definition "Has flow component relates an energy with its quality of flow. [Allotrope]" ;
+                 skos:prefLabel "has flow component" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002744
+af-x:AFX_0002744 rdf:type owl:ObjectProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain iao:_0000030 ;
+                 rdfs:range iao:_0000030 ;
+                 skos:definition "An information content entity has information derived from some other information content entity, if there is a data processing that transforms the other into it, either transforming the representational form or the content. [Allotrope]" ;
+                 skos:prefLabel "has information derived from" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002745
+af-x:AFX_0002745 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000057 ;
+                 owl:propertyChainAxiom ( ro:_0002224
+                                          af-x:AFX_0002745
+                                        ) ,
+                                        ( ro:_0002230
+                                          af-x:AFX_0002745
+                                        ) ;
+                 skos:changeNote "2018-10-24 Moved to relation ontology. [Allotrope]" ;
+                 skos:definition "P has direct input c if and only if c is a participant in p, c is present at the start of p, and the state of c is modified during p, c is present at the end of p. [Allotrope]" ;
+                 skos:prefLabel "affects" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002748
+af-x:AFX_0002748 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000399 ;
+                 skos:definition "P has output c if and only if c is a participant in p, c is present at the start of p, and c is not present at the end of p. [Allotrope]" ;
+                 skos:example "An experimental step consumes a sample. [Allotrope]" ;
+                 skos:prefLabel "consumes" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002750
+af-x:AFX_0002750 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000057 ;
+                 owl:inverseOf af-x:AFX_0002863 ;
+                 skos:altLabel "has focus" ;
+                 skos:changeNote "2020-11-12 Changed definition. [Allotrope]" ;
+                 skos:definition "A planned process targets a continuant if the continuant is a participant in the process and it in important part of towards the main objective of the process' plan. [Allotrope]" ;
+                 skos:example "A hardness test targets the hardness quality. [Allotrope]" ;
+                 skos:prefLabel "targets" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002793
+af-x:AFX_0002793 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf bfo:_0000051 ;
+                 owl:inverseOf af-x:AFX_0002846 ;
+                 rdf:type owl:TransitiveProperty ;
+                 af-x:AFX_0002809 <http://semanticscience.org/resource/SIO_000053> ;
+                 skos:definition "Has proper part is an antisymmetric, irreflexive (normally transitive) relation between a whole and a distinct part. [SIO]" ;
+                 skos:example "An atom has subatomic particles as its proper parts." ;
+                 skos:prefLabel "has proper part" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002800
+af-x:AFX_0002800 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002846 ;
+                 owl:inverseOf af-x:AFX_0002803 ;
+                 rdf:type owl:TransitiveProperty ;
+                 skos:altLabel "is facet of" ;
+                 skos:definition "Facet of relates two information content entities where one information content entity is an aspect of the other one. [Allotrope]" ;
+                 skos:prefLabel "facet of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002801
+af-x:AFX_0002801 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002803 ;
+                 rdfs:range af-c:AFC_0000050 ;
+                 skos:altLabel "has code" ;
+                 skos:changeNote "2020-12-01 Add alt label. [Allotrope]" ;
+                 skos:definition "Has categorical value is a facet that relates an information content entity to a code that describes a category for classification. [Allotrope]" ;
+                 skos:prefLabel "has categorical value" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002802
+af-x:AFX_0002802 rdf:type owl:ObjectProperty ;
+                 af-x:AFX_0002808 <http://purl.org/dc/elements/1.1/description> ,
+                                  dct:description ;
+                 skos:altLabel "described by" ,
+                               "description" ,
+                               "is described by" ;
+                 skos:definition "Has description relates an entity to an information content entity that is its description. [Allotrope]" ;
+                 skos:prefLabel "has description" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002803
+af-x:AFX_0002803 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002793 ;
+                 rdf:type owl:TransitiveProperty ;
+                 rdfs:domain iao:_0000030 ;
+                 rdfs:range af-r:AFR_0000923 ;
+                 skos:definition "Relation between an information content entity and some part of it called a facet that is covers some general aspect of information context. [Allotrope]" ;
+                 skos:example "a timestamp" ,
+                              "a title" ,
+                              "an ordering" ;
+                 skos:prefLabel "has facet" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002805
+af-x:AFX_0002805 rdf:type owl:ObjectProperty ;
+                 skos:altLabel "specification" ,
+                               "specified by" ;
+                 skos:definition "Has specification relates an entity to an information content entity that is its specification. [Allotrope]" ;
+                 skos:prefLabel "has specification" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002806
+af-x:AFX_0002806 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 rdfs:domain af-r:AFR_0000916 ;
+                 skos:definition "The relation between a classification and something that is grouped by the classification. [Allotrope]" ;
+                 skos:prefLabel "classifies" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002807
+af-x:AFX_0002807 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 skos:altLabel "concretizes" ,
+                               "concretizes facet" ,
+                               "implements" ,
+                               "represents" ,
+                               "represents facet" ;
+                 skos:changeNote "2018-08-29 Changed pref label. [Allotrope]" ;
+                 skos:definition "Inverse of facet concretized as. [Allotrope]" ;
+                 skos:prefLabel "implements facet" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002816
+af-x:AFX_0002816 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002699 ;
+                 skos:definition "The relation of an information object to an entity that gives some indication of magnitude of a quality, information facet or process. [Allotrope]" ;
+                 skos:prefLabel "quantifies" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002819
+af-x:AFX_0002819 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000219 ;
+                 owl:inverseOf af-x:AFX_0002820 ;
+                 rdfs:domain af-r:AFR_0000928 ;
+                 skos:altLabel "is index of" ;
+                 skos:definition "The relation between an index and the entity in an aggregate or list it denotes. [Allotrope]" ;
+                 skos:prefLabel "index of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002820
+af-x:AFX_0002820 rdf:type owl:ObjectProperty ;
+                 rdfs:range af-r:AFR_0000928 ;
+                 skos:definition "The relation between an object and an index that denotes the object within an aggregate the object is member of. [Allotrope]" ;
+                 skos:prefLabel "has index" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002821
+af-x:AFX_0002821 rdf:type owl:ObjectProperty ;
+                 skos:definition "The relation between a proxy entity and a target entity where the target entity is a real participant in some process or the subject of an information content entity but is not referenced directly, but instead the proxy is used as a surrogate or representation for it. [Allotrope]" ;
+                 skos:example "A measurement of a quality to indirectly measure another quality." ,
+                              "An object aggregate as a proxy for a collection." ;
+                 skos:prefLabel "proxy for" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002822
+af-x:AFX_0002822 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:range skos:Concept ;
+                 skos:definition "The relation an entity and an associated SKOS concept. [Allotrope]" ;
+                 skos:note "The relation is intended to relate a classifying datum with a SKOS concept, but there might be other uses. [Allotrope]" ;
+                 skos:prefLabel "has concept" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002832
+af-x:AFX_0002832 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002793 ;
+                 owl:inverseOf af-x:AFX_0002847 ;
+                 af-x:AFX_0002809 <http://semanticscience.org/resource/SIO_000273> ;
+                 skos:definition "A core relation that holds between a whole and a proper part without an intermediate part at a level of granularity. [Allotrope]" ;
+                 skos:prefLabel "has direct part" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002833
+af-x:AFX_0002833 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002858 ;
+                 owl:inverseOf af-x:AFX_0002834 ;
+                 rdf:type owl:TransitiveProperty ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/NCIT_C25629> ;
+                 skos:altLabel "before" ,
+                               "has follower" ,
+                               "has successor" ,
+                               "leading" ,
+                               "preceeds" ,
+                               "prior" ;
+                 skos:changeNote "2020-06-22 Added alt labels, subclassed under 'related by order'. [Allotrope]" ;
+                 skos:definition "Is followed by is a relation between entities that are items in an ordered sequence. For each pair of entities P, S being a member of the sequence, there exists an ordering function o so that o(P) < o(S). Iff o(P) < o(S) then P is followed by S. [Allotrope]" ;
+                 skos:prefLabel "is followed by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002834
+af-x:AFX_0002834 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002858 ;
+                 rdf:type owl:TransitiveProperty ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/NCIT_C38008> ;
+                 skos:altLabel "after" ,
+                               "has predecessor" ,
+                               "post" ,
+                               "succeeds" ,
+                               "trailing" ;
+                 skos:changeNote "2020-06-22 Added alt labels, subclassed under 'related by order'. [Allotrope]" ;
+                 skos:definition "Follows is a relation between entities that are items in an ordered sequence. For each pair of entities P, S being a member of the sequence, there exists an ordering function o so that o(P) < o(S).  Iff o(S) > o(P) the S follows P. [Allotrope]" ;
+                 skos:prefLabel "follows" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002835
+af-x:AFX_0002835 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002833 ;
+                 owl:inverseOf af-x:AFX_0002836 ;
+                 skos:altLabel "has next" ,
+                               "next" ;
+                 skos:definition "Is immediately followed by is a relation between entities that are items in an ordered sequence. For each pair of entities P, S being a member of the sequence, there exists an ordering function o so that o(P) < o(S).  Iff for members P, S of the sequence, there is no member I that o(P) < o(I) < o(S), then P is immediately followed by S. [Allotrope]" ;
+                 skos:prefLabel "is immediately followed by" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002836
+af-x:AFX_0002836 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002834 ;
+                 skos:altLabel "has previous" ,
+                               "previous" ;
+                 skos:definition "Immediately follows is a relation between entities that are items in an ordered sequence. For each pair of entities P, S being a member of the sequence, there exists an ordering function o so that o(P) < o(S).  Iff for members P, S of the sequence, there is no member I that o(S) > o(I) > o(P), then S follows P. [Allotrope]" ;
+                 skos:prefLabel "immediately follows" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002837
+af-x:AFX_0002837 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 skos:definition "Relation of is a relation of a relational entity to the referred entities. [Allotrope]" ;
+                 skos:example "A ratio quality is relation of two qualities of the same kind, whose magnitude is a ratio value." ,
+                              "A sum datum is relation of its summands." ;
+                 skos:note """This predicate is often used with punning, to avoid pre-coordination of ratios or differences.
+A af-q:ratio 'af-x:relation of' pato:mass is a mass ratio quality.""" ;
+                 skos:prefLabel "relation of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002838
+af-x:AFX_0002838 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002837 ;
+                 skos:definition "Relates to is a relation between a directed relational entity to the target of the relation. [Allotrope]" ;
+                 skos:example "A ratio relates to the denominator." ;
+                 skos:prefLabel "relates to" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002839
+af-x:AFX_0002839 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002837 ;
+                 skos:definition "Relates from is a relation between a directed relational entity to the source of the relation. [Allotrope]" ;
+                 skos:example "A ratio relates from the numerator." ;
+                 skos:prefLabel "relates from" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002842
+af-x:AFX_0002842 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 owl:inverseOf af-x:AFX_0002843 ;
+                 rdfs:domain af-r:AFR_0001561 ;
+                 skos:definition "The relation between a definition and the entity that is defined by it. [Allotrope]" ;
+                 skos:prefLabel "defines" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002843
+af-x:AFX_0002843 rdf:type owl:ObjectProperty ;
+                 skos:altLabel "defined by" ,
+                               "is defined by" ;
+                 skos:definition "Has definition relates an entity to an information content entity that is its definition. [Allotrope]" ;
+                 skos:prefLabel "has definition" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002845
+af-x:AFX_0002845 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002846 ;
+                 skos:altLabel "is ingredient of" ;
+                 skos:definition "Inverse of has ingredient. [Allotrope]" ;
+                 skos:prefLabel "ingredient of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002846
+af-x:AFX_0002846 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf bfo:_0000050 ;
+                 skos:altLabel "is proper part of" ;
+                 skos:definition "Inverse of has proper part. [Allotrope]" ;
+                 skos:prefLabel "proper part of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002847
+af-x:AFX_0002847 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002846 ;
+                 skos:altLabel "is direct part of" ;
+                 skos:definition "Inverse of has direct part. [Allotrope]" ;
+                 skos:prefLabel "direct part of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002848
+af-x:AFX_0002848 rdf:type owl:ObjectProperty ;
+                 rdfs:domain bfo:_0000015 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:definition "A process observing process p observes a process q if p produces information about the process q, such as the duration, or about some independent continuant participating in q in an important active or passive role. [Allotrope]" ;
+                 skos:prefLabel "observes" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002849
+af-x:AFX_0002849 rdf:type owl:ObjectProperty ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( af-r:AFR_0000957
+                                            af-r:AFR_0001257
+                                          )
+                            ] ;
+                 skos:altLabel "conforms to" ,
+                               "follows" ;
+                 skos:definition "An entity applies a specification or mathematical function, if the specification specifies the entity and the entity conforms or follows the specification. [Allotrope]" ;
+                 skos:prefLabel "applies" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002853
+af-x:AFX_0002853 rdf:type owl:ObjectProperty ;
+                 rdfs:domain bfo:_0000017 ;
+                 rdfs:range af-r:AFR_0001872 ;
+                 skos:altLabel "meets" ;
+                 skos:definition "A relation between a realizable entity and a requirement, that states that the process or process boundary that realizes it, satisfies all conditions of the requirement. [Allotrope]" ;
+                 skos:prefLabel "fulfills" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002855
+af-x:AFX_0002855 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002699 ;
+                 rdfs:domain af-r:AFR_0000900 ;
+                 rdfs:range bfo:_0000015 ;
+                 skos:altLabel "is protocol of" ,
+                               "log of" ,
+                               "protocol of" ;
+                 skos:definition "The relation between a log  and the process the log is describing. [Allotrope]" ;
+                 skos:prefLabel "is log of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002856
+af-x:AFX_0002856 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf iao:_0000136 ;
+                 rdfs:domain af-r:AFR_0001103 ;
+                 skos:altLabel "capability of" ;
+                 skos:definition "The relation between a capability proposition and the subject it is about. [Allotrope]" ;
+                 skos:prefLabel "is capability of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002858
+af-x:AFX_0002858 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 skos:definition "A relation between entities that are ordered into a list. [Allotrope]" ;
+                 skos:prefLabel "related by order to" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002863
+af-x:AFX_0002863 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000056 ;
+                 skos:altLabel "is focus of" ,
+                               "is target of" ;
+                 skos:definition "A continuant is target of a planned process if the continuant is a participant in the process and it in important part of towards the main objective of the process' plan. [Allotrope]" ;
+                 skos:prefLabel "target of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002864
+af-x:AFX_0002864 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000056 ;
+                 skos:altLabel "applied in" ,
+                               "used in" ;
+                 skos:definition "A continuant is selected or used in planned process if the participant is chosen to influence the process towards some objective but is itself not essentially changed by a process. [Allotrope]" ;
+                 skos:prefLabel "selected in" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002875
+af-x:AFX_0002875 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000056 ;
+                 owl:inverseOf af-x:AFX_0002876 ;
+                 rdfs:domain bfo:_0000002 ;
+                 rdfs:range af-p:AFP_0003374 ;
+                 skos:definition "Has state is a relation between an continuant c and a state s where the c participates in s and s is expressed in the same way in terms of c at all times during s. [Allotrope]" ;
+                 skos:prefLabel "has state" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002876
+af-x:AFX_0002876 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ro:_0000057 ;
+                 rdfs:domain af-p:AFP_0003374 ;
+                 rdfs:range bfo:_0000002 ;
+                 skos:altLabel "is state of" ;
+                 skos:definition "A relation between a state s and a continuant c where the c is a participant of s and s is expressed in the same way in terms of c at all times during s. [Allotrope]" ;
+                 skos:prefLabel "state of" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002878
+af-x:AFX_0002878 rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0002730 ;
+                 rdfs:range af-rl:AFRL_0000328 ;
+                 skos:definition "The relation between an information content object and its statistic datum role. [Allotrope]" ;
+                 skos:prefLabel "has statistic datum role" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+bfo:_0000050 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ro:_0002131 ;
+             owl:inverseOf bfo:_0000051 ;
+             rdf:type owl:TransitiveProperty ;
+             skos:prefLabel "part of" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+bfo:_0000051 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ro:_0002131 ;
+             rdf:type owl:TransitiveProperty ;
+             skos:prefLabel "has part" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+bfo:_0000054 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf bfo:_0000055 ;
+             rdfs:domain bfo:_0000017 ;
+             rdfs:range bfo:_0000015 ;
+             skos:prefLabel "realized in" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+bfo:_0000055 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain bfo:_0000015 ;
+             rdfs:range bfo:_0000017 ;
+             skos:prefLabel "realizes" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000062
+bfo:_0000062 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ro:_0002086 ;
+             owl:inverseOf bfo:_0000063 ;
+             rdf:type owl:TransitiveProperty ;
+             owl:propertyChainAxiom ( bfo:_0000050
+                                      bfo:_0000062
+                                    ) ,
+                                    ( ro:_0002091
+                                      bfo:_0000062
+                                    ) ,
+                                    ( ro:_0002092
+                                      bfo:_0000062
+                                    ) ;
+             skos:altLabel "is preceded by" ;
+             skos:definition "X is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y if and only if ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point. [RO]" ;
+             skos:prefLabel "preceded by" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000063
+bfo:_0000063 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ro:_0002222 ;
+             rdf:type owl:TransitiveProperty ;
+             owl:propertyChainAxiom ( bfo:_0000050
+                                      bfo:_0000063
+                                    ) ,
+                                    ( ro:_0002092
+                                      bfo:_0000063
+                                    ) ;
+             skos:definition "X precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y if and only if ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point. [RO]" ;
+             skos:prefLabel "precedes" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000066
+bfo:_0000066 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf bfo:_0000067 ;
+             rdfs:domain bfo:_0000003 ;
+             rdfs:range bfo:_0000004 ;
+             owl:propertyChainAxiom ( bfo:_0000050
+                                      bfo:_0000066
+                                    ) ,
+                                    ( bfo:_0000066
+                                      bfo:_0000050
+                                    ) ;
+             skos:altLabel "unfolds in" ;
+             skos:definition "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t [RO]" ;
+             skos:prefLabel "occurs in" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000067
+bfo:_0000067 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             skos:altLabel "site of" ;
+             skos:definition "inverse of occurs in" ;
+             skos:prefLabel "contains process" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000083
+bfo:_0000083 rdf:type owl:ObjectProperty ;
+             rdfs:domain bfo:_0000004 ;
+             rdfs:range bfo:_0000006 ;
+             skos:altLabel "occupies spatial region" ,
+                           "occupies spatial region at some time" ;
+             skos:definition "b located at r means that r is a spatial region in which independent continuant b is exactly located. [BFO]" ;
+             skos:prefLabel "located at" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000108
+bfo:_0000108 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf bfo:_0000157 ;
+             rdfs:domain bfo:_0000001 ;
+             rdfs:range bfo:_0000008 ;
+             skos:definition "b exists_at t means: b is an entity which exists at some temporal region t. [BFO]" ;
+             skos:prefLabel "exists at" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000117
+bfo:_0000117 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfo:_0000051 ,
+                                ro:_0002222 ;
+             owl:inverseOf bfo:_0000132 ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:domain bfo:_0000003 ;
+             rdfs:range bfo:_0000003 ;
+             skos:definition "b has occurrent part c =Def. b has part c & b and c are occurrents." ;
+             skos:prefLabel "has occurrent part" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000118
+bfo:_0000118 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf af-x:AFX_0002793 ,
+                                bfo:_0000117 ;
+             owl:inverseOf bfo:_0000138 ;
+             rdf:type owl:TransitiveProperty ;
+             skos:definition "B has_proper_occurrent_part c =Def. b has_occurrent_part c & b and c are not identical. [BFO]" ;
+             skos:prefLabel "has proper occurrent part" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000119
+bfo:_0000119 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf bfo:_0000133 ;
+             rdfs:domain bfo:_0000015 ;
+             rdfs:range bfo:_0000144 ;
+             skos:prefLabel "has profile" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000130
+bfo:_0000130 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain bfo:_0000003 ;
+             rdfs:range bfo:_0000011 ;
+             skos:definition "p occupies_spatiotemporal_region s. This is a primitive relation between an occurrent p and the spatiotemporal region s which is its spatiotemporal extent. [BFO]" ;
+             skos:prefLabel "occupies spatiotemporal region" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000132
+bfo:_0000132 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfo:_0000050 ,
+                                ro:_0002222 ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:domain bfo:_0000003 ;
+             rdfs:range bfo:_0000003 ;
+             skos:definition "b occurrent_part_of c =Def. b is a part of c & b and c are occurrents. [BFO]" ;
+             skos:prefLabel "part of occurrent" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000133
+bfo:_0000133 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             skos:prefLabel "process profile of" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000138
+bfo:_0000138 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf af-x:AFX_0002846 ,
+                                bfo:_0000132 ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:domain bfo:_0000003 ;
+             rdfs:range bfo:_0000003 ;
+             skos:definition "B proper_occurrent_part_of c =Def. b occurrent_part_of c & b and c are not identical. [BFO]" ;
+             skos:prefLabel "proper part of occurrent" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000139
+bfo:_0000139 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfo:_0000132 ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:domain bfo:_0000003 ;
+             rdfs:range bfo:_0000003 ;
+             skos:definition "B temporal_part_of c =Def.b occurrent_part_of c & & for some temporal region t, b occupies_temporal_region t & for all occurrents d, t (if d occupies_temporal_region t & t? occurrent_part_of t then (d occurrent_part_of a iff d occurrent_part_of b)). [BFO]" ;
+             skos:example "The 4th year of your life is a temporal part of your life. [BFO]" ,
+                          "The first quarter of a game of football is a temporal part of the whole game. [BFO]" ,
+                          "The process boundary which separates the 3rd and 4th years of your life. [BFO]" ,
+                          "The process of your heart beating from 4pm to 5pm today is a temporal part of the entire process of your heart beating. [BFO]" ;
+             skos:prefLabel "temporal part of" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000157
+bfo:_0000157 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain bfo:_0000008 ;
+             rdfs:range bfo:_0000001 ;
+             skos:definition "inverse of exists at [BFO]" ;
+             skos:prefLabel "during which exists" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000184
+bfo:_0000184 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfo:_0000066 ;
+             rdf:type owl:InverseFunctionalProperty ;
+             rdfs:domain bfo:_0000015 ;
+             rdfs:range bfo:_0000040 ;
+             skos:definition "b history_of c if c is a material entity or site and b is a history that is the unique history of c" ;
+             skos:prefLabel "history of" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000185
+bfo:_0000185 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfo:_0000067 ;
+             rdf:type owl:InverseFunctionalProperty ;
+             rdfs:domain bfo:_0000040 ;
+             rdfs:range bfo:_0000015 ;
+             skos:definition "inverse of history of" ;
+             skos:prefLabel "has history" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+iao:_0000136 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain iao:_0000030 ;
+             skos:example "This document is about information artifacts and their representations. [IAO]" ;
+             skos:prefLabel "is about" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000219
+iao:_0000219 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf iao:_0000136 ;
+             skos:definition "Denotes is a primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically [IAO]" ;
+             skos:example "A person's name denotes the person. [IAO]" ,
+                          "A variable name in a computer program denotes some piece of memory. [IAO]" ,
+                          "Lexically equivalent strings can denote different things, for instance \"Alan\" can denote different people. In each case of use, there is a case of the denotation relation obtaining, between \"Alan\" and the person that is being named. [IAO]" ;
+             skos:prefLabel "denotes" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000314
+obi:_0000314 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf af-x:AFX_0002821 ;
+             rdfs:domain bfo:_0000002 ;
+             rdfs:range bfo:_0000002 ;
+             skos:altLabel "is proxy for" ;
+             skos:definition "A relation between continuant instances c1 and c2 where within a protocol application, measurement of c1 is related to a what would be the measurement of c2. [OBI]" ;
+             skos:example "Florescent intensity is proxy for amount of protein labeled with GFP [OBI]" ,
+                          "position on a gel is proxy for mass and charge of molecule in an western blot [OBI]" ;
+             skos:prefLabel "proxy for" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000643
+obi:_0000643 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf af-x:AFX_0002793 ;
+             owl:inverseOf obi:_0000645 ;
+             rdf:type owl:TransitiveProperty ;
+             skos:definition "The relation of the cells in the finger of the skin to the finger, in which an indeterminate number of grains are parts of the whole by virtue of being grains in a collective that is part of the whole, and in which removing one granular part does not nec- essarily damage or diminish the whole. Ontological Whether there is a fixed, or nearly fixed number of parts - e.g. fingers of the hand, chambers of the heart, or wheels of a car - such that there can be a notion of a single one being missing, or whether, by contrast, the number of parts is indeterminate - e.g., cells in the skin of the hand, red cells in blood, or rubber molecules in the tread of the tire of the wheel of the car. [OBI]" ;
+             skos:prefLabel "has grain" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000645
+obi:_0000645 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf af-x:AFX_0002846 ;
+             rdf:type owl:TransitiveProperty ;
+             skos:definition "A relation between granular parts and the whole of which they are a part. Granular parts have indeterminate number such that removing one granular part does not necessarily damage or diminish the whole. [OBI]" ;
+             skos:prefLabel "is grain of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000052
+ro:_0000052 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002314 ;
+            owl:inverseOf ro:_0000053 ;
+            skos:prefLabel "inheres in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+ro:_0000053 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:range bfo:_0000020 ;
+            skos:altLabel "is bearer of" ;
+            skos:definition "A relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence. [RO]" ;
+            skos:editorialNote "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist. [RO]" ;
+            skos:example "this apple is bearer of this red color" ,
+                         "this vase is bearer of this fragility" ;
+            skos:prefLabel "bearer of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+ro:_0000056 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf ro:_0000057 ;
+            rdfs:domain bfo:_0000002 ;
+            rdfs:range bfo:_0000003 ;
+            skos:altLabel "is participant of" ;
+            skos:definition "A relation between a continuant and a process, in which the continuant is somehow involved in the process [RO]" ;
+            skos:prefLabel "participates in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+ro:_0000057 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain bfo:_0000003 ;
+            rdfs:range bfo:_0000002 ;
+            skos:definition "A relation between a process and a continuant, in which the continuant is somehow involved in the process [RO]" ;
+            skos:example "this blood coagulation has participant this blood clot" ,
+                         "this investigation has participant this investigator" ,
+                         "this process has participant this input material (or this output material)" ;
+            skos:prefLabel "has participant" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000058
+ro:_0000058 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf ro:_0000059 ;
+            rdfs:domain bfo:_0000031 ;
+            rdfs:range bfo:_0000020 ;
+            skos:altLabel "is concretized as" ;
+            skos:definition "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants. [RO]" ;
+            skos:example "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The journal article (a generically dependent continuant) is concretized as the quality (a specifically dependent continuant), and both depend on that copy of the printed journal (an independent continuant). [RO]" ,
+                         "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process). [RO]" ;
+            skos:prefLabel "concretized by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+ro:_0000059 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain bfo:_0000020 ;
+            rdfs:range bfo:_0000031 ;
+            skos:definition "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant. [RO]" ;
+            skos:example "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)." ,
+                         "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)." ;
+            skos:prefLabel "concretizes" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000079
+ro:_0000079 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000052 ;
+            owl:inverseOf ro:_0000085 ;
+            rdfs:domain bfo:_0000034 ;
+            skos:altLabel "is function of" ;
+            skos:definition "A relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence. [RO]" ;
+            skos:prefLabel "function of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000080
+ro:_0000080 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000052 ;
+            owl:inverseOf ro:_0000086 ;
+            skos:definition "Inverse of has quality [RO]" ;
+            skos:prefLabel "quality of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000081
+ro:_0000081 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000052 ;
+            owl:inverseOf ro:_0000087 ;
+            skos:altLabel "is role of" ;
+            skos:definition "A relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence. [RO]" ;
+            skos:prefLabel "role of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000085
+ro:_0000085 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000053 ;
+            rdfs:domain bfo:_0000004 ;
+            rdfs:range bfo:_0000034 ;
+            skos:definition "A relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence. [RO]" ;
+            skos:editorialNote "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists. [RO]" ;
+            skos:example "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)" ;
+            skos:prefLabel "has function" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+ro:_0000086 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000053 ;
+            rdfs:range bfo:_0000019 ;
+            skos:definition "A relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence. [RO]" ;
+            skos:editorialNote "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist. [RO]" ;
+            skos:example "this apple has quality this red color" ;
+            skos:prefLabel "has quality" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+ro:_0000087 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000053 ;
+            rdfs:domain bfo:_0000004 ;
+            rdfs:range bfo:_0000023 ;
+            skos:definition "A relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence [RO]" ;
+            skos:editorialNote "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists.  [RO]" ;
+            skos:example "this person has role this investigator role (more colloquially: this person has this role of investigator) [RO]" ;
+            skos:prefLabel "has role" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+ro:_0000091 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000053 ;
+            owl:inverseOf ro:_0000092 ;
+            rdfs:domain bfo:_0000004 ;
+            rdfs:range bfo:_0000016 ;
+            skos:definition "A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence, [RO]" ;
+            skos:prefLabel "has disposition" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000092
+ro:_0000092 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000052 ;
+            skos:definition "Inverse of has disposition [RO]" ;
+            skos:prefLabel "disposition of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001000
+ro:_0001000 rdf:type owl:ObjectProperty ;
+            owl:inverseOf ro:_0001001 ;
+            skos:definition "A relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity. [RO]" ;
+            skos:example "this cell derives from this parent cell (cell division)" ,
+                         "this nucleus derives from this parent nucleus (nuclear division)" ;
+            skos:prefLabel "derives from" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001001
+ro:_0001001 rdf:type owl:ObjectProperty ;
+            skos:definition "A relation between two distinct material entities, the old entity and the new entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity. [RO]" ;
+            skos:editorialNote "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops into'. To avoid making statements about a future that may not come to pass, it is often better to use the backward-looking 'derives from' rather than the forward-looking 'derives into'. [RO]" ;
+            skos:prefLabel "derives into" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001015
+ro:_0001015 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:domain bfo:_0000004 ;
+            rdfs:range bfo:_0000004 ;
+            skos:altLabel "is location of" ;
+            skos:definition "a relation between two independent continuants, the location and the target, in which the target is entirely within the location [RO]" ;
+            skos:example "this cage is the location of this rat" ;
+            skos:prefLabel "location of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001025
+ro:_0001025 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:domain bfo:_0000004 ;
+            rdfs:range bfo:_0000004 ;
+            skos:definition "A relation between two independent continuants, the target and the location, in which the target is entirely within the location. [RO]" ;
+            skos:prefLabel "located in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002000
+ro:_0002000 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            owl:inverseOf ro:_0002002 ;
+            skos:altLabel "boundary of" ,
+                          "is 2D boundary of" ,
+                          "is boundary of" ;
+            skos:definition "a relation between a 2D immaterial entity (the boundary) and a material entity, in which the boundary delimits the material entity [RO]" ;
+            skos:editorialNote "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts. [RO]" ,
+                               "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape. [RO]" ;
+            skos:example "the surface of my skin is a 2D boundary of my body" ;
+            skos:prefLabel "2D boundary of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002002
+ro:_0002002 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000040 ;
+            skos:definition "a relation between a material entity and a 2D immaterial entity (the boundary), in which the boundary delimits the material entity [RO]" ;
+            skos:editorialNote "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts. [RO]" ,
+                               "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape. [RO]" ;
+            skos:prefLabel "has 2D boundary" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002012
+ro:_0002012 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000050 ,
+                               ro:_0002418 ;
+            rdfs:domain bfo:_0000003 ;
+            rdfs:range bfo:_0000003 ;
+            skos:definition "A part of relation that applies only between occurrents. [RO]" ;
+            skos:prefLabel "occurrent part of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002081
+ro:_0002081 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002222 ;
+            skos:definition "Primitive instance level timing relation between events [RO]" ;
+            skos:prefLabel "before or simultaneous with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002082
+ro:_0002082 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002081 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "t1 simultaneous_with t2 iff:= t1 before_or_simultaneous_with t2 and not (t1 before t2) [RO]" ;
+            skos:prefLabel "simultaneous with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002083
+ro:_0002083 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002081 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "t1 before t2 iff:= t1 before_or_simulataneous_with t2 and not (t1 simultaneous_with t2) [RO]" ;
+            skos:prefLabel "before" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002084
+ro:_0002084 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002222 ;
+            owl:inverseOf ro:_0002093 ;
+            skos:prefLabel "during which ends" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002085
+ro:_0002085 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002088 ;
+            owl:inverseOf ro:_0002092 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:prefLabel "encompasses" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002086
+ro:_0002086 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002222 ;
+            rdf:type owl:TransitiveProperty ;
+            owl:propertyChainAxiom ( ro:_0002093
+                                     bfo:_0000062
+                                   ) ;
+            skos:definition "X ends_after Y iff: end(Y) before_or_simultaneous_with end(X) [RO]" ;
+            skos:prefLabel "ends after" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002087
+ro:_0002087 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000062 ;
+            owl:inverseOf ro:_0002090 ;
+            owl:propertyChainAxiom ( ro:_0002224
+                                     ro:_0002230
+                                   ) ;
+            skos:altLabel "starts at end of" ;
+            skos:definition "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y) [RO]" ;
+            skos:prefLabel "immediately preceded by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002088
+ro:_0002088 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002222 ;
+            owl:inverseOf ro:_0002091 ;
+            skos:prefLabel "during which starts" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002089
+ro:_0002089 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002222 ;
+            rdf:type owl:TransitiveProperty ;
+            owl:propertyChainAxiom ( ro:_0002091
+                                     bfo:_0000062
+                                   ) ;
+            skos:prefLabel "starts before" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002090
+ro:_0002090 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000063 ;
+            owl:propertyChainAxiom ( ro:_0002230
+                                     ro:_0002224
+                                   ) ;
+            skos:altLabel "ends at start of" ,
+                          "meets" ;
+            skos:definition "X immediately_precedes_Y iff: end(X) simultaneous_with start(Y) [RO]" ;
+            skos:prefLabel "immediately precedes" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002091
+ro:_0002091 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002222 ;
+            skos:definition "X starts_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (start(X) before_or_simultaneous_with end(Y)) [RO]" ;
+            skos:prefLabel "starts during" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002092
+ro:_0002092 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002093 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "during" ;
+            skos:definition "X happens_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (end(X) before_or_simultaneous_with end(Y)) [RO]" ;
+            skos:prefLabel "happens during" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002093
+ro:_0002093 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002222 ;
+            skos:definition "X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). [RO]" ;
+            skos:prefLabel "ends during" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002131
+ro:_0002131 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            owl:propertyChainAxiom ( bfo:_0000050
+                                     bfo:_0000050
+                                   ) ,
+                                   ( bfo:_0000051
+                                     bfo:_0000050
+                                   ) ,
+                                   ( bfo:_0000051
+                                     ro:_0002131
+                                   ) ;
+            skos:definition "x overlaps y if and only if there exists some z such that x has part z and z part of y [RO]" ;
+            skos:prefLabel "overlaps" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002150
+ro:_0002150 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            rdfs:domain bfo:_0000004 ;
+            rdfs:range bfo:_0000004 ;
+            skos:definition "X continuous_with Y if and only if X and Y share a fiat boundary. [RO]" ;
+            skos:prefLabel "continuous with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002163
+ro:_0002163 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            skos:definition "A is spatially_disjoint_from B if and only if they have no parts in common [RO]" ;
+            skos:editorialNote "Note that it would be possible to use the relation to label the relationship between a near infinite number of structures - between the rings of saturn and my left earlobe. The intent is that this is used for parsiomoniously for disambiguation purposes - for example, between siblings in a jointly exhaustive pairwise disjointness hierarchy [RO]" ;
+            skos:prefLabel "spatially disjoint from" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002170
+ro:_0002170 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            owl:propertyChainAxiom ( [ owl:inverseOf ro:_0002176
+                                     ]
+                                     ro:_0002176
+                                   ) ;
+            skos:definition "a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b [RO]" ;
+            skos:prefLabel "connected to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002176
+ro:_0002176 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            rdfs:domain bfo:_0000004 ;
+            skos:definition "C connects a if and only if there exist some b such that a and b are similar parts of the same system, and c connects b, specifically, c connects a with b. When one structure connects two others it unites some aspect of the function or role they play within the system. [IAO]" ;
+            skos:prefLabel "connects" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002177
+ro:_0002177 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002323 ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000040 ;
+            owl:propertyChainAxiom ( ro:_0002371
+                                     bfo:_0000050
+                                   ) ;
+            skos:definition "A is attached to part of b if a is attached to b, or a is attached to some p, where p is part of b. [IAO]" ;
+            skos:prefLabel "attached to part of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002180
+ro:_0002180 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000051 ;
+            skos:definition "W 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type. [RO]" ;
+            skos:editorialNote "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit. [RO]" ;
+            skos:prefLabel "has component" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002211
+ro:_0002211 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002418 ;
+            owl:inverseOf ro:_0002334 ;
+            rdfs:domain bfo:_0000015 ;
+            rdfs:range bfo:_0000015 ;
+            skos:definition "Process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2. [RO]" ;
+            skos:prefLabel "regulates" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002212
+ro:_0002212 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002211 ,
+                               ro:_0002305 ;
+            skos:definition "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2. [RO]" ;
+            skos:prefLabel "negatively regulates (process to process)" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002213
+ro:_0002213 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002211 ,
+                               ro:_0002304 ;
+            skos:definition "Process(P1) positively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2. [RO]" ;
+            skos:prefLabel "positively regulates (process to process)" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002215
+ro:_0002215 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002216 ;
+            skos:altLabel "has function realized in" ;
+            skos:definition "A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. [RO]" ;
+            skos:editorialNote "this relation has a shortcut definition in which the expression \"capable of some P\" expands to \"bearer_of (some realized_by only P)" ;
+            skos:example "mechanosensory neuron capable of detection of mechanical stimulus involved in sensory perception [RO]" ;
+            skos:prefLabel "capable of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002216
+ro:_0002216 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002328 ,
+                               ro:_0002500 ;
+            owl:propertyChainAxiom ( ro:_0002215
+                                     bfo:_0000050
+                                   ) ;
+            skos:altLabel "has function in" ;
+            skos:definition "C stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p. [RO]" ;
+            skos:prefLabel "capable of part of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002217
+ro:_0002217 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000056 ;
+            owl:inverseOf ro:_0002218 ;
+            skos:altLabel "agent in" ;
+            skos:definition "X actively participates in y if and only if x participates in y and x realizes some active role [RO]" ;
+            skos:prefLabel "actively participates in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002218
+ro:_0002218 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000057 ;
+            skos:altLabel "has agent" ;
+            skos:definition "X has participant y if and only if x realizes some active role that inheres in y [RO]" ;
+            skos:prefLabel "has active participant" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002219
+ro:_0002219 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002220 ;
+            owl:inverseOf ro:_0002221 ;
+            skos:definition "X surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x [RO]" ;
+            skos:prefLabel "surrounded by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002220
+ro:_0002220 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002163 ;
+            skos:definition "X adjacent to y if and only if x and y share a boundary. [RO]" ;
+            skos:example "A caterpillar walking on the surface of a leaf is adjacent_to the leaf, if one of the caterpillar appendages is touching the leaf. In contrast, a butterfly flying close to a flower is not considered adjacent, unless there are any touching parts." ,
+                         "The epidermis layer of a vertebrate is adjacent to the dermis." ,
+                         "The plasma membrane of a cell is adjacent to the cytoplasm, and also to the cell lumen which the cytoplasm occupies." ,
+                         "The skin of the forelimb is adjacent to the skin of the torso if these are considered anatomical subdivisions with a defined border. Otherwise a relation such as continuous_with would be used." ;
+            skos:prefLabel "adjacent to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002221
+ro:_0002221 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002220 ;
+            skos:definition "Inverse of surrounded by [RO]" ;
+            skos:prefLabel "surrounds" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002222
+ro:_0002222 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain bfo:_0000003 ;
+            rdfs:range bfo:_0000003 ;
+            skos:definition "A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations. [RO]" ;
+            skos:prefLabel "temporally related to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002223
+ro:_0002223 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000050 ,
+                               ro:_0002222 ;
+            owl:inverseOf ro:_0002224 ;
+            skos:definition "Inverse of starts with [RO]" ;
+            skos:prefLabel "starts" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002224
+ro:_0002224 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000051 ,
+                               ro:_0002222 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "X starts with y if and only if x has part y and the time point at which x starts is equivalent to the time point at which y starts. Formally: α(y) = α(x) and ω(y) < ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point. [RO]" ;
+            skos:prefLabel "starts with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002229
+ro:_0002229 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000050 ,
+                               ro:_0002222 ;
+            owl:inverseOf ro:_0002230 ;
+            skos:definition "Inverse of ends with [RO]" ;
+            skos:prefLabel "ends" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002230
+ro:_0002230 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000051 ,
+                               ro:_0002222 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "X ends with y if and only if x has part y and the time point at which x ends is equivalent to the time point at which y ends. Formally: α(y) > α(x) and ω(y) = ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point. [RO]" ;
+            skos:prefLabel "ends with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002263
+ro:_0002263 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002264 ;
+            owl:propertyChainAxiom ( ro:_0002327
+                                     ro:_0002411
+                                   ) ;
+            skos:definition "C involved in regulation of p if c enables 'p' and p' causally upstream of p [RO]" ;
+            skos:prefLabel "acts upstream of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002264
+ro:_0002264 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002500 ;
+            skos:definition "C acts upstream of or within p if c is enables 'p' and p' causally upstream of or within p [RO]" ;
+            skos:prefLabel "acts upstream of or within" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002304
+ro:_0002304 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002411 ;
+            skos:prefLabel "causally upstream of, positive effect" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002305
+ro:_0002305 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002411 ;
+            skos:definition "holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y [RO]" ;
+            skos:prefLabel "causally upstream of, negative effect" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002314
+ro:_0002314 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002502 ;
+            owl:propertyChainAxiom ( ro:_0000052
+                                     bfo:_0000050
+                                   ) ,
+                                   ( ro:_0002314
+                                     bfo:_0000050
+                                   ) ;
+            skos:definition "Q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w. [RO]" ;
+            skos:prefLabel "inheres in part of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002323
+ro:_0002323 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            skos:definition "A mereological relationship or a topological relationship [RO]" ;
+            skos:editorialNote "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships [RO]" ;
+            skos:prefLabel "mereotopologically related to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002326
+ro:_0002326 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002216 ;
+            skos:definition "if and only if exists c', p' c part_of c' and c' capable_of p and c capable_of p' and p' part_of p then c contributes_to p [RO]" ;
+            skos:prefLabel "contributes to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002327
+ro:_0002327 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002215 ;
+            owl:inverseOf ro:_0002333 ;
+            skos:altLabel "catalyzes" ,
+                          "executes" ;
+            skos:editorialNote "This relation differs from the parent relation 'capable of' in that the parent is weaker and only expresses a capability that may not be actually realized, whereas this relation is always realized. [RO]" ;
+            skos:example "a particular instances of akt-2 enables some instance of protein kinase activity [RO]" ;
+            skos:prefLabel "enables" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002328
+ro:_0002328 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            skos:definition "This is a grouping relation that collects relations used for the purpose of connecting structure and function. [RO]" ;
+            skos:prefLabel "functionally related to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002331
+ro:_0002331 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002431 ;
+            owl:propertyChainAxiom ( ro:_0002327
+                                     bfo:_0000050
+                                   ) ,
+                                   ( ro:_0002331
+                                     bfo:_0000050
+                                   ) ;
+            skos:altLabel "actively involved in" ,
+                          "enables part of" ;
+            skos:definition "C involved_in p if and only if c enables some process p', and p' is part of p [RO]" ;
+            skos:prefLabel "involved in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002332
+ro:_0002332 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000057 ;
+            skos:altLabel "regulates levels of" ;
+            skos:definition "P regulates levels of c if p regulates some amount (PATO:0000070) of c [RO]" ;
+            skos:example "every cellular sphingolipid homeostasis process regulates_level_of some sphingolipid" ;
+            skos:prefLabel "regulates levels of (process to entity)" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002333
+ro:_0002333 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002328 ;
+            skos:definition "inverse of enables [RO]" ;
+            skos:prefLabel "enabled by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002334
+ro:_0002334 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002427 ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:domain bfo:_0000015 ;
+            rdfs:range bfo:_0000015 ;
+            skos:prefLabel "regulated by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002335
+ro:_0002335 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002334 ;
+            skos:definition "Inverse of negatively regulates [RO]" ;
+            skos:prefLabel "negatively regulated by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002336
+ro:_0002336 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002334 ;
+            skos:definition "Inverse of positively regulates [RO]" ;
+            skos:prefLabel "positively regulated by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002337
+ro:_0002337 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            skos:definition "A relationship that holds via some process of localization. [RO]" ;
+            skos:prefLabel "related via localization to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002338
+ro:_0002338 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002344 ;
+            skos:definition "This relationship holds between p and l when p is a transport or localization process in which the outcome is to move some cargo c from some initial location l to some destination. [RO]" ;
+            skos:prefLabel "has target start location" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002339
+ro:_0002339 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002344 ;
+            skos:definition "This relationship holds between p and l when p is a transport or localization process in which the outcome is to move some cargo c from a an initial location to some destination l. [RO]" ;
+            skos:prefLabel "has target end location" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002341
+ro:_0002341 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002337 ;
+            skos:definition "Holds between p and l when p is a transportation or localization process and the outcome of this process is to move c from one location to another, and the route taken by c follows a path that is aligned_with l. [RO]" ;
+            skos:prefLabel "results in transport along" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002342
+ro:_0002342 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002344 ;
+            skos:definition "Holds between p and m when p is a transportation or localization process and the outcome of this process is to move c from one location to another, and the route taken by c follows a path that crosses m. [RO]" ;
+            skos:prefLabel "results in transport across" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002344
+ro:_0002344 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002337 ;
+            skos:example "'mitochondrial transport' results_in_transport_to_from_or_in some  mitochondrion (GO:0005739)" ;
+            skos:prefLabel "results in transport to from or in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002350
+ro:_0002350 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf af-x:AFX_0002846 ;
+            owl:inverseOf ro:_0002351 ;
+            rdf:type owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            skos:altLabel "member part of" ;
+            skos:definition "Inverse of has member" ;
+            skos:example "An organism that is a member of a population of organisms. [RO]" ;
+            skos:prefLabel "member of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002351
+ro:_0002351 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf af-x:AFX_0002793 ;
+            rdf:type owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            skos:definition "Has member is a mereological relation between a collection and an item. [RO]" ;
+            skos:prefLabel "has member" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002371
+ro:_0002371 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002170 ,
+                               ro:_0002177 ;
+            rdf:type owl:SymmetricProperty ;
+            skos:definition "A is attached to b if and only if a and b are discrete objects or object parts, and there are physical connections between a and b such that a force pulling a will move b, or a force pulling b will move a. [IAO]" ;
+            skos:prefLabel "attached to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002379
+ro:_0002379 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002131 ;
+            skos:definition "X spatially_coextensive_with y if and only if x and y have the same location [RO]" ;
+            skos:example "A lump of clay and a statue" ;
+            skos:prefLabel "spatially coextensive with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002404
+ro:_0002404 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000062 ,
+                               ro:_0002427 ;
+            owl:inverseOf ro:_0002411 ;
+            skos:definition "inverse of upstream of [RO]" ;
+            skos:prefLabel "causally downstream of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002405
+ro:_0002405 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002087 ,
+                               ro:_0002404 ;
+            owl:inverseOf ro:_0002412 ;
+            skos:definition "inverse of immediately causally upstream of" ;
+            skos:prefLabel "immediately causally downstream of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002410
+ro:_0002410 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002609 ;
+            skos:editorialNote "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect. [IAO]" ;
+            skos:note "This relation groups causal relations between material entities and causal relations between processes. [IAO]" ;
+            skos:prefLabel "causally related to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002411
+ro:_0002411 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000063 ,
+                               ro:_0002418 ;
+            skos:definition "P is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain [RO]" ;
+            skos:prefLabel "causally upstream of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002412
+ro:_0002412 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002090 ,
+                               ro:_0002411 ;
+            skos:definition "P is immediately causally upstream of q if and only if both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p must be an input of q. [RO]" ;
+            skos:prefLabel "immediately causally upstream of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002418
+ro:_0002418 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002501 ;
+            owl:inverseOf ro:_0002427 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "affects" ;
+            skos:definition "P 'causally upstream or within' q if and only if (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q. [RO]" ;
+            skos:prefLabel "causally upstream of or within" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002427
+ro:_0002427 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002501 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:prefLabel "causally downstream of or within" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002428
+ro:_0002428 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002263 ,
+                               ro:_0002431 ;
+            owl:propertyChainAxiom ( ro:_0002327
+                                     ro:_0002211
+                                   ) ,
+                                   ( ro:_0002331
+                                     ro:_0002211
+                                   ) ;
+            skos:definition "C involved in regulation of p if c is involved in some 'p' and p' regulates some p [RO]" ;
+            skos:prefLabel "involved in regulation of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002429
+ro:_0002429 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002428 ;
+            owl:propertyChainAxiom ( ro:_0002327
+                                     ro:_0002213
+                                   ) ,
+                                   ( ro:_0002331
+                                     ro:_0002213
+                                   ) ;
+            skos:prefLabel "involved in positive regulation of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002430
+ro:_0002430 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002428 ;
+            owl:propertyChainAxiom ( ro:_0002327
+                                     ro:_0002212
+                                   ) ,
+                                   ( ro:_0002331
+                                     ro:_0002212
+                                   ) ;
+            skos:prefLabel "involved in negative regulation of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002431
+ro:_0002431 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002264 ,
+                               ro:_0002328 ,
+                               ro:_0002500 ;
+            skos:altLabel "involved in or regulates" ;
+            skos:definition "C involved in or regulates p if and only if either (i) c is involved in p or (ii) c is involved in regulation of p [RO]" ;
+            skos:prefLabel "involved in or involved in regulation of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002434
+ro:_0002434 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000040 ;
+            skos:altLabel "pairwise interacts with" ;
+            skos:definition "A relationship that holds between two entities in which the processes executed by the two entities are causally connected. [RO]" ;
+            skos:editorialNote "This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact. [RO]" ;
+            skos:prefLabel "interacts with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002461
+ro:_0002461 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000056 ;
+            skos:definition "relation used for defining interaction relations. An interaction relation holds when there is an interaction event with two partners. In a directional interaction, one partner is deemed the subject, the other the target [RO]" ;
+            skos:prefLabel "partner in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002462
+ro:_0002462 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002461 ;
+            skos:altLabel "subject in" ;
+            skos:definition "relation used for defining interaction relations; the meaning of s 'subject participant in' p is determined by the type of p, where p must be a directional interaction process. [RO]" ;
+            skos:example "in a predator-prey interaction process the subject is the predator" ;
+            skos:prefLabel "subject participant in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002463
+ro:_0002463 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002461 ;
+            skos:altLabel "target in" ;
+            skos:definition "Relation used for defining interaction relations; the meaning of s 'target participant in' p is determined by the type of p, where p must be a directional interaction process [RO]" ;
+            skos:example "in a predator-prey interaction process the target is the prey" ;
+            skos:prefLabel "target participant in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002500
+ro:_0002500 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002595 ;
+            skos:altLabel "causal agent in" ;
+            skos:definition "A relationship between a material entity and a process where the material entity has some causal role that influences the process. [RO]" ;
+            skos:prefLabel "causal agent in process" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002501
+ro:_0002501 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002410 ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:domain bfo:_0000003 ;
+            rdfs:range bfo:_0000003 ;
+            skos:definition "P is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q. [RO]" ;
+            skos:prefLabel "causal relation between processes" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002502
+ro:_0002502 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            skos:definition "Being determined, based or contingent on something. [Allotrope]" ;
+            skos:prefLabel "depends on" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002503
+ro:_0002503 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002502 ;
+            skos:definition "Q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2 [RO]" ;
+            skos:editorialNote "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C. [RO]" ;
+            skos:prefLabel "towards" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002505
+ro:_0002505 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0000057 ;
+            skos:altLabel "has intermediate product" ;
+            skos:definition "P has intermediate c if and only if p has parts p1, p2 and p1 has output c, and p2 has input c [RO]" ;
+            skos:prefLabel "has intermediate" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002506
+ro:_0002506 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002410 ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000040 ;
+            skos:editorialNote "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect. [RO]" ;
+            skos:prefLabel "causal relation between material entities" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002507
+ro:_0002507 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000050 ,
+                               ro:_0002509 ,
+                               ro:_0002559 ;
+            owl:inverseOf ro:_0002508 ;
+            rdfs:domain ro:_0002577 ;
+            rdfs:range bfo:_0000040 ;
+            skos:altLabel "determined by" ;
+            skos:definition "S determined by f if and only if s is a type of system, and f is a material entity that is part of s, such that f exerts a strong causal influence on the functioning of s, and the removal of f would cause the collapse of s. [RO]" ;
+            skos:prefLabel "determined by (system to material entity)" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002508
+ro:_0002508 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002566 ;
+            skos:altLabel "determines" ;
+            skos:prefLabel "determines (material entity to system)" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002509
+ro:_0002509 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002131 ,
+                               ro:_0002506 ;
+            rdfs:domain ro:_0002577 ;
+            rdfs:range bfo:_0000040 ;
+            owl:propertyChainAxiom ( ro:_0002507
+                                     bfo:_0000050
+                                   ) ;
+            skos:definition "S 'determined by part of' w if and only if there exists some f such that (1) s 'determined by' f and (2) f part_of w, or f=w. [RO]" ;
+            skos:prefLabel "determined by part of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002514
+ro:_0002514 rdf:type owl:ObjectProperty ;
+            skos:definition "A relation that holds between two entities that have the property of being sequences or having sequences. [RO]" ;
+            skos:prefLabel "sequentially related to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002515
+ro:_0002515 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002527 ;
+            skos:definition "x is sequentially adjacent to y if and only if x and y do not overlap and if there are no base units intervening between x and y [RO]" ;
+            skos:prefLabel "sequentially adjacent to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002516
+ro:_0002516 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002524 ;
+            owl:inverseOf ro:_0002517 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "started by" ;
+            skos:definition "x has start sequence y if the start of x is identical to the start of y, and x has y as a subsequence [RO]" ;
+            skos:prefLabel "has start sequence" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002517
+ro:_0002517 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002524 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "starts" ;
+            skos:definition "inverse of has start sequence [RO]" ;
+            skos:prefLabel "is start sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002518
+ro:_0002518 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002524 ;
+            owl:inverseOf ro:_0002519 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "ended by" ;
+            skos:definition "x has end sequence y if the end of x is identical to the end of y, and x has y as a subsequence [RO]" ;
+            skos:prefLabel "has end sequence" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002519
+ro:_0002519 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002525 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "ends" ;
+            skos:definition "inverse of has end sequence [RO]" ;
+            skos:prefLabel "is end sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002522
+ro:_0002522 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002514 ;
+            owl:inverseOf ro:_0002523 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "x bounds the sequence of y if and only if the upstream-most part of x is upstream of or coincident with the upstream-most part of y, and the downstream-most part of x is downstream of or coincident with the downstream-most part of y [RO]" ;
+            skos:prefLabel "bounds sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002523
+ro:_0002523 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002514 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "inverse of bounds sequence of [RO]" ;
+            skos:prefLabel "is bound by sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002524
+ro:_0002524 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000051 ,
+                               ro:_0002522 ,
+                               ro:_0002526 ;
+            owl:inverseOf ro:_0002525 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "contains" ;
+            skos:definition "x has subsequence y if and only if all of the sequence parts of x are sequence parts of y [RO]" ;
+            skos:prefLabel "has subsequence" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002525
+ro:_0002525 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfo:_0000050 ,
+                               ro:_0002523 ,
+                               ro:_0002526 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:altLabel "contained by" ;
+            skos:definition "inverse of has subsequence [RO]" ;
+            skos:prefLabel "is subsequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002526
+ro:_0002526 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002131 ,
+                               ro:_0002514 ;
+            skos:definition "x overlaps the sequence of x if and only if x has a subsequence z and z is a subsequence of y. [RO]" ;
+            skos:prefLabel "overlaps sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002527
+ro:_0002527 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002514 ;
+            rdf:type owl:SymmetricProperty ;
+            skos:altLabel "disconnected from" ;
+            skos:definition "x does not overlaps the sequence of x if and only if there is no z such that x has a subsequence z and z is a subsequence of y. [RO]" ;
+            skos:prefLabel "does not overlap sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002528
+ro:_0002528 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002527 ;
+            owl:inverseOf ro:_0002529 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "inverse of downstream sequence of [RO]" ;
+            skos:prefLabel "is upstream sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002529
+ro:_0002529 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002527 ;
+            rdf:type owl:TransitiveProperty ;
+            skos:definition "x is downstream of the sequence of y if and only if either (1) x and y have sequence units, and all units of x are downstream of all units of y, or (2) x and y are sequence units, and x is either immediately downstream of y, or transitively downstream of y. [RO]" ;
+            skos:prefLabel "is downstream of sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002530
+ro:_0002530 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002515 ,
+                               ro:_0002529 ;
+            owl:inverseOf ro:_0002531 ;
+            skos:definition "x is immediately downstream of the sequence of y if and only if either (1) x and y have sequence units, and all units of x are downstream of all units of y, and x is sequentially adjacent to y, or (2) x and y are sequence units, in which case the immediately downstream relation is primitive and defined by context: for DNA bases, y would be adjacent and 5' to y [RO]" ;
+            skos:prefLabel "is immediately downstream of sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002531
+ro:_0002531 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002515 ,
+                               ro:_0002528 ;
+            skos:definition "inverse of immediately downstream of [RO]" ;
+            skos:prefLabel "is immediately upstream sequence of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002559
+ro:_0002559 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002506 ;
+            owl:inverseOf ro:_0002566 ;
+            skos:altLabel "causally influenced by" ;
+            skos:prefLabel "causally influenced by (material entity to material entity)" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002566
+ro:_0002566 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002506 ;
+            skos:altLabel "causally influences" ;
+            skos:definition "Holds between materal entities a and b if the activity of a is causally upstream of the activity of b, or causally upstream of a an activity that modifies b [RO]" ;
+            skos:prefLabel "causally influences (material entity to material entity)" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002570
+ro:_0002570 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002131 ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000040 ;
+            skos:definition "X is a conduit for y if and only if y overlaps through the lumen_of of x, and y has parts on either side of the lumen of x. [RO]" ;
+            skos:editorialNote "This relation holds between a thing with a 'conduit' (e.g. a bone foramen) and a 'conduee' (for example, a nerve) such that at the time the relationship holds, the conduee has two ends sticking out either end of the conduit. It should therefore note be used for objects that move through the conduit but whose spatial extent does not span the passage. For example, it would not be used for a mountain that contains a long tunnel through which trains pass. Nor would we use it for a digestive tract and objects such as food that pass through. [RO]" ;
+            skos:prefLabel "conduit for" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002584
+ro:_0002584 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002328 ,
+                               ro:_0002595 ;
+            owl:propertyChainAxiom ( bfo:_0000051
+                                     ro:_0002215
+                                   ) ;
+            skos:definition "S 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p [RO]" ;
+            skos:prefLabel "has part structure that is capable of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002595
+ro:_0002595 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002410 ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000015 ;
+            skos:definition "A relationship that holds between a material entity and a process in which causality is involved, with either the material entity or some part of the material entity exerting some influence over the process, or the process influencing some aspect of the material entity. [RO]" ;
+            skos:prefLabel "causal relation between material entity and a process" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002607
+ro:_0002607 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002610 ;
+            skos:definition "C is marker for d if and only if the presence or occurrence of d is correlated with the presence of occurrence of c, and the observation of c is used to infer the presence or occurrence of d. Note that this does not imply that c and d are in a direct causal relationship, as it may be the case that there is a third entity e that stands in a direct causal relationship with c and d. [RO]" ;
+            skos:prefLabel "is marker for" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002609
+ro:_0002609 rdf:type owl:ObjectProperty ;
+            skos:definition "A relationship that holds between two entities, where the relationship holds based on the presence or absence of statistical dependence relationship. The entities may be statistical variables, or they may be other kinds of entities such as diseases, chemical entities or processes. [RO]" ;
+            skos:editorialNote "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect. [IAO]" ;
+            skos:prefLabel "related via dependence to" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002610
+ro:_0002610 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002609 ;
+            skos:definition "A relationship that holds between two entities, where the entities exhibit a statistical dependence relationship. The entities may be statistical variables, or they may be other kinds of entities such as diseases, chemical entities or processes. [RO]" ;
+            skos:editorialNote "Groups both positive and negative correlation" ;
+            skos:prefLabel "correlated with" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003000
+ro:_0003000 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf ro:_0003001 ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000040 ;
+            skos:definition "a produces b if some process that occurs_in a has_output b, where a and b are material entities. [RO]" ;
+            skos:editorialNote "Note that this definition doesn't quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue [RO]" ;
+            skos:example "chondroblast produces avascular GAG-rich matrix" ,
+                         "hybridoma cell line produces monoclonal antibody reagent" ;
+            skos:prefLabel "produces" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003001
+ro:_0003001 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain bfo:_0000040 ;
+            rdfs:range bfo:_0000040 ;
+            skos:definition "inverse of produces" ;
+            skos:prefLabel "produced by" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003302
+ro:_0003302 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0002410 ;
+            skos:definition "A relationship between an entity (e.g. a genotype, genetic variation, chemical, or environmental exposure) and a condition (a phenotype or disease), where the entity has some causal or contributing role that influences the condition. [RO]" ;
+            skos:prefLabel "causes or contributes to condition" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003303
+ro:_0003303 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0003302 ;
+            skos:definition "A relationship between an entity (e.g. a genotype, genetic variation, chemical, or environmental exposure) and a condition (a phenotype or disease), where the entity has some causal role for the condition. [RO]" ;
+            skos:prefLabel "causes condition" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003304
+ro:_0003304 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ro:_0003302 ;
+            skos:definition "A relationship between an entity (e.g. a genotype, genetic variation, chemical, or environmental exposure) and a condition (a phenotype or disease), where the entity has some contributing role that influences the condition. [RO]" ;
+            skos:prefLabel "contributes to condition" .
+
+
+###  http://qudt.org/schema/qudt#quantityKind
+qudt:quantityKind rdf:type owl:ObjectProperty ;
+                  rdfs:range qudt:QuantityKind ;
+                  af-x:AFX_0002865 <http://qudt.org/1.1/schema/qudt> ;
+                  skos:altLabel "quantity kind" ;
+                  skos:prefLabel "has quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#quantityValue
+qudt:quantityValue rdf:type owl:ObjectProperty ;
+                   af-x:AFX_0002865 <http://qudt.org/1.1/schema/qudt> ;
+                   skos:altLabel "quantity value" ;
+                   skos:prefLabel "has quantity value" .
+
+
+###  http://qudt.org/schema/qudt#unit
+qudt:unit rdf:type owl:ObjectProperty ;
+          rdfs:range qudt:Unit ;
+          af-x:AFX_0002865 <http://qudt.org/1.1/schema/qudt> ;
+          skos:altLabel "unit" ;
+          skos:prefLabel "has unit" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000604
+af-x:AFX_0000604 rdf:type owl:DatatypeProperty ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:onDatatype xsd:integer ;
+                              owl:withRestrictions ( [ xsd:minInclusive 0
+                                                     ]
+                                                   )
+                            ] ;
+                 skos:altLabel "number of objects" ,
+                               "objects count" ,
+                               "size" ;
+                 skos:definition "The number of objects counted. [Allotrope]" ;
+                 skos:prefLabel "count" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000670
+af-x:AFX_0000670 rdf:type owl:DatatypeProperty ;
+                 skos:definition "The lowest value of a range of literals. [Allotrope]" ;
+                 skos:prefLabel "minimum value" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000671
+af-x:AFX_0000671 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000670 ;
+                 skos:definition "The lowest value of a range excluding the boundary value. [Allotrope]" ;
+                 skos:prefLabel "minimum value exclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000672
+af-x:AFX_0000672 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000670 ;
+                 skos:definition "The lowest value of a range including the boundary value. [Allotrope]" ;
+                 skos:prefLabel "minimum value inclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000674
+af-x:AFX_0000674 rdf:type owl:DatatypeProperty ;
+                 skos:definition "The highest value of a range of literals. [Allotrope]" ;
+                 skos:prefLabel "maximum value" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000675
+af-x:AFX_0000675 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000674 ;
+                 skos:definition "The highest value of a range excluding the boundary value. [Allotrope]" ;
+                 skos:prefLabel "maximum value exclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000676
+af-x:AFX_0000676 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000674 ;
+                 skos:definition "The highest value of a range including the boundary value. [Allotrope]" ;
+                 skos:prefLabel "maximum value inclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000678
+af-x:AFX_0000678 rdf:type owl:DatatypeProperty ;
+                 skos:altLabel "valid" ;
+                 skos:definition "The property flags an information as correct and without errors. [Allotrope]" ;
+                 skos:prefLabel "is valid" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000684
+af-x:AFX_0000684 rdf:type owl:DatatypeProperty ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:onDatatype xsd:integer ;
+                              owl:withRestrictions ( [ xsd:minInclusive 0
+                                                     ]
+                                                   )
+                            ] ;
+                 skos:definition "Position in an ordered list. [Allotrope]" ;
+                 skos:prefLabel "index" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000685
+af-x:AFX_0000685 rdf:type owl:DatatypeProperty ;
+                 skos:altLabel "step size value" ;
+                 skos:definition "The difference between two discrete points next to each other in a range of discrete values. [Allotrope]" ;
+                 skos:example "A device property can be set between a minimum and maximum value but only in steps of the increment value." ;
+                 skos:prefLabel "increment value" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000690
+af-x:AFX_0000690 rdf:type owl:DatatypeProperty ;
+                 skos:altLabel "value" ;
+                 skos:definition "The literal piece of information as part of some information entity object. [Allotrope]" ;
+                 skos:prefLabel "has value" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001198
+af-x:AFX_0001198 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000604 ;
+                 rdfs:domain af-c:AFC_0000166 ;
+                 skos:altLabel "count" ,
+                               "length" ,
+                               "size" ;
+                 skos:definition "The collection size is the number of entries in a collection. [Allotrope]" ;
+                 skos:prefLabel "collection size" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0001732
+af-x:AFX_0001732 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000690 ;
+                 skos:definition "A value that used as a basis for comparison. [Allotrope]" ;
+                 skos:prefLabel "reference value" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002705
+af-x:AFX_0002705 rdf:type owl:DatatypeProperty ;
+                 rdfs:domain af-r:AFR_0000958 ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:onDatatype xsd:integer ;
+                              owl:withRestrictions ( [ xsd:minInclusive 0
+                                                     ]
+                                                   )
+                            ] ;
+                 skos:altLabel "degree" ,
+                               "order" ,
+                               "rank" ;
+                 skos:definition "Tensor rank is the total number of indices required to identify each component of a tensor uniquely. It is equal to the dimension of the tensor. [Wikipedia]" ;
+                 skos:prefLabel "tensor rank" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002742
+af-x:AFX_0002742 rdf:type owl:DatatypeProperty ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:onDatatype xsd:integer ;
+                              owl:withRestrictions ( [ xsd:minInclusive 0
+                                                     ]
+                                                   )
+                            ] ;
+                 skos:definition "The second index value in a multi-dimensional datum. [Allotrope]" ;
+                 skos:prefLabel "index 1" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002743
+af-x:AFX_0002743 rdf:type owl:DatatypeProperty ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:onDatatype xsd:integer ;
+                              owl:withRestrictions ( [ xsd:minInclusive 0
+                                                     ]
+                                                   )
+                            ] ;
+                 skos:definition "The first index value in a multi-dimensional datum. [Allotrope]" ;
+                 skos:prefLabel "index 0" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002861
+af-x:AFX_0002861 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000671 ;
+                 skos:altLabel "error min exclusive" ;
+                 skos:definition "Minimum error exclusive is the absolute error amount (exclusive) by which the actual value could be lower than the stated value. [Allotrope]" ;
+                 skos:prefLabel "minimum error exclusive" .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002862
+af-x:AFX_0002862 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf af-x:AFX_0000675 ;
+                 skos:altLabel "error max exclusive" ;
+                 skos:definition "Maximum error exclusive is the absolute error amount (exclusive) by which the actual value could be higher than the stated value. [Allotrope]" ;
+                 skos:prefLabel "maximum error exclusive" .
+
+
+###  http://qudt.org/schema/qudt#numericValue
+qudt:numericValue rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:double ;
+                  skos:altLabel "numeric value" ;
+                  skos:prefLabel "has numeric value" .
+
+
+###  http://qudt.org/schema/qudt#relativeStandardUncertainty
+qudt:relativeStandardUncertainty rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:double ;
+                                 skos:altLabel "relative standard uncertainty" ;
+                                 skos:definition "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value. [QUDT]" ;
+                                 skos:prefLabel "has relative standard uncertainty" .
+
+
+###  http://qudt.org/schema/qudt#standardUncertainty
+qudt:standardUncertainty rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:double ;
+                         skos:altLabel "standard uncertainty" ;
+                         skos:definition "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements. [QUDT]" ;
+                         skos:prefLabel "has standard uncertainty" .
+
+
+###  http://qudt.org/schema/qudt#symbol
+qudt:symbol rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            skos:altLabel "symbol" ;
+            skos:definition "The symbol for a unit is a glyph that is used to represent the unit in a compact form. [QUDT]" ;
+            skos:example "For example, the symbol for the US Dollar is $. This contrasts with unit:abbreviation, which gives a short alphanumeric abbreviation for the unit. (I.e. USD for US Dollar). [QUDT]" ;
+            skos:prefLabel "has symbol" .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty ;
+              af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:label "notation" ;
+              skos:definition "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme." ;
+              skos:prefLabel "notation" ;
+              skos:scopeNote "By convention, skos:notation is used with a typed literal in the object position of the triple." .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/common#AFC_0000050
+af-c:AFC_0000050 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/common#AFC_0000090
+af-c:AFC_0000090 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000847
+af-e:AFE_0000847 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000880
+af-m:AFM_0000880 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000916
+af-r:AFR_0000916 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000917
+af-r:AFR_0000917 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000923
+af-r:AFR_0000923 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000938
+af-r:AFR_0000938 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000992
+af-r:AFR_0000992 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001561
+af-r:AFR_0001561 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000012
+af-rl:AFRL_0000012 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000015
+af-rl:AFRL_0000015 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000003
+bfo:_0000003 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000004
+bfo:_0000004 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+bfo:_0000015 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000020
+bfo:_0000020 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+bfo:_0000023 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000005
+iao:_0000005 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+iao:_0000030 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002577
+ro:_0002577 rdf:type owl:Class ;
+            rdfs:subClassOf bfo:_0000040 ;
+            skos:prefLabel "system" .
+
+
+###  http://qudt.org/schema/qudt#QuantityKind
+qudt:QuantityKind rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt#QuantityValue
+qudt:QuantityValue rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt#Unit
+qudt:Unit rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

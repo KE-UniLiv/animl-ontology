@@ -1,3 +1,411 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c49d846d76fda3492ea09a6c3627e31f4fb2e89292ee9258b8a61ac769655b51
-size 28672
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-spin-resonance#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-spin-resonance#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-spin-resonance> rdf:type owl:Ontology ;
+                                                                                         owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-spin-resonance> ;
+                                                                                         owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                                         dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                         dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                         dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                         dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                                    <http://purl.allotrope.org/voc/copyright> ;
+                                                                                         dct:title "AFO ESR Domain Ontology (WD/2025/06)" ;
+                                                                                         owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/electron-spin-resonance> ;
+                                                                                         owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000100
+af-p:AFP_0000100 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "HF-EPR" ,
+                               "HF-ESR" ,
+                               "high frequency electron paramagnetic resonance spectroscopy" ,
+                               "high frequency electron spin resonance spectroscopy" ,
+                               "high-field EPR" ,
+                               "high-field ESR" ,
+                               "high-field electron paramagnetic resonance spectroscopy" ,
+                               "high-field electron spin resonance spectroscopy" ,
+                               "high-frequency EPR" ,
+                               "high-frequency ESR" ;
+                 skos:definition "A type of spectroscopy where the response of an atom with an unpaired electron to short (ns) pulses of high-frequency microwave radiation (mm wavelength) in a high magnetic field is measured. [CHMO]" ;
+                 skos:prefLabel "high-frequency electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000222
+af-p:AFP_0000222 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000333 ;
+                 skos:altLabel "LODESR" ,
+                               "longitudinally-detected EPR" ,
+                               "longitudinally-detected ESR" ;
+                 skos:definition "A type of spectroscopy where the longitudinal response of an atom with an unpaired electron in a magnetic field to two transverse waves is detected. [CHMO]" ;
+                 skos:prefLabel "longitudinally detected electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000271
+af-p:AFP_0000271 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "2D-HYSCORE" ,
+                               "HYSCORE" ,
+                               "hyperfine sublevel correlation" ;
+                 skos:definition "A type of two-dimensional EPR spectroscopy based on the electron spin-echo envelope modulation (ESEEM) effect, where a sequence of four microwave pulses is applied to the sample and the stimulated spin-echo produced is measured. [CHMO]" ;
+                 skos:prefLabel "hyperfine sublevel correlation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000333
+af-p:AFP_0000333 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000741 ;
+                 skos:altLabel "c.w. EPR" ,
+                               "c.w. ESR" ,
+                               "continuous wave EPR" ,
+                               "continuous wave ESR" ,
+                               "continuous wave electron paramagnetic resonance spectroscopy" ,
+                               "continuous wave electron spin resonance spectrometry" ,
+                               "continuous wave electron spin resonance spectroscopy" ,
+                               "cw-EPR" ,
+                               "cw-ESR" ;
+                 skos:definition "A type of spectroscopy where the response of an atom with an unpaired electron to a perturbing magnetic field is measured as a function of the frequency of a periodic perturbation. [CHMO]" ;
+                 skos:prefLabel "continuous-wave electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000369
+af-p:AFP_0000369 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001635 ;
+                 skos:altLabel "three pulse ESEEM" ,
+                               "three pulse electron spin echo envelope modulation" ,
+                               "three-pulse ESEEM" ;
+                 skos:definition "A type of pulsed EPR spectroscopy which is used to observe the electron spin echo in a paramagnetic system as a function of the time that separates the three pulses causing the echo. This technique is a powerful probe of the radial distribution of magnetic nuclear spins in the environment of the electron spins producing the echo. [CHMO]" ;
+                 skos:prefLabel "three-pulse electron spin-echo envelope modulation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000398
+af-p:AFP_0000398 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001635 ;
+                 skos:altLabel "two pulse  ESEEM" ,
+                               "two pulse electron spin echo envelope modulation" ,
+                               "two-pulse ESEEM" ;
+                 skos:definition "A type of pulsed EPR spectroscopy which is used to observe the electron spin echo in a paramagnetic system as a function of the time that separates the two pulses causing the echo. This technique is a powerful probe of the radial distribution of magnetic nuclear spins in the environment of the electron spins producing the echo. [CHMO]" ;
+                 skos:prefLabel "two-pulse electron spin-echo envelope modulation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000406
+af-p:AFP_0000406 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002216 ;
+                 skos:altLabel "EPR oximetry" ,
+                               "EPR spin-label oximetry" ,
+                               "EPR spin-probe oximetry" ,
+                               "ESR oximetry" ,
+                               "ESR spin-label oximetry" ,
+                               "ESR spin-probe oximetry" ,
+                               "electron paramagnetic resonance oximetry " ,
+                               "electron paramagnetic resonance spin-label oximetry" ,
+                               "electron paramagnetic resonance spin-probe oximetry" ,
+                               "electron spin resonance spin-label oximetry" ,
+                               "electron spin resonance spin-probe oximetry" ,
+                               "spin-label oximetry" ,
+                               "spin-probe oximetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000432
+af-p:AFP_0000432 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "63Cu EPR" ,
+                               "63Cu ESR" ,
+                               "63Cu pulsed electron paramagnetic resonance spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the response of a 63Cu atom to short (ns) pulses of microwave radiation in a magnetic field is measured. [CHMO]" ;
+                 skos:prefLabel "63Cu pulsed electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000734
+af-p:AFP_0000734 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "low frequency EPR" ,
+                               "low frequency ESR" ,
+                               "low-frequency EPR" ,
+                               "low-frequency ESR" ,
+                               "low-frequency electron paramagnetic resonance spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the response of an atom with an unpaired electron to short (ns) pulses of low-frequency microwave, L-band (cm wavelength) or radio frequency (m wavelength) radiation in a magnetic field is measured. [CHMO]" ;
+                 skos:prefLabel "low-frequency electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000737
+af-p:AFP_0000737 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "X-band EPR spectroscopy" ,
+                               "X-band ESR spectroscopy" ,
+                               "X-band electron paramagnetic resonance spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the response of an atom with an unpaired electron to short (ns) pulses of microwave radiation in a magnetic field is measured. The microwave radiation used has an approximate frequency of 9 GHz, known as the 'X-band'. [CHMO]" ;
+                 skos:prefLabel "X-band electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001409
+af-p:AFP_0001409 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001635 ;
+                 skos:altLabel "14N ESEEM" ,
+                               "14N electron spin echo envelope modulation" ,
+                               "nitrogen-14 ESEEM" ,
+                               "nitrogen-14 electron spin echo envelope modulation" ;
+                 skos:definition "A type of pulsed EPR spectroscopy which is used to observe the electron spin echo in 14N nuclei as a function of the time that separates the pulses causing the echo. This technique is a powerful probe of the radial distribution of magnetic nuclear spins in the environment of the electron spins producing the echo. [CHMO]" ;
+                 skos:prefLabel "14N electron spin-echo envelope modulation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001516
+af-p:AFP_0001516 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "65Cu EPR" ,
+                               "65Cu ESR" ,
+                               "65Cu pulsed electron paramagnetic resonance spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the response of a 65Cu atom to short (ns) pulses of microwave radiation in a magnetic field is measured. [CHMO]" ;
+                 skos:prefLabel "65Cu pulsed electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001547
+af-p:AFP_0001547 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000741 ;
+                 skos:altLabel "pulse EPR" ,
+                               "pulse ESR" ,
+                               "pulse electron paramagnetic resonance spectroscopy" ,
+                               "pulse electron spin resonance spectrometry" ,
+                               "pulsed EPR" ,
+                               "pulsed ESR" ,
+                               "pulsed electron spin resonance spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the response of an atom with an unpaired electron to short (ns) pulses of microwave radiation in a magnetic field is measured. [CHMO]" ;
+                 skos:prefLabel "pulsed electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001635
+af-p:AFP_0001635 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "ESEEM" ,
+                               "electron spin echo envelope modulation" ;
+                 skos:definition "A type of pulsed EPR spectroscopy which is used to observe the electron spin echo in a paramagnetic system as a function of the time that separates the pulses causing the echo. This technique is a powerful probe of the radial distribution of magnetic nuclear spins in the environment of the electron spins producing the echo. [CHMO]" ;
+                 skos:prefLabel "electron spin-echo envelope modulation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001764
+af-p:AFP_0001764 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "ST-EPR" ,
+                               "ST-ESR" ,
+                               "saturation transfer electron spin resonance spectroscopy" ,
+                               "saturation transfer spectroscopy" ,
+                               "saturation-transfer EPR" ,
+                               "saturation-transfer ESR" ,
+                               "saturation-transfer spectroscopy" ;
+                 skos:definition "A type of spectroscopy used to measure very slow rotational motions where the response of an atom with an unpaired electron to short (ns) pulses of microwave radiation in a magnetic field is measured. The microwave energy absorbed by the spins is such that there is an equal population of upper and lower spin states (described as 'saturated'). [CHMO]" ;
+                 skos:prefLabel "saturation-transfer electron spin resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002002
+af-p:AFP_0002002 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "spin trap EPR" ,
+                               "spin trap ESR" ,
+                               "spin-trap EPR" ,
+                               "spin-trap ESR" ,
+                               "spin-trap electron spin resonance spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the response of an unstable free radical to short (ns) pulses of microwave radiation in a magnetic field is measured by first  forming a more stable radical adduct (e.g. a nitroxide radical) with a nitrone or nitroso compound (the 'spin trap'). [CHMO]" ;
+                 skos:prefLabel "spin-trap electron paramagnetic resonance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002167
+af-p:AFP_0002167 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001547 ;
+                 skos:altLabel "SP-PLP-EPR" ,
+                               "SP-PLP-ESR" ,
+                               "single pulse-pulsed laser polymerization-electron paramagnetic resonance " ,
+                               "single pulse-pulsed laser polymerization-electron spin resonance " ;
+                 skos:definition "A technique for measuring the time-resolved concentration of radicals during polymerization reactions. The polymerization is initiated by a single pulse of laser radiation and the radical concentration is monitored by measuring response of the unpaired electrons to short (ns) pulses of microwave radiation in a magnetic field. [CHMO]" ;
+                 skos:prefLabel "single pulse-pulsed laser polymerization-electron spin resonance" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000072
+af-r:AFR_0000072 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000387 ;
+                 skos:altLabel "continuous wave electron paramagnetic resonance spectrum" ,
+                               "continuous-wave electron paramagnetic resonance spectrum" ,
+                               "cw-EPR spectra" ,
+                               "cw-EPR spectrum" ,
+                               "cw-ESR spectra" ,
+                               "cw-ESR spectrum" ;
+                 skos:definition "A plot of intensity vs. magnetic field strength obtained by measuring the absorption of radiation due to spin-state transitions of unpaired electrons against the magnetic field strength. [CHMO]" ;
+                 skos:prefLabel "continuous-wave electron spin resonance spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000126
+af-r:AFR_0000126 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000387 ;
+                 skos:altLabel "X-band EPR spectra" ,
+                               "X-band EPR spectrum" ,
+                               "X-band ESR spectra" ,
+                               "X-band ESR spectrum" ,
+                               "X-band electron paramagnetic resonance spectra" ,
+                               "X-band electron paramagnetic resonance spectrum" ;
+                 skos:definition "A plot of intensity vs. magnetic field strength obtained by measuring the absorption of radiation due to spin-state transitions of unpaired electrons against a perturbing magnetic field, in the presence of fixed-frequency microwave radiation of approximate frequency 9 GHz (known as the 'X-band'). [CHMO]" ;
+                 skos:prefLabel "X-band electron spin resonance spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000334
+af-r:AFR_0000334 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000387 ;
+                 skos:altLabel "HYSCORE spectra" ,
+                               "HYSCORE spectrum" ;
+                 skos:definition "A plot of intensity vs. magnetic field strength obtained by measuring the absorption of radiation due to spin-state transitions of unpaired electrons against a perturbing magnetic field, in the presence of fixed-frequency microwave radiation. A two-dimensional spectrum which plots the resonance frequency of electrons in the same magnetic environment, obtained from spectroscopy ased on the electron spin-echo envelope modulation (ESEEM) effect, where a sequence of four microwave pulses is applied to the sample and the stimulated spin-echo produced is measured. [CHMO]" ;
+                 skos:prefLabel "hyperfine sublevel correlation spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000387
+af-r:AFR_0000387 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000068 ;
+                 skos:altLabel "EPR spectra" ,
+                               "EPR spectrum" ,
+                               "ESR spectra" ,
+                               "ESR spectrum" ,
+                               "electron paramagnetic resonance spectra" ,
+                               "electron paramagnetic resonance spectrum" ,
+                               "electron spin resonance spectra" ,
+                               "electron spin resonance spectrum" ;
+                 skos:definition "A plot of intensity vs. magnetic field strength obtained by measuring the absorption of radiation due to spin-state transitions of unpaired electrons against a perturbing magnetic field, in the presence of fixed-frequency microwave radiation. EPR spectra are often represented without axes. [CHMO]" ;
+                 skos:prefLabel "electron spin resonance spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000463
+af-r:AFR_0000463 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000387 ;
+                 skos:altLabel "ESEEM spectrum" ;
+                 skos:definition "A plot of intensity vs. magnetic field strength obtained by measuring the absorption of radiation due to electron spin-echo envelope modulation against the resonant frequency of the unpaired electrons. [CHMO]" ;
+                 skos:prefLabel "electron spin-echo envelope modulation spectrum" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2019 Allotrope Foundation" ;
+                                          dct:title "(c) 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

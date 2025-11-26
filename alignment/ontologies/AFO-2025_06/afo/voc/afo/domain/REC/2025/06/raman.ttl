@@ -1,3 +1,399 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a517369769522fe0154763123aeb208ae281fbd2c82863e1d3fbac0bafde2f8
-size 23564
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/raman#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/raman#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/raman> rdf:type owl:Ontology ;
+                                                                        owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/raman> ;
+                                                                        owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ,
+                                                                                    <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/detection> ,
+                                                                                    <http://purl.allotrope.org/voc/qb/REC/2018/10/cube> ;
+                                                                        dct:contributor <http://www.allotrope.org> ;
+                                                                        dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                        dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                        dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                        dct:publisher <http://www.allotrope.org> ;
+                                                                        dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                   <http://purl.allotrope.org/voc/copyright> ;
+                                                                        dct:rightsHolder <http://www.allotrope.org> ;
+                                                                        dct:title "AFO Raman Domain Ontology (REC/2025/06)" ;
+                                                                        owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/raman> ;
+                                                                        owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000551
+af-e:AFE_0000551 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000047
+af-p:AFP_0000047 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001062
+af-p:AFP_0001062 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "FT-Raman" ,
+                               "Fourier transform Raman spectrometry" ;
+                 skos:definition "A type of vibrational spectroscopy where the Raman scattering of light by a sample is detected and the spectrum is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "Fourier transform Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003682
+af-p:AFP_0003682 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000236
+af-q:AFQ_0000236 rdf:type owl:Class ;
+                 rdfs:subClassOf af-q:AFQ_0000036 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0000080> ;
+                                   owl:someValuesFrom af-e:AFE_0000551
+                                 ] ;
+                 skos:altLabel "Raman spectrometer setting" ;
+                 skos:definition "Raman spectrometer configuration is a device configuration of a Raman spectrometer. [Allotrope]" ;
+                 skos:prefLabel "Raman spectrometer configuration" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001247
+af-r:AFR_0001247 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001589
+af-r:AFR_0001589 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001588 ;
+                 dct:source "PAC, 1981, 53, (Presentation of raman spectra in data collections (Recommendations 1981))" ;
+                 skos:altLabel "intensity" ;
+                 skos:definition "Raman intensity is the intensity of a Raman signal. [Allotrope]" ;
+                 skos:prefLabel "Raman intensity" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001590
+af-r:AFR_0001590 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001588 ;
+                 dct:source "PAC, 1981, 53, (Presentation of raman spectra in data collections (Recommendations 1981))" ;
+                 skos:altLabel "intensity" ,
+                               "interferogram intensity" ;
+                 skos:definition "Raman interferogram intensity is the intensity of the Raman interferogram signal. [Allotrope]" ;
+                 skos:prefLabel "Raman interferogram intensity" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001591
+af-r:AFR_0001591 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001592 ;
+                 dct:source "PAC, 1981, 53, (Presentation of raman spectra in data collections (Recommendations 1981))" ,
+                            "https://en.wikipedia.org/wiki/Raman_spectroscopy" ;
+                 skos:definition "Raman shift is the difference in wavenumbers between the observed Raman radiation and that of the excitation source. [Allotrope]" ;
+                 skos:prefLabel "Raman wavenumber shift" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001593
+af-r:AFR_0001593 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001505 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom af-q:AFQ_0000236
+                                 ] ;
+                 skos:definition "A Raman spectrometer setting is a setting for a Raman spectrometer or its components. [Allotrope]" ;
+                 skos:prefLabel "Raman spectrometer setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001594
+af-r:AFR_0001594 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001593 ,
+                                 af-r:AFR_0002479 ;
+                 dct:source "PAC, 1981, 53, (Presentation of raman spectra in data collections (Recommendations 1981))" ;
+                 skos:altLabel "excitation laser wavelength" ,
+                               "laser wavelength" ;
+                 skos:definition "The excitation laser wavelength setting is the wavelength of the laser beam used for the Raman excitation of the sample. [Allotrope]" ;
+                 skos:prefLabel "excitation laser wavelength setting (Raman)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001595
+af-r:AFR_0001595 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001593 ;
+                 dct:source "PAC, 1981, 53, (Presentation of raman spectra in data collections (Recommendations 1981))" ;
+                 skos:altLabel "excitation laser power" ,
+                               "laser power" ;
+                 skos:definition "The excitation laser power setting is the power of the laser beam used for exciting the sample. [Allotrope]" ;
+                 skos:prefLabel "excitation laser power setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001596
+af-r:AFR_0001596 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001247 ,
+                                 af-r:AFR_0001593 ;
+                 skos:altLabel "dark background correction (primary)" ;
+                 skos:definition "Dark background correction enabled is a setting for a Raman detector that controls whether compensation for background signals without illumination is active. [Allotrope]" ;
+                 skos:prefLabel "dark background correction active" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001597
+af-r:AFR_0001597 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002104 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0000519
+                                 ] ;
+                 skos:definition "Raman spectrum data cube is a data cube that is a representation of an Raman spectrum. [Allotrope]" ;
+                 skos:prefLabel "Raman spectrum data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001598
+af-r:AFR_0001598 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002104 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0001600
+                                 ] ;
+                 skos:definition "Raman interferogram data cube is a data cube that is a representation of an Raman interferogram. [Allotrope]" ;
+                 skos:prefLabel "Raman interferogram data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001600
+af-r:AFR_0001600 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001601
+af-r:AFR_0001601 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000937 ;
+                 skos:altLabel "interferogram time" ,
+                               "time" ;
+                 skos:definition "Raman interferogram time is time used as abscissa of an Raman interferogram. [Allotrope]" ;
+                 skos:prefLabel "Raman interferogram time" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001674
+af-r:AFR_0001674 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001675 ,
+                                 af-r:AFR_0002410 ;
+                 skos:altLabel "apodization" ,
+                               "apodization filter" ,
+                               "apodization method" ;
+                 skos:definition "Apodization (Raman) is the name of a filter method used in the data apodization of FT Raman spectra. [Allotrope]" ;
+                 skos:prefLabel "apodization (Raman)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001675
+af-r:AFR_0001675 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000553 ;
+                                   owl:someValuesFrom af-p:AFP_0000047
+                                 ] ;
+                 skos:altLabel "Raman parameter" ;
+                 skos:definition "A Raman spectroscopy parameter is a parameter that controls a Raman spectroscopy. [Allotrope]" ;
+                 skos:prefLabel "Raman spectroscopy parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001676
+af-r:AFR_0001676 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001675 ,
+                                 af-r:AFR_0002411 ;
+                 skos:altLabel "number of zero filling" ,
+                               "zero filling factor" ;
+                 skos:definition "The factor of the size increase by time domain zero padding the Fourier transformation of a Raman spectrum. [Allotrope]" ;
+                 skos:prefLabel "zero filling factor (Raman)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001677
+af-r:AFR_0001677 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001675 ,
+                                 af-r:AFR_0002412 ;
+                 skos:altLabel "phase correction" ;
+                 skos:definition "Phase correction (Raman) is the name of a method for phase correction used to adjust FT Raman spectra. [Allotrope]" ;
+                 skos:prefLabel "phase correction (Raman)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002071
+af-r:AFR_0002071 rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                   owl:someValuesFrom af-p:AFP_0000047
+                                 ] ;
+                 skos:altLabel "Raman result" ;
+                 skos:definition "A Raman document is a document that encompasses the information associated with a Raman spectroscopic run. [Allotrope]" ;
+                 skos:prefLabel "Raman document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002328
+af-r:AFR_0002328 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001060 ;
+                 skos:altLabel "3-dimensional Raman spectra" ,
+                               "3-dimensional Raman spectrum" ,
+                               "3D Raman spectra" ,
+                               "3D Raman spectrum" ,
+                               "three dimensional Raman spectra" ,
+                               "three dimensional Raman spectrum" ,
+                               "three-dimensional Raman spectra" ;
+                 skos:definition "A three-dimensional Raman spectrum is a data distribution function that is a plot of Raman intensity versus wavelength and versus time obtained by the inelastic scattering of photons from a monochromatic light source by a sample as a function of time. [Allotrope]" ;
+                 skos:prefLabel "three-dimensional Raman spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002359
+af-r:AFR_0002359 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000576 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "Raman profile result" ;
+                 skos:definition "A Raman profile is a profile that quantifies the intensity of Raman scattering vs. Raman shift (cm-1) over time. [Allotrope]" ;
+                 skos:prefLabel "Raman profile" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002479
+af-r:AFR_0002479 rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

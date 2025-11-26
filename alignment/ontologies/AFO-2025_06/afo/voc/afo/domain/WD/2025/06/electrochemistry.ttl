@@ -1,3 +1,632 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1c61af7d4708b50ed683057e18fcf7180a2ed8ebf612473e757d973ed8eed9a
-size 39086
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electrochemistry#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electrochemistry#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electrochemistry> rdf:type owl:Ontology ;
+                                                                                  owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electrochemistry> ;
+                                                                                  owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                                  dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                  dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                  dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                  dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                             <http://purl.allotrope.org/voc/copyright> ;
+                                                                                  dct:title "AFO Electrochemistry Domain Ontology (WD/2025/06)" ;
+                                                                                  owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2018/11/electrochemistry> ;
+                                                                                  owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000018
+af-e:AFE_0000018 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 dct:source "http://www.gamry.com/application-notes/reference-electrodes/" ;
+                 skos:changeNote "2016-03-23 fix duplicate definition, remove definition from copyrighted source [OSTHUS]" ;
+                 skos:definition "A double junction reference electrode has two junctions to the surrounding solution. [Allotrope]" ;
+                 skos:prefLabel "double junction reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000028
+af-e:AFE_0000028 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 skos:altLabel "reference sensor" ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ,
+                                 "2017-10-25 change pref label [OSTHUS]" ;
+                 skos:definition "A reference electrode provides a fixed potential, which is independent of analyte activity, and is used to compare the measured potential. [Allotrope]" ;
+                 skos:prefLabel "reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000035
+af-e:AFE_0000035 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "counter electrode" ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "An electrode that serves merely to carry the current flowing through an electrochemical cell. [CHMO]" ;
+                 skos:prefLabel "auxiliary electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000036
+af-e:AFE_0000036 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:altLabel "Hydrogen gas electrode" ,
+                               "NHE" ,
+                               "SHE" ,
+                               "hydrogen gas electrode" ,
+                               "normal hydrogen electrode" ,
+                               "standard H2 electrode" ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A reference electrode based on the equilibrium between aqueous protons and electrons on one side and hydrogen gas on the other, in solutions saturated with hydrogen gas. Typically it is made of a thin foil of platinum electrolytically coated with a finely divided deposit of platinum or palladium metal. [CHMO]" ;
+                 skos:prefLabel "standard hydrogen electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000044
+af-e:AFE_0000044 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:altLabel "QRE" ,
+                               "quasireference electrode" ;
+                 skos:definition "An electrode based on a ferrocene or cobaltocene redox couple internal standard through which no appreciable current is allowed to flow and is used to observe or control the potential at a working electrode. [CHMO]" ;
+                 skos:prefLabel "quasi-reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000072
+af-e:AFE_0000072 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000177 ;
+                 skos:altLabel "carbon dioxide analyzer" ,
+                               "dCO2 probe" ,
+                               "dCO2 sensor" ,
+                               "dissolved CO2 probe" ,
+                               "dissolved CO2 sensor" ;
+                 skos:definition "The carbon dioxide sensor is able to detect the amount of dissolved carbon dioxide in a sample. [Allotrope]" ;
+                 skos:prefLabel "dissolved carbon dioxide sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000080
+af-e:AFE_0000080 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:altLabel "Ag-AgCl electrode" ,
+                               "Ag-AgCl reference electrode" ,
+                               "Ag/AgCl" ,
+                               "Ag/AgCl electrode" ,
+                               "Ag/AgCl reference electrode" ,
+                               "silver chloride electrode " ,
+                               "silver-silver chloride electrode" ;
+                 skos:definition "A reference electrode where the electrochemical reaction is between silver metal and silver(I) chloride. [CHMO]" ;
+                 skos:prefLabel "silver/silver chloride reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000083
+af-e:AFE_0000083 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000721 ;
+                 skos:altLabel "RDE" ,
+                               "rotating disk electrode" ;
+                 skos:definition "A type of working electrode which usually consists of a Pt disc (diameter 1.0 mm) sealed in a Teflon carrier which rotates a high speed during the experiment. Rotating-disk electrodes are used to investigate reaction mechanisms. [CHMO]" ;
+                 skos:prefLabel "rotating-disk electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000177
+af-e:AFE_0000177 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "dissolved gas sensor" ;
+                 skos:changeNote "2015-12-14 Improved definition [Amgen]" ,
+                                 "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A gas sensing electrode (GSE) measures dissolved oxygen and carbon dioxide concentrations in an aqueous sample in the form of partial pressure. [Allotrope]" ;
+                 skos:prefLabel "gas sensing electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000281
+af-e:AFE_0000281 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000115 ;
+                 skos:definition "The Standard hydrogen cell forms the basis of the thermodynamic scale of oxidation-reduction potentials. Its absolute electrode potential is estimated to be 0.41 ± 0.02 V at 25 °C, but to form a basis for comparison with all other electrode reactions, hydrogen's standard electrode potential (E0) is declared to be zero at all temperatures. Potentials of any other electrodes are compared with that of the standard hydrogen cell at the same temperature. [Wikipedia]" ;
+                 skos:prefLabel "standard hydrogen cell" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000289
+af-e:AFE_0000289 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000335 ;
+                 skos:altLabel "HMDE" ,
+                               "SMDE" ,
+                               "static drop mercury electrode" ;
+                 skos:definition "An electrode formed of a partial mercury drop of controlled geometry and surface area at the end of a capillary. [CHMO]" ;
+                 skos:prefLabel "hanging mercury drop electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000293
+af-e:AFE_0000293 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001785 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1985, 57, 531. (Definition of pH scales, standard reference values, measurement of pH and related terminology (Recommendations 1984)) on page 541" ;
+                 skos:altLabel "liquid junction" ;
+                 skos:changeNote "2015-11-26 subclass under barrier [OSTHUS]" ,
+                                 "2016-02-02 add harmonized property restrictions [OSTHUS]" ,
+                                 "2024-09-12 Changed [IUPAC Recommendations 2002] attribution to [IUPAC] and added license, rights, and source fields." ;
+                 skos:definition "Any junction between two electrolyte solutions of different composition. Across such a junction there arises a potential difference, called the liquid junction potential. In Cells II, IV, and V, the junction is between the pH standard or unknown solution and the filling solution, or the bridge solution (q.v.), of the reference electrode. [IUPAC]" ;
+                 skos:prefLabel "electrode junction" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000335
+af-e:AFE_0000335 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 skos:altLabel "DME" ;
+                 skos:definition "An electrode formed by a sequence of mercury drops falling from a small aperture. [CHMO]" ;
+                 skos:prefLabel "dropping mercury electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000361
+af-e:AFE_0000361 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:altLabel "Hg/Hg2SO4 electrode" ,
+                               "Hg/Hg2SO4 reference electrode" ,
+                               "MSE" ,
+                               "mercury-mercurous sulfate reference electrode" ;
+                 skos:definition "A reference electrode where the electrochemical reaction is between mercury metal and mercury(II) sulfate. [CHMO]" ;
+                 skos:prefLabel "saturated mercury sulfate electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000467
+af-e:AFE_0000467 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "amperostat" ;
+                 skos:definition "A piece of apparatus that maintains the current through an electrochemical cell at a preset value. [CHMO]" ;
+                 skos:prefLabel "galvanostat" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000485
+af-e:AFE_0000485 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:definition "A sleeve type reference electrode has a movable sleeve that covers the junction. The size of the junction can be regulated by moving the sleeve. [Allotrope]" ;
+                 skos:prefLabel "sleeve type reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000516
+af-e:AFE_0000516 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:definition "A single junction reference electrode has one junction to the surrounding solution. [Allotrope]" ;
+                 skos:prefLabel "single junction reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000548
+af-e:AFE_0000548 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000529 ;
+                 skos:definition "Ion-exchange resins are based on special organic polymer membranes which contain a specific ion-exchange substance (resin). This is the most widespread type of ion-specific electrode. Usage of specific resins allows preparation of selective electrodes for tens of different ions, both single-atom or multi-atom. They are also the most widespread electrodes with anionic selectivity. However, such electrodes have low chemical and physical durability as well as \"survival time\". An example is the potassium selective electrode, based on valinomycin as an ion-exchange agent. [Wikipedia]" ;
+                 skos:prefLabel "ion exchange resin membrane" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000599
+af-e:AFE_0000599 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000115 ;
+                 skos:definition "The calomel cell is based on the reaction between elemental mercury and mercury(I) chloride. The aqueous phase in contact with the mercury(I) chloride (Hg2Cl2, \"calomel\") is a saturated solution of potassium chloride in water. [Wikipedia]" ;
+                 skos:prefLabel "calomel cell" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000603
+af-e:AFE_0000603 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000115 ;
+                 skos:definition "A silver silverchloride cell is based on the reaction between silver metal (Ag) and its salt (AgCl, also called silver(I) chloride). [Wikipedia]" ;
+                 skos:prefLabel "silver silverchloride cell" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000624
+af-e:AFE_0000624 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An electrode whose response indicates the change of some analytical variable. [CHMO]" ;
+                 skos:prefLabel "interrogating electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000664
+af-e:AFE_0000664 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000177 ;
+                 skos:altLabel "ammonium electrode" ;
+                 skos:definition "An ammonia electrode measures the NH4+ ion directly in solution. [Allotrope]" ;
+                 skos:prefLabel "ammonia electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000707
+af-e:AFE_0000707 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "gas electrolyte module" ,
+                               "gas metabolite module" ,
+                               "metmod" ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ,
+                                 "2016-02-03 Added altLabel [OSTHUS]" ;
+                 skos:definition "The gas electrolyte analyzer is used for the analysis of dissolved gases and dissolved electrolytes. [Allotrope]" ;
+                 skos:prefLabel "gas electrolyte analyser"@en-gb ,
+                                "gas electrolyte analyzer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000709
+af-e:AFE_0000709 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000744 ;
+                 skos:definition "A carbon electrode that has been fired at a temperature around 2800 K, resulting in a largely graphitic composition. [CHMO]" ;
+                 skos:prefLabel "graphite electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000721
+af-e:AFE_0000721 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "test electrode" ,
+                               "working electrode" ;
+                 skos:definition "An electrode at which the potential is measured. [CHMO]" ;
+                 skos:prefLabel "indicator electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000724
+af-e:AFE_0000724 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:altLabel "SCE" ;
+                 skos:definition "A reference electrode where the electrochemical reaction is between mercury metal and mercury(I) chloride. [CHMO]" ;
+                 skos:prefLabel "saturated calomel electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000744
+af-e:AFE_0000744 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 skos:definition "An electrode that consists of a sample of granular carbon material that has been bound with pitch and has been fired at high temperature. [CHMO]" ;
+                 skos:prefLabel "carbon electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000762
+af-e:AFE_0000762 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000177 ;
+                 skos:altLabel "dO2 probe" ,
+                               "dO2 sensor" ,
+                               "dissolved O2 probe" ,
+                               "dissolved O2 sensor" ,
+                               "oxygen analyzer" ;
+                 skos:definition "The oxygen sensor is able to detect the amount of dissolved oxygen in a sample. [Allotrope]" ;
+                 skos:prefLabel "dissolved oxygen sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000766
+af-e:AFE_0000766 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000422 ;
+                 skos:altLabel "ISE" ;
+                 skos:definition "An electrode which responds to the activity of a primary ion in presence of various other (interfering) ions in the sample solution. Ion-selective electrodes contain a selective membrane which contains fixed or mobile sites that interact with ions in solution. [CHMO]" ;
+                 skos:prefLabel "ion-selective electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000770
+af-e:AFE_0000770 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:definition "A ceramic type reference electrode has a ceramic junction as connection to the surrounding solution. [Allotrope]" ;
+                 skos:prefLabel "ceramic type reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000820
+af-e:AFE_0000820 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:altLabel "pseudo-reference electrodes" ,
+                               "pseudoreference electrode" ;
+                 skos:definition "An electrode through which no appreciable current is allowed to flow and is used to observe or control the potential at a working electrode. A pseudo-reference electrode, such as a Ag wire, fulfils the role of a reference electrode but the electrochemical processes allowing it to do so are not well understood, in contrast to a true reference electrode. [CHMO]" ;
+                 skos:prefLabel "pseudo-reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000870
+af-e:AFE_0000870 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000028 ;
+                 skos:definition "A pinhole type reference electrode has a small hole as connection to the surrounding solution. [Allotrope]" ;
+                 skos:prefLabel "pinhole type reference electrode" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000073
+af-m:AFM_0000073 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002099 ;
+                 af-x:AFX_0002796 af-r:AFR_0001223 ;
+                 skos:definition "A boundary between two electrolyte solutions of different composition, across which arises a potential difference, called the liquid junction potential. In an operational pH cell, the junction is between the test solution and the filling solution or bridge solution of the reference electrode. [CHMO]" ;
+                 skos:prefLabel "liquid junction" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000086
+af-m:AFM_0000086 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 skos:altLabel "electrolyte" ,
+                               "ionic solution" ,
+                               "salt solution" ;
+                 skos:definition "An electrolyte solution is the solution of a substance that ionizes when dissolved in suitable ionizing solvents such as water. [Wikipedia]" ;
+                 skos:example "sodium chloride in water" ;
+                 skos:prefLabel "electrolyte solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000093
+af-m:AFM_0000093 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000086 ;
+                 owl:disjointWith af-m:AFM_0000279 ;
+                 skos:definition "An aqueous electrolyte solution is one that contains some amount of water. [Allotrope]" ;
+                 skos:prefLabel "aqueous electrolyte solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000097
+af-m:AFM_0000097 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1985, 57, 531. (Definition of pH scales, standard reference values, measurement of pH and related terminology (Recommendations 1984)) on page 541" ;
+                 skos:altLabel "salt-bridge solution" ;
+                 skos:changeNote "2024-09-12 Changed [IUPAC Recommendations 2002] attribution to [IUPAC] and added license, rights, and source fields." ;
+                 skos:definition "Solution of high concentration of inert salt, preferably comprising cations and anions of equal mobility, optionally interposed between the reference electrode filling and both the unknown and standard solution, when the test solution and filling solution are chemically incompatible. This procedure introduces into the cell a second liquid junction formed, usually, in a similar way to the first. [IUPAC]" ;
+                 skos:prefLabel "bridge solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000150
+af-m:AFM_0000150 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1985, 57, 531. (Definition of pH scales, standard reference values, measurement of pH and related terminology (Recommendations 1984)) on page 541" ;
+                 skos:changeNote "2024-09-12 Changed [IUPAC Recommendations 2002] attribution to [IUPAC] and added license, rights, and source fields." ;
+                 skos:definition "Solution containing the anion to which the reference electrode of Cells IV and V is reversible, e.g., chloride for silverâ€“silver chloride electrode. In the absence of a bridge solution (q.v.), a high concentration of filling solution comprising almost equitransferent cations and anions is employed as a means of maintaining the LJP small and approximately constant on substitution of unknown solution for standard solution(s). [IUPAC]" ;
+                 skos:prefLabel "filling solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000170
+af-m:AFM_0000170 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000086 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An electrolyte that is used for ion selective electrodes. [Allotrope]" ;
+                 skos:prefLabel "electrolyte for ISE" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000279
+af-m:AFM_0000279 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000086 ;
+                 skos:definition "A nonaqueous electrolyte solution is free from water. [Allotrope]" ;
+                 skos:prefLabel "nonaqueous electrolyte solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000343
+af-m:AFM_0000343 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000086 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An electrolyte that is used for gas sensing electrodes. [Allotrope]" ;
+                 skos:prefLabel "electrolyte for GSE" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000360
+af-m:AFM_0000360 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000015 ;
+                 skos:altLabel "IEF anode buffer" ,
+                               "IEF anodic buffer" ,
+                               "IEF cathode buffer" ,
+                               "anodic buffer" ,
+                               "isoelectric focusing anode buffer" ,
+                               "isoelectric focusing anodic buffer" ;
+                 skos:definition "A buffer that serves as an anode in an electrochemical experiment. [Allotrope]" ;
+                 skos:prefLabel "anode buffer" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000361
+af-m:AFM_0000361 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000015 ;
+                 skos:altLabel "IEF cathode buffer" ,
+                               "IEF cathodic buffer" ,
+                               "cathodic buffer" ,
+                               "electrophoresis cathode buffer" ,
+                               "isoelectric focusing cathode buffer" ,
+                               "isoelectric focusing cathodic buffer" ;
+                 skos:definition "A buffer that serves as a cathode in an electrochemical experiment. [Allotrope]" ;
+                 skos:prefLabel "cathode buffer" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000475
+af-p:AFP_0000475 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000502 ;
+                 skos:altLabel "CDP technique" ,
+                               "SVET" ,
+                               "SVP technique" ,
+                               "current density probe technique" ,
+                               "scanning vibrating probe technique" ;
+                 skos:definition "A technique that operates by mechanically vibrating a probe at a fixed amplitude, frequency and height over an electrochemically active sample in solution measuring and mapping the electric field generated by the sample. This technique is used to probe the nature of corrosion processes. [CHMO]" ;
+                 skos:prefLabel "scanning vibrating electrode technique" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000502
+af-p:AFP_0000502 rdf:type owl:Class ;
+                 owl:equivalentClass chmo:_0000003 ;
+                 rdfs:subClassOf af-p:AFP_0003491 ;
+                 skos:altLabel "electroanalytical method" ,
+                               "electrochemical assay" ,
+                               "electrochemical method" ;
+                 skos:definition "The use of an electrochemical cell to measure a qualitative or quantitative response. [CHMO]" ;
+                 skos:prefLabel "electrochemical analysis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000733
+af-p:AFP_0000733 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000502 .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000869
+af-p:AFP_0000869 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000502 .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001597
+af-p:AFP_0001597 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000502 .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001861
+af-p:AFP_0001861 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000502 .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001881
+af-p:AFP_0001881 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000502 ;
+                 skos:altLabel "bio-electrochemical analysis" ,
+                               "bio-electrochemical method" ,
+                               "bioelectrochemical method" ;
+                 skos:definition "The use of an electrochemical cell to measure a qualitative or quantitative response for a biological system. [CHMO]" ;
+                 skos:prefLabel "bioelectrochemical analysis" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001955
+af-p:AFP_0001955 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000502 .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000179
+af-r:AFR_0000179 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000068 ;
+                 skos:definition "A plot of specific energy of an electrochemical cell vs. its specific power. [CHMO]" ;
+                 skos:prefLabel "Ragone plot" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000364
+af-r:AFR_0000364 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000068 ;
+                 skos:changeNote "2016-02-03 Fixed letters [OSTHUS]" ;
+                 skos:definition "A log-log plot of molar conductivity (Λ) vs. viscosity (η) which indicates the degree of ionicity of an ionic liquid. Plots are compared to the 'ideal' case of 0.01M KCl which exists as dissociated ions. [CHMO]" ;
+                 skos:prefLabel "Walden plot" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000369
+af-r:AFR_0000369 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000435
+af-r:AFR_0000435 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000369 ;
+                 skos:definition "A plot of complex impedance vs. frequency that reflects the change in impedance (the resistance of alternating current) of an electrochemical cell. [CHMO]" ;
+                 skos:prefLabel "Nyquist plot" .
+
+
+###  http://purl.obolibrary.org/obo/CHMO_0000003
+chmo:_0000003 rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

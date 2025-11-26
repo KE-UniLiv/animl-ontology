@@ -1,3 +1,418 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45c3737af090c32832c7823856b9e59ca30352f310af06e1318a183cc32bf761
-size 30936
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/voltammetry#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/voltammetry#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/voltammetry> rdf:type owl:Ontology ;
+                                                                             owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/voltammetry> ;
+                                                                             owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                         <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electrochemistry> ;
+                                                                             dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                             dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                             dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                             dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                        <http://purl.allotrope.org/voc/copyright> ;
+                                                                             dct:title "AFO Voltammetry Domain Ontology (WD/2025/06)" ;
+                                                                             owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2018/04/voltammetry> ;
+                                                                             owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000008
+af-p:AFP_0000008 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied using pulses of increasing amplitude. [CHMO]" ;
+                 skos:prefLabel "pulse voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000045
+af-p:AFP_0000045 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000774 ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. The potential is varied using pulses of linearly increasing amplitude (one pulse during each drop lifetime) and the current is sampled before and after each voltage pulse. [CHMO]" ;
+                 skos:prefLabel "differential pulse polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000091
+af-p:AFP_0000091 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000844 ;
+                 skos:altLabel "SWASV" ,
+                               "square wave anodic stripping voltammetry" ,
+                               "square-wave ASV" ;
+                 skos:definition "An electrochemical technique where the analyte of interest is first electroplated onto the working electrode before being removed or 'stripped' by applying an oxidising potential. During removal the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied as a square wave superimposed on a linear sweep. [CHMO]" ;
+                 skos:prefLabel "square-wave anodic stripping voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000171
+af-p:AFP_0000171 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:altLabel "LSV" ,
+                               "chrono amperometry with linear potential sweep" ,
+                               "chronoamperometry with linear sweep" ,
+                               "electrode voltammetry" ,
+                               "linear sweep voltammetry" ,
+                               "stationary electrode voltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied linearly and stops at an end point. [CHMO]" ;
+                 skos:prefLabel "linear-sweep voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000316
+af-p:AFP_0000316 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:altLabel "CV" ,
+                               "cyclic triangular wave voltammetry" ,
+                               "cyclovoltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied linearly and inverts at the end point resulting in a cycle. [CHMO]" ;
+                 skos:prefLabel "cyclic voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000321
+af-p:AFP_0000321 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000774 ;
+                 skos:altLabel "oscillo-polography" ,
+                               "oscillopolography" ;
+                 skos:definition "An *obsolete* electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes using an oscillograph. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. [CHMO]" ;
+                 skos:prefLabel "oscillo polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000357
+af-p:AFP_0000357 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000774 ;
+                 skos:altLabel "AC polarography" ,
+                               "AC-polarography" ,
+                               "alternating-current polarography" ;
+                 skos:definition "An electrochemical technique where the alternating current (ac) component of the cell current is measured as a function of time and as a function of the ac potential between the indicator and reference electrodes. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. [CHMO]" ;
+                 skos:prefLabel "alternating current polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000389
+af-p:AFP_0000389 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000515 ;
+                 skos:altLabel "OSWV" ,
+                               "Osteryoung square wave voltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied as a square wave and there is one square wave cycle per staircase step. [CHMO]" ;
+                 skos:prefLabel "Osteryoung square-wave voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000390
+af-p:AFP_0000390 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:altLabel "SV" ;
+                 skos:definition "An electrochemical technique where the analyte of interest is first deposited (usually by electroplating) onto the working electrode before being removed or 'stripped'. During removal the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. [CHMO]" ;
+                 skos:prefLabel "stripping voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000392
+af-p:AFP_0000392 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000357 ;
+                 skos:definition "An electrochemical technique where the ac component of the cell current is measured as a function of time and as a function of the ac potential between the indicator and reference electrodes. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. The cell current is sampled on alternate half cycles and the potential is applied as a small amplitude square wave superimposed on a linear sweep. [CHMO]" ;
+                 skos:prefLabel "Kalousek polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000515
+af-p:AFP_0000515 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:altLabel "SWV" ,
+                               "square wave voltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied as a square wave and the current is measured at the end of each half-wave, just prior to potential change. [CHMO]" ;
+                 skos:prefLabel "square-wave voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000649
+af-p:AFP_0000649 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:altLabel "rotating disk voltammetry" ,
+                               "voltammetry with a rotating disk electrode" ,
+                               "voltammetry with a rotating-disk electrode" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The indicator electrode (e.g. a Pt disc of 1.0 mm diameter sealed in a Teflon carrier ) spins at high speed during the experiment, and the rotational motion sets up a well-defined flow of analyte towards its surface. [CHMO]" ;
+                 skos:prefLabel "rotating-disk voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000672
+af-p:AFP_0000672 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000774 ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. The current is sampled only during a specific time interval of the life of each drop of the droppping mercury electrode. [CHMO]" ;
+                 skos:prefLabel "tast polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000676
+af-p:AFP_0000676 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000008 ;
+                 skos:altLabel "NPV" ,
+                               "normal-pulse voltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied using pulses of increasing amplitude and the current is sampled after each voltage pulse. [CHMO]" ;
+                 skos:prefLabel "normal pulse voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000758
+af-p:AFP_0000758 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000390 ;
+                 skos:altLabel "CSV" ;
+                 skos:definition "An electrochemical technique where the analyte of interest is first electroplated onto the working electrode before being removed or 'stripped' by applying a reducing potential. During removal the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. [CHMO]" ;
+                 skos:prefLabel "cathodic stripping voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000774
+af-p:AFP_0000774 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. [CHMO]" ;
+                 skos:prefLabel "polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000844
+af-p:AFP_0000844 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000390 ;
+                 skos:altLabel "ASV" ;
+                 skos:definition "An electrochemical technique where the analyte of interest is first electroplated onto the working electrode before being removed or 'stripped' by applying an oxidising potential. During removal the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. [CHMO]" ;
+                 skos:prefLabel "anodic stripping voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000845
+af-p:AFP_0000845 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000774 ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. The potential is varied using pulses of linearly increasing amplitude (one pulse during each drop lifetime) and the current is sampled after each voltage pulse. [CHMO]" ;
+                 skos:prefLabel "normal pulse polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001002
+af-p:AFP_0001002 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000869 ;
+                 skos:altLabel "linear scan hydrodynamic voltammetry" ,
+                               "linear-scan hydrodynamic voltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current flowing during convective mass transfer (the movement of material by the action of a fluid) is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied linearly and inverts at the end point resulting in a cycle. [CHMO]" ;
+                 skos:prefLabel "hydrodynamic voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001276
+af-p:AFP_0001276 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000316 ;
+                 skos:altLabel "FCV" ,
+                               "FSCV" ,
+                               "fast cyclic voltammetry" ,
+                               "fast scan cyclic voltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied linearly and inverts at the end point resulting in a cycle which repeats approximately every 100 ms. [CHMO]" ;
+                 skos:prefLabel "fast-scan cyclic voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001474
+af-p:AFP_0001474 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000844 ;
+                 skos:altLabel "DPASV" ;
+                 skos:definition "An electrochemical technique where the analyte of interest is first electroplated onto the working electrode before being removed or 'stripped' by applying an oxidising potential (as a series of voltage pulses of increasing amplitude). During removal the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The current is sampled before and after each voltage pulse. [CHMO]" ;
+                 skos:prefLabel "differential pulse anodic stripping voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001903
+af-p:AFP_0001903 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000316 ;
+                 skos:altLabel "CSCV" ,
+                               "continuous scan CV" ,
+                               "continuous scan cyclic voltammetry" ,
+                               "continuous-scan CV" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied as a continuous sine wave and inverts at the end point resulting in a cycle. [CHMO]" ;
+                 skos:prefLabel "continuous-scan cyclic voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001945
+af-p:AFP_0001945 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000357 ;
+                 skos:altLabel "square wave polarography" ;
+                 skos:definition "An electrochemical technique where the ac component of the cell current is measured as a function of time and as a function of the ac potential between the indicator and reference electrodes. The working electrode is a dropping mercury (or other liquid conductor) electrode and unstirred solutions are used. The cell current is sampled (only once per drop lifetime) on alternate half cycles and the potential is applied as a large amplitude square wave superimposed on a linear sweep. [CHMO]" ;
+                 skos:prefLabel "square-wave polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001984
+af-p:AFP_0001984 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000390 ,
+                                 af-p:AFP_0001982 ;
+                 skos:altLabel "AdSV" ,
+                               "adsorptive-stripping voltammetry" ;
+                 skos:definition "An electrochemical technique where the analyte of interest is first adsorbed onto the working electrode before being removed or 'stripped'. During removal the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. [CHMO]" ;
+                 skos:prefLabel "adsorptive stripping voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002071
+af-p:AFP_0002071 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000844 ;
+                 skos:altLabel "pseudo-polarography" ,
+                               "pseudopolarography" ;
+                 skos:definition "An electrochemical technique where the analyte of interest is first electroplated onto the working electrode before being removed or 'stripped' by applying an oxidising potential. During removal the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. A plot of stripping peak current versus deposition potential resembles a polarogram. [CHMO]" ;
+                 skos:prefLabel "pseudo polarography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002338
+af-p:AFP_0002338 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000008 ;
+                 skos:altLabel "DPV" ,
+                               "differential-pulse voltammetry" ;
+                 skos:definition "An electrochemical technique where the cell current is measured as a function of time and as a function of the potential between the indicator and reference electrodes. The potential is varied using pulses of increasing amplitude and the current is sampled before and after each voltage pulse. [CHMO]" ;
+                 skos:prefLabel "differential pulse voltammetry" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000002
+af-r:AFR_0000002 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000070 ;
+                 skos:altLabel "square wave voltammogram" ,
+                               "square wave voltammograms" ,
+                               "square-wave voltammograms" ;
+                 skos:definition "A plot of cell current vs. the potential between the indicator and reference electrodes obtained from a square-wave voltammetry experiment. [CHMO]" ;
+                 skos:prefLabel "square-wave voltammogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000084
+af-r:AFR_0000084 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000070 ;
+                 skos:altLabel "hydrodynamic voltammograms" ;
+                 skos:definition "A plot of cell current vs. the potential between the indicator and reference electrodes obtained from a voltammetry experiment during which convective mass transfer (the movement of material by the action of a fluid) occurs. [CHMO]" ;
+                 skos:prefLabel "hydrodynamic voltammogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000267
+af-r:AFR_0000267 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000070 ;
+                 skos:definition "A plot of cell current vs. the potential between the indicator and reference electrodes obtained from a differential-pulse voltammetry experiment (i.e. where the potential is varied using pulses of increasing amplitude and the current is sampled before and after each voltage pulse). [CHMO]" ;
+                 skos:prefLabel "differential pulse voltammogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000355
+af-r:AFR_0000355 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000070 ;
+                 skos:altLabel "CV graph" ,
+                               "CV graphs" ,
+                               "CV scan" ,
+                               "CV scans" ,
+                               "CVs" ,
+                               "cyclic voltammograms" ;
+                 skos:definition "A plot of cell current vs. the potential between the indicator and reference electrodes obtained from a cyclic voltammetry experiment. [CHMO]" ;
+                 skos:prefLabel "cyclic voltammogram" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

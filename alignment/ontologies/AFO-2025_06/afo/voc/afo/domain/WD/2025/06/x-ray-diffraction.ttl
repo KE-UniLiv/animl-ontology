@@ -1,3 +1,703 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:578247e02700935d7fa3acfceba2e695edc3178101c260a6cbe6be07690e712b
-size 42915
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/x-ray-diffraction#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/x-ray-diffraction#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/x-ray-diffraction> rdf:type owl:Ontology ;
+                                                                                   owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/x-ray-diffraction> ;
+                                                                                   owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                                   dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                   dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                   dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                   dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                              <http://purl.allotrope.org/voc/copyright> ;
+                                                                                   dct:title "AFO X-ray Diffraction Domain Ontology (WD/2025/06)" ;
+                                                                                   owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/x-ray-diffraction> ;
+                                                                                   owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0000412
+af-x:AFX_0000412 rdf:type owl:ObjectProperty ;
+                 rdfs:range af-p:AFP_0002699 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "The beam path that is related to the entity. [Allotrope]" ;
+                 skos:prefLabel "has beam path" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000210
+af-e:AFE_0000210 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000454 ;
+                 skos:definition "An X-ray source where copper atoms emit X-rays through a 1s from 2p transition. [CHMO]" ;
+                 skos:prefLabel "copper K-alpha source" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000242
+af-e:AFE_0000242 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000454 ;
+                 skos:definition "An X-ray source where aluminium atoms emit X-rays through a 1s from 2p transition. [CHMO]" ;
+                 skos:prefLabel "aluminium K-alpha source" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000441
+af-e:AFE_0000441 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000454 ;
+                 skos:definition "An X-ray source where cobalt atoms emit X-rays through a 1s from 2p transition. [CHMO]" ;
+                 skos:prefLabel "cobalt K-alpha source" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000454
+af-e:AFE_0000454 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001876 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000682
+af-e:AFE_0000682 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000454 ;
+                 skos:definition "An X-ray source where molybdenum atoms emit X-rays through a 1s from 2p transition. [CHMO]" ;
+                 skos:prefLabel "molybdenum K-alpha source" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001664
+af-e:AFE_0001664 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "An X-ray tube is a vacuum tube that contains the X-ray source. [Allotrope]" ;
+                 skos:prefLabel "X-ray tube" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001673
+af-e:AFE_0001673 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000986 ,
+                                 af-e:AFE_0001876 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ,
+                                 "2016-03-18 move under X-ray device, change definition [OSTHUS]" ;
+                 skos:definition "A soller slit consists of a large numbers of planes in the plane of diffraction and limits the spread of the incident and diffracted X-ray beam out of the plane of diffraction. [Allotrope]" ;
+                 skos:prefLabel "soller slit" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001674
+af-e:AFE_0001674 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000986 ,
+                                 af-e:AFE_0001876 ;
+                 skos:altLabel "scatter slit" ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ,
+                                 "2015-12-15 Fixed typo in prefLabel [OSTHUS]" ,
+                                 "2016-03-18 move under X-ray device, change definition [OSTHUS]" ;
+                 skos:definition "An anti scatter slit is a slit that is used for controlling the width of incident X-rays. It determines the observed length on the sample. [Allotrope]" ;
+                 skos:prefLabel "anti-scatter slit" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001675
+af-e:AFE_0001675 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000986 ,
+                                 af-e:AFE_0001876 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ,
+                                 "2016-03-18 move under X-ray device, change definition [OSTHUS]" ;
+                 skos:definition "A receiving slit is a slit that is used for controlling the width of the X-ray beam entering the X-ray detector. [Allotrope]" ;
+                 skos:prefLabel "receiving slit" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001676
+af-e:AFE_0001676 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "mask" ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "A mask is a device that defines the slit of a detector. It allows for shaping the beam. [Allotrope]" ;
+                 skos:editorialNote "2017-10-26 needs revisiting [OSTHUS]" ;
+                 skos:example "a mask defines the area of radiation" ,
+                              "mask of soller slit in XRD" ;
+                 skos:prefLabel "mask (XRD)" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001738
+af-e:AFE_0001738 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000986 ,
+                                 af-e:AFE_0001876 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ,
+                                 "2016-03-18 move under X-ray device, change definition [OSTHUS]" ;
+                 skos:definition "A divergence slit is a slit that is used to limit the divergence of the incident X-rays. The slit blocks X-rays that have to great a divergence. It determines the irradiated length of the sample. [Allotrope]" ;
+                 skos:prefLabel "divergence slit" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001783
+af-e:AFE_0001783 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "The goniometer is the part of a diffractometer that allows for measurement of the 2Theta angle. [Allotrope]" ;
+                 skos:prefLabel "goniometer" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000005
+af-p:AFP_0000005 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "TR-XRD" ,
+                               "TRXRD" ,
+                               "time resolved X-ray diffraction" ;
+                 skos:definition "A method for determining structure by directing a short (ns or ps) pulse beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate as a function of time. [CHMO]" ;
+                 skos:prefLabel "time-resolved X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000061
+af-p:AFP_0000061 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "single crystal X-ray crystallography" ,
+                               "single-crystal X-ray diffraction" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at a single crystal sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. Single crystal X-ray diffraction is used for protein crystallography. [CHMO]" ;
+                 skos:prefLabel "single crystal X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000069
+af-p:AFP_0000069 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002372 ;
+                 skos:altLabel "MIRAS" ;
+                 skos:definition "A method for providing phasing necessary for X-ray crystallography information by growing a number of crystals of the sample substituted with different heavy metal atoms and analysing the X-ray data for each crystal. When the absorption edge of an atom in the crystals is close to the wavelength of the incident radiation the atom becomes an anomalous scatterer. Anomalous scattering can be used for phase determination and also for determining the absolute configuration. [CHMO]" ;
+                 skos:prefLabel "multiple isomorphous replacement with anomalous scattering" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000101
+af-p:AFP_0000101 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000884 ;
+                 skos:altLabel "Kossel technique" ,
+                               "Kossel-technique" ,
+                               "MXRD" ,
+                               "micro X-ray diffraction" ,
+                               "micro XRD" ,
+                               "micro in situ XRD" ;
+                 skos:definition "A method for determining structure by detecting the positions and intensities of X-rays, that have been generated in microstructural domain, as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "in situ micro-X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000282
+af-p:AFP_0000282 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "VT-XRD" ,
+                               "X-ray thermodiffractometry" ,
+                               "temperature-resolved XRD" ,
+                               "variable-temperature X-ray diffraction" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate as a function of temperature. [CHMO]" ;
+                 skos:prefLabel "temperature-resolved X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000421
+af-p:AFP_0000421 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001200 ;
+                 skos:altLabel "GISAXS" ,
+                               "GIXS" ,
+                               "grazing incidence X-ray scattering" ,
+                               "grazing incidence small-angle X-ray scattering" ,
+                               "grazing-incidence small-angle X-ray scattering" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000481
+af-p:AFP_0000481 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001200 ;
+                 skos:altLabel "2-D SAXS" ,
+                               "2-dimensional SAXS" ,
+                               "2-dimensional small-angle X-ray scattering" ,
+                               "2D SAXS" ,
+                               "2D-SAXS" ,
+                               "SAXS with 2D detection" ,
+                               "two-dimensional SAXS" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000561
+af-p:AFP_0000561 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000645 ;
+                 skos:altLabel "SR-PXD" ,
+                               "SR-XRPD" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at a powder sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. The X-rays are generated by the acceleration of charged particles through magnetic fields. [CHMO]" ;
+                 skos:prefLabel "synchrotron X-ray powder diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000580
+af-p:AFP_0000580 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "WAXRD" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. The incident X-ray beam strikes the sample at a wide angle (>10 deg.). [CHMO]" ;
+                 skos:prefLabel "wide-angle X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000645
+af-p:AFP_0000645 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "PXD" ,
+                               "PXRD" ,
+                               "X-ray powder diffraction" ,
+                               "XRPD" ,
+                               "powder XRD" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at a powdered solid sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "powder X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000655
+af-p:AFP_0000655 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001791 ;
+                 skos:altLabel "GAXRD" ,
+                               "GID" ,
+                               "GIXRD" ,
+                               "glancing angle X-ray diffraction" ,
+                               "glancing angle XRD" ,
+                               "glancing incidence X-ray diffraction" ,
+                               "glancing incidence XRD" ,
+                               "glancing-angle X-ray diffraction" ,
+                               "glancing-angle XRD" ,
+                               "glancing-incidence X-ray diffraction" ,
+                               "glancing-incidence XRD" ,
+                               "grazing angle X-ray diffraction" ,
+                               "grazing angle XRD" ,
+                               "grazing incidence X-ray diffraction" ,
+                               "grazing incidence XRD" ,
+                               "grazing-angle XRD" ,
+                               "grazing-angle incidence X-ray diffraction" ,
+                               "grazing-angle incidence XRD" ,
+                               "grazing-incidence X-ray diffraction" ,
+                               "grazing-incidence XRD" ,
+                               "grazing-incidence diffraction" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. The incident X-ray beam strikes the sample at a small angle (<5 deg.) close to the critical angle of total external X-ray reflection. [CHMO]" ;
+                 skos:prefLabel "grazing-angle X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000668
+af-p:AFP_0000668 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000111 ;
+                 skos:altLabel "WAXS" ,
+                               "wide angle X-ray scattering" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000884
+af-p:AFP_0000884 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:definition "A method for determining structure by detecting the positions and intensities of X-rays, that have been generated within a structural domain, as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "in situ X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000893
+af-p:AFP_0000893 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000668 ;
+                 skos:altLabel "AWAXS" ,
+                               "anomalous wide angle X-ray scattering" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000944
+af-p:AFP_0000944 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "HR-XRD" ,
+                               "HRXRD" ,
+                               "high resolution X-ray diffraction" ,
+                               "high resolution XRD" ,
+                               "high-resolution XRD" ;
+                 skos:definition "A method for determining structure by directing a parallel beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "high-resolution X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000958
+af-p:AFP_0000958 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001088 ;
+                 skos:altLabel "SIR" ;
+                 skos:definition "A method for providing phasing necessary for X-ray crystallography information by growing a crystal of the sample substituted with heavy metal atoms and analysing the X-ray data for both the original crystal and the isomorph. [CHMO]" ;
+                 skos:prefLabel "single isomorphous replacement" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001088
+af-p:AFP_0001088 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:definition "A method for providing phasing necessary for X-ray crystallography information by introducing heavy atoms into isomorphous crystals. [CHMO]" ;
+                 skos:prefLabel "isomorphous replacement" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001133
+af-p:AFP_0001133 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000111 ;
+                 skos:altLabel "synchrotron XRS" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001139
+af-p:AFP_0001139 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:definition "A method for determining structure by scanning a finely focused (<10 µm2) beam of X-rays over the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "scanning probe X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001200
+af-p:AFP_0001200 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000111 ;
+                 skos:altLabel "SAXS" ,
+                               "small angle X-ray scattering" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001717
+af-p:AFP_0001717 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "SR-XRD" ,
+                               "synchrotron X-ray diffraction" ,
+                               "synchrotron XRD" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. The X-rays are generated by the acceleration of charged particles through magnetic fields. [CHMO]" ;
+                 skos:prefLabel "synchrotron radiation X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001784
+af-p:AFP_0001784 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "SXD" ,
+                               "SXRD" ,
+                               "solution state X-ray diffraction" ,
+                               "solution-state X-ray diffraction" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at a sample solution and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "solution X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001788
+af-p:AFP_0001788 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001200 ;
+                 skos:altLabel "synchrotron SAXS" ,
+                               "synchrotron small angle X-ray scattering (SAXS)" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001791
+af-p:AFP_0001791 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "SAXD" ,
+                               "SAXRD" ,
+                               "X-ray SAD" ,
+                               "X-ray small angle diffraction" ,
+                               "small angle X-ray diffraction" ,
+                               "small angle XRD" ,
+                               "small-angle XRD" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. The incident X-ray beam strikes the sample at a small angle (0-10 deg.). [CHMO]" ;
+                 skos:prefLabel "small-angle X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001877
+af-p:AFP_0001877 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000580 ,
+                                 af-p:AFP_0000645 ;
+                 skos:altLabel "WAPXRD" ,
+                               "wide-angle X-ray powder diffraction" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at the powdered sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. The incident X-ray beam strikes the sample at a wide angle (>10 deg.). [CHMO]" ;
+                 skos:prefLabel "wide-angle powder X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001907
+af-p:AFP_0001907 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "thin film X-ray diffraction" ,
+                               "thin film XRD" ,
+                               "thin-film XRD" ;
+                 skos:definition "A range of techniques used to determine the structure of thin films by directing a beam of X-rays at the sample and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. Techniques include glancing-incidence X-ray reflectivity and pole figure measurements. [CHMO]" ;
+                 skos:prefLabel "thin-film X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001928
+af-p:AFP_0001928 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000958 ;
+                 skos:altLabel "SIRAS" ;
+                 skos:definition "A method for providing phasing necessary for X-ray crystallography information by growing a crystal of the sample substituted with heavy metal atoms and analysing the X-ray data for both the original crystal and the isomorph. When the absorption edge of an atom in the crystals is close to the wavelength of the incident radiation the atom becomes an anomalous scatterer. Anomalous scattering can be used for phase determination and also for determining the absolute configuration. [CHMO]" ;
+                 skos:prefLabel "single isomorphous replacement with anomalous scattering" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002151
+af-p:AFP_0002151 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "HT-XRD" ,
+                               "HTXRD" ,
+                               "high temperature X-ray diffraction" ,
+                               "high temperature XRD" ,
+                               "high-temperature XRD" ;
+                 skos:definition "A method for determining structure by directing a beam of X-rays at the sample which is heated from 25-2000 deg. C and detecting the positions and intensities of the diffracted X-rays as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "high-temperature X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002233
+af-p:AFP_0002233 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000884 ;
+                 skos:altLabel "in situ synchrotron XRD" ;
+                 skos:definition "A method for determining structure by detecting the positions and intensities of X-rays, that have been generated within a synchrotron, as a pattern of spots on a photographic plate. [CHMO]" ;
+                 skos:prefLabel "in situ synchrotron X-ray diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002372
+af-p:AFP_0002372 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001088 ;
+                 skos:altLabel "MIR" ,
+                               "multiple isomorphous replacement (MIR) phasing" ;
+                 skos:definition "A method for providing phasing necessary for X-ray crystallography information by growing a number of crystals of the sample substituted with different heavy metal atoms and analysing the X-ray data for each crystal. [CHMO]" ;
+                 skos:prefLabel "multiple isomorphous replacement" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002699
+af-p:AFP_0002699 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000922 ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "The beam path is a data object that describes the pathway of the X-ray beam from the X-ray tube to the sample and to the detector. [Allotrope]" ;
+                 skos:prefLabel "beam path" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002720
+af-p:AFP_0002720 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000050 ;
+                 skos:altLabel "XRPD mode code" ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "The differential scanning calorimetry scan mode code encodes the mode of measurement of DSC. [Allotrope]" ;
+                 skos:prefLabel "x-ray powder diffraction scan mode code" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002757
+af-p:AFP_0002757 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "VT-XRPD" ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "Variable temperature X-ray powder diffraction is an XRPD measurement with change of temperature. [Allotrope]" ;
+                 skos:prefLabel "variable temperature X-ray powder diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002772
+af-p:AFP_0002772 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000487 ;
+                 skos:altLabel "VH-XRPD" ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "Variable humidity x-ray powder diffraction is an XRPD measurement with change of humidity. [Allotrope]" ;
+                 skos:prefLabel "variable humidity x-ray powder diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000045
+af-r:AFR_0000045 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000428 ;
+                 skos:altLabel "SAXS data" ,
+                               "SAXS image" ,
+                               "SAXS pattern" ,
+                               "small angle X-ray scattering data" ,
+                               "small angle X-ray scattering pattern" ,
+                               "small-angle X-ray scattering pattern" ;
+                 skos:definition "Data which is obtained from an X-ray scattering experiment where the X-rays are scattered by the sample at low angles (0--10 deg.). [CHMO]" ;
+                 skos:prefLabel "small-angle X-ray scattering data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000059
+af-r:AFR_0000059 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000406 ;
+                 skos:altLabel "X-ray crystallographic data" ,
+                               "X-ray diffraction (XRD) patterns" ,
+                               "X-ray diffraction (XRD) spectra" ,
+                               "X-ray diffraction spectra" ,
+                               "X-ray pattern" ,
+                               "XRD data" ,
+                               "XRD diffractogram" ,
+                               "XRD pattern" ,
+                               "XRD patterns" ,
+                               "XRD profile" ,
+                               "XRD spectra" ,
+                               "x-ray diffraction pattern" ;
+                 skos:definition "Data which is obtained from an X-ray diffraction experiment. [CHMO]" ;
+                 skos:prefLabel "X-ray diffraction data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000169
+af-r:AFR_0000169 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000190 ;
+                 skos:altLabel "low-angle powder X-ray diffraction data" ,
+                               "low-angle powder X-ray diffraction pattern" ,
+                               "small-angle powder X-ray diffraction pattern" ;
+                 skos:definition "Data which is obtained from an X-ray diffraction experiment where the specimen is a powder and the X-rays are incident on the sample at small angles (0--10 degrees). [CHMO]" ;
+                 skos:prefLabel "small-angle powder X-ray diffraction data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000190
+af-r:AFR_0000190 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000059 ;
+                 skos:altLabel "PXD data" ,
+                               "PXD pattern" ,
+                               "PXRD data" ,
+                               "PXRD pattern" ,
+                               "XRD powder pattern" ,
+                               "powder X-ray diffraction (PXRD) patterns" ,
+                               "powder X-ray diffraction (XRD) pattern" ,
+                               "powder X-ray diffraction (XRD) patterns" ,
+                               "powder X-ray diffractogram" ,
+                               "powder X-ray diffractograms" ,
+                               "powder XRD data" ,
+                               "powder XRD pattern" ;
+                 skos:definition "Data which is obtained from an X-ray diffraction experiment where the specimen is a powder. [CHMO]" ;
+                 skos:prefLabel "powder X-ray diffraction data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000269
+af-r:AFR_0000269 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000045 ;
+                 skos:altLabel "2D SAXS pattern" ,
+                               "2D-SAXS image" ,
+                               "2D-SAXS pattern" ,
+                               "two-dimensional (2D) SAXS pattern" ,
+                               "two-dimensional (2D) SAXS patterns" ;
+                 skos:definition "Data which is obtained from an X-ray scattering experiment where two separate beams of X-rays scattered by a sample at low angles (0--10 deg). [CHMO]" ;
+                 skos:prefLabel "two-dimensional small-angle X-ray scattering data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000365
+af-r:AFR_0000365 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000059 ;
+                 skos:altLabel "single crystal X-ray diffraction data" ;
+                 skos:definition "Data which is obtained from an X-ray diffraction experiment where the specimen is a single crystal. [CHMO]" ;
+                 skos:prefLabel "single-crystal X-ray diffraction data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000455
+af-r:AFR_0000455 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000059 ;
+                 skos:altLabel "low-angle XRD patterns" ,
+                               "small-angle XRD data" ,
+                               "small-angle XRD pattern" ,
+                               "small-angle XRD spectrum" ;
+                 skos:definition "Data which is obtained from an X-ray diffraction experiment where the X-rays are incident on the sample at small angles (0--10 degrees). [CHMO]" ;
+                 skos:prefLabel "small-angle X-ray diffraction data" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000640
+af-r:AFR_0000640 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000432 ;
+                 skos:definition "A collection of diffraction peaks as a function of 2Theta. [Allotrope]" ;
+                 skos:prefLabel "diffraction pattern" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002719
+af-p:AFP_0002719 rdf:type owl:NamedIndividual ,
+                          af-p:AFP_0002720 ;
+                 skos:altLabel "continuous" ;
+                 skos:definition "Code of continuous scanning in XRPD. [Allotrope]" ;
+                 skos:prefLabel "continuous (XRD)" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

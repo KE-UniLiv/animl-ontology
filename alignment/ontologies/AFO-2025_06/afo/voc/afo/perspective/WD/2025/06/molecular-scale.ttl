@@ -1,3 +1,567 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:260e920e1b80abeb8ffb6a2947020cd4f7662c719ae74c6cb1acf19590ca855a
-size 34210
+@prefix : <http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/molecular-scale#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix ops: <http://www.openphacts.org/units/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix afs-c: <http://purl.allotrope.org/shapes/common#> .
+@prefix afs-q: <http://purl.allotrope.org/shapes/qudt#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@prefix afs-dc: <http://purl.allotrope.org/shapes/datacube#> .
+@prefix afs-hr: <http://purl.allotrope.org/shapes/resources#> .
+@prefix af-math: <http://purl.allotrope.org/ontologies/math#> .
+@prefix af-ec-001: <http://purl.allotrope.org/ontologies/equipment/codelist/001#> .
+@prefix af-ec-002: <http://purl.allotrope.org/ontologies/equipment/codelist/002#> .
+@prefix af-ec-003: <http://purl.allotrope.org/ontologies/equipment/codelist/003#> .
+@prefix af-ec-004: <http://purl.allotrope.org/ontologies/equipment/codelist/004#> .
+@prefix af-ec-005: <http://purl.allotrope.org/ontologies/equipment/codelist/005#> .
+@prefix af-ec-006: <http://purl.allotrope.org/ontologies/equipment/codelist/006#> .
+@base <http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/molecular-scale#> .
+
+<http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/molecular-scale> rdf:type owl:Ontology ;
+                                                                                      owl:versionIRI <http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/molecular-scale> ;
+                                                                                      owl:imports <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/molecular-scale> ;
+                                                                                      dct:contributor <http://www.allotrope.org> ;
+                                                                                      dct:description "Perspective taxonomy of materal entities of molecular granularity or smaller, as discussed in chemistry, mostly a subset of ChEBI" ;
+                                                                                      dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                      dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                      dct:modified "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                      dct:publisher <http://www.allotrope.org> ;
+                                                                                      dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                                 <http://purl.allotrope.org/voc/copyright> ;
+                                                                                      dct:title "AFT Molecular Scale - Perspective (WD/2025/06)" ;
+                                                                                      void:feature <http://www.w3.org/ns/formats/Turtle> ;
+                                                                                      owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/molecular-scale> ;
+                                                                                      owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002794
+af-x:AFX_0002794 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002795
+af-x:AFX_0002795 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002808
+af-x:AFX_0002808 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002811
+af-x:AFX_0002811 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+iao:_0000115 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+iao:_0000412 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+dct:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/replaces
+dct:replaces rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+ro:_0000091 rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000016
+af-m:AFM_0000016 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000264 ,
+                                 chebi:_25367 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Adduct ion, represented by [M + H]+, formed by the interaction of a molecule with a proton(hydron). [IUPAC]" ;
+                 skos:note "Multiply protonated molecules are represented by [M + nH]n+ where n is the number of protons. [IUPAC]" ,
+                           "Protonated molecular ion is deprecated; for example, for a molecular ion M+• this would correspond to a species carrying two positive charges plus an unpaired electron. [IUPAC]" ,
+                           "Pseudo-molecular ion and quasi-molecular ion are deprecated; a specific term such as protonated molecule, or a chemical description such as [M + H]+ should be used. [IUPAC]" ;
+                 skos:prefLabel "protonated molecule" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000102
+af-m:AFM_0000102 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ,
+                                 af-m:AFM_0000112 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Ion formed by the combination via noncovalent forces of two or more atoms or molecules of one or more chemical species with an ion. [IUPAC]" ;
+                 skos:example "[(H20)nH]+, [(NaCl)nNa]+, Au10- or [M + Na + CH3OH]+ where M represents a molecule." ;
+                 skos:prefLabel "cluster ion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000112
+af-m:AFM_0000112 rdf:type owl:Class ;
+                 rdfs:subClassOf chebi:_23367 ;
+                 af-x:AFX_0002796 af-r:AFR_0001222 ;
+                 skos:altLabel "molecular aggregate" ;
+                 skos:definition "A cluster is an aggregate of molecular entities formed by non-covalent forces. [Allotrope]" ;
+                 skos:prefLabel "cluster" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000182
+af-m:AFM_0000182 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1991, 63, 1541. Recommendations for nomenclature and symbolism for mass spectroscopy (including an appendix of terms used in vacuum technology). (Recommendations 1991)" ;
+                 skos:changeNote "2024-09-12 Changed [IUPAC Gold Book] attribution to [IUPAC] and added license and rights fields." ;
+                 skos:definition "An ion which is not sufficiently excited to dissociate spontaneously into a daughter ion and associated neutral fragment(s) or to react further in any other way within the time scale of the experiment, e.g. until hitting the detector. [IUPAC]" ;
+                 skos:prefLabel "stable ion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000246
+af-m:AFM_0000246 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ;
+                 skos:definition "An ion that is formed with internal energy higher than the threshold for dissociation but with a lifetime great enough to allow it to exit the ion source and enter the mass spectrometer where it dissociates before detection. [PSI-MS]" ;
+                 skos:prefLabel "metastable ion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000251
+af-m:AFM_0000251 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000112 ;
+                 skos:definition "A micelle is an aggregate of surfactants. The surfactants are amphiphilic molecules with long chains. They have a hydrophilic head and a long hydrophobic tail. Depending on the surrounding solution the surfactants form micelles with tails pointing in- or outwards. [Allotrope]" ;
+                 skos:prefLabel "micelle" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000264
+af-m:AFM_0000264 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000189 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "J. F. J. Todd. Mass Spectrom. Rev. 10, 3 (1991)" ;
+                 skos:altLabel "positive ion" ;
+                 skos:definition "Ion formed by the association of a cation with a molecule M. [IUPAC]" ;
+                 skos:example "For example, [M + Na]+, [M + K]+, and [M + NH4]+." ;
+                 skos:note "The terms quasi-molecular ion and pseudo-molecular ion are deprecated and should not be used in place of cationized molecule." ;
+                 skos:prefLabel "cationized molecule" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000275
+af-m:AFM_0000275 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000290
+af-m:AFM_0000290 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:altLabel "dimer" ;
+                 skos:definition "Ion formed by ionization of a dimer or by the association of an ion such as [M]+•, [M + H]+, or [M – H]– with its neutral counterpart M. [IUPAC]" ;
+                 skos:prefLabel "dimeric ion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000305
+af-m:AFM_0000305 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000161 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "L. Van Vaeck, H. Struyf, W. V. Roy, F. Adams. Mass Spectrom. Rev. 13, 209 (1994)." ;
+                 skos:altLabel "negative ion" ;
+                 skos:definition "Ion formed by the association of an anion with a molecule, M. [IUPAC]" ;
+                 skos:example "For example, [M + Cl]–." ;
+                 skos:note "The terms quasi-molecular ion and pseudo-molecular ion are deprecated and should not be used in place of anionized molecule." ;
+                 skos:prefLabel "anionized molecule" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000358
+af-m:AFM_0000358 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ,
+                                 chebi:_26519 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "S. Hammerum. Mass Spectrom. Rev. 7, 123 (1988)." ,
+                            "T. M. Sack, R. L. Cerny, M. L. Gross. J. Am. Chem. Soc. 107, 4562 (1985)." ;
+                 skos:definition "Radical ion whose charge and radical sites are neither at the same atom nor in conjugation with each other. [IUPAC]" ;
+                 skos:example "For example, •CH2–OH2+ is a distonic ion, whereas the molecular ion of methanol, CH3OH+• is a conventional radical cation.  [IUPAC]" ;
+                 skos:note "In a valence bond description, α-distonic ions have the charge and radical sites on adjacent atoms, β-distonic ions are separated by one atom, γ-distonic ions by two atoms, and so forth. [IUPAC]" ;
+                 skos:prefLabel "distonic ion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000379
+af-m:AFM_0000379 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Ion containing no unpaired electrons in its ground electronic state. [IUPAC]" ;
+                 skos:prefLabel "even-electron ion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000387
+af-m:AFM_0000387 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Ion formed by the removal of one or more electrons from a molecule to form a positive ion or the addition of one or more electrons to a molecule to form a negative ion. [IUPAC]" ;
+                 skos:prefLabel "molecular ion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000396
+af-m:AFM_0000396 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000189 ,
+                                 af-m:AFM_0000387 ;
+                 skos:definition "A molecular ion that is a cation. [Allotrope]" ;
+                 skos:prefLabel "molecular cation" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000405
+af-m:AFM_0000405 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Weakly bound species formed from an ion and neutral. [IUPAC]" ;
+                 skos:note "In the context of some unimolecular ion dissociations, these complexes are particular types of transition states or local energy minima that lie between precursor ions and product ions on the reaction coordinate. [IUPAC]" ,
+                           "The hyphenated formulation of this term, ion-neutral complex, is deprecated; the hyphen suggests a reaction of a species that is both an ion and a molecule and is not the intended meaning. [IUPAC]" ;
+                 skos:prefLabel "ion/neutral complex" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000406
+af-m:AFM_0000406 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000161 ,
+                                 af-m:AFM_0000387 ;
+                 skos:definition "A molecular ion that is an anion. [Allotrope]" ;
+                 skos:prefLabel "molecular anion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000413
+af-m:AFM_0000413 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000290 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Dimeric ion consisting of two similar or dissimilar molecules bound together by hydrogen bonding with a shared proton. [IUPAC]" ;
+                 skos:prefLabel "proton-bound dimer" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000495
+af-m:AFM_0000495 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000275 ;
+                 af-x:AFX_0002796 af-r:AFR_0001222 ;
+                 dct:source "White Book, p. 335; PAC, 1994, 66, 1077 (Glossary of terms used in physical organic chemistry (IUPAC Recommendations 1994)) on page 1136" ;
+                 skos:definition "In coordination chemistry, a ligand is an ion or molecule (functional group) that binds to a central metal atom to form a coordination complex. [Wikipedia]" ;
+                 skos:prefLabel "ligand" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000500
+af-m:AFM_0000500 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000077 ;
+                 skos:altLabel "counter ion" ,
+                               "gegenion" ;
+                 skos:definition "A counterion is the ion that accompanies an ionic species in order to maintain electric neutrality. [Wikipedia]" ;
+                 skos:example "In a charged transition metal complex, a (i.e. non-coordinated) ion accompanying the complex is termed the counterion. [Wikipedia]" ,
+                              "In table salt (NaCl), the sodium cation is the counterion for the chlorine anion and vice versa. [Wikipedia]" ;
+                 skos:prefLabel "counterion" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000921
+af-m:AFM_0000921 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000275 ;
+                 dct:source "PAC, 1994, 66, 1077 (Glossary of terms used in physical organic chemistry (IUPAC Recommendations 1994)) on page 1176" ,
+                            "PAC, 1995, 67, 1307 (Glossary of class names of organic compounds and reactivity intermediates based on structure (IUPAC Recommendations 1995)) on page 1375" ;
+                 skos:altLabel "zwitterionic compound" ;
+                 skos:definition "An amphoteric compound is a molecule or ion that can react both as an acid and as a base. [Wikipedia]" ;
+                 skos:prefLabel "ampholyte" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001017
+af-m:AFM_0001017 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 1 af-m:electron) and ('af-x:has proper part' exactly 1 af-m:proton) and ('af-x:has proper part' exactly 1 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "2H" ,
+                               "D" ;
+                 skos:definition "A deuterium nucleus is a hydrogen atom that has part a neutron. [Allotrope]" ;
+                 skos:prefLabel "deuterium nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001019
+af-m:AFM_0001019 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 6 af-m:electron) and ('af-x:has proper part' exactly 6 af-m:proton) and ('af-x:has proper part' exactly 7 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "13C" ;
+                 skos:changeNote "2017-09-04 Add term [Allotrope]" ;
+                 skos:definition "A carbon 13 nucleus is a carbon nucleus that contains an additional neutron. [Allotrope]" ;
+                 skos:prefLabel "carbon 13 nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001020
+af-m:AFM_0001020 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 15 af-m:electron) and ('af-x:has proper part' exactly 15 af-m:proton) and ('af-x:has proper part' exactly 16 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "31P" ;
+                 skos:changeNote "2017-09-04 Add term [Allotrope]" ;
+                 skos:definition "A phosphorus 31 nucleus is a phosphorus nucleus that contains an additional neutron. [Allotrope]" ;
+                 skos:prefLabel "phosphorus 31 nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001021
+af-m:AFM_0001021 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 7 af-m:electron) and ('af-x:has proper part' exactly 7 af-m:proton) and ('af-x:has proper part' exactly 7 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "14N" ;
+                 skos:definition "Nitrogen 14 is the most abundant naturally occurring isotope of nitrogen with 7 protons and 7 neutrons. [Allotrope]" ;
+                 skos:prefLabel "nitrogen 14 nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001022
+af-m:AFM_0001022 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 9 af-m:electron) and ('af-x:has proper part' exactly 9 af-m:proton) and ('af-x:has proper part' exactly 10 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "19F" ;
+                 skos:changeNote "2017-09-04 Add term [Allotrope]" ;
+                 skos:definition "A fluorine 19 nucleus is a fluorine nucleus with an additional neutron. [Allotrope]" ;
+                 skos:prefLabel "fluorine 19 nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001024
+af-m:AFM_0001024 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 6 af-m:electron) and ('af-x:has proper part' exactly 6 af-m:proton) and ('af-x:has proper part' exactly 8 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "14C" ;
+                 skos:definition "A carbon 14 nucleus is a nitcarbon nucleus with 2 additional neutrons. [Allotrope]" ;
+                 skos:prefLabel "carbon 14 nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001025
+af-m:AFM_0001025 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 6 af-m:electron) and ('af-x:has proper part' exactly 6 af-m:proton) and ('af-x:has proper part' exactly 6 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "12C" ;
+                 skos:definition "A carbon 12 nucleus is the nucleus of a carbon atom as its most abundant naturally occurring isotope. [Allotrope]" ;
+                 skos:prefLabel "carbon 12 nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001026
+af-m:AFM_0001026 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000226 ;
+                 af-x:AFX_0002794 "af-m:nucleus and ('af-x:has proper part' exactly 7 af-m:electron) and ('af-x:has proper part' exactly 7 af-m:proton) and ('af-x:has proper part' exactly 8 af-m:neutron)" ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "15N" ;
+                 skos:definition "A nitrogen 15 nucleus is a nitrogen nucleus that contains an additional neutron. [Allotrope]" ;
+                 skos:prefLabel "nitrogen 15 nucleus" .
+
+
+###  http://purl.allotrope.org/ontologies/realizable#AFRE_0000009
+af-re:AFRE_0000009 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000024
+bfo:_0000024 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+bfo:_0000040 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_24433
+chebi:_24433 rdf:type owl:Class ;
+             rdfs:subClassOf bfo:_0000024 ;
+             skos:prefLabel "group" .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

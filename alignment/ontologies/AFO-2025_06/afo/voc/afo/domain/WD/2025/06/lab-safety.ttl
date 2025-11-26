@@ -1,3 +1,558 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:431e64d8bbea1aa7f8d54b259841bcedba12c55e0cdcfcfbaf814b1cc7c5f475
-size 36349
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/lab-safety#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-ec-001: <http://purl.allotrope.org/ontologies/equipment/codelist/001#> .
+@prefix af-ec-002: <http://purl.allotrope.org/ontologies/equipment/codelist/002#> .
+@prefix af-ec-003: <http://purl.allotrope.org/ontologies/equipment/codelist/003#> .
+@prefix af-ec-004: <http://purl.allotrope.org/ontologies/equipment/codelist/004#> .
+@prefix af-ec-005: <http://purl.allotrope.org/ontologies/equipment/codelist/005#> .
+@prefix af-ec-006: <http://purl.allotrope.org/ontologies/equipment/codelist/006#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/lab-safety#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/lab-safety> rdf:type owl:Ontology ;
+                                                                            owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/lab-safety> ;
+                                                                            owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                            dct:description "Allotrope domain ontology on ventilation, fume hoods, cabinets" ;
+                                                                            dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                            dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                            dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                            dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                       <http://purl.allotrope.org/voc/copyright> ;
+                                                                            dct:title "AFO Laboratory Safety Domain Ontology (WD/2025/06)" ;
+                                                                            owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2018/04/lab-safety> ;
+                                                                            owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001229
+af-e:AFE_0001229 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000050 ;
+                 skos:definition "Code for a filtration class. [Allotrope]" ;
+                 skos:prefLabel "filtration class code" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001230
+af-e:AFE_0001230 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001231 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "fume cupboard" ;
+                 skos:definition "A fume hood or fume cupboard is a type of local ventilation device that is designed to limit exposure to hazardous or toxic fumes, vapors or dusts. A fume hood is typically a large piece of equipment enclosing five sides of a work area, the bottom of which is most commonly located at a standing work height. [Wikipedia]" ;
+                 skos:prefLabel "fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001232
+af-e:AFE_0001232 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001230 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:definition "Most fume hoods for industrial purposes are ducted. A large variety of ducted fume hoods exist. In most designs, conditioned (i.e. heated or cooled) air is drawn from the lab space into the fume hood and then dispersed via ducts into the atmosphere. [Wikipedia]" ;
+                 skos:prefLabel "ducted fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001233
+af-e:AFE_0001233 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001234 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "RAV ducted hood" ;
+                 skos:definition "Reduced air volume hoods incorporate a bypass block to partially close off the bypass, reducing the air volume and thus conserving energy. Usually, the block is combined with a sash stop to limit the height of the sash opening, ensuring a safe face velocity during normal operation while lowering the hood’s air volume. [Wikipedia]" ;
+                 skos:prefLabel "reduced air volume ducted hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001234
+af-e:AFE_0001234 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001235 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "bypass CAV ducted hood" ,
+                               "conventional hood" ;
+                 skos:definition "Bypass CAV hoods were developed to overcome the high velocity issues that affect conventional fume hoods. These hood allows air to be pulled through a \"bypass\" opening from above as the sash closes. The bypass is located so that as the user closes the sash, the bypass opening gets larger. The air going through the hood maintains a constant volume no matter where the sash is positioned and without changing fan speeds. As a result, the energy consumed by CAV fume hoods (or rather, the energy consumed by the building HVAC system and the energy consumed by the hood's exhaust fan) remains constant, or near constant, regardless of sash position. [Wikipedia]" ;
+                 skos:prefLabel "bypass constant air volume ducted hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001235
+af-e:AFE_0001235 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001232 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "CAV ducted hood" ;
+                 skos:definition "A ducted fume hood that draws a constant air volume. [Allotrope]" ;
+                 skos:prefLabel "constant air volume ducted hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001236
+af-e:AFE_0001236 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001235 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "non-bypass CAV ducted hood" ;
+                 skos:definition "Closing the sash on a non-bybass CAV hood will increase face velocity (\"pull\"), which is a function of the total volume divided by the area of the sash opening. Thus, a conventional hood's performance (from a safety perspective) depends primarily on sash position, with safety increasing as the hood is drawn closed. To address this issue, many conventional CAV hoods specify a maximum height that the fume hood can be open in order to maintain safe airflow levels. [Wikipedia]" ;
+                 skos:prefLabel "non-bypass constant air volume ducted hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001237
+af-e:AFE_0001237 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001234 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "high performance bypass CAV ducted hood" ,
+                               "high performance bypass constant air volume ducted hood" ,
+                               "high-performance bypass CAV ducted hood" ,
+                               "high-performance bypass constant air volume ducted hood" ,
+                               "low flow bypass CAV ducted hood" ,
+                               "low flow bypass constant air volume ducted hood" ,
+                               "low-flow bypass CAV ducted hood" ;
+                 skos:definition "High-performance bypass CAV hoods are the newest type of bypass CAV hoods and typically display improved containment, safety, and energy conservation features. They generally have one or more of the following features: sash stops or horizontal-sliding sashes to limit the openings; sash position and airflow sensors that can control mechanical baffles; small fans to create an air-curtain barrier in the operator’s breathing zone; refined aerodynamic designs and variable dual-baffle systems to maintain laminar (undisturbed, nonturbulent) flow through the hood. [Wikipedia]" ;
+                 skos:prefLabel "low-flow bypass constant air volume ducted hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001238
+af-e:AFE_0001238 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001232 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "VAV ducted hood" ;
+                 skos:definition "VAV hoods vary the volume of room air exhausted while maintaining the face velocity at a set level. Different VAV hoods change the exhaust volume using different methods, such as a damper or valve in the exhaust duct that opens and closes based on sash position, or a blower that changes speed to meet air-volume demands. Most VAV hoods integrate a modified bypass-block system that ensures adequate airflow at all sash positions. VAV hoods are connected electronically to the laboratory building’s HVAC, so hood exhaust and room supply are balanced. In addition, VAV hoods feature monitors and/or alarms that warn the operator of unsafe hood-airflow conditions. [Wikipedia]" ;
+                 skos:prefLabel "variable air volume ducted hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001239
+af-e:AFE_0001239 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001232 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "exhaust canopy" ;
+                 skos:definition "Canopy fume hoods are similar to the range hoods found over stoves in commercial and some residential kitchens. They have only a canopy (and no enclosure and no sash) and are designed for venting non-toxic materials such as non-toxic smoke, steam, heat, and odors. [Wikipedia]" ;
+                 skos:prefLabel "canopy fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001240
+af-e:AFE_0001240 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001230 ;
+                 skos:altLabel "recirculating fume hood" ;
+                 skos:definition "Mainly for educational or testing use, these units generally have a fan mounted on the top (soffit) of the hood, or beneath the worktop. Air is sucked through the front opening of the hood and through a filter, before passing through the fan and being fed back into the workplace. With a ductless fume hood it is essential that the filter medium be able to remove the particular hazardous or noxious material being used. As different filters are required for different materials, recirculating fume hoods should only be used when the hazard is well known and does not change. [Wikipedia]" ;
+                 skos:prefLabel "ductless fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001241
+af-e:AFE_0001241 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001230 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "waterwash" ;
+                 skos:definition "Waterwash fume hoods have an internal wash system that cleans the interior of the unit, to prevent a build-up of dangerous chemicals. [Wikipedia]" ;
+                 skos:prefLabel "waterwash fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001242
+af-e:AFE_0001242 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001230 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "scrubber" ;
+                 skos:definition "The scrubber fume hood absorbs the fumes through a chamber filled with plastic shapes, which are doused with water. The chemicals are washed into a sump, which is often filled with a neutralizing liquid. The fumes are then dispersed, or disposed of, in the conventional manner. [Wikipedia]" ;
+                 skos:prefLabel "scrubber fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001243
+af-e:AFE_0001243 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001244 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:definition "The radioisotope fume hood is made with a coved stainless steel liner and coved integral stainless steel countertop that is reinforced to handle the weight of lead bricks or blocks. [Wikipedia]" ;
+                 skos:prefLabel "radioisotope hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001244
+af-e:AFE_0001244 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001230 ;
+                 skos:definition "A hood for protection from chemicals e.g. solvent fumes. [Allotrope]" ;
+                 skos:prefLabel "chemical fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001245
+af-e:AFE_0001245 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001244 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:definition "Perchloric acid hoods feature a waterwash system in the ductwork. Because perchloric acid fumes settle, and form explosive crystals, it is vital that the ductwork is cleaned internally with a series of sprays. [Wikipedia]" ;
+                 skos:prefLabel "perchloric acid hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001246
+af-e:AFE_0001246 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001230 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:altLabel "downflow work station" ;
+                 skos:definition "Downflow fume hoods are typically ductless fume hoods designed to protect the user and the environment from hazardous vapors generated on the work surface. A downward air flow is generated and hazardous vapors are collected through slits in the work surface. [Wikipedia]" ;
+                 skos:prefLabel "downflow fume hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001247
+af-e:AFE_0001247 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001244 ;
+                 dct:source "https://en.wikipedia.org/wiki/Fume_hood" ;
+                 skos:definition "Acid digestion hoods are typically constructed of polypropylene in order to resist the corrosive effects of acids at high concentrations. If hydrofluoric acid is being used in the hood, the hood's glass sash should be constructed of polycarbonate which resists etching. Hood ductwork should be lined with polypropylene or coated with PTFE (Teflon). [Wikipedia]" ;
+                 skos:prefLabel "acid digestion hood" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001249
+af-e:AFE_0001249 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001191 ;
+                 dct:source "https://en.wikipedia.org/wiki/Laminar_flow_cabinet" ;
+                 skos:altLabel "laminar flow closet" ,
+                               "tissue culture hood" ;
+                 skos:definition "A laminar flow cabinet is a carefully enclosed bench designed to prevent contamination of semiconductor wafers, biological samples, or any particle sensitive materials. Air is drawn through a HEPA filter and blown in a very smooth, laminar flow towards the user. The cabinet is usually made of stainless steel with no gaps or joints where spores might collect. [Wikipedia]" ;
+                 skos:prefLabel "laminar flow cabinet" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001291
+af-e:AFE_0001291 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001229 ;
+                 skos:definition "Filtration code according to international standard EN 799. [Allotrope]" ;
+                 skos:prefLabel "EN 779 filtration code" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001292
+af-e:AFE_0001292 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001229 ;
+                 skos:definition "Filtration code according to international standard EN 1822. [Allotrope]" ;
+                 skos:prefLabel "EN 1822 filtration code" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001363
+af-e:AFE_0001363 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001231 ;
+                 skos:definition "A hood for carrying out or protecting from dust. [Allotrope]" ;
+                 skos:prefLabel "dust hood" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001364
+af-ec-001:AFE_0001364 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "G1" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class G1" ;
+                      skos:prefLabel "G1" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001366
+af-ec-001:AFE_0001366 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "G2" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class G2" ;
+                      skos:prefLabel "G2" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001367
+af-ec-001:AFE_0001367 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "G3" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class G3" ;
+                      skos:prefLabel "G3" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001368
+af-ec-001:AFE_0001368 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "G4" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class G4" ;
+                      skos:prefLabel "G4" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001369
+af-ec-001:AFE_0001369 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      owl:sameAs af-ec-001:AFE_0001370 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "M5" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class M5" ;
+                      skos:prefLabel "M5" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001370
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001370
+af-ec-001:AFE_0001370 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "F5" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "previous DIN EN 799 filter class F5, equivalent to M5" ;
+                      skos:prefLabel "F5" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001371
+af-ec-001:AFE_0001371 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      owl:sameAs af-ec-001:AFE_0001372 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "M6" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class M6" ;
+                      skos:prefLabel "M6" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001372
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001372
+af-ec-001:AFE_0001372 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "F6" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "previous DIN EN 799 filter class F6, equivalent to M6" ;
+                      skos:prefLabel "F6" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001373
+af-ec-001:AFE_0001373 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "F7" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class F7" ;
+                      skos:prefLabel "F7" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001374
+af-ec-001:AFE_0001374 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "F8" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class F8" ;
+                      skos:prefLabel "F8" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/001#AFE_0001375
+af-ec-001:AFE_0001375 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001291 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:notation "F9" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/001> ;
+                      skos:definition "EN 799 filter class F9" ;
+                      skos:prefLabel "F9" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001376
+af-ec-002:AFE_0001376 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "E10" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class E10" ;
+                      skos:prefLabel "E10" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001378
+af-ec-002:AFE_0001378 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "E11" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class E11" ;
+                      skos:prefLabel "E11" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001379
+af-ec-002:AFE_0001379 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "E12" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class E12" ;
+                      skos:prefLabel "E12" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001380
+af-ec-002:AFE_0001380 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "H13" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class H13" ;
+                      skos:prefLabel "H13" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001381
+af-ec-002:AFE_0001381 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "H14" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class H14" ;
+                      skos:prefLabel "H14" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001382
+af-ec-002:AFE_0001382 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "U15" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class U15" ;
+                      skos:prefLabel "U15" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001383
+af-ec-002:AFE_0001383 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "U16" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class U16" ;
+                      skos:prefLabel "U16" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment/codelist/002#AFE_0001384
+af-ec-002:AFE_0001384 rdf:type owl:NamedIndividual ,
+                               af-e:AFE_0001292 ;
+                      skos:inScheme <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:notation "U17" ;
+                      void:inDataset <http://purl.allotrope.org/ontologies/equipment/codelist/002> ;
+                      skos:definition "EN 1822 filter class U17" ;
+                      skos:prefLabel "U17" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

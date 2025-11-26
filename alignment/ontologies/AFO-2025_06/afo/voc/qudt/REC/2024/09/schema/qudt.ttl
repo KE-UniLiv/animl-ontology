@@ -1,3 +1,1924 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:37c418901d08edfbe8d4570e94ade30808a16f2122f18de62b05e78ad7364433
-size 100196
+@prefix : <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix creativecommons: <http://creativecommons.org/ns#> .
+@base <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt#> .
+
+<http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt> rdf:type owl:Ontology ;
+                                                              owl:versionIRI <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt> ;
+                                                              dct:contributor <http://www.allotrope.org> ,
+                                                                              <http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen> ,
+                                                                              <http://purl.allotrope.org/voc/qudt/contributors/DavidPrice> ,
+                                                                              <http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> ,
+                                                                              <http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> ;
+                                                              dct:creator <http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> ;
+                                                              dct:issued "2024-09-27T12:00:00Z"^^xsd:dateTime ;
+                                                              dct:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
+                                                              dct:modified "2024-09-06T12:00:00Z"^^xsd:dateTime ;
+                                                              dct:publisher <http://www.allotrope.org> ;
+                                                              dct:rights <http://purl.allotrope.org/voc/qudt/rights> ;
+                                                              dct:subject "Quantities, Units, Dimensions and Types" ;
+                                                              dct:title "Quantities, Units, Dimensions and Types (QUDT) Ontology (REC/2021/06) (simplified)" ;
+                                                              rdfs:label "Quantities, Units, Dimensions and Types (QUDT) - Level 1" ;
+                                                              owl:priorVersion <http://purl.allotrope.org/voc/qudt/REC/2021/06/schema/qudt> ;
+                                                              owl:versionInfo "Allotrope REC/2024/09" ;
+                                                              prov:derivedFrom <http://qudt.org/1.1/schema/qudt> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/subject
+dct:subject rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#derivedFrom
+prov:derivedFrom rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://qudt.org/schema/qudt#allowedUnitOfSystem
+qudt:allowedUnitOfSystem rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf qudt:unitOfSystem ;
+                         dct:description "This property relates a unit of measure with a unit system that does not define the unit, but allows its use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system." ;
+                         rdfs:label "allowed unit of system" ;
+                         skos:definition "This property relates a unit of measure with a unit system that does not define the unit, but allows its use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system." ;
+                         skos:prefLabel "allowed unit of system" .
+
+
+###  http://qudt.org/schema/qudt#baseDimensionEnumeration
+qudt:baseDimensionEnumeration rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              dct:description "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order." ;
+                              rdfs:label "base dimension enumeration" ;
+                              skos:definition "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order." ;
+                              skos:prefLabel "base dimension enumeration" .
+
+
+###  http://qudt.org/schema/qudt#baseQuantityKindOfSystem
+qudt:baseQuantityKindOfSystem rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf qudt:quantityKindOfSystem ;
+                              owl:inverseOf qudt:systemBaseQuantityKind ;
+                              rdfs:label "base quantity kind of system" ;
+                              skos:prefLabel "base quantity kind of system" .
+
+
+###  http://qudt.org/schema/qudt#baseUnitOfSystem
+qudt:baseUnitOfSystem rdf:type owl:ObjectProperty ;
+                      owl:inverseOf qudt:systemBaseUnit ;
+                      dct:description "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
+                      rdfs:label "base unit of system" ;
+                      skos:definition "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
+                      skos:prefLabel "base unit of system" .
+
+
+###  http://qudt.org/schema/qudt#basisElement
+qudt:basisElement rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:label "basis element" ;
+                  skos:altLabel "basis element" ;
+                  skos:prefLabel "has basis element" .
+
+
+###  http://qudt.org/schema/qudt#coherentDerivedUnitOfSystem
+qudt:coherentDerivedUnitOfSystem rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf qudt:derivedUnitOfSystem ;
+                                 owl:inverseOf qudt:systemCoherentDerivedUnit ;
+                                 dct:description "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one." ;
+                                 rdfs:label "derived unit of system" ;
+                                 skos:altLabel "derived unit of system" ;
+                                 skos:definition "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one." ;
+                                 skos:prefLabel "has derived unit of system" .
+
+
+###  http://qudt.org/schema/qudt#coherentUnitSystem
+qudt:coherentUnitSystem rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf qudt:unitSystem ;
+                        rdf:type owl:FunctionalProperty ;
+                        dct:description "A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities. In such a coherent system, no numerical factor other than the number 1 ever occurs in the expressions for the derived units in terms of the base units." ;
+                        rdfs:label "coherent unit system" ;
+                        skos:altLabel "coherent unit system" ;
+                        skos:definition "A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities. In such a coherent system, no numerical factor other than the number 1 ever occurs in the expressions for the derived units in terms of the base units." ;
+                        skos:prefLabel "has coherent unit system" .
+
+
+###  http://qudt.org/schema/qudt#default
+qudt:default rdf:type owl:ObjectProperty ;
+             dct:description "The default element in an enumeration" ;
+             rdfs:label "default" ;
+             skos:altLabel "default" ;
+             skos:definition "The default element in an enumeration" ;
+             skos:prefLabel "has default" .
+
+
+###  http://qudt.org/schema/qudt#definedUnitOfSystem
+qudt:definedUnitOfSystem rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf qudt:unitOfSystem ;
+                         owl:inverseOf qudt:systemDefinedUnit ;
+                         dct:description "This property relates a unit of measure with the unit system that defines the unit." ;
+                         rdfs:label "defined unit of system" ;
+                         skos:altLabel "defined unit of system" ;
+                         skos:definition "This property relates a unit of measure with the unit system that defines the unit." ;
+                         skos:prefLabel "has defined unit of system" .
+
+
+###  http://qudt.org/schema/qudt#derivedQuantityKindOfSystem
+qudt:derivedQuantityKindOfSystem rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf qudt:quantityKindOfSystem ;
+                                 owl:inverseOf qudt:systemDerivedQuantityKind ;
+                                 rdfs:label "derived quantity kind of system" ;
+                                 skos:prefLabel "derived quantity kind of system" .
+
+
+###  http://qudt.org/schema/qudt#derivedUnitOfSystem
+qudt:derivedUnitOfSystem rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf qudt:definedUnitOfSystem ;
+                         owl:inverseOf qudt:systemDerivedUnit ;
+                         dct:description "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
+                         rdfs:label "derived unit of system" ;
+                         skos:definition "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
+                         skos:prefLabel "derived unit of system" .
+
+
+###  http://qudt.org/schema/qudt#dimensionInverse
+qudt:dimensionInverse rdf:type owl:ObjectProperty ;
+                      owl:inverseOf qudt:dimensionInverse ;
+                      rdf:type owl:FunctionalProperty ,
+                               owl:InverseFunctionalProperty ,
+                               owl:SymmetricProperty ;
+                      rdfs:label "dimension inverse" ;
+                      skos:prefLabel "dimension inverse" .
+
+
+###  http://qudt.org/schema/qudt#element
+qudt:element rdf:type owl:ObjectProperty ;
+             dct:description "An element of an enumeration" ;
+             rdfs:label "element" ;
+             skos:altLabel "element" ;
+             skos:definition "An element of an enumeration" ;
+             skos:prefLabel "has element" .
+
+
+###  http://qudt.org/schema/qudt#elementKind
+qudt:elementKind rdf:type owl:ObjectProperty ;
+                 rdfs:label "element kind" ;
+                 skos:altLabel "element kind" ;
+                 skos:prefLabel "has element kind" .
+
+
+###  http://qudt.org/schema/qudt#exactMatch
+qudt:exactMatch rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty ,
+                         owl:TransitiveProperty ;
+                rdfs:label "exact match" ;
+                skos:prefLabel "exact match" .
+
+
+###  http://qudt.org/schema/qudt#generalization
+qudt:generalization rdf:type owl:ObjectProperty ;
+                    owl:inverseOf qudt:specialization ;
+                    dct:description """This property relates a quantity kind to its generalization. A quantity kind, PARENT, is a generalization of the quantity kind CHILD only if
+
+1. PARENT and CHILD have the same dimensions in every system of quantities;
+2. Every unit that is a measure of quantities of kind CHILD is also a valid measure of quantities of kind PARENT.""" ;
+                    rdfs:label "generalization" ;
+                    skos:altLabel "generalization" ;
+                    skos:definition """This property relates a quantity kind to its generalization. A quantity kind, PARENT, is a generalization of the quantity kind CHILD only if
+
+1. PARENT and CHILD have the same dimensions in every system of quantities;
+2. Every unit that is a measure of quantities of kind CHILD is also a valid measure of quantities of kind PARENT.""" ;
+                    skos:prefLabel "has generalization" .
+
+
+###  http://qudt.org/schema/qudt#quantity
+qudt:quantity rdf:type owl:ObjectProperty ;
+              dct:description "a property to relate an observable thing with a quantity (qudt:Quantity)" ;
+              rdfs:label "quantity" ;
+              skos:altLabel "quantity" ;
+              skos:definition "a property to relate an observable thing with a quantity (qudt:Quantity)" ;
+              skos:prefLabel "has quantity" .
+
+
+###  http://qudt.org/schema/qudt#quantityKind
+qudt:quantityKind rdf:type owl:ObjectProperty ;
+                  rdfs:label "quantity kind" ;
+                  skos:altLabel "quantity kind" ;
+                  skos:prefLabel "has quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#quantityKindOfSystem
+qudt:quantityKindOfSystem rdf:type owl:ObjectProperty ;
+                          owl:inverseOf qudt:systemQuantityKind ;
+                          rdfs:label "quantity kind of system" ;
+                          skos:definition "inverse of system quantity kind" ;
+                          skos:prefLabel "quantity kind of system" .
+
+
+###  http://qudt.org/schema/qudt#quantityValue
+qudt:quantityValue rdf:type owl:ObjectProperty ;
+                   owl:inverseOf qudt:valueQuantity ;
+                   rdfs:label "quantity value" ;
+                   skos:altLabel "quantity value" ;
+                   skos:definition "inverse of value quantity" ;
+                   skos:prefLabel "has quantity value" .
+
+
+###  http://qudt.org/schema/qudt#referenceThing
+qudt:referenceThing rdf:type owl:ObjectProperty ;
+                    rdfs:label "reference thing" ;
+                    skos:altLabel "reference thing" ;
+                    skos:prefLabel "has reference thing" .
+
+
+###  http://qudt.org/schema/qudt#referenceUnit
+qudt:referenceUnit rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf qudt:referenceThing ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:label "reference unit" ;
+                   skos:altLabel "reference unit" ;
+                   skos:prefLabel "has reference unit" .
+
+
+###  http://qudt.org/schema/qudt#specialization
+qudt:specialization rdf:type owl:ObjectProperty ;
+                    dct:description "This property relates a quantity kind to its specialization(s). For example, linear velocity and angular velocity are both specializations of velocity." ;
+                    rdfs:label "specialization" ;
+                    skos:altLabel "specialization" ;
+                    skos:definition "This property relates a quantity kind to its specialization(s). For example, linear velocity and angular velocity are both specializations of velocity." ;
+                    skos:prefLabel "has specialization" .
+
+
+###  http://qudt.org/schema/qudt#systemBaseQuantityKind
+qudt:systemBaseQuantityKind rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf qudt:systemQuantityKind ;
+                            rdfs:label "system base quantity kind" ;
+                            skos:altLabel "system base quantity kind" ;
+                            skos:prefLabel "has system base quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#systemBaseUnit
+qudt:systemBaseUnit rdf:type owl:ObjectProperty ;
+                    dct:description "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
+                    rdfs:label "base unit" ;
+                    skos:altLabel "base unit" ;
+                    skos:definition "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
+                    skos:prefLabel "has base unit" .
+
+
+###  http://qudt.org/schema/qudt#systemCoherentDerivedUnit
+qudt:systemCoherentDerivedUnit rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf qudt:systemDerivedUnit ;
+                               rdfs:label "coherent derived unit" ;
+                               skos:altLabel "coherent derived unit" ;
+                               skos:prefLabel "has coherent derived unit" .
+
+
+###  http://qudt.org/schema/qudt#systemDefinedUnit
+qudt:systemDefinedUnit rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf qudt:systemUnit ;
+                       dct:description "This property relates a unit system with a unit of measure that is defined by the system." ;
+                       rdfs:label "defined unit" ;
+                       skos:altLabel "defined unit" ;
+                       skos:definition "This property relates a unit system with a unit of measure that is defined by the system." ;
+                       skos:prefLabel "has defined unit" .
+
+
+###  http://qudt.org/schema/qudt#systemDerivedQuantityKind
+qudt:systemDerivedQuantityKind rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf qudt:systemQuantityKind ;
+                               rdfs:label "system derived quantity kind" ;
+                               skos:altLabel "system derived quantity kind" ;
+                               skos:prefLabel "has system derived quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#systemDerivedUnit
+qudt:systemDerivedUnit rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf qudt:systemDefinedUnit ;
+                       dct:description "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
+                       rdfs:label "derived unit" ;
+                       skos:altLabel "derived unit" ;
+                       skos:definition "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
+                       skos:prefLabel "has derived unit" .
+
+
+###  http://qudt.org/schema/qudt#systemDimension
+qudt:systemDimension rdf:type owl:ObjectProperty ;
+                     rdfs:label "system dimension" ;
+                     skos:altLabel "system dimension" ;
+                     skos:prefLabel "has system dimension" .
+
+
+###  http://qudt.org/schema/qudt#systemQuantityKind
+qudt:systemQuantityKind rdf:type owl:ObjectProperty ;
+                        rdfs:label "system quantity kind" ;
+                        skos:altLabel "system quantity kind" ;
+                        skos:prefLabel "has system quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#systemUnit
+qudt:systemUnit rdf:type owl:ObjectProperty ;
+                owl:inverseOf qudt:unitOfSystem ;
+                dct:description "This property relates a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system." ;
+                rdfs:label "system unit" ;
+                skos:altLabel "system unit" ;
+                skos:definition "This property relates a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system." ;
+                skos:prefLabel "has system unit" .
+
+
+###  http://qudt.org/schema/qudt#unit
+qudt:unit rdf:type owl:ObjectProperty ;
+          owl:inverseOf qudt:unitFor ;
+          rdfs:range qudt:Unit ;
+          dct:description "A reference to the unit of measure of a quantity (variable or constant) of interest." ;
+          rdfs:label "unit" ;
+          skos:altLabel "unit" ;
+          skos:definition "A reference to the unit of measure of a quantity (variable or constant) of interest." ;
+          skos:prefLabel "has unit" .
+
+
+###  http://qudt.org/schema/qudt#unitFor
+qudt:unitFor rdf:type owl:ObjectProperty ;
+             rdfs:label "unit for" ;
+             skos:altLabel "unit of" ;
+             skos:definition "This property relates a unit of measure to something." ;
+             skos:prefLabel "unit for" .
+
+
+###  http://qudt.org/schema/qudt#unitOfSystem
+qudt:unitOfSystem rdf:type owl:ObjectProperty ;
+                  dct:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+                  rdfs:label "unit of system" ;
+                  skos:definition "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
+                  skos:prefLabel "unit of system" .
+
+
+###  http://qudt.org/schema/qudt#unitSystem
+qudt:unitSystem rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:label "unit system" ;
+                skos:altLabel "unit system" ;
+                skos:prefLabel "has unit system" .
+
+
+###  http://qudt.org/schema/qudt#value
+qudt:value rdf:type owl:ObjectProperty ;
+           dct:description "A property to relate an observable thing with a quantity value (qudt:QuantityValue)" ;
+           rdfs:label "value" ;
+           skos:altLabel "has value" ,
+                         "value" ;
+           skos:definition "A property to relate an observable thing with a quantity value (qudt:QuantityValue)" ;
+           skos:prefLabel "has value" .
+
+
+###  http://qudt.org/schema/qudt#valueQuantity
+qudt:valueQuantity rdf:type owl:ObjectProperty ;
+                   rdfs:label "value for quantity" ;
+                   skos:prefLabel "value for quantity" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://qudt.org/schema/qudt#abbreviation
+qudt:abbreviation rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  dct:description "An abbreviation for a unit is a short (usually 5 characters or less) string that is used in place of the full name for the unit in contexts where space is limited, or where using the abbreviation will enhance readability." ;
+                  rdfs:label "abbreviation" ;
+                  skos:altLabel "abbreviation" ;
+                  skos:definition "An abbreviation for a unit is a short (usually 5 characters or less) string that is used in place of the full name for the unit in contexts where space is limited, or where using the abbreviation will enhance readability." ;
+                  skos:prefLabel "has abbreviation" .
+
+
+###  http://qudt.org/schema/qudt#code
+qudt:code rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          dct:description "A unit code is a numeric string that uniquely identifies a unit " ;
+          rdfs:label "code" ;
+          skos:altLabel "code" ;
+          skos:definition "A unit code is a numeric string that uniquely identifies a unit " ;
+          skos:prefLabel "has code" .
+
+
+###  http://qudt.org/schema/qudt#conversionCoefficient
+qudt:conversionCoefficient rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:double ;
+                           rdfs:label "conversion coefficient" ;
+                           skos:altLabel "conversion coefficient" ;
+                           skos:prefLabel "has conversion coefficient" .
+
+
+###  http://qudt.org/schema/qudt#conversionMultiplier
+qudt:conversionMultiplier rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:range xsd:double ;
+                          rdfs:label "conversion multiplier" ;
+                          skos:altLabel "conversion multiplier" ;
+                          skos:prefLabel "has conversion multiplier" .
+
+
+###  http://qudt.org/schema/qudt#conversionOffset
+qudt:conversionOffset rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:range xsd:double ;
+                      rdfs:label "conversion offset" ;
+                      skos:altLabel "conversion offset" ;
+                      skos:prefLabel "has conversion offset" .
+
+
+###  http://qudt.org/schema/qudt#currencyExponent
+qudt:currencyExponent rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:range xsd:integer ;
+                      dct:description "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0." ;
+                      rdfs:label "currency exponent" ;
+                      skos:altLabel "currency exponent" ;
+                      skos:definition "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0." ;
+                      skos:prefLabel "has currency exponent" .
+
+
+###  http://qudt.org/schema/qudt#description
+qudt:description rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "description" ;
+                 skos:altLabel "description" ;
+                 skos:prefLabel "has description" .
+
+
+###  http://qudt.org/schema/qudt#exactConstant
+qudt:exactConstant rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "exact constant" ;
+                   skos:altLabel "exact constant" ;
+                   skos:prefLabel "is exact constant" .
+
+
+###  http://qudt.org/schema/qudt#literal
+qudt:literal rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "literal" ;
+             skos:altLabel "literal" ;
+             skos:prefLabel "has literal" .
+
+
+###  http://qudt.org/schema/qudt#negativeDeltaLimit
+qudt:negativeDeltaLimit rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        dct:description "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
+                        rdfs:label "negative delta limit" ;
+                        skos:altLabel "negative delta limit" ;
+                        skos:definition "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
+                        skos:prefLabel "has negative delta limit" .
+
+
+###  http://qudt.org/schema/qudt#numericValue
+qudt:numericValue rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:double ;
+                  rdfs:label "numeric value" ;
+                  skos:altLabel "numeric value" ;
+                  skos:prefLabel "has numeric value" .
+
+
+###  http://qudt.org/schema/qudt#order
+qudt:order rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:nonNegativeInteger ;
+           rdfs:label "order" ;
+           skos:altLabel "order" ;
+           skos:prefLabel "has order" .
+
+
+###  http://qudt.org/schema/qudt#positiveDeltaLimit
+qudt:positiveDeltaLimit rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        dct:description "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
+                        rdfs:label "positive delta limit" ;
+                        skos:altLabel "positive delta limit" ;
+                        skos:definition "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
+                        skos:prefLabel "has positive delta limit" .
+
+
+###  http://qudt.org/schema/qudt#relativeStandardUncertainty
+qudt:relativeStandardUncertainty rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:double ;
+                                 dct:description "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value." ;
+                                 rdfs:label "relative standard uncertainty" ;
+                                 skos:altLabel "relative standard uncertainty" ;
+                                 skos:definition "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value." ;
+                                 skos:prefLabel "has relative standard uncertainty" .
+
+
+###  http://qudt.org/schema/qudt#standardUncertainty
+qudt:standardUncertainty rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:double ;
+                         dct:description "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements." ;
+                         rdfs:label "standard uncertainty" ;
+                         skos:altLabel "standard uncertainty" ;
+                         skos:definition "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements." ;
+                         skos:prefLabel "has standard uncertainty" .
+
+
+###  http://qudt.org/schema/qudt#symbol
+qudt:symbol rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf qudt:literal ;
+            rdfs:range xsd:string ;
+            dct:description "The symbol for a unit is a glyph that is used to represent the unit in a compact form. For example, the symbol for the US Dollar is $. This contrasts with unit:abbreviation, which gives a short alphanumeric abbreviation for the unit. (I.e. USD for US Dollar)." ;
+            rdfs:label "symbol" ;
+            skos:altLabel "symbol" ;
+            skos:definition "The symbol for a unit is a glyph that is used to represent the unit in a compact form. For example, the symbol for the US Dollar is $. This contrasts with unit:abbreviation, which gives a short alphanumeric abbreviation for the unit. (I.e. USD for US Dollar)." ;
+            skos:prefLabel "has symbol" .
+
+
+###  http://qudt.org/schema/qudt#uneceCommonCode
+qudt:uneceCommonCode rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "UNECE common code" ;
+                     skos:altLabel "UNECE common code" ;
+                     skos:prefLabel "has UNECE common code" .
+
+
+###  http://qudt.org/schema/qudt#vectorMagnitude
+qudt:vectorMagnitude rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:range xsd:float ;
+                     rdfs:label "vector magnitude" ;
+                     skos:altLabel "vector magnitude" ;
+                     skos:prefLabel "has vector magnitude" .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt#AbsorbedDoseRateUnit
+qudt:AbsorbedDoseRateUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:RadiologyUnit ;
+                          rdfs:label "Absorbed Dose Rate Unit" ;
+                          skos:prefLabel "absorbed dose rate unit" .
+
+
+###  http://qudt.org/schema/qudt#AbsorbedDoseUnit
+qudt:AbsorbedDoseUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:RadiologyUnit ;
+                      rdfs:label "Absorbed Dose Unit" ;
+                      skos:prefLabel "absorbed dose unit" .
+
+
+###  http://qudt.org/schema/qudt#AccelerationUnit
+qudt:AccelerationUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                      rdfs:label "Acceleration Unit" ;
+                      skos:prefLabel "acceleration unit" .
+
+
+###  http://qudt.org/schema/qudt#ActivityUnit
+qudt:ActivityUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:RadiologyUnit ;
+                  rdfs:label "Activity Unit" ;
+                  skos:prefLabel "activity unit" .
+
+
+###  http://qudt.org/schema/qudt#AmountOfSubstanceTemperatureUnit
+qudt:AmountOfSubstanceTemperatureUnit rdf:type owl:Class ;
+                                      rdfs:subClassOf qudt:ChemistryUnit ;
+                                      rdfs:label "Amount of Substance Temperature Unit" ;
+                                      skos:prefLabel "amount of substance temperature unit" .
+
+
+###  http://qudt.org/schema/qudt#AmountOfSubstanceUnit
+qudt:AmountOfSubstanceUnit rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:ChemistryUnit ;
+                           rdfs:label "Amount Of Substance Unit" ;
+                           skos:prefLabel "amount of substance unit" .
+
+
+###  http://qudt.org/schema/qudt#AngleUnit
+qudt:AngleUnit rdf:type owl:Class ;
+               rdfs:subClassOf qudt:DimensionlessUnit ,
+                               qudt:SpaceAndTimeUnit ;
+               dct:description "All units relating to specification of angles." ;
+               rdfs:label "Angle unit" ;
+               skos:prefLabel "angle unit" .
+
+
+###  http://qudt.org/schema/qudt#AngularAccelerationUnit
+qudt:AngularAccelerationUnit rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:AccelerationUnit ;
+                             rdfs:label "Angular Acceleration Unit" ;
+                             skos:prefLabel "angular acceleration unit" .
+
+
+###  http://qudt.org/schema/qudt#AngularMassUnit
+qudt:AngularMassUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:MechanicsUnit ;
+                     dct:description "The units of angular mass have dimensions of mass * area. They are used to measure the moment of inertia." ;
+                     rdfs:label "Angular Mass Unit" ;
+                     skos:prefLabel "angular mass unit" .
+
+
+###  http://qudt.org/schema/qudt#AngularMomentumUnit
+qudt:AngularMomentumUnit rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:MomentumUnit ;
+                         rdfs:label "Angular Momentum Unit" ;
+                         skos:prefLabel "angular momentum unit" .
+
+
+###  http://qudt.org/schema/qudt#AngularVelocityUnit
+qudt:AngularVelocityUnit rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:VelocityUnit ;
+                         rdfs:label "Angular Velocity Unit" ;
+                         skos:prefLabel "angular velocity unit" .
+
+
+###  http://qudt.org/schema/qudt#AreaAngleUnit
+qudt:AreaAngleUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                   rdfs:label "Area Angle Unit" ;
+                   skos:prefLabel "area angle unit" .
+
+
+###  http://qudt.org/schema/qudt#AreaTemperatureUnit
+qudt:AreaTemperatureUnit rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                         rdfs:label "Area Temperature Unit" ;
+                         skos:prefLabel "area temperature unit" .
+
+
+###  http://qudt.org/schema/qudt#AreaThermalExpansionUnit
+qudt:AreaThermalExpansionUnit rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:ThermalExpansionUnit ;
+                              dct:description """When the temperature of a substance changes, the energy that is stored in the intermolecular bonds between atoms changes. When the stored energy increases, so does the length of the molecular bonds. As a result, solids typically expand in response to heating and contract on cooling; this dimensional response to temperature change is expressed by its coefficient of thermal expansion.
+
+Different coefficients of thermal expansion can be defined for a substance depending on whether the expansion is measured by:
+
+    * linear thermal expansion
+    * area thermal expansion
+    * volumetric thermal expansion
+
+These characteristics are closely related. The volumetric thermal expansion coefficient can be defined for both liquids and solids. The linear thermal expansion can only be defined for solids, and is common in engineering applications.
+
+Some substances expand when cooled, such as freezing water, so they have negative thermal expansion coefficients.
+
+For exactly isotropic materials, the area thermal expansion coefficient is very closely approximated as twice the linear coefficient.""" ;
+                              rdfs:label "Area Thermal Expansion Unit" ;
+                              skos:prefLabel "area thermal expansion unit" .
+
+
+###  http://qudt.org/schema/qudt#AreaTimeTemperatureUnit
+qudt:AreaTimeTemperatureUnit rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                             rdfs:label "Area Time Temperature Unit" ;
+                             skos:prefLabel "area time temperature unit" .
+
+
+###  http://qudt.org/schema/qudt#AreaUnit
+qudt:AreaUnit rdf:type owl:Class ;
+              rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+              rdfs:label "Area Unit" ;
+              skos:prefLabel "area unit" .
+
+
+###  http://qudt.org/schema/qudt#AtomicChargeUnit
+qudt:AtomicChargeUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:AtomicPhysicsUnit ;
+                      dct:description "The electric charge of an ion, equal to the number of electrons the atom has gained or lost in its ionization multiplied by the charge on one electron.  This class contains the following instance(s): \"atomic number\"." ;
+                      rdfs:label "Atomic Charge Unit" ;
+                      skos:prefLabel "atomic charge unit" .
+
+
+###  http://qudt.org/schema/qudt#AtomicMassUnit
+qudt:AtomicMassUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:AtomicPhysicsUnit ;
+                    rdfs:label "Atomic Mass Unit" ;
+                    skos:prefLabel "atomic mass unit" .
+
+
+###  http://qudt.org/schema/qudt#AtomicPhysicsUnit
+qudt:AtomicPhysicsUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:PhysicalUnit ;
+                       rdfs:label "Atomic Physics Unit" ;
+                       skos:prefLabel "atomic physics unit" .
+
+
+###  http://qudt.org/schema/qudt#BendingMomentOrTorqueUnit
+qudt:BendingMomentOrTorqueUnit rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:MechanicsUnit ;
+                               rdfs:label "Bending Moment Or Torque Unit" ;
+                               skos:prefLabel "bending moment or torque unit" .
+
+
+###  http://qudt.org/schema/qudt#BinaryPrefixUnit
+qudt:BinaryPrefixUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:PrefixUnit ;
+                      rdfs:label "Binary Prefix Unit" ;
+                      skos:prefLabel "binary prefix unit" .
+
+
+###  http://qudt.org/schema/qudt#BiomedicalUnit
+qudt:BiomedicalUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:ScienceAndEngineeringUnit ;
+                    rdfs:label "Biomedical Unit" ;
+                    skos:prefLabel "biomedical unit" .
+
+
+###  http://qudt.org/schema/qudt#CapacitanceUnit
+qudt:CapacitanceUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                     rdfs:label "Capacitance Unit" ;
+                     skos:prefLabel "capacitance unit" .
+
+
+###  http://qudt.org/schema/qudt#CatalyticActivityUnit
+qudt:CatalyticActivityUnit rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:ChemistryUnit ;
+                           rdfs:label "Catalytic Activity Unit" ;
+                           skos:prefLabel "catalytic activity unit" .
+
+
+###  http://qudt.org/schema/qudt#ChemistryUnit
+qudt:ChemistryUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:PhysicalUnit ;
+                   rdfs:label "Chemistry Unit" ;
+                   skos:prefLabel "chemistry unit" .
+
+
+###  http://qudt.org/schema/qudt#CoefficientOfHeatTransferUnit
+qudt:CoefficientOfHeatTransferUnit rdf:type owl:Class ;
+                                   rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                                   rdfs:label "Coefficient Of Heat Transfer Unit" ;
+                                   skos:prefLabel "coefficient of heat transfer unit" .
+
+
+###  http://qudt.org/schema/qudt#CommunicationsUnit
+qudt:CommunicationsUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:ScienceAndEngineeringUnit ;
+                        rdfs:label "Communications Unit" ;
+                        skos:prefLabel "communications unit" .
+
+
+###  http://qudt.org/schema/qudt#ComputingUnit
+qudt:ComputingUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:ScienceAndEngineeringUnit ;
+                   rdfs:label "Computing Unit" ;
+                   skos:prefLabel "computing unit" .
+
+
+###  http://qudt.org/schema/qudt#ConcentrationUnit
+qudt:ConcentrationUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:ChemistryUnit ;
+                       rdfs:label "Concentration Unit" ;
+                       skos:prefLabel "concentration unit" .
+
+
+###  http://qudt.org/schema/qudt#ConductanceUnit
+qudt:ConductanceUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                     rdfs:label "Conductance Unit" ;
+                     skos:prefLabel "conductance unit" .
+
+
+###  http://qudt.org/schema/qudt#CountingUnit
+qudt:CountingUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:DimensionlessUnit ,
+                                  qudt:ResourceUnit ;
+                  dct:description "All units about counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second." ;
+                  rdfs:label "Counting Unit" ;
+                  skos:prefLabel "counting unit" .
+
+
+###  http://qudt.org/schema/qudt#CurrencyUnit
+qudt:CurrencyUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:FinancialUnit ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:currencyExponent ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
+                  rdfs:label "Currency Unit" ;
+                  skos:prefLabel "currency unit" .
+
+
+###  http://qudt.org/schema/qudt#CurrentPerAngleUnit
+qudt:CurrentPerAngleUnit rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                         rdfs:label "Current Per Angle Unit" ;
+                         skos:prefLabel "current per angle unit" .
+
+
+###  http://qudt.org/schema/qudt#CurvatureUnit
+qudt:CurvatureUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                   dct:description """The canonicall example of extrinsic curvature is that of a circle, which has curvature equal to the inverse of its radius everywhere. Smaller circles bend more sharply, and hence have higher curvature. The curvature of a smooth curve is defined as the curvature of its osculating circle at each point. The osculating circle of a sufficiently smooth plane curve at a given point on the curve is the circle whose center lies on the inner normal line and whose curvature is the same as that of the given curve at that point. This circle is tangent to the curve at the given point.
+
+That is, given a point P on a smooth curve C, the curvature of C at P is defined to be 1/R where R is the radius of the osculating circle of C at P. The magnitude of curvature at points on physical curves can be measured in diopters (also spelled dioptre) — this is the convention in optics. [Wikipedia]""" ;
+                   rdfs:label "Curvature Unit" ;
+                   skos:prefLabel "curvature unit" .
+
+
+###  http://qudt.org/schema/qudt#DataRateUnit
+qudt:DataRateUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:ComputingUnit ,
+                                  qudt:ResourceUnit ;
+                  rdfs:label "Data Rate Unit" ;
+                  skos:prefLabel "data rate unit" .
+
+
+###  http://qudt.org/schema/qudt#DecimalPrefixUnit
+qudt:DecimalPrefixUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:PrefixUnit ,
+                                       qudt:SIUnit ;
+                       rdfs:label "Decimal Prefix Unit" ;
+                       skos:prefLabel "decimal prefix unit" .
+
+
+###  http://qudt.org/schema/qudt#DimensionlessUnit
+qudt:DimensionlessUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:Unit ;
+                       dct:description "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero." ;
+                       rdfs:label "Dimensionless Unit" ;
+                       skos:prefLabel "dimensionless unit" .
+
+
+###  http://qudt.org/schema/qudt#DoseEquivalentUnit
+qudt:DoseEquivalentUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:RadiologyUnit ;
+                        rdfs:label "Dose Equivalent Unit" ;
+                        skos:prefLabel "dose equivalent unit" .
+
+
+###  http://qudt.org/schema/qudt#DynamicViscosityUnit
+qudt:DynamicViscosityUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:MechanicsUnit ;
+                          rdfs:label "Dynamic Viscosity Unit" ;
+                          skos:prefLabel "dynamic viscosity unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeAreaDensityUnit
+qudt:ElectricChargeAreaDensityUnit rdf:type owl:Class ;
+                                   rdfs:subClassOf qudt:ElectricChargeDensityUnit ;
+                                   rdfs:label "Electric Charge Area Density Unit" ;
+                                   skos:prefLabel "electric charge area density unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeDensityUnit
+qudt:ElectricChargeDensityUnit rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                               dct:description "The linear, surface, or volume charge density is the amount of electric charge in a line, surface, or volume. It is measured in coulombs per metre (C/m), square metre (C/m^2), or cubic metre (C/m^3), respectively. Since there are positive as well as negative charges, the charge density can take on negative values. [Wikipedia]" ;
+                               rdfs:label "Electric Charge Density Unit" ;
+                               skos:prefLabel "electric charge density unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeLineDensityUnit
+qudt:ElectricChargeLineDensityUnit rdf:type owl:Class ;
+                                   rdfs:subClassOf qudt:ElectricChargeDensityUnit ;
+                                   dct:description "The linear charge density is the amount of electric charge in a line. It is measured in coulombs per metre (C/m). Since there are positive as well as negative charges, the charge density can take on negative values. [Wikipedia]" ;
+                                   rdfs:label "Electric Charge Line Density Unit" ;
+                                   skos:prefLabel "electric charge line density unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargePerAmountOfSubstanceUnit
+qudt:ElectricChargePerAmountOfSubstanceUnit rdf:type owl:Class ;
+                                            rdfs:subClassOf qudt:ElectrochemistryUnit ;
+                                            rdfs:label "Electric Charge Per Amount Of Substance Unit" ;
+                                            skos:prefLabel "electric charge per amount of substance unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeUnit
+qudt:ElectricChargeUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                        dct:description "Electric charge is a fundamental conserved property of some subatomic particles, which determines their electromagnetic interaction. Electrically charged matter is influenced by, and produces, electromagnetic fields. The interaction between a moving charge and an electromagnetic field is the source of the electromagnetic force, which is one of the four fundamental forces." ;
+                        rdfs:label "Electric Charge Unit" ;
+                        skos:prefLabel "electric charge unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeVolumeDensityUnit
+qudt:ElectricChargeVolumeDensityUnit rdf:type owl:Class ;
+                                     rdfs:subClassOf qudt:ElectricChargeDensityUnit ;
+                                     dct:description "The volume charge density is the amount of electric charge in a volume. It is measured in coulombs per cubic metre (C/m^3).  Since there are positive as well as negative charges, the charge density can take on negative values. [Wikipedia]" ;
+                                     rdfs:label "Electric Charge Volume Density Unit" ;
+                                     skos:prefLabel "electric charge volume density unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricCurrentDensityUnit
+qudt:ElectricCurrentDensityUnit rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                                dct:description """Electric current density is a measure of the density of flow of a conserved charge. Usually the charge is the electric charge, in which case the associated current density is the electric current per unit area of cross section, but the term current density can also be applied to other conserved quantities. It is defined as a vector whose magnitude is the current per cross-sectional area. [Wikipedia]
+
+In SI units, the electric current density is measured in amperes per square metre. This class contains the following instance(s): \"Ampere per square meter\".""" ;
+                                rdfs:label "Electric Current Density Unit" ;
+                                skos:prefLabel "electric current density unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricCurrentUnit
+qudt:ElectricCurrentUnit rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                         dct:description "Electric current is the flow (movement) of electric charge. The SI unit of electric current is the ampere, and electric current is measured using an ammeter. This class contains the following instance(s): \"Abampere\", \"Ampere\", \"Biot\", \"Statampere\"." ;
+                         rdfs:label "Electric Current Unit" ;
+                         skos:prefLabel "electric current unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricDipoleMomentUnit
+qudt:ElectricDipoleMomentUnit rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                              dct:description """The electric dipole moment (or electric dipole for short) is a measure of the polarity of a system of electric charges. [Wikipedia]
+
+This class has the following instance(s): \"Coulomb meter\", \"Debye\".""" ;
+                              rdfs:label "Electric Dipole Moment Unit" ;
+                              skos:prefLabel "electric dipole moment unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricFieldStrengthUnit
+qudt:ElectricFieldStrengthUnit rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                               dct:description "The strength of the electric field at a given point is defined as the force that would be exerted on a positive test charge of +1 coulomb placed at that point; the direction of the field is given by the direction of that force. Electric fields contain electrical energy with energy density proportional to the square of the field intensity. The electric field is to charge as gravitational acceleration is to mass and force density is to volume." ;
+                               rdfs:label "Electric Field Strength Unit" ;
+                               skos:prefLabel "electric field strength unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricFluxDensityUnit
+qudt:ElectricFluxDensityUnit rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:ElectricChargeDensityUnit ;
+                             rdfs:label "Electric Flux Density Unit" ;
+                             skos:prefLabel "electric flux density unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricFluxUnit
+qudt:ElectricFluxUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                      rdfs:label "Electric Flux Unit" ;
+                      skos:prefLabel "electric flux unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit
+qudt:ElectricityAndMagnetismUnit rdf:type owl:Class ;
+                                 rdfs:subClassOf qudt:PhysicalUnit ;
+                                 dct:description "The class of units used to measure the properties of electricity and magnetism." ;
+                                 rdfs:label "Electricity And Magnetism Unit" ;
+                                 skos:prefLabel "electricity and magnetism unit" .
+
+
+###  http://qudt.org/schema/qudt#ElectrochemistryUnit
+qudt:ElectrochemistryUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:ChemistryUnit ,
+                                          qudt:ElectricityAndMagnetismUnit ;
+                          rdfs:label "Electrochemistry Unit" ;
+                          skos:prefLabel "electrochemistry unit" .
+
+
+###  http://qudt.org/schema/qudt#EnergyAndWorkPerMassAmountOfSubstance
+qudt:EnergyAndWorkPerMassAmountOfSubstance rdf:type owl:Class ;
+                                           rdfs:subClassOf qudt:ChemistryUnit ;
+                                           rdfs:label "Energy And Work Per Mass Amount Of Substance Unit" ;
+                                           skos:prefLabel "energy and work per mass amount of substance unit" .
+
+
+###  http://qudt.org/schema/qudt#EnergyAndWorkUnit
+qudt:EnergyAndWorkUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:MechanicsUnit ;
+                       rdfs:label "Energy And Work Unit" ;
+                       skos:prefLabel "energy and work unit" .
+
+
+###  http://qudt.org/schema/qudt#EnergyDensityUnit
+qudt:EnergyDensityUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:MechanicsUnit ;
+                       dct:description "Units that measure energy density, i.e. energy per unit volume." ;
+                       rdfs:label "Energy Density Unit" ;
+                       skos:prefLabel "energy density unit" .
+
+
+###  http://qudt.org/schema/qudt#EnergyPerAreaUnit
+qudt:EnergyPerAreaUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:MechanicsUnit ;
+                       dct:description "Units that quantify energy per unit area." ;
+                       rdfs:label "Energy Per Area Unit" ;
+                       skos:prefLabel "energy per area unit" .
+
+
+###  http://qudt.org/schema/qudt#EnergyPerElectricChargeUnit
+qudt:EnergyPerElectricChargeUnit rdf:type owl:Class ;
+                                 rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                                 dct:description "The ratio of energy to electric charge arises repeatedly in electrodynamics. It is the dimensional equivalent to the electrostatic potential and electromotive force. In both cases, the SI unit is the volt, or newton meters per coulomb." ;
+                                 rdfs:label "Energy per Electric Charge Unit" ;
+                                 skos:prefLabel "energy per electric charge unit" .
+
+
+###  http://qudt.org/schema/qudt#EventUnit
+qudt:EventUnit rdf:type owl:Class ;
+               rdfs:subClassOf qudt:ResourceUnit ;
+               rdfs:label "Event Unit" ;
+               skos:prefLabel "event unit" .
+
+
+###  http://qudt.org/schema/qudt#ExposureUnit
+qudt:ExposureUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:RadiologyUnit ;
+                  rdfs:label "Exposure Unit" ;
+                  skos:prefLabel "exposure unit" .
+
+
+###  http://qudt.org/schema/qudt#FinancialUnit
+qudt:FinancialUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:ResourceUnit ;
+                   dct:description "This class contains units that measure financial quantities, such as currency, transactions, rates of return, etc." ;
+                   rdfs:label "Financial Unit" ;
+                   skos:prefLabel "financial unit" .
+
+
+###  http://qudt.org/schema/qudt#ForcePerElectricChargeUnit
+qudt:ForcePerElectricChargeUnit rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                                rdfs:label "Force Per Electric Charge Unit" ;
+                                skos:prefLabel "force per electric charge unit" .
+
+
+###  http://qudt.org/schema/qudt#ForcePerLengthUnit
+qudt:ForcePerLengthUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:MechanicsUnit ;
+                        rdfs:label "Force Per Length Unit" ;
+                        skos:prefLabel "force per length unit" .
+
+
+###  http://qudt.org/schema/qudt#ForceUnit
+qudt:ForceUnit rdf:type owl:Class ;
+               rdfs:subClassOf qudt:MechanicsUnit ;
+               rdfs:label "Force Unit" ;
+               skos:prefLabel "force unit" .
+
+
+###  http://qudt.org/schema/qudt#FrequencyUnit
+qudt:FrequencyUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                   rdfs:label "Frequency Unit" ;
+                   skos:prefLabel "frequency unit" .
+
+
+###  http://qudt.org/schema/qudt#GravitationalAttractionUnit
+qudt:GravitationalAttractionUnit rdf:type owl:Class ;
+                                 rdfs:subClassOf qudt:MechanicsUnit ;
+                                 rdfs:label "Gravitational Attraction Unit" ;
+                                 skos:prefLabel "gravitational attraction unit" .
+
+
+###  http://qudt.org/schema/qudt#HeartRateUnit
+qudt:HeartRateUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:BiomedicalUnit ;
+                   rdfs:label "Heart Rate Unit" ;
+                   skos:prefLabel "heart rate unit" .
+
+
+###  http://qudt.org/schema/qudt#HeatCapacityAndEntropyUnit
+qudt:HeatCapacityAndEntropyUnit rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                                rdfs:label "Heat Capacity And Entropy Unit" ;
+                                skos:prefLabel "heat capacity and entropy unit" .
+
+
+###  http://qudt.org/schema/qudt#HeatFlowRateUnit
+qudt:HeatFlowRateUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                      rdfs:label "Heat Flow Rate Unit" ;
+                      skos:prefLabel "heat flow rate unit" .
+
+
+###  http://qudt.org/schema/qudt#HumanUnit
+qudt:HumanUnit rdf:type owl:Class ;
+               rdfs:subClassOf qudt:ResourceUnit ;
+               dct:description "units for measuring human resources" ;
+               rdfs:label "Human Unit" ;
+               skos:prefLabel "human unit" .
+
+
+###  http://qudt.org/schema/qudt#IlluminanceUnit
+qudt:IlluminanceUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:PhotometryUnit ;
+                     rdfs:label "Illuminance Unit" ;
+                     skos:prefLabel "illuminance unit" .
+
+
+###  http://qudt.org/schema/qudt#InductanceUnit
+qudt:InductanceUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                    rdfs:label "Inductance Unit" ;
+                    skos:prefLabel "inductance unit" .
+
+
+###  http://qudt.org/schema/qudt#InformationEntropyUnit
+qudt:InformationEntropyUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ComputingUnit ,
+                                            qudt:LogarithmicUnit ,
+                                            qudt:ResourceUnit ;
+                            rdfs:label "Information Entropy Unit" ;
+                            skos:prefLabel "information entropy unit" .
+
+
+###  http://qudt.org/schema/qudt#InverseAmountOfSubstanceUnit
+qudt:InverseAmountOfSubstanceUnit rdf:type owl:Class ;
+                                  rdfs:subClassOf qudt:ChemistryUnit ;
+                                  rdfs:label "Inverse Amount Of Substance Unit" ;
+                                  skos:prefLabel "inverse amount of substance unit" .
+
+
+###  http://qudt.org/schema/qudt#KinematicViscosityUnit
+qudt:KinematicViscosityUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:MechanicsUnit ;
+                            rdfs:label "Kinematic Viscosity Unit" ;
+                            skos:prefLabel "kinematic viscosity unit" .
+
+
+###  http://qudt.org/schema/qudt#LengthTemperatureTimeUnit
+qudt:LengthTemperatureTimeUnit rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                               rdfs:label "Length Temperature Time Unit" ;
+                               skos:prefLabel "length temperature time unit" .
+
+
+###  http://qudt.org/schema/qudt#LengthTemperatureUnit
+qudt:LengthTemperatureUnit rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                           rdfs:label "Length Temperature Unit" ;
+                           skos:prefLabel "length temperature unit" .
+
+
+###  http://qudt.org/schema/qudt#LengthUnit
+qudt:LengthUnit rdf:type owl:Class ;
+                rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                rdfs:label "Length Unit" ;
+                skos:prefLabel "length unit" .
+
+
+###  http://qudt.org/schema/qudt#LinearAccelerationUnit
+qudt:LinearAccelerationUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:AccelerationUnit ;
+                            rdfs:label "Linear Acceleration Unit" ;
+                            skos:prefLabel "linear acceleration unit" .
+
+
+###  http://qudt.org/schema/qudt#LinearEnergyTransferUnit
+qudt:LinearEnergyTransferUnit rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:AtomicPhysicsUnit ;
+                              rdfs:label "Linear Energy Transfer Unit" ;
+                              skos:prefLabel "linear energy transfer unit" .
+
+
+###  http://qudt.org/schema/qudt#LinearMomentumUnit
+qudt:LinearMomentumUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:MomentumUnit ;
+                        rdfs:label "Linear Momentum Unit" ;
+                        skos:prefLabel "linear momentum unit" .
+
+
+###  http://qudt.org/schema/qudt#LinearThermalExpansionUnit
+qudt:LinearThermalExpansionUnit rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ThermalExpansionUnit ;
+                                rdfs:label "Linear Thermal Expansion Unit" ;
+                                skos:prefLabel "linear thermal expansion unit" .
+
+
+###  http://qudt.org/schema/qudt#LinearVelocityUnit
+qudt:LinearVelocityUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:VelocityUnit ;
+                        dct:description "Linear Velocity units measure change of length per unit time. Examples include meters per second, miles per hour, knots, etc. " ;
+                        rdfs:label "Linear Velocity Unit" ;
+                        skos:prefLabel "linear velocity unit" .
+
+
+###  http://qudt.org/schema/qudt#LogarithmicUnit
+qudt:LogarithmicUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:PhysicalUnit ;
+                     dct:description "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel." ;
+                     rdfs:label "Logarithmic Unit" ;
+                     skos:prefLabel "logarithmic unit" .
+
+
+###  http://qudt.org/schema/qudt#LuminanceUnit
+qudt:LuminanceUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:PhotometryUnit ;
+                   rdfs:label "Luminance Unit" ;
+                   skos:prefLabel "luminance unit" .
+
+
+###  http://qudt.org/schema/qudt#LuminousEfficacyUnit
+qudt:LuminousEfficacyUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:PhotometryUnit ;
+                          rdfs:label "Luminous Efficacy Unit" ;
+                          skos:prefLabel "luminous efficacy unit" .
+
+
+###  http://qudt.org/schema/qudt#LuminousEnergyUnit
+qudt:LuminousEnergyUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:PhotometryUnit ;
+                        rdfs:label "Luminous Energy Unit" ;
+                        skos:prefLabel "luminous energy unit" .
+
+
+###  http://qudt.org/schema/qudt#LuminousFluxUnit
+qudt:LuminousFluxUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:PhotometryUnit ;
+                      rdfs:label "Luminous Flux Unit" ;
+                      skos:prefLabel "luminous flux unit" .
+
+
+###  http://qudt.org/schema/qudt#LuminousIntensityUnit
+qudt:LuminousIntensityUnit rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:PhotometryUnit ;
+                           rdfs:label "Luminous Intensity Unit" ;
+                           skos:prefLabel "luminous intensity unit" .
+
+
+###  http://qudt.org/schema/qudt#MagneticFieldStrengthUnit
+qudt:MagneticFieldStrengthUnit rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                               rdfs:label "Magnetic Field Strength Unit" ;
+                               skos:prefLabel "magnetic field strength unit" .
+
+
+###  http://qudt.org/schema/qudt#MagneticFluxDensityUnit
+qudt:MagneticFluxDensityUnit rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                             rdfs:label "Magnetic Flux Density Unit" ;
+                             skos:prefLabel "magnetic flux density unit" .
+
+
+###  http://qudt.org/schema/qudt#MagneticFluxUnit
+qudt:MagneticFluxUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                      rdfs:label "Magnetic Flux Unit" ;
+                      skos:prefLabel "magnetic flux unit" .
+
+
+###  http://qudt.org/schema/qudt#MagnetomotiveForceUnit
+qudt:MagnetomotiveForceUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                            rdfs:label "Magnetomotive Force Unit" ;
+                            skos:prefLabel "magnetomotive force unit" .
+
+
+###  http://qudt.org/schema/qudt#MassAmountOfSubstanceTemperatureUnit
+qudt:MassAmountOfSubstanceTemperatureUnit rdf:type owl:Class ;
+                                          rdfs:subClassOf qudt:ChemistryUnit ;
+                                          rdfs:label "Mass Amount Of Substance Temperature Unit" ;
+                                          skos:prefLabel "mass amount of substance temperature unit" .
+
+
+###  http://qudt.org/schema/qudt#MassAmountOfSubstanceUnit
+qudt:MassAmountOfSubstanceUnit rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:ChemistryUnit ;
+                               rdfs:label "Mass Amount Of Substance Unit" ;
+                               skos:prefLabel "mass amount of substance unit" .
+
+
+###  http://qudt.org/schema/qudt#MassPerAreaUnit
+qudt:MassPerAreaUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:MechanicsUnit ;
+                     rdfs:label "Mass Per Area Unit" ;
+                     skos:prefLabel "mass per area anit" .
+
+
+###  http://qudt.org/schema/qudt#MassPerLengthUnit
+qudt:MassPerLengthUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:MechanicsUnit ;
+                       rdfs:label "Mass Per Length Unit" ;
+                       skos:prefLabel "mass per length unit" .
+
+
+###  http://qudt.org/schema/qudt#MassPerTimeUnit
+qudt:MassPerTimeUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:MechanicsUnit ;
+                     rdfs:label "Mass Per Time Unit" ;
+                     skos:prefLabel "mass per time unit" .
+
+
+###  http://qudt.org/schema/qudt#MassPerVolumeUnit
+qudt:MassPerVolumeUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:MechanicsUnit ;
+                       rdfs:label "Mass Per Volume Unit" ;
+                       skos:prefLabel "mass per volume unit" .
+
+
+###  http://qudt.org/schema/qudt#MassTemperatureUnit
+qudt:MassTemperatureUnit rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                         rdfs:label "Mass Temperature Unit" ;
+                         skos:prefLabel "mass temperature unit" .
+
+
+###  http://qudt.org/schema/qudt#MassUnit
+qudt:MassUnit rdf:type owl:Class ;
+              rdfs:subClassOf qudt:MechanicsUnit ;
+              rdfs:label "Mass Unit" ;
+              skos:prefLabel "mass unit" .
+
+
+###  http://qudt.org/schema/qudt#MechanicsUnit
+qudt:MechanicsUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:PhysicalUnit ;
+                   rdfs:label "Mechanics Unit" ;
+                   skos:prefLabel "mechanics unit" .
+
+
+###  http://qudt.org/schema/qudt#MicrobialFormationUnit
+qudt:MicrobialFormationUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:BiomedicalUnit ;
+                            rdfs:label "Microbial Formation Unit" ;
+                            skos:prefLabel "microbial formation unit" .
+
+
+###  http://qudt.org/schema/qudt#MolalConcentrationUnit
+qudt:MolalConcentrationUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ConcentrationUnit ;
+                            rdfs:label "Molal Concentration Unit" ;
+                            skos:prefLabel "molal concentration unit" .
+
+
+###  http://qudt.org/schema/qudt#MolarConcentrationUnit
+qudt:MolarConcentrationUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ConcentrationUnit ;
+                            rdfs:label "Molar Concentration Unit" ;
+                            skos:prefLabel "molar concentration unit" .
+
+
+###  http://qudt.org/schema/qudt#MolarEnergyUnit
+qudt:MolarEnergyUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:ChemistryUnit ;
+                     rdfs:label "Molar Energy Unit" ;
+                     skos:prefLabel "molar energy unit" .
+
+
+###  http://qudt.org/schema/qudt#MolarHeatCapacityUnit
+qudt:MolarHeatCapacityUnit rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                           rdfs:label "Molar Heat Capacity Unit" ;
+                           skos:prefLabel "molar heat capacity unit" .
+
+
+###  http://qudt.org/schema/qudt#MomentumUnit
+qudt:MomentumUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:MechanicsUnit ;
+                  rdfs:label "Momentum Unit" ;
+                  skos:prefLabel "momentum unit" .
+
+
+###  http://qudt.org/schema/qudt#OpticsUnit
+qudt:OpticsUnit rdf:type owl:Class ;
+                rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                rdfs:label "Light Unit" ;
+                skos:prefLabel "light unit" .
+
+
+###  http://qudt.org/schema/qudt#PermeabilityUnit
+qudt:PermeabilityUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                      rdfs:label "Permeability Unit" ;
+                      skos:prefLabel "permeability unit" .
+
+
+###  http://qudt.org/schema/qudt#PermittivityUnit
+qudt:PermittivityUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                      rdfs:label "Permittivity Unit" ;
+                      skos:prefLabel "permittivity unit" .
+
+
+###  http://qudt.org/schema/qudt#PhotometryUnit
+qudt:PhotometryUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:OpticsUnit ;
+                    rdfs:label "Photometry Unit" ;
+                    skos:prefLabel "photometry unit" .
+
+
+###  http://qudt.org/schema/qudt#PhysicalUnit
+qudt:PhysicalUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:ScienceAndEngineeringUnit ;
+                  rdfs:label "Physical Unit" ;
+                  skos:prefLabel "physical unit" .
+
+
+###  http://qudt.org/schema/qudt#PlaneAngleUnit
+qudt:PlaneAngleUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:AngleUnit ;
+                    rdfs:label "Plane Angle Unit" ;
+                    skos:prefLabel "plane angle unit" .
+
+
+###  http://qudt.org/schema/qudt#PowerPerAreaUnit
+qudt:PowerPerAreaUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:MechanicsUnit ;
+                      rdfs:label "Power Per Area Unit" ;
+                      skos:prefLabel "power per area unit" .
+
+
+###  http://qudt.org/schema/qudt#PowerPerElectricChargeUnit
+qudt:PowerPerElectricChargeUnit rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                                rdfs:label "Energy per Electric Charge Unit" ;
+                                skos:prefLabel "energy per electric charge unit" .
+
+
+###  http://qudt.org/schema/qudt#PowerUnit
+qudt:PowerUnit rdf:type owl:Class ;
+               rdfs:subClassOf qudt:MechanicsUnit ;
+               rdfs:label "Power Unit" ;
+               skos:prefLabel "power unit" .
+
+
+###  http://qudt.org/schema/qudt#PrefixUnit
+qudt:PrefixUnit rdf:type owl:Class ;
+                rdfs:subClassOf qudt:DimensionlessUnit ;
+                dct:description "Prefixes are either binary or decimal." ;
+                rdfs:label "Prefix Unit" ;
+                skos:prefLabel "prefix unit" .
+
+
+###  http://qudt.org/schema/qudt#PressureOrStressRateUnit
+qudt:PressureOrStressRateUnit rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:MechanicsUnit ;
+                              rdfs:label "Pressure or Stress Rate" ;
+                              skos:prefLabel "pressure or stress rate" .
+
+
+###  http://qudt.org/schema/qudt#PressureOrStressUnit
+qudt:PressureOrStressUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:MechanicsUnit ;
+                          rdfs:label "Pressure Or Stress Unit" ;
+                          skos:prefLabel "pressure or stress unit" .
+
+
+###  http://qudt.org/schema/qudt#RF-PowerUnit
+qudt:RF-PowerUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:CommunicationsUnit ;
+                  rdfs:label "RF-Power Unit" ;
+                  skos:prefLabel "RF power unit" .
+
+
+###  http://qudt.org/schema/qudt#RadianceUnit
+qudt:RadianceUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:RadiometryUnit ;
+                  rdfs:label "Radiance Unit" ;
+                  skos:prefLabel "radiance unit" .
+
+
+###  http://qudt.org/schema/qudt#RadiantIntensityUnit
+qudt:RadiantIntensityUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:RadiometryUnit ;
+                          rdfs:label "Radiant Intensity Unit" ;
+                          skos:prefLabel "radiant intensity unit" .
+
+
+###  http://qudt.org/schema/qudt#RadiologyUnit
+qudt:RadiologyUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:PhysicalUnit ;
+                   rdfs:label "Radiology Unit" ;
+                   skos:prefLabel "radiology unit" .
+
+
+###  http://qudt.org/schema/qudt#RadiometryUnit
+qudt:RadiometryUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:OpticsUnit ;
+                    rdfs:label "Radiometry Unit" ;
+                    skos:prefLabel "radiometry unit" .
+
+
+###  http://qudt.org/schema/qudt#RateOfReturnUnit
+qudt:RateOfReturnUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:FinancialUnit ;
+                      rdfs:label "Rate Of Return Unit" ;
+                      skos:prefLabel "rate of return unit" .
+
+
+###  http://qudt.org/schema/qudt#ResistanceUnit
+qudt:ResistanceUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:ElectricityAndMagnetismUnit ;
+                    rdfs:label "Resistance Unit" ;
+                    skos:prefLabel "resistance unit" .
+
+
+###  http://qudt.org/schema/qudt#ResourceUnit
+qudt:ResourceUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:Unit ;
+                  dct:description "A Resource Unit is a unit for measuring the amount of various types of resources." ;
+                  rdfs:label "Resource Unit" ;
+                  skos:definition "A Resource Unit is a unit for measuring the amount of various types of resources." ;
+                  skos:prefLabel "resource unit" .
+
+
+###  http://qudt.org/schema/qudt#RespiratoryRateUnit
+qudt:RespiratoryRateUnit rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:BiomedicalUnit ;
+                         rdfs:label "Respiratory Rate Unit" ;
+                         skos:prefLabel "respiratory rate unit" .
+
+
+###  http://qudt.org/schema/qudt#SIUnit
+qudt:SIUnit rdf:type owl:Class ;
+            rdfs:label "SI Unit" ;
+            skos:prefLabel "SI unit" .
+
+
+###  http://qudt.org/schema/qudt#ScienceAndEngineeringUnit
+qudt:ScienceAndEngineeringUnit rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:Unit ;
+                               rdfs:label "Science And Engineering Unit" ;
+                               skos:prefLabel "science and engineering unit" .
+
+
+###  http://qudt.org/schema/qudt#SerumOrPlasmaLevelUnit
+qudt:SerumOrPlasmaLevelUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:BiomedicalUnit ;
+                            rdfs:label "Serum Or Plasma Level Unit" ;
+                            skos:prefLabel "serum or plasma level unit" .
+
+
+###  http://qudt.org/schema/qudt#SignalDetectionThresholdUnit
+qudt:SignalDetectionThresholdUnit rdf:type owl:Class ;
+                                  rdfs:subClassOf qudt:CommunicationsUnit ;
+                                  dct:description "Signal relative to an underlying signal" ;
+                                  rdfs:label "Signal Detection Threshold Unit" ;
+                                  skos:prefLabel "signal detection threshold unit" .
+
+
+###  http://qudt.org/schema/qudt#SolidAngleUnit
+qudt:SolidAngleUnit rdf:type owl:Class ;
+                    rdfs:subClassOf qudt:AngleUnit ;
+                    rdfs:label "Solid Angle Unit" ;
+                    skos:prefLabel "solid angle unit" .
+
+
+###  http://qudt.org/schema/qudt#SpaceAndTimeUnit
+qudt:SpaceAndTimeUnit rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:PhysicalUnit ;
+                      rdfs:label "Space And Time Unit" ;
+                      skos:prefLabel "space and time unit" .
+
+
+###  http://qudt.org/schema/qudt#SpecificEnergyUnit
+qudt:SpecificEnergyUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:MechanicsUnit ;
+                        dct:description "Units which quantify specific energy, i.e. energy per unit mass." ;
+                        rdfs:label "Specific Energy Unit" ;
+                        skos:prefLabel "specific energy unit" .
+
+
+###  http://qudt.org/schema/qudt#SpecificHeatCapacityUnit
+qudt:SpecificHeatCapacityUnit rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                              rdfs:label "Specific Heat Capacity Unit" ;
+                              skos:prefLabel "specific heat capacity unit" .
+
+
+###  http://qudt.org/schema/qudt#SpecificHeatPressureUnit
+qudt:SpecificHeatPressureUnit rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                              dct:description "This class contains units of measure for specific heat capacity at a constant pressure." ;
+                              rdfs:label "Specific Heat Pressure Unit" ;
+                              skos:prefLabel "specific heat pressure unit" .
+
+
+###  http://qudt.org/schema/qudt#SpecificHeatVolumeUnit
+qudt:SpecificHeatVolumeUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                            dct:description "This class contains units of measure for specific heat capacity at a constant volume." ;
+                            rdfs:label "Specific Heat Volume Unit" ;
+                            skos:prefLabel "specific heat volume unit" .
+
+
+###  http://qudt.org/schema/qudt#SystemOfNaturalUnits
+qudt:SystemOfNaturalUnits rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:SystemOfUnits ;
+                          dct:description "In physics, natural units are physical units of measurement based only on universal physical constants. For example the elementary charge e is a natural unit of electric charge, or the speed of light c is a natural unit of speed. A purely natural system of units is defined in such a way that some set of selected universal physical constants are normalized to unity; that is, their numerical values in terms of these units become exactly 1. Examples are Planck Units and Atomic Units. Atomic units (au or a.u.) form a system of natural units which is especially convenient for atomic physics calculations. There are two different kinds of atomic units, which one might name Hartree atomic units[1] and Rydberg atomic units, which differ in the choice of the unit of mass and charge. Planck units are unique among systems of natural units, because they are not defined in terms of properties of any prototype, physical object, or even elementary particle.  [Wikipeda]" ;
+                          rdfs:label "System of Natural Units" ;
+                          skos:prefLabel "system of natural units" .
+
+
+###  http://qudt.org/schema/qudt#SystemOfUnits
+qudt:SystemOfUnits rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:systemUnit ;
+                                     owl:allValuesFrom qudt:Unit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:systemUnit ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass qudt:Unit
+                                   ] ;
+                   dct:description "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind." ;
+                   rdfs:label "System of Units" ;
+                   skos:prefLabel "system of units" .
+
+
+###  http://qudt.org/schema/qudt#TemperaturePerTimeUnit
+qudt:TemperaturePerTimeUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                            rdfs:label "Temperature per Time Unit" ;
+                            skos:prefLabel "temperature per time unit" .
+
+
+###  http://qudt.org/schema/qudt#TemperatureUnit
+qudt:TemperatureUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                     rdfs:label "Temperature Unit" ;
+                     skos:prefLabel "temperature unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalConductivityUnit
+qudt:ThermalConductivityUnit rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                             rdfs:label "Thermal Conductivity Unit" ;
+                             skos:prefLabel "thermal conductivity unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalDiffusivityUnit
+qudt:ThermalDiffusivityUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                            rdfs:label "Thermal Diffusivity Unit" ;
+                            skos:prefLabel "thermal diffusivity unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalEnergyLengthUnit
+qudt:ThermalEnergyLengthUnit rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                             rdfs:label "Thermal Energy Length Unit" ;
+                             skos:prefLabel "thermal energy length unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalEnergyUnit
+qudt:ThermalEnergyUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                       rdfs:label "Thermal Energy Unit" ;
+                       skos:prefLabel "thermal energy unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalExpansionUnit
+qudt:ThermalExpansionUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                          rdfs:label "Thermal Expansion Unit" ;
+                          skos:prefLabel "thermal expansion unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalInsulanceUnit
+qudt:ThermalInsulanceUnit rdf:type owl:Class ;
+                          rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                          rdfs:label "Thermal Insulance Unit" ;
+                          skos:prefLabel "thermal insulance unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalResistanceUnit
+qudt:ThermalResistanceUnit rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                           rdfs:label "Thermal Resistance Unit" ;
+                           skos:prefLabel "thermal resistance unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermalResistivityUnit
+qudt:ThermalResistivityUnit rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:ThermodynamicsUnit ;
+                            rdfs:label "Thermal Resistivity Unit" ;
+                            skos:prefLabel "thermal resistivity unit" .
+
+
+###  http://qudt.org/schema/qudt#ThermodynamicsUnit
+qudt:ThermodynamicsUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:PhysicalUnit ;
+                        dct:description "Thermodynamics units are units that provide reference scales for quantifying the conversion of energy into work, as well as heat and its relation to macroscopic variables such as temperature and pressure." ;
+                        rdfs:label "Thermodynamics Unit" ;
+                        skos:prefLabel "thermodynamics unit" .
+
+
+###  http://qudt.org/schema/qudt#ThrustToMassRatioUnit
+qudt:ThrustToMassRatioUnit rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:MechanicsUnit ;
+                           rdfs:label "Thrust To Mass Ratio Unit" ;
+                           skos:prefLabel "thrust to mass ratio unit" .
+
+
+###  http://qudt.org/schema/qudt#TimeAreaUnit
+qudt:TimeAreaUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                  rdfs:label "Time Area Unit" ;
+                  skos:prefLabel "time area unit" .
+
+
+###  http://qudt.org/schema/qudt#TimeSquaredUnit
+qudt:TimeSquaredUnit rdf:type owl:Class ;
+                     rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                     rdfs:label "Time Squared Unit" ;
+                     skos:prefLabel "time squared unit" .
+
+
+###  http://qudt.org/schema/qudt#TimeUnit
+qudt:TimeUnit rdf:type owl:Class ;
+              rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+              dct:description "Units that measure time." ;
+              rdfs:label "Time Unit" ;
+              skos:prefLabel "time unit" .
+
+
+###  http://qudt.org/schema/qudt#TurbidityUnit
+qudt:TurbidityUnit rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:BiomedicalUnit ;
+                   rdfs:label "Turbidity Unit" ;
+                   skos:prefLabel "turbidity unit" .
+
+
+###  http://qudt.org/schema/qudt#Unit
+qudt:Unit rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty qudt:conversionMultiplier ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:double
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty qudt:conversionOffset ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:double
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty qudt:symbol ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty qudt:uneceCommonCode ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ;
+          dct:description "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  Q = nU." ;
+          rdfs:label "Unit" ;
+          skos:altLabel "unit" ;
+          skos:definition "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  Q = nU." ;
+          skos:prefLabel "unit of measure" .
+
+
+###  http://qudt.org/schema/qudt#VelocityUnit
+qudt:VelocityUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                  rdfs:label "Velocity Unit" ;
+                  skos:prefLabel "velocity unit" .
+
+
+###  http://qudt.org/schema/qudt#VideoFrameRateUnit
+qudt:VideoFrameRateUnit rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:ComputingUnit ;
+                        rdfs:label "Video Frame Rate Unit" ;
+                        skos:prefLabel "video frame rate unit" .
+
+
+###  http://qudt.org/schema/qudt#VolumePerMassUnit
+qudt:VolumePerMassUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:MechanicsUnit ;
+                       rdfs:label "Volume per Mass Unit" ;
+                       skos:prefLabel "volume per mass unit" .
+
+
+###  http://qudt.org/schema/qudt#VolumePerTimeSquaredUnit
+qudt:VolumePerTimeSquaredUnit rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:MechanicsUnit ;
+                              rdfs:label "Volume per Time Squared Unit" ;
+                              skos:prefLabel "volume per time squared unit" .
+
+
+###  http://qudt.org/schema/qudt#VolumePerTimeUnit
+qudt:VolumePerTimeUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                       rdfs:label "Volume Per Time Unit" ;
+                       skos:prefLabel "volume per time unit" .
+
+
+###  http://qudt.org/schema/qudt#VolumeThermalExpansionUnit
+qudt:VolumeThermalExpansionUnit rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ThermalExpansionUnit ;
+                                rdfs:label "Volume Thermal Expansion Unit" ;
+                                skos:prefLabel "volume thermal expansion unit" .
+
+
+###  http://qudt.org/schema/qudt#VolumeUnit
+qudt:VolumeUnit rdf:type owl:Class ;
+                rdfs:subClassOf qudt:SpaceAndTimeUnit ;
+                rdfs:label "Volume Unit" ,
+                           "volume unit" .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/qudt/rights
+<http://purl.allotrope.org/voc/qudt/rights> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description "The QUDT Ontologies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to NASA Ames Research Center and TopQuadrant, Inc." .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen
+<http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen> rdf:type owl:NamedIndividual ,
+                                                                          foaf:Person ;
+                                                                 foaf:name "Daniel Mekonnen" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/DavidPrice
+<http://purl.allotrope.org/voc/qudt/contributors/DavidPrice> rdf:type owl:NamedIndividual ,
+                                                                      foaf:Person ;
+                                                             foaf:name "David Price" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff
+<http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                foaf:name "Irene Polikoff" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters
+<http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> rdf:type owl:NamedIndividual ,
+                                                                         foaf:Person ;
+                                                                foaf:name "James E. Masters" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson
+<http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> rdf:type owl:NamedIndividual ,
+                                                                        foaf:Person ;
+                                                               foaf:name "Ralph Hodgson" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

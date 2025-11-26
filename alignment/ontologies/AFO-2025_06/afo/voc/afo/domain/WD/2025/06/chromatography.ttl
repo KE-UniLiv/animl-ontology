@@ -1,3 +1,1021 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b68aed64b437236d6d2bacb6f77d98c1de9e0c078dc94b0e7df64fa88bbdd64d
-size 60775
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chromatography#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix map: <http://purl.allotrope.org/ontologies/mapping/instances#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/xml/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@prefix af-ec-001: <http://purl.allotrope.org/ontologies/equipment/codelist/001#> .
+@prefix af-ec-002: <http://purl.allotrope.org/ontologies/equipment/codelist/002#> .
+@prefix af-ec-003: <http://purl.allotrope.org/ontologies/equipment/codelist/003#> .
+@prefix af-ec-004: <http://purl.allotrope.org/ontologies/equipment/codelist/004#> .
+@prefix af-ec-005: <http://purl.allotrope.org/ontologies/equipment/codelist/005#> .
+@prefix af-ec-006: <http://purl.allotrope.org/ontologies/equipment/codelist/006#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chromatography#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chromatography> rdf:type owl:Ontology ;
+                                                                                owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chromatography> ;
+                                                                                owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                            <http://purl.allotrope.org/voc/afo/domain/CR/2025/06/chromatography> ,
+                                                                                            <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/detection> ,
+                                                                                            <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/injection> ;
+                                                                                dct:contributor <http://www.osthus.com> ;
+                                                                                dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                dct:rights <http://purl.allotrope.org/ontologies/afo/copyright> ,
+                                                                                           <http://purl.allotrope.org/voc/attribution> ,
+                                                                                           <http://purl.allotrope.org/voc/copyright> ;
+                                                                                dct:title "AFO Chromatography Domain Ontology (WD/2025/06)" ;
+                                                                                owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/chromatography> ;
+                                                                                owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002808
+af-x:AFX_0002808 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002811
+af-x:AFX_0002811 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000039
+af-e:AFE_0000039 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-e:AFE_0000266
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty bfo:_0000051 ;
+                                                          owl:someValuesFrom af-e:AFE_0000746
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "syringe" ;
+                 skos:definition "Syringe injector into a chromatography system. [Allotrope]" ;
+                 skos:prefLabel "syringe injector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000073
+af-e:AFE_0000073 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000158
+af-e:AFE_0000158 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000181
+af-e:AFE_0000181 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000356 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "Valve used to select mobile phase to use. [Allotrope]" ;
+                 skos:prefLabel "mobile phase selection valve" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000196
+af-e:AFE_0000196 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000430 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "cleanup cartridge" ;
+                 skos:definition "A short protective - often disposable -  chromatography column used to protect the main preparative column from damaging impurities that are injected into the instrument. [Allotrope]" ;
+                 skos:prefLabel "cleanup column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000236
+af-e:AFE_0000236 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000158 ;
+                 skos:altLabel "TLC plate" ;
+                 skos:definition "An open chromatographic bed that consists of a thin (0.10 to 0.25 mm) layer of sorbent applied to a firm backing of glass, aluminium or a plastic sheet to act as a support. Numerous sorbents have been used including silica gel, cellulose, aluminium oxide and polyamide. [CHMO]" ;
+                 skos:prefLabel "thin-layer chromatography plate" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000245
+af-e:AFE_0000245 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000742 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A capillary array column is an array column that contains multiple capillaries. [Allotrope]" ;
+                 skos:prefLabel "capillary array column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000246
+af-e:AFE_0000246 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000270
+af-e:AFE_0000270 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000795 ;
+                 skos:definition "A valve used to select a column if multiple columns are part of the column compartment. [Allotrope]" ;
+                 skos:prefLabel "column selection valve" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000332
+af-e:AFE_0000332 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000499 ;
+                 skos:definition "A basic pump with only one channel. [Allotrope]" ;
+                 skos:prefLabel "isocratic pump" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000356
+af-e:AFE_0000356 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000795 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "SSV" ;
+                 skos:definition "Switch valves can be used to select solvents. [Allotrope]" ;
+                 skos:prefLabel "solvent selection valve" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000419
+af-e:AFE_0000419 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000246 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000430
+af-e:AFE_0000430 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000436
+af-e:AFE_0000436 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000158 ;
+                 skos:definition "An open chromatographic bed that consists of a sheet of paper, often filter paper. [CHMO]" ;
+                 skos:prefLabel "chromatography paper" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000493
+af-e:AFE_0000493 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000718 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "injector loop" ;
+                 skos:changeNote "2015-12-15 Improved definition [Amgen]" ,
+                                 "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A loop is a tube of fixed volume used to inject a small volume of sample via injection valve. [Allotrope]" ;
+                 skos:prefLabel "loop" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000510
+af-e:AFE_0000510 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000499 ;
+                 skos:definition "A binary pump is a type of pump that combines two pumps connected to a mixing chamber to deliver the desired mobile phase. [Allotrope]" ;
+                 skos:prefLabel "binary pump" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000534
+af-e:AFE_0000534 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000246 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000654
+af-e:AFE_0000654 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000795 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "injector valve" ,
+                               "sample injection valve" ;
+                 skos:definition "Valve in the sample injection part of a chromatograph. [Allotrope]" ;
+                 skos:prefLabel "injection valve" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000657
+af-e:AFE_0000657 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-e:AFE_0000217
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                              owl:someValuesFrom af-p:AFP_0002395
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A chromatography column used to purify sufficient quantities of a substance for further use, rather than analysis. [Wikipedia]" ;
+                 skos:prefLabel "preparative column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000691
+af-e:AFE_0000691 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000694
+af-e:AFE_0000694 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000499 ;
+                 skos:definition "A quarternary pump is a pump that can mix four different channels. [Allotrope]" ;
+                 skos:prefLabel "quaternary pump" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000742
+af-e:AFE_0000742 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000746
+af-e:AFE_0000746 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000758
+af-e:AFE_0000758 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-e:AFE_0000217
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                              owl:someValuesFrom af-p:AFP_0000225
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/OBI_0000603> ;
+                 skos:changeNote "2024-09-11 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "A chromatography column used for liquid chromatography. [Allotrope]" ;
+                 skos:prefLabel "liquid chromatography column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000860
+af-e:AFE_0000860 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-e:AFE_0000073
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                              owl:someValuesFrom af-p:AFP_0002484
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A headspace autosampler is a type of autosampler that allows for automatic sampling for headspace analyses. [Allotrope]" ;
+                 skos:prefLabel "headspace autosampler" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002166
+af-e:AFE_0002166 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 skos:prefLabel "silica column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002167
+af-e:AFE_0002167 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 skos:prefLabel "size exclusion column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002173
+af-e:AFE_0002173 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:prefLabel "column hardware" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000039
+af-m:AFM_0000039 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000164 ;
+                 skos:changeNote "2024-09-11 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "A buffer solution that is used for separation of anions. [Allotrope]" ;
+                 skos:prefLabel "anion separation buffer" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000042
+af-m:AFM_0000042 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000164 ;
+                 skos:changeNote "2024-09-11 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "A chiral separation buffer contains a chiral compound that was added to the buffer solution in order to improve the separation of chiral compounds. [Allotrope]" ;
+                 skos:prefLabel "chiral separation buffer" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000066
+af-m:AFM_0000066 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000164 ;
+                 skos:changeNote "2024-09-11 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "A zwitterionic buffer is a buffer solution that contains zwitterionic compounds. [Allotrope]" ;
+                 skos:prefLabel "zwitterionic buffer" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000164
+af-m:AFM_0000164 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000015 ;
+                 skos:altLabel "run buffer" ;
+                 skos:changeNote "2024-09-11 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "A buffer solution that is used for separation purposes in chromatography. [Allotrope]" ;
+                 skos:example "running buffer for separation of proteins in a gel matrix" ;
+                 skos:prefLabel "running buffer" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000323
+af-m:AFM_0000323 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000164 ;
+                 skos:changeNote "2024-09-11 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "A buffer solution that is used for separation of cations. [Allotrope]" ;
+                 skos:prefLabel "cation separation buffer" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000401
+af-m:AFM_0000401 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000095
+af-p:AFP_0000095 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001906 ;
+                 skos:altLabel "ion exclusion chromatography" ;
+                 skos:definition "Column chromatography where the separation is caused by differences in charge, the mobile phase is aqueous and the analyte is ionic. [CHMO]" ;
+                 skos:prefLabel "ion-exclusion chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000207
+af-p:AFP_0000207 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001335 ;
+                 skos:definition "Column chromatography where cations are retained by functional groups that are permanently negatively charged in aqueous conditions, for example aliphatic sulfonic acid groups, in the stationary phase. [CHMO]" ;
+                 skos:prefLabel "strong-cation-exchange chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000436
+af-p:AFP_0000436 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000843 ;
+                 skos:altLabel "pulsed laser polymerisation size exclusion chromatography"@en-gb ,
+                               "pulsed laser polymerisation-size exclusion chromatography"@en-gb ,
+                               "pulsed-laser polymerisation-size-exclusion chromatography"@en-gb ,
+                               "PLP-SEC" ,
+                               "PLP/SEC" ,
+                               "pulsed laser polymerization size exclusion chromatography" ,
+                               "pulsed laser polymerization-size exclusion chromatography" ,
+                               "pulsed-laser polymerization-size-exclusion chromatography" ;
+                 skos:definition "A technique for measuring the propagation rate coefficient during polymerization reactions. The polymerization is initiated by laser irradiation and the chain length distribution is subsequently determined by size-exclusion chromatography. [CHMO]" ;
+                 skos:prefLabel "pulsed laser polymerisation-size-exclusion chromatography"@en-gb ,
+                                "pulsed laser polymerization-size-exclusion chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000588
+af-p:AFP_0000588 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000630
+af-p:AFP_0000630 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000843 ;
+                 skos:altLabel "pulsed laser polymerisation size exclusion chromatography nuclear magnetic resonance"@en-gb ,
+                               "pulsed laser polymerisation-size exclusion chromatography-nuclear magnetic resonance"@en-gb ,
+                               "pulsed-laser polymerisation-size-exclusion chromatography"@en-gb ,
+                               "PLP-SEC-NMR" ,
+                               "PLP/SEC/NMR" ,
+                               "pulsed laser polymerization size exclusion chromatography nuclear magnetic resonance" ,
+                               "pulsed-laser polymerization-size-exclusion chromatography" ;
+                 skos:definition "A technique for measuring the propagation rate coefficient during polymerization reactions. The polymerization is initiated by laser irradiation and the chain length distribution is subsequently determined by size-exclusion chromatography and the composition of the copolymer products is determined by NMR. [CHMO]" ;
+                 skos:prefLabel "pulsed laser polymerisation-size-exclusion chromatography-nuclear magnetic resonance"@en-gb ,
+                                "pulsed laser polymerization-size-exclusion chromatography-nuclear magnetic resonance" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000680
+af-p:AFP_0000680 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001004 ;
+                 skos:altLabel "MOAC" ,
+                               "MOC" ,
+                               "metal oxide chromatography" ,
+                               "metal oxides chromatography" ,
+                               "metal-oxide chromatography" ;
+                 skos:definition "A chromatography method where the separation is caused by differing analyte-ligand interactions. Phosphorylated proteins and peptides are retained by metal oxide particles because of their affinity for the phosphate group. [CHMO]" ;
+                 skos:prefLabel "metal oxide affinity chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000713
+af-p:AFP_0000713 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001335 ;
+                 skos:definition "Column chromatography where cations are retained by functional groups that are  negatively charged at low pH, for example aliphatic carboxylic acid groups, in the stationary phase. [CHMO]" ;
+                 skos:prefLabel "weak-cation-exchange chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000726
+af-p:AFP_0000726 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001489 ;
+                 skos:definition "A type of chromatography where an initial separation proceeds in a primary column and parts of the eluent from this column are directed into a secondary column. [CHMO]" ;
+                 skos:prefLabel "two-dimensional column chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000751
+af-p:AFP_0000751 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000588 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1993, 65, 819 (Nomenclature for chromatography (IUPAC Recommendations 1993))" ;
+                 skos:changeNote "2024-09-12 Added missing IUPAC license and rights fields." ;
+                 skos:definition "Elution chromatography is a chromatography in which the mobile phase is continuously passed through or along the chromatographic bed and the sample is fed into the system as a finite slug. [IUPAC]" ;
+                 skos:prefLabel "elution chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000805
+af-p:AFP_0000805 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000751 ;
+                 skos:altLabel "stepwise elution chromatography" ,
+                               "stepwise-elution chromatography" ;
+                 skos:definition "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction (the 'mobile' phase). In stepwise elution chromatography the elution solvent strength of the mobile phase is  increased during the separation as a series of discrete steps. [CHMO]" ;
+                 skos:prefLabel "step-wise elution chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000843
+af-p:AFP_0000843 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000967
+af-p:AFP_0000967 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001179 ;
+                 skos:definition "A multi-dimensional separation method where the separation processes are all chromatography. [CHMO]" ;
+                 skos:prefLabel "multi-dimensional chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000991
+af-p:AFP_0000991 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002341 ;
+                 skos:altLabel "SAX chromatography" ;
+                 skos:definition "Column chromatography where anions are retained by positively charged functional groups that have a permanent positive charge in aqueous solution, such as quaternary ammonium groups, in the stationary phase. [CHMO]" ;
+                 skos:prefLabel "strong-anion-exchange chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001004
+af-p:AFP_0001004 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000588 ;
+                 skos:altLabel "affinity purification" ,
+                               "bioaffinity chromatography" ;
+                 skos:changeNote "2016-02-10 add alt label [Bayer]" ;
+                 skos:definition "A method of separating biochemical mixtures based on a highly specific interaction such as that between antigen and antibody, enzyme and substrate, or receptor and ligand. [Allotrope]" ;
+                 skos:prefLabel "affinity chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001033
+af-p:AFP_0001033 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001004 ;
+                 skos:definition "Affinity chromatography where a cell membrane has been immobilized on a silica carrier. [CHMO]" ;
+                 skos:prefLabel "cell membrane chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001079
+af-p:AFP_0001079 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002341 ;
+                 skos:altLabel "WAX chromatography" ;
+                 skos:definition "Column chromatography where anions are retained by positively charged functional groups that have a positive charge only at high pH, such as amine groups, in the stationary phase. [CHMO]" ;
+                 skos:prefLabel "weak-anion-exchange chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001151
+af-p:AFP_0001151 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000751 ;
+                 skos:altLabel "gradient elution chromatography" ;
+                 skos:changeNote "2015-12-15 Generalized definition [OSTHUS]" ,
+                                 "2015-12-15 Improved definition [Amgen]" ;
+                 skos:definition "Gradient-elution chromatography is a separation method where the composition of the mobile phase is varied in eluting strength. [Allotrope]" ;
+                 skos:prefLabel "gradient-elution chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001179
+af-p:AFP_0001179 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001202
+af-p:AFP_0001202 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000588 ;
+                 skos:altLabel "IEC" ,
+                               "IEX" ,
+                               "IEX chromatography" ,
+                               "ion exchange chromatography" ;
+                 skos:changeNote "2015-12-15 Improved definition [Amgen]" ,
+                                 "2016-02-10 add alt label IEX [Bayer]" ;
+                 skos:definition "Column chromatography where the separation is based on ions and polar molecules' affinity to the ion-exchanger. [Allotrope]" ;
+                 skos:prefLabel "ion-exchange chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001335
+af-p:AFP_0001335 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001202 ;
+                 skos:altLabel "CEX" ,
+                               "cation chromatography" ,
+                               "cation exchange chromatography" ;
+                 skos:changeNote "2016-02-10 add alt label CEX [Bayer]" ;
+                 skos:definition "Column chromatography where cations are retained by negatively charged functional groups in the stationary phase. [CHMO]" ;
+                 skos:prefLabel "cation-exchange chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001487
+af-p:AFP_0001487 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002089 ;
+                 skos:definition "Retention time alignment is a chromatography data processing in which retention time of chromatograms is aligned to compare samples. [Allotrope]" ;
+                 skos:prefLabel "retention time alignment" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001489
+af-p:AFP_0001489 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000967 ;
+                 skos:altLabel "2D chromatography" ;
+                 skos:definition "A two-dimensional separation method where the separation processes are both chromatography. initial separation proceeds in a primary column and 'cuts' of the eluent from this column are directed into one or more secondary columns. [CHMO]" ;
+                 skos:prefLabel "two-dimensional chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001504
+af-p:AFP_0001504 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000626 ;
+                 skos:altLabel "post column derivatisation"@en-gb ,
+                               "post column derivatization" ;
+                 skos:definition "The transformation of a chemical compound (the 'educt') following column chromatography into another similar compound (the 'derivative') by altering one or more of its functional groups. Derviatization is generally perfomed to alter reactivity or change a physical property such as solubility, boiling point, melting point, thermal stability etc. [CHMO]" ;
+                 skos:prefLabel "post-column derivatisation"@en-gb ,
+                                "post-column derivatization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001537
+af-p:AFP_0001537 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002395 ;
+                 skos:altLabel "medium pressure chromatography" ,
+                               "medium-pressure chromatography" ;
+                 skos:definition "A type of rapid preparative column chromatography where 0.1-10 g of sample mixture is separated in less than 15 min by using pressurised gas to drive the mobile phase through the column. [CHMO]" ;
+                 skos:prefLabel "flash chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001797
+af-p:AFP_0001797 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000588 ;
+                 skos:altLabel "IPC" ,
+                               "ion pair chromatography" ,
+                               "ion pairing chromatography" ,
+                               "ion-pairing chromatography" ;
+                 skos:definition "A type of column chromatography in which ions in solution can be 'paired' or neutralised and separated as an ion pair on a reversed-phase column. Ion-pairing agents are usually ionic compounds that contain a hydrocarbon chain. [CHMO]" ;
+                 skos:prefLabel "ion-pair chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001814
+af-p:AFP_0001814 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002014 ;
+                 skos:altLabel "TLC" ;
+                 skos:definition "A chromatography method where the stationary phase is a thin (0.10 to 0.25 mm) layer of sorbent applied to a firm backing such as glass, aluminium or plastic sheet. An eluent ( single solvent or solvent mixture) is allowed to flow by capillary action through the sorbent starting at a point just below the applied samples. As the eluent front migrates through the sorbent the components of the sample also migrate, but at different rates resulting in separation. [CHMO]" ;
+                 skos:prefLabel "thin-layer chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001819
+af-p:AFP_0001819 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001004 ;
+                 skos:altLabel "IMAC" ,
+                               "immobilised metal affinity chromatography" ;
+                 skos:definition "A chromatography method where the separation is caused by differing analyte-ligand interactions. Proteins containing amino acids with a specific affinity for metal ions (e.g. His which has an affinity for Co and Zn ions) are retained by the column. [CHMO]" ;
+                 skos:prefLabel "immobilized metal affinity chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001841
+af-p:AFP_0001841 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000588 ;
+                 skos:altLabel "short column chromatography" ;
+                 skos:definition "A chromatography method where the stationary bed is within a tube (of less than the standard length of 25 cm). The particles of the solid stationary phase or support coated with a liquid stationary phase may fill the whole inside volume of the tube (packed column) or be concentrated on or along the inside tube wall leaving an open, unrestricted path for the mobile phase in the middle part of the tube (open-tubular column). [CHMO]" ;
+                 skos:prefLabel "short-column chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001906
+af-p:AFP_0001906 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000588 ;
+                 skos:definition "Column chromatography where the separation is caused by exclusion effects such as differences in molecular size, shape or charge. [CHMO]" ;
+                 skos:prefLabel "exclusion chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002014
+af-p:AFP_0002014 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002023
+af-p:AFP_0002023 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002014 ;
+                 skos:definition "A chromatography method where the stationary phase is or is impregnated in a sheet of paper. [CHMO]" ;
+                 skos:prefLabel "paper chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002060
+af-p:AFP_0002060 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000751 ;
+                 skos:altLabel "isocratic elution chromatography" ;
+                 skos:definition "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction (the 'mobile' phase). In isocratic elution chromatography the elution solvent strength of the mobile phase remains constant during the separation. [CHMO]" ;
+                 skos:prefLabel "isocratic-elution chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002089
+af-p:AFP_0002089 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002201
+af-p:AFP_0002201 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000680 ;
+                 skos:altLabel "HAMMOC" ,
+                               "hydroxy acid-modified MOAC" ,
+                               "hydroxy acid-modified MOC" ,
+                               "hydroxy acid-modified metal oxides chromatography" ,
+                               "hydroxy acid-modified metal-oxide chromatography" ;
+                 skos:definition "A chromatography method where the separation is caused by differing analyte-ligand interactions. Phosphorylated proteins and peptides are retained by hydroxy acid-modified metal oxide particles because of their affinity for the phosphate group. [CHMO]" ;
+                 skos:prefLabel "hydroxy acid-modified metal oxide chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002289
+af-p:AFP_0002289 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001906 ;
+                 skos:altLabel "GPC" ,
+                               "gel permeation chromatography" ;
+                 skos:definition "Column chromatography where the separation is caused by exclusion effects within the stationary phase and where the stationary phase is a swollen gel. [CHMO]" ;
+                 skos:prefLabel "gel filtration chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002341
+af-p:AFP_0002341 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001202 ;
+                 skos:altLabel "AEX" ,
+                               "anion chromatography" ,
+                               "anion exchange chromatography" ;
+                 skos:changeNote "2016-02-10 add alt label [Bayer]" ;
+                 skos:definition "Column chromatography where anions are retained by positively charged functional groups in the stationary phase. [CHMO]" ;
+                 skos:prefLabel "anion-exchange chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002395
+af-p:AFP_0002395 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000588 ;
+                 skos:altLabel "preparative-column chromatography" ;
+                 skos:definition "A chromatography method where the stationary bed is within a tube (of standard length 25 cm). Preparative column chromatography involves the collection of eluted pure samples (following synthesis or for subsequent biological testing). [CHMO]" ;
+                 skos:prefLabel "preparative column chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002484
+af-p:AFP_0002484 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002789
+af-p:AFP_0002789 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000313 ;
+                 skos:altLabel "step elution" ;
+                 skos:changeNote "2015-11-25 Add concept [Amgen]" ;
+                 skos:definition "Elution with a constant composition of the mobile phase. [Wikipedia]" ;
+                 skos:prefLabel "isocratic elution" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002842
+af-p:AFP_0002842 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002792 ;
+                 skos:changeNote "2015-12-15 Add concept [Amgen]" ,
+                                 "2015-12-15 Improved definition [Amgen]" ;
+                 skos:definition "Chromatography column packing is the process of preparing a chromatography column by transferring a stationary phase sample into the column body as a densely packed phase. [Allotrope]" ;
+                 skos:prefLabel "chromatography column packing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003288
+af-p:AFP_0003288 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-p:AFP_0003281
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002682 ;
+                                                              owl:someValuesFrom af-q:AFQ_0000033
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A quality process profile that tracks the composition of some material that plays the role of a mobile phase in chromatography. [Allotrope]" ;
+                 skos:prefLabel "mobile phase composition profile" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003557
+af-p:AFP_0003557 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002395 ;
+                 dct:source "https://en.wikipedia.org/wiki/Chromatography" ;
+                 skos:altLabel "EBA" ;
+                 skos:definition "A chromatography that uses an expanded bed chromatographic adsorption column for a biochemical separation process. [Allotrope]" ;
+                 skos:editorialNote "SME review needed" ;
+                 skos:prefLabel "expanded-bed adsorption chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003558
+af-p:AFP_0003558 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001543 ;
+                 dct:source "PAC, Vol. 81, No. 2 Countercurrent Chromatography in Analytical Chemistry" ,
+                            "https://en.wikipedia.org/wiki/Chromatography" ,
+                            "https://en.wikipedia.org/wiki/Countercurrent_chromatography" ;
+                 skos:altLabel "CCC" ,
+                               "counter-current chromatography" ;
+                 skos:definition "Countercurrent chromatography is a form of liquid–liquid chromatography that uses a liquid stationary phase that is held in place by centrifugal force and is used to separate, identify, and quantify the chemical components of a mixture. [Wikipedia]" ;
+                 skos:prefLabel "countercurrent chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000033
+af-q:AFQ_0000033 rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/PATO_0002182> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0000080> ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( bfo:_0000040
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000011
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A physical quality that inheres in a bearer by virtue of its chemical makeup while used in a chromatography technique as mobile phase. [Allotrope]" ;
+                 skos:prefLabel "mobile phase composition" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000024
+af-r:AFR_0000024 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000118
+af-r:AFR_0000118 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000443 ;
+                 dct:source <https://en.wikipedia.org/wiki/Mass_chromatogram> ;
+                 skos:altLabel "BPC" ,
+                               "BPI chromatogram" ,
+                               "BPIs" ,
+                               "basepeak chromatogram" ;
+                 skos:definition "A plot of ion current vs. retention time obtained from a chromatography experiment with mass detection. The base peak intensity chromatogram represents the intensity of the most intense peak at any one time. [CHMO]" ;
+                 skos:prefLabel "base peak intensity chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000204
+af-r:AFR_0000204 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000443 ;
+                 dct:source <https://en.wikipedia.org/wiki/Mass_chromatogram> ;
+                 skos:altLabel "EIC" ,
+                               "XIC" ;
+                 skos:definition "In an extracted-ion chromatogram (XIC or EIC), also called a reconstructed-ion chromatogram (RIC), one or more m/z values representing one or more analytes of interest are recovered ('extracted') from the entire data set for a chromatographic run. [Wikipedia]" ;
+                 skos:prefLabel "extracted ion chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000436
+af-r:AFR_0000436 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000308 ;
+                 skos:definition "An absorption chromatogram is an electromagnetic radiation chromatogram where the the radiation is measured by absorption. [Allotrope]" ;
+                 skos:prefLabel "absorption chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000443
+af-r:AFR_0000443 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000462
+af-r:AFR_0000462 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000160 ,
+                                 af-r:AFR_0000443 ,
+                                 af-r:AFR_0000580 ;
+                 dct:source <https://en.wikipedia.org/wiki/Mass_chromatogram> ,
+                            "T. Mizuno, N. Abe, H. Teshima, E. Yamauchi, Y. Itagaki, I. Matsumoto, T. Kuhara, T. Shinka. Biomed. Mass Spectrom. 8, 593 (1981)." ;
+                 skos:altLabel "TIC chromatogram" ,
+                               "TICC" ,
+                               "reconstructed total ion current chromatogram" ,
+                               "total ion chromatogram" ,
+                               "total ion current chromatogram" ;
+                 skos:definition "The total ion current (TIC) chromatogram represents the summed intensity across the entire range of masses being detected at every point in the analysis. [Wikipedia]" ;
+                 skos:note "total ion chromatogram is deprecated." ;
+                 skos:prefLabel "total ion current chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000469
+af-r:AFR_0000469 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000308 ;
+                 skos:definition "An absorption chromatogram is an electromagnetic radiation chromatogram where the the radiation is measured by emission. [Allotrope]" ;
+                 skos:prefLabel "emission chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000478
+af-r:AFR_0000478 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000160 ;
+                 skos:altLabel "CRM chromatogram" ;
+                 skos:definition "A consecutive reaction monitoring chromatogram is a type of chromatogram that results from more than two stages of mass analysis monitoring a reaction path. [Allotrope]" ;
+                 skos:prefLabel "consecutive reaction monitoring chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000482
+af-r:AFR_0000482 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000160 ;
+                 dct:source <https://en.wikipedia.org/wiki/Mass_chromatogram> ;
+                 skos:altLabel "SRM chromatogram" ,
+                               "SRM spectrum" ;
+                 skos:definition "The selected-reaction monitoring chromatogram is the ion chromatogram output of a selected-reaction monitoring experiment that is very similar to the SIM experiment except that tandem mass spectrometry is used and a specific product ion of a specific parent ion is detected. [Wikipedia]" ;
+                 skos:prefLabel "selected reaction monitoring chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000580
+af-r:AFR_0000580 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000787
+af-r:AFR_0000787 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000024 ;
+                 skos:definition "The description of a separated compound that is assigned to a chromatogram peak. [Allotrope]" ;
+                 skos:example "separated compound" ;
+                 skos:prefLabel "chromatogram peak assignment target" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001089
+af-r:AFR_0001089 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001271
+af-r:AFR_0001271 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 af-x:AFX_0002811 af-x:AFX_0000217 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1993, 65, 819 (Nomenclature for chromatography (IUPAC Recommendations 1993))" ;
+                 skos:altLabel "capacity factor" ,
+                               "capacity ratio" ,
+                               "k" ,
+                               "k'" ,
+                               "mass distribution" ,
+                               "partition ratio" ;
+                 skos:definition """A measure of the time the sample component resides in the stationary phase relative to the time it resides in the mobile phase; it expresses how much longer a sample component is retarded by the stationary phase than it would take to travel through the column with the velocity of the mobile phase. Mathematically, it is the ratio of the adjusted retention volume (time) and the hold-up volume (time):
+k = V'_R / V_ M = t'_R / t_ M
+If the distribution constant is independent of sample component concentration, then the retention factor is also equal to the ratio of the amounts of a sample component in the stationary and mobile phases respectively, at equilibrium:
+k = [amount of component in stationary phase] / [amount of component in mobile phase]
+If the fraction of the sample component in the mobile phase is R, then the fraction in the stationary phase is 1 − R; thus
+k = (1 − R) / R
+[IUPAC]""" ;
+                 skos:prefLabel "retention factor" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001805
+af-r:AFR_0001805 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001575 ;
+                 skos:altLabel "test mode" ;
+                 skos:definition "The test mode determines the measurements collected during the device execution, e.g. Injection Time only or Dispense Volume and Injection Time). [Allotrope]" ;
+                 skos:prefLabel "test mode setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000011
+af-rl:AFRL_0000011 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000032
+af-rl:AFRL_0000032 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000126
+af-rl:AFRL_0000126 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000218
+af-rl:AFRL_0000218 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000219
+af-rl:AFRL_0000219 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000220
+af-rl:AFRL_0000220 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+bfo:_0000015 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+bfo:_0000040 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002182
+<http://purl.obolibrary.org/obo/PATO_0002182> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/iupac-copyright
+<http://purl.allotrope.org/voc/iupac-copyright> rdf:type owl:NamedIndividual ,
+                                                         dct:RightsStatement ;
+                                                dct:description "Copyright © 2019 International Union of Pure Applied Chemistry" .
+
+
+###  http://purl.allotrope.org/voc/iupac-license
+<http://purl.allotrope.org/voc/iupac-license> rdf:type owl:NamedIndividual ,
+                                                       dct:LicenseDocument ;
+                                              dct:description "Reproduced by permission of International Union of Pure and Applied Chemistry" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

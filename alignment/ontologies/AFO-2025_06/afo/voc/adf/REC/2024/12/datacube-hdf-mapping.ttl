@@ -1,3 +1,1007 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04cd3bd83fef9bc9bc69fc11f1cfe1ded76193b0b081c6616fc60122ac497fd2
-size 61576
+@prefix : <http://purl.allotrope.org/voc/adf/REC/2024/12/adf-dc-hdf-map#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix hdf: <http://purl.allotrope.org/ontologies/hdf5/1.8#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <http://qudt.org/1.1/vocab/unit#> .
+@prefix vaem: <http://www.linkedmodel.org/1.2/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix dtype: <http://www.linkedmodel.org/1.0/schema/dtype#> .
+@prefix adf-dc: <http://purl.allotrope.org/ontologies/datacube#> .
+@prefix dimension: <http://qudt.org/1.1/schema/dimension#> .
+@prefix adf-dc-hdf: <http://purl.allotrope.org/ontologies/datacube-hdf-map#> .
+@prefix dimensionalunit: <http://qudt.org/1.1/vocab/dimensionalunit#> .
+@base <http://purl.allotrope.org/voc/adf/REC/2024/12/adf-dc-hdf-map#> .
+
+<http://purl.allotrope.org/voc/adf/REC/2024/12/adf-dc-hdf-map> rdf:type owl:Ontology ;
+                                                                owl:versionIRI <http://purl.allotrope.org/voc/adf/REC/2024/12/adf-dc-hdf-map> ;
+                                                                owl:imports <http://purl.allotrope.org/voc/adf/REC/2024/12/datacube> ,
+                                                                            <http://purl.allotrope.org/voc/adf/REC/2024/12/hdf> ,
+                                                                            <http://purl.allotrope.org/voc/qb/REC/2018/10/cube> ;
+                                                                dct:contributor <http://www.allotrope.org> ;
+                                                                dct:description "The Allotrope Data Cube to HDF5 Mapping Ontology is a vocabulary to connect the Allotrope Data Cube Ontology with the Allotrope HDF 5 ontology for describing ADF files." ;
+                                                                dct:issued "2024-12-18T12:00:00Z"^^xsd:dateTime ;
+                                                                dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                dct:modified "2024-12-08T12:00:00Z"^^xsd:dateTime ;
+                                                                dct:publisher <http://www.allotrope.org> ;
+                                                                dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                           <http://purl.allotrope.org/voc/copyright> ;
+                                                                dct:title "The Allotrope Data Cube to HDF5 Mapping Ontology (REC/2024/12)" ;
+                                                                rdfs:label "The Allotrope Data Cube to HDF5 Mapping Ontology (REC/2024/12)" ;
+                                                                owl:priorVersion <http://purl.allotrope.org/voc/adf/REC/2020/06/adf-dc-hdf-map> ;
+                                                                owl:versionInfo "REC/2024/12" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#componentMapping
+adf-dc-hdf:componentMapping rdf:type owl:ObjectProperty ;
+                            rdfs:domain adf-dc-hdf:MappingStructureDefinition ;
+                            rdfs:range adf-dc-hdf:ComponentMapping ;
+                            rdfs:comment "The relation between a mapping structure definition to its component mappings. [Allotrope]" ;
+                            rdfs:label "component mapping" ;
+                            skos:definition "The relation between a mapping structure definition to its component mappings. [Allotrope]" ;
+                            skos:prefLabel "component mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#dataTypeMapping
+adf-dc-hdf:dataTypeMapping rdf:type owl:ObjectProperty ;
+                           rdfs:domain adf-dc-hdf:RDFMapping ;
+                           rdfs:range adf-dc-hdf:DataTypeMapping ;
+                           rdfs:comment "The data type mapping of the RDF mapping. [Allotrope]" ;
+                           rdfs:label "data type mapping" ;
+                           skos:definition "The data type mapping of the RDF mapping. [Allotrope]" ;
+                           skos:prefLabel "data type mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#hdfDataType
+adf-dc-hdf:hdfDataType rdf:type owl:ObjectProperty ;
+                       rdfs:domain adf-dc-hdf:DataTypeMapping ;
+                       rdfs:range hdf:Datatype ;
+                       rdfs:comment "Relation between a HDF data type mapping and a HDF data type. [Allotrope]" ;
+                       rdfs:label "HDF data type" ;
+                       skos:definition "Relation between a HDF data type mapping and a HDF data type. [Allotrope]" ;
+                       skos:prefLabel "HDF data type" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#hdfDataset
+adf-dc-hdf:hdfDataset rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:range hdf:Dataset ;
+                      rdfs:comment "The relation between a RDF mapping with its representation as HDF datasets. [Allotrope]" ;
+                      rdfs:label "HDF dataset" ;
+                      skos:definition "The relation between a RDF mapping with its representation as HDF datasets. [Allotrope]" ;
+                      skos:prefLabel "HDF dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#hdfDataspace
+adf-dc-hdf:hdfDataspace rdf:type owl:ObjectProperty ;
+                        rdfs:domain adf-dc-hdf:MappingStructureDefinition ;
+                        rdfs:range hdf:Dataspace ;
+                        rdfs:comment "The relation between the mapping structure definition with its representation as HDF dataspace. [Allotrope]" ;
+                        rdfs:label "HDF dataspace" ;
+                        skos:definition "The relation between the mapping structure definition with its representation as HDF dataspace. [Allotrope]" ;
+                        skos:prefLabel "HDF dataspace" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#hdfDataspaceDimension
+adf-dc-hdf:hdfDataspaceDimension rdf:type owl:ObjectProperty ;
+                                 rdfs:domain adf-dc-hdf:DimensionMapping ;
+                                 rdfs:range hdf:DataspaceDimension ;
+                                 rdfs:comment "The relation between a dimension mapping and its representation as HDF dataspace dimension. [Allotrope]" ;
+                                 rdfs:label "HDF dataspace dimension" ;
+                                 skos:definition "The relation between a dimension mapping and its representation as HDF dataspace dimension. [Allotrope]" ;
+                                 skos:prefLabel "HDF dataspace dimension" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#hdfDictionary
+adf-dc-hdf:hdfDictionary rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain adf-dc-hdf:DataTypeMapping ;
+                         rdfs:comment "A relation between a HDF data type mapping and a dictionary that maps instances of RDF representations (such as IRI or xsd:string) to HDF data values. [Allotrope]" ;
+                         rdfs:label "HDF dictionary" ;
+                         skos:definition "A relation between a HDF data type mapping and a dictionary that maps instances of RDF representations (such as IRI or xsd:string) to HDF data values. [Allotrope]" ;
+                         skos:prefLabel "HDF dictionary" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#index
+adf-dc-hdf:index rdf:type owl:ObjectProperty ;
+                 rdfs:domain adf-dc-hdf:IndexStructureDefinition ;
+                 rdfs:range adf-dc-hdf:Index ;
+                 rdfs:comment "The relation between an index structure definition and its indices. [Allotrope]" ;
+                 rdfs:label "index" ;
+                 skos:definition "The relation between an index structure definition and its indices. [Allotrope]" ;
+                 skos:prefLabel "index" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#indexFunction
+adf-dc-hdf:indexFunction rdf:type owl:ObjectProperty ;
+                         rdfs:range adf-dc-hdf:IndexFunction ;
+                         rdfs:label "index function" ;
+                         skos:prefLabel "index function" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#indexOn
+adf-dc-hdf:indexOn rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain adf-dc-hdf:Index ;
+                   rdfs:range adf-dc:Dimension ;
+                   rdfs:comment "Relation between an index and dimension components. It defines which dimension are put into one index for the HDF data sets. [Allotrope]" ;
+                   rdfs:label "index on" ;
+                   skos:definition "Relation between an index and dimension components. It defines which dimension are put into one index for the HDF data sets. [Allotrope]" ;
+                   skos:prefLabel "index on" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#indexStructure
+adf-dc-hdf:indexStructure rdf:type owl:ObjectProperty ;
+                          rdfs:domain adf-dc-hdf:Mapping ;
+                          rdfs:range adf-dc-hdf:IndexStructureDefinition ;
+                          rdfs:comment "Relation between a HDF mapping and an index structure definition. [Allotrope]" ;
+                          rdfs:label "index structure" ;
+                          skos:definition "Relation between a HDF mapping and an index structure definition. [Allotrope]" ;
+                          skos:prefLabel "index structure" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#mappingOf
+adf-dc-hdf:mappingOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain adf-dc-hdf:Mapping ;
+                     rdfs:range qb:DataSet ;
+                     rdfs:comment "Relation between a HDF mapping and a datacube. [Allotrope]" ;
+                     rdfs:label "mapping of" ;
+                     skos:definition "Relation between a HDF mapping and a datacube. [Allotrope]" ;
+                     skos:prefLabel "mapping of" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#mappingStructure
+adf-dc-hdf:mappingStructure rdf:type owl:ObjectProperty ;
+                            rdfs:domain adf-dc-hdf:Mapping ;
+                            rdfs:range adf-dc-hdf:MappingStructureDefinition ;
+                            rdfs:comment "Relation between a HDF mapping which is defined for a qb:DataSet D and a mapping structure definition which contains component mappings for all components of D. [Allotrope]" ;
+                            rdfs:label "mapping structure" ;
+                            skos:definition "Relation between a HDF mapping which is defined for a qb:DataSet D and a mapping structure definition which contains component mappings for all components of D. [Allotrope]" ;
+                            skos:prefLabel "mapping structure" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#mapsComponent
+adf-dc-hdf:mapsComponent rdf:type owl:ObjectProperty ;
+                         rdfs:domain adf-dc-hdf:ComponentMapping ;
+                         rdfs:range qb:ComponentSpecification ;
+                         rdfs:comment "Relation between a component mapping and the mapped component. [Allotrope]" ;
+                         rdfs:label "maps component" ;
+                         skos:definition "Relation between a component mapping and the mapped component. [Allotrope]" ;
+                         skos:prefLabel "maps component" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#mapsScale
+adf-dc-hdf:mapsScale rdf:type owl:ObjectProperty ;
+                     rdfs:domain adf-dc-hdf:ScaleMapping ;
+                     rdfs:range adf-dc:Scale ;
+                     rdfs:comment "Relation between a scale mapping and a scale. [Allotrope]" ;
+                     rdfs:label "maps scale" ;
+                     skos:definition "Relation between a scale mapping and a scale. [Allotrope]" ;
+                     skos:prefLabel "maps scale" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#rdfMapping
+adf-dc-hdf:rdfMapping rdf:type owl:ObjectProperty ;
+                      rdfs:domain adf-dc-hdf:ComponentMapping ;
+                      rdfs:range adf-dc-hdf:RDFMapping ;
+                      rdfs:comment "The relation between the component mapping and its RDF mappings. [Allotrope]" ;
+                      rdfs:label "rdf mapping" ;
+                      skos:definition "The relation between the component mapping and its RDF mappings. [Allotrope]" ;
+                      skos:prefLabel "rdf mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#rdfType
+adf-dc-hdf:rdfType rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain adf-dc-hdf:DataTypeMapping ;
+                   rdfs:comment "A relation between a HDF data type mapping and a primitive RDF type such as xsd:integer etc. [Allotrope]" ;
+                   rdfs:label "RDF type" ;
+                   skos:definition "A relation between a HDF data type mapping and a primitive RDF type such as xsd:integer etc. [Allotrope]" ;
+                   skos:prefLabel "RDF type" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#scaleMapping
+adf-dc-hdf:scaleMapping rdf:type owl:ObjectProperty ;
+                        rdfs:domain adf-dc-hdf:Mapping ;
+                        rdfs:range adf-dc-hdf:ScaleMapping ;
+                        rdfs:comment "Relation between a datacube mapping and a scale mapping. [Allotrope]" ;
+                        rdfs:label "scale mapping" ;
+                        skos:definition "Relation between a datacube mapping and a scale mapping. [Allotrope]" ;
+                        skos:prefLabel "scale mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#specifiedBy
+adf-dc-hdf:specifiedBy rdf:type owl:ObjectProperty ;
+                       rdfs:domain adf-dc-hdf:ExplicitScaleMapping ;
+                       rdfs:range adf-dc-hdf:DimensionMapping ;
+                       rdfs:label "specified by" ;
+                       skos:prefLabel "specified by" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#usesBytesDataset
+adf-dc-hdf:usesBytesDataset rdf:type owl:ObjectProperty ;
+                            rdfs:domain adf-dc-hdf:BidiMapBTreeImplementation ;
+                            rdfs:range hdf:Dataset ;
+                            rdfs:comment "A relation between a btree implementation and the HDF dataset that contains bytestream of the data for entries of size>12 bytes. [Allotrope]" ;
+                            rdfs:label "uses bytes dataset" ;
+                            skos:definition "A relation between a btree implementation and the HDF dataset that contains bytestream of the data for entries of size>12 bytes. [Allotrope]" ;
+                            skos:prefLabel "uses bytes dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#usesKeysDataset
+adf-dc-hdf:usesKeysDataset rdf:type owl:ObjectProperty ;
+                           rdfs:domain adf-dc-hdf:BidiMapBTreeImplementation ;
+                           rdfs:range hdf:Dataset ;
+                           rdfs:comment "A relation between a btree implementation and its HDF dataset for its keys. The keys are contain either the key value directly (if less or equal than 12 bytes) or the address of the data in the bytes dataset. [Allotrope]" ;
+                           rdfs:label "uses keys dataset" ;
+                           skos:definition "A relation between a btree implementation and its HDF dataset for its keys. The keys are contain either the key value directly (if less or equal than 12 bytes) or the address of the data in the bytes dataset. [Allotrope]" ;
+                           skos:prefLabel "uses keys dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#usesNodesDataset
+adf-dc-hdf:usesNodesDataset rdf:type owl:ObjectProperty ;
+                            rdfs:domain adf-dc-hdf:BidiMapBTreeImplementation ;
+                            rdfs:range hdf:Dataset ;
+                            rdfs:comment "The relation between a btree implementation and the HDF dataset containing the btree nodes. [Allotrope]" ;
+                            rdfs:label "uses nodes dataset" ;
+                            skos:definition "The relation between a btree implementation and the HDF dataset containing the btree nodes. [Allotrope]" ;
+                            skos:prefLabel "uses nodes dataset" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#hdfDimensionIndex
+adf-dc-hdf:hdfDimensionIndex rdf:type owl:DatatypeProperty ;
+                             rdfs:domain adf-dc-hdf:RDFMapping ;
+                             rdfs:range xsd:integer ;
+                             rdfs:comment "The HDF dimension index is used by a RDF mapping when a component or attributes of a complex data type are mapped to a multidimensional HDF data set to identify the dimension. [Allotrope]" ;
+                             rdfs:label "HDF dimension index" ;
+                             skos:definition "The HDF dimension index is used by a RDF mapping when a component or attributes of a complex data type are mapped to a multidimensional HDF data set to identify the dimension. [Allotrope]" ;
+                             skos:prefLabel "HDF dimension index" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#hdfFieldIndex
+adf-dc-hdf:hdfFieldIndex rdf:type owl:DatatypeProperty ;
+                         rdfs:domain adf-dc-hdf:RDFMapping ;
+                         rdfs:range xsd:integer ;
+                         rdfs:comment "The HDF field index is used by a RDF mapping when a component or attributes of a complex data type are mapped to a multidimensional HDF data set. [Allotrope]" ;
+                         rdfs:label "HDF field index" ;
+                         skos:definition "The HDF field index is used by a RDF mapping when a component or attributes of a complex data type are mapped to a multidimensional HDF data set. [Allotrope]" ;
+                         skos:prefLabel "HDF field index" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#parameter1
+adf-dc-hdf:parameter1 rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "The first parameter of a function. [Allotrope]" ;
+                      rdfs:label "parameter 1" ;
+                      skos:definition "The first parameter of a function. [Allotrope]" ;
+                      skos:prefLabel "parameter 1" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#parameter2
+adf-dc-hdf:parameter2 rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "The second parameter of a function. [Allotrope]" ;
+                      rdfs:label "parameter 2" ;
+                      skos:definition "The second parameter of a function. [Allotrope]" ;
+                      skos:prefLabel "parameter 2" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#parameter3
+adf-dc-hdf:parameter3 rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "The third parameter of a function. [Allotrope]" ;
+                      rdfs:label "parameter 3" ;
+                      skos:definition "The third parameter of a function. [Allotrope]" ;
+                      skos:prefLabel "parameter 3" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube#Dimension
+adf-dc:Dimension rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#Measure
+adf-dc:Measure rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#Scale
+adf-dc:Scale rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#BidiMap
+adf-dc-hdf:BidiMap rdf:type owl:Class ;
+                   rdfs:comment "A BidiMap is a data structure that allows a bidirectional lookup a value by a key. [Allotrope]" ;
+                   rdfs:label "dictionary" ;
+                   skos:definition "A BidiMap is a data structure that allows a bidirectional lookup a value by a key. [Allotrope]" ;
+                   skos:prefLabel "dictionary" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#BidiMapBTreeImplementation
+adf-dc-hdf:BidiMapBTreeImplementation rdf:type owl:Class ;
+                                      rdfs:subClassOf adf-dc-hdf:BidiMap ;
+                                      rdfs:label "implementation of the BidiMap using BTrees" ;
+                                      skos:prefLabel "implementation of the BidiMap using BTrees" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#BinaryLogarithm
+adf-dc-hdf:BinaryLogarithm rdf:type owl:Class ;
+                           rdfs:subClassOf adf-dc-hdf:IndexFunction ,
+                                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty adf-dc-hdf:parameter1 ;
+                                                                    owl:someValuesFrom rdfs:Literal
+                                                                  ]
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty adf-dc-hdf:parameter2 ;
+                                                                    owl:someValuesFrom rdfs:Literal
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                           rdfs:comment "Base 2 logarithm. [Allotrope]" ;
+                           rdfs:label "binary logarithm" ;
+                           skos:definition "Base 2 logarithm. [Allotrope]" ;
+                           skos:prefLabel "binary logarithm" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#CommonLogarithm
+adf-dc-hdf:CommonLogarithm rdf:type owl:Class ;
+                           rdfs:subClassOf adf-dc-hdf:IndexFunction ,
+                                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty adf-dc-hdf:parameter1 ;
+                                                                    owl:someValuesFrom rdfs:Literal
+                                                                  ]
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty adf-dc-hdf:parameter2 ;
+                                                                    owl:someValuesFrom rdfs:Literal
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                           rdfs:comment "Base 10 logarithm. [Allotrope]" ;
+                           rdfs:label "common logarithm" ;
+                           skos:definition "Base 10 logarithm. [Allotrope]" ;
+                           skos:prefLabel "common logarithm" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#ComponentMapping
+adf-dc-hdf:ComponentMapping rdf:type owl:Class ;
+                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty adf-dc-hdf:rdfMapping ;
+                                              owl:someValuesFrom adf-dc-hdf:RDFMapping
+                                            ] ;
+                            rdfs:comment "A component mapping is part of a component strategy and maps a component specification to one or more HDF data sets. [Allotrope]" ;
+                            rdfs:label "component mapping" ;
+                            skos:definition "A component mapping is part of a component strategy and maps a component specification to one or more HDF data sets. [Allotrope]" ;
+                            skos:prefLabel "component mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#DataTypeMapping
+adf-dc-hdf:DataTypeMapping rdf:type owl:Class ;
+                           rdfs:comment "A data type mapping describes how data types defined in RDF are mapped to HDF data types. RDF data types include XSD data types such as xsd:integer or xsd:double, rdf:Resource and also complex (and possibly nested) data types defined by shapes. [Allotrope]" ;
+                           rdfs:label "data type mapping" ;
+                           skos:definition "A data type mapping describes how data types defined in RDF are mapped to HDF data types. RDF data types include XSD data types such as xsd:integer or xsd:double, rdf:Resource and also complex (and possibly nested) data types defined by shapes. [Allotrope]" ;
+                           skos:prefLabel "data type mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#DimensionMapping
+adf-dc-hdf:DimensionMapping rdf:type owl:Class ;
+                            rdfs:subClassOf adf-dc-hdf:ComponentMapping ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty adf-dc-hdf:mapsComponent ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass adf-dc:Dimension
+                                            ] ;
+                            rdfs:comment "A dimension mapping is a component mapping which maps a dimension component. [Allotrope]" ;
+                            rdfs:label "dimension mapping" ;
+                            skos:definition "A dimension mapping is a component mapping which maps a dimension component. [Allotrope]" ;
+                            skos:prefLabel "dimension mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#ExplicitScaleMapping
+adf-dc-hdf:ExplicitScaleMapping rdf:type owl:Class ;
+                                rdfs:subClassOf adf-dc-hdf:ScaleMapping ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty adf-dc-hdf:specifiedBy ;
+                                                  owl:someValuesFrom adf-dc-hdf:DimensionMapping
+                                                ] ;
+                                rdfs:comment "An explicit scale mapping is a scale mapping which maps a scale by specifying a dimension mapping which provides an explicit representation of the mapping through some HDF data set. [Allotrope]" ;
+                                rdfs:label "explicit scale mapping" ;
+                                skos:definition "An explicit scale mapping is a scale mapping which maps a scale by specifying a dimension mapping which provides an explicit representation of the mapping through some HDF data set. [Allotrope]" ;
+                                skos:prefLabel "explicit scale mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#FunctionScaleMapping
+adf-dc-hdf:FunctionScaleMapping rdf:type owl:Class ;
+                                rdfs:subClassOf adf-dc-hdf:ScaleMapping ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty adf-dc-hdf:indexFunction ;
+                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass adf-dc-hdf:IndexFunction
+                                                ] ;
+                                rdfs:comment "A function scale mapping is a scale mapping which is realized by a function such as a linear function. [Allotrope]" ;
+                                rdfs:label "function scale mapping" ;
+                                skos:definition "A function scale mapping is a scale mapping which is realized by a function such as a linear function. [Allotrope]" ;
+                                skos:prefLabel "function scale mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#IdentityScaleMapping
+adf-dc-hdf:IdentityScaleMapping rdf:type owl:Class ;
+                                rdfs:subClassOf adf-dc-hdf:ScaleMapping ;
+                                rdfs:comment "An identity scale mapping is a scale mapping where the scale value and the technical index are identical. [Allotrope]" ;
+                                rdfs:label "identity scale mapping" ;
+                                skos:definition "An identity scale mapping is a scale mapping where the scale value and the technical index are identical. [Allotrope]" ;
+                                skos:prefLabel "identity scale mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#Index
+adf-dc-hdf:Index rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty adf-dc-hdf:indexOn ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass adf-dc:Dimension
+                                 ] ;
+                 rdfs:comment "An index is part of index structure definition and defined for at least one dimension component of a data structure definition. [Allotrope]" ;
+                 rdfs:label "index" ;
+                 skos:definition "An index is part of index structure definition and defined for at least one dimension component of a data structure definition. [Allotrope]" ;
+                 skos:prefLabel "index" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#IndexFunction
+adf-dc-hdf:IndexFunction rdf:type owl:Class ;
+                         rdfs:comment "An index function is a injective map from natural numbers to real numbers. [Allotrope]" ;
+                         rdfs:label "index function" ;
+                         skos:definition "An index function is a injective map from natural numbers to real numbers. [Allotrope]" ;
+                         skos:prefLabel "index function" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#IndexStructureDefinition
+adf-dc-hdf:IndexStructureDefinition rdf:type owl:Class ;
+                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                      owl:onProperty adf-dc-hdf:index ;
+                                                      owl:someValuesFrom adf-dc-hdf:Index
+                                                    ] ;
+                                    rdfs:comment "An index structure definition is part of a HDF mapping and defines a set of indexes for the different dimension components of a data structure definition. [Allotrope]" ;
+                                    rdfs:label "index structure definition" ;
+                                    skos:definition "An index structure definition is part of a HDF mapping and defines a set of indexes for the different dimension components of a data structure definition. [Allotrope]" ;
+                                    skos:prefLabel "index structure definition" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#LinearFunction
+adf-dc-hdf:LinearFunction rdf:type owl:Class ;
+                          rdfs:subClassOf adf-dc-hdf:IndexFunction ,
+                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty adf-dc-hdf:parameter1 ;
+                                                                   owl:someValuesFrom rdfs:Literal
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty adf-dc-hdf:parameter2 ;
+                                                                   owl:someValuesFrom rdfs:Literal
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                          rdfs:comment "A linear scale with the formula  f(x) = {constant} + {factor} * (x). [Allotrope]" ;
+                          rdfs:label "linear function" ;
+                          skos:definition "A linear scale with the formula  f(x) = {constant} + {factor} * (x). [Allotrope]" ;
+                          skos:prefLabel "linear function" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#Mapping
+adf-dc-hdf:Mapping rdf:type owl:Class ;
+                   rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty adf-dc-hdf:indexStructure ;
+                                                            owl:allValuesFrom adf-dc-hdf:IndexStructureDefinition
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty adf-dc-hdf:scaleMapping ;
+                                                            owl:allValuesFrom adf-dc-hdf:ScaleMapping
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty adf-dc-hdf:mappingStructure ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass adf-dc-hdf:MappingStructureDefinition
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   rdfs:comment "A mapping is defined for a data structure definition (DSD) and consists of at most one index structure definition, one scale mapping for each dimension component of the DSD and exactly one mapping structure definition. [Allotrope]" ;
+                   rdfs:label "mapping" ;
+                   skos:definition "A mapping is defined for a data structure definition (DSD) and consists of at most one index structure definition, one scale mapping for each dimension component of the DSD and exactly one mapping structure definition. [Allotrope]" ;
+                   skos:prefLabel "mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#MappingStructureDefinition
+adf-dc-hdf:MappingStructureDefinition rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty adf-dc-hdf:componentMapping ;
+                                                        owl:someValuesFrom adf-dc-hdf:ComponentMapping
+                                                      ] ;
+                                      rdfs:comment "A mapping structure definition is part of a HDF mapping and defines component mappings which define primitive or property mappings and refer to HDF datatype mappings. [Allotrope]" ;
+                                      rdfs:label "mapping structure definition" ;
+                                      skos:definition "A mapping structure definition is part of a HDF mapping and defines component mappings which define primitive or property mappings and refer to HDF datatype mappings. [Allotrope]" ;
+                                      skos:prefLabel "mapping structure definition" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#MeasureMapping
+adf-dc-hdf:MeasureMapping rdf:type owl:Class ;
+                          rdfs:subClassOf adf-dc-hdf:ComponentMapping ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty adf-dc-hdf:mapsComponent ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onClass adf-dc:Measure
+                                          ] ;
+                          rdfs:comment "A measure mapping is a component mapping which maps a measure component. [Allotrope]" ;
+                          rdfs:label "measure mapping" ;
+                          skos:definition "A measure mapping is a component mapping which maps a measure component. [Allotrope]" ;
+                          skos:prefLabel "measure mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#NaturalLogarithm
+adf-dc-hdf:NaturalLogarithm rdf:type owl:Class ;
+                            rdfs:subClassOf adf-dc-hdf:IndexFunction ,
+                                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty adf-dc-hdf:parameter1 ;
+                                                                     owl:someValuesFrom rdfs:Literal
+                                                                   ]
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty adf-dc-hdf:parameter2 ;
+                                                                     owl:someValuesFrom rdfs:Literal
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                            rdfs:comment "Base e logarithm. [Allotrope]" ;
+                            rdfs:label "natural logarithm" ;
+                            skos:definition "Base e logarithm. [Allotrope]" ;
+                            skos:prefLabel "natural logarithm" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#PrimitiveMapping
+adf-dc-hdf:PrimitiveMapping rdf:type owl:Class ;
+                            rdfs:subClassOf adf-dc-hdf:RDFMapping ;
+                            rdfs:comment "A primitive mapping is part of a component mapping and defines a HDF data type mapping for a primitive RDF data type. [Allotrope]" ;
+                            rdfs:label "primitive mapping" ;
+                            skos:definition "A primitive mapping is part of a component mapping and defines a HDF data type mapping for a primitive RDF data type. [Allotrope]" ;
+                            skos:prefLabel "primitive mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#PropertyMapping
+adf-dc-hdf:PropertyMapping rdf:type owl:Class ;
+                           rdfs:subClassOf adf-dc-hdf:RDFMapping ;
+                           rdfs:comment "A property mapping defines a mapping for one property path of a complex data value to a HDF path. [Allotrope]" ;
+                           rdfs:label "property mapping" ;
+                           skos:definition "A property mapping defines a mapping for one property path of a complex data value to a HDF path. [Allotrope]" ;
+                           skos:prefLabel "property mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#RDFMapping
+adf-dc-hdf:RDFMapping rdf:type owl:Class ;
+                      rdfs:comment "A RDF to HDF mapping is part of a Component mapping and describes a mapping from an RDF type to a HDF type for a component data type or an attribute thereof. [Allotrope]" ;
+                      rdfs:label "RDF Mapping" ;
+                      skos:definition "A RDF to HDF mapping is part of a Component mapping and describes a mapping from an RDF type to a HDF type for a component data type or an attribute thereof. [Allotrope]" ;
+                      skos:prefLabel "RDF Mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#ScaleMapping
+adf-dc-hdf:ScaleMapping rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty adf-dc-hdf:mapsScale ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass adf-dc:Scale
+                                        ] ;
+                        rdfs:comment "is part of a mapping and maps exactly one scale of a corresponding data structure definition from techinical indices to scale values. [Allotrope]" ;
+                        rdfs:label "scale mapping" ;
+                        skos:definition "is part of a mapping and maps exactly one scale of a corresponding data structure definition from technical indices to scale values. [Allotrope]" ;
+                        skos:prefLabel "scale mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset
+hdf:Dataset rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataspace
+hdf:Dataspace rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#DataspaceDimension
+hdf:DataspaceDimension rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Datatype
+hdf:Datatype rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#ComponentProperty
+qb:ComponentProperty rdf:type owl:Class ;
+                     rdfs:subClassOf owl:Thing .
+
+
+###  http://purl.org/linked-data/cube#ComponentSpecification
+qb:ComponentSpecification rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#DataSet
+qb:DataSet rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#binary
+adf-dc-hdf:binary rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#byte
+adf-dc-hdf:byte rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#char
+adf-dc-hdf:char rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#double
+adf-dc-hdf:double rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#float
+adf-dc-hdf:float rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#identityScaleMapping
+adf-dc-hdf:identityScaleMapping rdf:type owl:NamedIndividual ,
+                                         adf-dc-hdf:IdentityScaleMapping ;
+                                rdfs:comment "The singleton instance of identity scale mappings. [Allotrope]" ;
+                                rdfs:label "the identity scale mapping" ;
+                                skos:definition "The singleton instance of identity scale mappings. [Allotrope]" ;
+                                skos:prefLabel "the identity scale mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#int
+adf-dc-hdf:int rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#lexicographicalOrder
+adf-dc-hdf:lexicographicalOrder rdf:type owl:NamedIndividual ;
+                                rdfs:label "lexicographical order" ;
+                                skos:prefLabel "lexicographical order" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#long
+adf-dc-hdf:long rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#nativeOrder
+adf-dc-hdf:nativeOrder rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#quantityValueOrder
+adf-dc-hdf:quantityValueOrder rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#resourceURI
+adf-dc-hdf:resourceURI rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#short
+adf-dc-hdf:short rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardAnyURIMapping
+adf-dc-hdf:standardAnyURIMapping rdf:type owl:NamedIndividual ,
+                                          adf-dc-hdf:DataTypeMapping ;
+                                 adf-dc-hdf:hdfDataType hdf:H5T_STD_I32BE ;
+                                 adf-dc-hdf:rdfType xsd:anyURI ;
+                                 rdfs:label "standard any URI mapping" ;
+                                 skos:prefLabel "standard any URI mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardByteMapping
+adf-dc-hdf:standardByteMapping rdf:type owl:NamedIndividual ,
+                                        adf-dc-hdf:DataTypeMapping ;
+                               adf-dc-hdf:hdfDataType hdf:H5T_STD_I8BE ;
+                               adf-dc-hdf:rdfType xsd:byte ;
+                               rdfs:label "standard byte mapping" ;
+                               skos:prefLabel "standard byte mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardDoubleMapping
+adf-dc-hdf:standardDoubleMapping rdf:type owl:NamedIndividual ,
+                                          adf-dc-hdf:DataTypeMapping ;
+                                 adf-dc-hdf:hdfDataType hdf:H5T_IEEE_F64BE ;
+                                 adf-dc-hdf:rdfType xsd:double ;
+                                 rdfs:label "standard double mapping" ;
+                                 skos:prefLabel "standard double mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardFloatMapping
+adf-dc-hdf:standardFloatMapping rdf:type owl:NamedIndividual ,
+                                         adf-dc-hdf:DataTypeMapping ;
+                                adf-dc-hdf:hdfDataType hdf:H5T_IEEE_F32BE ;
+                                adf-dc-hdf:rdfType xsd:float ;
+                                rdfs:label "standard float mapping" ;
+                                skos:prefLabel "standard float mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardIntMapping
+adf-dc-hdf:standardIntMapping rdf:type owl:NamedIndividual ,
+                                       adf-dc-hdf:DataTypeMapping ;
+                              adf-dc-hdf:hdfDataType hdf:H5T_STD_I32BE ;
+                              adf-dc-hdf:rdfType xsd:int ;
+                              rdfs:label "standard int mapping" ;
+                              skos:prefLabel "standard int mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardIntegerMapping
+adf-dc-hdf:standardIntegerMapping rdf:type owl:NamedIndividual ,
+                                           adf-dc-hdf:DataTypeMapping ;
+                                  adf-dc-hdf:hdfDataType hdf:H5T_STD_I64BE ;
+                                  adf-dc-hdf:rdfType xsd:integer ;
+                                  rdfs:label "standard integer mapping" ;
+                                  skos:prefLabel "standard integer mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardLongMapping
+adf-dc-hdf:standardLongMapping rdf:type owl:NamedIndividual ,
+                                        adf-dc-hdf:DataTypeMapping ;
+                               adf-dc-hdf:hdfDataType hdf:H5T_STD_I64BE ;
+                               adf-dc-hdf:rdfType xsd:long ;
+                               rdfs:label "standard long mapping" ;
+                               skos:prefLabel "standard long mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardNegativeIntegerMapping
+adf-dc-hdf:standardNegativeIntegerMapping rdf:type owl:NamedIndividual ,
+                                                   adf-dc-hdf:DataTypeMapping ;
+                                          adf-dc-hdf:hdfDataType hdf:H5T_STD_I64BE ;
+                                          adf-dc-hdf:rdfType xsd:negativeInteger ;
+                                          rdfs:label "standard negative integer mapping" ;
+                                          skos:prefLabel "standard negative integer mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardNonPositiveIntegerMapping
+adf-dc-hdf:standardNonPositiveIntegerMapping rdf:type owl:NamedIndividual ,
+                                                      adf-dc-hdf:DataTypeMapping ;
+                                             adf-dc-hdf:hdfDataType hdf:H5T_STD_I64BE ;
+                                             adf-dc-hdf:rdfType xsd:nonPositiveInteger ;
+                                             rdfs:label "standard non positive integer mapping" ;
+                                             skos:prefLabel "standard non positive integer mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardPositiveIntegerMapping
+adf-dc-hdf:standardPositiveIntegerMapping rdf:type owl:NamedIndividual ,
+                                                   adf-dc-hdf:DataTypeMapping ;
+                                          adf-dc-hdf:hdfDataType hdf:H5T_STD_I64BE ;
+                                          adf-dc-hdf:rdfType xsd:positiveInteger ;
+                                          rdfs:label "standard positive integer mapping" ;
+                                          skos:prefLabel "standard positive integer mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardResourceMapping
+adf-dc-hdf:standardResourceMapping rdf:type owl:NamedIndividual ,
+                                            adf-dc-hdf:DataTypeMapping ;
+                                   adf-dc-hdf:hdfDataType hdf:H5T_STD_I32BE ;
+                                   adf-dc-hdf:rdfType rdf:Resource ;
+                                   rdfs:label "standard resource mapping" ;
+                                   skos:prefLabel "standard resource mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardShortMapping
+adf-dc-hdf:standardShortMapping rdf:type owl:NamedIndividual ,
+                                         adf-dc-hdf:DataTypeMapping ;
+                                adf-dc-hdf:hdfDataType hdf:H5T_STD_I16BE ;
+                                adf-dc-hdf:rdfType xsd:short ;
+                                rdfs:label "standard short mapping" ;
+                                skos:prefLabel "standard short mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardStringMapping
+adf-dc-hdf:standardStringMapping rdf:type owl:NamedIndividual ,
+                                          adf-dc-hdf:DataTypeMapping ;
+                                 adf-dc-hdf:hdfDataType hdf:H5T_STD_I32BE ;
+                                 adf-dc-hdf:rdfType xsd:string ;
+                                 rdfs:label "standard string mapping" ;
+                                 skos:prefLabel "standard string mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardUnsignedByteMapping
+adf-dc-hdf:standardUnsignedByteMapping rdf:type owl:NamedIndividual ,
+                                                adf-dc-hdf:DataTypeMapping ;
+                                       adf-dc-hdf:hdfDataType hdf:H5T_STD_U8BE ;
+                                       adf-dc-hdf:rdfType xsd:unsignedByte ;
+                                       rdfs:label "standard unsigned byte mapping" ;
+                                       skos:prefLabel "standard unsigned byte mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardUnsignedIntMapping
+adf-dc-hdf:standardUnsignedIntMapping rdf:type owl:NamedIndividual ,
+                                               adf-dc-hdf:DataTypeMapping ;
+                                      adf-dc-hdf:hdfDataType hdf:H5T_STD_U32BE ;
+                                      adf-dc-hdf:rdfType xsd:unsignedInt ;
+                                      rdfs:label "standard unsigned int mapping" ;
+                                      skos:prefLabel "standard unsigned int mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardUnsignedLongMapping
+adf-dc-hdf:standardUnsignedLongMapping rdf:type owl:NamedIndividual ,
+                                                adf-dc-hdf:DataTypeMapping ;
+                                       adf-dc-hdf:hdfDataType hdf:H5T_STD_I64BE ;
+                                       adf-dc-hdf:rdfType xsd:unsignedLong ;
+                                       rdfs:label "standard unsigned long mapping" ;
+                                       skos:prefLabel "standard unsigned long mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardUnsignedShortMapping
+adf-dc-hdf:standardUnsignedShortMapping rdf:type owl:NamedIndividual ,
+                                                 adf-dc-hdf:DataTypeMapping ;
+                                        adf-dc-hdf:hdfDataType hdf:H5T_STD_U16BE ;
+                                        adf-dc-hdf:rdfType xsd:unsignedShort ;
+                                        rdfs:label "standard unsigned short mapping" ;
+                                        skos:prefLabel "standard unsigned short mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube-hdf-map#standardnonNegativeIntegerMapping
+adf-dc-hdf:standardnonNegativeIntegerMapping rdf:type owl:NamedIndividual ,
+                                                      adf-dc-hdf:DataTypeMapping ;
+                                             adf-dc-hdf:hdfDataType hdf:H5T_STD_I64BE ;
+                                             adf-dc-hdf:rdfType xsd:nonNegativeInteger ;
+                                             rdfs:label "standard non-negative integer mapping" ;
+                                             skos:prefLabel "standard non-negative integer mapping" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2024 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2024 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2024 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource
+rdf:Resource rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#anyURI
+xsd:anyURI rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#byte
+xsd:byte rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#double
+xsd:double rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#float
+xsd:float rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#int
+xsd:int rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#integer
+xsd:integer rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#long
+xsd:long rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#negativeInteger
+xsd:negativeInteger rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#nonNegativeInteger
+xsd:nonNegativeInteger rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#nonPositiveInteger
+xsd:nonPositiveInteger rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#positiveInteger
+xsd:positiveInteger rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#short
+xsd:short rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#unsignedByte
+xsd:unsignedByte rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#unsignedInt
+xsd:unsignedInt rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#unsignedLong
+xsd:unsignedLong rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2001/XMLSchema#unsignedShort
+xsd:unsignedShort rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

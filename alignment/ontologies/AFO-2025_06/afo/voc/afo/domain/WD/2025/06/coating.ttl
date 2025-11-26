@@ -1,3 +1,398 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c6f387d9da92faf1e3513c0e0a4f3ceb1a0dc31de1fe0d50b6fa0b468779e64
-size 24453
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/coating#> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ms: <http://purl.obolibrary.org/obo/MS> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix mamo: <http://purl.obolibrary.org/obo/MAMO> .
+@prefix ncit: <http://purl.obolibrary.org/obo/NCIT> .
+@prefix omit: <http://purl.obolibrary.org/obo/OMIT> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/coating#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/coating> rdf:type owl:Ontology ;
+                                                                         owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/coating> ;
+                                                                         owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                     <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/coating> ;
+                                                                         dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                         dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                         dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                         dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                    <http://purl.allotrope.org/voc/copyright> ;
+                                                                         dct:title "AFO Coating Domain Ontology (WD/2025/06)" ;
+                                                                         owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/coating> ;
+                                                                         owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000218
+af-e:AFE_0000218 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:definition "A piece of apparatus, consisting of an anode (the specimen) a cathode (the source of sputter atoms or 'target') and a magnet, all held inside a vacuum chamber, which is used to coat specimens with a thin layer of atoms (e.g. Au) prior to microscopy. [CHMO]" ;
+                 skos:prefLabel "sputter coater" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001764
+af-e:AFE_0001764 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002154 ;
+                 skos:altLabel "pharmaceutical tablet coater" ;
+                 skos:definition "A tablet coater is a device that allows for the coating of tablet with different types of layers, coatings or films. [Allotrope]" ;
+                 skos:example "Thomas Engineering Accela-Cota Flex 500" ;
+                 skos:prefLabel "tablet coater" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001765
+af-e:AFE_0001765 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000384 ;
+                 skos:definition "A dryer of inline air conditioner is a type of dryer that is used in tablet coaters for drying the air. [Allotrope]" ;
+                 skos:prefLabel "dryer of inline air conditioner" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001766
+af-e:AFE_0001766 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "spray bar" ;
+                 skos:definition "A spray manifold is a device that combines several spray guns to allow equal spray over a cross section of the tablet bed. [Allotrope]" ;
+                 skos:example "Thomas 8 gun spray bar" ;
+                 skos:prefLabel "spray manifold" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001767
+af-e:AFE_0001767 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A coating Pan is another name for the drum of the film coater. This can either be perforated or non-perforated depending on the operation required. [Allotrope]" ;
+                 skos:prefLabel "coating pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001768
+af-e:AFE_0001768 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001767 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A non-perforated coating pan is a type of coating pan that has closed surfaces. [Allotrope]" ;
+                 skos:prefLabel "non-perforated coating pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001769
+af-e:AFE_0001769 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001767 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A perforated coating pan is a type of coating pan that has perforations in the surface. [Allotrope]" ;
+                 skos:prefLabel "perforated coating pan" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000030
+af-m:AFM_0000030 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-m:AFM_0000275
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty ro:_0000087 ;
+                                                              owl:someValuesFrom af-rl:AFRL_0000212
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A coating is a substance that covers the surface of another material in a coating role. [Allotrope]" ;
+                 skos:prefLabel "coating" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000205
+af-m:AFM_0000205 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000030 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An anion coating is a coating that contains anionic anchor groups. [Allotrope]" ;
+                 skos:prefLabel "anion coating" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000221
+af-m:AFM_0000221 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000030 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "The capillary coating is the inner coating of a capillary. [Allotrope]" ;
+                 skos:prefLabel "capillary coating" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000255
+af-m:AFM_0000255 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000030 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A cation coating is a coating that contains cationic anchor groups. [Allotrope]" ;
+                 skos:prefLabel "cation coating" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000432
+af-m:AFM_0000432 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000030 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A functional release coating is a coating that adds new functionality to that of the coating substrate by inself in-vivo. [Allotrope]" ;
+                 skos:example "release coating of a tablet" ;
+                 skos:prefLabel "functional release coating" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000459
+af-m:AFM_0000459 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000030 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "drug layer coating" ;
+                 skos:definition "A drug coating is a type of coating mixture that contains an active pharmaceutical ingredient. [Allotrope]" ;
+                 skos:prefLabel "drug coating" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000475
+af-m:AFM_0000475 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000030 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A sugar coating is a coating made of sugar. [Allotrope]" ;
+                 skos:prefLabel "sugar coating" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000486
+af-m:AFM_0000486 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000030 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An aqueous film coating is a thin coating that contains water. This type of coating is used to colorize tablets or to put on clear finishes or overcoatings. [Allotrope]" ;
+                 skos:prefLabel "aqueous film coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000099
+af-p:AFP_0000099 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001044 ;
+                 skos:altLabel "CR dip coating" ,
+                               "constant-rate dip-coating" ;
+                 skos:definition "The application of a thin cover to sample by immersing it (at constant velocity) in a tank containing coating material, allowing it to remain there for a certain 'dwell time', and removing the piece from the tank ('withdrawal') at a constant velocity. [CHMO]" ;
+                 skos:prefLabel "constant-rate dip coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000677
+af-p:AFP_0000677 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001986 ;
+                 skos:altLabel "spin casting" ,
+                               "spin-casting" ,
+                               "spin-coating" ;
+                 skos:definition "A process for applying a thin (<1 µm thickness) cover to flat substrates. An excess amount of coating solution (in a volatile solvent) is placed on the substrate, which is then rotated at high speed (8000 rpm) for approximately 30 s in order to spread the solution by centripetal force. The solvent then evaporates, leaving a thin film. [CHMO]" ;
+                 skos:prefLabel "spin coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000763
+af-p:AFP_0000763 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001986 ;
+                 skos:altLabel "vacuum coating" ,
+                               "vacuum-coating" ,
+                               "vacuum-deposition" ;
+                 skos:definition "The process of the settling of particles (atoms or molecules) from a vapour, at sub-atmospheric pressure, onto a pre-existing surface, resulting in the growth of a new phase. [CHMO]" ;
+                 skos:prefLabel "vacuum deposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001044
+af-p:AFP_0001044 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001986 ;
+                 skos:altLabel "dip-coating" ;
+                 skos:definition "The application of a thin cover to sample by immersing it in a tank containing coating material, allowing it to remain there for a certain 'dwell time', removing the piece from the tank ('withdrawal'), and allowing it to drain. [CHMO]" ;
+                 skos:prefLabel "dip coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001303
+af-p:AFP_0001303 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001986 ;
+                 skos:altLabel "drop-coating" ;
+                 skos:definition "The application of a thin cover to a sample by depositing consecutive drops of a solution on its surface, and allowing the solvent to evaporate. [CHMO]" ;
+                 skos:prefLabel "drop coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001529
+af-p:AFP_0001529 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001986 ;
+                 skos:altLabel "spray-coating" ;
+                 skos:definition "The application of a thin cover to sample by converting the coating solution to an aerosol then allowing the droplets to settle on the sample surface under the influence of gravity or using an electrostatic field. [CHMO]" ;
+                 skos:prefLabel "spray coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001561
+af-p:AFP_0001561 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001986 ;
+                 skos:altLabel "thermo-electric cooled angle coating" ,
+                               "thermo-electrically cooled angle coating" ;
+                 skos:definition "A process for applying a thin cover to flat substrates by placing a drop of the coating solution on the substrate and then placing it inside a cooled box (to control the speed of evaporation) at an angle of 9 deg. (to initiate evaporation evaporation from the top of the substrate). [CHMO]" ;
+                 skos:prefLabel "thermoelectrically cooled angle coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002678
+af-p:AFP_0002678 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001986 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "tablet coating" ,
+                               "tablet film coating" ;
+                 skos:definition "A film coating is a thin polymer-based coat applied to a solid dosage form such as a tablet. The thickness of such a coating is usually between 20-100 µm. [Wikipedia]" ;
+                 skos:prefLabel "film coating" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002701
+af-p:AFP_0002701 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003309 ,
+                                 obi:_0000011 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty bfo:_0000051 ;
+                                   owl:someValuesFrom af-p:AFP_0002805
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty bfo:_0000063 ;
+                                   owl:someValuesFrom af-p:AFP_0001986
+                                 ] ;
+                 skos:altLabel "coating solution preparation" ;
+                 skos:definition "The coating preparation is a process of executing the necessary tasks for the production of a proper coating suspension and for the correct setup of a tablet coater. [Allotrope]" ;
+                 skos:prefLabel "coating preparation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002805
+af-p:AFP_0002805 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003309 ,
+                                 obi:_0000011 ;
+                 skos:altLabel "coating solution preparation" ;
+                 skos:definition "Coating suspension preparation is the process of preparing a proper coating suspension for proper tablet film coating. [Allotrope]" ;
+                 skos:prefLabel "coating suspension preparation" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000663
+af-r:AFR_0000663 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000275 ;
+                 skos:altLabel "tablet coating result" ;
+                 skos:definition "The bulk coated tablets is the product produced from a tablet coating process. [Allotrope]" ;
+                 skos:prefLabel "bulk coated tablets" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "(c) 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

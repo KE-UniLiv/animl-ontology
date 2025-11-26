@@ -1,3 +1,369 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f50a70b480a944ce7e29c053c6ab9d3e483868989dce854141827581498f7b23
-size 24142
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/weighing#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/weighing#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/weighing> rdf:type owl:Ontology ;
+                                                                          owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/weighing> ;
+                                                                          owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                      <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/weighing> ;
+                                                                          dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                          dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                          dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                          dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                     <http://purl.allotrope.org/voc/copyright> ;
+                                                                          dct:title "AFO Weighing Domain Ontology (WD/2025/06)" ;
+                                                                          owl:priorVersion <http://purl.allotrope.org/voc/afo/WD/2025/03/weighing> ;
+                                                                          owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000094
+af-e:AFE_0000094 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000174 ;
+                 skos:definition "The equal arm lever balance is a comparator balance with two arms of equal fixed length. [Allotrope]" ;
+                 skos:prefLabel "equal arm lever balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000095
+af-e:AFE_0000095 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000201 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC. Analytical Division. Compendium of Analytical Nomenclature (the Orange Book). Definitive Rules, 1979. Compiled by J. Inczédy, T. Lengyel, A. M. Ure. Blackwell Scientific Publications, Oxford (1997)." ;
+                 skos:altLabel "assay balance" ,
+                               "ultramicroanalytical balance" ;
+                 skos:changeNote "2024-09-12 Changed [IUPAC Orange Book] attribution to [IUPAC] and added license, rights, and source fields. Fixed typo in altLabel." ;
+                 skos:definition "An ultra micro balance is an analytical balance that has a precision of 0.0005 - 0.002 mg. [IUPAC]" ;
+                 skos:prefLabel "ultra micro balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000174
+af-e:AFE_0000174 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000693 ;
+                 skos:definition "A comparator balance is balance that works by comparing mass of the sample with a known mass. [Allotrope]" ;
+                 skos:prefLabel "comparator balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000222
+af-e:AFE_0000222 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000693 ;
+                 skos:definition "A beam balance is a balance consisting of a lever with two equal arms and a load receptor suspended from each arm. [Allotrope]" ;
+                 skos:prefLabel "beam balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000254
+af-e:AFE_0000254 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000174 ;
+                 skos:definition "A balance in which load compensation is effected by a deflection weighing device. [DOWT]" ;
+                 skos:prefLabel "deflection balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000292
+af-e:AFE_0000292 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000201 ;
+                 skos:altLabel "semi microanalytical balance" ;
+                 skos:definition "Analytical balance with a typical weighing capacity of between 50 g and 200 g and a readability of 0.01 mg. weighing instrument of special accuracy. [DOWT]" ;
+                 skos:prefLabel "semi micro balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000310
+af-e:AFE_0000310 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000693 ;
+                 skos:altLabel "QCM" ;
+                 skos:definition "A piece of apparatus used to measure the mass per unit area (1 \\mug per cm2) by measuring the change in frequency of a quartz crystal resonator (a quartz crystal sandwiched between a pair of electrodes) as a function of mass change. [CHMO]" ;
+                 skos:prefLabel "quartz crystal microbalance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000365
+af-e:AFE_0000365 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000693 ;
+                 skos:altLabel "hydrostatic balance" ;
+                 skos:definition "A density balance is a balance that measure the weight of a submersed object for the purpose of measuring the density. [Allotrope]" ;
+                 skos:prefLabel "density balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000391
+af-e:AFE_0000391 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000174 ;
+                 dct:source <https://en.wikipedia.org/wiki/Analytical_balance> ;
+                 skos:definition "Single pan mechanical substitution balance maintains consistent response throughout the useful capacity is achieved by maintaining a constant load on the balance beam, thus the fulcrum, by subtracting mass on the same side of the beam to which the sample is added. [Wikipedia]" ;
+                 skos:prefLabel "substitution balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000423
+af-e:AFE_0000423 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000174 ;
+                 dct:source <https://en.wikipedia.org/wiki/Triple_beam_balance> ;
+                 skos:altLabel "sliding weight balance" ;
+                 skos:changeNote "2024-09-12 Fixed malformed definition." ;
+                 skos:definition "The triple beam balance is a comparator balance used to measure mass very precisely. The device has reading error of +/- 0.05 gram. The name refers to the three beams including the middle beam which is the largest size, the front beam which is the medium size, and the far beam which is the smallest size. The difference in size of the beams indicate the difference in weights and reading scale that each beam carry. [Wikipedia]" ;
+                 skos:prefLabel "triple-beam balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000442
+af-e:AFE_0000442 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000201 ;
+                 skos:altLabel "four place balance" ;
+                 skos:definition "Analytical balance designed for macroanalysis that has a maximum capacity of approximately 100…200 g and a readability of 0.1 mg. [DOWT]" ;
+                 skos:prefLabel "macro analytical balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000450
+af-e:AFE_0000450 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000310 ;
+                 skos:altLabel "EQCM" ;
+                 skos:definition "A piece of apparatus consisting of  a quartz crystal resonator,  which is used to measure the current efficiency (mass-to-charge ratio) during an electrochemical reaction, by measuring the change in resonance frequency of the crystal. [CHMO]" ;
+                 skos:prefLabel "electrochemical quartz crystal microbalance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000556
+af-e:AFE_0000556 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "load container" ,
+                               "load hook" ,
+                               "load pan" ,
+                               "weight pan" ;
+                 skos:changeNote "2024-09-12 Changed [Amgen] attribution to [Allotrope]." ;
+                 skos:definition "A weighing pan is a small container, made of inert material, into which a sample can be placed and which can be placed or positioned in an instrument to perform a weight measurement. [Allotrope]" ;
+                 skos:example "weighing pan, load pan, load hook, platform, bridge or container (weighing container), reference pan of a thermogravimetric analyzer" ;
+                 skos:prefLabel "weighing pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000588
+af-e:AFE_0000588 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000693 ;
+                 skos:altLabel "top loader balance" ;
+                 skos:definition "A top loading balance is a balance that is loaded from the top and has a weighing range of up to multiple kilograms. [Allotrope]" ;
+                 skos:prefLabel "top loading balance" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000647
+af-e:AFE_0000647 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001785 ;
+                 skos:definition "A draft shield protects weighing samples from surrounding influences resulting in optimized repeatability and fast stabilization times. [Mettler]" ;
+                 skos:prefLabel "draft shield" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000830
+af-e:AFE_0000830 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000201 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC. Analytical Division. Compendium of Analytical Nomenclature (the Orange Book). Definitive Rules, 1979. Compiled by J. Inczédy, T. Lengyel, A. M. Ure. Blackwell Scientific Publications, Oxford (1997)." ;
+                 skos:altLabel "microanalytical balance" ,
+                               "microchemical balance" ,
+                               "six place balance" ;
+                 skos:changeNote "2024-09-12 Changed [IUPAC Orange Book] attribution to [IUPAC] and added license, rights, and source fields." ;
+                 skos:definition "An microchemical balance has a capacity of 5 - 20 g with a precision of 0.001 - 0.005 mg. [IUPAC]" ;
+                 skos:prefLabel "micro balance" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000235
+af-p:AFP_0000235 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000503 ;
+                 skos:definition "In dynamic weighing you obtain stable weighing results even if the weighing sample or the balance itself moves, e.g. in animal weighing or if the balance is wobbling. [Mettler]" ;
+                 skos:prefLabel "dynamic weighing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000423
+af-p:AFP_0000423 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001886 ;
+                 skos:altLabel "weight monitoring" ;
+                 skos:changeNote "2024-09-12 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "Continuous weighing is a type of differential weighing that continuously measures the change of weight. [Allotrope]" ;
+                 skos:prefLabel "continuous weighing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000640
+af-p:AFP_0000640 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000503 ;
+                 skos:changeNote "2024-09-12 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "Taring is the process of removing a defined weight usually the weighing container in order to zero a scale. This allows one to see the pure weight of the material without additional weight of a container. [Allotrope]" ;
+                 skos:prefLabel "taring" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001671
+af-p:AFP_0001671 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000503 ;
+                 skos:altLabel "zeroing" ;
+                 skos:changeNote "2024-09-12 Changed [Amgen] attribution to [Allotrope]." ;
+                 skos:definition "Zeroing is the process of taring the balance without a weight on the weight pan to check if the balance meets the minimum tare range. [Allotrope]" ;
+                 skos:prefLabel "balance zeroing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001886
+af-p:AFP_0001886 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000503 ;
+                 skos:altLabel "back weighing" ;
+                 skos:definition "In differential weighing one or more samples are investigated for weight changes. The first workstep comprises determination of the sample container (tare, if used) and the initial weight of the sample (weighing in). The sample is then subjected to a process such as drying, centrifuging, filtering, ashing, vaporization, coating, etc. Following such treatment, the sample is reweighed (back weighing). The determined weight is used as a basis for calculation of the result, which is normally shown as a difference value in percent of the initial weight. [Mettler]" ;
+                 skos:prefLabel "differential weighing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002119
+af-p:AFP_0002119 rdf:type owl:Class ;
+                 rdfs:subClassOf obi:_0000011 ;
+                 skos:changeNote "2024-09-12 Changed [OSTHUS] attribution to [Allotrope]." ;
+                 skos:definition "Repeated drying and weighing procedure until the weight stabilizes. [Allotrope]" ;
+                 skos:prefLabel "loss on drying" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003800
+af-p:AFP_0003800 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000015 ;
+                 skos:definition "Taring is a step of weighing that sets the value of measured weight to zero. [Allotrope]" ;
+                 skos:prefLabel "taring" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002388
+af-r:AFR_0002388 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001844 ;
+                 skos:definition "An average weight is a quality quantification facet that quantifies some amount of matter. [Allotrope]" ;
+                 skos:prefLabel "average weight" ;
+                 skos:scopeNote "The mean value of the amount of weight over a period of time." .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002404
+af-r:AFR_0002404 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000922 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002699 ;
+                                   owl:someValuesFrom bfo:_0000015
+                                 ] ;
+                 skos:definition "A weighing accuracy is a description that describes the accuracy of a weighing instrument. [Allotrope]" ;
+                 skos:prefLabel "weighing accuracy" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2017 Allotrope Foundation" ;
+                                          dct:title "(c) 2017 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

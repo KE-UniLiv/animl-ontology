@@ -1,3 +1,497 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fa019033fd467a6ba0c8cbf6aac823a2c5bb81318a38653c02cc453d2cadf62d
-size 25587
+@prefix : <http://purl.allotrope.org/voc/afo/WD/2025/06/aft@en-gb#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix ops: <http://www.openphacts.org/units/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix caro: <http://purl.obolibrary.org/obo/CARO> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-sp: <http://purl.allotrope.org/ontologies/spatial#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@base <http://purl.allotrope.org/voc/afo/WD/2025/06/aft@en-gb#> .
+
+<http://purl.allotrope.org/voc/afo/WD/2025/06/aft@en-gb> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <http://purl.allotrope.org/voc/afo/WD/2025/06/aft@en-gb> ;
+                                                                    owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/aft@en-gb> ,
+                                                                                <http://purl.allotrope.org/voc/afo/WD/2025/06/aft> ;
+                                                                    dct:contributor <http://www.allotrope.org> ;
+                                                                    dct:description "Allotrope Foundation Taxonomy of Universals (WD/2025/06), British English Language Pack" ;
+                                                                    dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                    dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:publisher <http://www.allotrope.org> ;
+                                                                    dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                               <http://purl.allotrope.org/voc/copyright> ;
+                                                                    dct:title "Allotrope Foundation Taxonomy (WD/2025/06) @en-gb" ;
+                                                                    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+                                                                    owl:priorVersion <http://purl.allotrope.org/voc/afo/CR/2025/03/aft@en-gb> ;
+                                                                    owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000151
+af-e:AFE_0000151 rdf:type owl:Class ;
+                 skos:prefLabel "cell culture analyser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000353
+af-e:AFE_0000353 rdf:type owl:Class ;
+                 skos:prefLabel "analogue readout"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000432
+af-e:AFE_0000432 rdf:type owl:Class ;
+                 skos:prefLabel "analogue-to-digital converter channel"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000465
+af-e:AFE_0000465 rdf:type owl:Class ;
+                 skos:prefLabel "thermogravimetric analyser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000858
+af-e:AFE_0000858 rdf:type owl:Class ;
+                 skos:altLabel "osmo analyser"@en-gb ;
+                 skos:prefLabel "osmolality analyser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000872
+af-e:AFE_0000872 rdf:type owl:Class ;
+                 skos:altLabel "analogue to digital converter"@en-gb ;
+                 skos:prefLabel "analogue-digital converter"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000982
+af-e:AFE_0000982 rdf:type owl:Class ;
+                 skos:prefLabel "concentric nebuliser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000990
+af-e:AFE_0000990 rdf:type owl:Class ;
+                 skos:prefLabel "nebuliser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000993
+af-e:AFE_0000993 rdf:type owl:Class ;
+                 skos:prefLabel "cross-flow nebuliser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001146
+af-e:AFE_0001146 rdf:type owl:Class ;
+                 skos:prefLabel "cool-box"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001202
+af-e:AFE_0001202 rdf:type owl:Class ;
+                 skos:altLabel "hybridisation oven"@en-gb ;
+                 skos:prefLabel "hybrisation incubator"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000059
+af-p:AFP_0000059 rdf:type owl:Class ;
+                 skos:altLabel "valence-shell photoionisation spectrometry"@en-gb ;
+                 skos:prefLabel "valence-shell photoionisation spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000073
+af-p:AFP_0000073 rdf:type owl:Class ;
+                 skos:altLabel "laser enhanced ionisation mass spectrometry"@en-gb ,
+                               "laser enhanced ionisation spectroscopy"@en-gb ,
+                               "laser-enhanced ionisation spectrometry"@en-gb ,
+                               "resonance-enhanced ionisation spectrometry"@en-gb ,
+                               "resonance-enhanced laser ionisation spectroscopy"@en-gb ;
+                 skos:prefLabel "laser-enhanced ionisation spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000176
+af-p:AFP_0000176 rdf:type owl:Class ;
+                 skos:prefLabel "crystallisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000257
+af-p:AFP_0000257 rdf:type owl:Class ;
+                 skos:altLabel "vapour-pressure osmometry"@en-gb ;
+                 skos:prefLabel "vapour pressure osmometry"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000345
+af-p:AFP_0000345 rdf:type owl:Class ;
+                 skos:altLabel "spin-polarised metastable de-excitation spectrometry"@en-gb ,
+                               "spin-polarised metastable deexcitation spectrometry"@en-gb ,
+                               "spin-polarised metastable deexcitation spectroscopy"@en-gb ;
+                 skos:prefLabel "spin-polarised metastable de-excitation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000377
+af-p:AFP_0000377 rdf:type owl:Class ;
+                 skos:prefLabel "intensity normalisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000401
+af-p:AFP_0000401 rdf:type owl:Class ;
+                 skos:altLabel "deionisation method"@en-gb ;
+                 skos:prefLabel "deionisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000433
+af-p:AFP_0000433 rdf:type owl:Class ;
+                 skos:altLabel "resonance enhanced ionisation spectrometry"@en-gb ,
+                               "resonance ionisation spectrometry"@en-gb ,
+                               "resonance-ionisation spectrometry"@en-gb ,
+                               "resonance-ionisation spectroscopy"@en-gb ,
+                               "RIS" ;
+                 skos:prefLabel "resonance ionisation spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000442
+af-p:AFP_0000442 rdf:type owl:Class ;
+                 skos:altLabel "surface Penning-ionisation electron spectrometry"@en-gb ;
+                 skos:prefLabel "surface Penning-ionisation electron spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000550
+af-p:AFP_0000550 rdf:type owl:Class ;
+                 skos:altLabel "co crystallisation"@en-gb ,
+                               "co-crystallisation"@en-gb ;
+                 skos:prefLabel "cocrystallisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000626
+af-p:AFP_0000626 rdf:type owl:Class ;
+                 skos:prefLabel "derivatisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000692
+af-p:AFP_0000692 rdf:type owl:Class ;
+                 skos:altLabel "radio isotopic labelling"@en-gb ,
+                               "radio labelling"@en-gb ,
+                               "radioisotopic labelling"@en-gb ;
+                 skos:prefLabel "radioactive labeling" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000749
+af-p:AFP_0000749 rdf:type owl:Class ;
+                 skos:altLabel "field-emission electron spin-polarisation spectroscopy"@en-gb ,
+                               "field-emitted electron spin-polarisation spectrometry"@en-gb ;
+                 skos:prefLabel "field emission electron spin-polarisation spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000752
+af-p:AFP_0000752 rdf:type owl:Class ;
+                 skos:altLabel "ratio variable angle polarised absorption spectroscopy"@en-gb ,
+                               "variable angle polarised-referenced absorption spectroscopy"@en-gb ,
+                               "variable-angle polarised-referenced absorption spectroscopy"@en-gb ;
+                 skos:prefLabel "ratio variable-angle polarised absorption spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000767
+af-p:AFP_0000767 rdf:type owl:Class ;
+                 skos:altLabel "ionisation loss spectrometry"@en-gb ,
+                               "ionisation loss spectroscopy"@en-gb ,
+                               "ionisation spectrometry"@en-gb ;
+                 skos:prefLabel "ionization spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000899
+af-p:AFP_0000899 rdf:type owl:Class ;
+                 skos:prefLabel "labelling"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000907
+af-p:AFP_0000907 rdf:type owl:Class ;
+                 skos:altLabel "laser ionisation spectrometry"@en-gb ;
+                 skos:prefLabel "laser ionisation spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000999
+af-p:AFP_0000999 rdf:type owl:Class ;
+                 skos:prefLabel "anodisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001074
+af-p:AFP_0001074 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001177 ;
+                 skos:altLabel "resonance-enhanced multiphoton ionisation spectrometry"@en-gb ,
+                               "resonance-enhanced multiphoton ionisation spectroscopy"@en-gb ;
+                 skos:prefLabel "resonance enhanced multiphoton ionisation spectrometry"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001144
+af-p:AFP_0001144 rdf:type owl:Class ;
+                 skos:altLabel "isotope labelling"@en-gb ;
+                 skos:prefLabel "isotopic labelling"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001154
+af-p:AFP_0001154 rdf:type owl:Class ;
+                 skos:prefLabel "localised surface plasmon resonance spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001177
+af-p:AFP_0001177 rdf:type owl:Class ;
+                 skos:altLabel "laser multiphoton ionisation spectrometry"@en-gb ;
+                 skos:prefLabel "laser multiphoton ionisation spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001274
+af-p:AFP_0001274 rdf:type owl:Class ;
+                 skos:prefLabel "deuterium labelling"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001376
+af-p:AFP_0001376 rdf:type owl:Class ;
+                 skos:prefLabel "fractional crystallisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001481
+af-p:AFP_0001481 rdf:type owl:Class ;
+                 skos:altLabel "gas anti-solvent recrystallisation"@en-gb ,
+                               "gas antisolvent recrystallisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001490
+af-p:AFP_0001490 rdf:type owl:Class ;
+                 skos:prefLabel "spin-polarised secondary electron spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001545
+af-p:AFP_0001545 rdf:type owl:Class ;
+                 skos:altLabel "vapour phase extraction"@en-gb ;
+                 skos:prefLabel "vapour-phase extraction"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001579
+af-p:AFP_0001579 rdf:type owl:Class ;
+                 skos:prefLabel "dynamic nuclear polarisation oximetry"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001633
+af-p:AFP_0001633 rdf:type owl:Class ;
+                 skos:altLabel "inelastic electron tunnelling spectrometry"@en-gb ;
+                 skos:prefLabel "inelastic electron tunnelling spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001736
+af-p:AFP_0001736 rdf:type owl:Class ;
+                 skos:altLabel "TMS derivatisation"@en-gb ;
+                 skos:prefLabel "trimethylsilyl derivatisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001739
+af-p:AFP_0001739 rdf:type owl:Class ;
+                 skos:prefLabel "ceramisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001781
+af-p:AFP_0001781 rdf:type owl:Class ;
+                 skos:altLabel "plasma functionalisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001845
+af-p:AFP_0001845 rdf:type owl:Class ;
+                 skos:altLabel "pressurised liquid extraction"@en-gb ,
+                               "pressurised solvent extraction"@en-gb ,
+                               "pressurised-fluid extraction"@en-gb ,
+                               "pressurised-liquid extraction"@en-gb ,
+                               "pressurised-solvent extraction"@en-gb ;
+                 skos:prefLabel "pressurized fluid extraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001938
+af-p:AFP_0001938 rdf:type owl:Class ;
+                 skos:prefLabel "spin-polarised inverse photoelectron spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001940
+af-p:AFP_0001940 rdf:type owl:Class ;
+                 skos:altLabel "phosphorescence labelling"@en-gb ;
+                 skos:prefLabel "phosphorescent labelling"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002045
+af-p:AFP_0002045 rdf:type owl:Class ;
+                 skos:prefLabel "polarisation spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002058
+af-p:AFP_0002058 rdf:type owl:Class ;
+                 skos:altLabel "variable angle polarised absorption spectroscopy"@en-gb ;
+                 skos:prefLabel "variable-angle polarised absorption spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002067
+af-p:AFP_0002067 rdf:type owl:Class ;
+                 skos:altLabel "polarisation modulation infrared reflection adsorption spectroscopy"@en-gb ,
+                               "polarisation modulation-infrared reflection-adsorption spectroscopy"@en-gb ;
+                 skos:prefLabel "polarisation modulation infrared reflection-adsorption spectroscopy"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002194
+af-p:AFP_0002194 rdf:type owl:Class ;
+                 skos:prefLabel "methoxyamination derivatisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002274
+af-p:AFP_0002274 rdf:type owl:Class ;
+                 skos:altLabel "atomisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002367
+af-p:AFP_0002367 rdf:type owl:Class ;
+                 skos:prefLabel "ageing"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002412
+af-p:AFP_0002412 rdf:type owl:Class ;
+                 skos:altLabel "re-crystallisation"@en-gb ;
+                 skos:prefLabel "recrystallisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002431
+af-p:AFP_0002431 rdf:type owl:Class ;
+                 skos:prefLabel "mobilisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002527
+af-p:AFP_0002527 rdf:type owl:Class ;
+                 skos:altLabel "ionisation suppression"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002638
+af-p:AFP_0002638 rdf:type owl:Class ;
+                 skos:prefLabel "water deionisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002639
+af-p:AFP_0002639 rdf:type owl:Class ;
+                 skos:prefLabel "capacitive deionisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002646
+af-p:AFP_0002646 rdf:type owl:Class ;
+                 skos:prefLabel "sterilisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000446
+af-r:AFR_0000446 rdf:type owl:Class ;
+                 skos:prefLabel "electrospray ionisation gas-phase electrophoretic mobility molecular analysis spectrum"@en-gb .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://www.rsc.org
+<http://www.rsc.org> rdf:type owl:NamedIndividual ,
+                              foaf:Organization .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+af-p:AFP_0001710 skos:altLabel "normalised ICTS"@en-gb ,
+                               "normalised-ICTS"@en-gb ;
+                 skos:prefLabel "normalised isothermal capacitance transient spectroscopy"@en-gb .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

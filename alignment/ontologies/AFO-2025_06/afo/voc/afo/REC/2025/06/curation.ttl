@@ -1,3 +1,846 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:15a7befd6b34bdf6ae5312d8c80679ff34200745b883b7bae34205dabf2848b6
-size 37830
+@prefix : <http://purl.allotrope.org/voc/afo/REC/2025/06/curation#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@base <http://purl.allotrope.org/voc/afo/REC/2025/06/curation#> .
+
+<http://purl.allotrope.org/voc/afo/REC/2025/06/curation> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <http://purl.allotrope.org/voc/afo/REC/2025/06/curation> ;
+                                                                    dct:contributor <http://www.allotrope.org> ;
+                                                                    dct:description "Allotrope Foundation Ontology for curation. This ontology contains mainly annotation properties for annotating AFO ontologies." ;
+                                                                    dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                    dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:publisher <http://www.allotrope.org> ;
+                                                                    dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                               <http://purl.allotrope.org/voc/copyright> ;
+                                                                    dct:rightsHolder <http://www.allotrope.org> ;
+                                                                    dct:title "AFO Curation Ontology (REC/2025/06)" ;
+                                                                    owl:priorVersion <http://purl.allotrope.org/voc/afo/REC/2025/03/curation> ;
+                                                                    owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002794
+af-x:AFX_0002794 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Property is a note about a proposed logical expression in order to describe the term as defined class. [Allotrope]" ;
+                 skos:prefLabel "is equivalent to" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002795
+af-x:AFX_0002795 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Property is a note about a proposed  expression of a restriction that the term should be a subclass of. [Allotrope]" ;
+                 skos:prefLabel "has proposed restriction" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Property specifies level of granularity the term mainly belongs to. [Allotrope]" ;
+                 skos:prefLabel "has granularity" ;
+                 rdfs:subPropertyOf skos:note ;
+                 rdfs:range af-r:AFR_0001221 .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002797
+af-x:AFX_0002797 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Property tracks terms that have been aligned with BFO during development. [Allotrope]" ;
+                 skos:prefLabel "is aligned with BFO" ;
+                 rdfs:subPropertyOf skos:editorialNote .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Is defined class flags a resource as being a class that can be defined by necessary and sufficient conditions. [Allotrope]" ;
+                 skos:prefLabel "is defined class" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002799
+af-x:AFX_0002799 rdf:type owl:AnnotationProperty ;
+                 skos:definition "An annotation predicate used to identify entity replacement by a role. [Allotrope]" ;
+                 skos:prefLabel "is replaced by role" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002808
+af-x:AFX_0002808 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Has close match establishes a connection between two resources that have a high degree of agreement in meaning such that they can be used interchangeably. [Allotrope]" ;
+                 skos:note "Property is related to skos:closeMatch. skos:closeMatch is an object property whereas this property is an annotation property to allow for weak semantic coupling. [Allotrope]" ;
+                 skos:prefLabel "has close match" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Has exact match establishes a connection between two resources that have completely same meaning such that they can be used interchangeably. [Allotrope]" ;
+                 skos:note "Property is related to skos:exactMatch. skos:exactMatch is an object property whereas this property is an annotation property to allow for weak semantic coupling. [Allotrope]" ;
+                 skos:prefLabel "has exact match" ;
+                 rdfs:subPropertyOf af-x:AFX_0002808 .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002811
+af-x:AFX_0002811 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Has related establishes a connection between two resources that have an associative relationship. [Allotrope]" ;
+                 skos:note "Property is related to skos:related. Skos:related is an object property whereas this property is an annotation property to allow for weak semantic coupling. [Allotrope]" ;
+                 skos:prefLabel "has related" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002815
+af-x:AFX_0002815 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Reference that maps a class to a perspective. [Allotrope]" ;
+                 skos:prefLabel "has perspective" ;
+                 rdfs:subPropertyOf skos:scopeNote .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002818
+af-x:AFX_0002818 rdf:type owl:AnnotationProperty ;
+                 skos:definition "Is universal class flags a resource as being a primitive class that stands on its own. [Allotrope]" ;
+                 skos:prefLabel "is universal class" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002850
+af-x:AFX_0002850 rdf:type owl:AnnotationProperty ;
+                 skos:altLabel "design pattern" ,
+                               "has pattern" ,
+                               "pattern" ;
+                 skos:definition "Has design pattern annotates a resource with a reference to a design pattern. [Allotrope]" ;
+                 skos:prefLabel "has design pattern" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002865
+af-x:AFX_0002865 rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002808 pav:importedFrom ;
+                 skos:changeNote "2020-12-15 Property has been added in order to replace pav:importedFrom. The difference between af-x:AFX_0002865 and pav:importedFrom is that the former is an annotation property whereas the latter is an object property. We added a new property in order to avoid issues of redeclaration of pav:importedFrom as annotation property. [Allotrope]" ;
+                 skos:definition "The original source of imported information. [PAV]" ;
+                 skos:prefLabel "imported from" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002866
+af-x:AFX_0002866 rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002808 pav:derivedFrom ;
+                 skos:definition "Derived from a different resource. [PAV]" ;
+                 skos:note "2020-12-15 Property has been added in order to replace pav:derivedFrom. The difference between af-x:AFX_0002866 and pav:derivedFrom is that the former is an annotation property whereas the latter is an object property. We added a new property in order to avoid issues of redeclaration of pav:derivedFrom as annotation property. [Allotrope]" ;
+                 skos:prefLabel "derived from" ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002874
+af-x:AFX_0002874 rdf:type owl:AnnotationProperty ;
+                 skos:definition "A shape that describes a facet by sh:qualifiedValueShape in an Allotrope Simple Model (ASM) shape library can be marked with this annotation property. The property controls how the facet is translated into a JSON schema for the property. By setting this property to true, the JSON schema behaves as in SHACL, allowing subclasses to be used, otherwise the class is used directly. [Allotrope]" ;
+                 skos:example """The following shape defines a polymorphic \"peak width\" facet:
+
+af-s:AFS_0005312 a sh:PropertyShape ;
+  sh:path af-x:AFX_0002803 ; # has facet
+  sh:qualifiedValueShape [
+       sh:class af-r:AFR_0001075 ; # peak width
+       af-x:AFX_0002874 true  # generate polymorphic JSON schema
+   ] ;
+   sh:qualifiedMinCount 1 ;
+.
+
+It is translated to a JSON schema that allows one of
+\"peak width at half height\": {}
+\"peak width at 5% height\": {}
+\"peak width at 10% height\": {}
+\"peak width at baseline\" : {}
+
+If the 'has polymorphic JSON schema' annotation is false or unspecified, then only
+\"peak width\": {} 
+is allowed and the JSON schema is more restrictive than the SHACL shape.""" ;
+                 skos:prefLabel "has polymorphic JSON schema" ;
+                 rdfs:subPropertyOf skos:note ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:domain sh:Shape .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/coverage
+dc:coverage rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/format
+dc:format rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/language
+dc:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/relation
+dc:relation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+dc:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/subject
+dc:subject rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/type
+dc:type rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "abstract" ;
+             rdfs:subPropertyOf dc:description ,
+                                dct:description .
+
+
+###  http://purl.org/dc/terms/accessRights
+dct:accessRights rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002865 dct: ;
+                 skos:prefLabel "access rights" ;
+                 rdfs:subPropertyOf dc:rights .
+
+
+###  http://purl.org/dc/terms/alternative
+dct:alternative rdf:type owl:AnnotationProperty ;
+                af-x:AFX_0002865 dct: ;
+                skos:prefLabel "alternative" ;
+                rdfs:subPropertyOf dc:title .
+
+
+###  http://purl.org/dc/terms/available
+dct:available rdf:type owl:AnnotationProperty ;
+              af-x:AFX_0002865 dct: ;
+              skos:prefLabel "available" ;
+              rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dct:bibliographicCitation rdf:type owl:AnnotationProperty ;
+                          af-x:AFX_0002865 dct: ;
+                          skos:prefLabel "bibliographic citation" ;
+                          rdfs:subPropertyOf dc:identifier .
+
+
+###  http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:AnnotationProperty ;
+               af-x:AFX_0002865 dct: ;
+               skos:prefLabel "conforms to" ;
+               rdfs:subPropertyOf dc:relation ,
+                                  dct:relation .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:contributor .
+
+
+###  http://purl.org/dc/terms/coverage
+dct:coverage rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "coverage" ;
+             rdfs:subPropertyOf dc:coverage .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty ;
+            af-x:AFX_0002865 dct: ;
+            skos:prefLabel "created" ;
+            rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty ;
+            af-x:AFX_0002865 dct: ;
+            skos:prefLabel "creator" ;
+            rdfs:subPropertyOf dc:creator .
+
+
+###  http://purl.org/dc/terms/date
+dct:date rdf:type owl:AnnotationProperty ;
+         af-x:AFX_0002865 dct: ;
+         skos:prefLabel "date" ;
+         rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/dateAccepted
+dct:dateAccepted rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002865 dct: ;
+                 skos:prefLabel "date accepted" ;
+                 rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/dateCopyrighted
+dct:dateCopyrighted rdf:type owl:AnnotationProperty ;
+                    af-x:AFX_0002865 dct: ;
+                    skos:prefLabel "date copyrighted" ;
+                    rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+dct:dateSubmitted rdf:type owl:AnnotationProperty ;
+                  af-x:AFX_0002865 dct: ;
+                  skos:prefLabel "date submitted" ;
+                  rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:description .
+
+
+###  http://purl.org/dc/terms/extent
+dct:extent rdf:type owl:AnnotationProperty ;
+           af-x:AFX_0002865 dct: ;
+           skos:prefLabel "extend" ;
+           rdfs:subPropertyOf dc:format .
+
+
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:AnnotationProperty ;
+           af-x:AFX_0002865 dct: ;
+           skos:prefLabel "format" ;
+           rdfs:subPropertyOf dc:format .
+
+
+###  http://purl.org/dc/terms/hasFormat
+dct:hasFormat rdf:type owl:AnnotationProperty ;
+              af-x:AFX_0002865 dct: ;
+              skos:prefLabel "has format" ;
+              rdfs:subPropertyOf dc:relation ,
+                                 dct:relation .
+
+
+###  http://purl.org/dc/terms/hasPart
+dct:hasPart rdf:type owl:AnnotationProperty ;
+            af-x:AFX_0002865 dct: ;
+            skos:prefLabel "has part" ;
+            rdfs:subPropertyOf dc:relation ,
+                               dct:relation .
+
+
+###  http://purl.org/dc/terms/hasVersion
+dct:hasVersion rdf:type owl:AnnotationProperty ;
+               af-x:AFX_0002865 dct: ;
+               skos:prefLabel "has version" ;
+               rdfs:subPropertyOf dc:relation ,
+                                  dct:relation .
+
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:AnnotationProperty ;
+               af-x:AFX_0002865 dct: ;
+               skos:prefLabel "identifier" ;
+               rdfs:subPropertyOf dc:identifier .
+
+
+###  http://purl.org/dc/terms/isFormatOf
+dct:isFormatOf rdf:type owl:AnnotationProperty ;
+               af-x:AFX_0002865 dct: ;
+               skos:prefLabel "is format of" ;
+               rdfs:subPropertyOf dc:relation ,
+                                  dct:relation .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dct:isPartOf rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "is part of" ;
+             rdfs:subPropertyOf dc:relation ,
+                                dct:relation .
+
+
+###  http://purl.org/dc/terms/isReferencedBy
+dct:isReferencedBy rdf:type owl:AnnotationProperty ;
+                   af-x:AFX_0002865 dct: ;
+                   skos:prefLabel "is referenced by" ;
+                   rdfs:subPropertyOf dc:relation ,
+                                      dct:relation .
+
+
+###  http://purl.org/dc/terms/isReplacedBy
+dct:isReplacedBy rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002865 dct: ;
+                 skos:prefLabel "is replaced by" ;
+                 rdfs:subPropertyOf dc:relation ,
+                                    dct:relation .
+
+
+###  http://purl.org/dc/terms/isRequiredBy
+dct:isRequiredBy rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002865 dct: ;
+                 skos:prefLabel "is required by" ;
+                 rdfs:subPropertyOf dc:relation ,
+                                    dct:relation .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+dct:isVersionOf rdf:type owl:AnnotationProperty ;
+                af-x:AFX_0002865 dct: ;
+                skos:prefLabel "is version of" ;
+                rdfs:subPropertyOf dc:relation ,
+                                   dct:relation .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty ;
+           rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "language" ;
+             rdfs:subPropertyOf dc:language .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty ;
+            rdfs:subPropertyOf dc:rights .
+
+
+###  http://purl.org/dc/terms/medium
+dct:medium rdf:type owl:AnnotationProperty ;
+           af-x:AFX_0002865 dct: ;
+           skos:prefLabel "medium" ;
+           rdfs:subPropertyOf dc:format .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf dc:date .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf dc:publisher .
+
+
+###  http://purl.org/dc/terms/references
+dct:references rdf:type owl:AnnotationProperty ;
+               af-x:AFX_0002865 dct: ;
+               skos:prefLabel "references" ;
+               rdfs:subPropertyOf dc:relation ,
+                                  dct:relation .
+
+
+###  http://purl.org/dc/terms/relation
+dct:relation rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "relation" ;
+             rdfs:subPropertyOf dc:relation .
+
+
+###  http://purl.org/dc/terms/replaces
+dct:replaces rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "replaces" ;
+             rdfs:subPropertyOf dc:relation ,
+                                dct:relation .
+
+
+###  http://purl.org/dc/terms/requires
+dct:requires rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "requires" ;
+             rdfs:subPropertyOf dc:relation ,
+                                dct:relation .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty ;
+           rdfs:subPropertyOf dc:rights .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty ;
+           af-x:AFX_0002865 dct: ;
+           skos:prefLabel "source" ;
+           rdfs:subPropertyOf dc:source ,
+                              dct:relation .
+
+
+###  http://purl.org/dc/terms/spatial
+dct:spatial rdf:type owl:AnnotationProperty ;
+            af-x:AFX_0002865 dct: ;
+            skos:prefLabel "spatial" ;
+            rdfs:subPropertyOf dc:coverage .
+
+
+###  http://purl.org/dc/terms/subject
+dct:subject rdf:type owl:AnnotationProperty ;
+            af-x:AFX_0002865 dct: ;
+            skos:prefLabel "subject" ;
+            rdfs:subPropertyOf dc:subject .
+
+
+###  http://purl.org/dc/terms/tableOfContents
+dct:tableOfContents rdf:type owl:AnnotationProperty ;
+                    af-x:AFX_0002865 dct: ;
+                    skos:prefLabel "table of contents" ;
+                    rdfs:subPropertyOf dc:description ,
+                                       dct:description .
+
+
+###  http://purl.org/dc/terms/temporal
+dct:temporal rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             skos:prefLabel "temporal" ;
+             rdfs:subPropertyOf dc:coverage .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty ;
+          rdfs:subPropertyOf dc:title .
+
+
+###  http://purl.org/dc/terms/type
+dct:type rdf:type owl:AnnotationProperty ;
+         af-x:AFX_0002865 dct: ;
+         skos:prefLabel "type" ;
+         rdfs:subPropertyOf dc:type .
+
+
+###  http://purl.org/dc/terms/valid
+dct:valid rdf:type owl:AnnotationProperty ;
+          af-x:AFX_0002865 dct: ;
+          skos:prefLabel "valid" ;
+          rdfs:subPropertyOf dc:date .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:comment "The range of skos:altLabel is the class of RDF plain literals." ,
+                           "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties." ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:label "alternative label" ;
+              skos:definition "An alternative lexical label for a resource." ;
+              skos:example "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)." ;
+              rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty ;
+                af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:label "change note" ;
+                skos:definition "A note about a modification to a concept." ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:label "definition" ;
+                skos:definition "A statement or formal explanation of the meaning of a concept." ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty ;
+                   af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                   rdfs:label "editorial note" ;
+                   skos:definition "A note for an editor, translator or maintainer of the vocabulary." ;
+                   rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:label "example" ;
+             skos:definition "An example of the use of a concept." ;
+             rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+                 rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
+                              "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties." ;
+                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                 rdfs:label "hidden label" ;
+                 skos:definition "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations." ;
+                 rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+skos:historyNote rdf:type owl:AnnotationProperty ;
+                 af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                 rdfs:label "history note" ;
+                 skos:definition "A note about the past state/use/meaning of a concept." ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty ;
+          af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+          rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+          rdfs:label "note" ;
+          skos:definition "A general note, for any purpose." ;
+          skos:scopeNote "This property may be used directly, or as a super-property for more specific note types." .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
+                            "The range of skos:prefLabel is the class of RDF plain literals."@en ,
+                            """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties.""" ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "preferred label" ;
+               skos:definition "The preferred lexical label for a resource, in a given language." ;
+               rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               af-x:AFX_0002865 <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "scope note" ;
+               skos:definition "A note that helps to clarify the meaning and/or the use of a concept." ;
+               rdfs:subPropertyOf skos:note .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000923
+af-r:AFR_0000923 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000030 ;
+                 af-x:AFX_0002865 <http://purl.allotrope.org/voc/afo/REC/2018/07/aft> ;
+                 skos:prefLabel "facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001221
+af-r:AFR_0001221 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 skos:definition "Term granularity relates an entity to an instance of granularity that describes the level of granularity that a term belongs to. [Allotrope]" ;
+                 skos:example "A vial is a container that exists in macroscopic scale." ;
+                 skos:prefLabel "term granularity" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+iao:_0000030 rdf:type owl:Class ;
+             af-x:AFX_0002865 <http://purl.obolibrary.org/obo/iao.owl> ;
+             skos:prefLabel "information content entity" .
+
+
+###  http://www.w3.org/ns/shacl#NodeShape
+sh:NodeShape rdf:type owl:Class ;
+             rdfs:subClassOf sh:Shape ;
+             skos:prefLabel "Node shape" .
+
+
+###  http://www.w3.org/ns/shacl#PropertyShape
+sh:PropertyShape rdf:type owl:Class ;
+                 rdfs:subClassOf sh:Shape ;
+                 skos:prefLabel "Property shape" .
+
+
+###  http://www.w3.org/ns/shacl#Shape
+sh:Shape rdf:type owl:Class ;
+         skos:prefLabel "Shape" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001222
+af-r:AFR_0001222 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001221 ;
+                 skos:altLabel "quantum scale" ;
+                 skos:definition "Atomic scale refers to the distance between the nuclei of atoms in a material. This space is extremely large compared to the size of the atomic nucleus, and is related to the chemical bonds which bind atoms together. The spacing between atoms in most ordered solids is on the order of a few ångströms (a few tenths of a nanometer). [Wikipedia]" ;
+                 skos:note "atomic scale is smaller than mesoscopic scale" ;
+                 skos:prefLabel "atomic scale" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001223
+af-r:AFR_0001223 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001221 ;
+                 skos:definition "The macroscopic scale is the length scale on which objects or phenomena are large enough to be visible almost practically with the naked eye, without magnifying optical instruments. When applied to physical phenomena and bodies, the macroscopic scale describes things as a person can directly perceive them, without the aid of magnifying devices. This is in contrast to observations (microscopy) or theories (microphysics, statistical physics) of objects of geometric lengths smaller than perhaps some hundreds of micrometers. [Wikipedia]" ;
+                 skos:prefLabel "macroscopic scale" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001224
+af-r:AFR_0001224 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001221 ;
+                 skos:definition "Mesoscopic physics is a sub-discipline of condensed matter physics that deals with materials of an intermediate length. The scale of these materials can be described as being between the size of a quantity of atoms (such as a molecule) and of materials measuring micrometers. [Wikipedia]" ;
+                 skos:note "mesoscopic is smaller than microscopic" ;
+                 skos:prefLabel "mesoscopic scale" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001225
+af-r:AFR_0001225 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001221 ;
+                 skos:definition "In physics, the microscopic scale is sometimes considered the scale between the macroscopic and the quantum realm. Microscopic units and measurements are used to classify and describe very small objects. One common microscopic length scale unit is the Micrometer (μm) - one millionth of 1 meter. [Wikipedia]" ;
+                 skos:note "microscopic is smaller than macroscopic" ;
+                 skos:prefLabel "microscopic scale" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001492
+af-r:AFR_0001492 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001221 ;
+                 skos:definition "The subatomic scale is is the scale of the subatomic particles, such as electrons, protons, photons. [Wikipedia]" ;
+                 skos:note "subatomic is smaller than atomic" ;
+                 skos:prefLabel "subatomic scale" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:rightsHolder <http://www.allotrope.org> ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dct:contributor af-x:AFX_0002865 dct: ;
+                skos:prefLabel "contributor" .
+
+
+dct:description af-x:AFX_0002865 dct: ;
+                skos:prefLabel "description" .
+
+
+dct:issued af-x:AFX_0002865 dct: ;
+           skos:prefLabel "issued" .
+
+
+dct:license af-x:AFX_0002865 dct: ;
+            skos:prefLabel "license" .
+
+
+dct:modified af-x:AFX_0002865 dct: ;
+             skos:prefLabel "modified" .
+
+
+dct:publisher af-x:AFX_0002865 dct: ;
+              skos:prefLabel "publisher" .
+
+
+dct:rights af-x:AFX_0002865 dct: ;
+           skos:prefLabel "rights" .
+
+
+dct:rightsHolder af-x:AFX_0002865 dct: ;
+                 skos:prefLabel "rights holder" .
+
+
+dct:title af-x:AFX_0002865 dct: ;
+          skos:prefLabel "title" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/
