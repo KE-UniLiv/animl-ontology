@@ -216,3 +216,8 @@ __marimo__/
 alignment/alignment_configs.yml
 logmap-log.out
 bertmap/config.yaml
+
+**/checkpoint-*/
+
+alignment/outputs/bertmap_with_owl/bertmap/bert/checkpoint-*/
+alignment/outputs/bertmap/bert/checkpoint-*/
