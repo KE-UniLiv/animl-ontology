@@ -24,7 +24,7 @@ def get_ontologies() -> dict:
         "TheMusicOntology": os.path.join(os.getcwd(), "alignment", "ontologies", "TheMusicOntology", "moowl.owl"),
         "AnIML": os.path.join(os.getcwd(), "ontologies", "animl_ontology.owl"),
         "AnIML (Skeleton)": os.path.join(os.getcwd(), "alignment", "ontologies", "AniML", "skeleton_ontology.rdf"),
-        "Allotrope": os.path.join(os.getcwd(), "alignment", "ontologies", "AFO-2025_06", "afo", "voc", "afo", "merged", "REC", "2025", "06", "merged-without-qudt.owl"),
+        "Allotrope": os.path.join(os.getcwd(), "alignment", "ontologies", "AFO-2025_06", "afo", "voc", "afo", "merged", "REC", "2025", "06", "merged-without-qudt.xml"),
         "mouse-human-source": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "source.xml"),
         "mouse-human-target": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "target.xml"),
         "mouse-human-reference": os.path.join(os.getcwd(), "alignment", "ontologies", "mouse-human", "reference.xml"),
