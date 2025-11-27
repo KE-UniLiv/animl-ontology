@@ -2,9 +2,10 @@
 
 The AnIML (Analytical Information Markup Language) Ontology.
 
-**Maintainer**
+**Maintainer**: 
 Jacopo de Berardinis (jacodb@liverpool.ac.uk | @jonnybluesman)
-**Repository**
+
+**Repository**:
 https://github.com/KE-UniLiv/animl-ontology
 
 ## URI Patterns
