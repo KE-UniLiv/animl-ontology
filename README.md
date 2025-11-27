@@ -7,7 +7,7 @@
 [![Version](https://img.shields.io/badge/Version-1.0.0-blue)](https://semver.org/)
 [![Status](https://img.shields.io/badge/Status-Released-green)]()
 
-> 🔗 **Ontology URI:** [http://www.w3.org/animl/ontology/](http://www.w3.org/animl/ontology/)
+> 🔗 **Ontology URI:** [http://www.w3id.org/animl/ontology/](http://www.w3.org/animl/ontology/)
 
 ## Overview
 
