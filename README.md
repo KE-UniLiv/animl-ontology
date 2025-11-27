@@ -25,7 +25,7 @@ This repository is organized as follows:
 
 - **`requirements/`** - Contains the functional requirements of the ontology formalised as Competency Questions (CQs). These were elicited and validated through an expert-in-the-loop workflow with industry partners using the IDEA2 framework.
 
-- **`diagram/`** - Visual documentation of the ontology modules (Core, Technique, and Reference Pattern) created using the Graffoo notation. These diagrams illustrate the classes, properties, and design patterns used throughout the model.
+- **`diagrams/`** - Visual documentation of the ontology modules (Core, Technique, and Reference Pattern) created using the Graffoo notation. These diagrams illustrate the classes, properties, and design patterns used throughout the model.
 
 - **`examples/`** - A collection of RDF Knowledge Graphs transformed from real-world AnIML XML files provided by Unilever. These files demonstrate the ontology's application in representing legacy experimental data.
 
@@ -47,7 +47,7 @@ The ontology is organised into primary modules that mirror the architectural sep
 
 The Core module formalises the AnIML Core Schema, representing the primary structure for experimental data, metadata, and provenance. The root of this module is the `aml:Document` class, which aggregates four main components: `aml:Experiment` for the data, `aml:SampleSet` for materials, `aml:AuditTrail` for versioning, and `aml:SignatureSet` for validation.
 
-<img src="diagram/animl_core.png" alt="AnIML Core Module"/>
+<img src="diagrams/animl_core.png" alt="AnIML Core Module"/>
 
 Sample management utilises the Set ODP, where `aml:SampleSet` contains individual `aml:Sample` objects. To capture the complex physical arrangements common in labs (e.g., multi-well plates), we model hierarchical relationships via the `aml:SampleInContainer` class. Experimental execution is modelled as an ordered sequence of `aml:ExperimentStep` objects, each linking a Method, the Infrastructure used, and the resulting Data.
 
@@ -55,7 +55,7 @@ Sample management utilises the Set ODP, where `aml:SampleSet` contains individua
 
 While the Core provides the structure, the Technique module enforces domain-specific constraints, mapping the concept of AnIML Technique Definition Documents (ATDDs) to the `aml:Technique` class.
 
-<img src="diagram/animl_technique.png" alt="AnIML Technique Module" width="700"/>
+<img src="diagrams/animl_technique.png" alt="AnIML Technique Module" width="700"/>
 
 A Technique acts as a semantic blueprint. It comprises subclasses of `aml:Specification` that define the expected shape and data types of experimental entities. For instance, `aml:SeriesSpecification` constrains the units (e.g., Hz, nm) and visualisation properties (via `aml:PlotScale`) of a data series, ensuring correct interpretation of spectra or chromatograms.
 
@@ -63,7 +63,7 @@ A Technique acts as a semantic blueprint. It comprises subclasses of `aml:Specif
 
 A significant challenge in the AnIML XML schema is the use of implicit ID/IDREF mechanisms to link data, which are opaque to standard reasoners. We address this with the **AnIML Reference Pattern**.
 
-<img src="diagram/animl_pattern.png" alt="AnIML Reference Pattern" width="400"/>
+<img src="diagrams/animl_pattern.png" alt="AnIML Reference Pattern" width="400"/>
 
 We reify these pointers into the `aml:AnimlReference` class, which explicitly models the relationship using the `aml:pointsTo` property. This pattern allows us to capture the context of the reference, such as the specific role (e.g., "reference blank") and the scope of the data. Properties like `aml:startValue` and `aml:endValue` allow the ontology to reference specific subsets or slices of a data series, facilitating granular data access.
 
