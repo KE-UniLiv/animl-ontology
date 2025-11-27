@@ -1,17 +1,49 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="urn:webprotege:ontology:b44762d6-fab9-482c-af9c-f4ddd9eaff37#"
-     xml:base="urn:webprotege:ontology:b44762d6-fab9-482c-af9c-f4ddd9eaff37"
+<rdf:RDF xmlns="http://www.w3.org/animl/ontology/"
+     xml:base="http://www.w3.org/animl/ontology/"
+     xmlns:aml="http://www.w3.org/animl/ontology/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:webprotege="http://w3id.org/animl/">
-    <owl:Ontology rdf:about="http://w3id.org/animl/">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.w3.org/animl/ontology/">
+        <owl:versionIRI rdf:resource="http://www.w3.org/animl/ontology/1.0.0/"/>
+
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl"/>
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl"/>
+
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+
+        <dc:creator xml:lang="en">Wilf Morlidge</dc:creator>
+        <dc:creator xml:lang="en">Jacopo de Berardinis</dc:creator>
+        <dc:creator xml:lang="en">Elliott Watkiss-Leek</dc:creator>
+        <dc:creator xml:lang="en">George Hannah</dc:creator>
+        <dc:creator xml:lang="en">Valentina Tamma</dc:creator>
+        <dc:creator xml:lang="en">Harry Rostron</dc:creator>
+        <dc:creator xml:lang="en">Andrew Ng</dc:creator>
+        <dc:creator xml:lang="en">Ewan Johnson</dc:creator>
+        <dc:creator xml:lang="en">Andrew Mitchell</dc:creator>
+        <dc:creator xml:lang="en">Terry R. Payne</dc:creator>
+
+        <dc:title xml:lang="en">The AnIML Ontology</dc:title>
+        <rdfs:label xml:lang="en">The AnIML Ontology</rdfs:label>
+
+        <dc:description xml:lang="en">The AnIML Ontology is a OWL-based model that formalises the semantics of the Analytical Information Markup Language (AnIML) and aligns it with the Allotrope Data Format to support cross-system and cross-lab interoperability.</dc:description>
+        <rdfs:comment xml:lang="en">The AnIML Ontology is a OWL-based model that formalises the semantics of the Analytical Information Markup Language (AnIML) and aligns it with the Allotrope Data Format to support cross-system and cross-lab interoperability.</rdfs:comment>
+
+        <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
+        <terms:issued>2025-02-01</terms:issued>
+        <terms:modified>2025-02-27</terms:modified>
+        <vann:preferredNamespacePrefix>aml</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://www.w3.org/animl/ontology/</vann:preferredNamespaceUri>
     </owl:Ontology>
 
     
