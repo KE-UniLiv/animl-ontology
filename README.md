@@ -21,29 +21,23 @@ The ontology enables large-scale knowledge integration, automated reasoning for 
 
 This repository is organized as follows:
 
-- **`ontologies/`** - Contains the core ontology files:
-  - `animl_ontology.owl` - Main OWL 2 ontology file
-  - `animl_reference_pattern.shacl` - SHACL shapes for validating the Reference Pattern
+- **`ontologies/`** - Hosts the primary semantic models, including the main `animl_ontology.owl` file encoded in OWL 2. It also contains `animl_reference_pattern.shacl`, which provides SHACL shapes to validate the structural constraints of the AnIML Reference Pattern.
 
-- **`requirements/`** - Ontology requirements as competency questions (CQs) extracted via IDEA2 (expert-in-the-loop requirement eliciation) with Unilever.
+- **`requirements/`** - Contains the functional requirements of the ontology formalised as Competency Questions (CQs). These were elicited and validated through an expert-in-the-loop workflow with industry partners using the IDEA2 framework.
 
-- **`testing/`** - SPARQL query validation suite:
-  - `1.rq` to `102.rq` - Individual SPARQL queries corresponding to each competency question.
+- **`diagram/`** - Visual documentation of the ontology modules (Core, Technique, and Reference Pattern) created using the Graffoo notation. These diagrams illustrate the classes, properties, and design patterns used throughout the model.
 
-- **`diagram/`** - Visual documentation:
-  - `animl_core.png` - Graffoo diagram of the Core module
-  - `animl_technique.png` - Graffoo diagram of the Technique module
-  - `animl_pattern.png` - Graffoo diagram of the Reference Pattern
+- **`examples/`** - A collection of RDF Knowledge Graphs transformed from real-world AnIML XML files provided by Unilever. These files demonstrate the ontology's application in representing legacy experimental data.
 
-- **`examples/`** - Sample knowledge graphs from AnIML files provided by the industry partner,  demonstrating the ontology in use.
+- **`testing/`** - A validation suite containing SPARQL queries mapped to the project's Competency Questions. These tests are used to verify that the ontology can correctly answer the domain requirements defined in the `requirements/` folder.
 
-- **`alignments/`** - Ontology alignments to the Allotrope Data Format, released in SSSOM format [4]
+- **`alignments/`** - Mappings between the AnIML Ontology and the Allotrope Data Format (ADF) to support cross-standard interoperability. These alignments are provided in the Simple Standard for Sharing Ontological Mappings (SSSOM) format [4].
 
 ## Methodology
 
 The ontology was developed using a novel **expert-in-the-loop** methodology that combines the generative capabilities of Large Language Models (LLMs) with rigorous human oversight. We employed an iterative requirement elicitation workflow where LLMs extracted Competency Questions (CQs) directly from the AnIML Core and Technique schemas, which were then validated and refined by domain experts to filter hallucinations and ensure domain relevance.
 
-The design phase followed **eXtreme Design (XD)** principles and collaborative whiteboarding using Graffoo to map these requirements into modular ontology structures. This process ensured the model prioritises the reuse of established Ontology Design Patterns (ODPs) while maintaining strict compatibility with the AnIML standard.
+The design phase followed the eXtreme Design (XD) [7] methodology and relied on collaborative whiteboarding using Graffoo to map these requirements into modular ontology structures. This process ensured the model prioritises the reuse of established Ontology Design Patterns (ODPs) while maintaining close compatibility with the AnIML standard.
 
 ## Key Modules
 
@@ -53,7 +47,7 @@ The ontology is organised into primary modules that mirror the architectural sep
 
 The Core module formalises the AnIML Core Schema, representing the primary structure for experimental data, metadata, and provenance. The root of this module is the `aml:Document` class, which aggregates four main components: `aml:Experiment` for the data, `aml:SampleSet` for materials, `aml:AuditTrail` for versioning, and `aml:SignatureSet` for validation.
 
-![AnIML Core Module](diagram/animl_core.png)
+<img src="diagram/animl_core.png" alt="AnIML Core Module" width="700"/>
 
 Sample management utilises the Set ODP, where `aml:SampleSet` contains individual `aml:Sample` objects. To capture the complex physical arrangements common in labs (e.g., multi-well plates), we model hierarchical relationships via the `aml:SampleInContainer` class. Experimental execution is modelled as an ordered sequence of `aml:ExperimentStep` objects, each linking a Method, the Infrastructure used, and the resulting Data.
 
@@ -75,7 +69,7 @@ We reify these pointers into the `aml:AnimlReference` class, which explicitly mo
 
 ## Competency Questions
 
-The ontology covers 102 validated Competency Questions (CQs) extracted from the standard. The complete list is available in `CQs/cqs.txt`, with corresponding SPARQL queries in the `testing/` directory. Below is a selection of questions the ontology is designed to answer:
+The ontology covers 102 validated Competency Questions (CQs) extracted from the standard. The complete list is available in `requirements/cqs.txt`, with corresponding SPARQL queries in the `testing/` directory. Below is a selection of questions the ontology is designed to answer:
 
 **Experiment & Provenance**
 * What is the unique ID of an experiment step?
@@ -139,7 +133,7 @@ aml:SampleSetConfiguration
 
 ## Versioning
 
-We adhere to the **Semantic Versioning (SemVer) format (X.Y.Z)**:
+We adhere to the **Semantic Versioning (SemVer)** [8] format (X.Y.Z):
 * **X (Major):** Denotes significant model changes or new requirements.
 * **Y (Minor):** Denotes backward-compatible additions.
 * **Z (Patch):** Denotes bug fixes or metadata updates.
@@ -147,7 +141,7 @@ We adhere to the **Semantic Versioning (SemVer) format (X.Y.Z)**:
 
 ## Contributing
 
-We welcome contributions from the community to improve and extend the AnIML Ontology. If you identify bugs or inconsistencies, please open an Issue on this repository. To propose extensions, please open a Feature Request that includes a clear use case definition and the associated Competency Questions (CQs) that the new feature should satisfy. You are encouraged to fork this repository and open Pull Requests (PRs) for adding new functionalities -the team will review PRs against the core design patterns and existing constraints to ensure consistency with the ontology's architecture.
+We welcome contributions from the community to improve and extend the AnIML Ontology. If you identify bugs or inconsistencies, please open an Issue on this repository. To propose extensions, please open a Feature Request that includes a clear use case definition and the associated Competency Questions (CQs) that the new feature should satisfy. You are encouraged to fork this repository and open Pull Requests (PRs) for adding new functionalities—the team will review PRs against the core design patterns and existing constraints to ensure consistency with the ontology's architecture.
 
 ## Citation
 If you use the AnIML Ontology in your work, please cite the following paper:
@@ -161,7 +155,7 @@ If you use the AnIML Ontology in your work, please cite the following paper:
 }
 ```
 
-## References
+## References
 
 [1] Schäfer, B. A., Poetz, D., & Kramer, G. W. (2004). Documenting laboratory workflows using the analytical information markup language. JALA: Journal of the Association for Laboratory Automation, 9(6), 375-381.
 
@@ -171,9 +165,10 @@ If you use the AnIML Ontology in your work, please cite the following paper:
 
 [4] Matentzoglu, N., et al. (2022). A simple standard for sharing ontological mappings (SSSOM). Database, 2022, baac035.
 
-[5] Jiaru Bai, Sebastian Mosbach, Connor J Taylor, Dogancan Karan, Kok Foong
-Lee, Simon D Rihm, Jethro Akroyd, Alexei A Lapkin, and Markus Kraft. A
-dynamic knowledge graph approach to distributed self-driving laboratories. Nature
-Communications, 15(1):462, 2024.
+[5] Jiaru Bai, Sebastian Mosbach, Connor J Taylor, Dogancan Karan, Kok Foong Lee, Simon D Rihm, Jethro Akroyd, Alexei A Lapkin, and Markus Kraft. A dynamic knowledge graph approach to distributed self-driving laboratories. Nature Communications, 15(1):462, 2024.
 
 [6] Wilkinson, M. D., et al. (2016). The FAIR guiding principles for scientific data management and stewardship. *Scientific Data*, 3(1), 1-9.
+
+[7] Presutti, V., Daga, E., Gangemi, A., & Blomqvist, E. (2009). eXtreme Design with Content Ontology Design Patterns. *Proceedings of the Workshop on Ontology Patterns*, 83-97.
+
+[8] Garijo, D., & Poveda-Villalón, M. (2020). Best practices for implementing FAIR vocabularies and ontologies on the Web. *IOS Press*.
