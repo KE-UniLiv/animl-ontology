@@ -47,7 +47,7 @@ The ontology is organised into primary modules that mirror the architectural sep
 
 The Core module formalises the AnIML Core Schema, representing the primary structure for experimental data, metadata, and provenance. The root of this module is the `aml:Document` class, which aggregates four main components: `aml:Experiment` for the data, `aml:SampleSet` for materials, `aml:AuditTrail` for versioning, and `aml:SignatureSet` for validation.
 
-<img src="diagram/animl_core.png" alt="AnIML Core Module" width="700"/>
+<img src="diagram/animl_core.png" alt="AnIML Core Module"/>
 
 Sample management utilises the Set ODP, where `aml:SampleSet` contains individual `aml:Sample` objects. To capture the complex physical arrangements common in labs (e.g., multi-well plates), we model hierarchical relationships via the `aml:SampleInContainer` class. Experimental execution is modelled as an ordered sequence of `aml:ExperimentStep` objects, each linking a Method, the Infrastructure used, and the resulting Data.
 
