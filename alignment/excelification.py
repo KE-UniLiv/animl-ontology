@@ -22,7 +22,7 @@ def mappings_to_spreadsheet_from_xml(mappings_directory: str, excel_file: str, a
     print(f"Putting all mappings in {mappings_directory} into spreadsheet\n<waiting for 5 seconds before proceeding>") if all_mappings else None
     time.sleep(5) if all_mappings else None
 
-    headers = ["Source", "Target", "Method", "Score", "Good Mapping?", "Comments"]
+    headers = ["Source", "Target", "Method", "Score", "Good Mapping?", "Suggested mapping", "Comments"]
 
 
     collate_by_method = {m: [] for m in ['kge', 'lightweight']}
@@ -42,7 +42,15 @@ def mappings_to_spreadsheet_from_xml(mappings_directory: str, excel_file: str, a
                 xmlfile = os.path.join(mappings_directory, mappings)
                 matches = find_xml_mapping_score(xmlfile)
 
-                method_name = mappings.replace("mappings.xml", "")
+                # Extract the method name as the token between the 2nd and 3rd underscore
+                base = os.path.splitext(mappings)[0]  # remove .xml
+                parts = base.split("_")
+                if len(parts) >= 3:
+                    # token between 2nd and 3rd underscore (0-based index 2)
+                    method_name = parts[2]
+                else:
+                    # fallback to previous behaviour if filename doesn't match expected pattern
+                    method_name = base.replace("mappings", "").strip("_")
                 for source, target, score in matches:
                     collate_by_method[method].append([source, target, method_name, score, "", ""])
 
@@ -60,7 +68,7 @@ def mappings_to_spreadsheet_from_xml(mappings_directory: str, excel_file: str, a
         
         if method not in wb.sheetnames:
             ws = wb.create_sheet(title=method)
-            ws.append(["Source", "Target", "Method", "Score", "Good Mapping?", "Comments"])
+            ws.append(["Source", "Target", "Method", "Score", "Good Mapping?", "Suggested mapping", "Comments"])
         else:
             ws = wb[method]
         for row in rows:
