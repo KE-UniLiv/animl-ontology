@@ -1,0 +1,918 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:coll="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#"
+        xmlns:aml="http://w3id.org/animl/"
+        xmlns:seq="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"
+        xmlns:bag="http://www.ontologydesignpatterns.org/cp/owl/bag.owl">
+
+    <owl:NamedIndividual rdf:about="Document_1">
+        <rdf:type rdf:resource="Document"/>
+        <aml:denotes rdf:resource="Experiment_1"/>
+        <aml:hasSampleSet rdf:resource="SampleSet_1"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="SampleSet_1">
+        <rdf:type rdf:resource="SampleSet"/>
+        <coll:hasMember rdf:resource="Ingr-000000001324"/>
+        <coll:hasMember rdf:resource="Ingr-000000000008"/>
+        <coll:hasMember rdf:resource="Form-000000113426"/>
+    </owl:NamedIndividual>
+
+
+        <owl:NamedIndividual rdf:about="Ingr-000000001324">
+            <rdf:type rdf:resource="Sample"/>
+            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water demineralised</aml:name>
+            <coll:isMemberOf rdf:resource="SampleSet_1"/>
+            <aml:hasSampleCategory rdf:resource="Category_1"/>
+        </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Category_1">
+                <rdf:type rdf:resource="Category"/>
+                <aml:hasSpecification rdf:resource="Category_1_Specification"/>
+                <aml:hasParameter rdf:resource="Parameter_1"/>
+                <aml:hasParameter rdf:resource="Parameter_2"/>
+                <aml:hasParameter rdf:resource="Parameter_3"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Category_1_Specification">
+                    <rdf:type rdf:resource="ItemSpecification"/>
+                    <aml:usedBy rdf:resource="Category_1"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingredient details</aml:name>
+                </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_1">
+                    <rdf:type rdf:resource="Parameter"/>
+                    <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">IngredientType.Lot</aml:valuee>
+                    <aml:hasSpecification rdf:resource="Parameter_1_Specification"/>
+                </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_1_Specification">
+                        <rdf:type rdf:resource="ParameterSpecification"/>
+                        <aml:usedBy rdf:resource="Parameter_1"/>
+                        <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type</aml:name>
+                        <aml:hasUnits rdf:resource="Units_1"/>
+                        <aml:hasDataType rdf:resource="aml:String"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Units_1">
+                            <rdf:type rdf:resource="Units"/>
+                        </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_2">
+                    <rdf:type rdf:resource="Parameter"/>
+                    <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">Ingr-000000001324</aml:value>
+                    <aml:hasSpecification rdf:resource="Parameter_2_Specification"/>
+                </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_2_Specification">
+                        <rdf:type rdf:resource="ParameterSpecification"/>
+                        <aml:usedBy rdf:resource="Parameter_2"/>
+                        <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot Number</aml:name>
+                        <aml:hasUnits rdf:resource="Units_1"/>
+                        <aml:hasDataType rdf:resource="aml:String"/>
+                    </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_3">
+                    <rdf:type rdf:resource="Parameter"/>
+                    <aml:hasSpecification rdf:resource="Parameter_3_Specification"/>
+                </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_3_Specification">
+                        <rdf:type rdf:resource="ParameterSpecification"/>
+                        <aml:usedBy rdf:resource="Parameter_3"/>
+                        <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link</aml:name>
+                        <aml:hasUnits rdf:resource="Units_1"/>
+                    </owl:NamedIndividual>               
+
+        <owl:NamedIndividual rdf:about="Ingr-000000000008">
+            <rdf:type rdf:resource="Sample"/>
+            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sodium Laureth (1) Sulfate70%LowC16(ING)</aml:name>
+            <coll:isMemberOf rdf:resource="SampleSet_1"/>
+            <aml:hasSampleCategory rdf:resource="Category_2"/>
+        </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Category_2">
+                <rdf:type rdf:resource="Category"/>
+                <aml:hasSpecification rdf:resource="Category_2_Specification"/>
+                <aml:hasParameter rdf:resource="Parameter_1"/>
+                <aml:hasParameter rdf:resource="Parameter_4"/>
+                <aml:hasParameter rdf:resource="Parameter_3"/>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Category_2_Specification">
+                <rdf:type rdf:resource="ItemSpecification"/>
+                <aml:usedBy rdf:resource="Category_2"/>
+                <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingredient details</aml:name>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_4">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">Ingr-000000000008</aml:value>
+                <aml:hasSpecification rdf:resource="Parameter_4_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_4_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_4"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot Number</aml:name>
+                    <aml:hasUnits rdf:resource="Units_1"/>
+                    <aml:hasDataType rdf:resource="aml:String"/>
+                </owl:NamedIndividual> 
+
+        <owl:NamedIndividual rdf:about="F-230208-00150">
+            <rdf:type rdf:resource="Sample"/>
+            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Form-000000113426</aml:name>
+            <coll:isMemberOf rdf:resource="SampleSet_1"/>
+            <aml:hasSampleCategory rdf:resource="Category_3"/>
+            <aml:hasSampleCategory rdf:resource="Category_4"/>
+        </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Category_3">
+                <rdf:type rdf:resource="Category"/>
+                <aml:hasSpecification rdf:resource="Category_3_Specification"/>
+                <aml:hasParameter rdf:resource="Parameter_5"/>
+                <aml:hasParameter rdf:resource="Parameter_6"/>
+                <aml:hasParameter rdf:resource="Parameter_7"/>
+                <aml:hasParameter rdf:resource="Parameter_8"/>
+                <aml:hasParameter rdf:resource="Parameter_9"/>
+                <aml:hasParameter rdf:resource="Parameter_10"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Category_3_Specification">
+                    <rdf:type rdf:resource="ItemSpecification"/>
+                    <aml:usedBy rdf:resource="Category_3"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formulation details</aml:name>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_5">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">HARRY.ROSTRON</aml:value>
+                <aml:hasSpecification rdf:resource="Parameter_5_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_5_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_5"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owner</aml:name>
+                    <aml:hasUnits rdf:resource="Units_1"/>
+                    <aml:hasDataType rdf:resource="aml:String"/>
+                </owl:NamedIndividual> 
+
+            <owl:NamedIndividual rdf:about="Parameter_6">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">HARRY.ROSTRON</aml:value>
+                <aml:hasSpecification rdf:resource="Parameter_6_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_6_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_6"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created By</aml:name>
+                    <aml:hasUnits rdf:resource="Units_1"/>
+                    <aml:hasDataType rdf:resource="aml:String"/>
+                </owl:NamedIndividual> 
+
+            <owl:NamedIndividual rdf:about="Parameter_7">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">2023-02-08T12:02:19.000</aml:value>
+                <aml:hasSpecification rdf:resource="Parameter_7_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_7_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_7"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created</aml:name>
+                    <aml:hasUnits rdf:resource="Units_1"/>
+                    <aml:hasDataType rdf:resource="aml:DateTime"/>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_8">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">Released</aml:value>
+                <aml:hasSpecification rdf:resource="Parameter_8_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_8_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_8"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Status</aml:name>
+                    <aml:hasUnits rdf:resource="Units_1"/>
+                    <aml:hasDataType rdf:resource="aml:String"/>
+                </owl:NamedIndividual> 
+
+            <owl:NamedIndividual rdf:about="Parameter_9">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:hasSpecification rdf:resource="Parameter_9_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_9_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_9"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Group</aml:name>
+                    <aml:hasUnits rdf:resource="Units_1"/>
+                    <aml:hasDataType rdf:resource="aml:String"/>
+                </owl:NamedIndividual> 
+
+            <owl:NamedIndividual rdf:about="Parameter_10">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">250</aml:value>
+                <aml:hasSpecification rdf:resource="Parameter_10_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_10_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_10"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Total Amount Made</aml:name>
+                    <aml:hasUnits rdf:resource="Units_2"/>
+                    <aml:hasDataType rdf:resource="aml:Float64"/>
+                </owl:NamedIndividual> 
+
+                <owl:NamedIndividual rdf:about="Units_2">
+                    <rdf:type rdf:resource="Units"/>
+                    <aml:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</aml:label>
+                    <aml:hasPart rdf:resource="SIUnit_1"/>
+                </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="SIUnit_1">
+                    <rdf:type rdf:resource="SIUnit"/>
+                    <aml:factor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1e-03</aml:factor>
+                    <aml:type rdf:resource="aml:g"/>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Category_4">
+                <rdf:type rdf:resource="Category"/>
+                <aml:hasSpecification rdf:resource="Category_4_Specification"/>
+                <aml:hasParameter rdf:resource="Parameter_11"/>
+                <aml:hasParameter rdf:resource="Parameter_12"/>
+                <aml:hasParameter rdf:resource="Parameter_13"/>
+                <aml:hasParameter rdf:resource="Parameter_14"/>
+                <aml:hasParameter rdf:resource="Parameter_15"/>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Category_4_Specification">
+                <rdf:type rdf:resource="ItemSpecification"/>
+                <aml:usedBy rdf:resource="Category_4"/>
+                <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Back Weighing Information</aml:name>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_11">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:hasSpecification rdf:resource="Parameter_11_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_11_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_11"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start Weight</aml:name>
+                    <aml:hasUnits rdf:resource="Units_2"/>
+                    <aml:hasDataType rdf:resource="aml:Float64"/>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_12">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:hasSpecification rdf:resource="Parameter_12_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_12_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_12"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beaker + Stirrer + Formulation</aml:name>
+                    <aml:hasUnits rdf:resource="Units_2"/>
+                    <aml:hasDataType rdf:resource="aml:Float64"/>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_13">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:hasSpecification rdf:resource="Parameter_13_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_13_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_13"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Weight</aml:name>
+                    <aml:hasUnits rdf:resource="Units_2"/>
+                    <aml:hasDataType rdf:resource="aml:Float64"/>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_14">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:hasSpecification rdf:resource="Parameter_14_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_14_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_14"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amount Lost</aml:name>
+                    <aml:hasUnits rdf:resource="Units_2"/>
+                    <aml:hasDataType rdf:resource="aml:Float64"/>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Parameter_15">
+                <rdf:type rdf:resource="Parameter"/>
+                <aml:hasSpecification rdf:resource="Parameter_15_Specification"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Parameter_15_Specification">
+                    <rdf:type rdf:resource="ParameterSpecification"/>
+                    <aml:usedBy rdf:resource="Parameter_15"/>
+                    <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amount Added</aml:name>
+                    <aml:hasUnits rdf:resource="Units_2"/>
+                    <aml:hasDataType rdf:resource="aml:Float64"/>
+                </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="Experiment_1">
+        <rdf:type rdf:resource="Experiment"/>
+        <aml:denotedBy rdf:resource="Document_1"/>
+        <coll:hasMember rdf:resource="BS-95611"/>
+        <coll:hasMember rdf:resource="BS-95621"/>
+        <coll:hasMember rdf:resource="BS-95624"/>
+        <coll:hasMember rdf:resource="BS-95618"/>
+        <coll:hasMember rdf:resource="(Event Stream)events"/>
+    </owl:NamedIndividual>
+
+        <owl:NamedIndividual rdf:about="BS-95611">
+            <rdf:type rdf:resource="ExperimentStep"/>
+            <aml:hasSpecification rdf:resource="BS-95611_Specification"/>
+            <aml:usesTechnique rdf:resource="Technique_1"/>
+            <aml:includesInfrastructure rdf:resource="BS-95611_Infrastructure"/>
+            <aml:usesMethod rdf:resource="BS-95611_Method"/>
+            <aml:producesResults rdf:resource="BS-95611_Result"/>
+        </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="BS-95611_Specification">
+                <rdf:type rdf:resource="Item_Specification"/>
+                <aml:usedBy rdf:resource="BS-95611"/>
+                <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#1 - Add 135g of Water demineralised</aml:name>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Technique_1">
+                <rdf:type rdf:resource="Technique"/>
+                <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Add</aml:name>
+                <aml:includes rdf:resource="BS-95611_Specification"/>
+                <aml:consumes rdf:resource="AnimlReference_1_Specification"/>
+                <aml:consumes rdf:resource="AnimlReference_2_Specification"/>
+                <aml:includes rdf:resource="AnimlReference_1_Specification"/>
+                <aml:includes rdf:resource="AnimlReference_2_Specification"/>
+                <aml:includes rdf:resource="BS-95611_Method_Specification"/>
+                <aml:includes rdf:resource="BS-95611_Result_Specification"/>
+                <aml:includes rdf:resource="Category_5_Specification"/>
+                <aml:includes rdf:resource="Category_6_Specification"/>
+                <aml:includes rdf:resource="Parameter_16_Specification"/>
+                <aml:includes rdf:resource="Parameter_17_Specification"/>
+                <aml:includes rdf:resource="Parameter_18_Specification"/>
+                <aml:includes rdf:resource="Parameter_19_Specification"/>
+                <aml:includes rdf:resource="Parameter_20_Specification"/>
+                <aml:includes rdf:resource="Parameter_21_Specification"/>
+                <aml:includes rdf:resource="Parameter_22_Specification"/>
+                <aml:includes rdf:resource="Parameter_23_Specification"/>
+                <aml:includes rdf:resource="Parameter_24_Specification"/>
+                <aml:includes rdf:resource="Parameter_25_Specification"/>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="BS-95611_Infrastructure">
+                <rdf:type rdf:resource="Infrastructure"/>
+                <aml:includes rdf:resource="AnimlReferenceSet_1"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="AnimlReferenceSet_1">
+                    <rdf:type rdf:resource="AnimlReferenceSet"/>
+                    <aml:subject rdf:resource="SampleSet_1"/>
+                    <coll:hasMember rdf:resource="AnimlReference_1"/>
+                    <coll:hasMember rdf:resource="AnimlReference_2"/>
+                </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="AnimlReference_1">
+                        <rdf:type rdf:resource="AnimlReference"/>
+                        <aml:pointsTo rdf:resource="Ingr-000000001324"/>
+                        <aml:hasUseCase rdf:resource="UseCase_1"/>
+                        <aml:hasSpecification rdf:resource="AnimlReference_1_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="AnimlReference_1_Specification">
+                            <rdf:type rdf:resource="AnimlReferenceSpecification"/>
+                        </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="UseCase_1">
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingredient Added</aml:name>
+                        </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="AnimlReference_2">
+                        <rdf:type rdf:resource="AnimlReference"/>
+                        <aml:pointsTo rdf:resource="F-230208-00150"/>
+                        <aml:hasUseCase rdf:resource="UseCase_2"/>
+                        <aml:hasSpecification rdf:resource="AnimlReference_2_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="AnimlReference_2_Specification">
+                            <rdf:type rdf:resource="AnimlReferenceSpecification"/>
+                        </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="UseCase_2">
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formulation</aml:name>
+                        </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="BS-95611_Method">
+                <rdf:type rdf:resource="Method"/>
+                <aml:hasMethodCategory rdf:resource="Category_5"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Category_5">
+                    <rdf:type rdf:resource="Category"/>
+                    <aml:hasSpecification rdf:resource="Category_5_Specification"/>
+                    <aml:hasParameter rdf:resource="Parameter_16"/>
+                    <aml:hasParameter rdf:resource="Parameter_17"/>
+                    <aml:hasParameter rdf:resource="Parameter_18"/>
+                    <aml:hasParameter rdf:resource="Parameter_19"/>
+                    <aml:hasParameter rdf:resource="Parameter_20"/>
+                    <aml:hasParameter rdf:resource="Parameter_21"/>
+                    <aml:hasParameter rdf:resource="Parameter_22"/>
+                </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Category_5_Specification">
+                        <rdf:type rdf:resource="ItemSpecification"/>
+                        <aml:usedBy rdf:resource="Category_5"/>
+                        <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Details</aml:name>
+                    </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_16">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">1</aml:valuee>
+                        <aml:hasSpecification rdf:resource="Parameter_16_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_16_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_16"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Step Number</aml:name>
+                            <aml:hasUnits rdf:resource="Units_1"/>
+                            <aml:hasDataType rdf:resource="aml:String"/>
+                        </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_17">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">Add 135g of Water demineralised</aml:valuee>
+                        <aml:hasSpecification rdf:resource="Parameter_17_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_17_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_17"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description</aml:name>
+                            <aml:hasUnits rdf:resource="Units_1"/>
+                            <aml:hasDataType rdf:resource="aml:String"/>
+                        </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_18">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">54</aml:value>
+                        <aml:hasSpecification rdf:resource="Parameter_18_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_18_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_18"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percentage of Active</aml:name>
+                            <aml:hasUnits rdf:resource="Units_3"/>
+                            <aml:hasDataType rdf:resource="aml:Float64"/>
+                        </owl:NamedIndividual> 
+
+                        <owl:NamedIndividual rdf:about="Units_3">
+                            <rdf:type rdf:resource="Units"/>
+                            <aml:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%</aml:label>
+                            <aml:hasPart rdf:resource="SIUnit_2"/>
+                        </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="SIUnit_2">
+                            <rdf:type rdf:resource="SIUnit"/>
+                            <aml:factor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</aml:factor>
+                            <aml:type rdf:resource="aml:none"/>
+                        </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_19">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">54</aml:value>
+                        <aml:hasSpecification rdf:resource="Parameter_19_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_19_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_19"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percentage of Active</aml:name>
+                            <aml:hasUnits rdf:resource="Units_3"/>
+                            <aml:hasDataType rdf:resource="aml:Float64"/>
+                        </owl:NamedIndividual> 
+
+                    <owl:NamedIndividual rdf:about="Parameter_20">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">135</aml:value>
+                        <aml:hasSpecification rdf:resource="Parameter_20_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_20_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_20"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Target Weight</aml:name>
+                            <aml:hasUnits rdf:resource="Units_2"/>
+                            <aml:hasDataType rdf:resource="aml:Float64"/>
+                        </owl:NamedIndividual> 
+
+                    <owl:NamedIndividual rdf:about="Parameter_21">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">CompletionStatus.Finished</aml:value>
+                        <aml:hasSpecification rdf:resource="Parameter_21_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_21_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_21"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Status</aml:name>
+                            <aml:hasUnits rdf:resource="Units_1"/>
+                            <aml:hasDataType rdf:resource="aml:String"/>
+                        </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_22">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:hasSpecification rdf:resource="Parameter_22_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_22_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_22"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</aml:name>
+                            <aml:hasUnits rdf:resource="Units_1"/>
+                            <aml:hasDataType rdf:resource="aml:String"/>
+                        </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="BS-95611_Result">
+                <rdf:type rdf:resource="Result"/>
+                <aml:hasResultCategory rdf:resource="Category_6"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Category_6">
+                    <rdf:type rdf:resource="Category"/>
+                    <aml:hasSpecification rdf:resource="Category_6_Specification"/>
+                    <aml:hasParameter rdf:resource="Parameter_23"/>
+                    <aml:hasParameter rdf:resource="Parameter_24"/>
+                    <aml:hasParameter rdf:resource="Parameter_25"/>
+                </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Category_6_Specification">
+                        <rdf:type rdf:resource="ItemSpecification"/>
+                        <aml:usedBy rdf:resource="Category_6"/>
+                        <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measured</aml:name>
+                    </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_23">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">2023-02-08T12:33:35.377594</aml:value>
+                        <aml:hasSpecification rdf:resource="Parameter_23_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_23_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_23"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start Time</aml:name>
+                            <aml:hasUnits rdf:resource="Units_1"/>
+                            <aml:hasDataType rdf:resource="aml:DateTime"/>
+                        </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_24">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">2023-02-08T12:38:44.001512</aml:value>
+                        <aml:hasSpecification rdf:resource="Parameter_24_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_24_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_24"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Time</aml:name>
+                            <aml:hasUnits rdf:resource="Units_1"/>
+                            <aml:hasDataType rdf:resource="aml:DateTime"/>
+                        </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Parameter_25">
+                        <rdf:type rdf:resource="Parameter"/>
+                        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">135.03</aml:value>
+                        <aml:hasSpecification rdf:resource="Parameter_25_Specification"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Parameter_25_Specification">
+                            <rdf:type rdf:resource="ParameterSpecification"/>
+                            <aml:usedBy rdf:resource="Parameter_25"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actual Weight</aml:name>
+                            <aml:hasUnits rdf:resource="Units_2"/>
+                            <aml:hasDataType rdf:resource="aml:Float64"/>
+                        </owl:NamedIndividual> 
+
+        <owl:NamedIndividual rdf:about="events">
+            <rdf:type rdf:resource="ExperimentStep"/>
+            <aml:hasSpecification rdf:resource="events_Specification"/>
+            <aml:usesTechnique rdf:resource="Technique_2"/>
+            <aml:includesInfrastructure rdf:resource="Events_Infrastructure"/>
+            <aml:producesResults rdf:resource="Events_Result"/>
+        </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="events_Specification">
+                <rdf:type rdf:resource="Item_Specification"/>
+                <aml:usedBy rdf:resource="events"/>
+                <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event_Stream</aml:name>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="Technique_2">
+                <rdf:type rdf:resource="Technique"/>
+                <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Add</aml:name>
+                <aml:includes rdf:resource="events_Specification"/>
+                <aml:consumes rdf:resource="AnimlReference_2_Specification"/>
+                <aml:includes rdf:resource="AnimlReference_2_Specification"/>
+                <aml:includes rdf:resource="events_Method_Specification"/>
+                <aml:includes rdf:resource="events_Result_Specification"/>
+                <aml:includes rdf:resource="Category_7_Specification"/>
+                <aml:includes rdf:resource="SeriesSet_1_Specification"/>
+                <aml:includes rdf:resource="Series_1_Specification"/>
+                <aml:includes rdf:resource="Series_2_Specification"/>
+                <aml:includes rdf:resource="Series_3_Specification"/>
+                <aml:includes rdf:resource="Series_4_Specification"/>
+                <aml:includes rdf:resource="dataPoint_1_Specification"/>
+                <aml:includes rdf:resource="dataPoint_2_Specification"/>
+                <aml:includes rdf:resource="dataPoint_3_Specification"/>
+                <aml:includes rdf:resource="dataPoint_4_Specification"/>
+                <aml:includes rdf:resource="dataPoint_5_Specification"/>
+                <aml:includes rdf:resource="dataPoint_6_Specification"/>
+                <aml:includes rdf:resource="dataPoint_7_Specification"/>
+                <aml:includes rdf:resource="dataPoint_8_Specification"/>
+                <aml:includes rdf:resource="dataPoint_9_Specification"/>
+                <aml:includes rdf:resource="dataPoint_10_Specification"/>
+                <aml:includes rdf:resource="dataPoint_11_Specification"/>
+                <aml:includes rdf:resource="dataPoint_12_Specification"/>
+            </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="events_Infrastructure">
+                <rdf:type rdf:resource="Infrastructure"/>
+                <aml:includes rdf:resource="AnimlReferenceSet_2"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="AnimlReferenceSet_2">
+                    <rdf:type rdf:resource="AnimlReferenceSet"/>
+                    <aml:subject rdf:resource="SampleSet_1"/>
+                    <coll:hasMember rdf:resource="AnimlReference_2"/>
+                </owl:NamedIndividual>
+
+            <owl:NamedIndividual rdf:about="events_Result">
+                <rdf:type rdf:resource="Result"/>
+                <aml:hasResultCategory rdf:resource="Category_7"/>
+            </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="Category_7">
+                    <rdf:type rdf:resource="Category"/>
+                    <aml:hasSeriesSet rdf:resource="SeriesSet_1"/>
+                </owl:NamedIndividual>
+
+                <owl:NamedIndividual rdf:about="SeriesSet_1">
+                    <rdf:type rdf:resource="SeriesSet"/>
+                    <aml:hasSpecification rdf:resource="SeriesSet_1_Specification"/>
+                    <coll:hasMember rdf:resource="Series_1"/>
+                    <coll:hasMember rdf:resource="Series_2"/>
+                    <coll:hasMember rdf:resource="Series_3"/>
+                    <coll:hasMember rdf:resource="Series_4"/>
+                </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="SeriesSet_1_Specification">
+                        <rdf:type rdf:resource="Item_Specification"/>
+                        <aml:usedBy rdf:resource="SeriesSet_1"/>
+                        <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Events</aml:name>
+                    </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Series_1">
+                        <rdf:type rdf:resource="Series"/>
+                        <aml:hasSpecification rdf:resource="Series_1_Specification"/>
+                        <bag:hasMember rdf:resource="dataPoint_1"/>
+                        <bag:hasMember rdf:resource="dataPoint_2"/>
+                        <bag:hasMember rdf:resource="dataPoint_3"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Series_1_Specification">
+                            <rdf:type rdf:resource="Series_Specification"/>
+                            <aml:usedBy rdf:resource="Series_1"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date/Time(yyyy-MM-dd HH:mm:ss)</aml:name>
+                            <aml:dependency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent</aml:dependency>
+                            <aml:hasDataType rdf:resource="aml:DateTime"/>
+                            <aml:hasPart rdf:resource="dataPoint_1_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_2_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_3_Specification"/>
+                        </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_1">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">2023-02-08T12:22:04.956701</aml:value>
+                            <bag:isMemberOf rdf:resource="Series_1"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_1_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_1_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_1"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_2">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">2023-02-08T12:22:05.081823</aml:value>
+                            <bag:isMemberOf rdf:resource="Series_1"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_2_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_2_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_2"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_3">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">2023-02-08T12:22:06.879371</aml:value>
+                            <bag:isMemberOf rdf:resource="Series_1"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_3_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_3_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_3"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Series_2">
+                        <rdf:type rdf:resource="Series"/>
+                        <aml:hasSpecification rdf:resource="Series_2_Specification"/>
+                        <bag:hasMember rdf:resource="dataPoint_4"/>
+                        <bag:hasMember rdf:resource="dataPoint_5"/>
+                        <bag:hasMember rdf:resource="dataPoint_6"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Series_2_Specification">
+                            <rdf:type rdf:resource="Series_Specification"/>
+                            <aml:usedBy rdf:resource="Series_2"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Id/Name</aml:name>
+                            <aml:dependency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent</aml:dependency>
+                            <aml:hasDataType rdf:resource="aml:String"/>
+                            <aml:hasPart rdf:resource="dataPoint_4_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_5_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_6_Specification"/>
+                        </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_4">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">F-230208-00150</aml:value>
+                            <bag:isMemberOf rdf:resource="Series_2"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_1_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_4_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_4"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_5">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <bag:isMemberOf rdf:resource="Series_2"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_5_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_5_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_5"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_6">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <bag:isMemberOf rdf:resource="Series_2"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_6_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_6_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_6"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                    <owl:NamedIndividual rdf:about="Series_3">
+                        <rdf:type rdf:resource="Series"/>
+                        <aml:hasSpecification rdf:resource="Series_3_Specification"/>
+                        <bag:hasMember rdf:resource="dataPoint_7"/>
+                        <bag:hasMember rdf:resource="dataPoint_8"/>
+                        <bag:hasMember rdf:resource="dataPoint_9"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Series_3_Specification">
+                            <rdf:type rdf:resource="Series_Specification"/>
+                            <aml:usedBy rdf:resource="Series_3"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeviceName</aml:name>
+                            <aml:dependency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent</aml:dependency>
+                            <aml:hasDataType rdf:resource="aml:String"/>
+                            <aml:hasPart rdf:resource="dataPoint_7_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_8_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_9_Specification"/>
+                        </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_7">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <bag:isMemberOf rdf:resource="Series_3"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_7_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_7_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_7"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_8">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <bag:isMemberOf rdf:resource="Series_3"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_8_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_8_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_8"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_9">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <bag:isMemberOf rdf:resource="Series_3"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_9_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_9_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_9"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                   <owl:NamedIndividual rdf:about="Series_4">
+                        <rdf:type rdf:resource="Series"/>
+                        <aml:hasSpecification rdf:resource="Series_4_Specification"/>
+                        <bag:hasMember rdf:resource="dataPoint_10"/>
+                        <bag:hasMember rdf:resource="dataPoint_11"/>
+                        <bag:hasMember rdf:resource="dataPoint_12"/>
+                    </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="Series_4_Specification">
+                            <rdf:type rdf:resource="Series_Specification"/>
+                            <aml:usedBy rdf:resource="Series_4"/>
+                            <aml:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type</aml:name>
+                            <aml:dependency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent</aml:dependency>
+                            <aml:hasDataType rdf:resource="aml:String"/>
+                            <aml:hasPart rdf:resource="dataPoint_10_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_11_Specification"/>
+                            <aml:hasPart rdf:resource="dataPoint_12_Specification"/>
+                        </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_10">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">Formulation</aml:value>
+                            <bag:isMemberOf rdf:resource="Series_4"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_10_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_10_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_10"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_11">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">Network</aml:value>
+                            <bag:isMemberOf rdf:resource="Series_4"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_11_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_11_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_11"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+                        <owl:NamedIndividual rdf:about="dataPoint_12">
+                            <rdf:type rdf:resource="DataPoint"/>
+                            <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#anySimpleType">Network</aml:value>
+                            <bag:isMemberOf rdf:resource="Series_4"/>
+                            <aml:hasSpecification rdf:resource="dataPoint_12_Specification"/>
+                        </owl:NamedIndividual>
+
+                            <owl:NamedIndividual rdf:about="dataPoint_12_Specification">
+                                <rdf:type rdf:resource="DataPointSpecification"/>
+                                <aml:usedBy rdf:resource="dataPoint_12"/>
+                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                            </owl:NamedIndividual>
+
+
+
+
+</rdf:RDF>

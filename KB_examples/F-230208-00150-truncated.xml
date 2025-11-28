@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnIML version="1.0" xmlns="urn:org:astm:animl:schema:core:draft:1.0"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="urn:org:astm:animl:schema:core:draft:1.0 https://static.animl.cloud/schemas/current/animl-core.xsd">
+    <SampleSet>
+        <Sample sampleID="Ingr-000000001324" name="Water demineralised">
+            <Category name="Ingredient details">
+                <Parameter name="Type" parameterType="String">
+                    <S>IngredientType.Lot</S>
+                </Parameter>
+                <Parameter name="Lot Number" parameterType="String">
+                    <S>Ingr-000000001324</S>
+                </Parameter>
+                <Parameter name="Link" parameterType="String">
+                    <S xsi:nil="true"/>
+                </Parameter>
+            </Category>
+        </Sample>
+        <Sample sampleID="Ingr-000000000008" name="Sodium Laureth (1) Sulfate70%LowC16(ING)">
+            <Category name="Ingredient details">
+                <Parameter name="Type" parameterType="String">
+                    <S>IngredientType.Lot</S>
+                </Parameter>
+                <Parameter name="Lot Number" parameterType="String">
+                    <S>Ingr-000000000008</S>
+                </Parameter>
+                <Parameter name="Link" parameterType="String">
+                    <S xsi:nil="true"/>
+                </Parameter>
+            </Category>
+        </Sample>
+        <Sample name="Form-000000113426" sampleID="F-230208-00150" comment="DEFT 3 HR Further test ">
+            <Category name="Formulation details">
+                <Parameter name="Owner" parameterType="String">
+                    <S>HARRY.ROSTRON</S>
+                </Parameter>
+                <Parameter name="Created by" parameterType="String">
+                    <S>HARRY.ROSTRON</S>
+                </Parameter>
+                <Parameter name="Created" parameterType="DateTime">
+                    <DateTime>2023-02-08T12:02:19.000</DateTime>
+                </Parameter>
+                <Parameter name="Status" parameterType="String">
+                    <S>Released</S>
+                </Parameter>
+                <Parameter name="Group" parameterType="String">
+                    <S xsi:nil="true"/>
+                </Parameter>
+                <Parameter name="Total Amount Made" parameterType="Float64">
+                    <D>250</D>
+                    <Unit label="g">
+                        <SIUnit factor="1e-03">kg</SIUnit>
+                    </Unit>
+                </Parameter>
+            </Category>
+            <Category name="Back Weighing Information">
+                <Parameter name="Start Weight" parameterType="Float64">
+                    <D xsi:nil="true"/>
+                    <Unit label="g">
+                        <SIUnit factor="1e-03">kg</SIUnit>
+                    </Unit>
+                </Parameter>
+                <Parameter name="Beaker + Stirrer + Formulation" parameterType="Float64">
+                    <D xsi:nil="true"/>
+                    <Unit label="g">
+                        <SIUnit factor="1e-03">kg</SIUnit>
+                    </Unit>
+                </Parameter>
+                <Parameter name="End Weight" parameterType="Float64">
+                    <D xsi:nil="true"/>
+                    <Unit label="g">
+                        <SIUnit factor="1e-03">kg</SIUnit>
+                    </Unit>
+                </Parameter>
+                <Parameter name="Amount Lost" parameterType="Float64">
+                    <D xsi:nil="true"/>
+                    <Unit label="g">
+                        <SIUnit factor="1e-03">kg</SIUnit>
+                    </Unit>
+                </Parameter>
+                <Parameter name="Amount Added" parameterType="Float64">
+                    <D xsi:nil="true"/>
+                    <Unit label="g">
+                        <SIUnit factor="1e-03">kg</SIUnit>
+                    </Unit>
+                </Parameter>
+            </Category>
+        </Sample>
+    </SampleSet>
+    <ExperimentStepSet>
+        <ExperimentStep name="#1 - Add 135g of Water demineralised" experimentStepID="BS-95611">
+            <Technique name="Add" uri="https://www.appliedst.co.uk/deft/techniques/add.atdd"/>
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Ingr-000000001324" role="Ingredient Added" samplePurpose="consumed"/>
+                    <SampleReference sampleID="F-230208-00150" role="Formulation" samplePurpose="produced"/>
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Method>
+                <Category name="Details">
+                    <Parameter name="Step Number" parameterType="Int64">
+                        <L>1</L>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Add 135g of Water demineralised</S>
+                    </Parameter>
+                    <Parameter name="Percentage of Active" parameterType="Float64">
+                        <D>54</D>
+                        <Unit label="%">
+                            <SIUnit factor="0.01">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Percentage of Material" parameterType="Float64">
+                        <D>54</D>
+                        <Unit label="%">
+                            <SIUnit factor="0.01">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Target Weight" parameterType="Float64">
+                        <D>135</D>
+                        <Unit label="g">
+                            <SIUnit factor="1e-03">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Status" parameterType="String">
+                        <S>CompletionStatus.Finished</S>
+                    </Parameter>
+                    <Parameter name="Equipment" parameterType="String">
+                        <S xsi:nil="true"/>
+                    </Parameter>
+                </Category>
+            </Method>
+            <Result name="Step Results">
+                <Category name="Measured">
+                    <Parameter name="Start Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:33:35.377594</DateTime>
+                    </Parameter>
+                    <Parameter name="End Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:38:44.001512</DateTime>
+                    </Parameter>
+                    <Parameter name="Actual Weight" parameterType="Float64">
+                        <D>135.03</D>
+                        <Unit label="g">
+                            <SIUnit factor="1e-03">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                </Category>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep name="#2 - Start stirring at 100.0rpm" experimentStepID="BS-95621">
+            <Technique name="Stir" uri="https://www.appliedst.co.uk/deft/techniques/stir.atdd"/>
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="F-230208-00150" role="Formulation" samplePurpose="produced"/>
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Method>
+                <Category name="Details">
+                    <Parameter name="Step Number" parameterType="Int64">
+                        <L>2</L>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Start stirring at 100.0rpm</S>
+                    </Parameter>
+                    <Parameter name="Status" parameterType="String">
+                        <S>CompletionStatus.Finished</S>
+                    </Parameter>
+                    <Parameter name="Equipment" parameterType="String">
+                        <S xsi:nil="true"/>
+                    </Parameter>
+                    <Parameter name="Target Speed" parameterType="Float64">
+                        <D>100.0</D>
+                        <Unit label="rpm">
+                            <SIUnit factor="60" exponent="-1">s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                </Category>
+            </Method>
+            <Result name="Step Results">
+                <Category name="Measured">
+                    <Parameter name="Start Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:38:46.439676</DateTime>
+                    </Parameter>
+                    <Parameter name="End Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:39:30.584410</DateTime>
+                    </Parameter>
+                    <Parameter name="Actual Speed" parameterType="Float64">
+                        <D xsi:nil="true"/>
+                        <Unit label="rpm">
+                            <SIUnit factor="60" exponent="-1">s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                </Category>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep name="#3 - Heat to 35.0C and wait until reached" experimentStepID="BS-95624">
+            <Technique name="Heat/Cool" uri="https://www.appliedst.co.uk/deft/techniques/heatcool.atdd"/>
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="F-230208-00150" role="Formulation" samplePurpose="produced"/>
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Method>
+                <Category name="Details">
+                    <Parameter name="Step Number" parameterType="Int64">
+                        <L>3</L>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Heat to 35.0°C and wait until reached</S>
+                    </Parameter>
+                    <Parameter name="Status" parameterType="String">
+                        <S>CompletionStatus.Finished</S>
+                    </Parameter>
+                    <Parameter name="Equipment" parameterType="String">
+                        <S xsi:nil="true"/>
+                    </Parameter>
+                    <Parameter name="Target Temperature" parameterType="Float64">
+                        <D>35.0</D>
+                        <Unit label="°C">
+                            <SIUnit offset="273">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                </Category>
+            </Method>
+            <Result name="Step Results">
+                <Category name="Measured">
+                    <Parameter name="Start Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:39:32.408898</DateTime>
+                    </Parameter>
+                    <Parameter name="End Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:50:09.875372</DateTime>
+                    </Parameter>
+                    <Parameter name="Actual Temperature" parameterType="Float64">
+                        <D xsi:nil="true"/>
+                        <Unit label="°C">
+                            <SIUnit offset="273">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                </Category>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep name="#4 - Add 50g of Sodium Laureth (1) Sulfate70%LowC16(ING)" experimentStepID="BS-95618">
+            <Technique name="Add" uri="https://www.appliedst.co.uk/deft/techniques/add.atdd"/>
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Ingr-000000000008" role="Ingredient Added" samplePurpose="consumed"/>
+                    <SampleReference sampleID="F-230208-00150" role="Formulation" samplePurpose="produced"/>
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Method>
+                <Category name="Details">
+                    <Parameter name="Step Number" parameterType="Int64">
+                        <L>4</L>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Add 50g of Sodium Laureth (1) Sulfate70%LowC16(ING)</S>
+                    </Parameter>
+                    <Parameter name="Percentage of Active" parameterType="Float64">
+                        <D>20</D>
+                        <Unit label="%">
+                            <SIUnit factor="0.01">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Percentage of Material" parameterType="Float64">
+                        <D>20</D>
+                        <Unit label="%">
+                            <SIUnit factor="0.01">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Target Weight" parameterType="Float64">
+                        <D>50</D>
+                        <Unit label="g">
+                            <SIUnit factor="1e-03">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Status" parameterType="String">
+                        <S>CompletionStatus.Finished</S>
+                    </Parameter>
+                    <Parameter name="Equipment" parameterType="String">
+                        <S xsi:nil="true"/>
+                    </Parameter>
+                </Category>
+            </Method>
+            <Result name="Step Results">
+                <Category name="Measured">
+                    <Parameter name="Start Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:50:11.602952</DateTime>
+                    </Parameter>
+                    <Parameter name="End Time" parameterType="DateTime">
+                        <DateTime>2023-02-08T12:57:49.798075</DateTime>
+                    </Parameter>
+                    <Parameter name="Actual Weight" parameterType="Float64">
+                        <D>50.0</D>
+                        <Unit label="g">
+                            <SIUnit factor="1e-03">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                </Category>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep name="Event Stream" experimentStepID="events">
+            <Technique name="Event Stream" uri="https://www.appliedst.co.uk/deft/techniques/eventstream.atdd"/>
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="F-230208-00150" role="Formulation" samplePurpose="consumed"/>
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Result name="Events">
+                <SeriesSet name="Events" length="6310">
+                    <Series name="Date/Time(yyyy-MM-dd HH:mm:ss)" dependency="dependent" seriesID="s1"
+                            seriesType="DateTime">
+                        <IndividualValueSet>
+                            <DateTime>2023-02-08T12:22:04.956701</DateTime>
+                            <DateTime>2023-02-08T12:22:05.081823</DateTime>
+                            <DateTime>2023-02-08T12:22:06.879371</DateTime>
+                            <DateTime>2023-02-08T12:22:32.807310</DateTime>
+                            <DateTime>2023-02-08T12:22:34.814814</DateTime>
+                            <DateTime>2023-02-08T12:22:35.838924</DateTime>
+                            <DateTime>2023-02-08T12:22:38.821222</DateTime>
+                            <DateTime>2023-02-08T12:22:40.845386</DateTime>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Id/Name" dependency="dependent" seriesID="s2" seriesType="String">
+                        <IndividualValueSet>
+                            <S>F-230208-00150</S>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="DeviceName" dependency="dependent" seriesID="s3" seriesType="String">
+                        <IndividualValueSet>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S xsi:nil="true"/>
+                            <S>Eurostar 60_PTS_07</S>
+                            <S>Eurostar 60_PTS_07</S>
+                            <S>Eurostar 60_PTS_07</S>
+                            <S>Eurostar 60_PTS_07</S>
+                            <S>Eurostar 60_PTS_07</S>
+                            <S>Eurostar 60_PTS_07</S>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Type" dependency="dependent" seriesID="s4" seriesType="String">
+                        <IndividualValueSet>
+                            <S>Formulation</S>
+                            <S>Network</S>
+                            <S>Network</S>
+                        </IndividualValueSet>
+                    </Series>
+        </ExperimentStep>
+    </ExperimentStepSet>
+</AnIML>
