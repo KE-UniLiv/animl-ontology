@@ -1,0 +1,2769 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="Optional.of(http://purl.allotrope.org/voc/afo/merged/REC/2025/06/merged-without-qudt)#"
+     xml:base="Optional.of(http://purl.allotrope.org/voc/afo/merged/REC/2025/06/merged-without-qudt)"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="Optional.of(http://purl.allotrope.org/voc/afo/merged/REC/2025/06/merged-without-qudt)"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000353 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000353">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000395"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000354 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000354">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000399"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000395 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000395"/>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000399 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000399"/>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000542 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000542">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000553"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000544 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000544">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002734"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000551 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000551">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002720"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000167"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000553 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000553">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0001048 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0001048">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0001049"/>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0000407"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0001049 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0001049">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0000407"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0001154 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0001154">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002806"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000916"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002684 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002684">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002816"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002699 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002699">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002802"/>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000922"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002704 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002704">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002805"/>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002716 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002716">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002717"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002717 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002717">
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000917"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002720 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002720">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002726 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002726">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002730 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002730">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002731 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002731">
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002734 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002734">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002737 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002737">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000992"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002748 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002748"/>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002800 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002800">
+        <owl:inverseOf rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002803"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002802 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002802"/>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002803 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002803">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002805 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002805"/>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002806 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002806">
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000916"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002816 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002816"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000108 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000108">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000157"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000157 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000157">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000219 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000219"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000058">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000059">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000079 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000079">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000081 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000081">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000085 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000085">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002337 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002337"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002350 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002350">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0000690 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0000690"/>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/property#AFX_0002705 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.allotrope.org/ontologies/property#AFX_0002705">
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000958"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/common#AFC_0000160 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000160">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/common#AFC_0000161 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000161">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000160"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000167"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/common#AFC_0000162 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000162">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000160"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000160"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000551"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000163"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000163"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/common#AFC_0000163 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000163">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000161"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/common#AFC_0000166 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000166">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001054"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/common#AFC_0000167 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000167">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001054"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/common#AFC_0000168 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000168">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/equipment#AFE_0000354 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/equipment#AFE_0000354">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0002099"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/equipment#AFE_0000407 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/equipment#AFE_0000407">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0000354"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000139"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0001048"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/equipment#AFE_0002099 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/equipment#AFE_0002099">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000007 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000007">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000195"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003385"/>
+                                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003564"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000195"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000014 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000014">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003359"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000055 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000055">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000137"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003551"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000137"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000076 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000076">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000395"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000399"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000104 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000104">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003332"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000111 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000111">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003348"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000127 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000127">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000111"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003486"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000014"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000136 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000136">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003565"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000137 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000137">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003563"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000139 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000139">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000055"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003306"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000055"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000195 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000195">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003475"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/function#AFFN_0000196 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/function#AFFN_0000196">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003315"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/material#AFM_0000275 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/material#AFM_0000275">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0000307 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0000307">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0002849 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0002849">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003315"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000544"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000922"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002816"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003306 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003306">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003551"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003315 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003315">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003620"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003332 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003332">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003400"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003348 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003348">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003620"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002337"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003359 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003359">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003620"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003374 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003374">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003385 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003385">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003475"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003400 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003400">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003620"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003452 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003452">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0000307"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003475 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003475">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003400"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003486 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003486">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003359"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003551 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003551">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003563"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003563 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003563">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003374"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003564 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003564">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003551"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003565 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003565">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003620"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002748"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+                            <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000159"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003584 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003584">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003315"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003452"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000395"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000922"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003620 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003620">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003634 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003634">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003332"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000542"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001209"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000544"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001210"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003645 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003645">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003315"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/process#AFP_0003735 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/process#AFP_0003735">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003315"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/quality#AFQ_0000210 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/quality#AFQ_0000210">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000186 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000186">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000922"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002737"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001046"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000916 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000916">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000991"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000917 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000917">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002717"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000007"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000922 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000922">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000991"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002699"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000053"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000923 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000923">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000936 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000936">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000690"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000941 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000941">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003620"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000944 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000944">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000957 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000957">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000991"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000064"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000958 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000958">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001054"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:allValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000961"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000961 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000961">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000958"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000958"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002705"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000977 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000977">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000979 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000979">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000991 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000991">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0000992 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000992">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001004 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001005 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001005">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000002"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001046 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001046">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000160"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002803"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000936"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000690"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onDataRange>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:onDataRange>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001054 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001100 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001100">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001101 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001101">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0002849"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001192 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001192">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001046"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000161"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001209 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001209">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000922"/>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001852"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000168"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000325"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001210 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001210">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000922"/>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001852"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/common#AFC_0000168"/>
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001211"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000324"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001209"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001211 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001211">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001277 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001277">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002806"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001501 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001501">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001532 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001532">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001583 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001583">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001101"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002816"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001606 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001606">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001501"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001636 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001636">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001638 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001638">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001636"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001636"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001641 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001641">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001636"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002800"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001636"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001816 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001816">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001101"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002816"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000008"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001852 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001852">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001100"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001963 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001963">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000438"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002734"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003645"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0001987 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001987">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001277"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002806"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0000407"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0002008 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0002008">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002730"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000285"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0002010 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0002010">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0000922"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002699"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0002229 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0002229">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0001277"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002806"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/result#AFR_0003144 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/result#AFR_0003144">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000917"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002717"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000095"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000007 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000060"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000008 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000008">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000044"/>
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000160"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000091"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000010 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000010">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000160"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000354"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000012 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000060"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000018 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000018">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000161"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000091"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000019 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000044"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000022 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000035 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000369"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000353"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003634"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000039 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000043 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000018"/>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000044 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000044">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000008"/>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000053 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000053">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002726"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002699"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002731"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003584"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000060 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000060">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002726"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000064 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000064">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002726"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002704"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000091 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000091">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000095 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000095">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000448"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000100 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000100">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000161"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/material#AFM_0000275"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000353"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000159 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000159">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001004"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000160 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000160">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000354"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000161 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000161">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000081"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000353"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000018"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000166 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002726"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002731"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000258 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000258">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000035"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000277 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000277">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000285 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000285">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000314"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000296 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000296">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003359"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003359"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000314 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000314">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000319 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000319">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000277"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002726"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002734"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003634"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000324 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000324">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000319"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002726"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000325 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000325">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000319"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0002726"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000369 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000369">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003634"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000371 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000371">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000369"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000437 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000437">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000166"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000438 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000438">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000060"/>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000437"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000448 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000448">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000091"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000478 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000478">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000277"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/role#AFRL_0000552 -->
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/role#AFRL_0000552">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003348"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000058"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000028">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000923"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000178">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000310 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000310">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000992"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000590 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000590">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000011">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000260"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000125">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/quality#AFQ_0000210"/>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt#Unit -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt#Unit">
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

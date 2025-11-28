@@ -1,0 +1,795 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/scanning-probe-microscopy#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/scanning-probe-microscopy#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/scanning-probe-microscopy> rdf:type owl:Ontology ;
+                                                                                           owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/scanning-probe-microscopy> ;
+                                                                                           owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                                           dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                           dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                           dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                           dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                                      <http://purl.allotrope.org/voc/copyright> ;
+                                                                                           dct:rightsHolder <http://www.allotrope.org> ;
+                                                                                           dct:title "AFO Scanning Probe Microscopy Domain Ontology (WD/2025/06)" ;
+                                                                                           owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2019/04/scanning-probe-microscopy> ;
+                                                                                           owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000030
+af-e:AFE_0000030 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "AFM probe" ,
+                               "atomic force microscope probe" ;
+                 skos:changeNote "2016-02-02 add harmonized property restrictions [OSTHUS]" ;
+                 skos:definition "A sharp spike mounted on the end of a cantilever which is used to scan the surface of a specimen in atomic force microscopy. [CHMO]" ;
+                 skos:prefLabel "atomic force microscopy probe" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000337
+af-e:AFE_0000337 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "AFM tip" ,
+                               "atomic force microscope (AFM) tip" ,
+                               "atomic force microscope tip" ;
+                 skos:definition "A sharp spike which is mounted on the end of a cantilever and used to scan the surface of a specimen in atomic force microscopy. [CHMO]" ;
+                 skos:prefLabel "atomic force microscopy tip" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000505
+af-e:AFE_0000505 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:altLabel "AFM cantilever" ,
+                               "AFM lever" ,
+                               "atomic force microscope cantilever" ;
+                 skos:definition "A cantilever used in atomic force microscopy to transmit force from the tip to a recording device. [CHMO]" ;
+                 skos:prefLabel "atomic force microscopy cantilever" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000595
+af-e:AFE_0000595 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000328 ;
+                 skos:altLabel "AFM" ;
+                 skos:definition "A microscope which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "atomic force microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000004
+af-p:AFP_0000004 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002405 ;
+                 skos:altLabel "NSThM" ,
+                               "SNThM" ,
+                               "near-field scanning thermal microscopy" ;
+                 skos:definition "A type of microscopy where a thermocouple probe is positioned very close to the surface of the specimen (in the near-field). An image of the surface is obtained by mechanically moving the thermocouple probe in a raster scan of the specimen, line by line, and recording the surface-probe heat transfer as a function of position. A feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning near-field thermal microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000018
+af-p:AFP_0000018 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "LFM" ,
+                               "lateral force AFM" ,
+                               "lateral-force AFM" ,
+                               "lateral-force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the frictional force experienced by the tip as a function of position (the 'twist' of the tip). A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "lateral force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000130
+af-p:AFP_0000130 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000476 ;
+                 skos:altLabel "back-scattering SNIM" ,
+                               "back-scattering SNOM" ,
+                               "back-scattering near-field optical microscopy" ,
+                               "back-scattering s-SNOM" ,
+                               "back-scattering-based SNIM" ,
+                               "back-scattering-type near-field optical microscopy" ,
+                               "backscattering SNIM" ,
+                               "backscattering SNOM" ,
+                               "backscattering near-field optical microscopy" ,
+                               "backscattering s-SNOM" ,
+                               "backscattering-based SNIM" ,
+                               "backscattering-type near-field optical microscopy" ,
+                               "infrared scattering SNOM" ;
+                 skos:definition "A type of microscopy where a laser is focused to a diffraction-limited spot size onto an oscillating AFM tip close to the surface of the specimen. An image is produced by scanning the probe over the specimen and detecting the backscattered light from the tip as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "backscattering near-field optical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000139
+af-p:AFP_0000139 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000976 ;
+                 skos:altLabel "AM-AFM" ,
+                               "amplitude modulation AFM" ,
+                               "amplitude modulation atomic force microscopy" ,
+                               "amplitude-modulation AFM" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. The tip oscillates, intermittently touching or tapping the surface. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between oscillation amplitude or phase of the tip and the surface during scanning, which is performed under ultra-high vacuum conditions. [CHMO]" ;
+                 skos:prefLabel "amplitude-modulation atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000180
+af-p:AFP_0000180 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001680 ;
+                 skos:altLabel "KFM" ,
+                               "KPFM" ,
+                               "Kelvin force microscopy" ,
+                               "Kelvin probe microscopy" ,
+                               "SSPM" ,
+                               "scanning surface potential microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. The conducting tip forms a capacitor with the surface, over which it is scanned laterally at a constant separation, in order to map the change in work function of the surface. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "Kelvin probe force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000295
+af-p:AFP_0000295 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "SAM" ,
+                               "SPAM" ,
+                               "scanning acoustic microscopy" ;
+                 skos:definition "A type of microscopy where a probe vibrating at its resonant frequency is scanned over the specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the resonant frequency (or the amplitude of vibration) of the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning probe acoustic microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000476
+af-p:AFP_0000476 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001096 ;
+                 skos:altLabel "SNIM" ,
+                               "s-SNOM" ,
+                               "sSNOM" ,
+                               "scattering SNOM" ,
+                               "scattering near-field microscopy" ,
+                               "scattering-type SNOM" ,
+                               "scattering-type near-field microscopy" ,
+                               "scattering-type near-field optical microscopy" ;
+                 skos:definition "A type of microscopy where a probe consisting of a laser transmitted through a tapered optical fibre is positioned very close to (<10 nm from) the surface of the specimen and focused to a diffraction-limited spot size. A vibrating metallic AFM cantilever tip periodically and locally modifies the electromagnetic field distribution of the excitation laser. An image is produced by scanning the probe over the specimen and detecting the scattered light from the tip as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scattering near-field optical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000500
+af-p:AFP_0000500 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "PFM" ,
+                               "piezo-force microscopy" ;
+                 skos:definition "A type of microscopy where an electric field is applied to a sharp spike (known as a 'tip') which is mounted on the end of a cantilever. The tip scans the surface of a piezoelectric specimen and the distortion of the electric field by the specimen is measured as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "piezoresponse force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000540
+af-p:AFP_0000540 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002405 ;
+                 skos:altLabel "SNEM" ;
+                 skos:definition "A type of microscopy where a metal-coated AFM tip is positioned very close to the surface of the specimen (in the near-field) and an image of the surface is obtained by mechanically moving the tip in a raster scan of the specimen, line by line, and recording the change in the polarization of incident light when it is reflected from a surface as a function of position. A feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning near-field ellipsometric microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000590
+af-p:AFP_0000590 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "AFM" ,
+                               "SFM" ,
+                               "atomic force imaging" ,
+                               "atomic-force microscopy" ,
+                               "scanning force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000923
+af-p:AFP_0000923 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001680 ;
+                 skos:altLabel "EFM" ,
+                               "electric force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. A bias voltage is applied between the tip and sample, forming a capacitor with the sample surface, over which it is scanned laterally at a constant separation. The electrostatic force (measured as the change in resonant frequency of the cantilever) is probed as a function of position by changing the applied voltage. [CHMO]" ;
+                 skos:prefLabel "electrostatic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000960
+af-p:AFP_0000960 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000976 ;
+                 skos:altLabel "FM-AFM" ,
+                               "frequency modulation AFM" ,
+                               "frequency modulation atomic force microscopy" ,
+                               "frequency-modulation AFM" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. The tip oscillates, intermittently touching or tapping the surface. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the resonant frequency of the tip and the surface during scanning, which is performed under ultra-high vacuum conditions. [CHMO]" ;
+                 skos:prefLabel "frequency-modulation atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000976
+af-p:AFP_0000976 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "intermittant contact AFM"@en-gb ,
+                               "intermittant contact atomic force microscopy"@en-gb ,
+                               "intermittant-contact AFM"@en-gb ,
+                               "intermittant-contact atomic force microscopy"@en-gb ,
+                               "AC-mode AFM" ,
+                               "AFM tapping-mode" ,
+                               "DFM" ,
+                               "DSFM" ,
+                               "dynamic force AFM" ,
+                               "dynamic scanning force microscopy" ,
+                               "intermittent contact AFM" ,
+                               "intermittent contact atomic force microscopy" ,
+                               "intermittent-contact AFM" ,
+                               "intermittent-contact atomic force microscopy" ,
+                               "tapping mode AFM" ,
+                               "tapping mode atomic force microscopy" ,
+                               "tapping-mode AFM" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. The tip oscillates, intermittently touching or tapping the surface. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "dynamic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001039
+af-p:AFP_0001039 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001860 ;
+                 skos:altLabel "SPNM" ,
+                               "scanning-plasmon near-field microscopy" ;
+                 skos:definition "A type of microscopy where a laser spot is focused on a solid sharp noble metal probe very close to (<10 nm from) the surface of the specimen. The laser spot excites plasmons at the probe-surface interface and an image is produced by scanning the probe over the specimen and detecting the electromagnetic field as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning plasmon near-field microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001096
+af-p:AFP_0001096 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002405 ;
+                 skos:altLabel "NSOM" ,
+                               "SNOM" ,
+                               "aperture NSOM" ,
+                               "aperture SNOM" ,
+                               "aperture scanning near-field optical microscopy" ,
+                               "aperture-NSOM" ,
+                               "aperture-SNOM" ,
+                               "near-field scanning optical microscopy" ;
+                 skos:definition "A type of microscopy where a probe consisting of a laser transmitted through a tapered optical fibre is positioned very close to (<10 nm from) the surface of the specimen. The tip is coated with metal (to prevent light from escaping from the sides) and near-field (or evanescent field) light is emitted through a small opening or 'aperture' (50-100 nm in diameter) at the apex of the probe. An image is produced by scanning the probe over the specimen and detecting the disturbance of the near-field as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning near-field optical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001142
+af-p:AFP_0001142 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000976 ;
+                 skos:altLabel "liquid AFM" ,
+                               "solution atomic force microscopy" ,
+                               "solution-state AFM" ,
+                               "solution-state atomic force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen that is immersed in a liquid cell. The tip oscillates, intermittently touching or tapping the surface. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "liquid atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001158
+af-p:AFP_0001158 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000500 ;
+                 skos:altLabel "VPFM" ,
+                               "vector PFM" ;
+                 skos:definition "A type of microscopy where an electric field is applied to a sharp spike (known as a 'tip') which is mounted on the end of a cantilever. The tip scans the surface of a piezoelectric specimen and the distortion of the electric field by the specimen is measured as components from three directions (one vertical and two lateral). A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "vector piezoresponse force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001160
+af-p:AFP_0001160 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001096 ;
+                 skos:altLabel "IR-NSOM" ,
+                               "IR-SNOM" ,
+                               "SNFIM" ,
+                               "SNIM" ,
+                               "SNIM imaging" ,
+                               "infra-red near-field scanning optical microscopy" ,
+                               "infra-red scanning near-field optical microscopy" ,
+                               "infrared near-field scanning optical microscopy" ;
+                 skos:definition "A type of microscopy where a probe consisting of an infrared laser transmitted through a tapered optical fibre is positioned very close to (<10 nm from) the surface of the specimen. The tip is coated with metal (to prevent light from escaping from the sides) and near-field (or evanescent field) infrared radiation is emitted through a small opening or 'aperture' (50-100 nm in diameter) at the apex of the probe. An image is produced by scanning the probe over the specimen and detecting the disturbance of the infrared near-field as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "infrared scanning near-field optical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001193
+af-p:AFP_0001193 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "SECM" ,
+                               "scanning-electrochemical microscopy" ;
+                 skos:definition "A type of microscopy where an electrode probe is positioned very close to the surface of the specimen (in the near-field). The surface is mechanically scanned by the electrode in a raster scan and the height required by a feedback loop in order to maintain a constant electrical conductance between the electrode and the specimen is recorded as a function of position. [CHMO]" ;
+                 skos:prefLabel "scanning electrochemical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001253
+af-p:AFP_0001253 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "SCAM" ,
+                               "scanning-capacitance microscopy" ;
+                 skos:definition "A type of microscopy which uses a small electrode to scan the surface of the specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the electrostatic capacitance of the surface as a function of position. A feedback loop is used to maintain a fixed relationship between the electrode and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning capacitance microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001261
+af-p:AFP_0001261 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "contact AFM" ,
+                               "contact mode AFM" ,
+                               "contact-mode AFM" ,
+                               "contact-mode atomic force microscopy" ,
+                               "static AFM" ,
+                               "static mode AFM" ,
+                               "static mode atomic force microscopy" ,
+                               "static-mode AFM" ,
+                               "static-mode atomic force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the deflection of the tip, which is in contact with the specimen surface, as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "contact mode atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001282
+af-p:AFP_0001282 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "SThM" ,
+                               "scanning-thermal microscopy" ;
+                 skos:definition "A type of microscopy where an Wollaston wire probe is scanned over the surface of the specimen and the height required by a feedback loop in order to maintain a constant temperature between the probe and the specimen is recorded as a function of position. [CHMO]" ;
+                 skos:prefLabel "scanning thermal microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001326
+af-p:AFP_0001326 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "C-AFM" ,
+                               "CAFM" ,
+                               "conductive AFM" ;
+                 skos:definition "Conductive AFM is used for collecting simultaneous topography imaging and current imaging. Specifically, standard conductive AFM operates in contact AFM mode. Variations in surface conductivity can be distinguished using this mode. Conductive AFM operates in contact AFM mode by using a conductive AFM tip. The contact tip is scanned in contact with the sample surface. Just like contact AFM, the feedback loop uses the DC cantilever deflection signal to maintain a constant force between the tip and the sample to generate the topography image. At the same time, a DC bias is applied to the tip. The sample is held at ground potential. [CHMO]" ;
+                 skos:prefLabel "conductive atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001392
+af-p:AFP_0001392 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000527 ;
+                 skos:altLabel "AFM force spectroscopy" ,
+                               "atomic force spectroscopy" ,
+                               "force modulation" ,
+                               "force modulation AFM" ,
+                               "force-modulation AFM" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001398
+af-p:AFP_0001398 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "SICM" ,
+                               "scanning-ion conductance microscopy" ;
+                 skos:definition "A type of microscopy where a probe consisting of a glass nano- or micro- pipette filled with electrolyte is positioned very close to (in the near-field of) a specimen which is held in an oppositely charge electrolyte. An image of the surface is obtained by mechanically moving the pipette in a raster scan of the specimen, line by line, and recording the ion conductance as a function of position. A feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning ion conductance microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001412
+af-p:AFP_0001412 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "MFM" ,
+                               "magnetic-force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp magnetic spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of a magnetic specimen. An image of the surface is obtained by mechanically moving the tip in a raster scan of the specimen, line by line, and recording the magnetic force experienced by it as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "magnetic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001435
+af-p:AFP_0001435 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000295 ;
+                 skos:altLabel "NSAM" ,
+                               "SNAM" ,
+                               "near-field scanning acoustic microscopy" ;
+                 skos:definition "A type of microscopy where a probe vibrating at its resonant frequency is positioned very close to the surface of the specimen (in the near-field). An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the resonant frequency (or amplitude of vibration) of the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning near-field acoustic microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001497
+af-p:AFP_0001497 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001392 ;
+                 skos:altLabel "DFS" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001520
+af-p:AFP_0001520 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002432 ;
+                 skos:altLabel "AFM force mapping " ,
+                               "AFM mapping " ,
+                               "FSM" ,
+                               "atomic force microscopy mapping" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001559
+af-p:AFP_0001559 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001096 ;
+                 skos:definition "A type of microscopy where a probe consisting of a laser of a specific wavelength transmitted through a tapered optical fibre is positioned very close to (<10 nm from) the surface of the specimen. The tip is coated with metal (to prevent light from escaping from the sides) and near-field (or evanescent field) light is emitted through a small opening or 'aperture' (50-100 nm in diameter) at the apex of the probe. An image is produced by scanning the probe over the specimen and detecting the fluorescence intensity from fluorophores on the surface of the specimen as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "fluorescence scanning near-field optical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001569
+af-p:AFP_0001569 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001261 ;
+                 skos:altLabel "SSRM" ;
+                 skos:definition "A type of microscopy which uses a sharp conductive spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. A two-dimensional map of the carrier concentration profile (resistance) of the semiconducting specimen is obtained by applying a DC bias between the probe and specimen and mechanically moving the probe in a raster scan line-by-line, and recording the current as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning spreading resistance microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001680
+af-p:AFP_0001680 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "DFM-AR" ,
+                               "DFMAR" ,
+                               "DSFM-AR" ,
+                               "DSFMA" ,
+                               "DSFMAR" ,
+                               "NC-AFM" ,
+                               "NC-SFM" ,
+                               "attractive dynamic scanning force microscopy" ,
+                               "dynamic AFM" ,
+                               "dynamic force microscopy in attractive regime" ,
+                               "dynamic mode AFM" ,
+                               "dynamic scanning force microscopy in attractive regime" ,
+                               "dynamic-mode AFM" ,
+                               "non-contact mode AFM" ,
+                               "noncontact atomic force microscopy" ,
+                               "noncontact mode AFM" ,
+                               "noncontact mode scanning force microscopy" ,
+                               "noncontact scanning force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. The tip oscillates in the 'attractive' force region, i.e. avoiding sample contact. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "non-contact mode atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001860
+af-p:AFP_0001860 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002405 ;
+                 skos:altLabel "S-NSOM" ,
+                               "aNSOM" ,
+                               "aSNOM" ,
+                               "apertureless scanning near-field optical microscopy" ,
+                               "s-SNOM" ,
+                               "scattering type apertureless near-field scanning optical microscopy" ,
+                               "scattering type apertureless scanning near-field optical microscopy" ,
+                               "scattering type near-field scanning optical microscopy" ,
+                               "scattering type scanning near-field optical microscopy" ;
+                 skos:definition "A type of microscopy where a laser spot is focused on a solid sharp metallic probe producing a confined light field very close to (<10 nm from) the surface of the specimen. An image is produced by scanning the probe over the specimen and detecting the scattering of the incident light by the probe as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "apertureless near-field scanning optical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001963
+af-p:AFP_0001963 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "CFM" ;
+                 skos:definition "A type of microscopy which uses a chemically functionalised sharp spike (e.g. with thiols) mounted on the end of a cantilever to scan the surface of the specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the chemical interactions between the tip and surface (e.g. gold) as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "chemical force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002034
+af-p:AFP_0002034 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000976 ;
+                 skos:altLabel "SMFM" ,
+                               "ShFM" ,
+                               "dynamic shear force microscopy" ,
+                               "shear force AFM" ,
+                               "shear force atomic force microscopy" ,
+                               "shear force modulation microscopy " ,
+                               "shear force modulation mode AFM" ,
+                               "shear force modulation mode atomic force microscopy" ,
+                               "shear-force AFM" ,
+                               "shear-force atomic force microscopy" ,
+                               "shear-force controlled AFM" ,
+                               "shear-force microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen. The tip oscillates parallel to the surface. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force experienced by the tip as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "shear force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002074
+af-p:AFP_0002074 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000476 ;
+                 skos:altLabel "IR SNIM" ,
+                               "IR s-SNOM" ,
+                               "IR sSNOM" ,
+                               "IR scattering SNOM" ,
+                               "IR scattering near-field optical microscopy" ,
+                               "IR scattering-type near-field optical microscopy" ,
+                               "SNIM IR imaging" ,
+                               "infrared s-SNOM" ,
+                               "infrared sSNOM" ,
+                               "infrared scattering SNOM" ,
+                               "infrared scattering-type near-field optical microscopy" ;
+                 skos:definition "A type of microscopy where a probe consisting of an infrared laser transmitted through a tapered optical fibre is positioned very close to (<10 nm from) the surface of the specimen and focused to a diffraction-limited spot size. A vibrating metallic AFM cantilever tip periodically and locally modifies the electromagnetic field distribution of the excitation laser. An image is produced by scanning the probe over the specimen and detecting the scattered light from the tip as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "infrared scattering near-field optical microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002210
+af-p:AFP_0002210 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000590 ;
+                 skos:altLabel "colloid force microscopy" ,
+                               "colloidal probe AFM" ;
+                 skos:definition "A type of microscopy which uses a microparticle (usually made of silica) mounted on the end of a cantilever to scan the surface of a colloidal specimen. An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the force between the two colloidal surfaces as a function of position. A feedback loop is used to maintain a fixed relationship between the tip and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "colloidal probe atomic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002250
+af-p:AFP_0002250 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "PFM" ,
+                               "photonic-force microscopy" ;
+                 skos:definition "A type of microscopy where optical tweezers are used to trap a small fluorescent latex bead which is then scanned across biological specimens in aqueous solution. An image of the surface is obtained by mechanically moving the bead in a raster scan of the specimen, line by line, and recording the fluorescence intensity as a function of position. A feedback loop is used to maintain a fixed relationship between the bead and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "photonic force microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002262
+af-p:AFP_0002262 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "STM" ,
+                               "scanning tunneling electron microscopy" ,
+                               "scanning tunnelling electron microscopy" ,
+                               "scanning-tunneling electron microscopy" ,
+                               "scanning-tunnelling microscopy" ;
+                 skos:definition "A type of microscopy which uses a sharp conducting probe (or 'tip') held very close (1 nm) to the surface of the specimen. A bias voltage is applied between the tip and specimen which causes a tunnelling current to flow. An image is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the tunnelling current as a function of position. [CHMO]" ;
+                 skos:prefLabel "scanning tunnelling microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002405
+af-p:AFP_0002405 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000945 ;
+                 skos:altLabel "near-field scanning microscopy" ;
+                 skos:definition "Any type of microscopy where a probe is positioned very close to the surface of the specimen (in the near-field). An image of the surface is obtained by mechanically moving the probe in a raster scan of the specimen, line by line, and recording the probe-surface interaction as a function of position. A feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "scanning near-field microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002414
+af-p:AFP_0002414 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001096 ;
+                 skos:altLabel "NSMM" ,
+                               "SNMM" ,
+                               "microwave near-field scanning microscopy" ,
+                               "near-field scanning microwave microscopy" ;
+                 skos:definition "A type of microscopy where a probe consisting of a microwave radiation source transmitted through a tapered optical fibre is positioned very close to (<10 nm from) the surface of the specimen. The tip is coated with metal (to prevent light from escaping from the sides) and near-field (or evanescent field) microwave radiation is emitted through a small opening or 'aperture' (50-100 nm in diameter) at the apex of the probe. An image is produced by scanning the probe over the specimen and detecting the disturbance of the microwave near-field as a function of position. A force feedback loop is used to maintain a fixed relationship between the probe and surface during scanning. [CHMO]" ;
+                 skos:prefLabel "microwave scanning near-field microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000032
+af-r:AFR_0000032 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000479 ;
+                 skos:altLabel "KPFM image" ;
+                 skos:definition "An image obtained by using a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the difference in work function between the tip and sample as a function of position. [CHMO]" ;
+                 skos:prefLabel "Kelvin probe force micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000054
+af-r:AFR_0000054 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000068 ;
+                 skos:altLabel "dynamic force spectra" ,
+                               "force modulation spectra" ,
+                               "force modulation spectrum" ;
+                 skos:definition "A plot of (adhesion or rupture) force vs. loading rate obtained from an atomic force microscopy experiment. [CHMO]" ;
+                 skos:prefLabel "dynamic force spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000055
+af-r:AFR_0000055 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000068 ;
+                 skos:altLabel "atomic force spectra" ,
+                               "force curve" ,
+                               "force curves" ,
+                               "force profile" ,
+                               "force profiles" ;
+                 skos:definition "A plot of force vs. distance obtained by measuring the force experienced by a tip against position on a surface. [CHMO]" ;
+                 skos:prefLabel "atomic force spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000102
+af-r:AFR_0000102 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000479 ;
+                 skos:altLabel "amplitude AFM image" ,
+                               "amplitude AFM images" ,
+                               "amplitude atomic force microscope (AFM) image" ,
+                               "amplitude atomic force microscope (AFM) images" ,
+                               "amplitude atomic force microscope image" ,
+                               "amplitude atomic force microscope images" ,
+                               "amplitude atomic force microscopy image" ,
+                               "amplitude atomic force microscopy images" ;
+                 skos:definition "An image obtained by using a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the deflection of the tip as a function of position. [CHMO]" ;
+                 skos:prefLabel "amplitude atomic force micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000104
+af-r:AFR_0000104 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000479 ;
+                 skos:altLabel "AFM height image" ,
+                               "AFM topography image" ,
+                               "height AFM image" ,
+                               "height AFM images" ,
+                               "height atomic force microscope (AFM) image" ,
+                               "height atomic force microscope (AFM) images" ,
+                               "height atomic force microscope image" ,
+                               "height atomic force microscope images" ,
+                               "height atomic force microscopy image" ,
+                               "height atomic force microscopy images" ,
+                               "topography AFM image" ,
+                               "topography AFM images" ,
+                               "topological AFM image" ,
+                               "topological atomic force micrograph" ;
+                 skos:changeNote "2024-09-12 Add missing [CHMO] attribution." ;
+                 skos:definition "An image obtained by using a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the height moved by the tip as a function of position. [CHMO]" ;
+                 skos:prefLabel "height atomic force micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000178
+af-r:AFR_0000178 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000479 ;
+                 skos:altLabel "tapping-mode AFM image" ,
+                               "tapping-mode AFM images" ,
+                               "tapping-mode atomic force micrograph" ;
+                 skos:definition "An image obtained by using a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the force experienced by the tip as a function of position. The tip oscillates, intermittently touching or tapping the surface. [CHMO]" ;
+                 skos:prefLabel "dynamic force micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000265
+af-r:AFR_0000265 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000068 ;
+                 skos:altLabel "AFM height profile" ;
+                 skos:definition "A plot of vertical displacement vs. distance obtained by using a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the force experienced by the tip as a function of position. [CHMO]" ;
+                 skos:prefLabel "atomic force microscopy height profile" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000399
+af-r:AFR_0000399 rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000101> ;
+                 skos:altLabel "EFM image" ,
+                               "EFM images" ,
+                               "EFM phase image" ,
+                               "EFM phase images" ;
+                 skos:definition "An image obtained by using a conducting sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the drop in amplitude of the oscillating cantilever caused by the electrostatic force it experiences while the tip is biased with a voltage of a few volts, as a function of position. [CHMO]" ;
+                 skos:prefLabel "electrostatic force microscopy image" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000479
+af-r:AFR_0000479 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000038 ;
+                 skos:altLabel "AFM image" ,
+                               "AFM images" ,
+                               "atomic force microscope (AFM) image" ,
+                               "atomic force microscope (AFM) images" ,
+                               "atomic force microscope image" ,
+                               "atomic force microscope images" ,
+                               "atomic force microscopy image" ,
+                               "atomic force microscopy images" ;
+                 skos:definition "An image obtained by using a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the force experienced by the tip as a function of position. [CHMO]" ;
+                 skos:prefLabel "atomic force micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000481
+af-r:AFR_0000481 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000479 ;
+                 skos:altLabel "phase AFM image" ,
+                               "phase AFM images" ,
+                               "phase atomic force microscope (AFM) image" ,
+                               "phase atomic force microscope (AFM) images" ,
+                               "phase atomic force microscope image" ,
+                               "phase atomic force microscope images" ,
+                               "phase atomic force microscopy image" ,
+                               "phase atomic force microscopy images" ;
+                 skos:definition "An image obtained by using a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen, line by line, and recording the drop in amplitude of the oscillating cantilever as a function of position. [CHMO]" ;
+                 skos:prefLabel "phase atomic force micrograph" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2017 Allotrope Foundation" ;
+                                          dct:title "(c) 2017 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/afo/domain/WD/2025/06/scanning-probe-microscopy
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/scanning-probe-microscopy> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

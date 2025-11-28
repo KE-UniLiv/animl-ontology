@@ -1,0 +1,565 @@
+@prefix : <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/organization#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix ops: <http://www.openphacts.org/units/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ncit: <http://purl.obolibrary.org/obo/NCIT> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-sp: <http://purl.allotrope.org/ontologies/spatial#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix vcard: <https://www.w3.org/2006/vcard/ns#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@base <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/organization#> .
+
+<http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/organization> rdf:type owl:Ontology ;
+                                                                                    owl:versionIRI <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/organization> ;
+                                                                                    owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/curation> ,
+                                                                                                <http://purl.allotrope.org/voc/bfo/REC/2018/04/bfo-2-0> ;
+                                                                                    dct:contributor <http://www.allotrope.org> ;
+                                                                                    dct:description "Allotrope Foundation Taxonomy of universals under an organizational perspective" ;
+                                                                                    dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                    dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                    dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                    dct:publisher <http://www.allotrope.org> ;
+                                                                                    dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                               <http://purl.allotrope.org/voc/copyright> ;
+                                                                                    dct:rightsHolder <http://www.allotrope.org> ;
+                                                                                    dct:title "AFT Organization Perspective (REC/2025/06)" ;
+                                                                                    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+                                                                                    owl:priorVersion <http://purl.allotrope.org/voc/afo/perspective/REC/2025/03/organization> ;
+                                                                                    owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002808
+af-x:AFX_0002808 rdf:type owl:AnnotationProperty .
+
+
+###  http://rdfs.org/ns/void#feature
+void:feature rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001083
+af-m:AFM_0001083 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000030 ;
+                 af-x:AFX_0002808 foaf:Person ;
+                 skos:definition "A person is a human that is member of a group or organization. [Allotrope]" ;
+                 skos:prefLabel "person" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001084
+af-m:AFM_0001084 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000027 ;
+                 af-x:AFX_0002808 foaf:Group ;
+                 skos:definition "A group is a an aggregate of people. [Allotrope]" ;
+                 skos:prefLabel "group" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001085
+af-m:AFM_0001085 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000027 ;
+                 af-x:AFX_0002808 org:Organization ,
+                                  foaf:Organization ;
+                 skos:definition "A collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an agent. [W3C ORG]" ;
+                 skos:editorialNote "By this hierarchy organizations are built of physical people, so no pure legal persons can be members of an organization." ;
+                 skos:prefLabel "organization" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001086
+af-m:AFM_0001086 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001085 ;
+                 af-x:AFX_0002808 org:FormalOrganization ;
+                 skos:definition "A formal organization is an organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. [W3C ORG]" ;
+                 skos:prefLabel "formal organization" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001087
+af-m:AFM_0001087 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001085 ;
+                 af-x:AFX_0002808 org:OrganizationalUnit ;
+                 skos:definition "An organization such as a department or support unit which is part of some larger organization and only has full recognition within the context of that organization. In particular the unit would not be regarded as a legal entity in its own right. [W3C ORG]" ;
+                 skos:prefLabel "organizational unit" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000231
+af-q:AFQ_0000231 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000145 ;
+                 af-x:AFX_0002808 org:Membership ;
+                 skos:definition "Membership is the relational quality between a group or organization and its members. [Allotrope]" ;
+                 skos:editorialNote "This is the structural aspect of membership. There is also a temporal aspect of being member of (membership state)." ;
+                 skos:prefLabel "membership" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000917
+af-r:AFR_0000917 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:altLabel "ID" ;
+                 skos:definition "An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the \"object\" or class may be an idea, physical [countable] object (or class thereof), or physical [uncountable] substance (or class thereof). [Wikipedia]" ;
+                 skos:prefLabel "identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000923
+af-r:AFR_0000923 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000030 ;
+                 skos:definition "A facet is a partial information that contains an aspect of some information content entity or parts of it when participating in some process. The facet abstracts of the concrete representation of this aspect of information. [Allotrope]" ;
+                 skos:prefLabel "facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001061
+af-r:AFR_0001061 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001682 ;
+                 af-x:AFX_0002808 foaf:familyName ,
+                                  vcard:family-name ;
+                 dct:source "https://en.wikipedia.org/wiki/Surname" ;
+                 skos:altLabel "last name" ,
+                               "surname" ;
+                 skos:changeNote "2019-05-10 Moved under written name [Allotrope]" ;
+                 skos:definition "A family name is a name that is the portion (in some cultures) of a personal name that indicates a person's family (or tribe or community, depending on the culture). [Wikipedia]" ;
+                 skos:editorialNote "The family name is provided (alongside given name) for use when describing parts of people's names. Although these concepts do not capture the full range of personal naming styles found world-wide, they are commonly used and have some value. [FoaF]" ;
+                 skos:prefLabel "family name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001062
+af-r:AFR_0001062 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001682 ;
+                 af-x:AFX_0002808 foaf:givenName ,
+                                  vcard:given-name ;
+                 dct:source "https://en.wikipedia.org/wiki/Given_name" ;
+                 skos:altLabel "Christian name" ,
+                               "first name" ,
+                               "forename" ;
+                 skos:changeNote "2019-05-10 Moved under written name [Allotrope]" ;
+                 skos:definition "A given name is a name that is a part of a person's personal name. [Wikipedia]" ;
+                 skos:editorialNote "The given name is provided (alongside family name) for use when describing parts of people's names. Although these concepts do not capture the full range of personal naming styles found world-wide, they are commonly used and have some value. [FoaF]" ;
+                 skos:prefLabel "given name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001063
+af-r:AFR_0001063 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001682 ;
+                 dct:source "https://en.wikipedia.org/wiki/Personal_name" ;
+                 skos:altLabel "full name" ,
+                               "name" ,
+                               "person name" ;
+                 skos:changeNote "2019-05-10 Moved under written name [Allotrope]" ;
+                 skos:definition "A personal name is a name that is composed of a set of names by which an individual is known. [Allotrope]" ;
+                 skos:prefLabel "personal name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001064
+af-r:AFR_0001064 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001065 ;
+                 af-x:AFX_0002808 vcard:country-name ;
+                 skos:definition "A country name is a location facet that denotes a country. [Allotrope]" ;
+                 skos:prefLabel "country name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001065
+af-r:AFR_0001065 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 skos:definition "A facet that is about some spatial region or site. [Allotrope]" ;
+                 skos:example "the facets of an address" ;
+                 skos:prefLabel "location facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001066
+af-r:AFR_0001066 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001067 ;
+                 af-x:AFX_0002808 foaf:homepage ;
+                 skos:definition "A homepage hyperlink is a web page hyperlink that is a reference to home page of a person or organization. [Allotrope]" ;
+                 skos:prefLabel "homepage hyperlink" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001067
+af-r:AFR_0001067 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001068 ;
+                 skos:definition "A web page hyperlink is a URL that is a reference to web page. [Allotrope]" ;
+                 skos:prefLabel "web page hyperlink" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001068
+af-r:AFR_0001068 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001082 ;
+                 af-x:AFX_0002808 vcard:url ;
+                 skos:definition "A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. [Wikipedia]" ;
+                 skos:prefLabel "URL" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001069
+af-r:AFR_0001069 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001484 ;
+                 skos:altLabel "LDAP ID" ,
+                               "ldap id" ;
+                 skos:changeNote "2020-03-20 Changed pref label, added alt labels. [Allotrope]" ;
+                 skos:definition "An LDAP identifier is an online account managed by an LDAP server and follows the LDAP specification. [Allotrope]" ;
+                 skos:prefLabel "ldap identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001070
+af-r:AFR_0001070 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002770 ;
+                 skos:altLabel "local system account ID" ;
+                 skos:changeNote "2021-06-23 Changed pref label. [Allotrope]" ,
+                                 "2022-12-208 Changed parent class. [Allotrope]" ,
+                                 "2022-12-208 Changed pref label, added alt label. [Allotrope]" ;
+                 skos:definition "An account to a local computer. [Allotrope]" ;
+                 skos:prefLabel "local system account identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001071
+af-r:AFR_0001071 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001065 ;
+                 af-x:AFX_0002808 vcard:locality ;
+                 skos:definition "A written name denoting a locality (e.g. city) as part a postal address. [Allotrope]" ;
+                 skos:prefLabel "locality" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001078
+af-r:AFR_0001078 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001065 ;
+                 af-x:AFX_0002808 vcard:hasStreetAddress ;
+                 skos:definition "The street address is a location facet of a postal address, that denotes a street. [Allotrope]" ;
+                 skos:prefLabel "street address" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001079
+af-r:AFR_0001079 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001082 ;
+                 af-x:AFX_0002808 vcard:tel ;
+                 skos:altLabel "telephone" ;
+                 skos:definition "A number for calling a telephone. [Allotrope]" ;
+                 skos:prefLabel "telephone number" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001080
+af-r:AFR_0001080 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001682 ;
+                 af-x:AFX_0002808 foaf:title ;
+                 dct:source "https://en.wikipedia.org/wiki/Title_(disambiguation)" ;
+                 skos:definition "A title is a prefix or suffix added to a personal name. A title can be a title of honor, that is a title bestowed as an award,  a honorary title (academic), that is a recognition of contributions by a non-employee or employee, a hereditary title, that is a title that remains in a family or a job title, that is a designation of a person's position in an organization. [Wikipedia]" ;
+                 skos:example "Mr, Mrs, Ms, Dr." ;
+                 skos:prefLabel "title" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001081
+af-r:AFR_0001081 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001682 ;
+                 af-x:AFX_0002808 vcard:honorific-prefix ;
+                 skos:definition "An honorific prefix is a facet that is part of a prefix to a person's name. [Allotrope]" ;
+                 skos:prefLabel "honorific prefix" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001082
+af-r:AFR_0001082 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 skos:definition "A facet that is about communication channels. [Allotrope]" ;
+                 skos:prefLabel "communication facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001083
+af-r:AFR_0001083 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001065 ;
+                 af-x:AFX_0002808 vcard:Location ;
+                 skos:definition "A location name is a location facet that denotes a geographical place. [Allotrope]" ;
+                 skos:prefLabel "location name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001087
+af-r:AFR_0001087 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001082 ;
+                 af-x:AFX_0002808 vcard:hasPostalCode ;
+                 skos:definition "A postal code of a postal address. [Allotrope]" ;
+                 skos:example "ZIP code" ;
+                 skos:prefLabel "postal code" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001480
+af-r:AFR_0001480 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001082 ;
+                 skos:altLabel "fax" ;
+                 skos:definition "A number for calling a fax system. [Allotrope]" ;
+                 skos:prefLabel "fax number" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001481
+af-r:AFR_0001481 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-r:AFR_0001082
+                                                        af-r:AFR_0001484
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 af-x:AFX_0002808 foaf:skypeID ;
+                 skos:altLabel "Skype ID" ,
+                               "Skype id" ;
+                 skos:changeNote "2020-03-20 Changed pref label, added alt labels. [Allotrope]" ;
+                 skos:definition "A Skype ID is an online account on the Skype system. [Allotrope]" ;
+                 skos:prefLabel "Skype identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001482
+af-r:AFR_0001482 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001682 ;
+                 af-x:AFX_0002808 vcard:honorific-suffix ;
+                 skos:definition "An honorific prefix is a facet that is part of a suffix to a person's name. [Allotrope]" ;
+                 skos:prefLabel "honorific suffix" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001483
+af-r:AFR_0001483 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 skos:definition "An account describes authority and authorization to access resources on a system. [Allotrope]" ;
+                 skos:prefLabel "account" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001484
+af-r:AFR_0001484 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002770 ;
+                 af-x:AFX_0002808 foaf:OnlineAccount ;
+                 skos:altLabel "online account ID" ,
+                               "online account id" ;
+                 skos:changeNote "2020-03-20 Changed pref label, added alt labels. [Allotrope]" ;
+                 skos:definition "An account that is accessible via remote access. [Allotrope]" ;
+                 skos:prefLabel "online account identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001485
+af-r:AFR_0001485 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001484 ;
+                 af-x:AFX_0002808 foaf:openid ;
+                 skos:altLabel "OpenID" ,
+                               "OpenID id" ;
+                 skos:changeNote "2020-03-20 Changed pref label, added alt labels. [Allotrope]" ;
+                 skos:definition "OpenID is an identifier following the OpenID specification. [Allotrope]" ;
+                 skos:prefLabel "OpenID identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001486
+af-r:AFR_0001486 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 af-x:AFX_0002808 foaf:gender ,
+                                  vcard:Gender ;
+                 skos:definition "The gender facet relates a human to a string representing its gender. [Allotrope]" ;
+                 skos:note "In most cases the value will be the string 'female' or 'male' (in lowercase without surrounding quotes or spaces). Like all FOAF properties, there is in general no requirement to use gender in any particular document or description. Values other than 'male' and 'female' may be used, but are not enumerated here. The gender mechanism is not intended to capture the full variety of biological, social and sexual concepts associated with the word 'gender'. [FoaF]" ;
+                 skos:prefLabel "gender" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001488
+af-r:AFR_0001488 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001065 ;
+                 af-x:AFX_0002808 vcard:hasGeo ;
+                 skos:altLabel "global positioning" ;
+                 skos:definition "A facet denoting a geographic position. [Allotrope]" ;
+                 skos:prefLabel "geolocation" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001489
+af-r:AFR_0001489 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001065 ;
+                 af-x:AFX_0002808 vcard:region-name ;
+                 skos:definition "A region name is a location facet that denotes a geographic region (state, province). [Allotrope]" ;
+                 skos:prefLabel "region name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001490
+af-r:AFR_0001490 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 af-x:AFX_0002808 foaf:birthday ,
+                                  vcard:bday ;
+                 skos:altLabel "birth date" ;
+                 skos:definition "A birthday is a facet indicating the day of birth of a person. [Allotrope]" ;
+                 skos:prefLabel "birthday" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001507
+af-r:AFR_0001507 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001682 ;
+                 af-x:AFX_0002808 vcard:nickname ;
+                 dct:source <https://en.wikipedia.org/wiki/Nickname> ;
+                 skos:changeNote "2019-05-10 Moved under written name [Allotrope]" ;
+                 skos:definition "The nick name is a written name of person that is a substitute for the proper name of a familiar person, place, or thing - commonly used for affection. [Wikipedia]" ;
+                 skos:prefLabel "nick name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001682
+af-r:AFR_0001682 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 skos:definition "A person facet is a facet that describes of a person's name or parts of it. [Allotrope]" ;
+                 skos:prefLabel "person facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002770
+af-r:AFR_0002770 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000917 ;
+                 af-x:AFX_0002808 ncit:_C42694 ,
+                                  sio:SIO_001165 ;
+                 skos:altLabel "account ID" ,
+                               "account id" ,
+                               "user ID" ,
+                               "user id" ,
+                               "user identifier" ,
+                               "user name" ,
+                               "username" ;
+                 skos:definition "An account identifier is an identifier, that identifies an account in a system that people or other systems use to access it. [Allotrope]" ;
+                 skos:prefLabel "account identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000402
+af-rl:AFRL_0000402 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   skos:definition "Role that a organizational entity plays leader or formal head of the organization. [W3C ORG]" ;
+                   skos:prefLabel "head" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000403
+af-rl:AFRL_0000403 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   af-x:AFX_0002808 org:Post ;
+                   skos:definition "A post is some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio. [W3C ORG]" ;
+                   skos:example "the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person [W3C ORG]" ;
+                   skos:note "A post can be held by multiple people and hence can be treated as a organization in its own right. [W3C ORG]" ;
+                   skos:prefLabel "post" .
+
+
+###  http://purl.allotrope.org/ontologies/spatial#AFSP_0000001
+af-sp:AFSP_0000001 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000029 ;
+                   af-x:AFX_0002808 org:Site ;
+                   skos:altLabel "site" ;
+                   skos:changeNote "2019-09-04 Changed pref label and definition. [Allotrope]" ;
+                   skos:definition "A site (organization) is a site where organizational entities are located such as an office or premise. [Allotrope]" ;
+                   skos:prefLabel "site (organization)" ;
+                   skos:scopeNote "An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. [W3C ORG]" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+iao:_0000030 rdfs:subClassOf bfo:_0000031 .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000422
+iao:_0000422 rdf:type owl:Class ;
+             rdfs:subClassOf af-r:AFR_0001082 ;
+             skos:definition "A textual entity that is used as directive to deliver something to a person, or organization. [IAO]" ;
+             skos:prefLabel "postal address" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000429
+iao:_0000429 rdf:type owl:Class ;
+             rdfs:subClassOf af-r:AFR_0001082 ;
+             dct:source "RFC 5322" ,
+                        "https://en.wikipedia.org/wiki/Email_address" ;
+             skos:definition "An email address identifies an email box to which email messages are delivered. [Wikipedia]" ;
+             skos:prefLabel "email address" .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

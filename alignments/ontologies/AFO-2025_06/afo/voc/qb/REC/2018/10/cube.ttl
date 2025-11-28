@@ -1,0 +1,549 @@
+@prefix : <http://purl.allotrope.org/voc/qb/REC/2018/10/cube#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://purl.allotrope.org/voc/qb/REC/2018/10/cube#> .
+
+<http://purl.allotrope.org/voc/qb/REC/2018/10/cube> rdf:type owl:Ontology ;
+                                                     owl:versionIRI <http://purl.allotrope.org/voc/qb/REC/2018/10/cube> ;
+                                                     dcterms:contributor _:genid1 ,
+                                                                         _:genid2 ,
+                                                                         _:genid3 ,
+                                                                         _:genid4 ,
+                                                                         _:genid5 ;
+                                                     dcterms:created "2010-07-12"^^xsd:date ;
+                                                     dcterms:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+                                                     dcterms:modified "2010-11-27"^^xsd:date ,
+                                                                      "2013-03-02"^^xsd:date ,
+                                                                      "2013-07-26"^^xsd:date ,
+                                                                      "2018-10-10"^^xsd:date ;
+                                                     dcterms:title "Vocabulary for multi-dimensional (e.g. statistical) data publishing" ;
+                                                     rdfs:comment "This vocabulary allows multi-dimensional data, such as statistics, to be published in RDF. It is based on the core information model from SDMX (and thus also DDI)." ;
+                                                     rdfs:label "The data cube vocabulary" ;
+                                                     owl:versionInfo "REC/2018/10" ;
+                                                     prov:wasDerivedFrom "http://purl.org/linked-data/cube v0.2" .
+
+_:genid1 foaf:mbox <mailto:ian@epimorphics.com> .
+
+_:genid2 foaf:mbox <mailto:jeni@jenitennison.com> .
+
+_:genid3 foaf:mbox <mailto:arofan.gregory@earthlink.net> .
+
+_:genid4 foaf:mbox <mailto:dave@epimorphics.com> .
+
+_:genid5 foaf:mbox <mailto:richard@cyganiak.de> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/linked-data/cube#attribute
+qb:attribute rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf qb:componentProperty ;
+             rdfs:range qb:AttributeProperty ;
+             rdfs:comment "An alternative to qb:componentProperty which makes explicit that the component is a attribute"@en ;
+             rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+             rdfs:label "attribute"@en .
+
+
+###  http://purl.org/linked-data/cube#codeList
+qb:codeList rdf:type owl:ObjectProperty ;
+            rdfs:domain qb:CodedProperty ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( qb:HierarchicalCodeList
+                                       skos:Collection
+                                       skos:ConceptScheme
+                                     )
+                       ] ;
+            rdfs:comment "gives the code list associated with a CodedProperty"@en ;
+            rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+            rdfs:label "code list"@en .
+
+
+###  http://purl.org/linked-data/cube#component
+qb:component rdf:type owl:ObjectProperty ;
+             rdfs:domain qb:DataStructureDefinition ;
+             rdfs:range qb:ComponentSpecification ;
+             rdfs:comment "indicates a component specification which is included in the structure of the dataset"@en ;
+             rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+             rdfs:label "component specification"@en .
+
+
+###  http://purl.org/linked-data/cube#componentAttachment
+qb:componentAttachment rdf:type owl:ObjectProperty ;
+                       rdfs:domain qb:ComponentSpecification ;
+                       rdfs:range rdfs:Class ;
+                       rdfs:comment "Indicates the level at which the component property should be attached, this might an qb:DataSet, qb:Slice or qb:Observation, or a qb:MeasureProperty."@en ;
+                       rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                       rdfs:label "component attachment"@en .
+
+
+###  http://purl.org/linked-data/cube#componentProperty
+qb:componentProperty rdf:type owl:ObjectProperty ;
+                     rdfs:domain qb:ComponentSet ;
+                     rdfs:range qb:ComponentProperty ;
+                     rdfs:comment "indicates a ComponentProperty (i.e. attribute/dimension) expected on a DataSet, or a dimension fixed in a SliceKey"@en ;
+                     rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                     rdfs:label "component"@en .
+
+
+###  http://purl.org/linked-data/cube#concept
+qb:concept rdf:type owl:ObjectProperty ;
+           rdfs:domain qb:ComponentProperty ;
+           rdfs:range skos:Concept ;
+           rdfs:comment "gives the concept which is being measured or indicated by a ComponentProperty"@en ;
+           rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+           rdfs:label "concept"@en .
+
+
+###  http://purl.org/linked-data/cube#dataSet
+qb:dataSet rdf:type owl:ObjectProperty ;
+           rdfs:domain qb:Observation ;
+           rdfs:range qb:DataSet ;
+           rdfs:comment "indicates the data set of which this observation is a part"@en ;
+           rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+           rdfs:label "data set"@en .
+
+
+###  http://purl.org/linked-data/cube#dimension
+qb:dimension rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf qb:componentProperty ;
+             rdfs:range qb:DimensionProperty ;
+             rdfs:comment "An alternative to qb:componentProperty which makes explicit that the component is a dimension"@en ;
+             rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+             rdfs:label "dimension"@en .
+
+
+###  http://purl.org/linked-data/cube#hierarchyRoot
+qb:hierarchyRoot rdf:type owl:ObjectProperty ;
+                 rdfs:domain qb:HierarchicalCodeList ;
+                 rdfs:comment "Specifies a root of the hierarchy. A hierarchy may have multiple roots but must have at least one."@en ;
+                 rdfs:isDefinedBy <http://purl.org/linked-data/cube> .
+
+
+###  http://purl.org/linked-data/cube#measure
+qb:measure rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf qb:componentProperty ;
+           rdfs:range qb:MeasureProperty ;
+           rdfs:comment "An alternative to qb:componentProperty which makes explicit that the component is a measure"@en ;
+           rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+           rdfs:label "measure"@en .
+
+
+###  http://purl.org/linked-data/cube#measureDimension
+qb:measureDimension rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf qb:componentProperty ;
+                    rdfs:range qb:DimensionProperty ;
+                    rdfs:comment "An alternative to qb:componentProperty which makes explicit that the component is a measure dimension"@en ;
+                    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                    rdfs:label "measure dimension"@en .
+
+
+###  http://purl.org/linked-data/cube#measureType
+qb:measureType rdf:type owl:ObjectProperty ;
+               rdfs:range qb:MeasureProperty .
+
+
+###  http://purl.org/linked-data/cube#observation
+qb:observation rdf:type owl:ObjectProperty ;
+               rdfs:domain qb:ObservationGroup ;
+               rdfs:range qb:Observation ;
+               rdfs:comment "indicates a observation contained within this slice of the data set"@en ;
+               rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+               rdfs:label "observation"@en .
+
+
+###  http://purl.org/linked-data/cube#observationGroup
+qb:observationGroup rdf:type owl:ObjectProperty ;
+                    rdfs:range qb:ObservationGroup ;
+                    rdfs:comment "Indicates a group of observations. The domain of this property is left open so that a group may be attached to different resources and need not be restricted to a single DataSet"@en ;
+                    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                    rdfs:label "observation group"@en .
+
+
+###  http://purl.org/linked-data/cube#parentChildProperty
+qb:parentChildProperty rdf:type owl:ObjectProperty ;
+                       rdfs:domain qb:HierarchicalCodeList ;
+                       rdfs:range rdf:Property ;
+                       rdfs:comment "Specifies a property which relates a parent concept in the hierarchy to a child concept."@en ;
+                       rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                       rdfs:label "parent-child property"@en .
+
+
+###  http://purl.org/linked-data/cube#slice
+qb:slice rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf qb:observationGroup ;
+         rdfs:domain qb:DataSet ;
+         rdfs:range qb:Slice ;
+         rdfs:comment "Indicates a subset of a DataSet defined by fixing a subset of the dimensional values"@en ;
+         rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+         rdfs:label "slice"@en .
+
+
+###  http://purl.org/linked-data/cube#sliceKey
+qb:sliceKey rdf:type owl:ObjectProperty ;
+            rdfs:domain qb:DataStructureDefinition ;
+            rdfs:range qb:SliceKey ;
+            rdfs:comment "indicates a slice key which is used for slices in this dataset"@en ;
+            rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+            rdfs:label "slice key"@en .
+
+
+###  http://purl.org/linked-data/cube#sliceStructure
+qb:sliceStructure rdf:type owl:ObjectProperty ;
+                  rdfs:domain qb:Slice ;
+                  rdfs:range qb:SliceKey ;
+                  rdfs:comment "indicates the sub-key corresponding to this slice"@en ;
+                  rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                  rdfs:label "slice structure"@en .
+
+
+###  http://purl.org/linked-data/cube#structure
+qb:structure rdf:type owl:ObjectProperty ;
+             rdfs:domain qb:DataSet ;
+             rdfs:range qb:DataStructureDefinition ;
+             rdfs:comment "indicates the structure to which this data set conforms"@en ;
+             rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+             rdfs:label "structure"@en .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/linked-data/cube#componentRequired
+qb:componentRequired rdf:type owl:DatatypeProperty ;
+                     rdfs:domain qb:ComponentSpecification ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment """Indicates whether a component property is required (true) or optional (false) in the context of a DSD. Only applicable
+    to components correspond to an attribute. Defaults to false (optional)."""@en ;
+                     rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                     rdfs:label "component required"@en .
+
+
+###  http://purl.org/linked-data/cube#order
+qb:order rdf:type owl:DatatypeProperty ;
+         rdfs:domain qb:ComponentSpecification ;
+         rdfs:range xsd:int ;
+         rdfs:comment "indicates a priority order for the components of sets with this structure, used to guide presentations - lower order numbers come before higher numbers, un-numbered components come last"@en ;
+         rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+         rdfs:label "order"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/NET/scovo#Dataset
+scovo:Dataset rdf:type owl:Class ;
+              owl:equivalentClass qb:DataSet .
+
+
+###  http://purl.org/NET/scovo#Item
+scovo:Item rdf:type owl:Class ;
+           owl:equivalentClass qb:Observation .
+
+
+###  http://purl.org/linked-data/cube#Attachable
+qb:Attachable rdf:type owl:Class ;
+              rdfs:comment "Abstract superclass for everything that can have attributes and dimensions"@en ;
+              rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+              rdfs:label "Attachable (abstract)"@en .
+
+
+###  http://purl.org/linked-data/cube#AttributeProperty
+qb:AttributeProperty rdf:type owl:Class ;
+                     rdfs:subClassOf qb:ComponentProperty ;
+                     owl:disjointWith qb:MeasureProperty ;
+                     rdfs:comment "The class of components which represent attributes of observations in the cube, e.g. unit of measurement"@en ;
+                     rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                     rdfs:label "Attribute property"@en .
+
+
+###  http://purl.org/linked-data/cube#CodedProperty
+qb:CodedProperty rdf:type owl:Class ;
+                 rdfs:subClassOf qb:ComponentProperty ;
+                 rdfs:comment "Superclass of all coded ComponentProperties"@en ;
+                 rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                 rdfs:label "Coded property"@en .
+
+
+###  http://purl.org/linked-data/cube#ComponentProperty
+qb:ComponentProperty rdf:type owl:Class ;
+                     rdfs:subClassOf rdf:Property ;
+                     rdfs:comment "Abstract super-property of all properties representing dimensions, attributes or measures"@en ;
+                     rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                     rdfs:label "Component property (abstract)"@en .
+
+
+###  http://purl.org/linked-data/cube#ComponentSet
+qb:ComponentSet rdf:type owl:Class ;
+                rdfs:comment "Abstract class of things which reference one or more ComponentProperties"@en ;
+                rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                rdfs:label "Component set"@en .
+
+
+###  http://purl.org/linked-data/cube#ComponentSpecification
+qb:ComponentSpecification rdf:type owl:Class ;
+                          rdfs:subClassOf qb:ComponentSet ;
+                          rdfs:comment "Used to define properties of a component (attribute, dimension etc) which are specific to its usage in a DSD."@en ;
+                          rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                          rdfs:label "Component specification"@en .
+
+
+###  http://purl.org/linked-data/cube#DataSet
+qb:DataSet rdf:type owl:Class ;
+           rdfs:subClassOf qb:Attachable ;
+           rdfs:comment "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure."@en ;
+           rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+           rdfs:label "Data set"@en .
+
+
+###  http://purl.org/linked-data/cube#DataStructureDefinition
+qb:DataStructureDefinition rdf:type owl:Class ;
+                           rdfs:subClassOf qb:ComponentSet ;
+                           rdfs:comment "Defines the structure of a DataSet or slice"@en ;
+                           rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                           rdfs:label "Data structure definition"@en .
+
+
+###  http://purl.org/linked-data/cube#DimensionProperty
+qb:DimensionProperty rdf:type owl:Class ;
+                     rdfs:subClassOf qb:CodedProperty ,
+                                     qb:ComponentProperty ;
+                     owl:disjointWith qb:MeasureProperty ;
+                     rdfs:comment "The class of components which represent the dimensions of the cube"@en ;
+                     rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                     rdfs:label "Dimension property"@en .
+
+
+###  http://purl.org/linked-data/cube#HierarchicalCodeList
+qb:HierarchicalCodeList rdf:type owl:Class ;
+                        rdfs:comment "Represents a generalized hierarchy of concepts which can be used for coding. The hierarchy is defined by one or more roots together with a property which relates concepts in the hierarchy to thier child concept .  The same concepts may be members of multiple hierarchies provided that different qb:parentChildProperty values are used for each hierarchy."@en ;
+                        rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                        rdfs:label "Hierarchical Code List"@en .
+
+
+###  http://purl.org/linked-data/cube#MeasureProperty
+qb:MeasureProperty rdf:type owl:Class ;
+                   rdfs:subClassOf qb:ComponentProperty ;
+                   rdfs:comment "The class of components which represent the measured value of the phenomenon being observed"@en ;
+                   rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                   rdfs:label "Measure property"@en .
+
+
+###  http://purl.org/linked-data/cube#Observation
+qb:Observation rdf:type owl:Class ;
+               rdfs:subClassOf qb:Attachable ;
+               rdfs:comment "A single observation in the cube, may have one or more associated measured values"@en ;
+               rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+               rdfs:label "Observation"@en .
+
+
+###  http://purl.org/linked-data/cube#ObservationGroup
+qb:ObservationGroup rdf:type owl:Class ;
+                    rdfs:comment "A, possibly arbitrary, group of observations."@en ;
+                    rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                    rdfs:label "Observation Group"@en .
+
+
+###  http://purl.org/linked-data/cube#Slice
+qb:Slice rdf:type owl:Class ;
+         rdfs:subClassOf qb:Attachable ,
+                         qb:ObservationGroup ;
+         rdfs:comment "Denotes a subset of a DataSet defined by fixing a subset of the dimensional values, component properties on the Slice"@en ;
+         rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+         rdfs:label "Slice"@en .
+
+
+###  http://purl.org/linked-data/cube#SliceKey
+qb:SliceKey rdf:type owl:Class ;
+            rdfs:subClassOf qb:ComponentSet ;
+            rdfs:comment "Denotes a subset of the component properties of a DataSet which are fixed in the corresponding slices"@en ;
+            rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+            rdfs:label "Slice key"@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+rdf:Property rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/linked-data/cube#measureType
+qb:measureType rdf:type owl:NamedIndividual ,
+                        qb:DimensionProperty .
+
+
+###  mailto:arofan.gregory@earthlink.net
+<mailto:arofan.gregory@earthlink.net> rdf:type owl:NamedIndividual .
+
+
+###  mailto:dave@epimorphics.com
+<mailto:dave@epimorphics.com> rdf:type owl:NamedIndividual .
+
+
+###  mailto:ian@epimorphics.com
+<mailto:ian@epimorphics.com> rdf:type owl:NamedIndividual .
+
+
+###  mailto:jeni@jenitennison.com
+<mailto:jeni@jenitennison.com> rdf:type owl:NamedIndividual .
+
+
+###  mailto:richard@cyganiak.de
+<mailto:richard@cyganiak.de> rdf:type owl:NamedIndividual .
+
+
+[ foaf:mbox <mailto:dave@epimorphics.com>
+] .
+
+[ foaf:mbox <mailto:arofan.gregory@earthlink.net>
+ ] .
+
+[ foaf:mbox <mailto:jeni@jenitennison.com>
+ ] .
+
+[ foaf:mbox <mailto:ian@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:arofan.gregory@earthlink.net>
+ ] .
+
+[ foaf:mbox <mailto:richard@cyganiak.de>
+ ] .
+
+[ foaf:mbox <mailto:ian@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:ian@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:richard@cyganiak.de>
+ ] .
+
+[ foaf:mbox <mailto:ian@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:arofan.gregory@earthlink.net>
+ ] .
+
+[ foaf:mbox <mailto:richard@cyganiak.de>
+ ] .
+
+[ foaf:mbox <mailto:arofan.gregory@earthlink.net>
+ ] .
+
+[ foaf:mbox <mailto:jeni@jenitennison.com>
+ ] .
+
+[ foaf:mbox <mailto:dave@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:dave@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:richard@cyganiak.de>
+ ] .
+
+[ foaf:mbox <mailto:dave@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:jeni@jenitennison.com>
+ ] .
+
+[ foaf:mbox <mailto:jeni@jenitennison.com>
+ ] .
+
+[ foaf:mbox <mailto:richard@cyganiak.de>
+ ] .
+
+[ foaf:mbox <mailto:jeni@jenitennison.com>
+ ] .
+
+[ foaf:mbox <mailto:dave@epimorphics.com>
+ ] .
+
+[ foaf:mbox <mailto:arofan.gregory@earthlink.net>
+ ] .
+
+[ foaf:mbox <mailto:ian@epimorphics.com>
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+qb:measureType rdfs:comment "Generic measure dimension, the value of this dimension indicates which measure (from the set of measures in the DSD) is being given by the obsValue (or other primary measure)"@en ;
+                rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                rdfs:label "measure type"@en .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

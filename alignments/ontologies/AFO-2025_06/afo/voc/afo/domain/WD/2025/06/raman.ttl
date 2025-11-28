@@ -1,0 +1,622 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/raman#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/raman#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/raman> rdf:type owl:Ontology ;
+                                                                       owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/raman> ;
+                                                                       owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                   <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/raman> ,
+                                                                                   <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/detection> ,
+                                                                                   <http://purl.allotrope.org/voc/qb/REC/2018/10/cube> ;
+                                                                       dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                       dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                       dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                       dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                  <http://purl.allotrope.org/voc/copyright> ;
+                                                                       dct:title "AFO Raman Domain Ontology (WD/2025/06)" ;
+                                                                       owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/raman> ;
+                                                                       owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001684
+af-e:AFE_0001684 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000551 ,
+                                 af-e:AFE_0001685 ;
+                 skos:definition "A handheld Raman spectrometer is a type of Raman spectrometer that can be carried around to measure samples at different locations. [Allotrope]" ;
+                 skos:example "Thermo TruScan, Rigaku FirstGuard" ;
+                 skos:prefLabel "handheld raman spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001685
+af-e:AFE_0001685 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000551 ;
+                 skos:altLabel "dispersive raman" ;
+                 skos:definition "A dispersive Raman spectrometer is a type of Raman spectrometer that focuses the signal on a grating that separates the wavelengths and sends the spatially separated beams onto a detector. [Allotrope]" ;
+                 skos:prefLabel "dispersive raman spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001686
+af-e:AFE_0001686 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000551 ;
+                 skos:altLabel "FT Raman" ,
+                               "Fourier transform raman" ;
+                 skos:definition "A Fourier transform Raman spectrometer is a type of Raman spectrometer that applies Fourier transformation to the time domain signal in order to convert it to the frequency domain. [Allotrope]" ;
+                 skos:example "Thermo Nicolet FT Raman" ;
+                 skos:prefLabel "Fourier transform raman spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001688
+af-e:AFE_0001688 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001685 ;
+                 skos:altLabel "process raman" ,
+                               "raman probe" ;
+                 skos:definition "A process Raman spectrometer is a type of Raman spectrometer that allows for monitoring and analysis of processes. [Allotrope]" ;
+                 skos:prefLabel "process raman spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001689
+af-e:AFE_0001689 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000826 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:changeNote "2015-11-25 add concept [Amgen]" ;
+                 skos:definition "A Raman probe is a sampling probe that allows for investigation of samples by Raman spectroscopy. [Allotrope]" ;
+                 skos:prefLabel "raman probe" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000058
+af-p:AFP_0000058 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001440 ;
+                 skos:altLabel "IRGS" ,
+                               "IRS" ,
+                               "Raman loss spectroscopy" ,
+                               "SRLS" ,
+                               "inverse Raman gain spectroscopy" ,
+                               "inverse Raman spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light from two lasers ('pump' and 'probe') by a sample is detected. In stimulated Raman gain spectroscopy the pump laser has a lower frequency than the probe laser. [CHMO]" ;
+                 skos:prefLabel "stimulated Raman loss spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000177
+af-p:AFP_0000177 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000578 ;
+                 skos:altLabel "UHV-TERS" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of visible laser light, by metal surfaces, where scattering is enhanced by the optical near field of a scanning tunnelling tip, under ultra-high vacuum is detected. [CHMO]" ;
+                 skos:prefLabel "ultra-high vacuum tip-enhanced Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000341
+af-p:AFP_0000341 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000695 ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light by a sample is detected. An anti-Stokes frequency stimulation beam is used and a Stokes frequency beam is observed and the difference between the pump and the Stokes beams coincides with the frequency of an electronic transition within the molecule. Multiphoton excitation is used to produce a signal in which the emitted waves are coherent. [CHMO]" ;
+                 skos:prefLabel "coherent Stokes resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000360
+af-p:AFP_0000360 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "NIR Raman" ,
+                               "near-infrared Raman" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of near-infrared radiation (radiation in the range 0.8-2 µm) is detected. [CHMO]" ;
+                 skos:prefLabel "near-infrared Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000523
+af-p:AFP_0000523 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "SERS" ,
+                               "SERS spectroscopy" ,
+                               "surface enhanced Raman scattering" ,
+                               "surface enhanced Raman spectrometry" ,
+                               "surface enhanced Raman spectroscopy" ,
+                               "surface-enhanced Raman scattering" ,
+                               "surface-enhanced Raman scattering (SERS) spectroscopy" ,
+                               "surface-enhanced Raman spectrometry" ,
+                               "surface-enhanced Raman spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a visible laser, by a sample adsorbed onto a metal (Au, Ag or Cu) surface is detected. [CHMO]" ;
+                 skos:prefLabel "surface-enhanced Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000532
+af-p:AFP_0000532 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "OTRS" ,
+                               "Raman tweezers" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, usually from a laser, by a sample (e.g. a biological cell) constrained using optical tweezers is detected. [CHMO]" ;
+                 skos:prefLabel "optical tweezers Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000567
+af-p:AFP_0000567 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000523 ,
+                                 af-p:AFP_0001108 ;
+                 skos:altLabel "SERRS" ,
+                               "surface enhanced resonance Raman scattering spectrometry" ,
+                               "surface enhanced resonance Raman scattering spectroscopy" ,
+                               "surface enhanced resonance Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a visible laser, by a sample adsorbed onto a metal (Au, Ag or Cu) surface is detected. The energy of the incoming laser is adjusted such that it or the scattered light coincides with an electronic transition within the sample. [CHMO]" ;
+                 skos:prefLabel "surface-enhanced resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000575
+af-p:AFP_0000575 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001440 ;
+                 skos:altLabel "FSRS" ,
+                               "FSRSS" ,
+                               "femtosecond broadband stimulated Raman scattering spectrometry" ,
+                               "femtosecond broadband stimulated Raman scattering spectroscopy" ,
+                               "femtosecond broadband stimulated Raman spectrometry" ,
+                               "femtosecond broadband stimulated Raman spectroscopy" ,
+                               "femtosecond stimulated Raman scattering spectrometry" ,
+                               "femtosecond stimulated Raman scattering spectroscopy" ,
+                               "femtosecond stimulated Raman spectrometry" ;
+                 skos:changeNote "2015-12-14 fixed typo [Allotrope]" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a femtosecond laser pulse, by a sample is detected. The laser pulse is generated by the mixing of two lasers ('pump' and 'probe'). [CHMO]" ;
+                 skos:prefLabel "femtosecond stimulated Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000578
+af-p:AFP_0000578 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "TERS" ,
+                               "tip-enhanced Raman scattering spectrometry" ,
+                               "tip-enhanced Raman scattering spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a visible laser (500-650 nm), by metal surfaces, where scattering is enhanced by the optical near-field of a metal-coated scanning probe microscopy tip, is detected. [CHMO]" ;
+                 skos:prefLabel "tip-enhanced Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000653
+af-p:AFP_0000653 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "UVR" ,
+                               "ultra-violet Raman spectrometry" ,
+                               "ultra-violet Raman spectroscopy" ,
+                               "ultraviolet Raman spectrometry" ,
+                               "ultraviolet Raman spectroscopy" ;
+                 skos:changeNote "2015-12-14 Moved to Raman spectroscopy. [Allotrope]" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from an ultraviolet laser, by a sample is detected. [CHMO]" ;
+                 skos:prefLabel "ultraviolet Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000654
+af-p:AFP_0000654 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000523 ;
+                 skos:altLabel "EC-SERS" ,
+                               "electrochemical SERS" ,
+                               "electrochemical surface enhanced Raman scattering" ,
+                               "electrochemical surface-enhanced Raman scattering" ,
+                               "electrochemical surface-enhanced Raman spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a visible laser, at a metal (Au, Ag or Cu) electrochemcial interface is detected. [CHMO]" ;
+                 skos:prefLabel "electrochemical surface-enhanced Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000662
+af-p:AFP_0000662 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "DCD Raman spectroscopy" ,
+                               "DCDR" ,
+                               "DCDR spectroscopy" ,
+                               "drop coating deposition Raman (DCDR) spectroscopy" ,
+                               "drop-coating deposition Raman spectroscopy" ,
+                               "drop-coating-deposition Raman spectroscopy" ;
+                 skos:changeNote "2015-12-14 Moved to Raman spectroscopy. [Allotrope]" ;
+                 skos:definition "A type of Raman spectroscopy where the spectral signal is enhanced by pre-concentration of the sample. Drops of the sample in solution are deposited onto a surface and dry in a 'coffee-ring' pattern. Spectra are then obtained from this ring of excess of material, after evaporation has completed. [CHMO]" ;
+                 skos:prefLabel "drop coating deposition Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000695
+af-p:AFP_0000695 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001830 ;
+                 skos:altLabel "CSRS" ,
+                               "coherent Stokes Raman scattering spectrometry" ,
+                               "coherent Stokes Raman scattering spectroscopy" ,
+                               "coherent Stokes Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light by a sample is detected. An anti-Stokes frequency stimulation beam is used and a Stokes frequency beam is observed. Multiphoton excitation is used to produce a signal in which the emitted waves are coherent. [CHMO]" ;
+                 skos:prefLabel "coherent Stokes Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000701
+af-p:AFP_0000701 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001967 ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a deep ultraviolet (<300 nm) laser, by a sample is detected. The energy of the incoming laser is adjusted such that it or the scattered light coincides with an electronic transition within the sample. [CHMO]" ;
+                 skos:prefLabel "deep ultra-violet resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000704
+af-p:AFP_0000704 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001108 ;
+                 skos:altLabel "Kerr-gated Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, usually from a laser in the visible, near infrared, or near ultraviolet range, by a sample is detected. The energy of the incoming laser is adjusted such that it or the scattered light coincides with an electronic transition within the sample, and the laser is combined with a Kerr gate fluorescence rejection system. [CHMO]" ;
+                 skos:prefLabel "Kerr-gated resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000739
+af-p:AFP_0000739 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "CRS" ,
+                               "confocal Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light is detected. An aperture is used to discriminate between Raman signal coming from the focused laser spot and Raman signal coming from the out-of-focus region of the sample. [CHMO]" ;
+                 skos:prefLabel "confocal Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000750
+af-p:AFP_0000750 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001440 ;
+                 skos:altLabel "PARS" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light by a sample is detected. Two lasers ('pump and 'probe') are mixed and focused on the sample cell. When the frequency difference between the lasers corresponds to a Raman transition, an acoustic signal (a sound wave produced by an increase in pressure) is generated and detected by a sensitive microphone. [CHMO]" ;
+                 skos:prefLabel "photoacoustic Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000796
+af-p:AFP_0000796 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001731 ;
+                 skos:altLabel "SEROA" ,
+                               "surface enhanced Raman optical activity" ,
+                               "surface enhanced chiral Raman spectroscopy" ,
+                               "surface-enhanced Raman optical activity" ;
+                 skos:definition "A type of spectroscopy where vibrational optical activity from a sample absorbed onto a metal (Au, Ag or Cu) surface is measured by means of a small difference in the intensity of Raman scattering from chiral molecules of right- and left-circularly polarized incident light. [CHMO]" ;
+                 skos:prefLabel "surface-enhanced chiral Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000904
+af-p:AFP_0000904 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000111 ;
+                 skos:altLabel "IXS" ,
+                               "IXSS" ,
+                               "X-ray Raman spectrometry" ,
+                               "X-ray Raman spectroscopy" ,
+                               "XSS" ,
+                               "inelastic X-ray scattering" ,
+                               "inelastic X-ray scattering spectrometry" ,
+                               "inelastic X-ray scattering spectroscopy" ,
+                               "non-resonant inelastic X-ray emission spectrometry" ,
+                               "non-resonant inelastic X-ray emission spectroscopy" ,
+                               "non-resonant inelastic X-ray scattering" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000946
+af-p:AFP_0000946 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001440 ;
+                 skos:altLabel "IDSRS" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from two lasers ('pump' and 'probe') by a sample is detected. The molecules in the sample are ionized using an ultraviolet laser in order to improve the signal-to-noise ratio of the spectrum. [CHMO]" ;
+                 skos:prefLabel "ionisation-detected stimulated Raman spectroscopy"@en-gb ,
+                                "ionization-detected stimulated Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000995
+af-p:AFP_0000995 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "non resonance Raman spectroscopy" ,
+                               "non resonant Raman spectroscopy" ,
+                               "non-resonance Raman" ,
+                               "non-resonant Raman" ,
+                               "non-resonant Raman spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, usually from a laser in the visible, near infrared, or near ultraviolet range by a sample is detected. The energy of the incoming laser is adjusted such that it or the scattered light does not coincide with an electronic transition in the sample. [CHMO]" ;
+                 skos:prefLabel "non-resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001034
+af-p:AFP_0001034 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002348 ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light by a sample is detected. A Stokes frequency stimulation beam is used and an anti-Stokes frequency beam is observed and the difference between the pump and the anti-Stokes beams coincides with the frequency of an electronic transition within the molecule. Multiphoton excitation is used to produce a signal in which the emitted waves are coherent. [CHMO]" ;
+                 skos:prefLabel "coherent anti-Stokes resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001108
+af-p:AFP_0001108 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "RR spectrometry" ,
+                               "RR spectroscopy" ,
+                               "RRS" ,
+                               "resonance Raman spectrometry" ,
+                               "resonant Raman spectrometry" ,
+                               "resonant Raman spectroscopy" ;
+                 skos:definition "Raman spectroscopy where the energy of the incoming laser is adjusted such that it or the scattered light coincides with an electronic transition in the sample. [CHMO]" ;
+                 skos:prefLabel "resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001175
+af-p:AFP_0001175 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "SORS" ,
+                               "SORSS" ,
+                               "spatially offset Raman scattering spectrometry" ,
+                               "spatially offset Raman scattering spectroscopy " ,
+                               "spatially offset Raman spectrometry" ,
+                               "spatially offset Raman spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a laser, by a sample is detected. Scattered light is collected from regions laterally offset from the excitation laser spot. [CHMO]" ;
+                 skos:prefLabel "spatially-offset Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001440
+af-p:AFP_0001440 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "SRS" ,
+                               "stimulated Raman scattering spectroscopy" ,
+                               "stimulated Raman spectrometry" ,
+                               "stimulated scattering spectrometry" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from two lasers ('pump' and 'probe') by a sample is detected. [CHMO]" ;
+                 skos:prefLabel "stimulated Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001522
+af-p:AFP_0001522 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "hyper Raman scattering spectrometry" ,
+                               "hyper Raman scattering spectroscopy" ,
+                               "hyper Raman spectrometry" ,
+                               "hyper-Raman scattering spectrometry" ,
+                               "hyper-Raman scattering spectroscopy" ,
+                               "hyper-Raman spectrometry" ,
+                               "hyper-Raman spectroscopy" ;
+                 skos:changeNote "2015-12-14 Moved to Raman spectroscopy. [Allotrope]" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of light by a (liquid) sample is detected. During scattering, photons from the incident laser (with frequency ömega) are scattered by sample into photons of the second harmonic (photons with frequency 2ömega). [CHMO]" ;
+                 skos:prefLabel "hyper Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001636
+af-p:AFP_0001636 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "HORSES" ,
+                               "higher order Raman spectral excitation studies" ,
+                               "higher-order Raman spectral excitation spectroscopy" ,
+                               "higher-order Raman spectral excitation studies" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a two-colour laser, by a sample is detected. [CHMO]" ;
+                 skos:prefLabel "higher-order Raman spectral excitation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001731
+af-p:AFP_0001731 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "Raman optical activity" ,
+                               "chiral Raman" ,
+                               "chiral Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where vibrational optical activity is measured by means of a small difference in the intensity of Raman scattering from chiral molecules of right- and left-circularly polarised incident light. [CHMO]" ;
+                 skos:prefLabel "chiral Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001830
+af-p:AFP_0001830 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light from three lasers (known as pump, probe and Stokes/anti-Stokes) by a sample is detected. Multiphoton excitation is used to produce a signal in which the emitted waves are coherent. [CHMO]" ;
+                 skos:prefLabel "coherent Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001967
+af-p:AFP_0001967 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001108 ;
+                 skos:altLabel "UVRR" ,
+                               "UVRRS" ,
+                               "ultra-violet resonance Raman spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from an ultraviolet laser, by a sample is detected. The energy of the incoming laser is adjusted such that it or the scattered light coincides with an electronic transition within the sample. [CHMO]" ;
+                 skos:prefLabel "ultraviolet resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002092
+af-p:AFP_0002092 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001440 ;
+                 skos:altLabel "Raman gain spectroscopy" ,
+                               "SRGS" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light from two lasers ('pump' and 'probe') by a sample is detected. In stimulated Raman gain spectroscopy the probe laser has a lower frequency than the pump laser. [CHMO]" ;
+                 skos:prefLabel "stimulated Raman gain spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002138
+af-p:AFP_0002138 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000523 ;
+                 skos:altLabel "SM SERS" ,
+                               "SM-SERRS" ,
+                               "SM-SERS" ,
+                               "SM-SERS spectroscopy " ,
+                               "SMSERS" ,
+                               "single molecule surface enhanced Raman scattering" ,
+                               "single molecule surface enhanced Raman scattering spectroscopy" ,
+                               "single molecule surface-enhanced Raman scattering" ,
+                               "single molecule surface-enhanced Raman scattering spectroscopy" ,
+                               "single molecule surface-enhanced Raman spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a visible laser, by a single molecule sample adsorbed onto a metal (Au, Ag or Cu) surface is detected. [CHMO]" ;
+                 skos:prefLabel "single molecule surface-enhanced Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002155
+af-p:AFP_0002155 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "TRS" ,
+                               "transmission Raman" ,
+                               "transmission Raman scattering spectroscopy" ,
+                               "transmission Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, usually from a laser, by a sample is detected. The light is collected from the non-illuminated side of the sample. [CHMO]" ;
+                 skos:prefLabel "transmission Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002219
+af-p:AFP_0002219 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000523 ,
+                                 af-p:AFP_0000995 ,
+                                 af-p:AFP_0001108 ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light, from a visible laser, by a sample adsorbed onto a metal (Au, Ag or Cu) surface is detected. The energy of the incoming laser is adjusted such that it or the scattered light does not coincide with an electronic transition within the sample. [CHMO]" ;
+                 skos:prefLabel "surface-enhanced non-resonance Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002348
+af-p:AFP_0002348 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001830 ;
+                 skos:altLabel "CARS" ,
+                               "coherent anti-Stokes Raman scattering spectrometry" ,
+                               "coherent anti-Stokes Raman scattering spectroscopy" ,
+                               "coherent anti-Stokes Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where the Raman scattering of monochromatic light by a sample is detected. A Stokes frequency stimulation beam is used and an anti-Stokes frequency beam is observed. Multiphoton excitation is used to produce a signal in which the emitted waves are coherent. [CHMO]" ;
+                 skos:prefLabel "coherent anti-Stokes Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002443
+af-p:AFP_0002443 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:altLabel "polarised Raman spectrometry"@en-gb ,
+                               "polarized Raman spectrometry" ;
+                 skos:definition "A type of spectroscopy where the polarization of light which has been subjected to Raman scattering by a sample is determined. [CHMO]" ;
+                 skos:prefLabel "polarised Raman spectroscopy"@en-gb ,
+                                "polarized Raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002663
+af-p:AFP_0002663 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:definition "Process Raman spectroscopy is a type of Raman spectroscopy that applies the technique to monitoring processes. [Allotrope]" ;
+                 skos:prefLabel "process raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002807
+af-p:AFP_0002807 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000047 ;
+                 skos:definition "Dispersive Raman spectroscopy is a type of Raman spectroscopy that uses a dispersive Raman spectrometer which focuses the signal on a grating that separates the wavelengths and sends the spatially separated beams onto a detector. [Allotrope]" ;
+                 skos:prefLabel "dispersive raman spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000279
+af-r:AFR_0000279 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000519 ;
+                 skos:altLabel "SERS spectra" ,
+                               "SERS spectrum" ;
+                 skos:definition "A plot of intensity vs. Raman shift (cm-1) obtained by measuring the Raman scattering of monochromatic light from a sample adsorbed onto a highly scattering surface (e.g. Ag, Au or Cu). [CHMO]" ;
+                 skos:prefLabel "surface-enhanced Raman spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000657
+af-r:AFR_0000657 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000519 ;
+                 skos:definition "A three dimensional Raman spectrum shows the trend of a Raman spectrum over time. Time is added as third axis. [Allotrope]" ;
+                 skos:prefLabel "three dimensional raman spectrum" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2018 Allotrope Foundation" ;
+                                          dct:title "(c) 2018 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

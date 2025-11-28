@@ -1,0 +1,390 @@
+@prefix : <http://purl.allotrope.org/voc/adf/REC/2020/06/graph#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix adf-g: <http://purl.allotrope.org/ontologies/graph#> .
+@base <http://purl.allotrope.org/voc/adf/REC/2020/06/graph#> .
+
+<http://purl.allotrope.org/voc/adf/REC/2020/06/graph> rdf:type owl:Ontology ;
+                                                       owl:versionIRI <http://purl.allotrope.org/voc/adf/REC/2020/06/graph> ;
+                                                       dct:contributor <http://www.allotrope.org> ;
+                                                       dct:description "Ontology for describing graphs in ADF. (REC/2020/06)" ;
+                                                       dct:issued "2020-06-30T12:00:00Z"^^xsd:dateTime ;
+                                                       dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                       dct:modified "2019-09-17T12:00:00Z"^^xsd:dateTime ;
+                                                       dct:publisher <http://www.allotrope.org> ;
+                                                       dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                  <http://purl.allotrope.org/voc/copyright> ;
+                                                       dct:title "The Allotrope Graph Ontology (REC/2020/06)" ;
+                                                       rdfs:label "The Allotrope Graph Ontology (REC/2020/06)" ;
+                                                       owl:priorVersion <http://purl.allotrope.org/voc/adf/REC/2019/09/graph> ;
+                                                       owl:versionInfo "REC/2020/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/graph#differenceOf
+adf-g:differenceOf rdf:type owl:ObjectProperty ;
+                   rdfs:domain adf-g:Graph ;
+                   rdfs:range adf-g:Difference ;
+                   rdfs:label "difference of" ;
+                   skos:prefLabel "difference of" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#equivalentGraph
+adf-g:equivalentGraph rdf:type owl:ObjectProperty ;
+                      rdfs:domain adf-g:Graph ;
+                      rdfs:range adf-g:Graph ;
+                      rdfs:label "equivalent graph" ;
+                      skos:prefLabel "equivalent graph" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#first
+adf-g:first rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty .
+
+
+###  http://purl.allotrope.org/ontologies/graph#hasArc
+adf-g:hasArc rdf:type owl:ObjectProperty ;
+             rdfs:domain adf-g:Graph ;
+             rdfs:range adf-g:Arc ;
+             rdfs:label "has arc" ;
+             skos:prefLabel "has arc" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#hasNode
+adf-g:hasNode rdf:type owl:ObjectProperty ;
+              rdfs:domain adf-g:Graph ;
+              rdfs:range adf-g:Node ;
+              rdfs:label "has node" ;
+              skos:prefLabel "has node" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#intersectionOf
+adf-g:intersectionOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain adf-g:Graph ;
+                     rdfs:range adf-g:Intersection ;
+                     rdfs:label "intersection of" ;
+                     skos:prefLabel "intersection of" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#properSubgraphOf
+adf-g:properSubgraphOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf adf-g:subGraphOf ;
+                       rdf:type owl:AsymmetricProperty ;
+                       rdfs:label "proper subgraph of" ;
+                       skos:prefLabel "proper subgraph of" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#rest
+adf-g:rest rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty .
+
+
+###  http://purl.allotrope.org/ontologies/graph#second
+adf-g:second rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty .
+
+
+###  http://purl.allotrope.org/ontologies/graph#subGraphOf
+adf-g:subGraphOf rdf:type owl:ObjectProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain adf-g:Graph ;
+                 rdfs:range adf-g:Graph ;
+                 rdfs:label "subgraph of" ;
+                 skos:prefLabel "subgraph of" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#unionOf
+adf-g:unionOf rdf:type owl:ObjectProperty ;
+              rdfs:domain adf-g:Graph ;
+              rdfs:range adf-g:Union ;
+              rdfs:label "union of" ;
+              skos:prefLabel "union of" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/graph#Arc
+adf-g:Arc rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty adf-g:first ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass adf-g:Node
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty adf-g:second ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass adf-g:Node
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf adf-g:Dyadic ;
+          rdfs:label "edge" ;
+          skos:altLabel "edge" ;
+          skos:prefLabel "arc" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#Difference
+adf-g:Difference rdf:type owl:Class ;
+                 rdfs:subClassOf adf-g:Dyadic ,
+                                 adf-g:Graph ,
+                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty adf-g:first ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass adf-g:Graph
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty adf-g:second ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass adf-g:Graph
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 rdfs:label "difference" ;
+                 skos:prefLabel "difference" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#DisjointUnion
+adf-g:DisjointUnion rdf:type owl:Class ;
+                    rdfs:subClassOf adf-g:Dyadic ,
+                                    adf-g:Graph ,
+                                    [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty adf-g:first ;
+                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass adf-g:Graph
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty adf-g:second ;
+                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass adf-g:Graph
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "disjoint union" ;
+                    skos:prefLabel "disjoint union" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#Dyadic
+adf-g:Dyadic rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty adf-g:first ;
+                                                          owl:someValuesFrom owl:Thing
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty adf-g:second ;
+                                                          owl:someValuesFrom owl:Thing
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             skos:definition "Something that is composed of exactly 2 things. [Allotrope]" ;
+             skos:prefLabel "dyadic" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#EmptyGraph
+adf-g:EmptyGraph rdf:type owl:Class ;
+                 rdfs:subClassOf adf-g:Graph ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty adf-g:hasNode ;
+                                   owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                   owl:onClass adf-g:Node
+                                 ] ;
+                 rdfs:label "empty graph" ;
+                 skos:definition "A graph without nodes. [Allotrope]" ;
+                 skos:prefLabel "empty graph" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#Graph
+adf-g:Graph rdf:type owl:Class ;
+            rdfs:label "graph" ;
+            skos:prefLabel "graph" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#Intersection
+adf-g:Intersection rdf:type owl:Class ;
+                   rdfs:subClassOf adf-g:Dyadic ,
+                                   adf-g:Graph ,
+                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty adf-g:first ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass adf-g:Graph
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty adf-g:second ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass adf-g:Graph
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   rdfs:label "intersection" ;
+                   skos:definition "The intersection of two graphs. [Allotrope]" ;
+                   skos:prefLabel "intersection" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#MultiUnion
+adf-g:MultiUnion rdf:type owl:Class ;
+                 rdfs:subClassOf adf-g:Graph ,
+                                 adf-g:Polyadic ;
+                 rdfs:comment "A graph that presents the union of zero or more subgraphs. [Allotrope]" ;
+                 rdfs:label "multi union" ;
+                 skos:definition "A graph that presents the union of zero or more subgraphs. [Allotrope]" ;
+                 skos:prefLabel "multi union" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#Node
+adf-g:Node rdf:type owl:Class ;
+           rdfs:label "node" ;
+           skos:altLabel "vertex" ;
+           skos:prefLabel "node" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#Polyadic
+adf-g:Polyadic rdf:type owl:Class ;
+               rdfs:label "polyadic" ;
+               skos:definition "something that is composed of zero or more things. [Allotrope]" ;
+               skos:prefLabel "polyadic" .
+
+
+###  http://purl.allotrope.org/ontologies/graph#Union
+adf-g:Union rdf:type owl:Class ;
+            rdfs:subClassOf adf-g:Dyadic ,
+                            adf-g:Graph ,
+                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                     owl:onProperty adf-g:first ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass adf-g:Graph
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty adf-g:second ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass adf-g:Graph
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "union" ;
+            skos:prefLabel "union" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/graph#empty
+adf-g:empty rdf:type owl:NamedIndividual ,
+                     adf-g:EmptyGraph ;
+            rdfs:label "empty" ;
+            skos:prefLabel "empty" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2019 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2019 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

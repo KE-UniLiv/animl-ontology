@@ -1,0 +1,31 @@
+{
+  "os":  "Windows-11-10.0.22631-SP0",
+  "python":  "CPython 3.13.1",
+  "startedAt":  "2025-07-31T09:26:31.309474Z",
+  "program":  "d:\\GitHub\\XAnIML\\alignment\\methods.py",
+  "codePath":  "alignment\\methods.py",
+  "git":  {
+    "remote":  "https://github.com/KE-UniLiv/XAnIML",
+    "commit":  "c8dec9b64a0a6dc21fba79420ffaffe154cf2979"
+  },
+  "email":  "elliottwleek@gmail.com",
+  "root":  "D:\\GitHub\\XAnIML",
+  "host":  "ELLIOTTLAPTOP",
+  "executable":  "C:\\Users\\ellio\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "codePathLocal":  "alignment\\methods.py",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "1000203087872",
+      "used":  "129377685504"
+    }
+  },
+  "memory":  {
+    "total":  "14942425088"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

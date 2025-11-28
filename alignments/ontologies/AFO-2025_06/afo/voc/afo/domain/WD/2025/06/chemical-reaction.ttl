@@ -1,0 +1,537 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chemical-reaction#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chemical-reaction#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chemical-reaction> rdf:type owl:Ontology ;
+                                                                                   owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/chemical-reaction> ;
+                                                                                   owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                                   dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                   dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                   dct:modified "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                   dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                              <http://purl.allotrope.org/voc/copyright> ;
+                                                                                   dct:title "AFO Chemical Reaction Domain Ontology (WD/2025/06)" ;
+                                                                                   owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/chemical-reaction> ;
+                                                                                   owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000117
+af-p:AFP_0000117 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 skos:altLabel "multiphoton dissociation" ;
+                 skos:definition "A process wherein the reactant ion is dissociated as a result of absorption of one or more photons. [PSI-MS]" ;
+                 skos:prefLabel "photodissociation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000120
+af-p:AFP_0000120 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 skos:altLabel "IRMPD" ;
+                 skos:definition "Multiphoton ionization where the reactant ion dissociates as a result of the absorption of multiple infrared photons. [PSI-MS]" ;
+                 skos:prefLabel "infrared multiphoton dissociation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000494
+af-p:AFP_0000494 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001993 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "CEI" ,
+                               "charge transfer ionization" ;
+                 skos:definition "Interaction of an ion with an atom or molecule in which the charge on the ion is transferred to the neutral species without the dissociation of either species. [IUPAC]" ;
+                 skos:prefLabel "charge exchange ionization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000571
+af-p:AFP_0000571 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC. Analytical Division. Compendium of Analytical Nomenclature (the Orange Book). Definitive Rules, 1979. Compiled by J. Inczédy, T. Lengyel, A. M. Ure. Blackwell Scientific Publications, Oxford (1997)." ,
+                            "IUPAC. Compendium of Chemical Terminology, 2nd ed. (the Gold Book). Compiled by A. D. McNaught and A.Wilkinson. Blackwell Scientific Publications, Oxford (1997)" ;
+                 skos:altLabel "alpha cleavage" ,
+                               "alpha-cleavage" ;
+                 skos:definition "The fission of a bond originating at an atom which is adjacent to one assumed to bear the charge; the definition of β-, γ-, cleavage then follows automatically. The process would thus be described as α-fission of a ketone with expulsion of a radical R1. The carbon atoms of the radical R1. are called the α-, β-, γ-carbons, starting with the atom nearest the functional group. [IUPAC]" ;
+                 skos:prefLabel "α-cleavage" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000667
+af-p:AFP_0000667 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "ECD" ;
+                 skos:definition "Process in which multiply protonated molecules interact with low-energy electrons followed by fragmentation. The capture of an electron by the even-electron cation [M + nH]n+ liberates energy and reduces its charge state, thus producing the corresponding [M + nH](n–1)+• odd-electron ion, which readily fragments. [IUPAC]" ;
+                 skos:prefLabel "electron capture dissociation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000809
+af-p:AFP_0000809 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001993 ,
+                                 af-p:AFP_0003711 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Reaction of an ion with a neutral in which one or more electrons are removed from either the ion or neutral to form free electrons. [IUPAC]" ;
+                 skos:note "Care should be taken when this term is used to emphasize whether or not charge stripping of the ion has taken place. [IUPAC]" ,
+                           "This term has come to be used to describe collisions of fast-moving ions with a neutral in which the neutral is ionized with no change in the number of charges carried by the ion. [IUPAC]" ;
+                 skos:prefLabel "ionizing collision" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001026
+af-p:AFP_0001026 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001993 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "CI" ;
+                 skos:definition "Formation of a new ion in the gas phase by the reaction of a neutral with an ion. The process may involve transfer of an electron, a proton, or other charged species between the reactants. [IUPAC]" ;
+                 skos:note "This term is not synonymous with chemi-ionization. [IUPAC]" ,
+                           "When a positive ion results from chemical ionization, the term may be used without qualification. When a negative ion results, the term negative ion chemical ionization should be used. [IUPAC]" ;
+                 skos:prefLabel "chemical ionization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001091
+af-p:AFP_0001091 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 skos:altLabel "photo-degradation" ;
+                 skos:definition "The photochemical transformation of a molecule into lower molecular weight fragments, usually in an oxidation process. [CHMO]" ;
+                 skos:prefLabel "photodegradation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001111
+af-p:AFP_0001111 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 skos:altLabel "BIRD" ;
+                 skos:definition "A special case of infrared multiphoton dissociation wherein excitation of the reactant ion is caused by absorption of infrared photons radiating from heated blackbody surroundings, which are usually the walls of a vacuum chamber. See also infrared multiphoton dissociation. [PSI-MS]" ;
+                 skos:prefLabel "blackbody infrared radiative dissociation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001413
+af-p:AFP_0001413 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "F. W. McLafferty (1959). \"Mass Spectrometric Analysis. Molecular Rearrangements\". Anal. Chem. 31 (1): 82–87." ,
+                            "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Rearrangement reaction involving transfer of a hydrogen atom via a six-member transition state to the formal radical/charge site from a carbon atom four atoms distant from the charge/radical site (the γ-carbon); subsequent rearrangement of electron density can lead to expulsion of an olefin molecule. [IUPAC]" ;
+                 skos:note "Originally applied to ketone molecular ions where the charge/radical site is the carbonyl oxygen, but is now more widely applied. [IUPAC]" ;
+                 skos:prefLabel "McLafferty rearrangement" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001416
+af-p:AFP_0001416 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000848 ,
+                                 af-p:AFP_0003711 ;
+                 skos:definition "The breakdown of a single entity (normal molecule, reaction intermediate, etc.) into two or more fragments. [CHMO]" ;
+                 skos:prefLabel "chemical decomposition" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001688
+af-p:AFP_0001688 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000809 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ,
+                            "M. Rabrenovi?, C. J. Proctor, T. Ast, C. G. Herbert, A. G. Brenton, J. H. Beynon. J. Phys. Chem. 87, 3305 (1983)." ;
+                 skos:altLabel "CS" ,
+                               "CSR" ,
+                               "charge stripping reaction" ;
+                 skos:definition "Reaction of an ion with a neutral or collision partner ion in which a free electron is stripped from the ion, resulting in the charge on the product ion being more positive than that of the reactant ion. [IUPAC]" ;
+                 skos:prefLabel "charge stripping" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001757
+af-p:AFP_0001757 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001993 ;
+                 skos:definition "The reaction of a gas-phase molecule that results in its decomposition to form products, one of which is an ion. [PSI-MS]" ;
+                 skos:prefLabel "dissociative ionization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001769
+af-p:AFP_0001769 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003565 ,
+                                 af-p:AFP_0003711 ;
+                 skos:definition "Dissociation in chemistry and biochemistry is a general process in which molecules (or ionic compounds such as salts, or complexes) separate or split into smaller particles such as atoms, ions or radicals, usually in a reversible manner. [Wikipedia]" ;
+                 skos:prefLabel "dissociation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001816
+af-p:AFP_0001816 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 skos:definition "Heterolytic fragmentation is bond cleavage where the bonding electrons remain with only one of the fragment species. [Wikipedia]" ;
+                 skos:prefLabel "heterolytic fragmentation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002005
+af-p:AFP_0002005 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "ETD" ;
+                 skos:definition "Process in which multiply protonated molecules accept an electron from an anion with relatively low electron affinity. Capture of the electron leads to the liberation of energy and a reduction in charge of the ion with the production of the [M + nH](n–1)+• odd-electron ion, which is readily fragmented by collision-induced dissociation. [IUPAC]" ;
+                 skos:prefLabel "electron transfer dissociation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002007
+af-p:AFP_0002007 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC. Analytical Division. Compendium of Analytical Nomenclature (the Orange Book). Definitive Rules, 1979. Compiled by J. Inczédy, T. Lengyel, A. M. Ure. Blackwell Scientific Publications, Oxford (1997)." ,
+                            "IUPAC. Compendium of Chemical Terminology, 2nd ed. (the Gold Book). Compiled by A. D. McNaught and A.Wilkinson. Blackwell Scientific Publications, Oxford (1997)" ;
+                 skos:altLabel "beta cleavage" ,
+                               "beta-cleavage" ;
+                 skos:definition "Fission next but one to a heteroatom or functional group producing a radical and an ion. [IUPAC]" ;
+                 skos:prefLabel "β-cleavage" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002110
+af-p:AFP_0002110 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001993 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "The formation of a neutral when a negative ion in a discrete state with an energy greater than the detachment threshold loses an electron spontaneously without further interaction with an energy source. [IUPAC]" ;
+                 skos:prefLabel "autodetachment" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002335
+af-p:AFP_0002335 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001993 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "The formation of an ion when an atom or molecule in a discrete state with an energy greater than the ionization threshold loses an electron spontaneously without further interaction with an energy source. [IUPAC]" ;
+                 skos:prefLabel "autoionization" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002416
+af-p:AFP_0002416 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 skos:definition "Homolytic fragmentation is bond dissociation where each of the fragments retains one of the originally-bonded electrons. [Wikipedia]" ;
+                 skos:prefLabel "homolytic fragmentation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002505
+af-p:AFP_0002505 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001993 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Reaction of an ion with a neutral with a resulting change in the magnitude or sign of the charge on the reactant ion. [IUPAC]" ;
+                 skos:prefLabel "charge permutation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002517
+af-p:AFP_0002517 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "inductive cleavage" ;
+                 skos:definition "Fragmentation of an ion in which the cleavage of one of its bonds is induced by the charge site. The cleaved bond is adjacent to the apparent charge site, and its cleavage involves movement of the electron pair forming that bond to the original charge site and thus migration of the charge to the released fragment. [IUPAC]" ;
+                 skos:prefLabel "charge-mediated fragmentation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002518
+af-p:AFP_0002518 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001348 ;
+                 skos:definition "A reaction in which two reactants combine to form a new product. [Allotrope]" ;
+                 skos:prefLabel "combination" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002519
+af-p:AFP_0002519 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001757 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Ionization mechanism in which capture of a low-energy electron by a molecule leads directly to a dissociative state of the nascent anion, an example of dissociative ionization. [IUPAC]" ;
+                 skos:prefLabel "dissociative electron capture" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002521
+af-p:AFP_0002521 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002518 ,
+                                 af-p:AFP_0003711 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "ion-ion reaction" ;
+                 skos:definition "Reaction between two ions, generally of opposite polarity. [IUPAC]" ;
+                 skos:prefLabel "ion/ion reaction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002531
+af-p:AFP_0002531 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:changeNote "Added [IUPAC] attribution, license, rights, and source fields." ;
+                 skos:definition "Dissociation of an ion into another ion of lower mass and one or more neutral or ions with a lower charge. [IUPAC]" ;
+                 skos:prefLabel "ionic dissociation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002538
+af-p:AFP_0002538 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "CRF" ;
+                 skos:definition "Fragmentation of an ion in which the cleaved bond is isolated from the apparent charge site by a distance of several bond lengths. [IUPAC]" ;
+                 skos:prefLabel "charge remote fragmentation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002553
+af-p:AFP_0002553 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002518 ,
+                                 af-p:AFP_0003711 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "partial charge exchange reaction" ;
+                 skos:definition "Reaction of an ion with a neutral species in which some but not all of the ion charge is transferred to the neutral. [IUPAC]" ;
+                 skos:prefLabel "partial charge transfer reaction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002554
+af-p:AFP_0002554 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Loss of an uncharged species from an ion during dissociation. [IUPAC]" ;
+                 skos:prefLabel "neutral loss" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002557
+af-p:AFP_0002557 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Gas-phase reaction of a molecule to form both positive ion and negative ion fragments among the products. [IUPAC]" ;
+                 skos:prefLabel "ion pair formation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002561
+af-p:AFP_0002561 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002518 ,
+                                 af-p:AFP_0003711 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "ion-neutral reaction" ;
+                 skos:definition "Process wherein a ion interacts with a neutral reactant to produce either chemically different species or changes in the internal energy of one or both of the reactants. [IUPAC]" ;
+                 skos:prefLabel "ion/neutral reaction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002562
+af-p:AFP_0002562 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002518 ,
+                                 af-p:AFP_0003711 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:definition "Reaction of a gas-phase ion with a neutral to produce a different neutral and ion as the products. [IUPAC]" ;
+                 skos:prefLabel "ion/neutral exchange reaction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002565
+af-p:AFP_0002565 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002561 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "ion-molecule reaction" ;
+                 skos:definition "Ion/neutral reaction in which the neutral is a molecule. [IUPAC]" ;
+                 skos:prefLabel "ion/molecule reaction" ;
+                 skos:scopeNote "The hyphenated formulation of this term, ion-molecule reaction, is deprecated; the hyphen suggests a reaction of a species that is both an ion and a molecule and is not the intended meaning. [IUPAC]" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002575
+af-p:AFP_0002575 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Ion fragmentation mechanism in which the molecular ion M+• of a cyclic alkene fragments to form a neutral diene and an alkene radical cation or a diene radical cation and an alkene. The reaction is the reverse of the Diels–Alder reaction of organic synthesis. [IUPAC]" ;
+                 skos:prefLabel "retro Diels–Alder reaction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002577
+af-p:AFP_0002577 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001159 ,
+                                 af-p:AFP_0003711 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609" ;
+                 skos:altLabel "SIR" ;
+                 skos:definition "Process wherein a reactant ion interacts with a surface to produce either chemically different species or a change in the internal energy of the reactant ion. [IUPAC]" ;
+                 skos:prefLabel "surface-induced reaction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002591
+af-p:AFP_0002591 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001769 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Fragmentation reaction in which the molecularity of the reaction system is unity. The dissociation may arise from the extra energy acquired by a metastable ion produced in the ion source or that provided by collisional excitation of a stable ion. [IUPAC]" ;
+                 skos:prefLabel "unimolecular dissociation" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2019 Allotrope Foundation" ;
+                                          dct:title "(c) 2019 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/iupac-copyright
+<http://purl.allotrope.org/voc/iupac-copyright> rdf:type owl:NamedIndividual ,
+                                                         dct:RightsStatement ;
+                                                dct:description "Copyright © 2019 International Union of Pure Applied Chemistry" .
+
+
+###  http://purl.allotrope.org/voc/iupac-license
+<http://purl.allotrope.org/voc/iupac-license> rdf:type owl:NamedIndividual ,
+                                                       dct:LicenseDocument ;
+                                              dct:description "Reproduced by permission of International Union of Pure and Applied Chemistry" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

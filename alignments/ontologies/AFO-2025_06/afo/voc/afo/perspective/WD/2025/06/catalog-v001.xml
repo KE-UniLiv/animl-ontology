@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE catalog[
+<!ELEMENT catalog (uri|group)+>
+<!ELEMENT group (uri)+>
+<!ELEMENT uri EMPTY>
+<!ATTLIST catalog
+	xmlns CDATA #IMPLIED
+	prefer (system|public) #IMPLIED
+>
+<!ATTLIST uri
+	id ID #IMPLIED
+	name CDATA #REQUIRED
+	uri CDATA #REQUIRED
+>
+<!ATTLIST group
+	id ID #IMPLIED
+	prefer (system|public) #IMPLIED
+	xml:base CDATA #IMPLIED
+>
+]>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<group id="import" prefer="public" xml:base="">
+		<uri id="id5662" name="http://purl.allotrope.org/voc/afo/REC/2025/06/curation" uri="../../../../../afo/REC/2025/06/curation.ttl"/>
+		<uri id="id5672" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/molecular-scale" uri="../../../../../afo/perspective/REC/2025/06/molecular-scale.ttl"/>
+		<uri id="id5673" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/organization" uri="../../../../../afo/perspective/REC/2025/06/organization.ttl"/>
+		<uri id="id5675" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material" uri="../../../../../afo/perspective/REC/2025/06/portion-of-material.ttl"/>
+		<uri id="id5677" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system" uri="../../../../../afo/perspective/REC/2025/06/system.ttl"/>
+		<uri id="id91" name="http://purl.allotrope.org/voc/bfo/REC/2018/04/bfo-2-0" uri="../../../../../bfo/REC/2018/04/bfo-2-0.ttl"/>
+		<uri id="id22" name="http://purl.allotrope.org/voc/skos/REC/2018/10/skos" uri="../../../../../skos/REC/2018/10/skos.ttl"/>
+	</group>
+	<group id="WD" prefer="public" xml:base="">
+		<uri id="id5684" name="http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/molecular-scale" uri="molecular-scale.ttl"/>
+		<uri id="id5685" name="http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/organization" uri="organization.ttl"/>
+		<uri id="id5686" name="http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/portion-of-material" uri="portion-of-material.ttl"/>
+		<uri id="id5687" name="http://purl.allotrope.org/voc/afo/perspective/WD/2025/06/system" uri="system.ttl"/>
+	</group>
+</catalog>

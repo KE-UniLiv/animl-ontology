@@ -1,0 +1,219 @@
+@prefix : <http://purl.allotrope.org/voc/afo/REC/2025/06/aft@en-gb#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix ops: <http://www.openphacts.org/units/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix caro: <http://purl.obolibrary.org/obo/CARO> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ncbi: <http://purl.obolibrary.org/obo/NCBITaxon> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-sp: <http://purl.allotrope.org/ontologies/spatial#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@base <http://purl.allotrope.org/voc/afo/REC/2025/06/aft@en-gb#> .
+
+<http://purl.allotrope.org/voc/afo/REC/2025/06/aft@en-gb> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://purl.allotrope.org/voc/afo/REC/2025/06/aft@en-gb> ;
+                                                                     owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/aft> ;
+                                                                     dct:contributor <http://www.allotrope.org> ;
+                                                                     dct:description "Allotrope Foundation Taxonomy of Universals (REC/2025/06), British English language pack" ;
+                                                                     dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                     dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:publisher <http://www.allotrope.org> ;
+                                                                     dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                <http://purl.allotrope.org/voc/copyright> ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Allotrope Foundation Taxonomy (AFT)" ;
+                                                                     void:feature <http://www.w3.org/ns/formats/Turtle> ;
+                                                                     owl:priorVersion <http://purl.allotrope.org/voc/afo/REC/2025/03/aft@en-gb> ;
+                                                                     owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000038
+af-e:AFE_0000038 rdf:type owl:Class ;
+                 skos:altLabel "mass analyser"@en-gb ;
+                 skos:prefLabel "mass-to-charge analyser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000209
+af-e:AFE_0000209 rdf:type owl:Class ;
+                 skos:definition "A flame ionisation detector is a measurement component that measures an analyte in a gas stream through the measurement of ions created via flame ionisation. [Allotrope]"@en-gb ;
+                 skos:prefLabel "flame ionisation detector"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000534
+af-e:AFE_0000534 rdf:type owl:Class ;
+                 skos:definition "An electron capture detector is a measurement component that measures atoms and molecules in a gas through the attachment of electrons via electron capture ionisation. [Allotrope]"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002145
+af-e:AFE_0002145 rdf:type owl:Class ;
+                 skos:altLabel "analyser"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/function#AFFN_0000111
+af-fn:AFFN_0000111 rdf:type owl:Class ;
+                   skos:prefLabel "to localise"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000142
+af-p:AFP_0000142 rdf:type owl:Class ;
+                 skos:altLabel "flame ionisation detection"@en-gb ,
+                               "flame ionisation process"@en-gb ;
+                 skos:definition "A flame ionisation measurement is a measurement which is sensitive to compounds containing C-H bonds. A flow of carrier gas containing the sample is mixed with H2 and air and ignited. Any positively-charged radicals resulting from this process are collected at a cathode, allowing the current to be measured. [CHMO]"@en-gb ;
+                 skos:prefLabel "flame ionisation measurement"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001649
+af-p:AFP_0001649 rdf:type owl:Class ;
+                 skos:prefLabel "homogenisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001993
+af-p:AFP_0001993 rdf:type owl:Class ;
+                 skos:altLabel "ionisation method"@en-gb ;
+                 skos:prefLabel "ionisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002296
+af-p:AFP_0002296 rdf:type owl:Class ;
+                 skos:prefLabel "data apodisation"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002397
+af-p:AFP_0002397 rdf:type owl:Class ;
+                 skos:prefLabel "pipetting"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003481
+af-p:AFP_0003481 rdf:type owl:Class ;
+                 skos:prefLabel "energising"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003654
+af-p:AFP_0003654 rdf:type owl:Class ;
+                 skos:prefLabel "summarising"@en-gb .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003719
+af-p:AFP_0003719 rdf:type owl:Class ;
+                 skos:prefLabel "nebulising"@en-gb .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://www.rsc.org
+<http://www.rsc.org> rdf:type owl:NamedIndividual ,
+                              foaf:Organization .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

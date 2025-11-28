@@ -1,0 +1,166 @@
+SrcEntity	TgtEntity	Score	SrcLabel	TgtLabel
+http://example.org/Anitology/Action	http://purl.allotrope.org/ontologies/realizable#AFRE_0000001	1.0	Action	action
+http://example.org/Anitology/AnIML	http://purl.allotrope.org/ontologies/equipment#AFE_0000550	0.952488362789154	Action	anion-exchange column
+http://example.org/Anitology/AnIML	http://purl.allotrope.org/ontologies/equipment#AFE_0000329	0.9515357613563538	Action	vial
+http://example.org/Anitology/Author	http://purl.allotrope.org/ontologies/result#AFR_0003096	1.0	Action	author
+http://example.org/Anitology/Boolean	http://purl.allotrope.org/ontologies/result#AFR_0001510	1.0	Action	scalar boolean datum
+http://example.org/Anitology/Comment	http://purl.allotrope.org/ontologies/result#AFR_0002017	1.0	Action	comment
+http://example.org/Anitology/ContainerTypeType	http://purl.allotrope.org/ontologies/result#AFR_0001987	0.9949387311935424	Action	container type
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/result#AFR_0000682	0.9979774355888368	Action	differential scanning calorimetry result
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/process#AFP_0002124	0.9979577660560608	Action	differential scanning calorimetry
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/role#AFRL_0000526	0.9979143142700196	Action	differential scanning calorimetry role
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/result#AFR_0000007	0.997550368309021	Action	differential scanning calorimetry curve
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/process#AFP_0003765	0.9967619776725768	Action	dynamic vapor sorption
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/quality#AFQ_0000310	0.9961133003234864	Action	drusy association state
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/process#AFP_0003763	0.9929895401000975	Action	differential scanning calorimetry cycle
+http://example.org/Anitology/D	http://purl.allotrope.org/ontologies/quality#AFQ_0000016	0.9887514114379884	Action	column inner diameter (quality)
+http://example.org/Anitology/DateTime	http://purl.allotrope.org/ontologies/result#AFR_0001512	0.9989221692085266	Action	scalar timestamp datum
+http://example.org/Anitology/Device	http://purl.allotrope.org/ontologies/equipment#AFE_0000354	1.0	Action	device
+http://example.org/Anitology/Diff	http://purl.allotrope.org/ontologies/process#AFP_0003838	0.9970201253890992	Action	dispensing
+http://example.org/Anitology/Diff	http://purl.allotrope.org/ontologies/role#AFRL_0000567	0.9951011538505554	Action	dispensing role
+http://example.org/Anitology/Diff	http://purl.allotrope.org/ontologies/equipment#AFE_0001860	0.9865911602973938	Action	diode
+http://example.org/Anitology/Diff	http://purl.allotrope.org/ontologies/process#AFP_0003593	0.9857985973358154	Action	diffuse reflection
+http://example.org/Anitology/Diff	http://purl.allotrope.org/ontologies/process#AFP_0000112	0.9689637422561646	Action	dissolving
+http://example.org/Anitology/Diff	http://purl.allotrope.org/ontologies/process#AFP_0000373	0.9288852214813232	Action	dilatometry
+http://example.org/Anitology/Email	http://purl.obolibrary.org/obo/IAO_0000429	0.9975282549858092	Action	email address
+http://example.org/Anitology/EndValue	http://purl.allotrope.org/ontologies/process#AFP_0003286	0.9985426664352416	Action	end
+http://example.org/Anitology/EndValue	http://purl.allotrope.org/ontologies/result#AFR_0001626	0.992390751838684	Action	stop command
+http://example.org/Anitology/EndValue	http://purl.allotrope.org/ontologies/result#AFR_0002423	0.9829888939857484	Action	end time
+http://example.org/Anitology/EndValue	http://purl.allotrope.org/ontologies/result#AFR_0002124	0.9208573698997498	Action	measurement end time
+http://example.org/Anitology/EndValue	http://purl.allotrope.org/ontologies/role#AFRL_0000092	0.9042943716049194	Action	at end
+http://example.org/Anitology/Extension	http://purl.allotrope.org/ontologies/result#AFR_0002907	0.9982308745384216	Action	primer extension duration setting
+http://example.org/Anitology/Extension	http://purl.allotrope.org/ontologies/process#AFP_0003841	0.9981207251548768	Action	primer extension
+http://example.org/Anitology/Extension	http://purl.allotrope.org/ontologies/result#AFR_0002906	0.9481356143951416	Action	primer extension temperature setting
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/process#AFP_0003789	0.9985013008117676	Action	fast protein liquid chromatography
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/equipment#AFE_0002255	0.998387575149536	Action	fast protein liquid chromatography system
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/equipment#AFE_0002251	0.998222589492798	Action	fast protein liquid chromatograph
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/result#AFR_0001679	0.9979925155639648	Action	frit size
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/process#AFP_0003788	0.9977268576622008	Action	focused beam reflectance measurement
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/process#AFP_0003836	0.986091375350952	Action	flame photometric detection
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/result#AFR_0001480	0.982473075389862	Action	fax number
+http://example.org/Anitology/F	http://purl.allotrope.org/ontologies/equipment#AFE_0002276	0.9191505312919616	Action	flame photometric detector
+http://example.org/Anitology/FirmwareVersion	http://purl.allotrope.org/ontologies/result#AFR_0001260	0.998753786087036	Action	firmware
+http://example.org/Anitology/I	http://purl.allotrope.org/ontologies/process#AFP_0002423	0.9967396855354308	Action	ion-exchange high-performance liquid chromatography
+http://example.org/Anitology/I	http://purl.allotrope.org/ontologies/result#AFR_0000438	0.9951534271240234	Action	incident photon conversion efficiency spectrum
+http://example.org/Anitology/I	http://purl.allotrope.org/ontologies/material#AFM_0001057	0.99473237991333	Action	infrared radiation
+http://example.org/Anitology/I	http://purl.allotrope.org/ontologies/result#AFR_0002105	0.9912859201431274	Action	infrared spectroscopy result
+http://example.org/Anitology/I	http://purl.allotrope.org/ontologies/result#AFR_0000294	0.9809967875480652	Action	inelastic tunneling spectrum
+http://example.org/Anitology/I	http://purl.allotrope.org/ontologies/process#AFP_0002016	0.955085813999176	Action	infrared absorption spectroscopy
+http://example.org/Anitology/Increment	http://purl.allotrope.org/ontologies/result#AFR_0000950	1.0	Action	step size
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/result#AFR_0001974	0.9987791776657104	Action	laboratory information management software
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/equipment#AFE_0002234	0.9986829161643982	Action	laboratory information management system
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/result#AFR_0001069	0.99858158826828	Action	ldap identifier
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/process#AFP_0000225	0.998294234275818	Action	liquid chromatography
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/result#AFR_0002525	0.9980483055114746	Action	liquid chromatography document
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/equipment#AFE_0002197	0.9977814555168152	Action	LC system
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/equipment#AFE_0000808	0.997050166130066	Action	liquid chromatograph
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/equipment#AFE_0000625	0.9966585040092468	Action	ion trap
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/equipment#AFE_0002144	0.9959186911582948	Action	LC-UV system
+http://example.org/Anitology/L	http://purl.allotrope.org/ontologies/process#AFP_0003679	0.9958890080451964	Action	LC-UV system process
+http://example.org/Anitology/LabelType	http://purl.allotrope.org/ontologies/process#AFP_0003639	0.935477614402771	Action	marking
+http://example.org/Anitology/Location	http://purl.allotrope.org/ontologies/result#AFR_0001973	0.998829185962677	Action	location specification
+http://example.org/Anitology/Location	http://purl.allotrope.org/ontologies/result#AFR_0002844	0.997868537902832	Action	location identifier
+http://example.org/Anitology/Location	http://purl.allotrope.org/ontologies/result#AFR_0001065	0.9976316690444946	Action	location facet
+http://example.org/Anitology/Manufacturer	http://purl.allotrope.org/ontologies/result#AFR_0001258	1.0	Action	product manufacturer
+http://example.org/Anitology/Manufacturer	http://purl.obolibrary.org/obo/OBI_0000571	1.0	Action	manufacturer role
+http://example.org/Anitology/Manufacturer	http://purl.obolibrary.org/obo/OBI_0000835	1.0	Action	manufacturer
+http://example.org/Anitology/Method	http://purl.allotrope.org/ontologies/result#AFR_0001501	1.0	Action	plan specification
+http://example.org/Anitology/Name	http://purl.allotrope.org/ontologies/result#AFR_0001063	1.0	Action	personal name
+http://example.org/Anitology/OperatingSystem	http://purl.allotrope.org/ontologies/role#AFRL_0000017	0.9910780191421508	Action	operating range
+http://example.org/Anitology/Parameter	http://purl.allotrope.org/ontologies/role#AFRL_0000019	1.0	Action	parameter role
+http://example.org/Anitology/Parameter	http://purl.allotrope.org/ontologies/role#AFRL_0000478	1.0	Action	parameter (math)
+http://example.org/Anitology/QuantityType	http://purl.allotrope.org/ontologies/result#AFR_0003195	0.9992710947990416	Action	quantity type
+http://example.org/Anitology/Reference	http://purl.allotrope.org/ontologies/role#AFRL_0000258	1.0	Action	reference sample role
+http://example.org/Anitology/Reference	http://purl.allotrope.org/ontologies/result#AFR_0002008	1.0	Action	reference
+http://example.org/Anitology/Reference	http://purl.allotrope.org/ontologies/role#AFRL_0000022	1.0	Action	reference role
+http://example.org/Anitology/Result	http://purl.allotrope.org/ontologies/result#AFR_0000207	1.0	Action	assay result
+http://example.org/Anitology/Result	http://purl.allotrope.org/ontologies/result#AFR_0002011	1.0	Action	experiment result
+http://example.org/Anitology/Result	http://purl.allotrope.org/ontologies/role#AFRL_0000299	1.0	Action	result role
+http://example.org/Anitology/Result	http://purl.allotrope.org/ontologies/role#AFRL_0000043	1.0	Action	data output role
+http://example.org/Anitology/Role	http://purl.allotrope.org/ontologies/result#AFR_0001509	0.9978995323181152	Action	role class datum
+http://example.org/Anitology/Role	http://purl.allotrope.org/ontologies/result#AFR_0000979	0.9978517293930054	Action	role specification
+http://example.org/Anitology/S	http://purl.allotrope.org/ontologies/equipment#AFE_0000811	1.0	Action	split inlet
+http://example.org/Anitology/SIUnit	http://purl.allotrope.org/ontologies/process#AFP_0002437	0.9804988503456116	Action	selected ion monitoring
+http://example.org/Anitology/SVG	http://purl.allotrope.org/ontologies/process#AFP_0000527	0.9933964014053344	Action	spectrometry
+http://example.org/Anitology/SVG	http://purl.allotrope.org/ontologies/result#AFR_0002938	0.9903754591941832	Action	spectrophotometry document
+http://example.org/Anitology/SVG	http://purl.allotrope.org/ontologies/result#AFR_0000754	0.9894828200340272	Action	spectroscopy result
+http://example.org/Anitology/SVG	http://purl.allotrope.org/ontologies/equipment#AFE_0000185	0.9854974150657654	Action	spectrophotometer
+http://example.org/Anitology/Sample	http://purl.allotrope.org/ontologies/role#AFRL_0000508	1.0	Action	sample role (preparation)
+http://example.org/Anitology/Sample	http://purl.allotrope.org/ontologies/role#AFRL_0000035	1.0	Action	sample role
+http://example.org/Anitology/SerialNumber	http://purl.allotrope.org/ontologies/result#AFR_0001119	0.9014644622802734	Action	equipment serial number
+http://example.org/Anitology/Series	http://purl.allotrope.org/ontologies/common#AFC_0000162	1.0	Action	series
+http://example.org/Anitology/SeriesSet	http://purl.allotrope.org/ontologies/common#AFC_0000162	0.996561586856842	Action	series
+http://example.org/Anitology/SeriesTypeType	http://purl.allotrope.org/ontologies/common#AFC_0000162	0.9979806542396544	Action	series
+http://example.org/Anitology/Signature	http://purl.allotrope.org/ontologies/role#AFRL_0000438	1.0	Action	signature role
+http://example.org/Anitology/Signature	http://purl.allotrope.org/ontologies/result#AFR_0001963	1.0	Action	signature
+http://example.org/Anitology/Software	http://purl.obolibrary.org/obo/IAO_0000010	1.0	Action	software
+http://example.org/Anitology/StartValue	http://purl.allotrope.org/ontologies/result#AFR_0001503	0.9975095987319946	Action	start command
+http://example.org/Anitology/StartValue	http://purl.allotrope.org/ontologies/process#AFP_0003328	0.996726393699646	Action	start
+http://example.org/Anitology/StartValue	http://purl.allotrope.org/ontologies/result#AFR_0002612	0.9949349761009216	Action	measurement start setting
+http://example.org/Anitology/StartValue	http://purl.allotrope.org/ontologies/result#AFR_0002422	0.9838032722473145	Action	start time
+http://example.org/Anitology/StartValue	http://purl.allotrope.org/ontologies/result#AFR_0001555	0.9720667004585266	Action	start event specification
+http://example.org/Anitology/StartValue	http://purl.allotrope.org/ontologies/role#AFRL_0000093	0.944573938846588	Action	at start
+http://example.org/Anitology/Timestamp	http://purl.allotrope.org/ontologies/result#AFR_0001512	1.0	Action	scalar timestamp datum
+http://example.org/Anitology/Timestamp	http://purl.allotrope.org/ontologies/result#AFR_0000937	1.0	Action	time
+http://example.org/Anitology/Unit	http://qudt.org/schema/qudt#Unit	1.0	Action	unit of measure
+http://example.org/Anitology/Version	http://purl.allotrope.org/ontologies/role#AFRL_0000251	0.9993129968643188	Action	version role
+http://example.org/Anitology/Version	http://purl.obolibrary.org/obo/IAO_0000129	0.9986774325370787	Action	version number
+http://example.org/Anitology/Version	http://purl.allotrope.org/ontologies/result#AFR_0001259	0.9980297684669496	Action	firmware version
+http://example.org/Anitology/Version	http://purl.allotrope.org/ontologies/result#AFR_0001700	0.9979637861251832	Action	software version
+http://example.org/Anitology/Version	http://purl.allotrope.org/ontologies/result#AFR_0002837	0.9977151155471802	Action	method version
+http://example.org/Anitology/barcode	http://purl.allotrope.org/ontologies/result#AFR_0002690	1.0	Action	barcode
+http://example.org/Anitology/comment	http://purl.allotrope.org/ontologies/result#AFR_0002017	1.0	Action	comment
+http://example.org/Anitology/containerID	http://purl.allotrope.org/ontologies/result#AFR_0002425	0.9989328980445862	Action	container identifier
+http://example.org/Anitology/containerID	http://purl.allotrope.org/ontologies/result#AFR_0002623	0.9943090677261353	Action	container shape
+http://example.org/Anitology/containerID	http://purl.allotrope.org/ontologies/result#AFR_0001987	0.9606379866600036	Action	container type
+http://example.org/Anitology/containerID	http://purl.allotrope.org/ontologies/equipment#AFE_0000407	0.9339390397071838	Action	container
+http://example.org/Anitology/containerType	http://purl.allotrope.org/ontologies/result#AFR_0001987	0.9993196725845336	Action	container type
+http://example.org/Anitology/derived	http://purl.allotrope.org/ontologies/role#AFRL_0000155	0.9989074468612672	Action	derived measure
+http://example.org/Anitology/derived	http://purl.allotrope.org/ontologies/result#AFR_0003019	0.980504035949707	Action	derived electropherogram
+http://example.org/Anitology/id	http://purl.allotrope.org/ontologies/result#AFR_0000917	1.0	Action	identifier
+http://example.org/Anitology/label	http://purl.allotrope.org/ontologies/process#AFP_0003639	0.998900294303894	Action	marking
+http://example.org/Anitology/label	http://purl.obolibrary.org/obo/IAO_0000009	0.9979064464569092	Action	datum label
+http://example.org/Anitology/length	http://purl.obolibrary.org/obo/PATO_0000122	1.0	Action	length (quality)
+http://example.org/Anitology/length	http://purl.allotrope.org/ontologies/result#AFR_0001817	1.0	Action	length
+http://example.org/Anitology/name	http://purl.allotrope.org/ontologies/result#AFR_0001063	1.0	Action	personal name
+http://example.org/Anitology/quantity	http://qudt.org/schema/qudt#Quantity	1.0	Action	quantity
+http://example.org/Anitology/role	http://purl.allotrope.org/ontologies/result#AFR_0001509	0.9978995323181152	Action	role class datum
+http://example.org/Anitology/role	http://purl.allotrope.org/ontologies/result#AFR_0000979	0.9978517293930054	Action	role specification
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/result#AFR_0001118	0.9986931085586548	Action	sample identifier
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/equipment#AFE_0000462	0.9986672401428224	Action	sample inlet
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/role#AFRL_0000035	0.9985550045967102	Action	sample role
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/role#AFRL_0000508	0.9984279870986938	Action	sample role (preparation)
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/equipment#AFE_0001711	0.9982560873031616	Action	sampler
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/result#AFR_0002083	0.9981123208999634	Action	sample document
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/function#AFFN_0000201	0.9979162216186525	Action	to sample
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/result#AFR_0002202	0.9969712495803832	Action	sample preparation description
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/role#AFRL_0000324	0.9966087341308594	Action	statistical sample role
+http://example.org/Anitology/sampleID	http://purl.allotrope.org/ontologies/process#AFP_0001159	0.9965758323669434	Action	sample preparation
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/process#AFP_0001159	0.9985567331314088	Action	sample preparation
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/role#AFRL_0000035	0.9984455108642578	Action	sample role
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/role#AFRL_0000508	0.9983986616134644	Action	sample role (preparation)
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/function#AFFN_0000201	0.9982494115829468	Action	to sample
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/result#AFR_0001118	0.9981604218482972	Action	sample identifier
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/equipment#AFE_0001711	0.9980981349945068	Action	sampler
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/process#AFP_0001319	0.9980685114860536	Action	sampling material
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/result#AFR_0002370	0.9980607628822328	Action	sample preparation document
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/equipment#AFE_0000462	0.997816801071167	Action	sample inlet
+http://example.org/Anitology/samplePurpose	http://purl.allotrope.org/ontologies/result#AFR_0002202	0.9973121881484984	Action	sample preparation description
+http://example.org/Anitology/seriesID	http://purl.allotrope.org/ontologies/common#AFC_0000162	0.9990890026092528	Action	series
+http://example.org/Anitology/seriesID	http://purl.allotrope.org/ontologies/common#AFC_0000163	0.9985509514808656	Action	series item
+http://example.org/Anitology/seriesType	http://purl.allotrope.org/ontologies/common#AFC_0000162	0.9984525442123412	Action	series
+http://example.org/Anitology/seriesType	http://purl.allotrope.org/ontologies/common#AFC_0000163	0.9940611720085144	Action	series item
+http://example.org/Anitology/startIndex	http://purl.allotrope.org/ontologies/process#AFP_0003328	0.963360607624054	Action	start
+http://example.org/Anitology/startIndex	http://purl.allotrope.org/ontologies/result#AFR_0001503	0.961134910583496	Action	start command
+http://example.org/Anitology/startIndex	http://purl.allotrope.org/ontologies/role#AFRL_0000093	0.9206525683403016	Action	at start
+http://example.org/Anitology/uri	http://purl.allotrope.org/ontologies/result#AFR_0001513	1.0	Action	scalar URI datum
+http://example.org/Anitology/userType	http://purl.allotrope.org/ontologies/result#AFR_0002770	0.9942445158958436	Action	account identifier
+http://example.org/Anitology/version	http://purl.allotrope.org/ontologies/role#AFRL_0000251	0.9993129968643188	Action	version role
+http://example.org/Anitology/version	http://purl.obolibrary.org/obo/IAO_0000129	0.9986774325370787	Action	version number
+http://example.org/Anitology/version	http://purl.allotrope.org/ontologies/result#AFR_0001259	0.9980297684669496	Action	firmware version
+http://example.org/Anitology/version	http://purl.allotrope.org/ontologies/result#AFR_0001700	0.9979637861251832	Action	software version
+http://example.org/Anitology/version	http://purl.allotrope.org/ontologies/result#AFR_0002837	0.9977151155471802	Action	method version
+http://example.org/Anitology/visible	http://purl.allotrope.org/ontologies/process#AFP_0001760	0.998707354068756	Action	visible spectrophotometry
+http://example.org/Anitology/visible	http://purl.allotrope.org/ontologies/result#AFR_0000317	0.9983674883842468	Action	visible spectrum
+http://example.org/Anitology/visible	http://purl.allotrope.org/ontologies/equipment#AFE_0001771	0.9963680505752563	Action	visible lamp
+http://example.org/Anitology/visible	http://purl.allotrope.org/ontologies/material#AFM_0001055	0.9935123920440674	Action	visible light

@@ -1,0 +1,30 @@
+model: bertmap
+output_path: D:\GitHub\animl-ontology\alignment\outputs\bertmap
+annotation_property_iris:
+- http://www.w3.org/2000/01/rdf-schema#label
+- http://www.geneontology.org/formats/oboInOwl#hasSynonym
+- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
+- http://www.w3.org/2004/02/skos/core#exactMatch
+- http://www.ebi.ac.uk/efo/alternative_term
+- http://www.orpha.net/ORDO/Orphanet_#symbol
+- http://purl.org/sig/ont/fma/synonym
+- http://www.w3.org/2004/02/skos/core#prefLabel
+- http://www.w3.org/2004/02/skos/core#altLabel
+- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108
+- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90
+known_mappings: null
+auxiliary_ontos: []
+bert:
+  pretrained_path: emilyalsentzer/Bio_ClinicalBERT
+  max_length_for_input: 128
+  num_epochs_for_training: 3.0
+  batch_size_for_training: 32
+  batch_size_for_prediction: 128
+  resume_training: null
+global_matching:
+  enabled: true
+  num_raw_candidates: 200
+  num_best_predictions: 10
+  mapping_extension_threshold: 0.9
+  mapping_filtered_threshold: 0.9995
+  for_oaei: false

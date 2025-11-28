@@ -1,0 +1,608 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/optical-microscopy#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/optical-microscopy#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/optical-microscopy> rdf:type owl:Ontology ;
+                                                                                    owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/optical-microscopy> ;
+                                                                                    owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                                <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/optical-microscopy> ;
+                                                                                    dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                    dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                    dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                    dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                               <http://purl.allotrope.org/voc/copyright> ;
+                                                                                    dct:title "AFO Optical Microscopy Domain Ontology (WD/2025/06)" ;
+                                                                                    owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000001
+af-e:AFE_0000001 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000129 ;
+                 skos:definition "An optical microscope that works by scanning one or more focussed beams of light across the specimen. [CHMO]" ;
+                 skos:prefLabel "confocal microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000002
+af-e:AFE_0000002 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000559 ;
+                 skos:altLabel "epifluorescent microscope" ;
+                 skos:definition "A fluorescence microscope where the light source is mounted above (epi) the specimen and the excitation light passes through the microscope objective lens on its way toward the specimen. [CHMO]" ;
+                 skos:prefLabel "epifluorescence microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000064
+af-e:AFE_0000064 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000129 ;
+                 skos:altLabel "dark field microscope" ,
+                               "dark field optical microscope" ,
+                               "dark-field optical microscope" ;
+                 skos:definition "A piece of apparatus, consisting of an eyepiece, an objective lens, a condenser lens, stage, and light source, which collects electromagnetic radiation in the visible range. An opaque disc is placed underneath the condenser lens, so that only light that is scattered by objects on the slide can reach the eye. [CHMO]" ;
+                 skos:prefLabel "dark-field microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000192
+af-e:AFE_0000192 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000129 ;
+                 skos:altLabel "bright-field optical microscope" ,
+                               "transmitted light microscope" ,
+                               "transmitted-light microscope" ;
+                 skos:definition "A piece of apparatus, consisting of an eyepiece, an objective lens, a condenser lens, stage, and light source, which collects electromagnetic radiation in the visible range. The specimen is illuminated with visible light transmitted from a source on the opposite side of the specimen from the objective. [CHMO]" ;
+                 skos:prefLabel "bright-field microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000241
+af-e:AFE_0000241 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000395 ;
+                 skos:altLabel "polarized transmitted light microscope" ,
+                               "transmitted light polarizing microscope" ,
+                               "transmitting polarizing light microscope" ;
+                 skos:definition "A piece of apparatus, consisting of an eyepiece, an objective lens, object turret, stage, orthogonal polarizing filters and light source, which collects electromagnetic radiation in the visible range. The specimen is illuminated with visible light transmitted from a source on the opposite side of the specimen from the objective. [CHMO]" ;
+                 skos:prefLabel "transmitting polarizing microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000296
+af-e:AFE_0000296 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000001 ;
+                 skos:altLabel "TSM" ,
+                               "tandem scanning microscope" ;
+                 skos:definition "An optical microscope that works by using a spinning Nipkow disc, a wheel pierced by a spiral of pinholes, to illuminate small areas of the sample. [CHMO]" ;
+                 skos:prefLabel "tandem-scanning microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000349
+af-e:AFE_0000349 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000001 ;
+                 skos:altLabel "LSCM" ,
+                               "laser scanner" ;
+                 skos:definition "An optical microscope that works by scanning a laser across the specimen. [CHMO]" ;
+                 skos:prefLabel "laser-scanning confocal microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000395
+af-e:AFE_0000395 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000129 ;
+                 skos:altLabel "polarized light microscope" ,
+                               "polarized-light microscope" ,
+                               "polarizing light microscope" ;
+                 skos:definition "A piece of apparatus, consisting of an eyepiece, an objective lens, object turret, stage, orthogonal polarizing filters and light source, which collects electromagnetic radiation in the visible range. [CHMO]" ;
+                 skos:prefLabel "polarizing microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000559
+af-e:AFE_0000559 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000129 ;
+                 skos:definition "A microscope that uses an excitation source to produce light which is passed through an excitation filter, reflects off the surface of a dichroic mirror onto the specimen which fluoresces, producing light that passes through an emission filter to select only the required wavelengths onto the collector lens. [CHMO]" ;
+                 skos:prefLabel "fluorescence microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000643
+af-e:AFE_0000643 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000129 ;
+                 skos:altLabel "inverted optical microscope" ;
+                 skos:definition "A piece of apparatus, consisting of an eyepiece, an objective lens, object turret, stage, condenser and light source, which collects electromagnetic radiation in the visible range. In an inverted microscope the light source and condenser are mounted above the stage, while the objective lens and turret are mounted below the stage. [CHMO]" ;
+                 skos:prefLabel "inverted microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000030
+af-p:AFP_0000030 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:altLabel "UV fluorescence microscopy" ,
+                               "UVF microscopy" ,
+                               "UVFM" ,
+                               "ultra-violet fluorescence microscopy" ,
+                               "ultraviolet fluorescence microscopy" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with radiation in the ultra-violet region (4-380 nm). [CHMO]" ;
+                 skos:prefLabel "ultraviolet fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000084
+af-p:AFP_0000084 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:altLabel "FLIM" ,
+                               "fluorescence-lifetime imaging microscopy" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with light of specific wavelengths and the spatial distribution of mean fluorescence lifetimes (usually on the ns scale) is mapped within the microscopic images. [CHMO]" ;
+                 skos:prefLabel "fluorescence lifetime imaging microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000122
+af-p:AFP_0000122 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:altLabel "PLM" ,
+                               "POM" ,
+                               "optical polarization microscopy" ,
+                               "polarized light microscopy" ,
+                               "polarized light optical microscopy" ,
+                               "polarized optical microscopy" ,
+                               "polarizing optical microscopy" ;
+                 skos:definition "A type of microscopy where the specimen placed between two orthogonal polarizing filters and illuminated with visible light. [CHMO]" ;
+                 skos:prefLabel "polarizing light microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000194
+af-p:AFP_0000194 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001338 ;
+                 skos:altLabel "super resolution bright field microscopy" ,
+                               "super resolution bright field optical microscopy" ,
+                               "super-resolution bright-field optical microscopy" ;
+                 skos:definition "A type of microscopy where the specimen is illuminated with light transmitted from a source on the opposite side of the specimen from the objective, and image resolution (which is normally limited by diffraction) is enhanced by processing the images with image restoration algorithms. [CHMO]" ;
+                 skos:prefLabel "super-resolution bright-field microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000272
+af-p:AFP_0000272 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ,
+                                 af-p:AFP_0002280 ;
+                 skos:altLabel "RIC microscopy" ,
+                               "RICM" ,
+                               "reflection interference contrast (RIC) microscopy" ,
+                               "reflection interference contrast (RIC-) microscopy" ;
+                 skos:definition "A type of microscopy that determines the specimen's shape and distance awaynfrom a nearby, usually flat, reflective surface from the interference pattern produced by light reflecting from both the object and the surface. A microscope objective focusses a laser on the fluorescent specimen, and the same objective collects fluorescence. The interference between the fluorescence directly emitted by the specimen and the fluorescence reflected by the surface is observed by measuring the intensity of fluorescence passing through a confocal pinhole. [CHMO]" ;
+                 skos:prefLabel "reflection interference contrast microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000374
+af-p:AFP_0000374 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:altLabel "FLSM" ,
+                               "LSM" ,
+                               "laser scanning fluorescence microscopy" ,
+                               "laser scanning microscopy" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by scanning a laser spot of specific wavelength over its surface. [CHMO]" ;
+                 skos:prefLabel "fluorescence laser scanning microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000418
+af-p:AFP_0000418 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:altLabel "multi-photon excitation microscopy " ,
+                               "multi-photon fluorescence imaging" ,
+                               "multi-photon fluorescence microscopy" ,
+                               "multiphoton excitation microscopy " ,
+                               "multiphoton fluorescence imaging" ,
+                               "multiphoton fluorescence microscopy" ;
+                 skos:definition "A type of microscopy where fluorophores in the specimen can be made to fluoresce (emit energy as visible light) by absorption of two or more photons. [CHMO]" ;
+                 skos:prefLabel "multiphoton fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000449
+af-p:AFP_0000449 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001870 ;
+                 skos:altLabel "DCM" ;
+                 skos:definition "A type of microscopy where visible light coming from the specimen (which is placed approximately half a confocal parameter from the focal plane along the optical axis of the microscope) is collected and guided through a pinhole before it is detected. The pinhole allows only light from the focal point to pass to the detector, reducing background interference. [CHMO]" ;
+                 skos:prefLabel "differential confocal microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000468
+af-p:AFP_0000468 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000044 ;
+                 skos:altLabel "FM" ,
+                               "fluorescence imaging" ,
+                               "fluorescence microscopic imaging" ;
+                 skos:definition "Any type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with light of specific wavelengths. These specimens are called fluorophores. [CHMO]" ;
+                 skos:prefLabel "fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000512
+af-p:AFP_0000512 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000374 ;
+                 skos:altLabel "single photon LSM" ,
+                               "single photon laser scanning microscopy" ,
+                               "single-photon LSM" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by scanning a solid-state (Ti sapphire) laser spot of specific wavelength over its surface to produce single-photon fluorescence. [CHMO]" ;
+                 skos:prefLabel "single-photon laser scanning microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000745
+af-p:AFP_0000745 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002280 ;
+                 skos:altLabel "DIC" ,
+                               "DIC microscopy" ,
+                               "NIC" ,
+                               "NIC microscopy" ,
+                               "Nomarski interference contrast microscopy" ,
+                               "Nomarski microscopy" ;
+                 skos:definition "A type of microscopy where the specimen is illuminated with polarized visible light split into two beams, which then interfere to produce fringes whose spacing is proportional to the height of the specimen. [CHMO]" ;
+                 skos:prefLabel "differential interference contrast microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000819
+af-p:AFP_0000819 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:altLabel "IR fluorescence microscopy" ,
+                               "infra-red fluorescence microscopy" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with radiation in the infra-red region (2.5-16 &#x3bc;m). [CHMO]" ;
+                 skos:prefLabel "infrared fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000858
+af-p:AFP_0000858 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001330 ;
+                 skos:altLabel "DFOMS" ,
+                               "SNOMS" ,
+                               "dark-field single-nanoparticle optical microscopy and spectroscopy" ,
+                               "darkfield optical microscopy and spectroscopy" ;
+                 skos:definition "A type of spectroscopy where a dark-field optical microscope is used to image the sample and locate a small area for spectral analysis with radiation in the ultraviolet to near infrared range. [CHMO]" ;
+                 skos:prefLabel "dark-field optical microscopy and spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001184
+af-p:AFP_0001184 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002280 ;
+                 skos:definition "A type of microscopy where the specimen is illuminated with short-coherence length visible light split into two beams, which then interfere to produce fringes whose spacing is proportional to the height of the specimen. [CHMO]" ;
+                 skos:prefLabel "low coherence interference microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001269
+af-p:AFP_0001269 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000819 ;
+                 skos:altLabel "NIRF microscopy" ,
+                               "NIRFM" ,
+                               "near infra-red fluorescence microscopy" ,
+                               "near-infrared fluorescence microscopy" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with radiation in the near infra-red region (0.8-2.5 &#x3bc;m). [CHMO]" ;
+                 skos:prefLabel "near-infrared fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001338
+af-p:AFP_0001338 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:altLabel "bright field microscopy" ,
+                               "bright-field optical microscopy" ,
+                               "transmitted light microscopy" ,
+                               "transmitted-light microscopy" ;
+                 skos:definition "A type of microscopy where the specimen is illuminated with light transmitted from a source on the opposite side of the specimen from the objective. [CHMO]" ;
+                 skos:prefLabel "bright-field microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001676
+af-p:AFP_0001676 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:altLabel "TIRF microscopy" ,
+                               "TIRFM" ;
+                 skos:definition "A type of microscopy where the specimen (a fluorophore) can be made to fluoresce (emit energy as visible light) by illuminating it with light of specific wavelength. The light is totally internally reflected to generate an evanescent wave at the glass microscope slide-water interface. The evanescent wave selectively illuminates and excites fluorophores in a restricted region of the specimen allowing fluorophores on the surface to be imaged (normally the fluorescence of surface fluorophores is overwhelmed by background fluorescence). [CHMO]" ;
+                 skos:prefLabel "total internal reflection fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001785
+af-p:AFP_0001785 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:altLabel "dark-field optical microscopy" ,
+                               "darkfield microscopy" ,
+                               "darkfield optical microscopy" ;
+                 skos:definition "A type of microscopy where the sample is illuminated with visible light that is not collected by the objective lens. Only the light scattered by the specimen is collected by the lens, producing an image of a light specimen on a black background. [CHMO]" ;
+                 skos:prefLabel "dark-field microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001790
+af-p:AFP_0001790 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with radiation in the visible region (380-750 nm). [CHMO]" ;
+                 skos:prefLabel "visible fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001866
+af-p:AFP_0001866 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:altLabel "FSM" ,
+                               "fluorescent speckle microscopy" ;
+                 skos:definition "A type of microscopy where a very low concentration of fluorescent subunits in a polymer or peptide reveals the assembly dynamics, movement and turnover of assemblies throughout the image. [CHMO]" ;
+                 skos:prefLabel "fluorescence speckle microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001870
+af-p:AFP_0001870 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:definition "A type of microscopy where visible light coming from the specimen is collected and guided through a pinhole before it is detected. The pinhole allows only light from the focal point to pass to the detector, reducing background interference. [CHMO]" ;
+                 skos:prefLabel "confocal microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002053
+af-p:AFP_0002053 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:altLabel "TIRM" ;
+                 skos:definition "A type of optical microscopy which is used to monitor Brownian fluctuations in the separation between a single microscopic sphere and a flat plate in aqueous media. The sphere is levitated above the plate by colloidal forces such as double-layer or steric repulsion. Changes in elevation as small as 1 nm can be detected by measuring the light scattered by a single sphere when illuminated by an evanescent wave. [CHMO]" ;
+                 skos:prefLabel "total internal reflection microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002085
+af-p:AFP_0002085 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:definition "A type of microscopy where two specimens can be compared by illuminating them with visible light using two identical sets of microscope lenses which are linked by an optical bridge. [CHMO]" ;
+                 skos:prefLabel "comparison light microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002115
+af-p:AFP_0002115 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002310 ;
+                 skos:altLabel "two photon LSM" ,
+                               "two photon laser scanning microscopy" ,
+                               "two-photon LSM" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by scanning a solid-state (Ti sapphire) laser spot of specific wavelength over its surface to produce multi-photon fluorescence (i.e. the fluorophore simultaneously absorbs two photons, each one half of the energy required for single-photon excitation). [CHMO]" ;
+                 skos:prefLabel "two-photon laser scanning microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002150
+af-p:AFP_0002150 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001184 ;
+                 skos:altLabel "CPM" ,
+                               "coherence-probe microscopy" ,
+                               "phase correlation microscopy" ;
+                 skos:definition "A type of microscopy where the surface of the specimen is illuminated with short-coherence length visible light split into two beams, which then interfere to produce fringes whose spacing is proportional to the profile of the specimen. [CHMO]" ;
+                 skos:prefLabel "coherence probe microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002157
+af-p:AFP_0002157 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:altLabel "PCM" ,
+                               "phase-contrast microscopy" ;
+                 skos:definition "A type of microscopy where a transparent specimen is illuminated with visible light and small phase shifts in the light passing through the specimen are used to produce an image. [CHMO]" ;
+                 skos:prefLabel "phase contrast microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002192
+af-p:AFP_0002192 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000468 ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with light of specific wavelengths. In epifluorescence microscopy light is transmitted through the objective lens onto the specimen, eliminating the need to filter out unwanted light directly from the source. [CHMO]" ;
+                 skos:prefLabel "epifluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002215
+af-p:AFP_0002215 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000374 ;
+                 skos:altLabel "CLSM" ,
+                               "LSCM" ,
+                               "confocal fluorescence imaging" ,
+                               "confocal fluorescence microscopy" ,
+                               "confocal laser scanning fluorescence microscopy" ,
+                               "confocal-laser scanning microscopy" ,
+                               "fluorescence confocal microscopy" ,
+                               "fluorescence confocal scanning laser microscopy" ,
+                               "scanning confocal fluorescence microscopy" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by scanning a gas (Ar or Kr) laser spot of specific wavelength over its surface and using a spatial pinhole to eliminate out-of-focus fluorescence. [CHMO]" ;
+                 skos:prefLabel "confocal laser scanning microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002280
+af-p:AFP_0002280 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001404 ;
+                 skos:altLabel "IOM" ,
+                               "OIM" ,
+                               "interference optical microscopy" ;
+                 skos:definition "A type of microscopy where the specimen is illuminated with visible light split into two beams, which then interfere to produce fringes whose spacing is proportional to the height of the specimen. [CHMO]" ;
+                 skos:prefLabel "optical interference microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002310
+af-p:AFP_0002310 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000374 ;
+                 skos:altLabel "MPLSM" ,
+                               "multi photon laser scanning microscopy" ,
+                               "multiphoton laser scanning fluorescence microscopy " ,
+                               "multiphoton laser scanning microscopy" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) by scanning a solid-state (Ti sapphire) laser spot of specific wavelength over its surface to produce multi-photon fluorescence (i.e. the fluorophore simultaneously absorbs multiple photons of typically one half to one third of the energy required for single-photon excitation). [CHMO]" ;
+                 skos:prefLabel "multi-photon laser scanning microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002354
+af-p:AFP_0002354 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000122 ;
+                 skos:altLabel "TPLM" ,
+                               "TPOM" ,
+                               "transmitted polarized light microscopy" ,
+                               "transmitted polarized light optical microscopy" ,
+                               "transmitted polarized optical microscopy" ,
+                               "transmitted polarized-light optical microscopy" ,
+                               "transmitted polarizing optical microscopy" ;
+                 skos:definition "A type of microscopy where the specimen placed between two orthogonal polarising filters and illuminated with visible light transmitted from a source on the opposite side of the specimen from the objective. [CHMO]" ;
+                 skos:prefLabel "transmitted polarizing light microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002430
+af-p:AFP_0002430 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000270 ,
+                                 af-p:AFP_0000468 ;
+                 skos:altLabel "time-lapse fluorescence imaging" ;
+                 skos:definition "A type of microscopy where the specimen can be made to fluoresce (emit energy as visible light) and the specimen is imaged at regular time intervals over several hours. [CHMO]" ;
+                 skos:prefLabel "time-lapse fluorescence microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000089
+af-r:AFR_0000089 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000329 ,
+                                 af-r:AFR_0000350 ;
+                 skos:altLabel "fluorescence microphotograph" ,
+                               "fluorescence microscope image" ,
+                               "fluorescence microscopy image" ;
+                 skos:definition "An image obtained by illuminating the specimen with (usually) ultraviolet light, and collecting the light emitted by chromophores in the specimen (fluorescence) using a system of magnifying lenses. [CHMO]" ;
+                 skos:prefLabel "fluorescence micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000159
+af-r:AFR_0000159 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000089 ,
+                                 af-r:AFR_0000425 ;
+                 skos:altLabel "CLSM image" ,
+                               "CLSM images" ,
+                               "LSCM image" ,
+                               "LSCM images" ,
+                               "confocal fluorescence image" ,
+                               "confocal fluorescence micrograph" ,
+                               "confocal fluorescence micrographs" ,
+                               "confocal laser scanning fluorescence micrograph" ,
+                               "confocal laser scanning fluorescence micrographs" ,
+                               "confocal-laser scanning micrograph" ,
+                               "confocal-laser scanning micrographs" ,
+                               "fluorescence confocal micrograph" ,
+                               "fluorescence confocal micrographs" ,
+                               "fluorescence confocal scanning laser micrograph" ,
+                               "scanning confocal fluorescence micrograph" ,
+                               "scanning confocal fluorescence micrographs" ,
+                               "scanning confocal fluorescence microscopy image" ,
+                               "scanning confocal fluorescence microscopy images" ;
+                 skos:definition "An image obtained by scanning a gas (Ar or Kr) laser spot of specific wavelength over the specimen and collecting the light emitted by chromophores in the specimen (fluorescence) using a system of magnifying lenses. The fluorescence passes through a pinhole before it reaches the lenses, allowing only light from the focal point to pass to the detector, reducing background interference. [CHMO]" ;
+                 skos:prefLabel "confocal laser scanning micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000291
+af-r:AFR_0000291 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000350 ;
+                 skos:altLabel "polarising light micrograph" ,
+                               "polarising light micrographs" ,
+                               "polarising microscope image" ,
+                               "polarising microscope images" ,
+                               "polarizing light micrographs" ,
+                               "polarizing microscope image" ,
+                               "polarizing microscope images" ;
+                 skos:definition "An image obtained by placing the specimen between two orthogonal polarising filters, illuminating it with visible light, and using a system of magnifying lenses. [CHMO]" ;
+                 skos:prefLabel "polarizing light micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000329
+af-r:AFR_0000329 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000101 ;
+                 af-x:AFX_0002865 <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/fluorescence> ;
+                 skos:prefLabel "fluorescence image" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000331
+af-r:AFR_0000331 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000350 ;
+                 skos:altLabel "dark-field microscope image" ,
+                               "dark-field optical image" ;
+                 skos:definition "An image obtained by illuminating the specimen with visible light that is not collected by the objective lens. Only the light scattered by the specimen is collected by the lens, producing an image of a light specimen on a black background. [CHMO]" ;
+                 skos:prefLabel "dark-field optical micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000350
+af-r:AFR_0000350 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000038 ;
+                 skos:altLabel "light microscope image" ,
+                               "light microscopy image" ,
+                               "optical microphotograph" ,
+                               "optical microscope image" ,
+                               "optical microscopy image" ,
+                               "photomicrograph" ;
+                 skos:definition "An image obtained by illuminating the specimen with visible light, and using a system of magnifying lenses. [CHMO]" ;
+                 skos:prefLabel "optical micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000425
+af-r:AFR_0000425 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000350 ;
+                 skos:altLabel "confocal microscopy image" ;
+                 skos:definition "An image obtained by illuminating the specimen with visible light, and passing the light through pinhole before it reaches a system of magnifying lenses. The pinhole allows only light from the focal point to pass to the detector, reducing background interference. [CHMO]" ;
+                 skos:prefLabel "confocal micrograph" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2020 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2020 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

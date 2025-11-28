@@ -1,0 +1,3 @@
+http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item|http://purl.allotrope.org/ontologies/result#AFR_0001638|=|0.51|CLS
+http://w3id.org/animl/Reference|http://purl.allotrope.org/ontologies/role#AFRL_0000022|=|0.51|CLS
+http://w3id.org/animl/Parameter|http://purl.allotrope.org/ontologies/result#AFR_0000977|=|0.51|CLS

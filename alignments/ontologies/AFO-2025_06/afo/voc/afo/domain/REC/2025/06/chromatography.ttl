@@ -1,0 +1,2254 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix map: <http://purl.allotrope.org/ontologies/mapping/instances#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/xml/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography> rdf:type owl:Ontology ;
+                                                                                 owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography> ;
+                                                                                 owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ,
+                                                                                             <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/detection> ,
+                                                                                             <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/injection> ,
+                                                                                             <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/sampling> ;
+                                                                                 dct:contributor <http://www.allotrope.org> ;
+                                                                                 dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                 dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ,
+                                                                                             <http://purl.allotrope.org/voc/iupac-license> ;
+                                                                                 dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                 dct:publisher <http://www.allotrope.org> ;
+                                                                                 dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                            <http://purl.allotrope.org/voc/copyright> ;
+                                                                                 dct:rightsHolder <http://www.allotrope.org> ;
+                                                                                 dct:title "AFO Chromatography Domain Ontology (REC/2025/06)" ;
+                                                                                 owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/chromatography> ;
+                                                                                 owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+bfo:_0000054 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+ro:_0000056 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+ro:_0000057 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000080
+ro:_0000080 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+ro:_0000087 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002224
+ro:_0002224 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002230
+ro:_0002230 rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000078
+af-e:AFE_0000078 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/CHMO_0000987> ;
+                 skos:definition "A piece of apparatus that has the form of a tube with a diameter of less than a millimeter and hosts the stationary bed in chromatography. [CHMO]" ;
+                 skos:prefLabel "capillary column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000112
+af-e:AFE_0000112 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000691 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0000972> ;
+                 skos:altLabel "PLOT column" ;
+                 skos:definition "An open-tubular column in which a porous layer, achieved by either etching a non-porous layer or by deposition of porous particles from a suspension, coats the inner wall and may serve as a support for a liquid stationary phase or as the stationary phase itself. [CHMO]" ;
+                 skos:prefLabel "porous-layer open-tubular column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000135
+af-e:AFE_0000135 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A chromatography column used for analysis. [Allotrope]" ;
+                 skos:prefLabel "analytical column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000158
+af-e:AFE_0000158 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:definition "A piece of apparatus that is planar and is or hosts the stationary bed in chromatography. [CHMO]" ;
+                 skos:prefLabel "open chromatographic bed" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000246
+af-e:AFE_0000246 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-e:AFE_0000317
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty ro:_0000056 ;
+                                                          owl:someValuesFrom af-p:AFP_0001321
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/OBI_0000481> ;
+                 dct:source "PAC, 1993, 65, 819 (Nomenclature for chromatography (IUPAC Recommendations 1993))" ;
+                 skos:definition "A chromatography detector is a detector that is used in chromatography as component of a chromatography system. [Allotrope]" ;
+                 skos:prefLabel "chromatographic detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000277
+af-e:AFE_0000277 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000550 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0002268> ;
+                 skos:altLabel "SAX column" ;
+                 skos:definition "A chromatography column where the stationary phase is a strong anion exchanger. [CHMO]" ;
+                 skos:prefLabel "strong anion-exchange column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000301
+af-e:AFE_0000301 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000550 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0002269> ;
+                 skos:altLabel "WAX column" ;
+                 skos:definition "A chromatography column where the stationary phase is a weak anion exchanger. [CHMO]" ;
+                 skos:prefLabel "weak anion-exchange column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000307
+af-e:AFE_0000307 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000112 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0000971> ;
+                 skos:altLabel "SCOT column" ;
+                 skos:definition "An open-tubular column in which a layer of porous particles deposited from a suspension coats the inner wall and serves as a support for a liquid stationary phase. [CHMO]" ;
+                 skos:prefLabel "support-coated open-tubular column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000354
+af-e:AFE_0000354 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000360
+af-e:AFE_0000360 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000523 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0002266> ;
+                 skos:altLabel "SCX column" ;
+                 skos:definition "A chromatography column where the stationary phase is a strong cation exchanger. [CHMO]" ;
+                 skos:prefLabel "strong cation-exchange column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000430
+af-e:AFE_0000430 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/OBI_0000614> ;
+                 skos:definition "A short protective chromatography column used to protect the main analytical column from damaging impurities that are injected into the instrument. [Allotrope]" ;
+                 skos:prefLabel "guard column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000431
+af-e:AFE_0000431 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000392 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "GPC" ,
+                               "gel permeation chromatograph" ;
+                 skos:definition "A piece of apparatus, consisting of an eluent supply system, an injection or sampling system, a column containing a swollen gel, a detector and a data acquisition/processing system, that is used to carry out chromatographic separations. [CHMO]" ;
+                 skos:prefLabel "gel filtration chromatograph" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000523
+af-e:AFE_0000523 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000803 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0002263> ;
+                 skos:definition "A chromatography column where the stationary phase is a cation exchanger. [CHMO]" ;
+                 skos:prefLabel "cation-exchange column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000550
+af-e:AFE_0000550 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000803 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0002265> ;
+                 skos:definition "A chromatography column where the stationary phase is an anion exchanger. [CHMO]" ;
+                 skos:prefLabel "anion-exchange column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000579
+af-e:AFE_0000579 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A capillary electrophoresis column is a type of column that is used in capillary electrophoresis. [Allotrope]" ;
+                 skos:prefLabel "capillary electrophoresis column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000691
+af-e:AFE_0000691 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/OBI_0000606> ;
+                 skos:definition "A chromatography column in which either the inner tube wall or a liquid or active solid held stationary on the tube wall acts as the stationary phase and there is an open, unrestricted path for the mobile phase. [CHMO]" ;
+                 skos:prefLabel "open-tubular column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000692
+af-e:AFE_0000692 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0000975> ;
+                 skos:definition "A chromatography column that contains a solid packing. [CHMO]" ;
+                 skos:prefLabel "packed column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000742
+af-e:AFE_0000742 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An array column is a column that contains multiple columns at the same time. [Allotrope]" ;
+                 skos:prefLabel "array column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000775
+af-e:AFE_0000775 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000523 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0002267> ;
+                 skos:altLabel "WCX column" ;
+                 skos:definition "A chromatography column where the stationary phase is a weak cation exchanger. [CHMO]" ;
+                 skos:prefLabel "weak cation-exchange column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000779
+af-e:AFE_0000779 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000691 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0000973> ;
+                 skos:altLabel "WCOT column" ;
+                 skos:definition "An open-tubular column in which the liquid stationary phase is coated on the unmodified smooth inner wall of the tube. [CHMO]" ;
+                 skos:prefLabel "wall-coated open-tubular column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000803
+af-e:AFE_0000803 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/CHMO_0002264> ;
+                 skos:definition "A chromatography column where the stationary phase is an ion exchanger. [CHMO]" ;
+                 skos:prefLabel "ion-exchange column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001763
+af-e:AFE_0001763 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/OBI_0000570> ;
+                 skos:altLabel "spin concentrator" ;
+                 skos:definition "A spin column is a column used for concentration of biological samples containing membranes for ultrafiltration. The solid phase is made up of silica to which the biological sample binds. [Allotrope]" ;
+                 skos:prefLabel "spin column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001797
+af-e:AFE_0001797 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000266 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "L.S. Ettre, \"Nomenclature for Chromatography\", Pure & Appl. Chem. 1993, Vol. 65, No. 4, pp. 819-872" ;
+                 skos:altLabel "sampling valve" ,
+                               "valve injector" ;
+                 skos:definition "A device in which the sample is first introduced into a chamber (loop), temporarily isolated from the mobile phase system by valves, which can be switched to make an instantaneous diversion of the mobile phase stream through the chamber to carry the sample to the column. [IUPAC]" ;
+                 skos:prefLabel "bypass injector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001798
+af-e:AFE_0001798 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000266 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "L.S. Ettre, \"Nomenclature for Chromatography\", Pure & Appl. Chem. 1993, Vol. 65, No. 4, pp. 819-872" ;
+                 skos:definition "A device which directly introduces the sample into the mobile-phase stream. [IUPAC]" ;
+                 skos:prefLabel "direct injector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001799
+af-e:AFE_0001799 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000266 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "L.S. Ettre, \"Nomenclature for Chromatography\", Pure & Appl. Chem. 1993, Vol. 65, No. 4, pp. 819-872" ;
+                 skos:definition "A device which directly introduces the sample into the mobile-phase stream. [IUPAC]" ;
+                 skos:prefLabel "on-column injector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002198
+af-e:AFE_0002198 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000322 ;
+                 skos:definition "A column compartment is a compartment in a chromatography system where the columns are held. [Allotrope]" ;
+                 skos:editorialNote "2019-04-01 Adding 'ro:location of' some 'af-e:chromatography column' breaks Hermit reasoner. [Allotrope]" ;
+                 skos:prefLabel "column compartment" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002202
+af-e:AFE_0002202 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000217 ;
+                 skos:definition "A monolithic columns is a chromatography column where the stationary phase synthesized in place as a single lattice structure in the column. [Allotrope]" ;
+                 skos:prefLabel "monolithic column" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002233
+af-e:AFE_0002233 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002232 ;
+                 skos:altLabel "CDS" ;
+                 skos:definition "A chromatography data system is a data system that controls a chromatography system and processes data participating in a chromatography run. [Allotrope]" ;
+                 skos:prefLabel "chromatography data system" .
+
+
+###  http://purl.allotrope.org/ontologies/function#AFFN_0000002
+af-fn:AFFN_0000002 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( af-fn:AFFN_0000113
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty bfo:_0000054 ;
+                                                                owl:someValuesFrom af-p:AFP_0003575
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf af-fn:AFFN_0000113 ;
+                   skos:definition "To deliver material is the function to transfer a material to or into a destination. [Allotrope]" ;
+                   skos:prefLabel "to deliver material" .
+
+
+###  http://purl.allotrope.org/ontologies/function#AFFN_0000003
+af-fn:AFFN_0000003 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( af-fn:AFFN_0000002
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty bfo:_0000054 ;
+                                                                owl:someValuesFrom [ owl:intersectionOf ( af-p:AFP_0003349
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty af-x:AFX_0002745 ;
+                                                                                                            owl:someValuesFrom af-rl:AFRL_0000011
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ]
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf af-fn:AFFN_0000002 ;
+                   af-x:AFX_0002798 "true"^^xsd:boolean ;
+                   skos:definition "To deliver mobile phase is the function to deliver material that is in a mobile phase role. [Allotrope]" ;
+                   skos:prefLabel "to deliver mobile phase" .
+
+
+###  http://purl.allotrope.org/ontologies/function#AFFN_0000032
+af-fn:AFFN_0000032 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( af-fn:AFFN_0000031
+                                                              af-fn:AFFN_0000107
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty bfo:_0000054 ;
+                                                                owl:someValuesFrom af-p:AFP_0001321
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf af-fn:AFFN_0000105 ;
+                   af-x:AFX_0002798 "true"^^xsd:boolean ;
+                   skos:altLabel "separation by chromatography function" ;
+                   skos:definition "A material separation function which is realized by chromatography. [Allotrope]" ;
+                   skos:prefLabel "to separate material by chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000275
+af-m:AFM_0000275 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001096
+af-m:AFM_0001096 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001042 ;
+                 skos:definition "A chromatographic packing is a solid heterogeneous mixture consisting of a substrate and stationary phase used in a chromatographic separation. [Allotrope]" ;
+                 skos:prefLabel "chromatographic packing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000131
+af-p:AFP_0000131 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 skos:definition "Chromatography in which separation is based mainly on differences between the solubility of the sample components in the stationary phase (gas chromatography), or on differences between the solubilities of the components in the mobile and stationary phases (liquid chromatography). [CHMO]" ;
+                 skos:prefLabel "partition chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000588
+af-p:AFP_0000588 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-p:AFP_0001321
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty ro:_0000057 ;
+                                                              owl:someValuesFrom af-e:AFE_0000217
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A chromatography method where the stationary bed is within a tube (of standard length 25 cm). The particles of the solid stationary phase or support coated with a liquid stationary phase may fill the whole inside volume of the tube (packed column) or be concentrated on or along the inside tube wall leaving an open, unrestricted path for the mobile phase in the middle part of the tube (open-tubular column). [CHMO]" ;
+                 skos:prefLabel "column chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001023
+af-p:AFP_0001023 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 skos:definition "Chromatography in which separation is based mainly on differences between the adsorption affinities of the sample components for the surface of an active solid. [CHMO]" ;
+                 skos:prefLabel "adsorption chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001183
+af-p:AFP_0001183 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "NPC" ,
+                               "normal phase chromatography" ;
+                 skos:definition "A separation method where the components are distributed between two phases, one of which is stationary and polar, while the other is non-polar and moves in a definite direction. [CHMO]" ;
+                 skos:prefLabel "normal-phase chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001611
+af-p:AFP_0001611 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-p:AFP_0003666
+                                                        af-p:AFP_0003813
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:altLabel "injection" ,
+                               "sample introduction" ;
+                 skos:changeNote "2018-10-24 Moved to chromatography domain ontology, subclassed under loading [Allotrope]" ,
+                                 "2022-06-20 Subclassed under sample introduction [Allotrope]" ;
+                 skos:definition "Process of loading a sample into a chromatography system. [Allotrope]" ;
+                 skos:prefLabel "injection (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001677
+af-p:AFP_0001677 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A separation method where the components (in this case stereoisomers) are distributed between two chiral phases, one of which is stationary, while the other moves in a definite direction. [CHMO]" ;
+                 skos:prefLabel "chiral chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002014
+af-p:AFP_0002014 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 skos:altLabel "open bed chromatography" ,
+                               "open-bed chromatography" ;
+                 skos:definition "A chromatography method where the stationary phase is present as or on a plane. [CHMO]" ;
+                 skos:prefLabel "planar chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002089
+af-p:AFP_0002089 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003598 ;
+                 skos:changeNote "2019-09-09 Moved under data transformation and fixed definition. [Allotrope]" ;
+                 skos:definition "Chromatography data processing is a data transformation on chromatograms. [Allotrope]" ;
+                 skos:prefLabel "chromatography data processing" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002314
+af-p:AFP_0002314 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 skos:definition "Chromatography where the mobile phase contains a compound (the displacer) more strongly retained than the components of the sample under examination. The sample is fed into the system as a finite slug. [CHMO]" ;
+                 skos:prefLabel "displacement chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002361
+af-p:AFP_0002361 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "RPC" ,
+                               "reverse phase chromatography" ,
+                               "reverse-phase chromatography" ,
+                               "reversed phase chromatography" ;
+                 skos:definition "A separation method where the components are distributed between two phases, one of which is stationary and non-polar, while the other is polar and moves in a definite direction. [CHMO]" ;
+                 skos:prefLabel "reversed-phase chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002484
+af-p:AFP_0002484 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 skos:definition "Headspace chromatography is a type of chromatography that uses the gaseous headspace above a sample for analysis because very light volatiles can be efficiently partitioned as they diffuse to the gas volume above. [Allotrope]" ;
+                 skos:prefLabel "headspace chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002655
+af-p:AFP_0002655 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 skos:altLabel "multimodal chromatography" ;
+                 skos:definition "Mixed-mode chromatography (MMC), or multimodal chromatography, refers to chromatographic methods that utilize more than one form of interaction between the stationary phase and analytes in order to achieve separation. [Wikipedia]" ;
+                 skos:prefLabel "mixed-mode chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002846
+af-p:AFP_0002846 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001321 ;
+                 skos:definition "A chromatography method where the separation is based on the adsorption to membranes. [Allotrope]" ;
+                 skos:prefLabel "membrane chromatography" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003281
+af-p:AFP_0003281 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003289
+af-p:AFP_0003289 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( bfo:_0000015
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty bfo:_0000051 ;
+                                                          owl:someValuesFrom af-p:AFP_0001135
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty bfo:_0000051 ;
+                                                          owl:someValuesFrom af-p:AFP_0003312
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:changeNote "2019-09-20 Changed definition. [Allotrope]" ;
+                 skos:definition "Mobile phase delivery is a process performed by a chromatography system in which the mobile phase is mixed and transported through the instrument for separation and detection. [Allotrope]" ;
+                 skos:prefLabel "mobile phase delivery" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003298
+af-p:AFP_0003298 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003282 ;
+                 skos:definition "The relative retention calculation is a process of performing the mathematical ratio quantification of the time a substance and a standard that remain in the stationary phase of a chromatography process. [Allotrope]" ;
+                 skos:prefLabel "relative retention calculation" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003312
+af-p:AFP_0003312 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003349
+af-p:AFP_0003349 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003715
+af-p:AFP_0003715 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003289 ;
+                 skos:definition "Constant pressure mobile phase delivery is a mobile phase delivery process whereby the mobile phase is delivered by maintaining a constant pressure of the mobile phase. [Allotrope]" ;
+                 skos:prefLabel "constant pressure mobile phase delivery" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003748
+af-p:AFP_0003748 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003289 ;
+                 skos:definition "Constant flow rate mobile phase delivery is a mobile phase delivery process whereby the mobile phase is delivered by maintaining a constant flow rate of the mobile phase. [Allotrope]" ;
+                 skos:prefLabel "constant flow rate mobile phase delivery" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000014
+af-q:AFQ_0000014 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-q:AFQ_0000020
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty ro:_0000080 ;
+                                                              owl:someValuesFrom af-e:AFE_0000217
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002811 af-x:AFX_0000904 ;
+                 skos:altLabel "chromatography column length" ;
+                 skos:changeNote "2020-06-22 Changed labels. [Allotrope]" ;
+                 skos:definition "The length of a chromatography column bed. [Allotrope]" ;
+                 skos:prefLabel "chromatography column length (quality)" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000016
+af-q:AFQ_0000016 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-q:AFQ_0000018
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty ro:_0000080 ;
+                                                              owl:someValuesFrom af-e:AFE_0000217
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "column inner diameter" ,
+                               "dc" ,
+                               "inner diameter" ;
+                 skos:changeNote "2020-06-22 Changed labels and definition. [Allotrope]" ;
+                 skos:definition "Column inner diameter is the inner diameter of a column. [Allotrope]" ;
+                 skos:prefLabel "column inner diameter (quality)" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000018
+af-q:AFQ_0000018 rdf:type owl:Class ;
+                 skos:altLabel "inner diameter" ;
+                 skos:changeNote "2020-06-22 Changed labels. [Allotrope]" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000019
+af-q:AFQ_0000019 rdf:type owl:Class ;
+                 rdfs:subClassOf af-q:AFQ_0000005 ;
+                 af-x:AFX_0002811 af-x:AFX_0001180 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 dct:source "Orange Book: IUPAC Compendium of Analytical Nomenclature. Second Edition, Blackwell Scientific Publications, Oxford, 1987." ,
+                            "PAC, 1993, 65, 819. Nomenclature for chromatography (IUPAC Recommendations 1993)" ;
+                 skos:altLabel "relative retention" ,
+                               "relative retention time" ;
+                 skos:definition "Relative retention time is a ratio quality of the adjusted or net retention time of a component relative to that of a standard, obtained under identical conditions. [Allotrope]" ;
+                 skos:prefLabel "relative retention time (quality)" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000170
+af-q:AFQ_0000170 rdf:type owl:Class ;
+                 rdfs:subClassOf pato:_0000918 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1993, 65, 819 (Nomenclature for chromatography (IUPAC Recommendations 1993))" ;
+                 skos:altLabel "dead volume" ,
+                               "hold-up volume" ;
+                 skos:definition "The hold-up volume is the volume of the mobile phase required to elute a component the concentration of which in the stationary phase is negligible compared to that in the mobile phase. In other words, this component is not retained at all by the stationary phase. Thus, the hold-up volume is equal to the retention volume of an unretained compound. [IUPAC]" ;
+                 skos:prefLabel "hold-up volume (quality)" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000171
+af-q:AFQ_0000171 rdf:type owl:Class ;
+                 rdfs:subClassOf pato:_0000918 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1993, 65, 819 (Nomenclature for chromatography (IUPAC Recommendations 1993))" ;
+                 skos:altLabel "retention volume" ;
+                 skos:definition "Retention volume is the volume of the mobile phase required to elute a component the concentration of which in the stationary phase is negligible compared to that in the mobile phase. In other words, this component is not retained at all by the stationary phase. Thus, the hold-up volume is equal to the retention volume of an unretained compound. The hold-up volume includes any volumes contributed by the sample injector, the detector, and connectors.  In gas chromatography this term is also called the gas hold-up volume. The corrected gas hold-up volume is the gas hold-up volume multiplied by the compression (compressibility) correction factor. [IUPAC]" ;
+                 skos:prefLabel "retention volume (quality)" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000247
+af-q:AFQ_0000247 rdf:type owl:Class ;
+                 rdfs:subClassOf pato:_0000141 ;
+                 skos:definition "A bonded phase is the structure quality of a material that is covalently bonded to a substrate. [Allotrope]" ;
+                 skos:prefLabel "bonded phase" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000015
+af-r:AFR_0000015 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000413 ;
+                 skos:definition "A chromatography peak is a peak that results from a detector's response to the presence of an analyte in the mobile phase eluting from a column in chromatography. [Allotrope]" ;
+                 skos:prefLabel "chromatography peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000132
+af-r:AFR_0000132 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000236 ;
+                 skos:altLabel "GC chromatogram" ;
+                 skos:definition "A plot of detector signal (e.g. ion count or  absorbance) vs. retention time obtained from a column chromatography experiment where the mobile phase is a gas. [CHMO]" ;
+                 skos:prefLabel "gas chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000160
+af-r:AFR_0000160 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000236 ;
+                 skos:definition "A mass chromatogram is a distribution function of a mass detector signal versus time of acquisition or versus volume of analyte. [Allotrope]" ;
+                 skos:prefLabel "mass chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000207
+af-r:AFR_0000207 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000236
+af-r:AFR_0000236 rdfs:subClassOf af-r:AFR_0000523 .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000308
+af-r:AFR_0000308 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000236 ;
+                 skos:altLabel "EMR chromatogram" ;
+                 skos:definition "An electromagnetic radiation chromatogram is a distribution function of a electromagnetic radiation detector signal versus time of acquisition or versus volume of analyte. [Allotrope]" ;
+                 skos:prefLabel "electromagnetic radiation chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000410
+af-r:AFR_0000410 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000236 ;
+                 skos:altLabel "SEC chromatogram" ,
+                               "SEC elugram" ,
+                               "SEC profile" ,
+                               "SEC trace" ,
+                               "size exclusion chromatogram" ;
+                 skos:definition "A plot of detector signal (e.g. ion count or  absorbance) vs. retention time obtained from a chromatography experiment where the separation is caused by exclusion effects within the stationary phase and where the stationary phase is a swollen gel. [CHMO]" ;
+                 skos:prefLabel "size-exclusion chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000413
+af-r:AFR_0000413 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000507
+af-r:AFR_0000507 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000236 ;
+                 skos:altLabel "GPC elugram" ,
+                               "GPC profile" ,
+                               "GPC profiles" ,
+                               "GPC trace" ,
+                               "GPC traces" ,
+                               "gel permeation chromatogram" ,
+                               "gel permeation chromatographic traces" ;
+                 skos:definition "A plot of detector signal (e.g. ion count or  absorbance) vs. retention time obtained from a chromatography experiment where the separation is caused by differences in molecular size. [CHMO]" ;
+                 skos:prefLabel "gel filtration chromatogram" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000905
+af-r:AFR_0000905 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000413 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An unretained peak is a peak which represents the detection result of a material entity which was not retained by a chromatography column. [Allotrope]" ;
+                 skos:prefLabel "unretained peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001089
+af-r:AFR_0001089 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001101 ,
+                                 af-r:AFR_0001177 ;
+                 skos:changeNote "2020-03-20 Added quantification facet superclass. [Allotrope]" ;
+                 skos:definition "Retention time is a chromatography peak facet that indicates the elapsed time between the injection of the sample and the maximum detector response attributed to the peak (analyte band). [Allotrope]" ;
+                 skos:prefLabel "retention time" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001174
+af-r:AFR_0001174 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001101 ,
+                                 [ owl:intersectionOf ( af-r:AFR_0001177
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty af-x:AFX_0002730 ;
+                                                          owl:someValuesFrom af-rl:AFRL_0000248
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty af-x:AFX_0002816 ;
+                                                          owl:someValuesFrom af-q:AFQ_0000019
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:changeNote "2020-03-20 Added quantification facet superclass. [Allotrope]" ;
+                 skos:definition "A chromatography peak facet that denotes the retention time of the peak relative to some other specified reference peak. [Allotrope]" ;
+                 skos:prefLabel "relative retention time" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001175
+af-r:AFR_0001175 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-r:AFR_0001174
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty af-x:AFX_0002730 ;
+                                                          owl:someValuesFrom af-rl:AFRL_0000248
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:definition "A relative retention time that quantitates the ratio of the retention time of the peak relative to some other specified reference peak. [Allotrope]" ;
+                 skos:prefLabel "unadjusted relative retention" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001176
+af-r:AFR_0001176 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-r:AFR_0001174
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty af-x:AFX_0002730 ;
+                                                          owl:someValuesFrom af-rl:AFRL_0000248
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:definition "A relative retention time that quantitates the ratio of the adjusted retention time (corrected for hold-up time) of the peak relative to the adjusted retention time of some reference peak. [Allotrope]" ;
+                 skos:prefLabel "adjusted relative retention" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001177
+af-r:AFR_0001177 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-r:AFR_0000947
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002800 ;
+                                                              owl:someValuesFrom af-r:AFR_0000015
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:definition "A chromatography peak facet is a facet of a chromatography peak. [Allotrope]" ;
+                 skos:prefLabel "chromatography peak facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001197
+af-r:AFR_0001197 skos:changeNote "2019-09-26 Removed alt labels, now their own subclasses. [Allotrope]" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001220
+af-r:AFR_0001220 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001219 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "PAC, 1990, 62, 2167 (Glossary of atmospheric chemistry terms (Recommendations 1990))" ,
+                            "PAC, 1993, 65, 819 (Nomenclature for chromatography (IUPAC Recommendations 1993))" ;
+                 skos:altLabel "baseline" ;
+                 skos:definition "The portion of the chromatogram recording the detector response when only the mobile phase emerges from the column. [IUPAC]" ;
+                 skos:prefLabel "baseline (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001230
+af-r:AFR_0001230 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-r:AFR_0001177
+                                                        af-r:AFR_0001199
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:definition "A chromatographic peak facet that quantitates the degree of separation between two peaks of a chromatogram. [Allotrope]" ;
+                 skos:prefLabel "chromatographic peak resolution" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001231
+af-r:AFR_0001231 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001230 ;
+                 skos:altLabel "chromatographic peak resolution by USP <621> using widths at baseline" ,
+                               "chromatographic peak resolution calculated by the ASTM method" ;
+                 skos:definition "Chromatographic peak resolution that is calculated by the USP <621> method using peak widths measured at the baseline. [Allotrope]" ;
+                 skos:prefLabel "chromatographic peak resolution using baseline peak widths" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001232
+af-r:AFR_0001232 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001230 ;
+                 skos:altLabel "chromatographic peak resolution by USP using widths at half-height" ,
+                               "chromatographic peak resolution calculated by EP" ,
+                               "chromatographic peak resolution calculated by JP-27" ;
+                 skos:definition "Chromatographic peak resolution that is calculated using peak widths measured at the half height. [Allotrope]" ;
+                 skos:prefLabel "chromatographic peak resolution using peak width at half-height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001233
+af-r:AFR_0001233 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001230 ;
+                 skos:definition "Chromatographic peak resolution that is calculated based on peak widths derived from the second statistical moment (peak variance). [Allotrope]" ;
+                 skos:prefLabel "chromatographic peak resolution using statistical moments" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001234
+af-r:AFR_0001234 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:altLabel "capacity ratio" ,
+                               "mass distribution ratio" ,
+                               "partition ratio" ,
+                               "retention factor" ;
+                 skos:definition "The capacity factor is a chromatography peak facet that is a measure of the time the sample component resides in the stationary phase relative to the time it resides in the mobile phase: it expresses how much longer a sample component is retarded by the stationary phase than it would take to travel through the column with the velocity of the mobile phase. [IUPAC]" ;
+                 skos:prefLabel "capacity factor (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001235
+af-r:AFR_0001235 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:altLabel "peak selectivity" ;
+                 skos:definition "A chromatography peak facet that denotes the ratio of the peak's capacity factor to that of another specified peak. [Allotrope]" ;
+                 skos:prefLabel "peak selectivity (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001236
+af-r:AFR_0001236 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-r:AFR_0001088
+                                                        af-r:AFR_0001177
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:altLabel "tailing factor" ;
+                 skos:changeNote "2022-012-07 Changed definition. [Allotrope]" ;
+                 skos:definition "A chromatographic peak asymmetry factor is a chromatography peak facet that is equivalent to the ratio of the time or volume from the center point of a peak to its trailing edge to that of its fronting edge at a specified peak height. [Allotrope]" ;
+                 skos:prefLabel "chromatographic peak asymmetry factor" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001237
+af-r:AFR_0001237 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001236 ;
+                 skos:altLabel "asymmetry factor by EP" ,
+                               "asymmetry factor by JP-27" ,
+                               "asymmetry factor measured at 5 percent height" ,
+                               "asymmetry factor measured at 5% height" ,
+                               "tailing factor by USP <621> method" ;
+                 skos:definition "A quantitative asymmetry factor using 5% peak height. [Allotrope]" ;
+                 skos:prefLabel "asymmetry factor measured at 5 % height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001238
+af-r:AFR_0001238 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001236 ;
+                 skos:altLabel "statistical skew" ;
+                 skos:definition "A quantitative asymmetry factor using the third statistical moment calculated from the peak. [Allotrope]" ;
+                 skos:prefLabel "statistical skew (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001239
+af-r:AFR_0001239 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:altLabel "number of theoretical plates" ;
+                 skos:definition "A chromatography peak facet that measures the amount of band broadening that occurs during the separation and thus the efficiency of the chromatographic system. [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001240
+af-r:AFR_0001240 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001239 ;
+                 skos:altLabel "number of theoretical plates by ASTM" ,
+                               "number of theoretical plates by USP method" ;
+                 skos:definition "The number of theoretical plates calculated based on the peak width measured at the baseline. [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates by tangent method" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001241
+af-r:AFR_0001241 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001239 ;
+                 skos:altLabel "number of theoretical plates by EP method" ,
+                               "number of theoretical plates by JP method" ;
+                 skos:definition "The number of theoretical plates calculated based on the peak width measured at half height. [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates by peak width at half height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001242
+af-r:AFR_0001242 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-r:AFR_0001575
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty af-x:AFX_0002704 ;
+                                                          owl:someValuesFrom [ owl:intersectionOf ( af-q:AFQ_0000036
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty ro:_0000080 ;
+                                                                                                      owl:someValuesFrom af-e:AFE_0001711
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:altLabel "autosampler setting" ;
+                 skos:changeNote "2019-07-01 Changed specification target to be a device configuration. [Allotrope]" ;
+                 skos:definition "A parameter specification specific to the sampler device in the chromatography system. [Allotrope]" ;
+                 skos:prefLabel "autosampler setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001267
+af-r:AFR_0001267 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0001577 ;
+                 skos:altLabel "autosampler injection volume setting" ,
+                               "injection volume" ,
+                               "injection volume setting" ;
+                 skos:definition "An autosampler parameter specification that specifies the volume of sample the autosampler is to inject into the mobile phase for separation. [Allotrope]" ;
+                 skos:prefLabel "autosampler injection volume setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001268
+af-r:AFR_0001268 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-r:AFR_0001575
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty af-x:AFX_0002704 ;
+                                                          owl:someValuesFrom [ owl:intersectionOf ( af-q:AFQ_0000036
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty ro:_0000080 ;
+                                                                                                      owl:someValuesFrom af-e:AFE_0000499
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:altLabel "pump parameter setting" ;
+                 skos:changeNote "2019-07-01 Changed specification target to be a device configuration. [Allotrope]" ;
+                 skos:definition "A parameter specification specific to the pump device in the chromatography system. [Allotrope]" ;
+                 skos:prefLabel "pump setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001269
+af-r:AFR_0001269 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001659 ,
+                                 [ owl:intersectionOf ( af-r:AFR_0001243
+                                                        af-r:AFR_0001268
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:changeNote "2019-07-01 Changed specification target to be a device configuration. [Allotrope]" ;
+                 skos:definition "A pump parameter specification that specifies the mobile phase ratio in the eluent. [Allotrope]" ;
+                 skos:prefLabel "pump mobile phase ratio setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001270
+af-r:AFR_0001270 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001660 ,
+                                 [ owl:intersectionOf ( af-r:AFR_0001243
+                                                        af-r:AFR_0001268
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:changeNote "2019-07-01 Changed specification target to be a device configuration. [Allotrope]" ;
+                 skos:definition "A pump parameter specification that specifies the total flow rate of the combined mobile phases (eluent). [Allotrope]" ;
+                 skos:prefLabel "pump flow rate setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001534
+af-r:AFR_0001534 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0001243 ,
+                                 af-r:AFR_0001678 ;
+                 skos:changeNote "2020-01-06 Moved to chromatography domain. [Allotrope]" ,
+                                 "2020-05-11 Fixed definition. [Allotrope]" ;
+                 skos:definition "Washing repetition setting is a setting that sets the number of repetitions of the washing. [Allotrope]" ;
+                 skos:prefLabel "washing repetition setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001535
+af-r:AFR_0001535 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0001243 ,
+                                 af-r:AFR_0001815 ;
+                 skos:changeNote "2020-01-06 Moved to chromatography domain. [Allotrope]" ;
+                 skos:definition "Washing duration setting is a setting that sets the duration of the washing. [Allotrope]" ;
+                 skos:prefLabel "washing duration setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001536
+af-r:AFR_0001536 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0001243 ,
+                                 af-r:AFR_0001973 ;
+                 skos:changeNote "2020-01-06 Moved to chromatography domain. [Allotrope]" ;
+                 skos:definition "Washing vial position setting is a setting that sets the position of the washing vial. [Allotrope]" ;
+                 skos:prefLabel "washing vial position setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001537
+af-r:AFR_0001537 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0001243 ,
+                                 af-r:AFR_0001277 ;
+                 skos:changeNote "2020-01-06 Moved to chromatography domain. [Allotrope]" ;
+                 skos:definition "Washing solvent type is a setting that sets the type of washing solvent to use. [Allotrope]" ;
+                 skos:prefLabel "washing solvent type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001538
+af-r:AFR_0001538 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0001243 ,
+                                 af-r:AFR_0001255 ;
+                 skos:changeNote "2020-01-06 Moved to chromatography domain. [Allotrope]" ;
+                 skos:definition "An autosampler temperature setting is a setting that sets the temperature within the autosampler. [Allotrope]" ;
+                 skos:prefLabel "autosampler temperature setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001548
+af-r:AFR_0001548 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ;
+                 skos:altLabel "maximum flow gradient" ,
+                               "pump maximum flow rate change setting" ;
+                 skos:definition "Maximum flow rate change setting is a control setting that sets the maximum rate at which the pump is allowed to change the % of solvents being flowed. [Allotrope]" ;
+                 skos:prefLabel "maximum flow rate change setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001575
+af-r:AFR_0001575 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001505 ;
+                 skos:definition "A parameter specification specific to a chromatography system. [Allotrope]" ;
+                 skos:prefLabel "chromatography system setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001645
+af-r:AFR_0001645 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0002280 ;
+                 skos:altLabel "analysis enable" ,
+                               "cooler with range enable" ;
+                 skos:definition "Autosampler injection trigger enable setting is a setting that activates or deactivates triggering of injection based on a specified temperature range. [Allotrope]" ;
+                 skos:example "Cooler (with range) can be enabled in order to trigger injection once autosampler temperature has reached a certain value. Enabling the setting also involves activation of the cooler." ;
+                 skos:prefLabel "autosampler injection trigger enable setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001646
+af-r:AFR_0001646 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ;
+                 skos:definition "Autosampler injection trigger temperature setting is a setting that specifies the temperature range for triggering injection. [Allotrope]" ;
+                 skos:prefLabel "autosampler injection trigger temperature setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001654
+af-r:AFR_0001654 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001575 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000553 ;
+                                   owl:someValuesFrom af-p:AFP_0003289
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom af-r:AFR_0000966
+                                 ] ;
+                 skos:definition "Mobile phase delivery duration setting is a  chromatography system setting that sets the total duration of mobile phase delivery. [Allotrope]" ;
+                 skos:prefLabel "mobile phase delivery duration setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001655
+af-r:AFR_0001655 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001242 ,
+                                 af-r:AFR_0001815 .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001679
+af-r:AFR_0001679 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001286 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom af-q:AFQ_0000244
+                                 ] ;
+                 skos:definition "Frit size is a column specification that indicates the nominal size of pores in a frit designed to exclude particles larger than the specified size. [Allotrope]" ;
+                 skos:prefLabel "frit size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001686
+af-r:AFR_0001686 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001644 ,
+                                 af-r:AFR_0001696 ;
+                 skos:altLabel "baseline at start of integration setting" ,
+                               "baseline now" ,
+                               "force baseline" ;
+                 skos:definition "Baseline at start of integration setting is a data processing setting that sets the ordinate value at the start of the integration baseline to the the value of the signal at the time indicated. [Allotrope]" ;
+                 skos:prefLabel "baseline at start of integration setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001687
+af-r:AFR_0001687 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001644 ,
+                                 af-r:AFR_0001696 ;
+                 skos:altLabel "force split peak" ,
+                               "peak end setting" ,
+                               "split peak" ;
+                 skos:definition "Peak end setting is a data processing setting that sets the peak end to the value of the abscissa at the time indicated. [Allotrope]" ;
+                 skos:prefLabel "peak end setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001688
+af-r:AFR_0001688 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001644 ,
+                                 af-r:AFR_0001696 ;
+                 skos:altLabel "baseline boundary setting" ,
+                               "force valley baselines" ;
+                 skos:definition "Baseline boundary setting is a data processing setting that sets the ordinate values at the boundaries of the baseline of integration to the actual signal values at the peak start and peak end. [Allotrope]" ;
+                 skos:prefLabel "baseline boundary setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001689
+af-r:AFR_0001689 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001685 ,
+                                 af-r:AFR_0001696 ,
+                                 af-r:AFR_0002280 ;
+                 skos:altLabel "enable integration" ,
+                               "integration on/off" ,
+                               "integration with peak detection enabled setting" ;
+                 skos:changeNote "2020-12-04 Fixed flag parent. [Allotrope]" ;
+                 skos:definition "Integration with peak detection enabled setting is a data processing setting that allows the integration process to detect peaks for the time period specified. [Allotrope]" ;
+                 skos:prefLabel "integration with peak detection enabled setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001690
+af-r:AFR_0001690 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001685 ,
+                                 af-r:AFR_0001696 ,
+                                 af-r:AFR_0002280 ;
+                 skos:altLabel "enable negative peak detection" ,
+                               "negative peak detection enabled setting" ,
+                               "negative peaks on/off" ;
+                 skos:changeNote "2020-12-04 Fixed flag parent. [Allotrope]" ;
+                 skos:definition "Negative peak detection enabled is a data processing setting that allows peaks to be detected below the baseline for the time specified. [Allotrope]" ;
+                 skos:prefLabel "negative peak detection enabled setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001691
+af-r:AFR_0001691 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:altLabel "area reject" ,
+                               "area threshold for peak integration setting" ,
+                               "set minimum area" ;
+                 skos:definition "Area threshold for peak integration setting is a data processing setting that sets a minimum or maximum area for a peak to be included in the integrated peak list. [Allotrope]" ;
+                 skos:prefLabel "area threshold for peak integration setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001692
+af-r:AFR_0001692 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:altLabel "height reject" ,
+                               "height threshold for peak integration setting" ,
+                               "set minimum height" ;
+                 skos:definition "Height threshold for peak integration setting is a data processing setting that sets a minimum or maximum height for a peak to be included in the integrated peak list. [Allotrope]" ;
+                 skos:prefLabel "height threshold for peak integration setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001693
+af-r:AFR_0001693 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:altLabel "expected average peak width setting" ,
+                               "peak width" ,
+                               "set peak width" ;
+                 skos:definition "Expected average peak width setting is a data processing setting that indicates a typical peak width for the time period specified. [Allotrope]" ;
+                 skos:prefLabel "expected average peak width setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001694
+af-r:AFR_0001694 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001685 ,
+                                 af-r:AFR_0001696 ,
+                                 af-r:AFR_0002280 ;
+                 skos:altLabel "detect shoulders on/off" ,
+                               "enable shoulder detection" ,
+                               "shoulder detection enabled setting" ;
+                 skos:changeNote "2020-12-04 Fixed flag parent. [Allotrope]" ;
+                 skos:definition "Shoulder detection enabled setting is a  data processing setting that allows the integration process to interpolate a baseline for the smaller peak of overlapping peaks for the time period specified. [Allotrope]" ;
+                 skos:prefLabel "shoulder detection enabled setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001924
+af-r:AFR_0001924 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001197 ;
+                 skos:altLabel "signal-to-noise (USP621)" ;
+                 skos:definition "Signal-to-noise ratio (USP621) is a signal-to-noise ratio (peak-to-peak) where the noise is calculated over a period that is a minimum of 5 times the peak width. [Allotrope]" ;
+                 skos:prefLabel "signal-to-noise ratio (USP621)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001925
+af-r:AFR_0001925 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001197 ;
+                 skos:altLabel "signal-to-noise (EP2.2.46)" ,
+                               "signal-to-noise (JP-G20)" ,
+                               "signal-to-noise ratio (JP-G20)" ;
+                 skos:definition "Signal-to-noise ratio (EP2.2.46) is a signal-to-noise ratio (peak-to-peak) where the noise is calculated over a period that is a minimum of 20 times the peak width. [Allotrope]" ;
+                 skos:prefLabel "signal-to-noise ratio (EP2.2.46)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001946
+af-r:AFR_0001946 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:definition "The retention time window lower offset is the extent of the retention time window in time units below the target retention time. [PSI/MS]" ;
+                 skos:prefLabel "retention time window lower offset" ;
+                 skos:scopeNote "The lower and upper offsets may be asymmetric about the target time. [PSI/MS]" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001947
+af-r:AFR_0001947 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:definition "The retention time window upper offset is the extent of the retention time window in time units above the target retention time. [PSI/MS]" ;
+                 skos:prefLabel "retention time window upper offset" ;
+                 skos:scopeNote "The lower and upper offsets may be asymmetric about the target time. [PSI/MS]" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001948
+af-r:AFR_0001948 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:definition "The retention time window width it the full width of a retention time window for a chromatographic peak. [PSI/MS]" ;
+                 skos:prefLabel "retention time window width" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002001
+af-r:AFR_0002001 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001501 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( bfo:_0000015
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000057 ;
+                                                                               owl:someValuesFrom af-e:AFE_0002233
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:altLabel "CDS method" ,
+                               "CDS project" ,
+                               "chromatography data system project" ;
+                 skos:definition "A chromatography data system method is a plan specification that specifies how a process is to be executed on a chromatography data system. [Allotrope]" ;
+                 skos:prefLabel "chromatography data system method" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002024
+af-r:AFR_0002024 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001680 ;
+                 skos:definition "A column brand name is a brand name of a chromatography column that can be based on the brand name of the substrate and its chemistry modification. [Allotrope]" ;
+                 skos:prefLabel "column brand name" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002026
+af-r:AFR_0002026 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ;
+                 skos:altLabel "chromatography column chemistry classification" ,
+                               "chromatography column chemistry classification (datum)" ,
+                               "chromatography column chemistry type (datum)" ;
+                 skos:definition "A chromatography column chemistry type is a classification datum that classifies a chromatography column by the stationary phase and/or chromatographic packing used. [Allotrope]" ;
+                 skos:prefLabel "chromatography column chemistry type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002029
+af-r:AFR_0002029 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001817 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom af-q:AFQ_0000014
+                                 ] ;
+                 skos:altLabel "chromatography column length (datum)" ;
+                 skos:definition "A chromatography column length (datum) is a length datum that quantifies the length of a chromatography column. [Allotrope]" ;
+                 skos:prefLabel "chromatography column length" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002030
+af-r:AFR_0002030 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002108 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom af-q:AFQ_0000016
+                                 ] ;
+                 skos:altLabel "column inner diameter (datum)" ;
+                 skos:definition "A column inner diameter (datum) is an inner diameter quantifies the inner diameter of a column. [Allotrope]" ;
+                 skos:prefLabel "column inner diameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002376
+af-r:AFR_0002376 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002051 ;
+                 skos:definition "A system flow rate profile is a flow rate profile of the flow rate through the system pump of the chromatograph. [Allotrope]" ;
+                 skos:prefLabel "system flow rate profile" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002418
+af-r:AFR_0002418 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002051 ;
+                 skos:definition "A sample flow rate profile is a flow rate profile of the flow rate through the sample pump of the chromatograph. [Allotrope]" ;
+                 skos:prefLabel "sample flow rate profile" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002512
+af-r:AFR_0002512 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001236 ;
+                 skos:altLabel "asymmetry factor measured at 10 percent of height" ,
+                               "asymmetry factor measured at 10% height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ,
+                                 "2022-11-28 Changed pref label and definition. [Allotrope]" ;
+                 skos:definition "A quantitative asymmetry factor calculated at 10 percent of its peak height. [Allotrope]" ;
+                 skos:prefLabel "asymmetry factor measured at 10 % height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002513
+af-r:AFR_0002513 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:altLabel "HETP" ;
+                 skos:definition "A height equivalent to a theoretical plate is a chromatography peak facet quantifying the ratio of the absorption bed length divided by the number of theoretical plates in the absorption bed. [Wikipedia]" ;
+                 skos:prefLabel "height equivalent to a theoretical plate" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002520
+af-r:AFR_0002520 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:altLabel "plate density" ;
+                 skos:definition "A density of theoretical plates (chromatography) is a chromatography peak facet that measures the amount of band broadening normalized per length unit that occurs during the separation and thus the efficiency of the chromatographic system. [Allotrope]" ;
+                 skos:prefLabel "density of theoretical plates (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002521
+af-r:AFR_0002521 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001101 ,
+                                 af-r:AFR_0001177 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom af-q:AFQ_0000171
+                                 ] ;
+                 skos:definition "Retention volume is a chromatography peak facet that indicates the acquisition volume at the maximum detector response attributed to the peak (analyte band). [Allotrope]" ;
+                 skos:prefLabel "retention volume" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002522
+af-r:AFR_0002522 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001843 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0003095
+                                 ] ;
+                 skos:definition "The acquisition volume is the volume elapsed through the chromatography column between the injection of the sample and when the signal is captured. [Allotrope]" ;
+                 skos:prefLabel "acquisition volume" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002550
+af-r:AFR_0002550 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0000236
+                                 ] ;
+                 skos:definition "A chromatogram data cube is a data cube that represents a chromatogram. [Allotrope]" ;
+                 skos:prefLabel "chromatogram data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002561
+af-r:AFR_0002561 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002027 ;
+                 skos:altLabel "chromatography column particle size (datum)" ;
+                 skos:definition "A chromatography column particle size is a particle size datum that quantifies the dimensions of packing particles in a chromatography column. [Allotrope]" ;
+                 skos:prefLabel "chromatography column particle size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002607
+af-r:AFR_0002607 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-e:AFE_0000217
+                                 ] ;
+                 skos:definition "A chromatography column document is a document that encompasses the information associated with a chromatography column. [Allotrope]" ;
+                 skos:prefLabel "chromatography column document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002608
+af-r:AFR_0002608 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ;
+                 skos:definition "A chromatography column fill type is a classification datum that classifies a chromatography column by the form of the stationary phase in the column. [Allotrope]" ;
+                 skos:example "Packed, WCOT, PLOT, or SCOT" ;
+                 skos:prefLabel "chromatography column fill type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002609
+af-r:AFR_0002609 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002432 ;
+                 skos:altLabel "chromatography column film thickness (datum)" ;
+                 skos:definition "A chromatography column film thickness is a thickness datum that quantifies the thickness of the film coating in a chromatography column. [Allotrope]" ;
+                 skos:prefLabel "chromatography column film thickness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002707
+af-r:AFR_0002707 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0002418
+                                 ] ;
+                 skos:definition "A sample flow rate data cube is a data cube that represents the flow rate through the sample pump of a chromatograph. [Allotrope]" ;
+                 skos:prefLabel "sample flow rate data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002708
+af-r:AFR_0002708 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0002376
+                                 ] ;
+                 skos:definition "A system flow rate data cube is a data cube that represents the flow rate through the system pump of a chromatograph. [Allotrope]" ;
+                 skos:prefLabel "system flow rate data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002740
+af-r:AFR_0002740 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000160 ,
+                                 iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002741
+                                 ] ;
+                 skos:definition "A gradient segment aggregate document is a document that aggregates gradient segment documents. [Allotrope]" ;
+                 skos:prefLabel "gradient segment aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002741
+af-r:AFR_0002741 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-r:AFR_0001659
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty af-x:AFX_0002800 ;
+                                                                               owl:someValuesFrom af-r:AFR_0002742
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A gradient segment document is a document that encompasses the information associated with a step in some gradient profile. [Allotrope]" ;
+                 skos:prefLabel "gradient segment document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002742
+af-r:AFR_0002742 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002415 ;
+                 skos:altLabel "gradient profile setting" ;
+                 skos:definition "A gradient profile setting is a control profile setting that specifies the profile of the ratio of solvents in the mobile phase used over the course of a chromatographic separation. [Allotrope]" ;
+                 skos:prefLabel "gradient profile setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002759
+af-r:AFR_0002759 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001843 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom af-q:AFQ_0000170
+                                 ] ;
+                 skos:definition "A hold-up volume is a quality quantification facet that quantifies the hold-up volume of a chromatographic column. [Allotrope]" ;
+                 skos:prefLabel "hold-up volume" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002761
+af-r:AFR_0002761 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001075 ;
+                 skos:definition "A peak width at inflection is the peak width calculated by the length between its two inflection points. [Allotrope]" ;
+                 skos:prefLabel "peak width at inflection" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002768
+af-r:AFR_0002768 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000937 ;
+                 skos:altLabel "column dead time" ,
+                               "column dwell time" ,
+                               "column void time" ,
+                               "dead time" ,
+                               "dwell time" ,
+                               "void time" ;
+                 skos:definition "A column void volume time is the time required for an unretained compound to traverse the column and exit. [Allotrope]" ;
+                 skos:prefLabel "column void volume time" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002773
+af-r:AFR_0002773 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0001255 ,
+                                 af-r:AFR_0002808 ;
+                 skos:definition "A column compartment temperature setting is a temperature setting that specifies the temperature of some column compartment. [Allotrope]" ;
+                 skos:prefLabel "column compartment temperature setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002776
+af-r:AFR_0002776 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001236 ;
+                 skos:altLabel "asymmetry factor measured at 4.4 percent height" ,
+                               "asymmetry factor measured at 4.4% height" ;
+                 skos:changeNote "2022-11-28 Changed pref label, added alt label. [Allotrope]" ;
+                 skos:definition "A quantitative asymmetry factor equivalent to the ratio of the time or volume from the center point of a peak to its trailing edge to that of its fronting edge at 4.4 % of the peak height. [Allotrope]" ;
+                 skos:prefLabel "asymmetry factor measured at 4.4 % height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002777
+af-r:AFR_0002777 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001236 ;
+                 skos:altLabel "asymmetry factor squared measured at 4.4 percent height" ,
+                               "asymmetry factor squared measured at 4.4% height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ;
+                 skos:definition "A quantitative asymmetry factor equivalent to the square of ratio of the time or volume from the center point of a peak to its trailing edge to that of its fronting edge at 4.4 % of the peak height. [Allotrope]" ;
+                 skos:prefLabel "asymmetry factor squared measured at 4.4 % height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002778
+af-r:AFR_0002778 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001236 ;
+                 skos:altLabel "asymmetry factor squared measured at 10 percent height" ,
+                               "asymmetry factor squared measured at 10% height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ;
+                 skos:definition "A quantitative asymmetry factor equivalent to the square of ratio of the time or volume from the center point of a peak to its trailing edge to that of its fronting edge at 10 % of the peak height. [Allotrope]" ;
+                 skos:prefLabel "asymmetry factor squared measured at 10 % height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002779
+af-r:AFR_0002779 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001236 ;
+                 skos:definition "A quantitative asymmetry factor equivalent to the square of ratio of the time or volume from the center point of a peak to its trailing edge to that of its fronting edge. [Allotrope]" ;
+                 skos:prefLabel "asymmetry factor measured at baseline" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002780
+af-r:AFR_0002780 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001239 ;
+                 skos:altLabel "number of theoretical plates measured at 60.7 percent of peak height" ,
+                               "number of theoretical plates measured at 60.7% of peak height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ;
+                 skos:definition "The number of theoretical plates calculated by the peak width at 60.7 % of peak height (2 sigma for a gaussian peak). [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates measured at 60.7 % of peak height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002781
+af-r:AFR_0002781 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001239 ;
+                 skos:altLabel "number of theoretical plates measured at 32.4 percent of peak height" ,
+                               "number of theoretical plates measured at 32.4% of peak height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ;
+                 skos:definition "The number of theoretical plates calculated by the peak width at 32.4 % of peak height (3 sigma for a gaussian peak). [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates measured at 32.4 % of peak height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002782
+af-r:AFR_0002782 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001239 ;
+                 skos:altLabel "number of theoretical plates measured at 13.4 percent of peak height" ,
+                               "number of theoretical plates measured at 13.4% of peak height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ;
+                 skos:definition "The number of theoretical plates calculated by the peak width at 13.4 % of peak height (4 sigma for a gaussian peak). [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates measured at 13.4 % of peak height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002783
+af-r:AFR_0002783 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001239 ;
+                 skos:altLabel "number of theoretical plates measured at 4.4 percent of peak height" ,
+                               "number of theoretical plates measured at 4.4% of peak height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ;
+                 skos:definition "The number of theoretical plates calculated by the peak width at 4.4 % of peak height (5 sigma for a gaussian peak). [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates measured at 4.4 % of peak height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002788
+af-r:AFR_0002788 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:altLabel "peak leading edge time at 5 percent of peak height" ,
+                               "peak leading edge time at 5% of peak height" ;
+                 skos:changeNote "2022-11-28 Added alt label. [Allotrope]" ;
+                 skos:definition "The time or volume from the center point of a peak to its leading edge at 5 % of the peak height. [Allotrope]" ;
+                 skos:prefLabel "peak leading edge time at 5 % of peak height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002789
+af-r:AFR_0002789 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:definition "An expected retention time is a peak facet that indicates the expected retention time as specified by the data processing method. [Allotrope]" ;
+                 skos:prefLabel "expected retention time" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002791
+af-r:AFR_0002791 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0003070 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom af-r:AFR_0000015
+                                 ] ;
+                 skos:altLabel "peak type" ;
+                 skos:definition "A chromatography peak type is a classification datum that classifies a chromatography peak by the role played by the substance it is a proxy for in the chromatographic process. [Allotrope]" ;
+                 skos:example "main component, mobile phase, excipient" ;
+                 skos:prefLabel "chromatography peak type" ;
+                 skos:scopeNote "It is mainly used to determine if it is relevant to the particular analysis." .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002792
+af-r:AFR_0002792 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom af-p:AFP_0000422
+                                 ] ;
+                 skos:definition "A chromatography separation type is a classification datum that classifies the underlying separation process used in the chromatographic process. [Allotrope]" ;
+                 skos:example "reversed phase, ion exchange, normal phase, ligand" ;
+                 skos:prefLabel "chromatography separation type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002800
+af-r:AFR_0002800 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002791 ;
+                 skos:altLabel "impurity type" ;
+                 skos:definition "An impurity type is a classification datum that classifies a peak by the impurity role played by the substance it is a proxy for in the chromatographic process. [Allotrope]" ;
+                 skos:prefLabel "impurity chromatography peak type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002806
+af-r:AFR_0002806 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001177 ;
+                 skos:altLabel "peak symmetry factor measured at 5% peak height" ;
+                 skos:definition "A chromatography peak facet equivalent to the ratio of the time or volume from the center point of a peak to its fronting edge divided by the entire width of the peak at 5% of the peak height. [Allotrope]" ;
+                 skos:prefLabel "peak symmetry factor measured at 5 % peak height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002807
+af-r:AFR_0002807 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001239 ;
+                 skos:altLabel "number of theoretical plates by JP14 method" ;
+                 skos:definition "The number of theoretical plates calculated based on the peak width measured at half height, adjusted to use 5.55 as the square of the standard deviation in accordance with JP14. [Allotrope]" ;
+                 skos:prefLabel "number of theoretical plates by peak width at half height (JP14)" ;
+                 skos:scopeNote "Japanese Pharmacopeia previously required use of a different constant value to the one currently used in alignment with European Pharmacopeia for the square of the standard deviation in this method. This term represents results calculated using that alternate constant value." .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002808
+af-r:AFR_0002808 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001575 ,
+                                 [ owl:intersectionOf ( af-r:AFR_0001575
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty af-x:AFX_0002704 ;
+                                                          owl:someValuesFrom [ owl:intersectionOf ( af-q:AFQ_0000036
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty ro:_0000080 ;
+                                                                                                      owl:someValuesFrom af-e:AFE_0002198
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 skos:altLabel "column compartment setting" ;
+                 skos:definition "A parameter specification specific to the column compartment in the chromatography system. [Allotrope]" ;
+                 skos:prefLabel "column compartment setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002811
+af-r:AFR_0002811 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A minimum peak detection slope setting is a data processing setting that defines the minimum slope of the signal (rate of change of the signal per acquisition time) at or above which the start of a peak is detected. [Allotrope]" ;
+                 skos:prefLabel "minimum peak detection slope setting (chromatography)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002812
+af-r:AFR_0002812 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001843 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:altLabel "V0" ,
+                               "interparticle volume of the column" ,
+                               "interstitial volume" ;
+                 skos:definition "A void volume is the volume occupied by the mobile phase between the particles in the packed section of a column. [IUPAC]" ;
+                 skos:note """In gas chromatography, the symbol V_G may be used for the interparticle volume of the column. In the ideal case, neglecting any extra-column volume, V_G is equal to the corrected gas hold-up volume (V0_M).
+V_G = V0_M = V_M
+[IUPAC]""" ,
+                           "In liquid chromatography, the interparticle volume is equal to the mobile-phase hold-up volume (V_M) in the ideal case, neglecting any extra-column volume. [IUPAC]" ;
+                 skos:prefLabel "void volume" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002822
+af-r:AFR_0002822 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002805 ;
+                 skos:definition "A suitability calculations enabled setting is a data processing setting that indicates if system suitability results are to be calculated. [Allotrope]" ;
+                 skos:prefLabel "suitability calculations enabled setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002823
+af-r:AFR_0002823 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002805 ;
+                 skos:definition "An unknown suitability calculations enabled setting is a data processing setting that indicates if system suitability results are to be calculated for unknowns. [Allotrope]" ;
+                 skos:prefLabel "unknown suitability calculations enabled setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002824
+af-r:AFR_0002824 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A suitability pharmacopoeia setting is a data processing setting that indicates which pharmacopoeia calculation methods are to be used. [Allotrope]" ;
+                 skos:prefLabel "suitability pharmacopoeia setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002825
+af-r:AFR_0002825 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A half height multiplier plate count setting (USP) is a data processing setting that indicates at which peak height the USP plate count should be calculated. [Allotrope]" ;
+                 skos:prefLabel "half height multiplier plate count setting (USP)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002826
+af-r:AFR_0002826 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A half height multiplier resolution setting (USP) is a data processing setting that indicates at which peak height the USP resolution should be calculated. [Allotrope]" ;
+                 skos:prefLabel "half height multiplier resolution setting (USP)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002828
+af-r:AFR_0002828 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002805 ;
+                 skos:definition "A blank injection noise calculation setting is a data processing setting that indicates that a blank injection is to be used for calculating baseline noise. [Allotrope]" ;
+                 skos:prefLabel "blank injection noise calculation setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002829
+af-r:AFR_0002829 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A half height multiplier signal to noise setting (USP) is a data processing setting that indicates the half height multiplier that is to be used in determining the baseline region for calculating noise in USP S/N calculations. [Allotrope]" ;
+                 skos:prefLabel "half height multiplier signal to noise setting (USP)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002830
+af-r:AFR_0002830 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A half height multiplier signal to noise setting (EP) is a data processing setting that indicates the half height multiplier that is to be used in determining the baseline region for calculating noise in EP S/N calculations. [Allotrope]" ;
+                 skos:prefLabel "half height multiplier signal to noise setting (EP)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002831
+af-r:AFR_0002831 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001696 ;
+                 skos:definition "A half height multiplier signal to noise setting (JP) is a data processing setting that indicates the half height multiplier that is to be used in determining the baseline region for calculating noise in JP S/N calculations. [Allotrope]" ;
+                 skos:prefLabel "half height multiplier signal to noise setting (JP)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002877
+af-r:AFR_0002877 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002550 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0000160
+                                 ] ;
+                 skos:definition "A mass chromatogram data cube is a data cube that is a representation of some mass chromatogram. [Allotrope]" ;
+                 skos:prefLabel "mass chromatogram data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002882
+af-r:AFR_0002882 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001230 ;
+                 skos:definition "A chromatographic peak resolution that is calculated using peak widths from the Foley Dorsey equation for asymmetric peaks. [Allotrope]" ;
+                 skos:prefLabel "chromatographic peak resolution using Foley-Dorsey method" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002883
+af-r:AFR_0002883 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001230 ;
+                 skos:altLabel "chromatographic peak resolution using peak widths at 4.4% height" ;
+                 skos:definition "A chromatographic peak resolution that is calculated using peak widths at 4.4 % peak height. [Allotrope]" ;
+                 skos:prefLabel "chromatographic peak resolution using peak widths at 4.4 % height" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003034
+af-r:AFR_0003034 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom af-e:AFE_0000217
+                                 ] ;
+                 skos:definition "A chromatography column separation mode is a classification datum that classifies a column by the type of chromatography it supports. [Allotrope]" ;
+                 skos:prefLabel "chromatography column separation mode" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003035
+af-r:AFR_0003035 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000032
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A stationary phase document is a document that encapsulates the information associated with a stationary phase. [Allotrope]" ;
+                 skos:prefLabel "stationary phase document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003036
+af-r:AFR_0003036 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000211
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A substrate document is a document that encapsulates the information associated with a substrate. [Allotrope]" ;
+                 skos:prefLabel "substrate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003037
+af-r:AFR_0003037 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom pato:_0000970
+                                 ] ;
+                 skos:definition "A substrate permeability type is a classification datum that classifies the permeability of a substrate. [Allotrope]" ;
+                 skos:prefLabel "substrate permeability type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003038
+af-r:AFR_0003038 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000922 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000211
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A substrate material description is a description of the material used in a substrate. [Allotrope]" ;
+                 skos:prefLabel "substrate material description" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003039
+af-r:AFR_0003039 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom af-rl:AFRL_0000032
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A phase chemistry type is a classification datum that classifies the chemistry of some stationary phase. [Allotrope]" ;
+                 skos:prefLabel "phase chemistry type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003040
+af-r:AFR_0003040 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001583 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-q:AFQ_0000367
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000080 ;
+                                                                               owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                           owl:onProperty ro:_0000087 ;
+                                                                                                                           owl:someValuesFrom af-rl:AFRL_0000032
+                                                                                                                         ]
+                                                                                                                       ) ;
+                                                                                                    rdf:type owl:Class
+                                                                                                  ]
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "An acidity is a quality quantification facet that quantifies the acidity of a chromatographic stationary phase. [Allotrope]" ;
+                 skos:prefLabel "acidity (hydrophobic subtraction)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003041
+af-r:AFR_0003041 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001583 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-q:AFQ_0000368
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000080 ;
+                                                                               owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                           owl:onProperty ro:_0000087 ;
+                                                                                                                           owl:someValuesFrom af-rl:AFRL_0000032
+                                                                                                                         ]
+                                                                                                                       ) ;
+                                                                                                    rdf:type owl:Class
+                                                                                                  ]
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A basicity is a quality quantification facet that quantifies the basicity of a chromatographic stationary phase. [Allotrope]" ;
+                 skos:prefLabel "basicity (hydrophobic subtraction)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003042
+af-r:AFR_0003042 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001583 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( pato:_0001884
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000080 ;
+                                                                               owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                           owl:onProperty ro:_0000087 ;
+                                                                                                                           owl:someValuesFrom af-rl:AFRL_0000032
+                                                                                                                         ]
+                                                                                                                       ) ;
+                                                                                                    rdf:type owl:Class
+                                                                                                  ]
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A hydrophobicity is a quality quantification facet that quantifies the hydrophobicity of a chromatographic stationary phase. [Allotrope]" ;
+                 skos:prefLabel "hydrophobicity (hydrophobic subtraction)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003043
+af-r:AFR_0003043 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001583 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-q:AFQ_0000369
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000080 ;
+                                                                               owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                           owl:onProperty ro:_0000087 ;
+                                                                                                                           owl:someValuesFrom af-rl:AFRL_0000032
+                                                                                                                         ]
+                                                                                                                       ) ;
+                                                                                                    rdf:type owl:Class
+                                                                                                  ]
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A steric resistance is the quality quantification facet that quantifies the steric resistance of a chromatographic stationary phase. [Allotrope]" ;
+                 skos:prefLabel "steric resistance (hydrophobic subtraction)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003044
+af-r:AFR_0003044 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001583 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002816 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( pato:_0002189
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000080 ;
+                                                                               owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0000275
+                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                           owl:onProperty ro:_0000087 ;
+                                                                                                                           owl:someValuesFrom af-rl:AFRL_0000032
+                                                                                                                         ]
+                                                                                                                       ) ;
+                                                                                                    rdf:type owl:Class
+                                                                                                  ]
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A polarizability is the quality quantification facet that quantifies the polarizability of a chromatographic stationary phase. [Allotrope]" ;
+                 skos:prefLabel "polarizability (hydrophobic subtraction)" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000011
+af-rl:AFRL_0000011 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000126 ;
+                   skos:altLabel "mobile phase role" ;
+                   skos:definition "Mobile phase is the chromatographic phase role of a fluid material entity in a chromatography process to act as the fluid that percolates through or along the stationary bed in chromatography. [Allotrope, CHMO]" ;
+                   skos:prefLabel "mobile phase" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000032
+af-rl:AFRL_0000032 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000126 ;
+                   skos:definition "A stationary phase is the chromatographic phase role of a solid, gel or liquid material that is the stationary component in chromatography. [Allotrope]" ;
+                   skos:prefLabel "stationary phase" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000126
+af-rl:AFRL_0000126 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   skos:definition "One of the portions of material between which the components to be separated are distributed in chromatography. [CHMO]" ;
+                   skos:prefLabel "chromatographic phase" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000164
+af-rl:AFRL_0000164 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( af-rl:AFRL_0000011
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty ro:_0000081 ;
+                                                                owl:someValuesFrom af-m:AFM_0000154
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   af-x:AFX_0002798 "true"^^xsd:boolean ;
+                   skos:altLabel "gaseous mobile phase role" ;
+                   skos:definition "Gaseous mobile phase is the mobile phase role of a gaseous material. [Allotrope]" ;
+                   skos:prefLabel "gaseous mobile phase" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000165
+af-rl:AFRL_0000165 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( af-rl:AFRL_0000011
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty ro:_0000081 ;
+                                                                owl:someValuesFrom af-m:AFM_0000401
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   af-x:AFX_0002798 "true"^^xsd:boolean ;
+                   skos:definition "Supercritical mobile phase is the mobile phase role of a supercritical fluid material. [Allotrope]" ;
+                   skos:prefLabel "supercritical mobile phase" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000218
+af-rl:AFRL_0000218 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000011 ;
+                   skos:definition "Effluent is a mobile phase eluting from a column. [Allotrope]" ;
+                   skos:prefLabel "effluent" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000219
+af-rl:AFRL_0000219 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000011 ;
+                   skos:changeNote "2020-12-16 Rephrased definition [Allotrope]" ;
+                   skos:definition "A mobile phase that is analyte material coming from the chromatograph. [Allotrope]" ;
+                   skos:prefLabel "eluate" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000220
+af-rl:AFRL_0000220 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000011 ;
+                   skos:definition "Eluent is a mobile phase entering a column to perform a separation of material. [Allotrope]" ;
+                   skos:prefLabel "eluent" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000485
+af-rl:AFRL_0000485 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000212 ;
+                   skos:altLabel "capillary inner coating" ;
+                   skos:definition "A capillary inner coating role is a coating role of a material that is a coating within a chromatography column. [Allotrope]" ;
+                   skos:prefLabel "capillary inner coating role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000486
+af-rl:AFRL_0000486 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000085 ;
+                   skos:altLabel "endcapping" ;
+                   skos:definition "An endcapping role is a supporting material role with the purpose of preventing chromatographic analytes from interacting with the substrate of the stationary phase. [Allotrope]" ;
+                   skos:prefLabel "endcapping role" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:rightsHolder <http://www.allotrope.org> ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/iupac-copyright
+<http://purl.allotrope.org/voc/iupac-copyright> rdf:type owl:NamedIndividual ,
+                                                         dct:RightsStatement ;
+                                                dct:description "Copyright © 2019 International Union of Pure Applied Chemistry" .
+
+
+###  http://purl.allotrope.org/voc/iupac-license
+<http://purl.allotrope.org/voc/iupac-license> rdf:type owl:NamedIndividual ,
+                                                       dct:LicenseDocument ;
+                                              dct:description "Reproduced by permission of International Union of Pure and Applied Chemistry" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

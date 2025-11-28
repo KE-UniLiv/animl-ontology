@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE catalog[
+<!ELEMENT catalog (uri|group)+>
+<!ELEMENT group (uri)+>
+<!ELEMENT uri EMPTY>
+<!ATTLIST catalog
+	xmlns CDATA #IMPLIED
+	prefer (system|public) #IMPLIED
+>
+<!ATTLIST uri
+	id ID #IMPLIED
+	name CDATA #REQUIRED
+	uri CDATA #REQUIRED
+>
+<!ATTLIST group
+	id ID #IMPLIED
+	prefer (system|public) #IMPLIED
+	xml:base CDATA #IMPLIED
+>
+]>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<group id="import" prefer="public" xml:base="">
+		<uri id="id5658" name="http://purl.allotrope.org/voc/afo/REC/2025/06/afo" uri="../../../../../afo/REC/2025/06/afo.ttl"/>
+		<uri id="id5659" name="http://purl.allotrope.org/voc/afo/REC/2025/06/afo@en-gb" uri="../../../../../afo/REC/2025/06/afo@en-gb.ttl"/>
+		<uri id="id5660" name="http://purl.allotrope.org/voc/afo/REC/2025/06/aft" uri="../../../../../afo/REC/2025/06/aft.ttl"/>
+		<uri id="id5661" name="http://purl.allotrope.org/voc/afo/REC/2025/06/aft@en-gb" uri="../../../../../afo/REC/2025/06/aft@en-gb.ttl"/>
+		<uri id="id5662" name="http://purl.allotrope.org/voc/afo/REC/2025/06/curation" uri="../../../../../afo/REC/2025/06/curation.ttl"/>
+		<uri id="id5663" name="http://purl.allotrope.org/voc/afo/REC/2025/06/relation" uri="../../../../../afo/REC/2025/06/relation.ttl"/>
+		<uri id="id5664" name="http://purl.allotrope.org/voc/afo/REC/2025/06/relation@en-gb" uri="../../../../../afo/REC/2025/06/relation@en-gb.ttl"/>
+		<uri id="id5672" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/molecular-scale" uri="../../../../../afo/perspective/REC/2025/06/molecular-scale.ttl"/>
+		<uri id="id5673" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/organization" uri="../../../../../afo/perspective/REC/2025/06/organization.ttl"/>
+		<uri id="id5674" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/organization@en-gb" uri="../../../../../afo/perspective/REC/2025/06/organization@en-gb.ttl"/>
+		<uri id="id5675" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material" uri="../../../../../afo/perspective/REC/2025/06/portion-of-material.ttl"/>
+		<uri id="id5676" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/portion-of-material@en-gb" uri="../../../../../afo/perspective/REC/2025/06/portion-of-material@en-gb.ttl"/>
+		<uri id="id5677" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system" uri="../../../../../afo/perspective/REC/2025/06/system.ttl"/>
+		<uri id="id5678" name="http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system@en-gb" uri="../../../../../afo/perspective/REC/2025/06/system@en-gb.ttl"/>
+		<uri id="id91" name="http://purl.allotrope.org/voc/bfo/REC/2018/04/bfo-2-0" uri="../../../../../bfo/REC/2018/04/bfo-2-0.ttl"/>
+		<uri id="id2" name="http://purl.allotrope.org/voc/qb/REC/2018/10/cube" uri="../../../../../qb/REC/2018/10/cube.ttl"/>
+		<uri id="id22" name="http://purl.allotrope.org/voc/skos/REC/2018/10/skos" uri="../../../../../skos/REC/2018/10/skos.ttl"/>
+	</group>
+	<group id="REC" prefer="public" xml:base="">
+		<uri id="id5744" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/bet-analysis" uri="bet-analysis.ttl"/>
+		<uri id="id5790" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/bga" uri="bga.ttl"/>
+		<uri id="id5791" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/bga@en-gb" uri="bga@en-gb.ttl"/>
+		<uri id="id5917" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/binding-affinity" uri="binding-affinity.ttl"/>
+		<uri id="id5792" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/bulk-density" uri="bulk-density.ttl"/>
+		<uri id="id5745" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/calibration" uri="calibration.ttl"/>
+		<uri id="id5746" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/cell-counting" uri="cell-counting.ttl"/>
+		<uri id="id5747" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/cell-culture" uri="cell-culture.ttl"/>
+		<uri id="id5748" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography" uri="chromatography.ttl"/>
+		<uri id="id5749" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography-ms" uri="chromatography-ms.ttl"/>
+		<uri id="id5793" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/class-coordination" uri="class-coordination.ttl"/>
+		<uri id="id5794" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/coating" uri="coating.ttl"/>
+		<uri id="id5750" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/detection" uri="detection.ttl"/>
+		<uri id="id5751" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/detection@en-gb" uri="detection@en-gb.ttl"/>
+		<uri id="id5752" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/differential-scanning-calorimetry" uri="differential-scanning-calorimetry.ttl"/>
+		<uri id="id5795" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/disintegration" uri="disintegration.ttl"/>
+		<uri id="id5753" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/dosage-form" uri="dosage-form.ttl"/>
+		<uri id="id5754" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/dynamic-vapor-sorption" uri="dynamic-vapor-sorption.ttl"/>
+		<uri id="id5796" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/electric-engineering" uri="electric-engineering.ttl"/>
+		<uri id="id5755" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/electrochemistry" uri="electrochemistry.ttl"/>
+		<uri id="id5756" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/electron-microscopy" uri="electron-microscopy.ttl"/>
+		<uri id="id5757" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/electron-microscopy@en-gb" uri="electron-microscopy@en-gb.ttl"/>
+		<uri id="id5915" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/electronic-spectrometry" uri="electronic-spectrometry.ttl"/>
+		<uri id="id5910" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/electrophoresis" uri="electrophoresis.ttl"/>
+		<uri id="id5916" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/eln" uri="eln.ttl"/>
+		<uri id="id5797" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/fbrm" uri="fbrm.ttl"/>
+		<uri id="id5758" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/filtration" uri="filtration.ttl"/>
+		<uri id="id5759" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/fingerprinting" uri="fingerprinting.ttl"/>
+		<uri id="id5918" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/flow-cytometry" uri="flow-cytometry.ttl"/>
+		<uri id="id5760" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/fluorescence" uri="fluorescence.ttl"/>
+		<uri id="id5798" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/foam-height" uri="foam-height.ttl"/>
+		<uri id="id5799" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/foam-qualification" uri="foam-qualification.ttl"/>
+		<uri id="id5800" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/fplc" uri="fplc.ttl"/>
+		<uri id="id5761" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/gc" uri="gc.ttl"/>
+		<uri id="id5801" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/gloss" uri="gloss.ttl"/>
+		<uri id="id5802" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/hot-tack" uri="hot-tack.ttl"/>
+		<uri id="id5762" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/injection" uri="injection.ttl"/>
+		<uri id="id5763" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/ir" uri="ir.ttl"/>
+		<uri id="id5764" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc" uri="lc.ttl"/>
+		<uri id="id5765" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc-ms" uri="lc-ms.ttl"/>
+		<uri id="id5766" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/lc-uv" uri="lc-uv.ttl"/>
+		<uri id="id5803" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/loss-on-drying" uri="loss-on-drying.ttl"/>
+		<uri id="id5767" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/luminescence" uri="luminescence.ttl"/>
+		<uri id="id5768" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/mass-spectrometry" uri="mass-spectrometry.ttl"/>
+		<uri id="id5769" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/mass-spectrometry@en-gb" uri="mass-spectrometry@en-gb.ttl"/>
+		<uri id="id5770" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/mixing" uri="mixing.ttl"/>
+		<uri id="id5908" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/multi-analyte-profiling" uri="multi-analyte-profiling.ttl"/>
+		<uri id="id5771" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/nmr" uri="nmr.ttl"/>
+		<uri id="id5772" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/optical-microscopy" uri="optical-microscopy.ttl"/>
+		<uri id="id5804" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/osmometry" uri="osmometry.ttl"/>
+		<uri id="id5773" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/particle-size-distribution" uri="particle-size-distribution.ttl"/>
+		<uri id="id5774" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/pat" uri="pat.ttl"/>
+		<uri id="id5905" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/pcr" uri="pcr.ttl"/>
+		<uri id="id5775" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/ph" uri="ph.ttl"/>
+		<uri id="id5805" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/plate-reader" uri="plate-reader.ttl"/>
+		<uri id="id5776" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/plumbing" uri="plumbing.ttl"/>
+		<uri id="id5777" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/pumping" uri="pumping.ttl"/>
+		<uri id="id5778" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/qpcr" uri="qpcr.ttl"/>
+		<uri id="id5779" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/raman" uri="raman.ttl"/>
+		<uri id="id5914" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/rheometry" uri="rheometry.ttl"/>
+		<uri id="id5780" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/sampling" uri="sampling.ttl"/>
+		<uri id="id5904" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/sec" uri="sec.ttl"/>
+		<uri id="id5781" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/sfc" uri="sfc.ttl"/>
+		<uri id="id5907" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/solution-analyzer" uri="solution-analyzer.ttl"/>
+		<uri id="id5806" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/specific-rotation" uri="specific-rotation.ttl"/>
+		<uri id="id5909" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/spectrophotometry" uri="spectrophotometry.ttl"/>
+		<uri id="id5782" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/tablet-pressing" uri="tablet-pressing.ttl"/>
+		<uri id="id5807" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/tensile" uri="tensile.ttl"/>
+		<uri id="id5783" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/tga" uri="tga.ttl"/>
+		<uri id="id5784" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/thermal-analysis" uri="thermal-analysis.ttl"/>
+		<uri id="id5785" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/titration" uri="titration.ttl"/>
+		<uri id="id5786" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/turbidity" uri="turbidity.ttl"/>
+		<uri id="id5787" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/uv" uri="uv.ttl"/>
+		<uri id="id5788" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/weighing" uri="weighing.ttl"/>
+		<uri id="id5789" name="http://purl.allotrope.org/voc/afo/domain/REC/2025/06/x-ray-diffraction" uri="x-ray-diffraction.ttl"/>
+	</group>
+</catalog>
