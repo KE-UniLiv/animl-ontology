@@ -221,3 +221,4 @@ bertmap/config.yaml
 
 alignment/outputs/bertmap_with_owl/bertmap/bert/checkpoint-*/
 alignment/outputs/bertmap/bert/checkpoint-*/
+alignment/outputs/bertmap_with_owl/bertmap/bert/checkpoint-8526/rng_state.pth
