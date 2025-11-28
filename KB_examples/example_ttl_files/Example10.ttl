@@ -1,0 +1,297 @@
+@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/animl/example10#document> a aml:Document ;
+    aml:animlVersion "1.0" ;
+    aml:denotes <http://example.org/animl/example10#experiment> ;
+    aml:hasSampleSet <http://example.org/animl/example10#sampleset> .
+
+<http://example.org/animl/example10#experiment> a aml:Experiment ;
+    ce:hasMember <http://example.org/animl/example10#step_es_1>,
+        <http://example.org/animl/example10#step_es_2>,
+        <http://example.org/animl/example10#step_es_3>,
+        <http://example.org/animl/example10#step_es_4>,
+        <http://example.org/animl/example10#step_es_5>,
+        <http://example.org/animl/example10#step_es_6>,
+        <http://example.org/animl/example10#step_es_7> .
+
+<http://example.org/animl/example10#result_es_1_1> a aml:Result ;
+    aml:name "Particle Size" .
+
+<http://example.org/animl/example10#result_es_1_2> a aml:Result ;
+    aml:name "Result Series" ;
+    ce:hasMember <http://example.org/animl/example10#seriesSet_es_1_2_1> .
+
+<http://example.org/animl/example10#result_es_2_1> a aml:Result ;
+    aml:name "Particle Size" .
+
+<http://example.org/animl/example10#result_es_2_2> a aml:Result ;
+    aml:name "Result Series" ;
+    ce:hasMember <http://example.org/animl/example10#seriesSet_es_2_2_1> .
+
+<http://example.org/animl/example10#result_es_3_1> a aml:Result ;
+    aml:name "Particle Size" .
+
+<http://example.org/animl/example10#result_es_3_2> a aml:Result ;
+    aml:name "Result Series" ;
+    ce:hasMember <http://example.org/animl/example10#seriesSet_es_3_2_1> .
+
+<http://example.org/animl/example10#result_es_4_1> a aml:Result ;
+    aml:name "Particle Size" .
+
+<http://example.org/animl/example10#result_es_4_2> a aml:Result ;
+    aml:name "Result Series" ;
+    ce:hasMember <http://example.org/animl/example10#seriesSet_es_4_2_1> .
+
+<http://example.org/animl/example10#result_es_5_1> a aml:Result ;
+    aml:name "Particle Size" .
+
+<http://example.org/animl/example10#result_es_5_2> a aml:Result ;
+    aml:name "Result Series" ;
+    ce:hasMember <http://example.org/animl/example10#seriesSet_es_5_2_1> .
+
+<http://example.org/animl/example10#result_es_6_1> a aml:Result ;
+    aml:name "Particle Size" .
+
+<http://example.org/animl/example10#result_es_6_2> a aml:Result ;
+    aml:name "Result Series" ;
+    ce:hasMember <http://example.org/animl/example10#seriesSet_es_6_2_1> .
+
+<http://example.org/animl/example10#result_es_7_1> a aml:Result ;
+    aml:name "Calculated Particle Size" .
+
+<http://example.org/animl/example10#result_es_7_2> a aml:Result ;
+    aml:name "Result Series" ;
+    ce:hasMember <http://example.org/animl/example10#seriesSet_es_7_2_1> .
+
+<http://example.org/animl/example10#sample_Matcha_00001> a aml:Sample ;
+    aml:identifier "Matcha-00001" ;
+    aml:name "Matcha" .
+
+<http://example.org/animl/example10#sampleset> a aml:SampleSet ;
+    ce:hasMember <http://example.org/animl/example10#sample_Matcha_00001> .
+
+<http://example.org/animl/example10#seriesSet_es_1_2_1> a aml:SeriesSet ;
+    aml:name "Raw Dataset" ;
+    aml:value 101 ;
+    ce:hasMember <http://example.org/animl/example10#series_es_1_2_1_1>,
+        <http://example.org/animl/example10#series_es_1_2_1_2> .
+
+<http://example.org/animl/example10#seriesSet_es_2_2_1> a aml:SeriesSet ;
+    aml:name "Raw Dataset" ;
+    aml:value 101 ;
+    ce:hasMember <http://example.org/animl/example10#series_es_2_2_1_1>,
+        <http://example.org/animl/example10#series_es_2_2_1_2> .
+
+<http://example.org/animl/example10#seriesSet_es_3_2_1> a aml:SeriesSet ;
+    aml:name "Raw Dataset" ;
+    aml:value 101 ;
+    ce:hasMember <http://example.org/animl/example10#series_es_3_2_1_1>,
+        <http://example.org/animl/example10#series_es_3_2_1_2> .
+
+<http://example.org/animl/example10#seriesSet_es_4_2_1> a aml:SeriesSet ;
+    aml:name "Raw Dataset" ;
+    aml:value 101 ;
+    ce:hasMember <http://example.org/animl/example10#series_es_4_2_1_1>,
+        <http://example.org/animl/example10#series_es_4_2_1_2> .
+
+<http://example.org/animl/example10#seriesSet_es_5_2_1> a aml:SeriesSet ;
+    aml:name "Raw Dataset" ;
+    aml:value 101 ;
+    ce:hasMember <http://example.org/animl/example10#series_es_5_2_1_1>,
+        <http://example.org/animl/example10#series_es_5_2_1_2> .
+
+<http://example.org/animl/example10#seriesSet_es_6_2_1> a aml:SeriesSet ;
+    aml:name "Raw Dataset" ;
+    aml:value 101 ;
+    ce:hasMember <http://example.org/animl/example10#series_es_6_2_1_1>,
+        <http://example.org/animl/example10#series_es_6_2_1_2> .
+
+<http://example.org/animl/example10#seriesSet_es_7_2_1> a aml:SeriesSet ;
+    aml:name "Calculated Dataset" ;
+    aml:value 101 ;
+    ce:hasMember <http://example.org/animl/example10#series_es_7_2_1_1>,
+        <http://example.org/animl/example10#series_es_7_2_1_2> .
+
+<http://example.org/animl/example10#seriesSpec_es_1_2_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__m> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_1_2_1_1> .
+
+<http://example.org/animl/example10#seriesSpec_es_1_2_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_1_2_1_2> .
+
+<http://example.org/animl/example10#seriesSpec_es_2_2_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__m> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_2_2_1_1> .
+
+<http://example.org/animl/example10#seriesSpec_es_2_2_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_2_2_1_2> .
+
+<http://example.org/animl/example10#seriesSpec_es_3_2_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__m> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_3_2_1_1> .
+
+<http://example.org/animl/example10#seriesSpec_es_3_2_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_3_2_1_2> .
+
+<http://example.org/animl/example10#seriesSpec_es_4_2_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__m> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_4_2_1_1> .
+
+<http://example.org/animl/example10#seriesSpec_es_4_2_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_4_2_1_2> .
+
+<http://example.org/animl/example10#seriesSpec_es_5_2_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__m> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_5_2_1_1> .
+
+<http://example.org/animl/example10#seriesSpec_es_5_2_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_5_2_1_2> .
+
+<http://example.org/animl/example10#seriesSpec_es_6_2_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__m> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_6_2_1_1> .
+
+<http://example.org/animl/example10#seriesSpec_es_6_2_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_6_2_1_2> .
+
+<http://example.org/animl/example10#seriesSpec_es_7_2_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__m> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_7_2_1_1> .
+
+<http://example.org/animl/example10#seriesSpec_es_7_2_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float32 ;
+    aml:hasUnits <http://example.org/animl/example10#unit__> ;
+    aml:usedBy <http://example.org/animl/example10#series_es_7_2_1_2> .
+
+<http://example.org/animl/example10#step_es_1> a aml:ExperimentStep ;
+    aml:name "Particle Size Distribution 1" ;
+    aml:producesResult <http://example.org/animl/example10#result_es_1_1>,
+        <http://example.org/animl/example10#result_es_1_2> .
+
+<http://example.org/animl/example10#step_es_2> a aml:ExperimentStep ;
+    aml:name "Particle Size Distribution 2" ;
+    aml:producesResult <http://example.org/animl/example10#result_es_2_1>,
+        <http://example.org/animl/example10#result_es_2_2> .
+
+<http://example.org/animl/example10#step_es_3> a aml:ExperimentStep ;
+    aml:name "Particle Size Distribution 3" ;
+    aml:producesResult <http://example.org/animl/example10#result_es_3_1>,
+        <http://example.org/animl/example10#result_es_3_2> .
+
+<http://example.org/animl/example10#step_es_4> a aml:ExperimentStep ;
+    aml:name "Particle Size Distribution 4" ;
+    aml:producesResult <http://example.org/animl/example10#result_es_4_1>,
+        <http://example.org/animl/example10#result_es_4_2> .
+
+<http://example.org/animl/example10#step_es_5> a aml:ExperimentStep ;
+    aml:name "Particle Size Distribution 5" ;
+    aml:producesResult <http://example.org/animl/example10#result_es_5_1>,
+        <http://example.org/animl/example10#result_es_5_2> .
+
+<http://example.org/animl/example10#step_es_6> a aml:ExperimentStep ;
+    aml:name "Particle Size Distribution 6" ;
+    aml:producesResult <http://example.org/animl/example10#result_es_6_1>,
+        <http://example.org/animl/example10#result_es_6_2> .
+
+<http://example.org/animl/example10#step_es_7> a aml:ExperimentStep ;
+    aml:name "Calculated Particle Size Distribution" ;
+    aml:producesResult <http://example.org/animl/example10#result_es_7_1>,
+        <http://example.org/animl/example10#result_es_7_2> .
+
+<http://example.org/animl/example10#series_es_1_2_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_1_2_1_1> ;
+    aml:name "Particle Size Class" .
+
+<http://example.org/animl/example10#series_es_1_2_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_1_2_1_2> ;
+    aml:name "Volume Density" .
+
+<http://example.org/animl/example10#series_es_2_2_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_2_2_1_1> ;
+    aml:name "Particle Size Class" .
+
+<http://example.org/animl/example10#series_es_2_2_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_2_2_1_2> ;
+    aml:name "Volume Density" .
+
+<http://example.org/animl/example10#series_es_3_2_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_3_2_1_1> ;
+    aml:name "Particle Size Class" .
+
+<http://example.org/animl/example10#series_es_3_2_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_3_2_1_2> ;
+    aml:name "Volume Density" .
+
+<http://example.org/animl/example10#series_es_4_2_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_4_2_1_1> ;
+    aml:name "Particle Size Class" .
+
+<http://example.org/animl/example10#series_es_4_2_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_4_2_1_2> ;
+    aml:name "Volume Density" .
+
+<http://example.org/animl/example10#series_es_5_2_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_5_2_1_1> ;
+    aml:name "Particle Size Class" .
+
+<http://example.org/animl/example10#series_es_5_2_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_5_2_1_2> ;
+    aml:name "Volume Density" .
+
+<http://example.org/animl/example10#series_es_6_2_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_6_2_1_1> ;
+    aml:name "Particle Size Class" .
+
+<http://example.org/animl/example10#series_es_6_2_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_6_2_1_2> ;
+    aml:name "Volume Density" .
+
+<http://example.org/animl/example10#series_es_7_2_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_7_2_1_1> ;
+    aml:name "Particle Size Class" .
+
+<http://example.org/animl/example10#series_es_7_2_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_7_2_1_2> ;
+    aml:name "Volume Density" .
+
+<http://example.org/animl/example10#unit__> a aml:Units ;
+    aml:token "%" .
+
+<http://example.org/animl/example10#unit__m> a aml:Units ;
+    aml:token "µm" .
+

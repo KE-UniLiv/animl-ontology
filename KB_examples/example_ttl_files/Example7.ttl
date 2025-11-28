@@ -1,0 +1,420 @@
+@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/animl/example7#document> a aml:Document ;
+    aml:animlVersion "1.0" ;
+    aml:denotes <http://example.org/animl/example7#experiment> ;
+    aml:hasSampleSet <http://example.org/animl/example7#sampleset> .
+
+<http://example.org/animl/example7#category_Matcha_00001_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example7#parameter_Matcha_00001_1_1> ;
+    aml:name "Sample data" .
+
+<http://example.org/animl/example7#datapoint_encoded_es_0_1_1_1> a aml:DataPoint ;
+    aml:pointValue "AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_0_1_1_1> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_0_1_1_2> a aml:DataPoint ;
+    aml:pointValue "Vg4tsp3v/z8rhxbZzvcPQJZDi2zn+xdAlkOLbOf7H0DLoUW28/0jQMuhRbbz/SdAy6FFtvP9K0DLoUW28/0vQOXQItv5/jFA5dAi2/n+M0Dl0CLb+f41QOXQItv5/jdA5dAi2/n+OUAAAAAAAAA8QOXQItv5/j1A"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_0_1_1_2> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_0_1_1_3> a aml:DataPoint ;
+    aml:pointValue "VOOlm8QAOUBvEoPAygE5QPyp8dJNAjlA4XoUrkcBOUDHSzeJQQA5QFg5tMh2/jhAAAAAAAAAOUAAAAAAAAA5QG8Sg8DKATlAObTIdr7/OECR7Xw/Nf44QJZDi2zn+zhAVOOlm8QAOUA5tMh2vv84QAAAAAAAADlA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_0_1_1_3> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_0_1_1_4> a aml:DataPoint ;
+    aml:pointValue "+7qC2HvGpD7jhVO2D4OkPnY4BcokhKQ+MnGOzCmZpD4GKk8bbI+kPnFk7ipei6Q+F06/ztiapD6v5j1z9smkPsP8Pgm9tqQ+Q/uXlEqSpD76skr9aomkPmKL6zH3zaQ+iGStWKLMpD5rozCbaaWkPvpfCviIrqQ+"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_0_1_1_4> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_0_1_1_5> a aml:DataPoint ;
+    aml:pointValue "MAuMBRV/Cr/y6NUnkWkKvwx7UMssjQq/+wLpx0dQCr+neWm4OJIKv2gDZr0VWwq/cAgBtIfoCb8svUP8DdsJv/PSiDK/zgm/lRGPsw09Cb90cl8/5jkJv34ocGk3JQm/1kws5FkfCb9QvstOgFYJv1hWnQPyRgm/"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_0_1_1_5> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_0_1_1_6> a aml:DataPoint ;
+    aml:pointValue "mdNlMbH5/z+Z02Uxsfn/PyEf9GxW/f8/rOKNzCP//z8MyF7v/vj/Pzi+9sySAABAVDVB1H0AAEA8TtGRXP7/P3ZsBOJ1/f8/jX+fceEAAEDFPZY+dAEAQF+1MuGX+v8/7zhFR3L5/z+qglFJnQAAQB6n6Egu//8/"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_0_1_1_6> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_0_1_1_7> a aml:DataPoint ;
+    aml:pointValue "y/J1Gf7T0z8cYVERp5PTPyMsKuJ0ktM/soF0sWml0z+l9bcE4J/TP4dNZOYCl9M/B7e1heel0z9qh78ma9TTP9NmnIaowtM/ONkG7kCd0z+69ZoeFJTTP2VyameY2tM/LbRzmgXa0z9WgsXhzK/TP1vuzATDudM/"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_0_1_1_7> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_1_1_1_1> a aml:DataPoint ;
+    aml:pointValue "AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_1_1_1_1> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_1_1_1_2> a aml:DataPoint ;
+    aml:pointValue "Vg4tsp3v/z9WDi2yne8PQAAAAAAAABhAAAAAAAAAIEA1XrpJDAIkQGq8dJMYBChAy6FFtvP9K0AbL90kBgEwQBsv3SQGATJAGy/dJAYBNEA1XrpJDAI2QDVeukkMAjhANV66SQwCOkA1XrpJDAI8QDVeukkMAj5A"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_1_1_1_2> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_1_1_1_3> a aml:DataPoint ;
+    aml:pointValue "Gy/dJAYBOUCNl24SgwA5QOXQItv5/jhAjZduEoMAOUBU46WbxAA5QOF6FK5HATlAjZduEoMAOUBYObTIdv44QN0kBoGVAzlAke18PzX+OECsHFpkO/84QI2XbhKDADlAqMZLN4kBOUBvEoPAygE5QBsv3SQGATlA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_1_1_1_3> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_1_1_1_4> a aml:DataPoint ;
+    aml:pointValue "+l7WSGcd2D5s+6aV9hzYPnLz9+lDHNg+adAJUewa2D61JKRpexPYPrYC41FMFNg+LDlwV04W2D5lR4PXGhTYPrEbyDygENg+yFn1wpwS2D5BO3XAshLYPhI/xQCwEtg+IxaCvvYU2D7ZMLKA4xTYPnEm70AUF9g+"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_1_1_1_4> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_1_1_1_5> a aml:DataPoint ;
+    aml:pointValue "2SuCuNjYCL9pwX7dn4oIv/4UTwVxoQi/krR6ytN5Cb9czNTGBkIKvysO446wUQq/ojoBvGqGCb8PcN9nd2gKv5tlg4YmGwu/6AkpUrHXCr+EOQzya04Lv//ov7FlhQu/DuCm6IyUC79sY2S4XjQLv1fTwlMyegq/"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_1_1_1_5> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_1_1_1_6> a aml:DataPoint ;
+    aml:pointValue "j+TyH9L/NEBxGw3gLQA1QMe6uI0GADVAcoqO5PL/NEA51sVtNAA1QOQUHcnl/zRAcoqO5PL/NEBy+Q/pt/80QABvgQTF/zRAx7q4jQYANUAdWmQ73/80QOM2GsBbADVA/yH99nUANUDHuriNBgA1QHL5D+m3/zRA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_1_1_1_6> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_1_1_1_7> a aml:DataPoint ;
+    aml:pointValue "+wJ64c6F0T87jEl/L4XRPyWwOQfPhNE/MuauJeSD0T9C0TyARX7RP3/6z5off9E/xvmbUIiA0T+s4o3MI3/RP8h+FkuRfNE/G4S53ct90T8PfuIA+n3RP57RViWRfdE/f/rPmh9/0T/fNehLb3/RP/Kxu0BJgdE/"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_1_1_1_7> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_2_1_1_1> a aml:DataPoint ;
+    aml:pointValue "AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_2_1_1_1> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_2_1_1_2> a aml:DataPoint ;
+    aml:pointValue "AAAAAAAAAEArhxbZzvcPQJZDi2zn+xdAlkOLbOf7H0DLoUW28/0jQAAAAAAAAChAAAAAAAAALEAAAAAAAAAwQAAAAAAAADJAGy/dJAYBNEAbL90kBgE2QBsv3SQGAThAGy/dJAYBOkAbL90kBgE8QBsv3SQGAT5A"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_2_1_1_2> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_2_1_1_3> a aml:DataPoint ;
+    aml:pointValue "bxKDwMoBOUCoxks3iQE5QMP1KFyPAjlA5dAi2/n+OEA5tMh2vv84QMdLN4lBADlAc2iR7Xz/OEA9CtejcP04QDm0yHa+/zhAx0s3iUEAOUCwcmiR7fw4QKwcWmQ7/zhAqMZLN4kBOUBU46WbxAA5QI2XbhKDADlA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_2_1_1_3> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_2_1_1_4> a aml:DataPoint ;
+    aml:pointValue "hLtN3bBE+z5KoNyNuT/7PrmN4nK+TPs+sipKGn9B+z5ULhIrA037Puz0LwTaSPs+kSOVWWhW+z68CQsdZUz7Ps3+W+l3Ufs+FBtQh75I+z4EkUa/nU/7Pvu+44viS/s+EqyFrEJQ+z589kh5IEj7PrpJtdxMVvs+"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_2_1_1_4> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_2_1_1_5> a aml:DataPoint ;
+    aml:pointValue "f5bJ2UQ5C789bzx+PCsKv09vpWN+EQy/yGiLzYG8C7/7BpT43S4Lv2g9C2ll5wq/XVEAxFpOC78muuUlKhQMv857Wd+rkgu/Dri3Ln89C7+kN/rm55cLv+Dy65YDjgu/nQnDROdjDL+GCmsyRSoMv515YmvwnQy/"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_2_1_1_5> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_2_1_1_6> a aml:DataPoint ;
+    aml:pointValue "9P3UeOl+WkBkO99PjX9aQAAAAAAAgFpA46WbxCCAWkAAAAAAAIBaQA4tsp3vf1pAAAAAAACAWkCq8dJNYoBaQCuHFtnOf1pAAAAAAACAWkDHSzeJQYBaQEjhehSuf1pA8tJNYhCAWkAOLbKd739aQDm0yHa+f1pA"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_2_1_1_6> .
+
+<http://example.org/animl/example7#datapoint_encoded_es_2_1_1_7> a aml:DataPoint ;
+    aml:pointValue "1bK1vkhozz96jPLMy2HPP+MZNPRPcM8/wYu+gjRjzz8WbY5zm3DPP5BpbRrba88/WAIpsWt7zz9LICV2bW/PPwEXZMvydc8/boeGxahrzz85KjdRS3PPPyOjA5Kwb88/h8Q9lj50zz+uEFZjCWvPP3rkDwaee88/"^^xsd:base64Binary ;
+    ce:isMemberOf <http://example.org/animl/example7#series_es_2_1_1_7> .
+
+<http://example.org/animl/example7#experiment> a aml:Experiment ;
+    ce:hasMember <http://example.org/animl/example7#step_es_0>,
+        <http://example.org/animl/example7#step_es_1>,
+        <http://example.org/animl/example7#step_es_2> .
+
+<http://example.org/animl/example7#paramSpec_Matcha_00001_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example7#parameter_Matcha_00001_1_1> .
+
+<http://example.org/animl/example7#result_es_0_1> a aml:Result ;
+    aml:name "Rheometry" ;
+    ce:hasMember <http://example.org/animl/example7#seriesSet_es_0_1_1> .
+
+<http://example.org/animl/example7#result_es_1_1> a aml:Result ;
+    aml:name "Rheometry" ;
+    ce:hasMember <http://example.org/animl/example7#seriesSet_es_1_1_1> .
+
+<http://example.org/animl/example7#result_es_2_1> a aml:Result ;
+    aml:name "Rheometry" ;
+    ce:hasMember <http://example.org/animl/example7#seriesSet_es_2_1_1> .
+
+<http://example.org/animl/example7#sample_Matcha_00001> a aml:Sample ;
+    aml:comment "" ;
+    aml:hasSampleCategory <http://example.org/animl/example7#category_Matcha_00001_1> ;
+    aml:identifier "Matcha-00001" ;
+    aml:name "Matcha" .
+
+<http://example.org/animl/example7#sampleset> a aml:SampleSet ;
+    ce:hasMember <http://example.org/animl/example7#sample_Matcha_00001> .
+
+<http://example.org/animl/example7#seriesSet_es_0_1_1> a aml:SeriesSet ;
+    aml:name "Rheometry_data" ;
+    aml:value 15 ;
+    ce:hasMember <http://example.org/animl/example7#series_es_0_1_1_1>,
+        <http://example.org/animl/example7#series_es_0_1_1_2>,
+        <http://example.org/animl/example7#series_es_0_1_1_3>,
+        <http://example.org/animl/example7#series_es_0_1_1_4>,
+        <http://example.org/animl/example7#series_es_0_1_1_5>,
+        <http://example.org/animl/example7#series_es_0_1_1_6>,
+        <http://example.org/animl/example7#series_es_0_1_1_7> .
+
+<http://example.org/animl/example7#seriesSet_es_1_1_1> a aml:SeriesSet ;
+    aml:name "Rheometry_data" ;
+    aml:value 15 ;
+    ce:hasMember <http://example.org/animl/example7#series_es_1_1_1_1>,
+        <http://example.org/animl/example7#series_es_1_1_1_2>,
+        <http://example.org/animl/example7#series_es_1_1_1_3>,
+        <http://example.org/animl/example7#series_es_1_1_1_4>,
+        <http://example.org/animl/example7#series_es_1_1_1_5>,
+        <http://example.org/animl/example7#series_es_1_1_1_6>,
+        <http://example.org/animl/example7#series_es_1_1_1_7> .
+
+<http://example.org/animl/example7#seriesSet_es_2_1_1> a aml:SeriesSet ;
+    aml:name "Rheometry_data" ;
+    aml:value 15 ;
+    ce:hasMember <http://example.org/animl/example7#series_es_2_1_1_1>,
+        <http://example.org/animl/example7#series_es_2_1_1_2>,
+        <http://example.org/animl/example7#series_es_2_1_1_3>,
+        <http://example.org/animl/example7#series_es_2_1_1_4>,
+        <http://example.org/animl/example7#series_es_2_1_1_5>,
+        <http://example.org/animl/example7#series_es_2_1_1_6>,
+        <http://example.org/animl/example7#series_es_2_1_1_7> .
+
+<http://example.org/animl/example7#seriesSpec_es_0_1_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:int32 ;
+    aml:usedBy <http://example.org/animl/example7#series_es_0_1_1_1> .
+
+<http://example.org/animl/example7#seriesSpec_es_0_1_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_0_1_1_2> .
+
+<http://example.org/animl/example7#seriesSpec_es_0_1_1_3> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit__C> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_0_1_1_3> .
+
+<http://example.org/animl/example7#seriesSpec_es_0_1_1_4> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_MPa> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_0_1_1_4> .
+
+<http://example.org/animl/example7#seriesSpec_es_0_1_1_5> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_MPa> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_0_1_1_5> .
+
+<http://example.org/animl/example7#seriesSpec_es_0_1_1_6> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_1_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_0_1_1_6> .
+
+<http://example.org/animl/example7#seriesSpec_es_0_1_1_7> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_Pa_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_0_1_1_7> .
+
+<http://example.org/animl/example7#seriesSpec_es_1_1_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:int32 ;
+    aml:usedBy <http://example.org/animl/example7#series_es_1_1_1_1> .
+
+<http://example.org/animl/example7#seriesSpec_es_1_1_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_1_1_1_2> .
+
+<http://example.org/animl/example7#seriesSpec_es_1_1_1_3> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit__C> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_1_1_1_3> .
+
+<http://example.org/animl/example7#seriesSpec_es_1_1_1_4> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_MPa> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_1_1_1_4> .
+
+<http://example.org/animl/example7#seriesSpec_es_1_1_1_5> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_MPa> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_1_1_1_5> .
+
+<http://example.org/animl/example7#seriesSpec_es_1_1_1_6> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_1_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_1_1_1_6> .
+
+<http://example.org/animl/example7#seriesSpec_es_1_1_1_7> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_Pa_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_1_1_1_7> .
+
+<http://example.org/animl/example7#seriesSpec_es_2_1_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:int32 ;
+    aml:usedBy <http://example.org/animl/example7#series_es_2_1_1_1> .
+
+<http://example.org/animl/example7#seriesSpec_es_2_1_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_2_1_1_2> .
+
+<http://example.org/animl/example7#seriesSpec_es_2_1_1_3> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit__C> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_2_1_1_3> .
+
+<http://example.org/animl/example7#seriesSpec_es_2_1_1_4> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_MPa> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_2_1_1_4> .
+
+<http://example.org/animl/example7#seriesSpec_es_2_1_1_5> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_MPa> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_2_1_1_5> .
+
+<http://example.org/animl/example7#seriesSpec_es_2_1_1_6> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_1_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_2_1_1_6> .
+
+<http://example.org/animl/example7#seriesSpec_es_2_1_1_7> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:hasUnits <http://example.org/animl/example7#unit_Pa_s> ;
+    aml:usedBy <http://example.org/animl/example7#series_es_2_1_1_7> .
+
+<http://example.org/animl/example7#step_es_0> a aml:ExperimentStep ;
+    aml:name "Rotational Viscosimetry 1" ;
+    aml:producesResult <http://example.org/animl/example7#result_es_0_1> .
+
+<http://example.org/animl/example7#step_es_1> a aml:ExperimentStep ;
+    aml:name "Rotational Viscosimetry 2" ;
+    aml:producesResult <http://example.org/animl/example7#result_es_1_1> .
+
+<http://example.org/animl/example7#step_es_2> a aml:ExperimentStep ;
+    aml:name "Rotational Viscosimetry 3" ;
+    aml:producesResult <http://example.org/animl/example7#result_es_2_1> .
+
+<http://example.org/animl/example7#parameter_Matcha_00001_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example7#paramSpec_Matcha_00001_1_1> ;
+    aml:name "FluidDensity" ;
+    aml:pointValue 1 .
+
+<http://example.org/animl/example7#series_es_0_1_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_0_1_1_1> ;
+    aml:name "Point No." ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_0_1_1_1> .
+
+<http://example.org/animl/example7#series_es_0_1_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_0_1_1_2> ;
+    aml:name "SegmentTime" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_0_1_1_2> .
+
+<http://example.org/animl/example7#series_es_0_1_1_3> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_0_1_1_3> ;
+    aml:name "Temperature" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_0_1_1_3> .
+
+<http://example.org/animl/example7#series_es_0_1_1_4> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_0_1_1_4> ;
+    aml:name "ShearStress" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_0_1_1_4> .
+
+<http://example.org/animl/example7#series_es_0_1_1_5> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_0_1_1_5> ;
+    aml:name "NormalStress" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_0_1_1_5> .
+
+<http://example.org/animl/example7#series_es_0_1_1_6> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_0_1_1_6> ;
+    aml:name "ShearRate" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_0_1_1_6> .
+
+<http://example.org/animl/example7#series_es_0_1_1_7> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_0_1_1_7> ;
+    aml:name "Viscosity" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_0_1_1_7> .
+
+<http://example.org/animl/example7#series_es_1_1_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_1_1_1_1> ;
+    aml:name "Point No." ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_1_1_1_1> .
+
+<http://example.org/animl/example7#series_es_1_1_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_1_1_1_2> ;
+    aml:name "SegmentTime" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_1_1_1_2> .
+
+<http://example.org/animl/example7#series_es_1_1_1_3> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_1_1_1_3> ;
+    aml:name "Temperature" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_1_1_1_3> .
+
+<http://example.org/animl/example7#series_es_1_1_1_4> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_1_1_1_4> ;
+    aml:name "ShearStress" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_1_1_1_4> .
+
+<http://example.org/animl/example7#series_es_1_1_1_5> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_1_1_1_5> ;
+    aml:name "NormalStress" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_1_1_1_5> .
+
+<http://example.org/animl/example7#series_es_1_1_1_6> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_1_1_1_6> ;
+    aml:name "ShearRate" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_1_1_1_6> .
+
+<http://example.org/animl/example7#series_es_1_1_1_7> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_1_1_1_7> ;
+    aml:name "Viscosity" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_1_1_1_7> .
+
+<http://example.org/animl/example7#series_es_2_1_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_2_1_1_1> ;
+    aml:name "Point No." ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_1> .
+
+<http://example.org/animl/example7#series_es_2_1_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_2_1_1_2> ;
+    aml:name "SegmentTime" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_2> .
+
+<http://example.org/animl/example7#series_es_2_1_1_3> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_2_1_1_3> ;
+    aml:name "Temperature" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_3> .
+
+<http://example.org/animl/example7#series_es_2_1_1_4> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_2_1_1_4> ;
+    aml:name "ShearStress" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_4> .
+
+<http://example.org/animl/example7#series_es_2_1_1_5> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_2_1_1_5> ;
+    aml:name "NormalStress" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_5> .
+
+<http://example.org/animl/example7#series_es_2_1_1_6> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_2_1_1_6> ;
+    aml:name "ShearRate" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_6> .
+
+<http://example.org/animl/example7#series_es_2_1_1_7> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example7#seriesSpec_es_2_1_1_7> ;
+    aml:name "Viscosity" ;
+    ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_7> .
+
+<http://example.org/animl/example7#unit_1_s> a aml:Units ;
+    aml:token "1/s" .
+
+<http://example.org/animl/example7#unit_Pa_s> a aml:Units ;
+    aml:token "Pa.s" .
+
+<http://example.org/animl/example7#unit__C> a aml:Units ;
+    aml:token "°C" .
+
+<http://example.org/animl/example7#unit_s> a aml:Units ;
+    aml:token "s" .
+
+<http://example.org/animl/example7#unit_MPa> a aml:Units ;
+    aml:token "MPa" .
+

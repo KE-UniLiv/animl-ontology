@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AnIML version="1.0">
+    <SampleSet>
+        <Sample name="Matcha" sampleID="Matcha-00001">
+            <Category>
+                <Parameter name="Limscode" parameterType="String">
+                    <S>Matcha</S>
+                </Parameter>
+                <Parameter name="Electrodenumber" parameterType="String">
+                    <S>1</S>
+                </Parameter>
+            </Category>
+        </Sample>
+    </SampleSet>
+    <ExperimentStepSet>
+        <Template name="" templateID="template1">
+            <TagSet>
+                <Tag Name="Repeat" Value="12345" />
+            </TagSet>
+
+
+        </Template>
+        <ExperimentStep experimentStepID="e-1" name="Tiamo Experiment Step 1">
+            <Infrastructure>
+                <SampleReferenceSet>
+
+                    <SampleReference sampleID="Matcha-00001" samplePurpose="consumed" role="Sample" />
+
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Method name="Salt 0.1M  (automated)" />
+            <Tag Name="Repeat" Value="2" />
+            <Result name="Trace">
+                <SeriesSet name="Trace" length="27">
+                    <Series name="Index" dependency="dependent" visible="false" plotScale="none" seriesType="Int32">
+                        <AutoIncrementedValueSet>
+                            <StartValue>
+                                <I>1</I>
+                            </StartValue>
+                            <Increment>
+                                <I>1</I>
+                            </Increment>
+                        </AutoIncrementedValueSet>
+                    </Series>
+                    <Series name="Volume [mL]" dependency="dependent" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.0</D>
+                            <D>0.02</D>
+                            <D>0.04</D>
+                            <D>0.06</D>
+                            <D>0.46</D>
+                            <D>0.86</D>
+                            <D>1.26</D>
+                            <D>1.66</D>
+                            <D>2.06</D>
+                            <D>2.46</D>
+                            <D>2.86</D>
+                            <D>3.107</D>
+                            <D>3.215</D>
+                            <D>3.272</D>
+                            <D>3.344</D>
+                            <D>3.384</D>
+                            <D>3.415</D>
+                            <D>3.443</D>
+                            <D>3.514</D>
+                            <D>3.57</D>
+                            <D>3.681</D>
+                            <D>3.837</D>
+                            <D>4.067</D>
+                            <D>4.371</D>
+                            <D>4.765</D>
+                            <D>5.165</D>
+                            <D>5.423</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Measured value [mV]" dependency="dependent" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>197.9</D>
+                            <D>198.1</D>
+                            <D>198.0</D>
+                            <D>197.9</D>
+                            <D>194.6</D>
+                            <D>190.9</D>
+                            <D>186.5</D>
+                            <D>181.2</D>
+                            <D>174.6</D>
+                            <D>165.8</D>
+                            <D>152.4</D>
+                            <D>138.1</D>
+                            <D>127.4</D>
+                            <D>120.1</D>
+                            <D>106.8</D>
+                            <D>96.3</D>
+                            <D>85.3</D>
+                            <D>75.1</D>
+                            <D>51.2</D>
+                            <D>39.5</D>
+                            <D>24.8</D>
+                            <D>12.7</D>
+                            <D>1.0</D>
+                            <D>-9.1</D>
+                            <D>-18.1</D>
+                            <D>-24.9</D>
+                            <D>-28.5</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="ERC" dependency="dependent" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.0</D>
+                            <D>4.3</D>
+                            <D>4.3</D>
+                            <D>4.3</D>
+                            <D>4.8</D>
+                            <D>5.4</D>
+                            <D>6.4</D>
+                            <D>7.8</D>
+                            <D>10.1</D>
+                            <D>14.4</D>
+                            <D>22.0</D>
+                            <D>31.7</D>
+                            <D>40.7</D>
+                            <D>48.7</D>
+                            <D>55.9</D>
+                            <D>60.8</D>
+                            <D>62.9</D>
+                            <D>62.4</D>
+                            <D>58.7</D>
+                            <D>50.9</D>
+                            <D>39.7</D>
+                            <D>28.6</D>
+                            <D>20.1</D>
+                            <D>14.2</D>
+                            <D>10.4</D>
+                            <D>0.0</D>
+                            <D>0.0</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Time [s]" dependency="independent" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.0</D>
+                            <D>10.2</D>
+                            <D>20.4</D>
+                            <D>30.6</D>
+                            <D>41.2</D>
+                            <D>51.8</D>
+                            <D>62.4</D>
+                            <D>73.0</D>
+                            <D>83.6</D>
+                            <D>94.2</D>
+                            <D>104.8</D>
+                            <D>115.3</D>
+                            <D>125.6</D>
+                            <D>135.9</D>
+                            <D>146.2</D>
+                            <D>156.4</D>
+                            <D>171.6</D>
+                            <D>182.7</D>
+                            <D>198.0</D>
+                            <D>208.6</D>
+                            <D>218.9</D>
+                            <D>229.3</D>
+                            <D>239.7</D>
+                            <D>250.2</D>
+                            <D>260.8</D>
+                            <D>271.4</D>
+                            <D>281.9</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Temperature [°C]" dependency="dependent" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                            <D>25.0</D>
+                        </IndividualValueSet>
+                    </Series>
+                </SeriesSet>
+            </Result>
+            <Result name="Single Results">
+                <Category name="RS01">
+                    <Parameter name="Name" parameterType="String">
+                        <S>NaCl</S>
+                    </Parameter>
+                    <Parameter name="Value" parameterType="Float64">
+                        <D>0.81</D>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="Formula" parameterType="String">
+                        <S>= ( 'DET U.EP{1}.VOL' * 'DET U.CONC' * 58,5 / 'MV.Sample size' ) * 0,1</S>
+                    </Parameter>
+                </Category>
+                <Category name="RS02">
+                    <Parameter name="Name" parameterType="String">
+                        <S>Verbruik</S>
+                    </Parameter>
+                    <Parameter name="Value" parameterType="Float64">
+                        <D>3.4227</D>
+                        <Unit label="mL" />
+                    </Parameter>
+                    <Parameter name="Formula" parameterType="String">
+                        <S>= 'DET U.EP{1}.VOL'</S>
+                    </Parameter>
+                </Category>
+                <Category name="RS03">
+                    <Parameter name="Name" parameterType="String">
+                        <S>Sample Weight</S>
+                    </Parameter>
+                    <Parameter name="Value" parameterType="Float64">
+                        <D>2.461</D>
+                        <Unit label="g" />
+                    </Parameter>
+                    <Parameter name="Formula" parameterType="String">
+                        <S>= 'MV.Sample size'</S>
+                    </Parameter>
+                </Category>
+            </Result>
+        </ExperimentStep>
+    </ExperimentStepSet>
+</AnIML>

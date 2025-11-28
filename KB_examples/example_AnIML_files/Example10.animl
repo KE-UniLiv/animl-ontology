@@ -1,0 +1,2101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AnIML version="1.0">
+    <SampleSet>
+        <Sample name="Matcha" sampleID="Matcha-00001" />
+    </SampleSet>
+    <ExperimentStepSet>
+        <ExperimentStep experimentStepID="es-1" name="Particle Size Distribution 1">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2025-06-24T12:37:25.090Z</Timestamp>
+            </Infrastructure>
+            <Method name="Particle Size Distribution">
+                <Device>
+                    <Manufacturer>Malvern Panalytical</Manufacturer>
+                    <Name>Mastersizer 3000</Name>
+                </Device>
+            </Method>
+            <Result name="Particle Size">
+                <Category name="Particle Size Distribution">
+                    <Parameter name="Stirrer Speed Achieved" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Pea concentrate blank</S>
+                    </Parameter>
+                    <Parameter name="Laser Obscuration" parameterType="Float32">
+                        <F>7.25</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="SOP File Name" parameterType="String">
+                        <S>SOP hot dispersibility MvdB.msop</S>
+                    </Parameter>
+                    <Parameter name="Result Below (2) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Residual" parameterType="Float32">
+                        <F>0.65</F>
+                    </Parameter>
+                    <Parameter name="Measurement Date Time" parameterType="DateTime">
+                        <DateTime>2024-01-16T16:34:33Z</DateTime>
+                    </Parameter>
+                    <Parameter name="Dx (10)" parameterType="Float32">
+                        <F>7.75</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Span" parameterType="Float32">
+                        <F>5.09</F>
+                    </Parameter>
+                    <Parameter name="Dx (50)" parameterType="Float32">
+                        <F>47.9</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Obscuration Blue" parameterType="Float32">
+                        <F>4.7</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="LIMS Mixture/Formulation Number" parameterType="String">
+                        <S>00001</S>
+                    </Parameter>
+                    <Parameter name="Weighted Residual" parameterType="Float32">
+                        <F>0.54</F>
+                    </Parameter>
+                    <Parameter name="Dx (90)" parameterType="Float32">
+                        <F>252.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Stirrer Speed Demand" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Result Below (1) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [4,3]" parameterType="Float32">
+                        <F>94.9</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [3,2]" parameterType="Float32">
+                        <F>21.8</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                </Category>
+            </Result>
+            <Result name="Result Series">
+                <SeriesSet name="Raw Dataset" length="101">
+                    <Series name="Particle Size Class" dependency="independent" seriesID="s-1" visible="true" plotScale="log" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.01</F>
+                            <F>0.0114</F>
+                            <F>0.0129</F>
+                            <F>0.0147</F>
+                            <F>0.0167</F>
+                            <F>0.0189</F>
+                            <F>0.0215</F>
+                            <F>0.0244</F>
+                            <F>0.0278</F>
+                            <F>0.0315</F>
+                            <F>0.0358</F>
+                            <F>0.0407</F>
+                            <F>0.0463</F>
+                            <F>0.0526</F>
+                            <F>0.0597</F>
+                            <F>0.0679</F>
+                            <F>0.0771</F>
+                            <F>0.0876</F>
+                            <F>0.0995</F>
+                            <F>0.113</F>
+                            <F>0.128</F>
+                            <F>0.146</F>
+                            <F>0.166</F>
+                            <F>0.188</F>
+                            <F>0.214</F>
+                            <F>0.243</F>
+                            <F>0.276</F>
+                            <F>0.314</F>
+                            <F>0.357</F>
+                            <F>0.405</F>
+                            <F>0.46</F>
+                            <F>0.523</F>
+                            <F>0.594</F>
+                            <F>0.675</F>
+                            <F>0.767</F>
+                            <F>0.872</F>
+                            <F>0.991</F>
+                            <F>1.13</F>
+                            <F>1.28</F>
+                            <F>1.45</F>
+                            <F>1.65</F>
+                            <F>1.88</F>
+                            <F>2.13</F>
+                            <F>2.42</F>
+                            <F>2.75</F>
+                            <F>3.12</F>
+                            <F>3.55</F>
+                            <F>4.03</F>
+                            <F>4.58</F>
+                            <F>5.21</F>
+                            <F>5.92</F>
+                            <F>6.72</F>
+                            <F>7.64</F>
+                            <F>8.68</F>
+                            <F>9.86</F>
+                            <F>11.2</F>
+                            <F>12.7</F>
+                            <F>14.5</F>
+                            <F>16.4</F>
+                            <F>18.7</F>
+                            <F>21.2</F>
+                            <F>24.1</F>
+                            <F>27.4</F>
+                            <F>31.1</F>
+                            <F>35.3</F>
+                            <F>40.1</F>
+                            <F>45.6</F>
+                            <F>51.8</F>
+                            <F>58.9</F>
+                            <F>66.9</F>
+                            <F>76.0</F>
+                            <F>86.4</F>
+                            <F>98.1</F>
+                            <F>111.0</F>
+                            <F>127.0</F>
+                            <F>144.0</F>
+                            <F>163.0</F>
+                            <F>186.0</F>
+                            <F>211.0</F>
+                            <F>240.0</F>
+                            <F>272.0</F>
+                            <F>310.0</F>
+                            <F>352.0</F>
+                            <F>400.0</F>
+                            <F>454.0</F>
+                            <F>516.0</F>
+                            <F>586.0</F>
+                            <F>666.0</F>
+                            <F>756.0</F>
+                            <F>859.0</F>
+                            <F>976.0</F>
+                            <F>1110.0</F>
+                            <F>1260.0</F>
+                            <F>1430.0</F>
+                            <F>1630.0</F>
+                            <F>1850.0</F>
+                            <F>2100.0</F>
+                            <F>2390.0</F>
+                            <F>2710.0</F>
+                            <F>3080.0</F>
+                            <F>3500.0</F>
+                        </IndividualValueSet>
+                        <Unit label="µm" />
+                    </Series>
+                    <Series name="Volume Density" dependency="dependent" seriesID="s-2" visible="true" plotScale="linear" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.14</F>
+                            <F>0.43</F>
+                            <F>0.88</F>
+                            <F>1.43</F>
+                            <F>1.93</F>
+                            <F>2.31</F>
+                            <F>2.56</F>
+                            <F>2.72</F>
+                            <F>2.81</F>
+                            <F>2.86</F>
+                            <F>2.9</F>
+                            <F>2.93</F>
+                            <F>2.97</F>
+                            <F>2.99</F>
+                            <F>2.99</F>
+                            <F>2.96</F>
+                            <F>2.9</F>
+                            <F>2.79</F>
+                            <F>2.66</F>
+                            <F>2.52</F>
+                            <F>2.41</F>
+                            <F>2.34</F>
+                            <F>2.33</F>
+                            <F>2.39</F>
+                            <F>2.53</F>
+                            <F>2.71</F>
+                            <F>2.94</F>
+                            <F>3.18</F>
+                            <F>3.4</F>
+                            <F>3.58</F>
+                            <F>3.68</F>
+                            <F>3.69</F>
+                            <F>3.59</F>
+                            <F>3.38</F>
+                            <F>3.05</F>
+                            <F>2.62</F>
+                            <F>2.11</F>
+                            <F>1.58</F>
+                            <F>1.06</F>
+                            <F>0.6</F>
+                            <F>0.15</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                        </IndividualValueSet>
+                        <Unit label="%" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-2" name="Particle Size Distribution 2">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2025-06-24T12:37:25.090Z</Timestamp>
+            </Infrastructure>
+            <Method name="Particle Size Distribution">
+                <Device>
+                    <Manufacturer>Malvern Panalytical</Manufacturer>
+                    <Name>Mastersizer 3000</Name>
+                </Device>
+            </Method>
+            <Result name="Particle Size">
+                <Category name="Particle Size Distribution">
+                    <Parameter name="Stirrer Speed Achieved" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Pea concentrate blank</S>
+                    </Parameter>
+                    <Parameter name="Laser Obscuration" parameterType="Float32">
+                        <F>7.37</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="SOP File Name" parameterType="String">
+                        <S>SOP hot dispersibility MvdB.msop</S>
+                    </Parameter>
+                    <Parameter name="Result Below (2) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Residual" parameterType="Float32">
+                        <F>0.66</F>
+                    </Parameter>
+                    <Parameter name="Measurement Date Time" parameterType="DateTime">
+                        <DateTime>2024-01-16T16:35:16Z</DateTime>
+                    </Parameter>
+                    <Parameter name="Dx (10)" parameterType="Float32">
+                        <F>7.66</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Span" parameterType="Float32">
+                        <F>5.205</F>
+                    </Parameter>
+                    <Parameter name="Dx (50)" parameterType="Float32">
+                        <F>44.8</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Obscuration Blue" parameterType="Float32">
+                        <F>4.77</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="LIMS Mixture/Formulation Number" parameterType="String">
+                        <S>00001</S>
+                    </Parameter>
+                    <Parameter name="Weighted Residual" parameterType="Float32">
+                        <F>0.54</F>
+                    </Parameter>
+                    <Parameter name="Dx (90)" parameterType="Float32">
+                        <F>241.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Stirrer Speed Demand" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Result Below (1) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [4,3]" parameterType="Float32">
+                        <F>90.7</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [3,2]" parameterType="Float32">
+                        <F>21.4</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                </Category>
+            </Result>
+            <Result name="Result Series">
+                <SeriesSet name="Raw Dataset" length="101">
+                    <Series name="Particle Size Class" dependency="independent" seriesID="s-1" visible="true" plotScale="log" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.01</F>
+                            <F>0.0114</F>
+                            <F>0.0129</F>
+                            <F>0.0147</F>
+                            <F>0.0167</F>
+                            <F>0.0189</F>
+                            <F>0.0215</F>
+                            <F>0.0244</F>
+                            <F>0.0278</F>
+                            <F>0.0315</F>
+                            <F>0.0358</F>
+                            <F>0.0407</F>
+                            <F>0.0463</F>
+                            <F>0.0526</F>
+                            <F>0.0597</F>
+                            <F>0.0679</F>
+                            <F>0.0771</F>
+                            <F>0.0876</F>
+                            <F>0.0995</F>
+                            <F>0.113</F>
+                            <F>0.128</F>
+                            <F>0.146</F>
+                            <F>0.166</F>
+                            <F>0.188</F>
+                            <F>0.214</F>
+                            <F>0.243</F>
+                            <F>0.276</F>
+                            <F>0.314</F>
+                            <F>0.357</F>
+                            <F>0.405</F>
+                            <F>0.46</F>
+                            <F>0.523</F>
+                            <F>0.594</F>
+                            <F>0.675</F>
+                            <F>0.767</F>
+                            <F>0.872</F>
+                            <F>0.991</F>
+                            <F>1.13</F>
+                            <F>1.28</F>
+                            <F>1.45</F>
+                            <F>1.65</F>
+                            <F>1.88</F>
+                            <F>2.13</F>
+                            <F>2.42</F>
+                            <F>2.75</F>
+                            <F>3.12</F>
+                            <F>3.55</F>
+                            <F>4.03</F>
+                            <F>4.58</F>
+                            <F>5.21</F>
+                            <F>5.92</F>
+                            <F>6.72</F>
+                            <F>7.64</F>
+                            <F>8.68</F>
+                            <F>9.86</F>
+                            <F>11.2</F>
+                            <F>12.7</F>
+                            <F>14.5</F>
+                            <F>16.4</F>
+                            <F>18.7</F>
+                            <F>21.2</F>
+                            <F>24.1</F>
+                            <F>27.4</F>
+                            <F>31.1</F>
+                            <F>35.3</F>
+                            <F>40.1</F>
+                            <F>45.6</F>
+                            <F>51.8</F>
+                            <F>58.9</F>
+                            <F>66.9</F>
+                            <F>76.0</F>
+                            <F>86.4</F>
+                            <F>98.1</F>
+                            <F>111.0</F>
+                            <F>127.0</F>
+                            <F>144.0</F>
+                            <F>163.0</F>
+                            <F>186.0</F>
+                            <F>211.0</F>
+                            <F>240.0</F>
+                            <F>272.0</F>
+                            <F>310.0</F>
+                            <F>352.0</F>
+                            <F>400.0</F>
+                            <F>454.0</F>
+                            <F>516.0</F>
+                            <F>586.0</F>
+                            <F>666.0</F>
+                            <F>756.0</F>
+                            <F>859.0</F>
+                            <F>976.0</F>
+                            <F>1110.0</F>
+                            <F>1260.0</F>
+                            <F>1430.0</F>
+                            <F>1630.0</F>
+                            <F>1850.0</F>
+                            <F>2100.0</F>
+                            <F>2390.0</F>
+                            <F>2710.0</F>
+                            <F>3080.0</F>
+                            <F>3500.0</F>
+                        </IndividualValueSet>
+                        <Unit label="µm" />
+                    </Series>
+                    <Series name="Volume Density" dependency="dependent" seriesID="s-2" visible="true" plotScale="linear" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.15</F>
+                            <F>0.45</F>
+                            <F>0.91</F>
+                            <F>1.47</F>
+                            <F>1.98</F>
+                            <F>2.36</F>
+                            <F>2.61</F>
+                            <F>2.77</F>
+                            <F>2.86</F>
+                            <F>2.91</F>
+                            <F>2.95</F>
+                            <F>2.99</F>
+                            <F>3.03</F>
+                            <F>3.07</F>
+                            <F>3.08</F>
+                            <F>3.06</F>
+                            <F>2.99</F>
+                            <F>2.88</F>
+                            <F>2.75</F>
+                            <F>2.6</F>
+                            <F>2.47</F>
+                            <F>2.38</F>
+                            <F>2.36</F>
+                            <F>2.4</F>
+                            <F>2.53</F>
+                            <F>2.71</F>
+                            <F>2.94</F>
+                            <F>3.18</F>
+                            <F>3.4</F>
+                            <F>3.57</F>
+                            <F>3.66</F>
+                            <F>3.65</F>
+                            <F>3.52</F>
+                            <F>3.27</F>
+                            <F>2.9</F>
+                            <F>2.45</F>
+                            <F>1.93</F>
+                            <F>1.4</F>
+                            <F>0.9</F>
+                            <F>0.48</F>
+                            <F>0.07</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                        </IndividualValueSet>
+                        <Unit label="%" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-3" name="Particle Size Distribution 3">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2025-06-24T12:37:25.090Z</Timestamp>
+            </Infrastructure>
+            <Method name="Particle Size Distribution">
+                <Device>
+                    <Manufacturer>Malvern Panalytical</Manufacturer>
+                    <Name>Mastersizer 3000</Name>
+                </Device>
+            </Method>
+            <Result name="Particle Size">
+                <Category name="Particle Size Distribution">
+                    <Parameter name="Stirrer Speed Achieved" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Pea concentrate blank</S>
+                    </Parameter>
+                    <Parameter name="Laser Obscuration" parameterType="Float32">
+                        <F>7.44</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="SOP File Name" parameterType="String">
+                        <S>SOP hot dispersibility MvdB.msop</S>
+                    </Parameter>
+                    <Parameter name="Result Below (2) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Residual" parameterType="Float32">
+                        <F>0.68</F>
+                    </Parameter>
+                    <Parameter name="Measurement Date Time" parameterType="DateTime">
+                        <DateTime>2024-01-16T16:35:59Z</DateTime>
+                    </Parameter>
+                    <Parameter name="Dx (10)" parameterType="Float32">
+                        <F>7.56</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Span" parameterType="Float32">
+                        <F>5.354</F>
+                    </Parameter>
+                    <Parameter name="Dx (50)" parameterType="Float32">
+                        <F>41.7</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Obscuration Blue" parameterType="Float32">
+                        <F>4.84</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="LIMS Mixture/Formulation Number" parameterType="String">
+                        <S>00001</S>
+                    </Parameter>
+                    <Parameter name="Weighted Residual" parameterType="Float32">
+                        <F>0.57</F>
+                    </Parameter>
+                    <Parameter name="Dx (90)" parameterType="Float32">
+                        <F>231.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Stirrer Speed Demand" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Result Below (1) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [4,3]" parameterType="Float32">
+                        <F>85.9</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [3,2]" parameterType="Float32">
+                        <F>20.8</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                </Category>
+            </Result>
+            <Result name="Result Series">
+                <SeriesSet name="Raw Dataset" length="101">
+                    <Series name="Particle Size Class" dependency="independent" seriesID="s-1" visible="true" plotScale="log" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.01</F>
+                            <F>0.0114</F>
+                            <F>0.0129</F>
+                            <F>0.0147</F>
+                            <F>0.0167</F>
+                            <F>0.0189</F>
+                            <F>0.0215</F>
+                            <F>0.0244</F>
+                            <F>0.0278</F>
+                            <F>0.0315</F>
+                            <F>0.0358</F>
+                            <F>0.0407</F>
+                            <F>0.0463</F>
+                            <F>0.0526</F>
+                            <F>0.0597</F>
+                            <F>0.0679</F>
+                            <F>0.0771</F>
+                            <F>0.0876</F>
+                            <F>0.0995</F>
+                            <F>0.113</F>
+                            <F>0.128</F>
+                            <F>0.146</F>
+                            <F>0.166</F>
+                            <F>0.188</F>
+                            <F>0.214</F>
+                            <F>0.243</F>
+                            <F>0.276</F>
+                            <F>0.314</F>
+                            <F>0.357</F>
+                            <F>0.405</F>
+                            <F>0.46</F>
+                            <F>0.523</F>
+                            <F>0.594</F>
+                            <F>0.675</F>
+                            <F>0.767</F>
+                            <F>0.872</F>
+                            <F>0.991</F>
+                            <F>1.13</F>
+                            <F>1.28</F>
+                            <F>1.45</F>
+                            <F>1.65</F>
+                            <F>1.88</F>
+                            <F>2.13</F>
+                            <F>2.42</F>
+                            <F>2.75</F>
+                            <F>3.12</F>
+                            <F>3.55</F>
+                            <F>4.03</F>
+                            <F>4.58</F>
+                            <F>5.21</F>
+                            <F>5.92</F>
+                            <F>6.72</F>
+                            <F>7.64</F>
+                            <F>8.68</F>
+                            <F>9.86</F>
+                            <F>11.2</F>
+                            <F>12.7</F>
+                            <F>14.5</F>
+                            <F>16.4</F>
+                            <F>18.7</F>
+                            <F>21.2</F>
+                            <F>24.1</F>
+                            <F>27.4</F>
+                            <F>31.1</F>
+                            <F>35.3</F>
+                            <F>40.1</F>
+                            <F>45.6</F>
+                            <F>51.8</F>
+                            <F>58.9</F>
+                            <F>66.9</F>
+                            <F>76.0</F>
+                            <F>86.4</F>
+                            <F>98.1</F>
+                            <F>111.0</F>
+                            <F>127.0</F>
+                            <F>144.0</F>
+                            <F>163.0</F>
+                            <F>186.0</F>
+                            <F>211.0</F>
+                            <F>240.0</F>
+                            <F>272.0</F>
+                            <F>310.0</F>
+                            <F>352.0</F>
+                            <F>400.0</F>
+                            <F>454.0</F>
+                            <F>516.0</F>
+                            <F>586.0</F>
+                            <F>666.0</F>
+                            <F>756.0</F>
+                            <F>859.0</F>
+                            <F>976.0</F>
+                            <F>1110.0</F>
+                            <F>1260.0</F>
+                            <F>1430.0</F>
+                            <F>1630.0</F>
+                            <F>1850.0</F>
+                            <F>2100.0</F>
+                            <F>2390.0</F>
+                            <F>2710.0</F>
+                            <F>3080.0</F>
+                            <F>3500.0</F>
+                        </IndividualValueSet>
+                        <Unit label="µm" />
+                    </Series>
+                    <Series name="Volume Density" dependency="dependent" seriesID="s-2" visible="true" plotScale="linear" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.16</F>
+                            <F>0.46</F>
+                            <F>0.94</F>
+                            <F>1.51</F>
+                            <F>2.04</F>
+                            <F>2.42</F>
+                            <F>2.68</F>
+                            <F>2.84</F>
+                            <F>2.94</F>
+                            <F>2.99</F>
+                            <F>3.03</F>
+                            <F>3.07</F>
+                            <F>3.11</F>
+                            <F>3.15</F>
+                            <F>3.16</F>
+                            <F>3.14</F>
+                            <F>3.08</F>
+                            <F>2.97</F>
+                            <F>2.84</F>
+                            <F>2.69</F>
+                            <F>2.56</F>
+                            <F>2.48</F>
+                            <F>2.46</F>
+                            <F>2.5</F>
+                            <F>2.62</F>
+                            <F>2.78</F>
+                            <F>2.97</F>
+                            <F>3.17</F>
+                            <F>3.34</F>
+                            <F>3.46</F>
+                            <F>3.51</F>
+                            <F>3.46</F>
+                            <F>3.31</F>
+                            <F>3.05</F>
+                            <F>2.69</F>
+                            <F>2.26</F>
+                            <F>1.76</F>
+                            <F>1.26</F>
+                            <F>0.79</F>
+                            <F>0.32</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                        </IndividualValueSet>
+                        <Unit label="%" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-4" name="Particle Size Distribution 4">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2025-06-24T12:37:25.090Z</Timestamp>
+            </Infrastructure>
+            <Method name="Particle Size Distribution">
+                <Device>
+                    <Manufacturer>Malvern Panalytical</Manufacturer>
+                    <Name>Mastersizer 3000</Name>
+                </Device>
+            </Method>
+            <Result name="Particle Size">
+                <Category name="Particle Size Distribution">
+                    <Parameter name="Stirrer Speed Achieved" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Pea concentrate blank</S>
+                    </Parameter>
+                    <Parameter name="Laser Obscuration" parameterType="Float32">
+                        <F>9.34</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="SOP File Name" parameterType="String">
+                        <S>SOP hot dispersibility MvdB.msop</S>
+                    </Parameter>
+                    <Parameter name="Result Below (2) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Residual" parameterType="Float32">
+                        <F>0.75</F>
+                    </Parameter>
+                    <Parameter name="Measurement Date Time" parameterType="DateTime">
+                        <DateTime>2024-01-17T14:01:01Z</DateTime>
+                    </Parameter>
+                    <Parameter name="Dx (10)" parameterType="Float32">
+                        <F>6.89</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Span" parameterType="Float32">
+                        <F>5.651</F>
+                    </Parameter>
+                    <Parameter name="Dx (50)" parameterType="Float32">
+                        <F>30.2</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Obscuration Blue" parameterType="Float32">
+                        <F>6.11</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="LIMS Mixture/Formulation Number" parameterType="String">
+                        <S>00001</S>
+                    </Parameter>
+                    <Parameter name="Weighted Residual" parameterType="Float32">
+                        <F>0.64</F>
+                    </Parameter>
+                    <Parameter name="Dx (90)" parameterType="Float32">
+                        <F>178.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Stirrer Speed Demand" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Result Below (1) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [4,3]" parameterType="Float32">
+                        <F>65.1</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [3,2]" parameterType="Float32">
+                        <F>17.9</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                </Category>
+            </Result>
+            <Result name="Result Series">
+                <SeriesSet name="Raw Dataset" length="101">
+                    <Series name="Particle Size Class" dependency="independent" seriesID="s-1" visible="true" plotScale="log" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.01</F>
+                            <F>0.0114</F>
+                            <F>0.0129</F>
+                            <F>0.0147</F>
+                            <F>0.0167</F>
+                            <F>0.0189</F>
+                            <F>0.0215</F>
+                            <F>0.0244</F>
+                            <F>0.0278</F>
+                            <F>0.0315</F>
+                            <F>0.0358</F>
+                            <F>0.0407</F>
+                            <F>0.0463</F>
+                            <F>0.0526</F>
+                            <F>0.0597</F>
+                            <F>0.0679</F>
+                            <F>0.0771</F>
+                            <F>0.0876</F>
+                            <F>0.0995</F>
+                            <F>0.113</F>
+                            <F>0.128</F>
+                            <F>0.146</F>
+                            <F>0.166</F>
+                            <F>0.188</F>
+                            <F>0.214</F>
+                            <F>0.243</F>
+                            <F>0.276</F>
+                            <F>0.314</F>
+                            <F>0.357</F>
+                            <F>0.405</F>
+                            <F>0.46</F>
+                            <F>0.523</F>
+                            <F>0.594</F>
+                            <F>0.675</F>
+                            <F>0.767</F>
+                            <F>0.872</F>
+                            <F>0.991</F>
+                            <F>1.13</F>
+                            <F>1.28</F>
+                            <F>1.45</F>
+                            <F>1.65</F>
+                            <F>1.88</F>
+                            <F>2.13</F>
+                            <F>2.42</F>
+                            <F>2.75</F>
+                            <F>3.12</F>
+                            <F>3.55</F>
+                            <F>4.03</F>
+                            <F>4.58</F>
+                            <F>5.21</F>
+                            <F>5.92</F>
+                            <F>6.72</F>
+                            <F>7.64</F>
+                            <F>8.68</F>
+                            <F>9.86</F>
+                            <F>11.2</F>
+                            <F>12.7</F>
+                            <F>14.5</F>
+                            <F>16.4</F>
+                            <F>18.7</F>
+                            <F>21.2</F>
+                            <F>24.1</F>
+                            <F>27.4</F>
+                            <F>31.1</F>
+                            <F>35.3</F>
+                            <F>40.1</F>
+                            <F>45.6</F>
+                            <F>51.8</F>
+                            <F>58.9</F>
+                            <F>66.9</F>
+                            <F>76.0</F>
+                            <F>86.4</F>
+                            <F>98.1</F>
+                            <F>111.0</F>
+                            <F>127.0</F>
+                            <F>144.0</F>
+                            <F>163.0</F>
+                            <F>186.0</F>
+                            <F>211.0</F>
+                            <F>240.0</F>
+                            <F>272.0</F>
+                            <F>310.0</F>
+                            <F>352.0</F>
+                            <F>400.0</F>
+                            <F>454.0</F>
+                            <F>516.0</F>
+                            <F>586.0</F>
+                            <F>666.0</F>
+                            <F>756.0</F>
+                            <F>859.0</F>
+                            <F>976.0</F>
+                            <F>1110.0</F>
+                            <F>1260.0</F>
+                            <F>1430.0</F>
+                            <F>1630.0</F>
+                            <F>1850.0</F>
+                            <F>2100.0</F>
+                            <F>2390.0</F>
+                            <F>2710.0</F>
+                            <F>3080.0</F>
+                            <F>3500.0</F>
+                        </IndividualValueSet>
+                        <Unit label="µm" />
+                    </Series>
+                    <Series name="Volume Density" dependency="dependent" seriesID="s-2" visible="true" plotScale="linear" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.07</F>
+                            <F>0.25</F>
+                            <F>0.62</F>
+                            <F>1.2</F>
+                            <F>1.86</F>
+                            <F>2.47</F>
+                            <F>2.91</F>
+                            <F>3.2</F>
+                            <F>3.37</F>
+                            <F>3.46</F>
+                            <F>3.5</F>
+                            <F>3.52</F>
+                            <F>3.54</F>
+                            <F>3.56</F>
+                            <F>3.56</F>
+                            <F>3.54</F>
+                            <F>3.48</F>
+                            <F>3.38</F>
+                            <F>3.23</F>
+                            <F>3.05</F>
+                            <F>2.88</F>
+                            <F>2.73</F>
+                            <F>2.64</F>
+                            <F>2.61</F>
+                            <F>2.65</F>
+                            <F>2.74</F>
+                            <F>2.87</F>
+                            <F>3.0</F>
+                            <F>3.09</F>
+                            <F>3.13</F>
+                            <F>3.1</F>
+                            <F>2.97</F>
+                            <F>2.76</F>
+                            <F>2.47</F>
+                            <F>2.12</F>
+                            <F>1.72</F>
+                            <F>1.3</F>
+                            <F>0.89</F>
+                            <F>0.47</F>
+                            <F>0.06</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                        </IndividualValueSet>
+                        <Unit label="%" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-5" name="Particle Size Distribution 5">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2025-06-24T12:37:25.090Z</Timestamp>
+            </Infrastructure>
+            <Method name="Particle Size Distribution">
+                <Device>
+                    <Manufacturer>Malvern Panalytical</Manufacturer>
+                    <Name>Mastersizer 3000</Name>
+                </Device>
+            </Method>
+            <Result name="Particle Size">
+                <Category name="Particle Size Distribution">
+                    <Parameter name="Stirrer Speed Achieved" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Pea concentrate blank</S>
+                    </Parameter>
+                    <Parameter name="Laser Obscuration" parameterType="Float32">
+                        <F>9.36</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="SOP File Name" parameterType="String">
+                        <S>SOP hot dispersibility MvdB.msop</S>
+                    </Parameter>
+                    <Parameter name="Result Below (2) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Residual" parameterType="Float32">
+                        <F>0.77</F>
+                    </Parameter>
+                    <Parameter name="Measurement Date Time" parameterType="DateTime">
+                        <DateTime>2024-01-17T14:01:44Z</DateTime>
+                    </Parameter>
+                    <Parameter name="Dx (10)" parameterType="Float32">
+                        <F>6.81</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Span" parameterType="Float32">
+                        <F>5.598</F>
+                    </Parameter>
+                    <Parameter name="Dx (50)" parameterType="Float32">
+                        <F>28.8</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Obscuration Blue" parameterType="Float32">
+                        <F>6.15</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="LIMS Mixture/Formulation Number" parameterType="String">
+                        <S>00001</S>
+                    </Parameter>
+                    <Parameter name="Weighted Residual" parameterType="Float32">
+                        <F>0.65</F>
+                    </Parameter>
+                    <Parameter name="Dx (90)" parameterType="Float32">
+                        <F>168.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Stirrer Speed Demand" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Result Below (1) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [4,3]" parameterType="Float32">
+                        <F>61.6</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [3,2]" parameterType="Float32">
+                        <F>17.5</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                </Category>
+            </Result>
+            <Result name="Result Series">
+                <SeriesSet name="Raw Dataset" length="101">
+                    <Series name="Particle Size Class" dependency="independent" seriesID="s-1" visible="true" plotScale="log" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.01</F>
+                            <F>0.0114</F>
+                            <F>0.0129</F>
+                            <F>0.0147</F>
+                            <F>0.0167</F>
+                            <F>0.0189</F>
+                            <F>0.0215</F>
+                            <F>0.0244</F>
+                            <F>0.0278</F>
+                            <F>0.0315</F>
+                            <F>0.0358</F>
+                            <F>0.0407</F>
+                            <F>0.0463</F>
+                            <F>0.0526</F>
+                            <F>0.0597</F>
+                            <F>0.0679</F>
+                            <F>0.0771</F>
+                            <F>0.0876</F>
+                            <F>0.0995</F>
+                            <F>0.113</F>
+                            <F>0.128</F>
+                            <F>0.146</F>
+                            <F>0.166</F>
+                            <F>0.188</F>
+                            <F>0.214</F>
+                            <F>0.243</F>
+                            <F>0.276</F>
+                            <F>0.314</F>
+                            <F>0.357</F>
+                            <F>0.405</F>
+                            <F>0.46</F>
+                            <F>0.523</F>
+                            <F>0.594</F>
+                            <F>0.675</F>
+                            <F>0.767</F>
+                            <F>0.872</F>
+                            <F>0.991</F>
+                            <F>1.13</F>
+                            <F>1.28</F>
+                            <F>1.45</F>
+                            <F>1.65</F>
+                            <F>1.88</F>
+                            <F>2.13</F>
+                            <F>2.42</F>
+                            <F>2.75</F>
+                            <F>3.12</F>
+                            <F>3.55</F>
+                            <F>4.03</F>
+                            <F>4.58</F>
+                            <F>5.21</F>
+                            <F>5.92</F>
+                            <F>6.72</F>
+                            <F>7.64</F>
+                            <F>8.68</F>
+                            <F>9.86</F>
+                            <F>11.2</F>
+                            <F>12.7</F>
+                            <F>14.5</F>
+                            <F>16.4</F>
+                            <F>18.7</F>
+                            <F>21.2</F>
+                            <F>24.1</F>
+                            <F>27.4</F>
+                            <F>31.1</F>
+                            <F>35.3</F>
+                            <F>40.1</F>
+                            <F>45.6</F>
+                            <F>51.8</F>
+                            <F>58.9</F>
+                            <F>66.9</F>
+                            <F>76.0</F>
+                            <F>86.4</F>
+                            <F>98.1</F>
+                            <F>111.0</F>
+                            <F>127.0</F>
+                            <F>144.0</F>
+                            <F>163.0</F>
+                            <F>186.0</F>
+                            <F>211.0</F>
+                            <F>240.0</F>
+                            <F>272.0</F>
+                            <F>310.0</F>
+                            <F>352.0</F>
+                            <F>400.0</F>
+                            <F>454.0</F>
+                            <F>516.0</F>
+                            <F>586.0</F>
+                            <F>666.0</F>
+                            <F>756.0</F>
+                            <F>859.0</F>
+                            <F>976.0</F>
+                            <F>1110.0</F>
+                            <F>1260.0</F>
+                            <F>1430.0</F>
+                            <F>1630.0</F>
+                            <F>1850.0</F>
+                            <F>2100.0</F>
+                            <F>2390.0</F>
+                            <F>2710.0</F>
+                            <F>3080.0</F>
+                            <F>3500.0</F>
+                        </IndividualValueSet>
+                        <Unit label="µm" />
+                    </Series>
+                    <Series name="Volume Density" dependency="dependent" seriesID="s-2" visible="true" plotScale="linear" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.08</F>
+                            <F>0.27</F>
+                            <F>0.65</F>
+                            <F>1.24</F>
+                            <F>1.92</F>
+                            <F>2.54</F>
+                            <F>2.99</F>
+                            <F>3.27</F>
+                            <F>3.45</F>
+                            <F>3.54</F>
+                            <F>3.57</F>
+                            <F>3.59</F>
+                            <F>3.61</F>
+                            <F>3.63</F>
+                            <F>3.64</F>
+                            <F>3.62</F>
+                            <F>3.57</F>
+                            <F>3.46</F>
+                            <F>3.32</F>
+                            <F>3.14</F>
+                            <F>2.96</F>
+                            <F>2.79</F>
+                            <F>2.68</F>
+                            <F>2.64</F>
+                            <F>2.66</F>
+                            <F>2.73</F>
+                            <F>2.85</F>
+                            <F>2.96</F>
+                            <F>3.05</F>
+                            <F>3.08</F>
+                            <F>3.03</F>
+                            <F>2.88</F>
+                            <F>2.64</F>
+                            <F>2.32</F>
+                            <F>1.95</F>
+                            <F>1.53</F>
+                            <F>1.11</F>
+                            <F>0.72</F>
+                            <F>0.32</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                        </IndividualValueSet>
+                        <Unit label="%" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-6" name="Particle Size Distribution 6">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2025-06-24T12:37:25.090Z</Timestamp>
+            </Infrastructure>
+            <Method name="Particle Size Distribution">
+                <Device>
+                    <Manufacturer>Malvern Panalytical</Manufacturer>
+                    <Name>Mastersizer 3000</Name>
+                </Device>
+            </Method>
+            <Result name="Particle Size">
+                <Category name="Particle Size Distribution">
+                    <Parameter name="Stirrer Speed Achieved" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Pea concentrate blank</S>
+                    </Parameter>
+                    <Parameter name="Laser Obscuration" parameterType="Float32">
+                        <F>9.42</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="SOP File Name" parameterType="String">
+                        <S>SOP hot dispersibility MvdB.msop</S>
+                    </Parameter>
+                    <Parameter name="Result Below (2) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Residual" parameterType="Float32">
+                        <F>0.76</F>
+                    </Parameter>
+                    <Parameter name="Measurement Date Time" parameterType="DateTime">
+                        <DateTime>2024-01-17T14:02:27Z</DateTime>
+                    </Parameter>
+                    <Parameter name="Dx (10)" parameterType="Float32">
+                        <F>6.8</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Span" parameterType="Float32">
+                        <F>5.602</F>
+                    </Parameter>
+                    <Parameter name="Dx (50)" parameterType="Float32">
+                        <F>28.8</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Obscuration Blue" parameterType="Float32">
+                        <F>6.18</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="LIMS Mixture/Formulation Number" parameterType="String">
+                        <S>00001</S>
+                    </Parameter>
+                    <Parameter name="Weighted Residual" parameterType="Float32">
+                        <F>0.63</F>
+                    </Parameter>
+                    <Parameter name="Dx (90)" parameterType="Float32">
+                        <F>168.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Stirrer Speed Demand" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Result Below (1) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [4,3]" parameterType="Float32">
+                        <F>61.9</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [3,2]" parameterType="Float32">
+                        <F>17.4</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                </Category>
+            </Result>
+            <Result name="Result Series">
+                <SeriesSet name="Raw Dataset" length="101">
+                    <Series name="Particle Size Class" dependency="independent" seriesID="s-1" visible="true" plotScale="log" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.01</F>
+                            <F>0.0114</F>
+                            <F>0.0129</F>
+                            <F>0.0147</F>
+                            <F>0.0167</F>
+                            <F>0.0189</F>
+                            <F>0.0215</F>
+                            <F>0.0244</F>
+                            <F>0.0278</F>
+                            <F>0.0315</F>
+                            <F>0.0358</F>
+                            <F>0.0407</F>
+                            <F>0.0463</F>
+                            <F>0.0526</F>
+                            <F>0.0597</F>
+                            <F>0.0679</F>
+                            <F>0.0771</F>
+                            <F>0.0876</F>
+                            <F>0.0995</F>
+                            <F>0.113</F>
+                            <F>0.128</F>
+                            <F>0.146</F>
+                            <F>0.166</F>
+                            <F>0.188</F>
+                            <F>0.214</F>
+                            <F>0.243</F>
+                            <F>0.276</F>
+                            <F>0.314</F>
+                            <F>0.357</F>
+                            <F>0.405</F>
+                            <F>0.46</F>
+                            <F>0.523</F>
+                            <F>0.594</F>
+                            <F>0.675</F>
+                            <F>0.767</F>
+                            <F>0.872</F>
+                            <F>0.991</F>
+                            <F>1.13</F>
+                            <F>1.28</F>
+                            <F>1.45</F>
+                            <F>1.65</F>
+                            <F>1.88</F>
+                            <F>2.13</F>
+                            <F>2.42</F>
+                            <F>2.75</F>
+                            <F>3.12</F>
+                            <F>3.55</F>
+                            <F>4.03</F>
+                            <F>4.58</F>
+                            <F>5.21</F>
+                            <F>5.92</F>
+                            <F>6.72</F>
+                            <F>7.64</F>
+                            <F>8.68</F>
+                            <F>9.86</F>
+                            <F>11.2</F>
+                            <F>12.7</F>
+                            <F>14.5</F>
+                            <F>16.4</F>
+                            <F>18.7</F>
+                            <F>21.2</F>
+                            <F>24.1</F>
+                            <F>27.4</F>
+                            <F>31.1</F>
+                            <F>35.3</F>
+                            <F>40.1</F>
+                            <F>45.6</F>
+                            <F>51.8</F>
+                            <F>58.9</F>
+                            <F>66.9</F>
+                            <F>76.0</F>
+                            <F>86.4</F>
+                            <F>98.1</F>
+                            <F>111.0</F>
+                            <F>127.0</F>
+                            <F>144.0</F>
+                            <F>163.0</F>
+                            <F>186.0</F>
+                            <F>211.0</F>
+                            <F>240.0</F>
+                            <F>272.0</F>
+                            <F>310.0</F>
+                            <F>352.0</F>
+                            <F>400.0</F>
+                            <F>454.0</F>
+                            <F>516.0</F>
+                            <F>586.0</F>
+                            <F>666.0</F>
+                            <F>756.0</F>
+                            <F>859.0</F>
+                            <F>976.0</F>
+                            <F>1110.0</F>
+                            <F>1260.0</F>
+                            <F>1430.0</F>
+                            <F>1630.0</F>
+                            <F>1850.0</F>
+                            <F>2100.0</F>
+                            <F>2390.0</F>
+                            <F>2710.0</F>
+                            <F>3080.0</F>
+                            <F>3500.0</F>
+                        </IndividualValueSet>
+                        <Unit label="µm" />
+                    </Series>
+                    <Series name="Volume Density" dependency="dependent" seriesID="s-2" visible="true" plotScale="linear" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.08</F>
+                            <F>0.27</F>
+                            <F>0.65</F>
+                            <F>1.24</F>
+                            <F>1.92</F>
+                            <F>2.54</F>
+                            <F>2.99</F>
+                            <F>3.27</F>
+                            <F>3.45</F>
+                            <F>3.54</F>
+                            <F>3.58</F>
+                            <F>3.6</F>
+                            <F>3.62</F>
+                            <F>3.64</F>
+                            <F>3.65</F>
+                            <F>3.63</F>
+                            <F>3.57</F>
+                            <F>3.46</F>
+                            <F>3.31</F>
+                            <F>3.14</F>
+                            <F>2.96</F>
+                            <F>2.81</F>
+                            <F>2.71</F>
+                            <F>2.68</F>
+                            <F>2.71</F>
+                            <F>2.79</F>
+                            <F>2.89</F>
+                            <F>2.99</F>
+                            <F>3.04</F>
+                            <F>3.03</F>
+                            <F>2.94</F>
+                            <F>2.77</F>
+                            <F>2.52</F>
+                            <F>2.21</F>
+                            <F>1.87</F>
+                            <F>1.5</F>
+                            <F>1.14</F>
+                            <F>0.79</F>
+                            <F>0.44</F>
+                            <F>0.09</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                        </IndividualValueSet>
+                        <Unit label="%" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-7" name="Calculated Particle Size Distribution">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2025-06-24T12:37:25.090Z</Timestamp>
+            </Infrastructure>
+            <Method name="Particle Size Distribution">
+                <Device>
+                    <Manufacturer>Malvern Panalytical</Manufacturer>
+                    <Name>Mastersizer 3000</Name>
+                </Device>
+            </Method>
+            <Result name="Calculated Particle Size">
+                <Category name="Calculated Particle Size Distribution">
+                    <Parameter name="Stirrer Speed Achieved" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Description" parameterType="String">
+                        <S>Pea concentrate blank</S>
+                    </Parameter>
+                    <Parameter name="Laser Obscuration" parameterType="Float32">
+                        <F>9.37</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="SOP File Name" parameterType="String">
+                        <S>SOP hot dispersibility MvdB.msop</S>
+                    </Parameter>
+                    <Parameter name="Result Below (2) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Residual" parameterType="Float32">
+                        <F>0.76</F>
+                    </Parameter>
+                    <Parameter name="Measurement Date Time" parameterType="DateTime">
+                        <DateTime>2024-01-17T14:01:01Z</DateTime>
+                    </Parameter>
+                    <Parameter name="Dx (10)" parameterType="Float32">
+                        <F>6.83</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Span" parameterType="Float32">
+                        <F>5.624</F>
+                    </Parameter>
+                    <Parameter name="Dx (50)" parameterType="Float32">
+                        <F>29.3</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Obscuration Blue" parameterType="Float32">
+                        <F>6.15</F>
+                        <Unit label="%" />
+                    </Parameter>
+                    <Parameter name="LIMS Mixture/Formulation Number" parameterType="String">
+                        <S>00001</S>
+                    </Parameter>
+                    <Parameter name="Weighted Residual" parameterType="Float32">
+                        <F>0.64</F>
+                    </Parameter>
+                    <Parameter name="Dx (90)" parameterType="Float32">
+                        <F>171.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="Stirrer Speed Demand" parameterType="Int32">
+                        <Unit label="rpm" />
+                        <I>2400</I>
+                    </Parameter>
+                    <Parameter name="Result Below (1) μm" parameterType="Float32">
+                        <F>0.0</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [4,3]" parameterType="Float32">
+                        <F>62.9</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                    <Parameter name="D [3,2]" parameterType="Float32">
+                        <F>17.6</F>
+                        <Unit label="µm" />
+                    </Parameter>
+                </Category>
+            </Result>
+            <Result name="Result Series">
+                <SeriesSet name="Calculated Dataset" length="101">
+                    <Series name="Particle Size Class" dependency="independent" seriesID="s-1" visible="true" plotScale="log" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.01</F>
+                            <F>0.0114</F>
+                            <F>0.0129</F>
+                            <F>0.0147</F>
+                            <F>0.0167</F>
+                            <F>0.0189</F>
+                            <F>0.0215</F>
+                            <F>0.0244</F>
+                            <F>0.0278</F>
+                            <F>0.0315</F>
+                            <F>0.0358</F>
+                            <F>0.0407</F>
+                            <F>0.0463</F>
+                            <F>0.0526</F>
+                            <F>0.0597</F>
+                            <F>0.0679</F>
+                            <F>0.0771</F>
+                            <F>0.0876</F>
+                            <F>0.0995</F>
+                            <F>0.113</F>
+                            <F>0.128</F>
+                            <F>0.146</F>
+                            <F>0.166</F>
+                            <F>0.188</F>
+                            <F>0.214</F>
+                            <F>0.243</F>
+                            <F>0.276</F>
+                            <F>0.314</F>
+                            <F>0.357</F>
+                            <F>0.405</F>
+                            <F>0.46</F>
+                            <F>0.523</F>
+                            <F>0.594</F>
+                            <F>0.675</F>
+                            <F>0.767</F>
+                            <F>0.872</F>
+                            <F>0.991</F>
+                            <F>1.13</F>
+                            <F>1.28</F>
+                            <F>1.45</F>
+                            <F>1.65</F>
+                            <F>1.88</F>
+                            <F>2.13</F>
+                            <F>2.42</F>
+                            <F>2.75</F>
+                            <F>3.12</F>
+                            <F>3.55</F>
+                            <F>4.03</F>
+                            <F>4.58</F>
+                            <F>5.21</F>
+                            <F>5.92</F>
+                            <F>6.72</F>
+                            <F>7.64</F>
+                            <F>8.68</F>
+                            <F>9.86</F>
+                            <F>11.2</F>
+                            <F>12.7</F>
+                            <F>14.5</F>
+                            <F>16.4</F>
+                            <F>18.7</F>
+                            <F>21.2</F>
+                            <F>24.1</F>
+                            <F>27.4</F>
+                            <F>31.1</F>
+                            <F>35.3</F>
+                            <F>40.1</F>
+                            <F>45.6</F>
+                            <F>51.8</F>
+                            <F>58.9</F>
+                            <F>66.9</F>
+                            <F>76.0</F>
+                            <F>86.4</F>
+                            <F>98.1</F>
+                            <F>111.0</F>
+                            <F>127.0</F>
+                            <F>144.0</F>
+                            <F>163.0</F>
+                            <F>186.0</F>
+                            <F>211.0</F>
+                            <F>240.0</F>
+                            <F>272.0</F>
+                            <F>310.0</F>
+                            <F>352.0</F>
+                            <F>400.0</F>
+                            <F>454.0</F>
+                            <F>516.0</F>
+                            <F>586.0</F>
+                            <F>666.0</F>
+                            <F>756.0</F>
+                            <F>859.0</F>
+                            <F>976.0</F>
+                            <F>1110.0</F>
+                            <F>1260.0</F>
+                            <F>1430.0</F>
+                            <F>1630.0</F>
+                            <F>1850.0</F>
+                            <F>2100.0</F>
+                            <F>2390.0</F>
+                            <F>2710.0</F>
+                            <F>3080.0</F>
+                            <F>3500.0</F>
+                        </IndividualValueSet>
+                        <Unit label="µm" />
+                    </Series>
+                    <Series name="Volume Density" dependency="dependent" seriesID="s-2" visible="true" plotScale="linear" seriesType="Float32">
+                        <IndividualValueSet>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.08</F>
+                            <F>0.26</F>
+                            <F>0.64</F>
+                            <F>1.22</F>
+                            <F>1.9</F>
+                            <F>2.52</F>
+                            <F>2.96</F>
+                            <F>3.25</F>
+                            <F>3.42</F>
+                            <F>3.51</F>
+                            <F>3.55</F>
+                            <F>3.57</F>
+                            <F>3.59</F>
+                            <F>3.61</F>
+                            <F>3.62</F>
+                            <F>3.6</F>
+                            <F>3.54</F>
+                            <F>3.43</F>
+                            <F>3.29</F>
+                            <F>3.11</F>
+                            <F>2.93</F>
+                            <F>2.78</F>
+                            <F>2.68</F>
+                            <F>2.64</F>
+                            <F>2.67</F>
+                            <F>2.75</F>
+                            <F>2.87</F>
+                            <F>2.98</F>
+                            <F>3.06</F>
+                            <F>3.08</F>
+                            <F>3.02</F>
+                            <F>2.87</F>
+                            <F>2.64</F>
+                            <F>2.34</F>
+                            <F>1.98</F>
+                            <F>1.59</F>
+                            <F>1.18</F>
+                            <F>0.8</F>
+                            <F>0.41</F>
+                            <F>0.05</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                            <F>0.0</F>
+                        </IndividualValueSet>
+                        <Unit label="%" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+    </ExperimentStepSet>
+</AnIML>

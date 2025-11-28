@@ -1,0 +1,1998 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AnIML version="1.0">
+    <SampleSet>
+        <Sample name="Matcha" sampleID="Matcha-00001" />
+    </SampleSet>
+    <ExperimentStepSet>
+        <ExperimentStep experimentStepID="f552fb4f-d992-40d6-9bba-b68d16214631" name="Flow-Peak Hold">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Method name="2, 21, 106 - 25C">
+                <Author userType="human">
+                    <Name>Author</Name>
+                </Author>
+                <Category name="InstrumentConfigurations">
+                    <Parameter name="ConditioningOptions-ZeroAxialForceBeforeRun" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="ConditioningOptions-ZeroSpeedAfterPreshear" parameterType="String">
+                        <S>Leave as is</S>
+                    </Parameter>
+                    <Parameter name="ConditioningOptions-ZeroVelocityThreshold" parameterType="String">
+                        <S>0.1</S>
+                        <Unit label="rad/s">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="ETCCameraAvailable" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="ExperimentOptions-TemperatureToleranceResults" parameterType="String">
+                        <S>1.0</S>
+                        <Unit label="°C">
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="ExperimentOptions-MinimumAxialForceLimit" parameterType="String">
+                        <S>10.197162129779283</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="ExperimentOptions-MaximumAxialForceLimit" parameterType="String">
+                        <S>5098.5810648896413</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-ClosureDistance" parameterType="String">
+                        <S>6000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapVelocityOther" parameterType="String">
+                        <S>8000.0</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapWaitDuration" parameterType="String">
+                        <S>2.0</S>
+                        <Unit label="s">
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapVelocityCoarse" parameterType="String">
+                        <S>8000.0</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-ClosureProfile" parameterType="String">
+                        <S>linear</S>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapTolerance" parameterType="String">
+                        <S>4.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-OverrideWaitForGap" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapVelocityFine" parameterType="String">
+                        <S>2000.0</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-AxialForceForSampleCompression" parameterType="String">
+                        <S>101.97162129779282</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapZeroMode" parameterType="String">
+                        <S>standard (DHR) or deceleration (AR)</S>
+                    </Parameter>
+                    <Parameter name="GapOptions-ClosureVelocity" parameterType="String">
+                        <S>199.99999999999997</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapHandlingAtStartOfTest" parameterType="String">
+                        <S>Flag mismatches between geometry and instrument gap</S>
+                    </Parameter>
+                    <Parameter name="InertiaOptions-InstrumentInertia" parameterType="String">
+                        <S>21.467573524834823</S>
+                        <Unit label="µN.m.s²">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="InertiaOptions-InstrumentInertiaCalibrationDate" parameterType="String">
+                        <S>2025-07-31T08:12:20.0140618Z</S>
+                    </Parameter>
+                    <Parameter name="RotationalMappingDate" parameterType="String">
+                        <S>2025-09-15T09:33:27.6561896Z</S>
+                    </Parameter>
+                    <Parameter name="RotationalMappingNumberOfIterations" />
+                    <Parameter name="FlowOptions-FlowCollectNegativeShearRateData" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowTorqueLimit" parameterType="String">
+                        <S>0.01</S>
+                        <Unit label="µN.m">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowVelocityLimit" parameterType="String">
+                        <S>0.000001</S>
+                        <Unit label="rad/s">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowVelocityTolerance" parameterType="String">
+                        <S>5.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowCollectAllPoints" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowInertiaCorrection" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowNonSteadyStateMinimumVelocity" parameterType="String">
+                        <S>0.000001</S>
+                        <Unit label="rad/s">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowZeroStrainAtStartOfStep" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureControlEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-CurrentTemperatureSystemSpan" parameterType="String">
+                        <S>1.0</S>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-GeometryGapTemperatureCompensationCalibrationDate" parameterType="String">
+                        <S>2025-08-26T09:55:35.5683072Z</S>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-GapTemperatureCompensationEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-CurrentTemperatureSystemOffset" parameterType="String">
+                        <S>0.0</S>
+                        <Unit label="°C">
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureSystemControlName" parameterType="String">
+                        <S>Peltier plate</S>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-CurrentTemperatureSystemCompensation" parameterType="String">
+                        <S>0.666368</S>
+                        <Unit label="µm/°C">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-PurgeGasOnlyNoActiveCooling" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureWaitDuration" parameterType="String">
+                        <S>10.0</S>
+                        <Unit label="s">
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureWaitTolerance" parameterType="String">
+                        <S>0.2</S>
+                        <Unit label="°C">
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-UpperTemperatureSystemFitted" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="Name" parameterType="String">
+                        <S>5332-0319</S>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceMaxGapChangeUp" parameterType="String">
+                        <S>1000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-AxialForceActionOutsideRange" parameterType="String">
+                        <S>Return to initial value</S>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlledAxialForce" parameterType="String">
+                        <S>101.97162129779282</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceSetInitialValue" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceActive" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceMinGapChangeDown" parameterType="String">
+                        <S>1000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceType" parameterType="String">
+                        <S>Compression</S>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceSensitivity" parameterType="String">
+                        <S>10.197162129779283</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Disposable" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="Geometry-StressConstant" parameterType="String">
+                        <S>79577.471499999985</S>
+                        <Unit label="Pa/N.m">
+                            <SIUnit>Pa</SIUnit>
+                            <SIUnit>N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Compliance" parameterType="String">
+                        <S>1.03</S>
+                        <Unit label="mrad/N.m">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-EnvironmentalSystem" parameterType="String">
+                        <S>Peltier plate</S>
+                    </Parameter>
+                    <Parameter name="Geometry-TrimGapOffset" parameterType="String">
+                        <S>50.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-FluidDensityFactor" parameterType="String">
+                        <S>4.1887902072049804E-11</S>
+                    </Parameter>
+                    <Parameter name="Geometry-Material" parameterType="String">
+                        <S>Stainless steel</S>
+                    </Parameter>
+                    <Parameter name="Geometry-NormalForceFactor" parameterType="String">
+                        <S>15.607768226721353</S>
+                        <Unit label="Pa/g" />
+                    </Parameter>
+                    <Parameter name="Geometry-SurfaceFinish" parameterType="String">
+                        <S>CrossHatched</S>
+                    </Parameter>
+                    <Parameter name="Geometry-StrainConstant" parameterType="String">
+                        <S>40.0</S>
+                        <Unit label="1/rad">
+                            <SIUnit>1</SIUnit>
+                            <SIUnit>rad</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-SolventTrap" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="Geometry-BearingFriction" parameterType="String">
+                        <S>0.30005933333333329</S>
+                        <Unit label="µN.m/(rad/s)">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Name" parameterType="String">
+                        <S>4.0cm X-Hatch Peltier plate Stainless steel</S>
+                    </Parameter>
+                    <Parameter name="Geometry-GapTemperatureCompensationEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="Geometry-BearingFrictionCorrection" parameterType="String">
+                        <S>1.0</S>
+                    </Parameter>
+                    <Parameter name="Geometry-Gap" parameterType="String">
+                        <S>500.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Inertia" parameterType="String">
+                        <S>7.9896120552364058</S>
+                        <Unit label="µN.m.s²">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Diameter" parameterType="String">
+                        <S>4.0</S>
+                        <Unit label="cm">
+                            <SIUnit exponent="1.0" factor="0.01">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-LoadingGap" parameterType="String">
+                        <S>45000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-GapTemperatureCompensation" parameterType="String">
+                        <S>0.66636789485014758</S>
+                        <Unit label="µm/°C">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Type" parameterType="String">
+                        <S>Discovery HR-2</S>
+                    </Parameter>
+                    <Parameter name="Versions-InstrumentFirmwareVersion" parameterType="String">
+                        <S>9.54</S>
+                    </Parameter>
+                    <Parameter name="SerialNumber" parameterType="String">
+                        <S>5332-0319</S>
+                    </Parameter>
+                    <Parameter name="Friction" parameterType="String">
+                        <S>0.30005930000000003</S>
+                        <Unit label="µN.m/(rad/s)">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FrictionCorrectionEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="SmartSwapDisabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FrictionCalibrationDate" parameterType="String">
+                        <S>2025-09-15T09:30:50.2186624Z</S>
+                    </Parameter>
+                    <Parameter name="RotationalMappingGeometry" parameterType="String">
+                        <S>4.0cm X-Hatch Peltier plate Stainless steel</S>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationTorqueTolerance" parameterType="String">
+                        <S>1.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationVelocityTolerance" parameterType="String">
+                        <S>5.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationDisplacementLimit" parameterType="String">
+                        <S>0.00001</S>
+                        <Unit label="rad">
+                            <SIUnit>rad</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationDisplacementTolerance" parameterType="String">
+                        <S>5.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationRawPhaseLimit" parameterType="String">
+                        <S>170.0</S>
+                        <Unit label="°">
+                            <SIUnit>1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationTorqueLimit" parameterType="String">
+                        <S>0.099999999999999992</S>
+                        <Unit label="µN.m">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="RotationalMappingType" parameterType="String">
+                        <S>standard</S>
+                    </Parameter>
+                    <Parameter name="Location" parameterType="String">
+                        <S>Geraint</S>
+                    </Parameter>
+                    <Parameter name="StartTime" parameterType="DateTime">
+                        <DateTime>2025-09-17T10:45:31.738Z</DateTime>
+                    </Parameter>
+                </Category>
+                <Category name="Procedure Step Configuration">
+                    <Parameter name="Configuration Settings" parameterType="String">
+                        <S>Flow-Peak Hold : 
+Temperature 25 °C Inherit Set Point: Off 
+Soak Time 0.0 s Wait For Temperature: Off 
+Duration 30.0 s
+Shear Rate 21.0 1/s
+
+Inherit initial value: Off
+Number of points 15 
+
+Auto
+
+Zero torque
+Fast sampling: Off
+Limit checking Enabled: Off
+
+Equilibrium Enabled: Off
+
+</S>
+                    </Parameter>
+                </Category>
+            </Method>
+            <Result name="Peak hold - 1">
+                <SeriesSet name="Peak hold - 1_data" length="15">
+                    <Series name="Point No." dependency="independent" seriesID="si0" visible="true" plotScale="linear" seriesType="Int32">
+                        <IndividualValueSet>
+                            <D>1.0</D>
+                            <D>2.0</D>
+                            <D>3.0</D>
+                            <D>4.0</D>
+                            <D>5.0</D>
+                            <D>6.0</D>
+                            <D>7.0</D>
+                            <D>8.0</D>
+                            <D>9.0</D>
+                            <D>10.0</D>
+                            <D>11.0</D>
+                            <D>12.0</D>
+                            <D>13.0</D>
+                            <D>14.0</D>
+                            <D>15.0</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Temperature" dependency="dependent" seriesID="si1" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>25.0139999389648</D>
+                            <D>25.0223007202148</D>
+                            <D>25.0186004638672</D>
+                            <D>25.0258007049561</D>
+                            <D>25.0209999084473</D>
+                            <D>25.024299621582</D>
+                            <D>25.0294990539551</D>
+                            <D>25.0273990631104</D>
+                            <D>25.0209007263184</D>
+                            <D>25.0338001251221</D>
+                            <D>25.0289001464844</D>
+                            <D>25.0161991119385</D>
+                            <D>25.0072002410889</D>
+                            <D>25.0062999725342</D>
+                            <D>25.0020008087158</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Viscosity" dependency="dependent" seriesID="si2" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>221.920073032379</D>
+                            <D>220.968648791313</D>
+                            <D>219.437122344971</D>
+                            <D>218.884497880936</D>
+                            <D>218.062445521355</D>
+                            <D>218.207895755768</D>
+                            <D>216.50405228138</D>
+                            <D>217.254430055618</D>
+                            <D>215.443253517151</D>
+                            <D>214.623615145683</D>
+                            <D>200.10156929493</D>
+                            <D>214.157462120056</D>
+                            <D>214.14577960968</D>
+                            <D>214.65677022934</D>
+                            <D>213.652729988098</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Procedure Step Id" dependency="dependent" seriesID="si3" visible="true" plotScale="linear" seriesType="String">
+                        <IndividualValueSet>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                            <S>f552fb4f-d992-40d6-9bba-b68d16214631</S>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Strain step" dependency="dependent" seriesID="si4" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>3769.62928771973</D>
+                            <D>8060.73379516602</D>
+                            <D>12352.8915405273</D>
+                            <D>16648.5931396484</D>
+                            <D>20083.9950561523</D>
+                            <D>24379.4036865234</D>
+                            <D>28676.806640625</D>
+                            <D>32970.8099365234</D>
+                            <D>37263.8732910156</D>
+                            <D>41562.6708984375</D>
+                            <D>45856.7321777344</D>
+                            <D>50146.77734375</D>
+                            <D>54446.3745117188</D>
+                            <D>57883.3923339844</D>
+                            <D>62174.9389648438</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Velocity" dependency="dependent" seriesID="si5" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.52462100982666</D>
+                            <D>0.52464497089386</D>
+                            <D>0.524906992912292</D>
+                            <D>0.525020003318787</D>
+                            <D>0.525007009506226</D>
+                            <D>0.525008022785187</D>
+                            <D>0.525017976760864</D>
+                            <D>0.525018990039825</D>
+                            <D>0.524994015693665</D>
+                            <D>0.524996995925903</D>
+                            <D>0.526160001754761</D>
+                            <D>0.525048017501831</D>
+                            <D>0.525005996227264</D>
+                            <D>0.525020003318787</D>
+                            <D>0.525004029273987</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Torque" dependency="dependent" seriesID="si6" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>58.52070171386</D>
+                            <D>58.2706015848089</D>
+                            <D>57.8916988160927</D>
+                            <D>57.7618011448067</D>
+                            <D>57.5431004108395</D>
+                            <D>57.5794001633767</D>
+                            <D>57.1349992242176</D>
+                            <D>57.3305005673319</D>
+                            <D>56.8477989872918</D>
+                            <D>56.6357011848595</D>
+                            <D>52.9179997101892</D>
+                            <D>56.5123009437229</D>
+                            <D>56.5082009416074</D>
+                            <D>56.645800214028</D>
+                            <D>56.3752982998267</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Step time" dependency="dependent" seriesID="si7" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>2.00399994850159</D>
+                            <D>4.00400018692017</D>
+                            <D>6.00799989700317</D>
+                            <D>8.00399971008301</D>
+                            <D>10.0</D>
+                            <D>12.0</D>
+                            <D>14.0</D>
+                            <D>16.003999710083</D>
+                            <D>18.0160007476807</D>
+                            <D>20.003999710083</D>
+                            <D>22.0</D>
+                            <D>24.003999710083</D>
+                            <D>26.0</D>
+                            <D>28.007999420166</D>
+                            <D>30.003999710083</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Termination reason" dependency="dependent" seriesID="si8" visible="true" plotScale="linear" seriesType="String">
+                        <IndividualValueSet>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Run time" dependency="dependent" seriesID="si9" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>2.08200454711914</D>
+                            <D>4.08200454711914</D>
+                            <D>6.08600425720215</D>
+                            <D>8.08200454711914</D>
+                            <D>10.0780048370361</D>
+                            <D>12.0780048370361</D>
+                            <D>14.0780048370361</D>
+                            <D>16.0820045471191</D>
+                            <D>18.0940055847168</D>
+                            <D>20.0820045471191</D>
+                            <D>22.0780048370361</D>
+                            <D>24.0820045471191</D>
+                            <D>26.0780048370361</D>
+                            <D>28.0860042572021</D>
+                            <D>30.0820045471191</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="1/temperature" dependency="dependent" seriesID="si10" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.00335385906510055</D>
+                            <D>0.0033537654671818</D>
+                            <D>0.00335380714386702</D>
+                            <D>0.00335372611880302</D>
+                            <D>0.00335378013551235</D>
+                            <D>0.00335374311544001</D>
+                            <D>0.00335368467494845</D>
+                            <D>0.00335370819084346</D>
+                            <D>0.00335378129966557</D>
+                            <D>0.00335363624617457</D>
+                            <D>0.00335369142703712</D>
+                            <D>0.00335383415222168</D>
+                            <D>0.00335393543355167</D>
+                            <D>0.00335394567809999</D>
+                            <D>0.00335399387404323</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Modulus" dependency="dependent" seriesID="si11" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.123538129031658</D>
+                            <D>0.0575261190533638</D>
+                            <D>0.0372938998043537</D>
+                            <D>0.0276091676205397</D>
+                            <D>0.0227999184280634</D>
+                            <D>0.0187946483492851</D>
+                            <D>0.0158548299223185</D>
+                            <D>0.0138371372595429</D>
+                            <D>0.0121399192139506</D>
+                            <D>0.0108436876907945</D>
+                            <D>0.0091831237077713</D>
+                            <D>0.00896788667887449</D>
+                            <D>0.00825909897685051</D>
+                            <D>0.00778760435059667</D>
+                            <D>0.00721545331180096</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Axial force" dependency="dependent" seriesID="si12" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>-3.92455124889929</D>
+                            <D>-3.86045170831488</D>
+                            <D>-4.11791997540501</D>
+                            <D>-4.11711426288105</D>
+                            <D>-4.04681518038672</D>
+                            <D>-4.05830750522745</D>
+                            <D>-4.29143497284332</D>
+                            <D>-4.12240666593797</D>
+                            <D>-4.25293057532302</D>
+                            <D>-4.3249428890682</D>
+                            <D>-4.46118693951205</D>
+                            <D>-4.36230500579664</D>
+                            <D>-4.33977962365004</D>
+                            <D>-4.24661821086732</D>
+                            <D>-4.30435486376846</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Strain" dependency="dependent" seriesID="si13" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>3769.62928771973</D>
+                            <D>8060.73379516602</D>
+                            <D>12352.8915405273</D>
+                            <D>16648.5931396484</D>
+                            <D>20083.9950561523</D>
+                            <D>24379.4036865234</D>
+                            <D>28676.806640625</D>
+                            <D>32970.8099365234</D>
+                            <D>37263.8732910156</D>
+                            <D>41562.6708984375</D>
+                            <D>45856.7321777344</D>
+                            <D>50146.77734375</D>
+                            <D>54446.3745117188</D>
+                            <D>57883.3923339844</D>
+                            <D>62174.9389648438</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Displacement" dependency="dependent" seriesID="si14" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.942412972450256</D>
+                            <D>2.0152599811554</D>
+                            <D>3.08855009078979</D>
+                            <D>4.16234016418457</D>
+                            <D>5.02125978469849</D>
+                            <D>6.09539985656738</D>
+                            <D>7.16933012008667</D>
+                            <D>8.24322986602783</D>
+                            <D>9.3169002532959</D>
+                            <D>10.3909997940063</D>
+                            <D>11.4651002883911</D>
+                            <D>12.5383996963501</D>
+                            <D>13.6126003265381</D>
+                            <D>14.4715995788574</D>
+                            <D>15.545599937439</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Torque step" dependency="dependent" seriesID="si15" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>58.52070171386</D>
+                            <D>58.2706015848089</D>
+                            <D>57.8916988160927</D>
+                            <D>57.7618011448067</D>
+                            <D>57.5431004108395</D>
+                            <D>57.5794001633767</D>
+                            <D>57.1349992242176</D>
+                            <D>57.3305005673319</D>
+                            <D>56.8477989872918</D>
+                            <D>56.6357011848595</D>
+                            <D>52.9179997101892</D>
+                            <D>56.5123009437229</D>
+                            <D>56.5082009416074</D>
+                            <D>56.645800214028</D>
+                            <D>56.3752982998267</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Shear rate" dependency="dependent" seriesID="si16" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>20.9847145080566</D>
+                            <D>20.9850006103516</D>
+                            <D>20.9940547943115</D>
+                            <D>20.9998340606689</D>
+                            <D>20.9991893768311</D>
+                            <D>20.9984302520752</D>
+                            <D>21.0003414154053</D>
+                            <D>20.9994163513184</D>
+                            <D>20.9976596832275</D>
+                            <D>20.9992084503174</D>
+                            <D>21.0447158813477</D>
+                            <D>20.9990634918213</D>
+                            <D>20.998685836792</D>
+                            <D>20.9997081756592</D>
+                            <D>20.9976425170898</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Compliance" dependency="dependent" seriesID="si17" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>8094666.48101807</D>
+                            <D>1.73834075927734E7</D>
+                            <D>2.6814037322998E7</D>
+                            <D>3.62198524475098E7</D>
+                            <D>4.3859806060791E7</D>
+                            <D>5.32066345214844E7</D>
+                            <D>6.30722618103027E7</D>
+                            <D>7.22692794799805E7</D>
+                            <D>8.23728713989258E7</D>
+                            <D>9.22195510864258E7</D>
+                            <D>1.08895408630371E8</D>
+                            <D>1.11508995056152E8</D>
+                            <D>1.21078582763672E8</D>
+                            <D>1.28409194946289E8</D>
+                            <D>1.38591430664063E8</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Stress step" dependency="dependent" seriesID="si18" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>4.65692949295044</D>
+                            <D>4.63702726364136</D>
+                            <D>4.60687494277954</D>
+                            <D>4.59653806686401</D>
+                            <D>4.57913446426392</D>
+                            <D>4.58202314376831</D>
+                            <D>4.54665899276733</D>
+                            <D>4.56221628189087</D>
+                            <D>4.52380418777466</D>
+                            <D>4.5069260597229</D>
+                            <D>4.21108055114746</D>
+                            <D>4.49710607528687</D>
+                            <D>4.49677991867065</D>
+                            <D>4.50772953033447</D>
+                            <D>4.48620367050171</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Normal stress" dependency="dependent" seriesID="si19" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>-61.2534866333008</D>
+                            <D>-60.2530364990234</D>
+                            <D>-64.2715377807617</D>
+                            <D>-64.2589645385742</D>
+                            <D>-63.1617546081543</D>
+                            <D>-63.341121673584</D>
+                            <D>-66.9797210693359</D>
+                            <D>-64.3415679931641</D>
+                            <D>-66.3787536621094</D>
+                            <D>-67.5027084350586</D>
+                            <D>-69.6291732788086</D>
+                            <D>-68.0858459472656</D>
+                            <D>-67.7342758178711</D>
+                            <D>-66.2802352905273</D>
+                            <D>-67.1813735961914</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Strain constant" dependency="dependent" seriesID="si20" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>39.9997596740723</D>
+                            <D>39.9984817504883</D>
+                            <D>39.9957618713379</D>
+                            <D>39.9981575012207</D>
+                            <D>39.9979209899902</D>
+                            <D>39.9963989257813</D>
+                            <D>39.9992828369141</D>
+                            <D>39.9974403381348</D>
+                            <D>39.9959983825684</D>
+                            <D>39.998722076416</D>
+                            <D>39.9967994689941</D>
+                            <D>39.9945602416992</D>
+                            <D>39.9970397949219</D>
+                            <D>39.9979209899902</D>
+                            <D>39.9952011108398</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Date and time" dependency="dependent" seriesID="si21" visible="true" plotScale="linear" seriesType="DateTime">
+                        <IndividualValueSet>
+                            <DateTime>2025-09-17T10:45:33.820Z</DateTime>
+                            <DateTime>2025-09-17T10:45:35.820Z</DateTime>
+                            <DateTime>2025-09-17T10:45:37.824Z</DateTime>
+                            <DateTime>2025-09-17T10:45:39.820Z</DateTime>
+                            <DateTime>2025-09-17T10:45:41.816Z</DateTime>
+                            <DateTime>2025-09-17T10:45:43.816Z</DateTime>
+                            <DateTime>2025-09-17T10:45:45.816Z</DateTime>
+                            <DateTime>2025-09-17T10:45:47.820Z</DateTime>
+                            <DateTime>2025-09-17T10:45:49.832Z</DateTime>
+                            <DateTime>2025-09-17T10:45:51.820Z</DateTime>
+                            <DateTime>2025-09-17T10:45:53.816Z</DateTime>
+                            <DateTime>2025-09-17T10:45:55.820Z</DateTime>
+                            <DateTime>2025-09-17T10:45:57.816Z</DateTime>
+                            <DateTime>2025-09-17T10:45:59.824Z</DateTime>
+                            <DateTime>2025-09-17T10:46:01.820Z</DateTime>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Results Step Id" dependency="dependent" seriesID="si22" visible="true" plotScale="linear" seriesType="String">
+                        <IndividualValueSet>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                            <S>a9e90bc5-ce26-4ac8-b903-be2483435798</S>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Time" dependency="dependent" seriesID="si23" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>2.00399994850159</D>
+                            <D>4.00400018692017</D>
+                            <D>6.00799989700317</D>
+                            <D>8.00399971008301</D>
+                            <D>10.0</D>
+                            <D>12.0</D>
+                            <D>14.0</D>
+                            <D>16.003999710083</D>
+                            <D>18.0160007476807</D>
+                            <D>20.003999710083</D>
+                            <D>22.0</D>
+                            <D>24.003999710083</D>
+                            <D>26.0</D>
+                            <D>28.007999420166</D>
+                            <D>30.003999710083</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Gap" dependency="dependent" seriesID="si24" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>500.002992339432</D>
+                            <D>500.018999446183</D>
+                            <D>500.052992720157</D>
+                            <D>500.023015774786</D>
+                            <D>500.025984365493</D>
+                            <D>500.045018270612</D>
+                            <D>500.008987728506</D>
+                            <D>500.031979754567</D>
+                            <D>500.05002412945</D>
+                            <D>500.015972647816</D>
+                            <D>500.040012411773</D>
+                            <D>500.068010296673</D>
+                            <D>500.036985613406</D>
+                            <D>500.025984365493</D>
+                            <D>500.059977639467</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Displacement step" dependency="dependent" seriesID="si25" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.942412972450256</D>
+                            <D>2.0152599811554</D>
+                            <D>3.08855009078979</D>
+                            <D>4.16234016418457</D>
+                            <D>5.02125978469849</D>
+                            <D>6.09539985656738</D>
+                            <D>7.16933012008667</D>
+                            <D>8.24322986602783</D>
+                            <D>9.3169002532959</D>
+                            <D>10.3909997940063</D>
+                            <D>11.4651002883911</D>
+                            <D>12.5383996963501</D>
+                            <D>13.6126003265381</D>
+                            <D>14.4715995788574</D>
+                            <D>15.545599937439</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Normal stress coefficient" dependency="dependent" seriesID="si26" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>-0.139099210500717</D>
+                            <D>-0.136823579668999</D>
+                            <D>-0.145823001861572</D>
+                            <D>-0.145714238286018</D>
+                            <D>-0.143234997987747</D>
+                            <D>-0.143652141094208</D>
+                            <D>-0.151876509189606</D>
+                            <D>-0.145907357335091</D>
+                            <D>-0.150552272796631</D>
+                            <D>-0.153078898787498</D>
+                            <D>-0.157219022512436</D>
+                            <D>-0.154403448104858</D>
+                            <D>-0.153611689805984</D>
+                            <D>-0.150299489498138</D>
+                            <D>-0.152372926473618</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Stress" dependency="dependent" seriesID="si27" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>4.65692949295044</D>
+                            <D>4.63702726364136</D>
+                            <D>4.60687494277954</D>
+                            <D>4.59653806686401</D>
+                            <D>4.57913446426392</D>
+                            <D>4.58202314376831</D>
+                            <D>4.54665899276733</D>
+                            <D>4.56221628189087</D>
+                            <D>4.52380418777466</D>
+                            <D>4.5069260597229</D>
+                            <D>4.21108055114746</D>
+                            <D>4.49710607528687</D>
+                            <D>4.49677991867065</D>
+                            <D>4.50772953033447</D>
+                            <D>4.48620367050171</D>
+                        </IndividualValueSet>
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="4c7df345-690a-4134-b22e-74dbfea20f39" name="Flow-Peak Hold">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+            </Infrastructure>
+            <Method name="2, 21, 106 - 25C">
+                <Author userType="human">
+                    <Name>Author</Name>
+                </Author>
+                <Category name="InstrumentConfigurations">
+                    <Parameter name="ConditioningOptions-ZeroAxialForceBeforeRun" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="ConditioningOptions-ZeroSpeedAfterPreshear" parameterType="String">
+                        <S>Leave as is</S>
+                    </Parameter>
+                    <Parameter name="ConditioningOptions-ZeroVelocityThreshold" parameterType="String">
+                        <S>0.1</S>
+                        <Unit label="rad/s">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="ETCCameraAvailable" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="ExperimentOptions-TemperatureToleranceResults" parameterType="String">
+                        <S>1.0</S>
+                        <Unit label="°C">
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="ExperimentOptions-MinimumAxialForceLimit" parameterType="String">
+                        <S>10.197162129779283</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="ExperimentOptions-MaximumAxialForceLimit" parameterType="String">
+                        <S>5098.5810648896413</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-ClosureDistance" parameterType="String">
+                        <S>6000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapVelocityOther" parameterType="String">
+                        <S>8000.0</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapWaitDuration" parameterType="String">
+                        <S>2.0</S>
+                        <Unit label="s">
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapVelocityCoarse" parameterType="String">
+                        <S>8000.0</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-ClosureProfile" parameterType="String">
+                        <S>linear</S>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapTolerance" parameterType="String">
+                        <S>4.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-OverrideWaitForGap" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapVelocityFine" parameterType="String">
+                        <S>2000.0</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-AxialForceForSampleCompression" parameterType="String">
+                        <S>101.97162129779282</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapZeroMode" parameterType="String">
+                        <S>standard (DHR) or deceleration (AR)</S>
+                    </Parameter>
+                    <Parameter name="GapOptions-ClosureVelocity" parameterType="String">
+                        <S>199.99999999999997</S>
+                        <Unit label="µm/s">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="GapOptions-GapHandlingAtStartOfTest" parameterType="String">
+                        <S>Flag mismatches between geometry and instrument gap</S>
+                    </Parameter>
+                    <Parameter name="InertiaOptions-InstrumentInertia" parameterType="String">
+                        <S>21.467573524834823</S>
+                        <Unit label="µN.m.s²">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="InertiaOptions-InstrumentInertiaCalibrationDate" parameterType="String">
+                        <S>2025-07-31T08:12:20.0140618Z</S>
+                    </Parameter>
+                    <Parameter name="RotationalMappingDate" parameterType="String">
+                        <S>2025-09-15T09:33:27.6561896Z</S>
+                    </Parameter>
+                    <Parameter name="RotationalMappingNumberOfIterations" />
+                    <Parameter name="FlowOptions-FlowCollectNegativeShearRateData" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowTorqueLimit" parameterType="String">
+                        <S>0.01</S>
+                        <Unit label="µN.m">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowVelocityLimit" parameterType="String">
+                        <S>0.000001</S>
+                        <Unit label="rad/s">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowVelocityTolerance" parameterType="String">
+                        <S>5.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowCollectAllPoints" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowInertiaCorrection" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowNonSteadyStateMinimumVelocity" parameterType="String">
+                        <S>0.000001</S>
+                        <Unit label="rad/s">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FlowOptions-FlowZeroStrainAtStartOfStep" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureControlEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-CurrentTemperatureSystemSpan" parameterType="String">
+                        <S>1.0</S>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-GeometryGapTemperatureCompensationCalibrationDate" parameterType="String">
+                        <S>2025-08-26T09:55:35.5683072Z</S>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-GapTemperatureCompensationEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-CurrentTemperatureSystemOffset" parameterType="String">
+                        <S>0.0</S>
+                        <Unit label="°C">
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureSystemControlName" parameterType="String">
+                        <S>Peltier plate</S>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-CurrentTemperatureSystemCompensation" parameterType="String">
+                        <S>0.666368</S>
+                        <Unit label="µm/°C">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-PurgeGasOnlyNoActiveCooling" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureWaitDuration" parameterType="String">
+                        <S>10.0</S>
+                        <Unit label="s">
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-TemperatureWaitTolerance" parameterType="String">
+                        <S>0.2</S>
+                        <Unit label="°C">
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="TemperatureOptions-UpperTemperatureSystemFitted" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="Name" parameterType="String">
+                        <S>5332-0319</S>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceMaxGapChangeUp" parameterType="String">
+                        <S>1000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-AxialForceActionOutsideRange" parameterType="String">
+                        <S>Return to initial value</S>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlledAxialForce" parameterType="String">
+                        <S>101.97162129779282</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceSetInitialValue" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceActive" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceMinGapChangeDown" parameterType="String">
+                        <S>1000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceType" parameterType="String">
+                        <S>Compression</S>
+                    </Parameter>
+                    <Parameter name="AxialForceControlOptions-ControlAxialForceSensitivity" parameterType="String">
+                        <S>10.197162129779283</S>
+                        <Unit label="g">
+                            <SIUnit exponent="1.0" factor="0.001">kg</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Disposable" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="Geometry-StressConstant" parameterType="String">
+                        <S>79577.471499999985</S>
+                        <Unit label="Pa/N.m">
+                            <SIUnit>Pa</SIUnit>
+                            <SIUnit>N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Compliance" parameterType="String">
+                        <S>1.03</S>
+                        <Unit label="mrad/N.m">
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-EnvironmentalSystem" parameterType="String">
+                        <S>Peltier plate</S>
+                    </Parameter>
+                    <Parameter name="Geometry-TrimGapOffset" parameterType="String">
+                        <S>50.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-FluidDensityFactor" parameterType="String">
+                        <S>4.1887902072049804E-11</S>
+                    </Parameter>
+                    <Parameter name="Geometry-Material" parameterType="String">
+                        <S>Stainless steel</S>
+                    </Parameter>
+                    <Parameter name="Geometry-NormalForceFactor" parameterType="String">
+                        <S>15.607768226721353</S>
+                        <Unit label="Pa/g" />
+                    </Parameter>
+                    <Parameter name="Geometry-SurfaceFinish" parameterType="String">
+                        <S>CrossHatched</S>
+                    </Parameter>
+                    <Parameter name="Geometry-StrainConstant" parameterType="String">
+                        <S>40.0</S>
+                        <Unit label="1/rad">
+                            <SIUnit>1</SIUnit>
+                            <SIUnit>rad</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-SolventTrap" parameterType="Boolean">
+                        <Boolean>false</Boolean>
+                    </Parameter>
+                    <Parameter name="Geometry-BearingFriction" parameterType="String">
+                        <S>0.30005933333333329</S>
+                        <Unit label="µN.m/(rad/s)">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Name" parameterType="String">
+                        <S>4.0cm X-Hatch Peltier plate Stainless steel</S>
+                    </Parameter>
+                    <Parameter name="Geometry-GapTemperatureCompensationEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="Geometry-BearingFrictionCorrection" parameterType="String">
+                        <S>1.0</S>
+                    </Parameter>
+                    <Parameter name="Geometry-Gap" parameterType="String">
+                        <S>500.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Inertia" parameterType="String">
+                        <S>7.9896120552364058</S>
+                        <Unit label="µN.m.s²">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-Diameter" parameterType="String">
+                        <S>4.0</S>
+                        <Unit label="cm">
+                            <SIUnit exponent="1.0" factor="0.01">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-LoadingGap" parameterType="String">
+                        <S>45000.0</S>
+                        <Unit label="µm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Geometry-GapTemperatureCompensation" parameterType="String">
+                        <S>0.66636789485014758</S>
+                        <Unit label="µm/°C">
+                            <SIUnit exponent="1.0" factor="1.0E-6">m</SIUnit>
+                            <SIUnit offset="-273.15">K</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="Type" parameterType="String">
+                        <S>Discovery HR-2</S>
+                    </Parameter>
+                    <Parameter name="Versions-InstrumentFirmwareVersion" parameterType="String">
+                        <S>9.54</S>
+                    </Parameter>
+                    <Parameter name="SerialNumber" parameterType="String">
+                        <S>5332-0319</S>
+                    </Parameter>
+                    <Parameter name="Friction" parameterType="String">
+                        <S>0.30005930000000003</S>
+                        <Unit label="µN.m/(rad/s)">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                            <SIUnit>rad</SIUnit>
+                            <SIUnit>s</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="FrictionCorrectionEnabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="SmartSwapDisabled" parameterType="Boolean">
+                        <Boolean>true</Boolean>
+                    </Parameter>
+                    <Parameter name="FrictionCalibrationDate" parameterType="String">
+                        <S>2025-09-15T09:30:50.2186624Z</S>
+                    </Parameter>
+                    <Parameter name="RotationalMappingGeometry" parameterType="String">
+                        <S>4.0cm X-Hatch Peltier plate Stainless steel</S>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationTorqueTolerance" parameterType="String">
+                        <S>1.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationVelocityTolerance" parameterType="String">
+                        <S>5.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationDisplacementLimit" parameterType="String">
+                        <S>0.00001</S>
+                        <Unit label="rad">
+                            <SIUnit>rad</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationDisplacementTolerance" parameterType="String">
+                        <S>5.0</S>
+                        <Unit label="%">
+                            <SIUnit factor="1.0">1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationRawPhaseLimit" parameterType="String">
+                        <S>170.0</S>
+                        <Unit label="°">
+                            <SIUnit>1</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="OscillationOptions-OscillationTorqueLimit" parameterType="String">
+                        <S>0.099999999999999992</S>
+                        <Unit label="µN.m">
+                            <SIUnit exponent="1.0" factor="1.0E-6">N</SIUnit>
+                            <SIUnit exponent="1.0" factor="1.0">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="RotationalMappingType" parameterType="String">
+                        <S>standard</S>
+                    </Parameter>
+                    <Parameter name="Location" parameterType="String">
+                        <S>Geraint</S>
+                    </Parameter>
+                    <Parameter name="StartTime" parameterType="DateTime">
+                        <DateTime>2025-09-17T10:45:31.738Z</DateTime>
+                    </Parameter>
+                </Category>
+                <Category name="Procedure Step Configuration">
+                    <Parameter name="Configuration Settings" parameterType="String">
+                        <S>Flow-Peak Hold : 
+Temperature 25 °C Inherit Set Point: Off 
+Soak Time 0.0 s Wait For Temperature: Off 
+Duration 30.0 s
+Shear Rate 21.0 1/s
+
+Inherit initial value: Off
+Number of points 15 
+
+Auto
+
+Zero torque
+Fast sampling: Off
+Limit checking Enabled: Off
+
+Equilibrium Enabled: Off
+
+</S>
+                    </Parameter>
+                </Category>
+            </Method>
+            <Result name="Peak hold - 2">
+                <SeriesSet name="Peak hold - 2_data" length="15">
+                    <Series name="Point No." dependency="independent" seriesID="si0" visible="true" plotScale="linear" seriesType="Int32">
+                        <IndividualValueSet>
+                            <D>1.0</D>
+                            <D>2.0</D>
+                            <D>3.0</D>
+                            <D>4.0</D>
+                            <D>5.0</D>
+                            <D>6.0</D>
+                            <D>7.0</D>
+                            <D>8.0</D>
+                            <D>9.0</D>
+                            <D>10.0</D>
+                            <D>11.0</D>
+                            <D>12.0</D>
+                            <D>13.0</D>
+                            <D>14.0</D>
+                            <D>15.0</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Temperature" dependency="dependent" seriesID="si1" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>25.006799697876</D>
+                            <D>25.0114994049072</D>
+                            <D>25.007999420166</D>
+                            <D>25.0114002227783</D>
+                            <D>25.0032997131348</D>
+                            <D>24.9979991912842</D>
+                            <D>24.9974994659424</D>
+                            <D>25.0056991577148</D>
+                            <D>24.9997997283936</D>
+                            <D>25.0076999664307</D>
+                            <D>25.0027008056641</D>
+                            <D>25.0000991821289</D>
+                            <D>24.9967994689941</D>
+                            <D>24.9990997314453</D>
+                            <D>25.0105991363525</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Viscosity" dependency="dependent" seriesID="si2" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>192.639634013176</D>
+                            <D>192.465484142303</D>
+                            <D>192.489743232727</D>
+                            <D>190.33719599247</D>
+                            <D>191.522225737572</D>
+                            <D>192.045539617538</D>
+                            <D>191.850379109383</D>
+                            <D>191.613122820854</D>
+                            <D>190.142795443535</D>
+                            <D>190.933838486671</D>
+                            <D>190.979808568954</D>
+                            <D>191.249042749405</D>
+                            <D>191.363990306854</D>
+                            <D>191.350132226944</D>
+                            <D>189.854726195335</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Procedure Step Id" dependency="dependent" seriesID="si3" visible="true" plotScale="linear" seriesType="String">
+                        <IndividualValueSet>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                            <S>4c7df345-690a-4134-b22e-74dbfea20f39</S>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Strain step" dependency="dependent" seriesID="si4" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>20592.5338745117</D>
+                            <D>41814.1418457031</D>
+                            <D>63037.2924804688</D>
+                            <D>84281.6772460938</D>
+                            <D>105491.882324219</D>
+                            <D>122481.530761719</D>
+                            <D>147954.504394531</D>
+                            <D>164939.306640625</D>
+                            <D>186167.541503906</D>
+                            <D>207397.8515625</D>
+                            <D>228622.924804688</D>
+                            <D>249849.096679688</D>
+                            <D>271079.028320313</D>
+                            <D>292301.708984375</D>
+                            <D>313520.8984375</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Velocity" dependency="dependent" seriesID="si5" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>2.64999008178711</D>
+                            <D>2.65031003952026</D>
+                            <D>2.6497700214386</D>
+                            <D>2.65043997764587</D>
+                            <D>2.65032005310059</D>
+                            <D>2.65032005310059</D>
+                            <D>2.65033006668091</D>
+                            <D>2.65031003952026</D>
+                            <D>2.6502799987793</D>
+                            <D>2.65032005310059</D>
+                            <D>2.65030002593994</D>
+                            <D>2.65040993690491</D>
+                            <D>2.65032005310059</D>
+                            <D>2.65047001838684</D>
+                            <D>2.65008997917175</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Torque" dependency="dependent" seriesID="si6" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>256.608007475734</D>
+                            <D>256.386992987245</D>
+                            <D>256.36499049142</D>
+                            <D>253.583013545722</D>
+                            <D>255.112012382597</D>
+                            <D>255.827995715663</D>
+                            <D>255.569000728428</D>
+                            <D>255.249993642792</D>
+                            <D>253.289996180683</D>
+                            <D>254.342012340203</D>
+                            <D>254.410988418385</D>
+                            <D>254.768994636834</D>
+                            <D>254.915008554235</D>
+                            <D>254.913000389934</D>
+                            <D>252.877012826502</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Step time" dependency="dependent" seriesID="si7" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>2.00399994850159</D>
+                            <D>4.01999998092651</D>
+                            <D>6.00400018692017</D>
+                            <D>8.01200008392334</D>
+                            <D>10.0120000839233</D>
+                            <D>12.003999710083</D>
+                            <D>14.0200004577637</D>
+                            <D>16.003999710083</D>
+                            <D>18.003999710083</D>
+                            <D>20.003999710083</D>
+                            <D>22.0200004577637</D>
+                            <D>24.007999420166</D>
+                            <D>26.0160007476807</D>
+                            <D>28.007999420166</D>
+                            <D>30.0160007476807</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Termination reason" dependency="dependent" seriesID="si8" visible="true" plotScale="linear" seriesType="String">
+                        <IndividualValueSet>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                            <S>Normal</S>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Run time" dependency="dependent" seriesID="si9" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>32.1761360168457</D>
+                            <D>34.1921348571777</D>
+                            <D>36.1761360168457</D>
+                            <D>38.1841354370117</D>
+                            <D>40.1841354370117</D>
+                            <D>42.1761360168457</D>
+                            <D>44.1921348571777</D>
+                            <D>46.1761360168457</D>
+                            <D>48.1761360168457</D>
+                            <D>50.1761360168457</D>
+                            <D>52.1921348571777</D>
+                            <D>54.1801338195801</D>
+                            <D>56.1881370544434</D>
+                            <D>58.1801338195801</D>
+                            <D>60.1881370544434</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="1/temperature" dependency="dependent" seriesID="si10" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.0033539398573339</D>
+                            <D>0.00335388700477779</D>
+                            <D>0.00335392635315657</D>
+                            <D>0.00335388816893101</D>
+                            <D>0.00335397920571268</D>
+                            <D>0.0033540390431881</D>
+                            <D>0.00335404463112354</D>
+                            <D>0.00335395243018866</D>
+                            <D>0.0033540187869221</D>
+                            <D>0.00335392984561622</D>
+                            <D>0.00335398595780134</D>
+                            <D>0.00335401529446244</D>
+                            <D>0.00335405254736543</D>
+                            <D>0.00335402647033334</D>
+                            <D>0.00335389724932611</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Modulus" dependency="dependent" seriesID="si11" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>0.0991631969809532</D>
+                            <D>0.0487936064600945</D>
+                            <D>0.0323631875216961</D>
+                            <D>0.0239429194480181</D>
+                            <D>0.0192442946135998</D>
+                            <D>0.0166213996708393</D>
+                            <D>0.0137458024546504</D>
+                            <D>0.0123149231076241</D>
+                            <D>0.0108269024640322</D>
+                            <D>0.00975897070020437</D>
+                            <D>0.00885535962879658</D>
+                            <D>0.00811444688588381</D>
+                            <D>0.00748323928564787</D>
+                            <D>0.00693986099213362</D>
+                            <D>0.00641849217936397</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Axial force" dependency="dependent" seriesID="si12" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>-4.18255969666319</D>
+                            <D>-4.21106087499759</D>
+                            <D>-4.15666901171145</D>
+                            <D>-4.31130921510086</D>
+                            <D>-4.36767908174024</D>
+                            <D>-4.1726278937689</D>
+                            <D>-4.21178491463486</D>
+                            <D>-4.16734574730705</D>
+                            <D>-4.32724720409428</D>
+                            <D>-4.32664586372397</D>
+                            <D>-4.35519756528594</D>
+                            <D>-4.36347767649982</D>
+                            <D>-4.32801227011184</D>
+                            <D>-4.22164568111143</D>
+                            <D>-4.33159144191792</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Strain" dependency="dependent" seriesID="si13" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>20592.5338745117</D>
+                            <D>41814.1418457031</D>
+                            <D>63037.2924804688</D>
+                            <D>84281.6772460938</D>
+                            <D>105491.882324219</D>
+                            <D>122481.530761719</D>
+                            <D>147954.504394531</D>
+                            <D>164939.306640625</D>
+                            <D>186167.541503906</D>
+                            <D>207397.8515625</D>
+                            <D>228622.924804688</D>
+                            <D>249849.096679688</D>
+                            <D>271079.028320313</D>
+                            <D>292301.708984375</D>
+                            <D>313520.8984375</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Displacement" dependency="dependent" seriesID="si14" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>5.14800977706909</D>
+                            <D>10.4540996551514</D>
+                            <D>15.7602996826172</D>
+                            <D>21.0699996948242</D>
+                            <D>26.3763999938965</D>
+                            <D>30.6221008300781</D>
+                            <D>36.9906997680664</D>
+                            <D>41.2373008728027</D>
+                            <D>46.5443992614746</D>
+                            <D>51.853401184082</D>
+                            <D>57.157901763916</D>
+                            <D>62.467399597168</D>
+                            <D>67.77490234375</D>
+                            <D>73.0803985595703</D>
+                            <D>78.3879013061523</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Torque step" dependency="dependent" seriesID="si15" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>256.608007475734</D>
+                            <D>256.386992987245</D>
+                            <D>256.36499049142</D>
+                            <D>253.583013545722</D>
+                            <D>255.112012382597</D>
+                            <D>255.827995715663</D>
+                            <D>255.569000728428</D>
+                            <D>255.249993642792</D>
+                            <D>253.289996180683</D>
+                            <D>254.342012340203</D>
+                            <D>254.410988418385</D>
+                            <D>254.768994636834</D>
+                            <D>254.915008554235</D>
+                            <D>254.913000389934</D>
+                            <D>252.877012826502</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Shear rate" dependency="dependent" seriesID="si16" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>106.002151489258</D>
+                            <D>106.006683349609</D>
+                            <D>105.984230041504</D>
+                            <D>106.019714355469</D>
+                            <D>105.9990234375</D>
+                            <D>106.006858825684</D>
+                            <D>106.007263183594</D>
+                            <D>106.006042480469</D>
+                            <D>106.005477905273</D>
+                            <D>106.004753112793</D>
+                            <D>106.007972717285</D>
+                            <D>106.007705688477</D>
+                            <D>106.004753112793</D>
+                            <D>106.011589050293</D>
+                            <D>105.993217468262</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Compliance" dependency="dependent" seriesID="si17" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>1.00843858718872E7</D>
+                            <D>2.04944877624512E7</D>
+                            <D>3.08993053436279E7</D>
+                            <D>4.1765998840332E7</D>
+                            <D>5.19634552001953E7</D>
+                            <D>6.01634063720703E7</D>
+                            <D>7.27494812011719E7</D>
+                            <D>8.12022933959961E7</D>
+                            <D>9.23625259399414E7</D>
+                            <D>1.02469825744629E8</D>
+                            <D>1.12925964355469E8</D>
+                            <D>1.2323698425293E8</D>
+                            <D>1.33631973266602E8</D>
+                            <D>1.44095108032227E8</D>
+                            <D>1.55799835205078E8</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Stress step" dependency="dependent" seriesID="si18" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>20.4202156066895</D>
+                            <D>20.4026279449463</D>
+                            <D>20.4008769989014</D>
+                            <D>20.1794948577881</D>
+                            <D>20.3011684417725</D>
+                            <D>20.3581447601318</D>
+                            <D>20.3375339508057</D>
+                            <D>20.3121490478516</D>
+                            <D>20.156177520752</D>
+                            <D>20.2398948669434</D>
+                            <D>20.24538230896</D>
+                            <D>20.2738723754883</D>
+                            <D>20.2854919433594</D>
+                            <D>20.2853317260742</D>
+                            <D>20.1233139038086</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Normal stress" dependency="dependent" seriesID="si19" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>-65.2804260253906</D>
+                            <D>-65.7252655029297</D>
+                            <D>-64.8763275146484</D>
+                            <D>-67.2899169921875</D>
+                            <D>-68.1697235107422</D>
+                            <D>-65.1254119873047</D>
+                            <D>-65.7365646362305</D>
+                            <D>-65.04296875</D>
+                            <D>-67.5386734008789</D>
+                            <D>-67.5292892456055</D>
+                            <D>-67.9749145507813</D>
+                            <D>-68.1041488647461</D>
+                            <D>-67.5506134033203</D>
+                            <D>-65.8904647827148</D>
+                            <D>-67.6064758300781</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Strain constant" dependency="dependent" seriesID="si20" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>40.0009613037109</D>
+                            <D>39.9978408813477</D>
+                            <D>39.9975204467773</D>
+                            <D>40.0007972717285</D>
+                            <D>39.994800567627</D>
+                            <D>39.9977569580078</D>
+                            <D>39.9977569580078</D>
+                            <D>39.9976005554199</D>
+                            <D>39.9978408813477</D>
+                            <D>39.9969635009766</D>
+                            <D>39.9984817504883</D>
+                            <D>39.9967193603516</D>
+                            <D>39.9969635009766</D>
+                            <D>39.9972801208496</D>
+                            <D>39.9960823059082</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Date and time" dependency="dependent" seriesID="si21" visible="true" plotScale="linear" seriesType="DateTime">
+                        <IndividualValueSet>
+                            <DateTime>2025-09-17T10:46:03.914Z</DateTime>
+                            <DateTime>2025-09-17T10:46:05.930Z</DateTime>
+                            <DateTime>2025-09-17T10:46:07.914Z</DateTime>
+                            <DateTime>2025-09-17T10:46:09.922Z</DateTime>
+                            <DateTime>2025-09-17T10:46:11.922Z</DateTime>
+                            <DateTime>2025-09-17T10:46:13.914Z</DateTime>
+                            <DateTime>2025-09-17T10:46:15.930Z</DateTime>
+                            <DateTime>2025-09-17T10:46:17.914Z</DateTime>
+                            <DateTime>2025-09-17T10:46:19.914Z</DateTime>
+                            <DateTime>2025-09-17T10:46:21.914Z</DateTime>
+                            <DateTime>2025-09-17T10:46:23.930Z</DateTime>
+                            <DateTime>2025-09-17T10:46:25.918Z</DateTime>
+                            <DateTime>2025-09-17T10:46:27.926Z</DateTime>
+                            <DateTime>2025-09-17T10:46:29.918Z</DateTime>
+                            <DateTime>2025-09-17T10:46:31.926Z</DateTime>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Results Step Id" dependency="dependent" seriesID="si22" visible="true" plotScale="linear" seriesType="String">
+                        <IndividualValueSet>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                            <S>ecbcf43e-c951-4715-91ed-0a63ccce3dfd</S>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Time" dependency="dependent" seriesID="si23" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>32.0981330871582</D>
+                            <D>34.1141319274902</D>
+                            <D>36.0981330871582</D>
+                            <D>38.1061325073242</D>
+                            <D>40.1061325073242</D>
+                            <D>42.0981330871582</D>
+                            <D>44.1141319274902</D>
+                            <D>46.0981330871582</D>
+                            <D>48.0981330871582</D>
+                            <D>50.0981330871582</D>
+                            <D>52.1141319274902</D>
+                            <D>54.1021308898926</D>
+                            <D>56.1101341247559</D>
+                            <D>58.1021308898926</D>
+                            <D>60.1101341247559</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Gap" dependency="dependent" seriesID="si24" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>499.987974762917</D>
+                            <D>500.026973895729</D>
+                            <D>500.030990224332</D>
+                            <D>499.990012031049</D>
+                            <D>500.064983498305</D>
+                            <D>500.028021633625</D>
+                            <D>500.028021633625</D>
+                            <D>500.030000694096</D>
+                            <D>500.026973895729</D>
+                            <D>500.037975143641</D>
+                            <D>500.018999446183</D>
+                            <D>500.041001942009</D>
+                            <D>500.037975143641</D>
+                            <D>500.034017022699</D>
+                            <D>500.048976391554</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Displacement step" dependency="dependent" seriesID="si25" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>5.14800977706909</D>
+                            <D>10.4540996551514</D>
+                            <D>15.7602996826172</D>
+                            <D>21.0699996948242</D>
+                            <D>26.3763999938965</D>
+                            <D>30.6221008300781</D>
+                            <D>36.9906997680664</D>
+                            <D>41.2373008728027</D>
+                            <D>46.5443992614746</D>
+                            <D>51.853401184082</D>
+                            <D>57.157901763916</D>
+                            <D>62.467399597168</D>
+                            <D>67.77490234375</D>
+                            <D>73.0803985595703</D>
+                            <D>78.3879013061523</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Normal stress coefficient" dependency="dependent" seriesID="si26" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>-0.0058096987195313</D>
+                            <D>-0.00584878772497177</D>
+                            <D>-0.00577568868175149</D>
+                            <D>-0.00598655175417662</D>
+                            <D>-0.00606719311326742</D>
+                            <D>-0.00579538848251104</D>
+                            <D>-0.00584972929209471</D>
+                            <D>-0.00578814093023539</D>
+                            <D>-0.00601029675453901</D>
+                            <D>-0.00600954378023744</D>
+                            <D>-0.00604883302003145</D>
+                            <D>-0.00606036372482777</D>
+                            <D>-0.00601144134998322</D>
+                            <D>-0.00586294569075108</D>
+                            <D>-0.00601772218942642</D>
+                        </IndividualValueSet>
+                    </Series>
+                    <Series name="Stress" dependency="dependent" seriesID="si27" visible="true" plotScale="linear" seriesType="Float64">
+                        <IndividualValueSet>
+                            <D>20.4202156066895</D>
+                            <D>20.4026279449463</D>
+                            <D>20.4008769989014</D>
+                            <D>20.1794948577881</D>
+                            <D>20.3011684417725</D>
+                            <D>20.3581447601318</D>
+                            <D>20.3375339508057</D>
+                            <D>20.3121490478516</D>
+                            <D>20.156177520752</D>
+                            <D>20.2398948669434</D>
+                            <D>20.24538230896</D>
+                            <D>20.2738723754883</D>
+                            <D>20.2854919433594</D>
+                            <D>20.2853317260742</D>
+                            <D>20.1233139038086</D>
+                        </IndividualValueSet>
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="" name="Additional Properties">
+            <Result name="UserProperties">
+                <Category name="UserProperties">
+                    <Parameter name="Conductivity" parameterType="String">
+                        <S>12.0</S>
+                        <Unit label="uS/cm">
+                            <SIUnit exponent="1.0" factor="1.0E-6">s</SIUnit>
+                            <SIUnit exponent="1.0" factor="0.01">m</SIUnit>
+                        </Unit>
+                    </Parameter>
+                    <Parameter name="pH" parameterType="String">
+                        <S>6.54</S>
+                    </Parameter>
+                </Category>
+            </Result>
+        </ExperimentStep>
+    </ExperimentStepSet>
+</AnIML>

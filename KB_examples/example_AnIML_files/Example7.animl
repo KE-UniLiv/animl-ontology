@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AnIML version="1.0">
+    <SampleSet>
+        <Sample name="Matcha" sampleID="Matcha-00001" comment="">
+            <Category name="Sample data">
+                <Parameter name="FluidDensity" parameterType="String">
+                    <S>1</S>
+                    <Unit label="g/cm³" quantity="1" />
+                </Parameter>
+            </Category>
+        </Sample>
+    </SampleSet>
+    <ExperimentStepSet>
+        <ExperimentStep experimentStepID="es-0" name="Rotational Viscosimetry 1">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2024-03-25T16:56:40.000Z</Timestamp>
+            </Infrastructure>
+            <Method name="Rheology Data">
+                <Author userType="human">
+                    <Name>Gary Ford</Name>
+                </Author>
+                <Device>
+                    <Name>Unilever</Name>
+                </Device>
+                <Category name="Source">
+                    <Parameter name="RawDataFile" parameterType="String">
+                        <S>C:\ProgramData\TA Instruments\TRIOS\Data\Xml GF\Matcha.tri</S>
+                    </Parameter>
+                    <Parameter name="Project" parameterType="String">
+                        <S>Home Care Laundry Liquids</S>
+                    </Parameter>
+                </Category>
+                <Category name="Equipment">
+                    <Parameter name="EquipmentName" parameterType="String">
+                        <S>5332-0544</S>
+                    </Parameter>
+                    <Parameter name="EquipmentSN" parameterType="String">
+                        <S>5332-0544</S>
+                    </Parameter>
+                    <Parameter name="EnvironmentalController" parameterType="String">
+                        <S>Peltier plate</S>
+                    </Parameter>
+                    <Parameter name="ProcedureType" parameterType="String">
+                        <S>Flow</S>
+                    </Parameter>
+                    <Category name="DSR">
+                        <Parameter name="DeformationType" parameterType="String">
+                            <S>RotationTorsion</S>
+                        </Parameter>
+                        <Category name="ConePlate">
+                            <Parameter name="Material" parameterType="String">
+                                <S>Stainless steel</S>
+                            </Parameter>
+                            <Parameter name="GapTempComp" parameterType="String">
+                                <S>0.540237</S>
+                                <Unit label="µm/°C" quantity="0.540237" />
+                            </Parameter>
+                            <Parameter name="UpperCompliance" parameterType="String">
+                                <S>1.03</S>
+                                <Unit label="mrad/N.m" quantity="1.03" />
+                            </Parameter>
+                            <Parameter name="LowerCompliance" parameterType="String">
+                                <S>0</S>
+                                <Unit label="mrad/N.m" quantity="0" />
+                            </Parameter>
+                            <Parameter name="GeometryInertia" parameterType="String">
+                                <S>0.047058541960665168</S>
+                                <Unit label="µN.m.s²" quantity="0.047058541960665168" />
+                            </Parameter>
+                            <Parameter name="Note" parameterType="String">
+                                <S />
+                            </Parameter>
+                            <Parameter name="Radius" parameterType="String">
+                                <S>20</S>
+                                <Unit label="mm" quantity="20" />
+                            </Parameter>
+                            <Parameter name="Angle" parameterType="String">
+                                <S>2.0089</S>
+                                <Unit label="degrees" quantity="2.0089" />
+                            </Parameter>
+                            <Parameter name="TruncationGap" parameterType="String">
+                                <S>53</S>
+                                <Unit label="µm" quantity="53" />
+                            </Parameter>
+                        </Category>
+                    </Category>
+                </Category>
+            </Method>
+            <Result name="Rheometry">
+                <SeriesSet name="Rheometry_data" length="15">
+                    <Series name="Point No." dependency="independent" seriesID="rh-0" visible="true" plotScale="linear" seriesType="Int32">
+                        <EncodedValueSet>
+                            AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA</EncodedValueSet>
+                    </Series>
+                    <Series name="SegmentTime" dependency="dependent" seriesID="rh-1" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            Vg4tsp3v/z8rhxbZzvcPQJZDi2zn+xdAlkOLbOf7H0DLoUW28/0jQMuhRbbz/SdAy6FFtvP9K0DLoUW28/0vQOXQItv5/jFA5dAi2/n+M0Dl0CLb+f41QOXQItv5/jdA5dAi2/n+OUAAAAAAAAA8QOXQItv5/j1A</EncodedValueSet>
+                        <Unit label="s" />
+                    </Series>
+                    <Series name="Temperature" dependency="dependent" seriesID="rh-2" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            VOOlm8QAOUBvEoPAygE5QPyp8dJNAjlA4XoUrkcBOUDHSzeJQQA5QFg5tMh2/jhAAAAAAAAAOUAAAAAAAAA5QG8Sg8DKATlAObTIdr7/OECR7Xw/Nf44QJZDi2zn+zhAVOOlm8QAOUA5tMh2vv84QAAAAAAAADlA</EncodedValueSet>
+                        <Unit label="°C" />
+                    </Series>
+                    <Series name="ShearStress" dependency="dependent" seriesID="rh-3" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            +7qC2HvGpD7jhVO2D4OkPnY4BcokhKQ+MnGOzCmZpD4GKk8bbI+kPnFk7ipei6Q+F06/ztiapD6v5j1z9smkPsP8Pgm9tqQ+Q/uXlEqSpD76skr9aomkPmKL6zH3zaQ+iGStWKLMpD5rozCbaaWkPvpfCviIrqQ+</EncodedValueSet>
+                        <Unit label="MPa" />
+                    </Series>
+                    <Series name="NormalStress" dependency="dependent" seriesID="rh-4" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            MAuMBRV/Cr/y6NUnkWkKvwx7UMssjQq/+wLpx0dQCr+neWm4OJIKv2gDZr0VWwq/cAgBtIfoCb8svUP8DdsJv/PSiDK/zgm/lRGPsw09Cb90cl8/5jkJv34ocGk3JQm/1kws5FkfCb9QvstOgFYJv1hWnQPyRgm/</EncodedValueSet>
+                        <Unit label="MPa" />
+                    </Series>
+                    <Series name="ShearRate" dependency="dependent" seriesID="rh-5" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            mdNlMbH5/z+Z02Uxsfn/PyEf9GxW/f8/rOKNzCP//z8MyF7v/vj/Pzi+9sySAABAVDVB1H0AAEA8TtGRXP7/P3ZsBOJ1/f8/jX+fceEAAEDFPZY+dAEAQF+1MuGX+v8/7zhFR3L5/z+qglFJnQAAQB6n6Egu//8/</EncodedValueSet>
+                        <Unit label="1/s" />
+                    </Series>
+                    <Series name="Viscosity" dependency="dependent" seriesID="rh-6" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            y/J1Gf7T0z8cYVERp5PTPyMsKuJ0ktM/soF0sWml0z+l9bcE4J/TP4dNZOYCl9M/B7e1heel0z9qh78ma9TTP9NmnIaowtM/ONkG7kCd0z+69ZoeFJTTP2VyameY2tM/LbRzmgXa0z9WgsXhzK/TP1vuzATDudM/</EncodedValueSet>
+                        <Unit label="Pa.s" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-1" name="Rotational Viscosimetry 2">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2024-03-25T16:56:40.000Z</Timestamp>
+            </Infrastructure>
+            <Method name="Rheology Data">
+                <Author userType="human">
+                    <Name>Gary Ford</Name>
+                </Author>
+                <Device>
+                    <Name>Unilever</Name>
+                </Device>
+                <Category name="Source">
+                    <Parameter name="RawDataFile" parameterType="String">
+                        <S>C:\ProgramData\TA Instruments\TRIOS\Data\Xml GF\Matcha.tri</S>
+                    </Parameter>
+                    <Parameter name="Project" parameterType="String">
+                        <S>Home Care Laundry Liquids</S>
+                    </Parameter>
+                </Category>
+                <Category name="Equipment">
+                    <Parameter name="EquipmentName" parameterType="String">
+                        <S>5332-0544</S>
+                    </Parameter>
+                    <Parameter name="EquipmentSN" parameterType="String">
+                        <S>5332-0544</S>
+                    </Parameter>
+                    <Parameter name="EnvironmentalController" parameterType="String">
+                        <S>Peltier plate</S>
+                    </Parameter>
+                    <Parameter name="ProcedureType" parameterType="String">
+                        <S>Flow</S>
+                    </Parameter>
+                    <Category name="DSR">
+                        <Parameter name="DeformationType" parameterType="String">
+                            <S>RotationTorsion</S>
+                        </Parameter>
+                        <Category name="ConePlate">
+                            <Parameter name="Material" parameterType="String">
+                                <S>Stainless steel</S>
+                            </Parameter>
+                            <Parameter name="GapTempComp" parameterType="String">
+                                <S>0.540237</S>
+                                <Unit label="µm/°C" quantity="0.540237" />
+                            </Parameter>
+                            <Parameter name="UpperCompliance" parameterType="String">
+                                <S>1.03</S>
+                                <Unit label="mrad/N.m" quantity="1.03" />
+                            </Parameter>
+                            <Parameter name="LowerCompliance" parameterType="String">
+                                <S>0</S>
+                                <Unit label="mrad/N.m" quantity="0" />
+                            </Parameter>
+                            <Parameter name="GeometryInertia" parameterType="String">
+                                <S>0.047058541960665168</S>
+                                <Unit label="µN.m.s²" quantity="0.047058541960665168" />
+                            </Parameter>
+                            <Parameter name="Note" parameterType="String">
+                                <S />
+                            </Parameter>
+                            <Parameter name="Radius" parameterType="String">
+                                <S>20</S>
+                                <Unit label="mm" quantity="20" />
+                            </Parameter>
+                            <Parameter name="Angle" parameterType="String">
+                                <S>2.0089</S>
+                                <Unit label="degrees" quantity="2.0089" />
+                            </Parameter>
+                            <Parameter name="TruncationGap" parameterType="String">
+                                <S>53</S>
+                                <Unit label="µm" quantity="53" />
+                            </Parameter>
+                        </Category>
+                    </Category>
+                </Category>
+            </Method>
+            <Result name="Rheometry">
+                <SeriesSet name="Rheometry_data" length="15">
+                    <Series name="Point No." dependency="independent" seriesID="rh-0" visible="true" plotScale="linear" seriesType="Int32">
+                        <EncodedValueSet>
+                            AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA</EncodedValueSet>
+                    </Series>
+                    <Series name="SegmentTime" dependency="dependent" seriesID="rh-1" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            Vg4tsp3v/z9WDi2yne8PQAAAAAAAABhAAAAAAAAAIEA1XrpJDAIkQGq8dJMYBChAy6FFtvP9K0AbL90kBgEwQBsv3SQGATJAGy/dJAYBNEA1XrpJDAI2QDVeukkMAjhANV66SQwCOkA1XrpJDAI8QDVeukkMAj5A</EncodedValueSet>
+                        <Unit label="s" />
+                    </Series>
+                    <Series name="Temperature" dependency="dependent" seriesID="rh-2" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            Gy/dJAYBOUCNl24SgwA5QOXQItv5/jhAjZduEoMAOUBU46WbxAA5QOF6FK5HATlAjZduEoMAOUBYObTIdv44QN0kBoGVAzlAke18PzX+OECsHFpkO/84QI2XbhKDADlAqMZLN4kBOUBvEoPAygE5QBsv3SQGATlA</EncodedValueSet>
+                        <Unit label="°C" />
+                    </Series>
+                    <Series name="ShearStress" dependency="dependent" seriesID="rh-3" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            +l7WSGcd2D5s+6aV9hzYPnLz9+lDHNg+adAJUewa2D61JKRpexPYPrYC41FMFNg+LDlwV04W2D5lR4PXGhTYPrEbyDygENg+yFn1wpwS2D5BO3XAshLYPhI/xQCwEtg+IxaCvvYU2D7ZMLKA4xTYPnEm70AUF9g+</EncodedValueSet>
+                        <Unit label="MPa" />
+                    </Series>
+                    <Series name="NormalStress" dependency="dependent" seriesID="rh-4" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            2SuCuNjYCL9pwX7dn4oIv/4UTwVxoQi/krR6ytN5Cb9czNTGBkIKvysO446wUQq/ojoBvGqGCb8PcN9nd2gKv5tlg4YmGwu/6AkpUrHXCr+EOQzya04Lv//ov7FlhQu/DuCm6IyUC79sY2S4XjQLv1fTwlMyegq/</EncodedValueSet>
+                        <Unit label="MPa" />
+                    </Series>
+                    <Series name="ShearRate" dependency="dependent" seriesID="rh-5" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            j+TyH9L/NEBxGw3gLQA1QMe6uI0GADVAcoqO5PL/NEA51sVtNAA1QOQUHcnl/zRAcoqO5PL/NEBy+Q/pt/80QABvgQTF/zRAx7q4jQYANUAdWmQ73/80QOM2GsBbADVA/yH99nUANUDHuriNBgA1QHL5D+m3/zRA</EncodedValueSet>
+                        <Unit label="1/s" />
+                    </Series>
+                    <Series name="Viscosity" dependency="dependent" seriesID="rh-6" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            +wJ64c6F0T87jEl/L4XRPyWwOQfPhNE/MuauJeSD0T9C0TyARX7RP3/6z5off9E/xvmbUIiA0T+s4o3MI3/RP8h+FkuRfNE/G4S53ct90T8PfuIA+n3RP57RViWRfdE/f/rPmh9/0T/fNehLb3/RP/Kxu0BJgdE/</EncodedValueSet>
+                        <Unit label="Pa.s" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+        <ExperimentStep experimentStepID="es-2" name="Rotational Viscosimetry 3">
+            <Infrastructure>
+                <SampleReferenceSet>
+                    <SampleReference sampleID="Matcha-00001" role="Test Sample" samplePurpose="consumed" />
+                </SampleReferenceSet>
+                <Timestamp>2024-03-25T16:56:40.000Z</Timestamp>
+            </Infrastructure>
+            <Method name="Rheology Data">
+                <Author userType="human">
+                    <Name>Gary Ford</Name>
+                </Author>
+                <Device>
+                    <Name>Unilever</Name>
+                </Device>
+                <Category name="Source">
+                    <Parameter name="RawDataFile" parameterType="String">
+                        <S>C:\ProgramData\TA Instruments\TRIOS\Data\Xml GF\Matcha.tri</S>
+                    </Parameter>
+                    <Parameter name="Project" parameterType="String">
+                        <S>Home Care Laundry Liquids</S>
+                    </Parameter>
+                </Category>
+                <Category name="Equipment">
+                    <Parameter name="EquipmentName" parameterType="String">
+                        <S>5332-0544</S>
+                    </Parameter>
+                    <Parameter name="EquipmentSN" parameterType="String">
+                        <S>5332-0544</S>
+                    </Parameter>
+                    <Parameter name="EnvironmentalController" parameterType="String">
+                        <S>Peltier plate</S>
+                    </Parameter>
+                    <Parameter name="ProcedureType" parameterType="String">
+                        <S>Flow</S>
+                    </Parameter>
+                    <Category name="DSR">
+                        <Parameter name="DeformationType" parameterType="String">
+                            <S>RotationTorsion</S>
+                        </Parameter>
+                        <Category name="ConePlate">
+                            <Parameter name="Material" parameterType="String">
+                                <S>Stainless steel</S>
+                            </Parameter>
+                            <Parameter name="GapTempComp" parameterType="String">
+                                <S>0.540237</S>
+                                <Unit label="µm/°C" quantity="0.540237" />
+                            </Parameter>
+                            <Parameter name="UpperCompliance" parameterType="String">
+                                <S>1.03</S>
+                                <Unit label="mrad/N.m" quantity="1.03" />
+                            </Parameter>
+                            <Parameter name="LowerCompliance" parameterType="String">
+                                <S>0</S>
+                                <Unit label="mrad/N.m" quantity="0" />
+                            </Parameter>
+                            <Parameter name="GeometryInertia" parameterType="String">
+                                <S>0.047058541960665168</S>
+                                <Unit label="µN.m.s²" quantity="0.047058541960665168" />
+                            </Parameter>
+                            <Parameter name="Note" parameterType="String">
+                                <S />
+                            </Parameter>
+                            <Parameter name="Radius" parameterType="String">
+                                <S>20</S>
+                                <Unit label="mm" quantity="20" />
+                            </Parameter>
+                            <Parameter name="Angle" parameterType="String">
+                                <S>2.0089</S>
+                                <Unit label="degrees" quantity="2.0089" />
+                            </Parameter>
+                            <Parameter name="TruncationGap" parameterType="String">
+                                <S>53</S>
+                                <Unit label="µm" quantity="53" />
+                            </Parameter>
+                        </Category>
+                    </Category>
+                </Category>
+            </Method>
+            <Result name="Rheometry">
+                <SeriesSet name="Rheometry_data" length="15">
+                    <Series name="Point No." dependency="independent" seriesID="rh-0" visible="true" plotScale="linear" seriesType="Int32">
+                        <EncodedValueSet>
+                            AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA</EncodedValueSet>
+                    </Series>
+                    <Series name="SegmentTime" dependency="dependent" seriesID="rh-1" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            AAAAAAAAAEArhxbZzvcPQJZDi2zn+xdAlkOLbOf7H0DLoUW28/0jQAAAAAAAAChAAAAAAAAALEAAAAAAAAAwQAAAAAAAADJAGy/dJAYBNEAbL90kBgE2QBsv3SQGAThAGy/dJAYBOkAbL90kBgE8QBsv3SQGAT5A</EncodedValueSet>
+                        <Unit label="s" />
+                    </Series>
+                    <Series name="Temperature" dependency="dependent" seriesID="rh-2" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            bxKDwMoBOUCoxks3iQE5QMP1KFyPAjlA5dAi2/n+OEA5tMh2vv84QMdLN4lBADlAc2iR7Xz/OEA9CtejcP04QDm0yHa+/zhAx0s3iUEAOUCwcmiR7fw4QKwcWmQ7/zhAqMZLN4kBOUBU46WbxAA5QI2XbhKDADlA</EncodedValueSet>
+                        <Unit label="°C" />
+                    </Series>
+                    <Series name="ShearStress" dependency="dependent" seriesID="rh-3" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            hLtN3bBE+z5KoNyNuT/7PrmN4nK+TPs+sipKGn9B+z5ULhIrA037Puz0LwTaSPs+kSOVWWhW+z68CQsdZUz7Ps3+W+l3Ufs+FBtQh75I+z4EkUa/nU/7Pvu+44viS/s+EqyFrEJQ+z589kh5IEj7PrpJtdxMVvs+</EncodedValueSet>
+                        <Unit label="MPa" />
+                    </Series>
+                    <Series name="NormalStress" dependency="dependent" seriesID="rh-4" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            f5bJ2UQ5C789bzx+PCsKv09vpWN+EQy/yGiLzYG8C7/7BpT43S4Lv2g9C2ll5wq/XVEAxFpOC78muuUlKhQMv857Wd+rkgu/Dri3Ln89C7+kN/rm55cLv+Dy65YDjgu/nQnDROdjDL+GCmsyRSoMv515YmvwnQy/</EncodedValueSet>
+                        <Unit label="MPa" />
+                    </Series>
+                    <Series name="ShearRate" dependency="dependent" seriesID="rh-5" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            9P3UeOl+WkBkO99PjX9aQAAAAAAAgFpA46WbxCCAWkAAAAAAAIBaQA4tsp3vf1pAAAAAAACAWkCq8dJNYoBaQCuHFtnOf1pAAAAAAACAWkDHSzeJQYBaQEjhehSuf1pA8tJNYhCAWkAOLbKd739aQDm0yHa+f1pA</EncodedValueSet>
+                        <Unit label="1/s" />
+                    </Series>
+                    <Series name="Viscosity" dependency="dependent" seriesID="rh-6" visible="true" plotScale="linear" seriesType="Float64">
+                        <EncodedValueSet>
+                            1bK1vkhozz96jPLMy2HPP+MZNPRPcM8/wYu+gjRjzz8WbY5zm3DPP5BpbRrba88/WAIpsWt7zz9LICV2bW/PPwEXZMvydc8/boeGxahrzz85KjdRS3PPPyOjA5Kwb88/h8Q9lj50zz+uEFZjCWvPP3rkDwaee88/</EncodedValueSet>
+                        <Unit label="Pa.s" />
+                    </Series>
+                </SeriesSet>
+            </Result>
+        </ExperimentStep>
+    </ExperimentStepSet>
+</AnIML>
