@@ -1,0 +1,475 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/titration#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/titration#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/titration> rdf:type owl:Ontology ;
+                                                                            owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/titration> ;
+                                                                            owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ;
+                                                                            dct:contributor <http://www.allotrope.org> ;
+                                                                            dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                            dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ,
+                                                                                        <http://purl.allotrope.org/voc/iupac-license> ;
+                                                                            dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                            dct:publisher <http://www.allotrope.org> ;
+                                                                            dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                       <http://purl.allotrope.org/voc/copyright> ;
+                                                                            dct:rightsHolder <http://www.allotrope.org> ;
+                                                                            dct:title "AFO Titration Domain Ontology (REC/2025/06)" ;
+                                                                            owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/titration> ;
+                                                                            owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000107
+af-e:AFE_0000107 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000085 ;
+                 skos:altLabel "Karl Fischer coulometer" ,
+                               "Karl Fischer coulometric titrator" ;
+                 skos:definition "A Karl-Fischer coulometer is a piece of apparatus, consisting of an electrolytic cell with an anodic compartment containing sulfur dioxide (SO2), iodide and a cathodic compartment containing the sample, which is used to determine trace amounts of water in a sample by measuring the time and current flow required to reach the titration end-point. [CHMO]" ;
+                 skos:prefLabel "Karl-Fischer coulometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002220
+af-e:AFE_0002220 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000876 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000085 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( bfo:_0000034
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty bfo:_0000054 ;
+                                                                               owl:someValuesFrom af-p:AFP_0000441
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:altLabel "Karl Fischer titrator" ;
+                 skos:definition "A Karl-Fischer titrator is a titrator designed for Karl-Fischer titrations. [Allotrope]" ;
+                 skos:prefLabel "Karl-Fischer titrator" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001103
+af-m:AFM_0001103 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000056 ;
+                                   owl:someValuesFrom af-p:AFP_0001916
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000087 ;
+                                   owl:someValuesFrom af-rl:AFRL_0000269
+                                 ] ;
+                 skos:definition "A titration solvent is a solvent used in a titration to dissolve the sample. [Allotrope]" ;
+                 skos:prefLabel "titration solvent" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001104
+af-m:AFM_0001104 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000012 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000056 ;
+                                   owl:someValuesFrom af-p:AFP_0001916
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000087 ;
+                                   owl:someValuesFrom af-rl:AFRL_0000234
+                                 ] ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC Compendium on Analytical Nomenclature, Definitive Rules 1997, 3rd Edition, IUPAC Orange Book, prepared for publication by J. Inczedy, T. Lengyel, and A.M. Ure,  Blackwell Science, 1998" ;
+                 skos:definition "A titrant solution is a solution containing the active agent with which a titration is made. [IUPAC]" ;
+                 skos:prefLabel "titrant solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001107
+af-m:AFM_0001107 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001104 ;
+                 skos:altLabel "Karl Fischer titrant solution" ,
+                               "Karl Fischer titration solution" ,
+                               "Karl-Fischer titration solution" ;
+                 skos:definition "A Karl-Fischer titration solution is a titrant solution used in a Karl-Fischer titration. [Allotrope]" ;
+                 skos:prefLabel "Karl-Fischer titrant solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001108
+af-m:AFM_0001108 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001104 ;
+                 skos:definition "A hydrochloric acid titrant solution is a titrant solution containing hydrochloric acid as the reactant. [Allotrope]" ;
+                 skos:prefLabel "hydrochloric acid titrant solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001109
+af-m:AFM_0001109 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001104 ;
+                 skos:definition "A perchloric acid titrant solution is a titrant solution containing perchloric acid as the reactant. [Allotrope]" ;
+                 skos:prefLabel "perchloric acid titrant solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001110
+af-m:AFM_0001110 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001104 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000365 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-m:AFM_0001106
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ro:_0000087 ;
+                                                                               owl:someValuesFrom [ owl:intersectionOf ( af-rl:AFRL_0000231
+                                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                                           owl:onProperty bfo:_0000054 ;
+                                                                                                                           owl:someValuesFrom af-p:AFP_0001916
+                                                                                                                         ]
+                                                                                                                       ) ;
+                                                                                                    rdf:type owl:Class
+                                                                                                  ]
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ;
+                 skos:definition "A silver nitrate titrant solution is a titrant solution containing silver nitrate as the reactant. [Allotrope]" ;
+                 skos:prefLabel "silver nitrate titrant solution" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001111
+af-m:AFM_0001111 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0001104 ;
+                 skos:definition "A sodium hydroxide titrant solution is a titrant solution containing sodium hydroxide as the reactant. [Allotrope]" ;
+                 skos:prefLabel "sodium hydroxide titrant solution" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000078
+af-p:AFP_0000078 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:altLabel "argentimetric titration" ;
+                 skos:definition "Argentometric titration is a process of determining the quantity of a sample by adding measured increments of a titrant until the end-point, at which essentially all of the sample has reacted, is reached. The titration is followed by the observing the precipitation of silver compounds following the addition of silver nitrate. [CHMO]" ;
+                 skos:prefLabel "argentometric titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000119
+af-p:AFP_0000119 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000441 ,
+                                 af-p:AFP_0000634 ;
+                 skos:altLabel "Karl Fischer volumetric titration" ,
+                               "volumetric Karl Fischer titration" ,
+                               "volumetric Karl-Fischer titration" ;
+                 skos:definition "Karl-Fischer volumetric titration is a process of determining trace amounts of water in a sample by the titration of sulfur dioxide in water using iodine. In this method the titrant is added directly to the sample using a burette. [CHMO]" ;
+                 skos:prefLabel "Karl-Fischer volumetric titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000304
+af-p:AFP_0000304 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:definition "Coulometric titration is the process of determining the quantity of a sample by adding measured increments of a titrant until the end-point, at which essentially all of the sample has reacted, is reached. In a coulometric titration the titrant is generated electrochemically by passing a constant current through an electrolyte. [CHMO]" ;
+                 skos:prefLabel "coulometric titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000441
+af-p:AFP_0000441 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:altLabel "Karl Fischer titration" ;
+                 skos:definition "Karl-Fischer titration is a process of determining trace amounts of water in a sample by the titration of sulfur dioxide in water using iodine. [CHMO]" ;
+                 skos:prefLabel "Karl-Fischer titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000634
+af-p:AFP_0000634 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:definition "Volumetric titration is the process of determining the quantity of a sample by adding measured volumes of a titrant (normally via a burette) until the end-point, at which essentially all of the sample has reacted, is reached. [CHMO]" ;
+                 skos:prefLabel "volumetric titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000747
+af-p:AFP_0000747 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:definition "Catalymetric titration is he process of determining the quantity of a sample by adding measured increments of a titrant until the end-point is reached. The titration involves a catalyst, and the end-point is detected by the sudden increase or decrease in the rate of a reaction. [CHMO]" ;
+                 skos:prefLabel "catalymetric titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001001
+af-p:AFP_0001001 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000304 ,
+                                 af-p:AFP_0000441 ;
+                 skos:altLabel "Karl Fischer coulometric titration" ,
+                               "Karl Fischer coulometry" ,
+                               "Karl-Fischer coulometry" ,
+                               "coulometric Karl Fischer titration" ,
+                               "coulometric Karl-Fischer titration" ;
+                 skos:definition "Karl-Fischer coulometric titration is a process of determining trace amounts of water in a sample by the titration of sulfur dioxide in water using iodine. In this method the I2 is generated electrochemically from I- and titrated with sulfur dioxide. [CHMO]" ;
+                 skos:prefLabel "Karl-Fischer coulometric titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001292
+af-p:AFP_0001292 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:altLabel "oxidation-reduction titration" ,
+                               "redox titration" ;
+                 skos:definition "Oxidation-reduction titration is the process of determining the quantity of a sample by monitoring a redox process until the endpoint, at which essentially all of the sample has reacted, is reached. [CHMO]" ;
+                 skos:prefLabel "oxidation-reduction titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001405
+af-p:AFP_0001405 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:definition "Chelatometric titration is the process of determining the quantity of a sample (metal cation) by adding measured increments of a titrant (a chelating agent) until the end-point, at which essentially all of the sample has reacted, is reached. [CHMO]" ;
+                 skos:prefLabel "chelatometric titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001510
+af-p:AFP_0001510 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:altLabel "acid/base titration" ;
+                 skos:definition "Acid-base titration is the process of determining the quantity of a sample (an acid or base) by adding measured increments of a titrant (a base or acid) until the endpoint, at which essentially all of the sample has reacted, is reached. [CHMO]" ;
+                 skos:prefLabel "acid-base titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001916
+af-p:AFP_0001916 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003738
+af-p:AFP_0003738 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001916 ;
+                 skos:definition "A precipitation titration is a titration in which the analyte is precipitated by the titrant. [Allotrope]" ;
+                 skos:prefLabel "precipitation titration" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003740
+af-p:AFP_0003740 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002800 ;
+                 skos:definition "Titrant standardization is the accurate and precise determination of the concentration of a titrant. [Allotrope]" ;
+                 skos:prefLabel "titrant standardization" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000023
+af-r:AFR_0000023 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000490 ;
+                 skos:altLabel "Karl Fischer titration curve" ;
+                 skos:definition "A Karl-Fischer titration curve is a titration curve of mass of water over time. [Allotrope]" ;
+                 skos:prefLabel "Karl-Fischer titration curve" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000468
+af-r:AFR_0000468 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000504 ;
+                 skos:altLabel "Karl Fischer titration result" ;
+                 skos:definition "A Karl-Fischer titration result is the result of a Karl-Fischer titration run. [Allotrope]" ;
+                 skos:prefLabel "Karl-Fischer titration result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002046
+af-r:AFR_0002046 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000504 ;
+                 skos:altLabel "equivalence point" ;
+                 skos:definition "The equivalence point volume is the  volume added in a titration which contains a chemically equivalent quantity of titrant to the analyte in the sample. [Allotrope]" ;
+                 skos:prefLabel "equivalence point volume" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002062
+af-r:AFR_0002062 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002006 ;
+                 dct:source <https://en.wikipedia.org/wiki/Titer> ;
+                 skos:altLabel "titer value" ;
+                 skos:definition "A titer is a calibrated result assigned as the molarity of the titrant solution in a titration. [Allotrope]" ;
+                 skos:prefLabel "titer" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002096
+af-r:AFR_0002096 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom af-m:AFM_0001103
+                                 ] ;
+                 skos:altLabel "titration solvent" ;
+                 skos:definition "A titration solvent type is a classification datum that classifies the solvent used in a titration to dissolve the sample. [Allotrope]" ;
+                 skos:prefLabel "titration solvent type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002097
+af-r:AFR_0002097 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001277 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002806 ;
+                                   owl:someValuesFrom af-m:AFM_0001104
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "titrant solution" ;
+                 skos:definition "A titrant solution type is a classification datum that classifies the titration solution used in the titration. [Allotrope]" ;
+                 skos:prefLabel "titrant solution type" .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/iupac-copyright
+<http://purl.allotrope.org/voc/iupac-copyright> rdf:type owl:NamedIndividual ,
+                                                         dct:RightsStatement ;
+                                                dct:description "Copyright (c) 2019 International Union of Pure Applied Chemistry" .
+
+
+###  http://purl.allotrope.org/voc/iupac-license
+<http://purl.allotrope.org/voc/iupac-license> rdf:type owl:NamedIndividual ,
+                                                       dct:LicenseDocument ;
+                                              dct:description "Reproduced by permission of International Union of Pure and Applied Chemistry" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.obolibrary.org/obo/CHEBI_23367> af-x:AFX_0002796 af-r:AFR_0001222 .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

@@ -1,0 +1,2274 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/datatype#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/datatype#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/datatype> rdf:type owl:Ontology ;
+                                                                          owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/datatype> ;
+                                                                          owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                          dct:contributor <http://www.osthus.com> ;
+                                                                          dct:description "Ontology of general purpose datatypes based on ISO standard ISO-11404." ;
+                                                                          dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                          dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                          dct:rights <http://purl.allotrope.org/voc/afo/copyright> ;
+                                                                          dct:title "Allotrope Ontology of Datatypes (WD/2025/06)" ;
+                                                                          owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2018/11/datatype> ;
+                                                                          owl:versionInfo "WD/2025/06" ;
+                                                                          prov:wasDerivedFrom <http://www.ontodm.com/OntoDT> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002808
+af-x:AFX_0002808 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002726
+af-x:AFX_0002726 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+<http://purl.obolibrary.org/obo/BFO_0000050> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+<http://purl.obolibrary.org/obo/BFO_0000051> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000919
+af-r:AFR_0000919 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000923
+af-r:AFR_0000923 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000957
+af-r:AFR_0000957 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001300
+af-r:AFR_0001300 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000919 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_016936> ;
+                 skos:prefLabel "attribute identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001301
+af-r:AFR_0001301 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000919 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_776867> ;
+                 skos:prefLabel "character set identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001302
+af-r:AFR_0001302 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000919 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_776867> ;
+                 skos:prefLabel "enumerated value identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001303
+af-r:AFR_0001303 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000919 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_477213> ;
+                 skos:prefLabel "extended value identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001304
+af-r:AFR_0001304 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000919 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_inst_507131> ;
+                 skos:prefLabel "field identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001305
+af-r:AFR_0001305 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000919 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_035818> ;
+                 skos:prefLabel "parameter identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001306
+af-r:AFR_0001306 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000919 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_467794> ;
+                 skos:altLabel "discrete value identifier" ;
+                 skos:prefLabel "state value identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001307
+af-r:AFR_0001307 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001304 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000398> ;
+                 skos:prefLabel "descriptive field identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001308
+af-r:AFR_0001308 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001304 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000399> ;
+                 skos:prefLabel "target field identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001309
+af-r:AFR_0001309 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 skos:note "The model of datatypes used in this International Standard is said to be an “abstract computational model”. It is “computational” in the sense that it deals with the manipulation of information by computer systems and makes distinctions in the typing of data units which are appropriate to that kind of manipulation. It is “abstract” in the sense that it deals with the perceived properties of the data units themselves, rather than with the properties of their representations in computer systems. [ISO11404]" ;
+                 skos:prefLabel "datatype facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001310
+af-r:AFR_0001310 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001311
+                                                     af-r:AFR_0001312
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001309 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_396145> ;
+                 skos:definition "A datatype is said to be bounded above if it is ordered and there is a value U in the value space such that, for all values s in the value space, s ≤ U . The value U is then said to be an upper bound of the value space. Similarly, a datatype is said to be bounded below if it is ordered and there is a value L in the space such that, for all values s in the value space, L ≤ s . The value L is then said to be a lower bound of the value space. A datatype is said to be bounded if its value space has both an upper bound and a lower bound. [ISO11404]" ;
+                 skos:prefLabel "boundedness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001311
+af-r:AFR_0001311 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001310 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000248> ;
+                 skos:prefLabel "bounded" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001312
+af-r:AFR_0001312 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001310 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000249> ;
+                 skos:prefLabel "unbounded" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001313
+af-r:AFR_0001313 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001314
+                                                     af-r:AFR_0001315
+                                                     af-r:AFR_0001316
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001309 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_318874> ;
+                 skos:definition """A value space has the mathematical concept of cardinality: it may be finite, denumerably infinite (countable), or non-denumerably infinite (uncountable). A datatype is said to have the cardinality of its value space. In the computational model, there are three significant cases:
+- datatypes whose value spaces are finite,
+- datatypes whose value spaces are exact and denumerably infinite,
+- datatypes whose value spaces are approximate, 
+and therefore have a finite or denumerably infinite computational model, although the conceptual value space may be non-denumerably infinite.
+Every conceptually finite datatype is necessarily exact. No computational datatype is non-denumerably infinite. [ISO11404]""" ;
+                 skos:note "For a denumerably infinite value space, there always exist representation algorithms such that no two distinct values have the same representation and the representation of any given value is of finite length. Conversely, in a nondenumerably infinite value space there always exist values which do not have finite representations. [ISO11404]" ;
+                 skos:prefLabel "cardinality" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001314
+af-r:AFR_0001314 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001313 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000241> ;
+                 skos:prefLabel "countable" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001315
+af-r:AFR_0001315 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001313 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000242> ;
+                 skos:prefLabel "finite" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001316
+af-r:AFR_0001316 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001313 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000243> ;
+                 skos:prefLabel "uncountable" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001317
+af-r:AFR_0001317 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001309 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_905914> ;
+                 skos:definition """In every value space there is a notion of equality, for which the following rules hold:
+- for any two instances (a, b) of values from the value space, either a is equal to b, denoted a = b , or a is not equal to b, denoted a ≠ b ;
+- there is no pair of instances (a, b) of values from the value space such that both a = b and a ≠ b ;
+- for every value a from the value space, a = a ;
+- for any two instances (a, b) of values from the value space, a = b if and only if b = a ;
+- for any three instances (a, b, c) of values from the value space, if a = b and b = c , then a = c .
+On every datatype, the operation Equal is defined in terms of the equality property of the value space, by:
+- for any values a, b drawn from the value space, Equal(a,b) is true if a = b , and false otherwise. [ISO11404]""" ;
+                 skos:prefLabel "equality" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001318
+af-r:AFR_0001318 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001319
+                                                     af-r:AFR_0001320
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001309 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_185557> ;
+                 skos:definition """The computational model of a datatype may limit the degree to which values of the datatype can be distinguished. If every value in the value space of the conceptual datatype is distinguishable in the computational model from every other value in the value space, then the datatype is said to be exact. Certain mathematical datatypes having values which do not have finite representations are said to be approximate, in the following sense:
+
+Let M be the mathematical datatype and C be the corresponding computational datatype, and let P be the mapping from the value space of M to the value space of C . Then for every value v' in C , there is a corresponding value v in M and a real value h such that P(x) = v' for all x in M such that v − x < h . That is, v' is the approximation in C to all values in M which are “within distance h of value v ”.
+Furthermore, for at least one value v' in C , there is more than one value y in M such that P( y) = v' . And thus C is not an exact model of M .
+
+In this International Standard, all approximate datatypes have computational models which specify, via parametric values, a degree of approximation, that is, they require a certain minimum set of values of the mathematical datatype to be distinguishable in the computational datatype. [ISO11404]""" ;
+                 skos:prefLabel "exactness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001319
+af-r:AFR_0001319 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001318 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000250> ;
+                 skos:prefLabel "approximate" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001320
+af-r:AFR_0001320 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001318 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000251> ;
+                 skos:prefLabel "exact" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001321
+af-r:AFR_0001321 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001322
+                                                     af-r:AFR_0001323
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001309 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_194081> ;
+                 skos:definition "A datatype is said to be numeric if its values are conceptually quantities (in some mathematical number system). A datatype whose values do not have this property is said to be non-numeric. [ISO11404]" ;
+                 skos:note """The significance of the numeric property is that the representations of the values depend on some radix, but
+can be algorithmically transformed from one radix to another. [ISO11404]""" ;
+                 skos:prefLabel "numericalness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001322
+af-r:AFR_0001322 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001321 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000253> ;
+                 skos:prefLabel "non-numeric" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001323
+af-r:AFR_0001323 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001321 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000252> ;
+                 skos:prefLabel "numeric" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001324
+af-r:AFR_0001324 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001325
+                                                     af-r:AFR_0001326
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001309 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_369036> ;
+                 skos:definition """A value space is said to be ordered if there exists for the value space an order relation, denoted ≤, with the following rules:
+- for every pair of values (a, b) from the value space, either a ≤ b or b ≤ a , or both;
+- for any two values (a, b) from the value space, if a ≤ b and b ≤ a , then a = b ;
+- for any three values (a, b, c) from the value space, if a ≤ b and b ≤ c , then a ≤ c .
+
+For convenience, the notation a < b is used herein to denote the simultaneous relationships: a ≤ b and a ≠ b .
+
+A datatype is said to be ordered if an order relation is defined on its value space. A corresponding characterizing operation, called InOrder, is then defined by: 
+- for any two values (a, b) from the value space, InOrder(a, b) is true if a ≤ b , and false otherwise. [ISO11404]""" ;
+                 skos:prefLabel "order" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001325
+af-r:AFR_0001325 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001324 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000255> ;
+                 skos:prefLabel "non-ordered" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001326
+af-r:AFR_0001326 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001324 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000254> ;
+                 skos:prefLabel "ordered" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001327
+af-r:AFR_0001327 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000923 ;
+                 skos:prefLabel "aggregate generator facet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001328
+af-r:AFR_0001328 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001329
+                                                     af-r:AFR_0001330
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_888670> ;
+                 skos:prefLabel "access type" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001329
+af-r:AFR_0001329 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001334
+                                                     af-r:AFR_0001335
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001328 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000221> ;
+                 skos:prefLabel "direct access" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001330
+af-r:AFR_0001330 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001331
+                                                     af-r:AFR_0001332
+                                                     af-r:AFR_0001333
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001328 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000222> ;
+                 skos:prefLabel "indirect access" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001331
+af-r:AFR_0001331 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001330 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000372> ;
+                 skos:prefLabel "access by value" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001332
+af-r:AFR_0001332 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001330 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000373> ;
+                 skos:prefLabel "implementation dependent access" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001333
+af-r:AFR_0001333 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001330 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000374> ;
+                 skos:prefLabel "position access" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001334
+af-r:AFR_0001334 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001329 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000370> ;
+                 skos:prefLabel "index access" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001335
+af-r:AFR_0001335 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001329 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000371> ;
+                 skos:prefLabel "key access" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001336
+af-r:AFR_0001336 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001337
+                                                     af-r:AFR_0001338
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_251157> ;
+                 skos:definition "The size of an aggregate-value is the number of component values it contains. The size of the aggregate datatype is fixed, if and only if all values in its value space contain the same number of component values. The size is variable, if different values of the aggregate datatype may have different numbers of component values. Variability is the more general case; fixed-size is a constraint. [ISO11404]" ;
+                 skos:prefLabel "aggregate size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001337
+af-r:AFR_0001337 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001336 ;
+                 skos:prefLabel "fixed size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001338
+af-r:AFR_0001338 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001336 ;
+                 skos:prefLabel "variable size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001339
+af-r:AFR_0001339 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001340
+                                                     af-r:AFR_0001341
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_158535> ;
+                 skos:definition "An aggregate-value has the identifier uniqueness property if and only if no identifier (e.g., label, index) of the element datatype occurs more than once in the aggregate-value. The aggregate datatype has the identifier uniqueness property, if and only if all values in its value space do. [ISO11404]" ;
+                 skos:prefLabel "aggregate-imposed identifier uniqueness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001340
+af-r:AFR_0001340 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001339 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000377> ;
+                 skos:prefLabel "identifier not unique" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001341
+af-r:AFR_0001341 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001339 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000378> ;
+                 skos:prefLabel "identifier unique" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001342
+af-r:AFR_0001342 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001343
+                                                     af-r:AFR_0001344
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_017837> ;
+                 skos:definition """An aggregate datatype has the ordering property, if and only if there is a canonical first element of each nonempty value in its value-space. This ordering is (externally) imposed by the aggregate value, as distinct from
+the value-space of the element datatype itself being (internally) ordered. It is also distinct from the value-space of the aggregate datatype being ordered. [ISO11404]""" ;
+                 skos:example """The type-generator sequence has the ordering property. The datatype characterstring is defined as sequence of (character(repertoire)). The ordering property of sequence means that in every value of type characterstring, there is a first character value.
+For example, the first element value of the characterstring value \"computation\" is 'c'. This is different from the question of whether the element datatype character(repertoire) is ordered: is 'a' < 'c'? It is also different from the question of whether the value space of datatype characterstring is ordered by some collating-sequence, e.g. is \"computation\" < \"Computer\"? 
+[ISO11404]""" ;
+                 skos:prefLabel "aggregate-imposed ordering" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001343
+af-r:AFR_0001343 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001342 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000375> ;
+                 skos:prefLabel "ordered aggregate" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001344
+af-r:AFR_0001344 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001342 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000376> ;
+                 skos:prefLabel "unordered aggregate" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001345
+af-r:AFR_0001345 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001346
+                                                     af-r:AFR_0001347
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_470848> ;
+                 skos:definition """The components of an aggregate datatype may not all be required to have a valid value of the datatype, i.e., the actual value space of the datatype may include values for which some of the component values are unspecified.
+
+When a component of the datatype is required to have a valid value in order for the aggregate value to be a valid value of the datatype, the component is said to be a mandatory component.
+
+When a component of the datatype is not required to have a valid value in order for the aggregate value to be a valid value of the datatype, the component is said to be an optional component. [ISO 11404]""" ;
+                 skos:note "This property applies to fields of records, members of classes, and elements of sequences, tables, and arrays. [ISO11404]" ;
+                 skos:prefLabel "component mandatoriness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001346
+af-r:AFR_0001346 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001345 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000381> ;
+                 skos:prefLabel "component mandatory" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001347
+af-r:AFR_0001347 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001345 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000382> ;
+                 skos:prefLabel "component optional" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001348
+af-r:AFR_0001348 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001349
+                                                     af-r:AFR_0001350
+                                                     af-r:AFR_0001351
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000204> ;
+                 skos:prefLabel "dimensionality" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001349
+af-r:AFR_0001349 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001348 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000385> ;
+                 skos:prefLabel "multidimensional" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001350
+af-r:AFR_0001350 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001348 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000383> ;
+                 skos:prefLabel "one dimensional" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001351
+af-r:AFR_0001351 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001348 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000384> ;
+                 skos:prefLabel "two dimensional" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001352
+af-r:AFR_0001352 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001353
+                                                     af-r:AFR_0001354
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_205502> ;
+                 skos:definition """An aggregate datatype is homogeneous, if and only if all components must belong to a single datatype. If different components may belong to different datatypes, the aggregate datatype is said to be heterogeneous.
+The component datatype of a homogeneous aggregate is also called the element datatype. [ISO11404]""" ;
+                 skos:note "Homogeneous aggregates view all their elements as serving the same role or purpose. Heterogeneous aggregates divide their elements into different roles. [ISO11404]" ,
+                           """The aggregate datatype is homogeneous if its components all belong to the same datatype, even if the element datatype is itself an heterogeneous aggregate datatype. 
+
+Consider the datatype label_list defined by:
+type label = choice (state(name, handle)) of ((name): characterstring, (handle): integer);
+type label_list = sequence of (label);
+
+Formally, a label_list value is a homogeneous series of label values. One could argue that it is really a series of heterogeneous values, because every label value is of a choice datatype. The choice datatype generator is clearly heterogeneous because it is capable of introducing variation in element type. But sequence is homogeneous because it itself introduces no variation in element type. [ISO11404]""" ;
+                 skos:prefLabel "homogenity" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001353
+af-r:AFR_0001353 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001352 ;
+                 skos:prefLabel "heterogenous" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001354
+af-r:AFR_0001354 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001352 ;
+                 skos:prefLabel "homogenous" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001355
+af-r:AFR_0001355 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001356
+                                                     af-r:AFR_0001357
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 skos:prefLabel "recursiveness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001356
+af-r:AFR_0001356 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001355 ;
+                 skos:prefLabel "non-recursive" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001357
+af-r:AFR_0001357 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001355 ;
+                 skos:prefLabel "recursive" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001358
+af-r:AFR_0001358 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001359
+                                                     af-r:AFR_0001360
+                                                     af-r:AFR_0001361
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_614962> ;
+                 skos:prefLabel "structuredness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001359
+af-r:AFR_0001359 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001358 ;
+                 skos:prefLabel "semi-structured" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001360
+af-r:AFR_0001360 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001358 ;
+                 skos:prefLabel "structured" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001361
+af-r:AFR_0001361 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001358 ;
+                 skos:prefLabel "unstructured" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001362
+af-r:AFR_0001362 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001363
+                                                     af-r:AFR_0001364
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001327 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_261649> ;
+                 skos:definition """An aggregate-value has the uniqueness property if and only if no value of the element datatype occurs more than once in the aggregate-value. The aggregate datatype has the uniqueness property, if and only if all
+values in its value space do. [ISO11404]""" ;
+                 skos:prefLabel "uniqueness" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001363
+af-r:AFR_0001363 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001362 ;
+                 skos:prefLabel "non-unique values" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001364
+af-r:AFR_0001364 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001362 ;
+                 skos:prefLabel "unique values" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001365
+af-r:AFR_0001365 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000957 ;
+                 skos:prefLabel "defined generator parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001366
+af-r:AFR_0001366 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000957 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_1000008> ;
+                 skos:prefLabel "direction" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001367
+af-r:AFR_0001367 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000957 ;
+                 skos:example <http://ontodm.com/OntoDT#OntoDT_0000005> ;
+                 skos:prefLabel "list specification" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001368
+af-r:AFR_0001368 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-rl:AFRL_0000384
+                                 ] ;
+                 skos:prefLabel "alternative list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001369
+af-r:AFR_0001369 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-rl:AFRL_0000386
+                                 ] ;
+                 skos:prefLabel "attribute list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001370
+af-r:AFR_0001370 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-rl:AFRL_0000391
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_372249> ;
+                 skos:prefLabel "defined datatype parameter list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001371
+af-r:AFR_0001371 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_335173> ;
+                 skos:prefLabel "defined generator parameter list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001372
+af-r:AFR_0001372 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001302
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_959638> ;
+                 skos:prefLabel "enumerated value list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001373
+af-r:AFR_0001373 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001303
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_621008> ;
+                 skos:prefLabel "extended value list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001374
+af-r:AFR_0001374 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-rl:AFRL_0000392
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_inst_674431> ;
+                 skos:prefLabel "field list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001375
+af-r:AFR_0001375 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-rl:AFRL_0000398
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_713630> ;
+                 skos:prefLabel "index type list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001376
+af-r:AFR_0001376 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001379
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_1000006> ;
+                 skos:prefLabel "procedure parameter list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001377
+af-r:AFR_0001377 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001381
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_589006> ;
+                 skos:prefLabel "select list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001378
+af-r:AFR_0001378 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001367 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001306
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_089686> ;
+                 skos:altLabel "discrete value list" ;
+                 skos:prefLabel "state value list" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001379
+af-r:AFR_0001379 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000957 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001366
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-rl:AFRL_0000399
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_1000007> ;
+                 skos:prefLabel "procedure parameter declaration" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001380
+af-r:AFR_0001380 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000957 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001420
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_1000010> ;
+                 skos:prefLabel "return parameter specification" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001381
+af-r:AFR_0001381 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000957 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_344884> ;
+                 skos:prefLabel "select item specification" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001382
+af-r:AFR_0001382 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000957 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_095716> ;
+                 dct:source "ISO/IEC 11404:2007(E)" ;
+                 skos:definition "a value space is the collection of values for a given datatype" ;
+                 skos:prefLabel "value space" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001383
+af-r:AFR_0001383 rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000064> ;
+                 skos:definition "Operation on datatypes, as objects distinct from their values, that generates new datatypes. [ISO11404]" ;
+                 skos:prefLabel "datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001384
+af-r:AFR_0001384 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001383 ;
+                 skos:prefLabel "defined generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001385
+af-r:AFR_0001385 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001383 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_436502> ;
+                 skos:prefLabel "generated datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001386
+af-r:AFR_0001386 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001383 .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001387
+af-r:AFR_0001387 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001386 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000013> ;
+                 skos:prefLabel "excluding subtype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001388
+af-r:AFR_0001388 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001386 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000014> ;
+                 skos:prefLabel "explict subtype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001389
+af-r:AFR_0001389 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001386 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000015> ;
+                 skos:prefLabel "extending subtype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001390
+af-r:AFR_0001390 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001386 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000016> ;
+                 skos:prefLabel "range subtype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001391
+af-r:AFR_0001391 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001386 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000017> ;
+                 skos:prefLabel "selection subtype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001392
+af-r:AFR_0001392 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001386 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000018> ;
+                 skos:prefLabel "size subtype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001393
+af-r:AFR_0001393 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001390 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_UC_0000031> ;
+                 skos:prefLabel "positive integer range subtype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001394
+af-r:AFR_0001394 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001385 ;
+                 skos:definition """An aggregate datatype generator generates a datatype by
+- applying an algorithmic procedure to the value spaces of its component datatypes to yield the value space of the aggregate datatype, and
+- providing a set of characterizing operations specific to the generator. [ISO11404]""" ;
+                 skos:prefLabel "aggregate datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001395
+af-r:AFR_0001395 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001385 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_176330> ;
+                 skos:prefLabel "non-aggregate datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001396
+af-r:AFR_0001396 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001395 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000039> ;
+                 skos:prefLabel "choice datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001397
+af-r:AFR_0001397 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001395 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000040> ;
+                 skos:prefLabel "pointer datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001398
+af-r:AFR_0001398 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001395 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000041> ;
+                 skos:prefLabel "procedure datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001399
+af-r:AFR_0001399 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001394 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000209> ;
+                 skos:prefLabel "heterogenous aggregate datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001400
+af-r:AFR_0001400 rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( af-r:AFR_0001401
+                                                     af-r:AFR_0001404
+                                                     af-r:AFR_0001405
+                                                     af-r:AFR_0001406
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf af-r:AFR_0001394 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000208> ;
+                 skos:prefLabel "homogenous aggregate datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001401
+af-r:AFR_0001401 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001400 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000032> ;
+                 skos:prefLabel "array datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001402
+af-r:AFR_0001402 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001400 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000210> ;
+                 skos:prefLabel "homogenous aggregate datatype generator with variable size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001403
+af-r:AFR_0001403 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001402 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000211> ;
+                 skos:prefLabel "homogenous unordered aggregate datatype generator with variable size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001404
+af-r:AFR_0001404 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001402 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000036> ;
+                 skos:prefLabel "sequence datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001405
+af-r:AFR_0001405 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001403 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000033> ;
+                 skos:prefLabel "bag datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001406
+af-r:AFR_0001406 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001403 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000037> ;
+                 skos:prefLabel "set datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001407
+af-r:AFR_0001407 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001399 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000034> ;
+                 skos:prefLabel "class datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001408
+af-r:AFR_0001408 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001399 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000035> ;
+                 skos:prefLabel "record datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001409
+af-r:AFR_0001409 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001399 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000038> ;
+                 skos:prefLabel "table datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001411
+af-r:AFR_0001411 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001384 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_210187> ;
+                 skos:prefLabel "directed labeled graph datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001412
+af-r:AFR_0001412 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001384 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_339517> ;
+                 skos:prefLabel "non-directed labeled graph generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001413
+af-r:AFR_0001413 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001384 ;
+                 skos:prefLabel "optional generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001414
+af-r:AFR_0001414 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001384 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000029> ;
+                 skos:prefLabel "stack generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001415
+af-r:AFR_0001415 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001384 ;
+                 skos:prefLabel "tree generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001416
+af-r:AFR_0001416 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001384 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_755846> ;
+                 skos:prefLabel "vector generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001417
+af-r:AFR_0001417 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001411 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_972766> ;
+                 skos:prefLabel "DAG datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001418
+af-r:AFR_0001418 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001411 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000030> ;
+                 skos:prefLabel "tree datatype generator" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001420
+af-r:AFR_0001420 rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000658> ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_487147> ;
+                 skos:definition "set of distinct values, characterized by properties of those values, and by operations on those values. [ISO11404]" ;
+                 skos:prefLabel "datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001421
+af-r:AFR_0001421 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001420 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_310738> ;
+                 skos:definition "Datatype defined by a type-declaration. [ISO11404]" ;
+                 skos:prefLabel "defined datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001422
+af-r:AFR_0001422 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001420 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_191754> ;
+                 skos:definition "Datatype defined by the application of a datatype generator to one or more previously-defined datatypes. [ISO11404]" ;
+                 skos:prefLabel "generated datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001423
+af-r:AFR_0001423 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001420 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_018988> ;
+                 skos:definition "Identifiable datatype that cannot be decomposed into other identifiable datatypes without loss of all semantics associated with the datatype. [ISO11404]" ;
+                 skos:prefLabel "primitive datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001424
+af-r:AFR_0001424 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001423 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000212> ;
+                 skos:prefLabel "non-numeric primitive datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001425
+af-r:AFR_0001425 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001423 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000213> ;
+                 skos:prefLabel "numeric primitive datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001426
+af-r:AFR_0001426 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001423 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDM-Viz_00000> ;
+                 skos:definition "void is the datatype representing an object whose presence is syntactically or semantically required, but carries no information in a given instance. [ISO11404]" ;
+                 skos:prefLabel "void datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001427
+af-r:AFR_0001427 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001425 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_582642> ;
+                 skos:definition """complex is a family of datatypes, each of which is a computational approximation to the mathematical datatype comprising the “complex numbers”. 
+Specifically, each complex datatype designates a collection of mathematical complex values which are known to certain applications to some finite precision and must be distinguishable to at least that precision in those applications.""" ;
+                 skos:prefLabel "complex datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001428
+af-r:AFR_0001428 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001425 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000214> ;
+                 skos:prefLabel "numeric ordered primitive datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001429
+af-r:AFR_0001429 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001428 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000003> ;
+                 skos:definition "integer is the mathematical datatype comprising the exact integral values. [ISO11404]" ;
+                 skos:prefLabel "integer datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001430
+af-r:AFR_0001430 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001428 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000004> ;
+                 skos:definition "Rational is the mathematical datatype comprising the “rational numbers”. [ISO11404]" ;
+                 skos:prefLabel "rational datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001431
+af-r:AFR_0001431 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001428 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_150012> ;
+                 skos:definition """real is a family of datatypes which are computational approximations to the mathematical datatype comprising the “real numbers”.
+Specifically, each real datatype designates a collection of mathematical real values which are expressed to some finite precision and must be distinguishable to at least that precision. [ISO11404]""" ;
+                 skos:prefLabel "real datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001432
+af-r:AFR_0001432 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001428 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_131075> ;
+                 skos:definition "Scaled is a family of datatypes whose value spaces are subsets of the rational value space, each individual datatype having a fixed denominator, but the scaled datatypes possess the concept of approximate value. [ISO11404]" ;
+                 skos:prefLabel "scaled datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001433
+af-r:AFR_0001433 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001424 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000216> ;
+                 skos:prefLabel "non-numeric ordered primitive datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001434
+af-r:AFR_0001434 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001424 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000215> ;
+                 skos:prefLabel "non-numeric unordered primitive datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001435
+af-r:AFR_0001435 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001434 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000002> ;
+                 skos:definition "boolean is the mathematical datatype associated with two-valued logic. [ISO11404]" ;
+                 skos:prefLabel "boolean datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001436
+af-r:AFR_0001436 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001434 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_321211> ;
+                 skos:definition "character is a family of datatypes whose value spaces are character-sets. [ISO11404]" ;
+                 skos:prefLabel "character datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001437
+af-r:AFR_0001437 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001434 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_608148> ;
+                 skos:definition "State is a family of datatypes, each of which comprises a finite number of distinguished but unordered values. [ISO11404]" ;
+                 skos:prefLabel "state datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001438
+af-r:AFR_0001438 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001433 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_459594> ;
+                 skos:definition """Time is a family of datatypes whose values are points in time to various common resolutions:
+year, month, day, hour, minute, second, and fractions thereof. [ISO11404]""" ;
+                 skos:prefLabel "date and time datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001439
+af-r:AFR_0001439 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001433 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_379444> ;
+                 skos:definition "enumerated is a family of datatypes, each of which comprises a finite number of distinguished values having an intrinsic order. [ISO11404]" ;
+                 skos:prefLabel "enumerated datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001440
+af-r:AFR_0001440 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001433 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000001> ;
+                 skos:definition "ordinal is the datatype of the ordinal numbers, as distinct from the quantifying numbers (datatype integer). ordinal is the infinite enumerated datatype. [ISO11404]" ;
+                 skos:prefLabel "ordinal datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001441
+af-r:AFR_0001441 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001422 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001394
+                                 ] ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_378476> ;
+                 skos:definition """An aggregate datatype is a generated datatype, each of whose values is, in principle, made up of values of
+the parametric datatypes. The parametric datatypes of an aggregate datatype or its generator are also called
+component datatypes. [ISO11404]""" ;
+                 skos:prefLabel "aggregate datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001442
+af-r:AFR_0001442 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001422 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_877338> ;
+                 skos:prefLabel "non-aggregate datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001443
+af-r:AFR_0001443 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001442 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_382564> ;
+                 skos:definition "Choice generates a datatype called a choice datatype, each of whose values is a single value from any of a set of alternative datatypes. The alternative datatypes of a choice datatype are logically distinguished by their correspondence to values of another datatype, called the tag datatype. [ISO11404]" ;
+                 skos:prefLabel "choice datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001444
+af-r:AFR_0001444 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001442 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_236485> ;
+                 skos:definition "pointer generates a datatype, called a pointer datatype, each of whose values constitutes a means of reference to values of another datatype, designated the element datatype. The values of a pointer datatype are atomic. [ISO11404]" ;
+                 skos:prefLabel "pointer datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001445
+af-r:AFR_0001445 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001442 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_721277> ;
+                 skos:definition "procedure generates a datatype, called a procedure datatype, each of whose values is an operation on values of other datatypes, designated the parameter datatypes. That is, a procedure datatype comprises the set of all operations on values of a particular collection of datatypes. All values of a procedure datatype are conceptually atomic. [ISO11404]" ;
+                 skos:prefLabel "procedure datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001446
+af-r:AFR_0001446 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001441 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000218> ;
+                 skos:prefLabel "heterogenous aggregate datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001447
+af-r:AFR_0001447 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001441 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000217> ;
+                 skos:prefLabel "homogenous aggregate datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001448
+af-r:AFR_0001448 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001447 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_110287> ;
+                 skos:prefLabel "array datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001449
+af-r:AFR_0001449 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001447 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000219> ;
+                 skos:prefLabel "homogenous aggregate datatype with variable size" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001450
+af-r:AFR_0001450 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001449 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_648082> ;
+                 skos:definition "Sequence generates a datatype, called a sequence datatype, whose values are ordered sequences of values from the element datatype. The ordering is imposed on the values and not intrinsic in the underlying datatype; the same value may occur more than once in a given sequence. [ISO11404]" ;
+                 skos:prefLabel "sequence datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001451
+af-r:AFR_0001451 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001448 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_207563> ;
+                 skos:prefLabel "vector datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001452
+af-r:AFR_0001452 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000021> ;
+                 skos:definition "bit is the datatype representing the finite field of two symbols designated 0, the additive identity, and 1, the multiplicative identity. [ISO11404]" ;
+                 skos:prefLabel "bit" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001453
+af-r:AFR_0001453 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000022> ;
+                 skos:definition "bitstring is the datatype of variable-length strings of binary digits. [ISO11404]" ;
+                 skos:prefLabel "bit string" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001454
+af-r:AFR_0001454 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000023> ;
+                 skos:definition "character string is a family of datatypes which represent strings of symbols from standard character-sets. [ISO11404]" ;
+                 skos:prefLabel "character string" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001455
+af-r:AFR_0001455 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_591397> ;
+                 skos:prefLabel "labeled graph datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001456
+af-r:AFR_0001456 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000020> ;
+                 skos:definition "modulo is a family of datatypes derived from Integer by replacing the operations with arithmetic operations using the modulus characteristic. [ISO11404]" ;
+                 skos:prefLabel "modulo" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001457
+af-r:AFR_0001457 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000019> ;
+                 skos:prefLabel "natural number" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001458
+af-r:AFR_0001458 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_576464> ;
+                 skos:prefLabel "non-directed labeled graph datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001459
+af-r:AFR_0001459 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000028> ;
+                 skos:definition "object identifier is the datatype of “object identifiers”, i.e. values which uniquely identify objects in a (Open Systems Interconnection) communications protocol, using the formal structure defined by Abstract Syntax Notation One (ISO/IEC 8824). [ISO11404]" ;
+                 skos:prefLabel "object identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001460
+af-r:AFR_0001460 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000025> ;
+                 skos:definition "octet is the datatype of 8-bit codes, as used for character-sets and private encodings. [ISO11404]" ;
+                 skos:prefLabel "octet" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001461
+af-r:AFR_0001461 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000026> ;
+                 skos:definition "octet string is the datatype of variable-length encodings using 8-bit codes. [ISO11404]" ;
+                 skos:prefLabel "octet string" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001462
+af-r:AFR_0001462 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000027> ;
+                 skos:definition "A private datatype represents an application-defined value-space and operation set which are intentionally concealed from certain processing entities. [ISO11404]" ;
+                 skos:prefLabel "private" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001463
+af-r:AFR_0001463 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001421 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000024> ;
+                 skos:definition "timeinterval is a family of datatypes representing elapsed time in seconds or fractions of a second (as opposed to Date-and-time, which represents a point in time). It is a generated datatype derived from a scaled datatype by limiting the operations. [ISO11404]" ;
+                 skos:prefLabel "time interval" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001464
+af-r:AFR_0001464 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001455 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_645869> ;
+                 skos:altLabel "DAG datatype" ;
+                 skos:prefLabel "directed acyclic graph datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001465
+af-r:AFR_0001465 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001455 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_245924> ;
+                 skos:prefLabel "tree datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001467
+af-r:AFR_0001467 rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000658> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001386
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-rl:AFRL_0000387
+                                 ] ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000203> ;
+                 skos:altLabel "subtype" ;
+                 skos:prefLabel "extended datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001468
+af-r:AFR_0001468 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001467 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                   owl:someValuesFrom af-r:AFR_0001393
+                                 ] ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_UC_0000030> ;
+                 skos:prefLabel "positive integer datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001469
+af-r:AFR_0001469 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001446 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_598925> ;
+                 skos:prefLabel "class datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001470
+af-r:AFR_0001470 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001446 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_950419> ;
+                 skos:altLabel "tuple datatype" ;
+                 skos:prefLabel "record datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001471
+af-r:AFR_0001471 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001470 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_0000049> ;
+                 skos:prefLabel "labeled dataset record datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001472
+af-r:AFR_0001472 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001470 ;
+                 af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_UC_0000028> ;
+                 skos:prefLabel "unlabeled dataset record datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001473
+af-r:AFR_0001473 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001446 ;
+                 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_003508> ;
+                 skos:prefLabel "table datatype" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000166
+af-rl:AFRL_0000166 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000383
+af-rl:AFRL_0000383 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000166 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty af-x:AFX_0002726 ;
+                                     owl:someValuesFrom af-r:AFR_0001420
+                                   ] ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_0000008> ;
+                   skos:prefLabel "datatype role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000384
+af-rl:AFRL_0000384 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   skos:prefLabel "alternative component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000385
+af-rl:AFRL_0000385 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                     owl:someValuesFrom af-rl:AFRL_0000384
+                                   ] ;
+                   skos:prefLabel "alternative type" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000386
+af-rl:AFRL_0000386 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   skos:prefLabel "attribute component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000387
+af-rl:AFRL_0000387 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                     owl:someValuesFrom af-r:AFR_0001467
+                                   ] ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_691902> ;
+                   skos:prefLabel "base type" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000388
+af-rl:AFRL_0000388 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000387 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty af-x:AFX_0002726 ;
+                                     owl:someValuesFrom af-r:AFR_0001431
+                                   ] ;
+                   af-x:AFX_0002808 <http://www.ontodm.com/OntoDT#OntoDT_UC_0000027> ;
+                   skos:prefLabel "integer base type" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000389
+af-rl:AFRL_0000389 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000387 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty af-x:AFX_0002726 ;
+                                     owl:someValuesFrom af-r:AFR_0001431
+                                   ] ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_488636> ;
+                   skos:prefLabel "real base type" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000390
+af-rl:AFRL_0000390 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000387 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty af-x:AFX_0002726 ;
+                                     owl:someValuesFrom af-r:AFR_0001437
+                                   ] ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_339518> ;
+                   skos:prefLabel "state base type" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000391
+af-rl:AFRL_0000391 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_029503> ;
+                   skos:prefLabel "defined datatype parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000392
+af-rl:AFRL_0000392 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   skos:prefLabel "field component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000393
+af-rl:AFRL_0000393 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000392 ;
+                   skos:prefLabel "aggregate field component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000394
+af-rl:AFRL_0000394 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000392 ;
+                   skos:prefLabel "primitive field component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000395
+af-rl:AFRL_0000395 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000393 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_041544> ;
+                   skos:prefLabel "graph aggregate component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000396
+af-rl:AFRL_0000396 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000395 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_903401> ;
+                   skos:prefLabel "edge component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000397
+af-rl:AFRL_0000397 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000395 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_775509> ;
+                   skos:prefLabel "node component" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000398
+af-rl:AFRL_0000398 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_293023> ;
+                   skos:prefLabel "index type" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000399
+af-rl:AFRL_0000399 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_1000009> ;
+                   skos:prefLabel "parameter" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000400
+af-rl:AFRL_0000400 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_1000005> ;
+                   skos:prefLabel "pointer element type" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000401
+af-rl:AFRL_0000401 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000383 ;
+                   af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_1000000> ;
+                   skos:prefLabel "tag type" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000009
+<http://purl.obolibrary.org/obo/IAO_0000009> rdf:type owl:Class ;
+                                             skos:prefLabel "datum label" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000064
+<http://purl.obolibrary.org/obo/IAO_0000064> rdf:type owl:Class ;
+                                             skos:prefLabel "algorithm" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000658
+<http://purl.obolibrary.org/obo/OBI_0000658> rdf:type owl:Class ;
+                                             rdfs:subClassOf af-r:AFR_0000957 ;
+                                             skos:prefLabel "data representational model" .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ontodm.com/OntoDT#OntoDT_0000008
+<http://ontodm.com/OntoDT#OntoDT_0000008> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000013
+<http://ontodm.com/OntoDT#OntoDT_0000013> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000014
+<http://ontodm.com/OntoDT#OntoDT_0000014> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000015
+<http://ontodm.com/OntoDT#OntoDT_0000015> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000016
+<http://ontodm.com/OntoDT#OntoDT_0000016> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000017
+<http://ontodm.com/OntoDT#OntoDT_0000017> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000018
+<http://ontodm.com/OntoDT#OntoDT_0000018> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000019
+<http://ontodm.com/OntoDT#OntoDT_0000019> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000020
+<http://ontodm.com/OntoDT#OntoDT_0000020> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000021
+<http://ontodm.com/OntoDT#OntoDT_0000021> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000022
+<http://ontodm.com/OntoDT#OntoDT_0000022> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000023
+<http://ontodm.com/OntoDT#OntoDT_0000023> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000024
+<http://ontodm.com/OntoDT#OntoDT_0000024> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000025
+<http://ontodm.com/OntoDT#OntoDT_0000025> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000026
+<http://ontodm.com/OntoDT#OntoDT_0000026> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000027
+<http://ontodm.com/OntoDT#OntoDT_0000027> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000028
+<http://ontodm.com/OntoDT#OntoDT_0000028> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000029
+<http://ontodm.com/OntoDT#OntoDT_0000029> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000030
+<http://ontodm.com/OntoDT#OntoDT_0000030> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000032
+<http://ontodm.com/OntoDT#OntoDT_0000032> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000033
+<http://ontodm.com/OntoDT#OntoDT_0000033> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000034
+<http://ontodm.com/OntoDT#OntoDT_0000034> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000035
+<http://ontodm.com/OntoDT#OntoDT_0000035> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000036
+<http://ontodm.com/OntoDT#OntoDT_0000036> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000037
+<http://ontodm.com/OntoDT#OntoDT_0000037> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000038
+<http://ontodm.com/OntoDT#OntoDT_0000038> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000039
+<http://ontodm.com/OntoDT#OntoDT_0000039> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000040
+<http://ontodm.com/OntoDT#OntoDT_0000040> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_0000041
+<http://ontodm.com/OntoDT#OntoDT_0000041> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_003508
+<http://ontodm.com/OntoDT#OntoDT_003508> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_016936
+<http://ontodm.com/OntoDT#OntoDT_016936> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_017837
+<http://ontodm.com/OntoDT#OntoDT_017837> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_018988
+<http://ontodm.com/OntoDT#OntoDT_018988> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_029503
+<http://ontodm.com/OntoDT#OntoDT_029503> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_035818
+<http://ontodm.com/OntoDT#OntoDT_035818> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_041544
+<http://ontodm.com/OntoDT#OntoDT_041544> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_089686
+<http://ontodm.com/OntoDT#OntoDT_089686> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_095716
+<http://ontodm.com/OntoDT#OntoDT_095716> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_099378
+<http://ontodm.com/OntoDT#OntoDT_099378> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_1000000
+<http://ontodm.com/OntoDT#OntoDT_1000000> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_1000005
+<http://ontodm.com/OntoDT#OntoDT_1000005> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_1000006
+<http://ontodm.com/OntoDT#OntoDT_1000006> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_1000007
+<http://ontodm.com/OntoDT#OntoDT_1000007> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_1000008
+<http://ontodm.com/OntoDT#OntoDT_1000008> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_1000009
+<http://ontodm.com/OntoDT#OntoDT_1000009> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_1000010
+<http://ontodm.com/OntoDT#OntoDT_1000010> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_110287
+<http://ontodm.com/OntoDT#OntoDT_110287> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_131075
+<http://ontodm.com/OntoDT#OntoDT_131075> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_150012
+<http://ontodm.com/OntoDT#OntoDT_150012> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_158535
+<http://ontodm.com/OntoDT#OntoDT_158535> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_176330
+<http://ontodm.com/OntoDT#OntoDT_176330> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_185557
+<http://ontodm.com/OntoDT#OntoDT_185557> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_191754
+<http://ontodm.com/OntoDT#OntoDT_191754> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_194081
+<http://ontodm.com/OntoDT#OntoDT_194081> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_205502
+<http://ontodm.com/OntoDT#OntoDT_205502> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_207563
+<http://ontodm.com/OntoDT#OntoDT_207563> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_210187
+<http://ontodm.com/OntoDT#OntoDT_210187> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_236485
+<http://ontodm.com/OntoDT#OntoDT_236485> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_245924
+<http://ontodm.com/OntoDT#OntoDT_245924> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_251157
+<http://ontodm.com/OntoDT#OntoDT_251157> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_261649
+<http://ontodm.com/OntoDT#OntoDT_261649> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_293023
+<http://ontodm.com/OntoDT#OntoDT_293023> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_310738
+<http://ontodm.com/OntoDT#OntoDT_310738> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_318874
+<http://ontodm.com/OntoDT#OntoDT_318874> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_321211
+<http://ontodm.com/OntoDT#OntoDT_321211> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_335173
+<http://ontodm.com/OntoDT#OntoDT_335173> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_339517
+<http://ontodm.com/OntoDT#OntoDT_339517> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_339518
+<http://ontodm.com/OntoDT#OntoDT_339518> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_344884
+<http://ontodm.com/OntoDT#OntoDT_344884> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_369036
+<http://ontodm.com/OntoDT#OntoDT_369036> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_372249
+<http://ontodm.com/OntoDT#OntoDT_372249> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_378476
+<http://ontodm.com/OntoDT#OntoDT_378476> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_379444
+<http://ontodm.com/OntoDT#OntoDT_379444> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_382564
+<http://ontodm.com/OntoDT#OntoDT_382564> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_396145
+<http://ontodm.com/OntoDT#OntoDT_396145> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_436502
+<http://ontodm.com/OntoDT#OntoDT_436502> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_459594
+<http://ontodm.com/OntoDT#OntoDT_459594> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_467794
+<http://ontodm.com/OntoDT#OntoDT_467794> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_470848
+<http://ontodm.com/OntoDT#OntoDT_470848> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_477213
+<http://ontodm.com/OntoDT#OntoDT_477213> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_487147
+<http://ontodm.com/OntoDT#OntoDT_487147> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_488636
+<http://ontodm.com/OntoDT#OntoDT_488636> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_576464
+<http://ontodm.com/OntoDT#OntoDT_576464> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_582642
+<http://ontodm.com/OntoDT#OntoDT_582642> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_589006
+<http://ontodm.com/OntoDT#OntoDT_589006> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_591397
+<http://ontodm.com/OntoDT#OntoDT_591397> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_598925
+<http://ontodm.com/OntoDT#OntoDT_598925> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_608148
+<http://ontodm.com/OntoDT#OntoDT_608148> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_614962
+<http://ontodm.com/OntoDT#OntoDT_614962> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_621008
+<http://ontodm.com/OntoDT#OntoDT_621008> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_645869
+<http://ontodm.com/OntoDT#OntoDT_645869> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_648082
+<http://ontodm.com/OntoDT#OntoDT_648082> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_691902
+<http://ontodm.com/OntoDT#OntoDT_691902> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_713630
+<http://ontodm.com/OntoDT#OntoDT_713630> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_721277
+<http://ontodm.com/OntoDT#OntoDT_721277> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_755846
+<http://ontodm.com/OntoDT#OntoDT_755846> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_775509
+<http://ontodm.com/OntoDT#OntoDT_775509> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_776867
+<http://ontodm.com/OntoDT#OntoDT_776867> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_869983
+<http://ontodm.com/OntoDT#OntoDT_869983> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_877338
+<http://ontodm.com/OntoDT#OntoDT_877338> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_888670
+<http://ontodm.com/OntoDT#OntoDT_888670> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_903401
+<http://ontodm.com/OntoDT#OntoDT_903401> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_905914
+<http://ontodm.com/OntoDT#OntoDT_905914> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_950419
+<http://ontodm.com/OntoDT#OntoDT_950419> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_959638
+<http://ontodm.com/OntoDT#OntoDT_959638> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_972766
+<http://ontodm.com/OntoDT#OntoDT_972766> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_inst_507131
+<http://ontodm.com/OntoDT#OntoDT_inst_507131> rdf:type owl:NamedIndividual .
+
+
+###  http://ontodm.com/OntoDT#OntoDT_inst_674431
+<http://ontodm.com/OntoDT#OntoDT_inst_674431> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/afo/domain/datatype-submission#TreeDatatypeGenerator
+<http://purl.allotrope.org/ontologies/afo/domain/datatype-submission#TreeDatatypeGenerator> rdf:type owl:NamedIndividual ;
+                                                                                            af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_099378> .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001386
+af-r:AFR_0001386 rdf:type owl:NamedIndividual .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001475
+af-r:AFR_0001475 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001366 ;
+                 skos:altLabel "in" ;
+                 skos:prefLabel "direction in" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001476
+af-r:AFR_0001476 rdf:type owl:NamedIndividual ,
+                          af-r:AFR_0001366 ;
+                 skos:altLabel "out" ;
+                 skos:prefLabel "direction out" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "(c) 2017 Allotrope Foundation" ;
+                                          dct:title "(c) 2017 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/afo/domain/WD/2018/04/datatype
+<http://purl.allotrope.org/voc/afo/domain/WD/2018/04/datatype> rdf:type owl:NamedIndividual ;
+                                                               dct:contributor _:genid84 ,
+                                                                               _:genid85 .
+
+_:genid84 foaf:name "Pance Panov" .
+
+_:genid85 foaf:name "Saso Dzeroski" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+af-r:AFR_0001386 af-x:AFX_0002808 <http://ontodm.com/OntoDT#OntoDT_869983> ;
+                 skos:definition "A subtype is a datatype derived from an existing datatype, designated the base datatype, by restricting the value space to a subset of that of the base datatype whilst maintaining all characterizing operations. Subtypes are created by a kind of datatype generator which is unusual in that its only function is to define the relationship between the value spaces of the base datatype and the subtype. [ISO11404]" ;
+                 skos:prefLabel "subtype generator" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

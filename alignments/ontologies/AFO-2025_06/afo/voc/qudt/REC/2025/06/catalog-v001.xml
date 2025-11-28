@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE catalog[
+<!ELEMENT catalog (uri|group)+>
+<!ELEMENT group (uri)+>
+<!ELEMENT uri EMPTY>
+<!ATTLIST catalog
+	xmlns CDATA #IMPLIED
+	prefer (system|public) #IMPLIED
+>
+<!ATTLIST uri
+	id ID #IMPLIED
+	name CDATA #REQUIRED
+	uri CDATA #REQUIRED
+>
+<!ATTLIST group
+	id ID #IMPLIED
+	prefer (system|public) #IMPLIED
+	xml:base CDATA #IMPLIED
+>
+]>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<group id="import" prefer="public" xml:base="">
+		<uri id="id3698" name="http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/dimension" uri="../../../../qudt/REC/2024/09/schema/dimension.ttl"/>
+		<uri id="id5913" name="http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/quantity" uri="../../../../qudt/REC/2024/09/schema/quantity.ttl"/>
+		<uri id="id5912" name="http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt" uri="../../../../qudt/REC/2024/09/schema/qudt.ttl"/>
+		<uri id="id4378" name="http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/dimensionalunit" uri="../../../../qudt/REC/2024/09/vocab/dimensionalunit.ttl"/>
+		<uri id="id4376" name="http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/quantity" uri="../../../../qudt/REC/2024/09/vocab/quantity.ttl"/>
+		<uri id="id5911" name="http://purl.allotrope.org/voc/qudt/REC/2024/09/vocab/unit" uri="../../../../qudt/REC/2024/09/vocab/unit.ttl"/>
+	</group>
+	<group id="QUDT-REC" prefer="public" xml:base="">
+		<uri id="id5688" name="http://purl.allotrope.org/voc/qudt/REC/2025/06/qudt-ext" uri="qudt-ext.ttl"/>
+	</group>
+</catalog>

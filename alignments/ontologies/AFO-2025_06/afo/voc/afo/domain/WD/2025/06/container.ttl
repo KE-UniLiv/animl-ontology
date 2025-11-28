@@ -1,0 +1,477 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/container#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/container#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/container> rdf:type owl:Ontology ;
+                                                                           owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/container> ;
+                                                                           owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ;
+                                                                           dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                           dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                      <http://purl.allotrope.org/voc/copyright> ;
+                                                                           dct:title "AFO Container Domain Ontology (WD/2025/06)" ;
+                                                                           owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/container> ;
+                                                                           owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002808
+af-x:AFX_0002808 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000029
+af-e:AFE_0000029 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000070
+af-e:AFE_0000070 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000221 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/MS_1001940> ;
+                 skos:definition "A sample plate made of coated glass for coupling thin layer chromatography with mass spectrometry. [Allotrope]" ;
+                 skos:prefLabel "coated glass plate" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000191
+af-e:AFE_0000191 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001872 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/NCIT_C43377> ,
+                                  obi:_0400076 ;
+                 skos:altLabel "PCR plate" ;
+                 skos:changeNote "2016-02-23 Moved synonyms microwell, microtiter plate into separate concept. change pref label to PCR microplate, matching definition [Allotrope]" ;
+                 skos:definition "A PCR microplate is a flat plate with multiple \"wells\" used as small test tubes for PCR processes. [Wikipedia]" ;
+                 skos:prefLabel "PCR microplate" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000221
+af-e:AFE_0000221 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000029 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:changeNote "2024-09-12 Replaced unlicensed definition with an Allotrope written one." ;
+                 skos:definition "A sample plate is a well plate made of metal used for MALDI experiments. [Allotrope]" ;
+                 skos:prefLabel "sample plate" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000320
+af-e:AFE_0000320 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000221 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/MS_1001939> ;
+                 skos:definition "A sample plate made of stainless steel. [Allotrope]" ;
+                 skos:prefLabel "stainless steel plate" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000407
+af-e:AFE_0000407 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000540
+af-e:AFE_0000540 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000607
+af-e:AFE_0000607 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000407 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A waste container is a container that is used for waste. [Allotrope]" ;
+                 skos:prefLabel "waste container" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000662
+af-e:AFE_0000662 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001188 ;
+                 skos:altLabel "tray container" ;
+                 skos:definition "A shelf container is a type of container that can be stored on a shelf. [Allotrope]" ;
+                 skos:prefLabel "shelf container" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000718
+af-e:AFE_0000718 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000851
+af-e:AFE_0000851 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001188
+af-e:AFE_0001188 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000407 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/NCIT_C84328> ;
+                 skos:definition "A rack is a container that is at least one shelf, that can be stacked on top of another. [Allotrope]" ;
+                 skos:prefLabel "rack" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001189
+af-e:AFE_0001189 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000540 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A rack for keeping samples in place in a bath. [Allotrope]" ;
+                 skos:prefLabel "bath rack" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001250
+af-e:AFE_0001250 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001252
+af-e:AFE_0001252 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000607 ,
+                                 af-e:AFE_0001250 ;
+                 skos:definition "A sharps container is a device which is used to discard hazardous materials which may puncture the skin such as needles. [Allotrope]" ;
+                 skos:prefLabel "sharps container" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001354
+af-e:AFE_0001354 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001188 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A roller rack is a rack with rotating spindles used for cell cultures that are attached to the inside walls of a roller bottle. [Allotrope]" ;
+                 skos:prefLabel "roller rack" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001453
+af-e:AFE_0001453 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001455 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 dct:source "https://en.wikipedia.org/wiki/Boiling_tube" ;
+                 skos:definition "A boiling tube is a small cylindrical vessel used to strongly heat substances in the flame of a Bunsen burner. A boiling tube is essentially a scaled-up test tube, being about 50% larger. [Wikipedia]" ;
+                 skos:prefLabel "boiling tube" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001455
+af-e:AFE_0001455 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000718 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 obi:_0000836 ;
+                 dct:source "https://en.wikipedia.org/wiki/Test_tube" ;
+                 skos:altLabel "culture tube" ,
+                               "sample tube" ;
+                 skos:definition "A test tube, also known as a culture tube or sample tube, is a common piece of laboratory glassware consisting of a finger-like length of glass or clear plastic tubing, open at the top, usually with a rounded U-shaped bottom. [Wikipedia]" ;
+                 skos:prefLabel "test tube" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001479
+af-e:AFE_0001479 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000329 ;
+                 dct:source "https://en.wikipedia.org/wiki/Ampoule" ;
+                 skos:altLabel "ampul" ,
+                               "ampule" ,
+                               "ampulla" ;
+                 skos:definition "An ampoule is a small sealed vial which is used to contain and preserve a sample, usually a solid or liquid. Ampoules are commonly made of glass, although plastic ampoules do exist. [Wikipedia]" ;
+                 skos:prefLabel "ampoule" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001623
+af-e:AFE_0001623 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001624
+af-e:AFE_0001624 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An aluminum pan is a pan made of aluminum. [Allotrope]" ;
+                 skos:prefLabel "aluminum pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001625
+af-e:AFE_0001625 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A platinum pan is a pan made of platinum. [Allotrope]" ;
+                 skos:prefLabel "platinum pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001626
+af-e:AFE_0001626 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A reference pan is a pan that is empty and taken as a standard. [Allotrope]" ;
+                 skos:prefLabel "reference pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001627
+af-e:AFE_0001627 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A hermetic pan is a pan that can be sealed hermetically. [Allotrope]" ;
+                 skos:prefLabel "hermetic pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001631
+af-e:AFE_0001631 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A sample pan is a pan that contains the sample under investigation. [Allotrope]" ;
+                 skos:prefLabel "sample pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001632
+af-e:AFE_0001632 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A gold pan is a pan made of gold. [Allotrope]" ;
+                 skos:prefLabel "gold pan" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001640
+af-e:AFE_0001640 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000540 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A sensor tray is a type of tray that holds sensors. [Allotrope]" ;
+                 skos:prefLabel "sensor tray" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001668
+af-e:AFE_0001668 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001669
+af-e:AFE_0001669 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001668 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "sample stage spinner" ,
+                               "spinner" ;
+                 skos:definition "A flat stage is a flat surface that carries non-volatile samples for measurement. [Allotrope]" ;
+                 skos:prefLabel "flat sample stage" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001670
+af-e:AFE_0001670 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001668 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A capillary stage is a type of sample stage that carries liquid or volatile samples in capillaries. [Allotrope]" ;
+                 skos:example "A sample stage for small quantities of sample (seal it of from the environment). [Allotrope]" ;
+                 skos:prefLabel "capillary sample stage" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001682
+af-e:AFE_0001682 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001668 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "variable humidity sample stage" ;
+                 skos:definition "A sample stage where the humidity can be controlled/varied during measurement. [Allotrope]" ;
+                 skos:prefLabel "humidity controlled sample stage" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001683
+af-e:AFE_0001683 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001668 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "variable temperature sample stage" ;
+                 skos:definition "A sample stage where the temperature can be controlled/varied during measurement. [Allotrope]" ;
+                 skos:prefLabel "temperature controlled sample stage" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001687
+af-e:AFE_0001687 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001668 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "rotating stage" ;
+                 skos:definition "A spinning sample stage is a stage that rotates during measurement. [Allotrope]" ;
+                 skos:prefLabel "spinning sample stage" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001872
+af-e:AFE_0001872 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001873
+af-e:AFE_0001873 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001872 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 obi:_0400076 ;
+                 dct:source "ANSI SLAS 4-2004 (R2012)" ;
+                 skos:definition "A standard microplate that contains 96 wells, arranged in eight rows by twelve columns. [Allotrope]" ;
+                 skos:prefLabel "96 well microplate" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001878
+af-e:AFE_0001878 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000540 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "specimen tray" ;
+                 skos:definition "A tray that is used to hold samples. [Allotrope]" ;
+                 skos:prefLabel "sample tray" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001879
+af-e:AFE_0001879 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000540 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A tray that is used to hold buffers. [Allotrope]" ;
+                 skos:prefLabel "buffer tray" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002174
+af-e:AFE_0002174 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000407 ;
+                 skos:prefLabel "drawer" .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://purl.allotrope.org/voc/iupac-copyright
+<http://purl.allotrope.org/voc/iupac-copyright> rdf:type owl:NamedIndividual ,
+                                                         dct:RightsStatement ;
+                                                dct:description "Copyright © 2019 International Union of Pure Applied Chemistry" .
+
+
+###  http://purl.allotrope.org/voc/iupac-license
+<http://purl.allotrope.org/voc/iupac-license> rdf:type owl:NamedIndividual ,
+                                                       dct:LicenseDocument ;
+                                              dct:description "Reproduced by permission of International Union of Pure and Applied Chemistry" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

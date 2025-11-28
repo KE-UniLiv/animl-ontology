@@ -1,0 +1,644 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/uv#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix map: <http://purl.allotrope.org/ontologies/mapping/instances#> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/xml/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/uv#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/uv> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/uv> ;
+                                                                     owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ;
+                                                                     dct:contributor <http://www.allotrope.org> ;
+                                                                     dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                     dct:modified "2025-06-11T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:publisher <http://www.allotrope.org> ;
+                                                                     dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                <http://purl.allotrope.org/voc/copyright> ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "AFO Ultra-Violet Domain Ontology (REC/2025/06)" ;
+                                                                     owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/uv> ;
+                                                                     owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000090
+af-e:AFE_0000090 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ,
+                                 af-e:AFE_0000734 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 chmo:_0002503 ;
+                 skos:altLabel "DAD" ,
+                               "PDA" ,
+                               "PDAD" ,
+                               "photodiode array detector" ;
+                 skos:definition "A piece of apparatus, consisting of a two-dimensional pattern of diodes and a prism, that is used to detect organic compounds. As the sample passes through a cell or cuvette it is illuminated with light in the region 190-1100 nm and any light transmitted through the sample is dispersed by the prism, so that light of different wavelengths falls on different diodes. The output from the array is used to construct an absorption spectrum that can be compared with standard spectra for identification purposes. Alternatively, a single diode can be used to monitor a specific wavelength at which there is maximum absorption. [CHMO]" ;
+                 skos:prefLabel "diode array detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000185
+af-e:AFE_0000185 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000354
+af-e:AFE_0000354 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000407
+af-e:AFE_0000407 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000421
+af-e:AFE_0000421 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000185 ;
+                 skos:altLabel "UV spectrophotometer" ,
+                               "UV-VIS absorption spectrophotometer" ,
+                               "UV-VIS spectrometer" ,
+                               "UV-VIS spectrophotometer" ,
+                               "UV-Vis molecular absorption spectrometer" ,
+                               "UV-Vis spectrometer" ,
+                               "UV-vis absorption spectrometer" ,
+                               "UV-vis absorption spectrophotometer" ,
+                               "UV-vis spectrometer" ,
+                               "UV-vis spectrophotometer" ,
+                               "UV-visible spectrometer" ,
+                               "UV/VIS absorption spectrophotometer" ,
+                               "UV/VIS spectrometer" ,
+                               "UV/VIS spectrophotometer" ,
+                               "UV/Vis absorption spectrophotometer" ,
+                               "UV/Vis spectrometer" ,
+                               "UV/Vis spectrophotometer" ,
+                               "absorption spectrophotometer" ,
+                               "electronic absorption spectrometer" ,
+                               "molecular electronic absorption spectrometer" ,
+                               "ultra-violet-visible spectrometer" ,
+                               "ultraviolet-visible spectrometer" ,
+                               "ultraviolet-visible spectrophotometer" ;
+                 skos:definition "A piece of apparatus that consists of: a light source; a holder for the sample; a diffraction grating or monochromator to separate the different wavelengths of light; a detector, and is used to measure spectra in the range ultraviolet to visible (190--800 nm). [CHMO]" ;
+                 skos:prefLabel "ultraviolet-visible spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000554
+af-e:AFE_0000554 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000185 ;
+                 skos:altLabel "UV spectrometer" ,
+                               "UV spectrophotometer" ,
+                               "ultra-violet spectrometer" ,
+                               "ultraviolet spectrometry" ;
+                 skos:definition "A piece of apparatus that consists of: a light source; a holder for the sample; a diffraction grating or monochromator to separate the different wavelengths of light; a detector, and is used to measure spectra in the ultraviolet range (190-400 nm). [CHMO]" ;
+                 skos:prefLabel "ultraviolet spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000711
+af-e:AFE_0000711 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000734 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 chmo:_0002584 ;
+                 skos:altLabel "UV detector" ;
+                 skos:definition "A piece of apparatus, consisting of a light source, a photoelectric cell, a diffraction grating or monochromator to separate the different wavelengths of light, which is used to detect the absorbance of ultraviolet (190-400 nm) light by molecules in a sample separated by chromatography. [CHMO]" ;
+                 skos:prefLabel "ultraviolet detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000734
+af-e:AFE_0000734 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000800
+af-e:AFE_0000800 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000185 ;
+                 skos:altLabel "UV-VIS-NIR spectrometer" ,
+                               "UV-Vis-NIR absorption spectrometer" ,
+                               "UV-Vis-NIR spectrometer" ,
+                               "UV-Vis-NIR spectrophotometer" ,
+                               "UV-vis-NIR absorption spectrometer" ,
+                               "UV-visible-near IR absorption spectrometer" ,
+                               "UV-visible-near IR spectrometer" ,
+                               "ultraviolet-visible-near infrared absorption spectrometer" ,
+                               "ultraviolet-visible-near infrared spectrometer" ;
+                 skos:definition "A piece of apparatus that consists of: a light source; a holder for the sample; a diffraction grating or monochromator to separate the different wavelengths of light; a detector, and is used to measure spectra in the range ultraviolet to near-infrared (190--2000 nm) resulting in electronic transitions within the sample. [CHMO]" ;
+                 skos:prefLabel "ultraviolet-visible-near infrared spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001747
+af-e:AFE_0001747 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000407 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "A cell holder is a type of container for samples in spectrophotometers. [Allotrope]" ;
+                 skos:prefLabel "cell holder" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001754
+af-e:AFE_0001754 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001755 ;
+                 dct:source <https://en.wikipedia.org/wiki/Excimer_lamp> ;
+                 skos:altLabel "UV/VIS lamp" ,
+                               "excilamp" ;
+                 skos:definition "An excimer lamp is a light source of ultraviolet light produced by spontaneous emission of excimer (exciplex) molecules. [Wikipedia]" ;
+                 skos:prefLabel "excimer lamp" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001755
+af-e:AFE_0001755 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001875 ;
+                 skos:definition "A UV lamp is a light source with an ultraviolet wavelength range of 190 to 380 nm. [Allotrope]" ;
+                 skos:prefLabel "UV lamp" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001772
+af-e:AFE_0001772 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001755 ;
+                 skos:definition "A deuterium lamp is a low-pressure gas-discharge light source that emits light with a continuous spectrum mainly in the ultraviolet region. [Wikipedia]" ;
+                 skos:prefLabel "deuterium lamp" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001774
+af-e:AFE_0001774 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:definition "The fibrette is a fiber optics device that consists of a thin fiber and defines the point where a beam of light is emitted into a sample. [Allotrope]" ;
+                 skos:prefLabel "fibrette" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001775
+af-e:AFE_0001775 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 skos:definition "A fibrette coupler connects a fibrette to a UV spectrophotometer and allows for precise adjustment of the path length. [Allotrope]" ;
+                 skos:prefLabel "fibrette coupler" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001875
+af-e:AFE_0001875 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000246
+af-p:AFP_0000246 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002188 ;
+                 skos:altLabel "UV detection" ,
+                               "UV measurement" ,
+                               "ultra-violet detection" ,
+                               "ultra-violet measurement" ,
+                               "ultraviolet detection" ,
+                               "ultraviolet measurement" ;
+                 skos:changeNote "2019-08-14 Changed definition and preferred label. [Allotrope]" ;
+                 skos:definition "Ultraviolet absorbance measurement is electronic absorbance measurement of light in the wavelength region of 190-350 nm. [Allotrope]" ;
+                 skos:prefLabel "ultraviolet absorbance measurement" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000266
+af-p:AFP_0000266 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000391
+af-p:AFP_0000391 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000955 ;
+                 skos:altLabel "UV-vis-DRS" ,
+                               "UV-vis-diffuse reflectance spectroscopy" ,
+                               "diffuse reflectance UV-vis spectroscopy" ,
+                               "diffuse reflectance UV-visible" ;
+                 skos:definition "A type of spectroscopy where the diffuse reflection of radiation in the range ultraviolet to visible (190-800 nm) by a sample is measured. [CHMO]" ;
+                 skos:prefLabel "diffuse reflectance ultraviolet-visible spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000813
+af-p:AFP_0000813 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000266 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:definition "A method where the absorption of radiation in the ultraviolet to near-infrared (0.1-2.5 µm) is used to calculate stability constants by equimolar dilution. [CHMO]" ;
+                 skos:prefLabel "equimolar spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000872
+af-p:AFP_0000872 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000955 ;
+                 skos:altLabel "DOAS" ,
+                               "differential optical absorbance spectrometry" ,
+                               "differential optical absorbance spectroscopy" ,
+                               "differential optical absorption spectrometry" ,
+                               "differential optical absorption spectroscopy" ;
+                 skos:definition "Ultraviolet-visible spectroscopy where the difference between incident and transmitted radiation is measured for a gaseous sample. [CHMO]" ;
+                 skos:prefLabel "differential optical absorption spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000896
+af-p:AFP_0000896 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000955 ;
+                 skos:altLabel "UV spectrophotometry" ,
+                               "UV spectroscopic measurements" ,
+                               "UV spectroscopy" ,
+                               "ultra-violet spectrometry" ,
+                               "ultra-violet spectrophotometry" ,
+                               "ultra-violet spectroscopy" ,
+                               "ultraviolet spectrometry" ,
+                               "ultraviolet spectroscopy" ;
+                 skos:definition "Spectroscopy where the sample absorbs radiation from the ultraviolet region (190-400 nm) resulting in electronic transitions within the sample. [CHMO]" ;
+                 skos:prefLabel "ultraviolet spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000925
+af-p:AFP_0000925 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000955
+af-p:AFP_0000955 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000266 ;
+                 skos:altLabel "UV spectrometry" ,
+                               "UV-VIS" ,
+                               "UV-VIS absorption spectrophotometry" ,
+                               "UV-VIS absorption spectroscopy" ,
+                               "UV-VIS spectrophotometry" ,
+                               "UV-VIS spectroscopy" ,
+                               "UV-Vis molecular absorption spectrometry" ,
+                               "UV-Vis molecular absorption spectroscopy" ,
+                               "UV-Vis spectroscopy" ,
+                               "UV-vis" ,
+                               "UV-vis absorption spectrometry" ,
+                               "UV-vis absorption spectrophotometry" ,
+                               "UV-vis absorption spectroscopy" ,
+                               "UV-vis spectrometry" ,
+                               "UV-vis spectrophotometry" ,
+                               "UV-vis spectroscopy" ,
+                               "UV-visible" ,
+                               "UV-visible spectroscopy" ,
+                               "UV/VIS" ,
+                               "UV/VIS absorption spectrophotometry" ,
+                               "UV/VIS spectrometry" ,
+                               "UV/VIS spectrophotometry" ,
+                               "UV/VIS spectroscopy" ,
+                               "UV/Vis absorption spectrophotometry" ,
+                               "UV/Vis spectrometry" ,
+                               "UV/Vis spectrophotometry" ,
+                               "UV/Vis spectroscopy" ,
+                               "UV/vis" ,
+                               "absorption spectrophotometry" ,
+                               "electronic absorption spectroscopy" ,
+                               "molecular electronic absorption spectroscopy" ,
+                               "ultra-violet-visible spectrometry" ,
+                               "ultra-violet-visible spectroscopy" ,
+                               "ultraviolet-visible" ,
+                               "ultraviolet-visible spectrometry" ,
+                               "ultraviolet-visible spectrophotometry" ,
+                               "ultraviolet-visible spectroscopy" ;
+                 skos:definition "Spectroscopy where the sample absorbs radiation in the range ultraviolet to visible (190-800 nm) resulting in electronic transitions within the sample. [CHMO]" ;
+                 skos:prefLabel "ultraviolet-visible spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001106
+af-p:AFP_0001106 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000955 ;
+                 skos:altLabel "reflectance UV-VIS spectrometry" ,
+                               "reflectance UV-VIS spectroscopy" ,
+                               "reflectance UV/VIS spectrometry" ,
+                               "reflectance UV/VIS spectroscopy" ,
+                               "reflectance ultra-violet-visible spectrometry" ,
+                               "reflectance ultra-violet-visible spectrophotometry" ,
+                               "reflectance ultra-violet-visible spectroscopy" ,
+                               "reflectance ultraviolet-visible spectroscopy" ,
+                               "reflection UV-VIS spectrometry" ,
+                               "reflection UV-VIS spectroscopy" ,
+                               "reflection UV/VIS spectrometry" ,
+                               "reflection UV/VIS spectroscopy" ,
+                               "reflection ultra-violet-visible spectrometry" ,
+                               "reflection ultra-violet-visible spectroscopy" ,
+                               "reflection ultraviolet-visible spectrometry" ,
+                               "reflection ultraviolet-visible spectroscopy" ;
+                 skos:definition "Ultraviolet-visible spectroscopy where the reflection or scattering of radiation from the sample surface is detected. [CHMO]" ;
+                 skos:prefLabel "reflectance ultraviolet-visible spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001760
+af-p:AFP_0001760 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000955 ;
+                 skos:altLabel "optical absorption spectroscopy" ,
+                               "visible spectrometry" ,
+                               "visible spectroscopy" ;
+                 skos:definition "Spectroscopy where the sample absorbs radiation from the visible region (380-800 nm) resulting in electronic transitions within the sample. [CHMO]" ;
+                 skos:prefLabel "visible spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002188
+af-p:AFP_0002188 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002228
+af-p:AFP_0002228 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000266 ;
+                 skos:altLabel "UV-VIS-NIR" ,
+                               "UV-VIS-NIR spectrophotometry" ,
+                               "UV-Vis-NIR" ,
+                               "UV-Vis-NIR absorption spectroscopy" ,
+                               "UV-Vis-NIR spectroscopy" ,
+                               "UV-vis-NIR absorption spectroscopy" ,
+                               "UV-visible-near IR absorption spectroscopy" ,
+                               "UV-visible-near IR spectroscopy" ,
+                               "ultraviolet-visible-near infrared absorption spectroscopy" ,
+                               "ultraviolet-visible-near infrared spectrophotometry" ,
+                               "ultraviolet-visible-near infrared spectroscopy" ;
+                 skos:definition "Spectroscopy where the sample absorbs radiation in the range ultraviolet to near-infrared (190-2000 nm) resulting in electronic transitions within the sample. [CHMO]" ;
+                 skos:prefLabel "ultraviolet-visible-near infrared spectrophotometry" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003674
+af-p:AFP_0003674 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003726 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000057 ;
+                                   owl:someValuesFrom af-e:AFE_0000090
+                                 ] ;
+                 skos:altLabel "DAD process" ;
+                 skos:definition "A process executed by a diode array detector. [Allotrope]" ;
+                 skos:prefLabel "diode array detector process" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000066
+af-r:AFR_0000066 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000514 ;
+                 skos:altLabel "UV-Vis-NIR absorption spectrum" ,
+                               "UV-Vis-NIR spectra" ,
+                               "UV-Vis-NIR spectrum" ,
+                               "UV-vis-NIR absorption spectra" ,
+                               "UV-vis-NIR spectra" ,
+                               "UV-vis-near IR spectra" ,
+                               "UV-vis-near IR spectrum" ,
+                               "UV-visible-near IR spectrum" ;
+                 skos:definition "A plot of absorbance vs. wavelength obtained by measuring the amount of radiation absorbed by a sample as a function of the wavelength of incident radiation in the ultraviolet to near-infrared (190-2000 nm) range. [CHMO]" ;
+                 skos:prefLabel "ultraviolet-visible-near infrared spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000246
+af-r:AFR_0000246 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000514 ;
+                 skos:altLabel "2D UV spectrum" ,
+                               "2D UV spectrum (abs. over wavelength)" ,
+                               "UV spectra" ,
+                               "UV spectrum" ,
+                               "two dimensional ultraviolet spectrum" ,
+                               "two-dimensional ultraviolet spectrum" ,
+                               "ultra-violet spectra" ,
+                               "ultra-violet spectrum" ,
+                               "ultraviolet spectra" ,
+                               "ultraviolet spectrum" ;
+                 skos:definition "A plot of absorbance vs. wavelength obtained by measuring the amount of radiation absorbed by a sample as a function of the wavelength of incident radiation from the ultraviolet region (190-400 nm) range. [CHMO]" ;
+                 skos:prefLabel "ultraviolet spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000317
+af-r:AFR_0000317 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000514 ;
+                 skos:altLabel "VIS spectra" ,
+                               "VIS spectrum" ,
+                               "optical absorption spectra" ,
+                               "optical absorption spectrum" ,
+                               "visible spectra" ;
+                 skos:definition "A plot of absorbance vs. wavelength obtained by measuring the amount of radiation absorbed by a sample as a function of the wavelength of incident radiation from the visible region (380-800 nm) range. [CHMO]" ;
+                 skos:prefLabel "visible spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000360
+af-r:AFR_0000360 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000514 ;
+                 skos:altLabel "UV-VIS absorption spectra" ,
+                               "UV-Vis spectra" ,
+                               "UV-Vis spectrum" ,
+                               "UV-vis absorption spectra" ,
+                               "UV-vis absorption spectrum" ,
+                               "UV-vis spectra" ,
+                               "UV-vis spectrum" ,
+                               "UV-visible spectra" ,
+                               "UV-visible spectrum" ,
+                               "UV/VIS absorption spectra" ,
+                               "UV/VIS spectra" ,
+                               "UV/vis spectra" ,
+                               "UV/vis spectrum" ,
+                               "UV/visible spectra" ,
+                               "UV/visible spectrum" ,
+                               "spectrophotometric data" ,
+                               "ultraviolet-visible spectra" ,
+                               "ultraviolet-visible spectrum" ;
+                 skos:definition "A plot of absorbance vs. wavelength obtained by measuring the amount of radiation absorbed by a sample as a function of the wavelength of incident radiation in the ultraviolet to visible (190-800 nm) range. [CHMO]" ;
+                 skos:prefLabel "ultraviolet-visible spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000514
+af-r:AFR_0000514 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001527
+af-r:AFR_0001527 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001060 ;
+                 skos:altLabel "3D UV spectrum" ,
+                               "3D UV spectrum (abs. over wavelength and time)" ,
+                               "UV spectra" ,
+                               "UV spectrum" ,
+                               "three dimensional ultraviolet spectrum" ,
+                               "ultra-violet spectra" ,
+                               "ultra-violet spectrum" ,
+                               "ultraviolet spectra" ,
+                               "ultraviolet spectrum" ;
+                 skos:definition "A plot of absorbance versus wavelength and versus time obtained by measuring the amount of radiation absorbed by a sample as a function of the wavelength of incident radiation from the ultraviolet region (190-400 nm) and as a function of time. [Allotrope]" ;
+                 skos:prefLabel "three-dimensional ultraviolet spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001651
+af-r:AFR_0001651 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001556 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002704 ;
+                                   owl:someValuesFrom af-p:AFP_0003674
+                                 ] ;
+                 skos:altLabel "DAD method" ;
+                 skos:definition "A diode array detector method is a device method specifies how a detection is executed on a diode array detector. [Allotrope]" ;
+                 skos:prefLabel "diode array detector method" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002362
+af-r:AFR_0002362 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000576 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "UV-VIS profile" ,
+                               "UV-VIS profile result" ,
+                               "UV-VIS spectroscopy profile" ,
+                               "UV-VIS spectroscopy profile result" ,
+                               "UV-Vis profile" ,
+                               "UV-Vis profile result" ,
+                               "UV-Vis spectroscopy profile" ,
+                               "UV-Vis spectroscopy profile result" ,
+                               "UV-vis profile" ,
+                               "UV-vis profile result" ,
+                               "UV-vis spectroscopy profile" ,
+                               "UV-vis spectroscopy profile result" ,
+                               "ultraviolet-visible profile result" ,
+                               "ultraviolet-visible spectroscopy profile result" ,
+                               "uv-vis profile" ,
+                               "uv-vis profile result" ,
+                               "uv-vis spectroscopy profile" ,
+                               "uv-vis spectroscopy profile result" ;
+                 skos:definition "An ultraviolet-visible spectroscopy profile is a profile that quantifies absorbed or transmitted radiation over time in the ultraviolet-visible region. [Allotrope]" ;
+                 skos:prefLabel "ultraviolet-visible spectroscopy profile" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002363
+af-r:AFR_0002363 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0000955
+                                 ] ;
+                 skos:altLabel "UV-VIS document" ,
+                               "UV-VIS spectroscopy document" ,
+                               "UV-Vis document" ,
+                               "UV-Vis spectroscopy document" ,
+                               "UV-vis document" ,
+                               "UV-vis spectroscopy document" ,
+                               "ultraviolet-visible document" ,
+                               "uv-vis document" ,
+                               "uv-vis spectroscopy document" ;
+                 skos:definition "A ultraviolet-visible spectroscopy document is a document that encompasses the information associated with a UV-Vis spectroscopic run. [Allotrope]" ;
+                 skos:prefLabel "ultraviolet-visible spectroscopy document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002551
+af-r:AFR_0002551 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0001527
+                                 ] ;
+                 skos:definition "A three-dimensional ultraviolet spectrum data cube is a data cube that represents a three-dimensional ultraviolet spectrum. [Allotrope]" ;
+                 skos:prefLabel "three-dimensional ultraviolet spectrum data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002887
+af-r:AFR_0002887 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000917 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002717 ;
+                                   owl:someValuesFrom af-r:AFR_0000360
+                                 ] ;
+                 skos:definition "An ultraviolet-visible spectrum identifier is an identifier that identifies some ultraviolet-visible spectrum. [Allotrope]" ;
+                 skos:prefLabel "ultraviolet-visible spectrum identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003208
+af-r:AFR_0003208 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 <http://purl.org/linked-data/cube#DataSet> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0003210
+                                 ] ;
+                 skos:definition "An absorbance area scan data cube is a data cube that represents an absorbance area scan. [Allotrope]" ;
+                 skos:prefLabel "absorbance area scan data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0003210
+af-r:AFR_0003210 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002499 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:definition "An absorbance area scan is a data distribution function of the absorbance of a material entity scanned over a predefined area. [Allotrope]" ;
+                 skos:prefLabel "absorbance area scan" .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

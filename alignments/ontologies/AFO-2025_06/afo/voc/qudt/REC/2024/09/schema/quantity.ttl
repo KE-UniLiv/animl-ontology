@@ -1,0 +1,1894 @@
+@prefix : <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/quantity#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://qudt.org/1.1/schema/qudt#> .
+@prefix ns2: <http://qudt.org/1.1/schema/quantity#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
+@prefix quantity: <http://qudt.org/schema/quantity#> .
+@prefix qudt-quantity: <http://qudt.org/vocab/quantity#> .
+@prefix creativecommons: <http://creativecommons.org/ns#> .
+@base <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/quantity#> .
+
+<http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/quantity> rdf:type owl:Ontology ;
+                                                                  owl:versionIRI <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/quantity> ;
+                                                                  owl:imports <http://purl.allotrope.org/voc/qudt/REC/2024/09/schema/qudt> ;
+                                                                  dct:contributor <http://www.allotrope.org> ,
+                                                                                  <http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen> ,
+                                                                                  <http://purl.allotrope.org/voc/qudt/contributors/DavidPrice> ,
+                                                                                  <http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> ,
+                                                                                  <http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> ;
+                                                                  dct:creator <http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> ;
+                                                                  dct:issued "2024-09-27T12:00:00Z"^^xsd:dateTime ;
+                                                                  dct:license <https://creativecommons.org/licenses/by-sa/3.0/> ;
+                                                                  dct:modified "2024-09-06T12:00:00Z"^^xsd:dateTime ;
+                                                                  dct:publisher <http://www.allotrope.org> ;
+                                                                  dct:rights <http://purl.allotrope.org/voc/qudt/rights> ;
+                                                                  dct:subject "Quantities, Units, and Dimensions" ;
+                                                                  dct:title "QUDT Quantity Ontology (REC/2024/09)" ;
+                                                                  rdfs:label "Quantity Schema" ;
+                                                                  owl:priorVersion <http://purl.allotrope.org/voc/qudt/REC/2021/06/schema/quantity> ;
+                                                                  owl:versionInfo "Allotrope REC/2024/09" ;
+                                                                  prov:derivedFrom <http://qudt.org/1.1/schema/quantity> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt#AbsorbedDoseRateUnit
+qudt:AbsorbedDoseRateUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty qudt:quantityKind ;
+                                            owl:hasValue qudt-quantity:AbsorbedDoseRate
+                                          ] .
+
+
+###  http://qudt.org/schema/qudt#AbsorbedDoseUnit
+qudt:AbsorbedDoseUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:AbsorbedDose
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#ActivityUnit
+qudt:ActivityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:Activity
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#AmountOfSubstanceTemperatureUnit
+qudt:AmountOfSubstanceTemperatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty qudt:quantityKind ;
+                                                        owl:hasValue qudt-quantity:TemperatureAmountOfSubstance
+                                                      ] .
+
+
+###  http://qudt.org/schema/qudt#AmountOfSubstanceUnit
+qudt:AmountOfSubstanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:hasValue qudt-quantity:AmountOfSubstance
+                                           ] .
+
+
+###  http://qudt.org/schema/qudt#AngleUnit
+qudt:AngleUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty qudt:quantityKind ;
+                                 owl:hasValue qudt-quantity:Angle
+                               ] .
+
+
+###  http://qudt.org/schema/qudt#AngularAccelerationUnit
+qudt:AngularAccelerationUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty qudt:quantityKind ;
+                                               owl:hasValue qudt-quantity:AngularAcceleration
+                                             ] .
+
+
+###  http://qudt.org/schema/qudt#AngularMassUnit
+qudt:AngularMassUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:MomentOfInertia
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#AngularMomentumUnit
+qudt:AngularMomentumUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty qudt:quantityKind ;
+                                           owl:hasValue qudt-quantity:AngularMomentum
+                                         ] .
+
+
+###  http://qudt.org/schema/qudt#AngularVelocityUnit
+qudt:AngularVelocityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty qudt:quantityKind ;
+                                           owl:hasValue qudt-quantity:AngularVelocity
+                                         ] .
+
+
+###  http://qudt.org/schema/qudt#AreaAngleUnit
+qudt:AreaAngleUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:hasValue qudt-quantity:AreaAngle
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#AreaTemperatureUnit
+qudt:AreaTemperatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty qudt:quantityKind ;
+                                           owl:hasValue qudt-quantity:AreaTemperature
+                                         ] .
+
+
+###  http://qudt.org/schema/qudt#AreaThermalExpansionUnit
+qudt:AreaThermalExpansionUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty qudt:quantityKind ;
+                                                owl:hasValue qudt-quantity:AreaThermalExpansion
+                                              ] .
+
+
+###  http://qudt.org/schema/qudt#AreaTimeTemperatureUnit
+qudt:AreaTimeTemperatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty qudt:quantityKind ;
+                                               owl:hasValue qudt-quantity:AreaTimeTemperature
+                                             ] .
+
+
+###  http://qudt.org/schema/qudt#AreaUnit
+qudt:AreaUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty qudt:quantityKind ;
+                                owl:hasValue qudt-quantity:Area
+                              ] .
+
+
+###  http://qudt.org/schema/qudt#AtomicChargeUnit
+qudt:AtomicChargeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:AtomicCharge
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind
+qudt:AtomicPhysicsQuantityKind rdf:type owl:Class ;
+                               rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#AtomicPhysicsUnit
+qudt:AtomicPhysicsUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:allValuesFrom qudt:AtomicPhysicsQuantityKind
+                                           ] ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:allValuesFrom qudt:AtomicPhysicsQuantityKind
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#BendingMomentOrTorqueUnit
+qudt:BendingMomentOrTorqueUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty qudt:quantityKind ;
+                                                 owl:hasValue qudt-quantity:LengthByForce
+                                               ] .
+
+
+###  http://qudt.org/schema/qudt#BiologyQuantityKind
+qudt:BiologyQuantityKind rdf:type owl:Class ;
+                         rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#CapacitanceUnit
+qudt:CapacitanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:Capacitance
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#CatalyticActivityUnit
+qudt:CatalyticActivityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:hasValue qudt-quantity:CatalyticActivity
+                                           ] .
+
+
+###  http://qudt.org/schema/qudt#ChemistryQuantityKind
+qudt:ChemistryQuantityKind rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#ChemistryUnit
+qudt:ChemistryUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:allValuesFrom qudt:ChemistryQuantityKind
+                                       ] ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:allValuesFrom qudt:ChemistryQuantityKind
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#CoefficientOfHeatTransferUnit
+qudt:CoefficientOfHeatTransferUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty qudt:quantityKind ;
+                                                     owl:hasValue qudt-quantity:CoefficientOfHeatTransfer
+                                                   ] .
+
+
+###  http://qudt.org/schema/qudt#CommunicationsQuantityKind
+qudt:CommunicationsQuantityKind rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#ConcentrationUnit
+qudt:ConcentrationUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:AmountOfSubstancePerUnitVolume
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#ConductanceUnit
+qudt:ConductanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:ElectricConductivity
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#ConstantValue
+qudt:ConstantValue rdf:type owl:Class ;
+                   rdfs:subClassOf qudt:QuantityValue ;
+                   rdfs:label "Constant Value" ;
+                   skos:prefLabel "constant value" .
+
+
+###  http://qudt.org/schema/qudt#ContinuumMechanicsQuantityKind
+qudt:ContinuumMechanicsQuantityKind rdf:type owl:Class ;
+                                    rdfs:subClassOf qudt:MechanicsQuantityKind ;
+                                    rdfs:label "Continuum Mechanics Quantity Kind" ;
+                                    skos:prefLabel "continuum mechanics quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#CurrencyUnit
+qudt:CurrencyUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:Currency
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#CurrentPerAngleUnit
+qudt:CurrentPerAngleUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty qudt:quantityKind ;
+                                           owl:hasValue qudt-quantity:ElectricCurrentPerAngle
+                                         ] .
+
+
+###  http://qudt.org/schema/qudt#CurvatureUnit
+qudt:CurvatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:hasValue qudt-quantity:Curvature
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#DataRateUnit
+qudt:DataRateUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:DataRate
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#Dimension
+qudt:Dimension rdf:type owl:Class ;
+               skos:prefLabel "dimension" .
+
+
+###  http://qudt.org/schema/qudt#DimensionlessUnit
+qudt:DimensionlessUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:Dimensionless
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#DoseEquivalentUnit
+qudt:DoseEquivalentUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:hasValue qudt-quantity:DoseEquivalent
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#DynamicViscosityUnit
+qudt:DynamicViscosityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty qudt:quantityKind ;
+                                            owl:hasValue qudt-quantity:DynamicViscosity
+                                          ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeAreaDensityUnit
+qudt:ElectricChargeAreaDensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty qudt:quantityKind ;
+                                                     owl:hasValue qudt-quantity:PolarizationField
+                                                   ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeLineDensityUnit
+qudt:ElectricChargeLineDensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty qudt:quantityKind ;
+                                                     owl:hasValue qudt-quantity:ElectricChargeLineDensity
+                                                   ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargePerAmountOfSubstanceUnit
+qudt:ElectricChargePerAmountOfSubstanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                              owl:onProperty qudt:quantityKind ;
+                                                              owl:hasValue qudt-quantity:ElectricChargePerAmountOfSubstance
+                                                            ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeUnit
+qudt:ElectricChargeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:hasValue qudt-quantity:ElectricCharge
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricChargeVolumeDensityUnit
+qudt:ElectricChargeVolumeDensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty qudt:quantityKind ;
+                                                       owl:hasValue qudt-quantity:ElectricChargeVolumeDensity
+                                                     ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricCurrentDensityUnit
+qudt:ElectricCurrentDensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty qudt:quantityKind ;
+                                                  owl:hasValue qudt-quantity:ElectricCurrentDensity
+                                                ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricCurrentUnit
+qudt:ElectricCurrentUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty qudt:quantityKind ;
+                                           owl:hasValue qudt-quantity:ElectricCurrent
+                                         ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricDipoleMomentUnit
+qudt:ElectricDipoleMomentUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty qudt:quantityKind ;
+                                                owl:hasValue qudt-quantity:ElectricDipoleMoment
+                                              ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricFieldStrengthUnit
+qudt:ElectricFieldStrengthUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty qudt:quantityKind ;
+                                                 owl:hasValue qudt-quantity:ElectricField
+                                               ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricFluxDensityUnit
+qudt:ElectricFluxDensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty qudt:quantityKind ;
+                                               owl:hasValue qudt-quantity:ElectricDisplacementField
+                                             ] .
+
+
+###  http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind
+qudt:ElectricityAndMagnetismQuantityKind rdf:type owl:Class ;
+                                         rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit
+qudt:ElectricityAndMagnetismUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                       owl:onProperty qudt:quantityKind ;
+                                                       owl:allValuesFrom qudt:ElectricityAndMagnetismQuantityKind
+                                                     ] ;
+                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty qudt:quantityKind ;
+                                                   owl:allValuesFrom qudt:ElectricityAndMagnetismQuantityKind
+                                                 ] .
+
+
+###  http://qudt.org/schema/qudt#EnergyAndWorkPerMassAmountOfSubstance
+qudt:EnergyAndWorkPerMassAmountOfSubstance rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty qudt:quantityKind ;
+                                                             owl:hasValue qudt-quantity:EnergyAndWorkPerMassAmountOfSubstance
+                                                           ] .
+
+
+###  http://qudt.org/schema/qudt#EnergyAndWorkUnit
+qudt:EnergyAndWorkUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:EnergyAndWork
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#EnergyDensityUnit
+qudt:EnergyDensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:EnergyDensity
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#EnergyPerAreaUnit
+qudt:EnergyPerAreaUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:EnergyPerArea
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#EnergyPerElectricChargeUnit
+qudt:EnergyPerElectricChargeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty qudt:quantityKind ;
+                                                   owl:hasValue qudt-quantity:ElectromotiveForce
+                                                 ] .
+
+
+###  http://qudt.org/schema/qudt#ExposureUnit
+qudt:ExposureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:Exposure
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#FinancialQuantityKind
+qudt:FinancialQuantityKind rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#FinancialUnit
+qudt:FinancialUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:allValuesFrom qudt:FinancialQuantityKind
+                                       ] ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:allValuesFrom qudt:FinancialQuantityKind
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#FluidMechanicsQuantityKind
+qudt:FluidMechanicsQuantityKind rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ContinuumMechanicsQuantityKind ;
+                                rdfs:label "Fluid Dynamics Quantity Kind" ;
+                                skos:prefLabel "fluid dynamics quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#ForcePerElectricChargeUnit
+qudt:ForcePerElectricChargeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty qudt:quantityKind ;
+                                                  owl:hasValue qudt-quantity:ForcePerElectricCharge
+                                                ] .
+
+
+###  http://qudt.org/schema/qudt#ForcePerLengthUnit
+qudt:ForcePerLengthUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:hasValue qudt-quantity:ForcePerLength
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#ForceUnit
+qudt:ForceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty qudt:quantityKind ;
+                                 owl:hasValue qudt-quantity:Force
+                               ] .
+
+
+###  http://qudt.org/schema/qudt#FrequencyUnit
+qudt:FrequencyUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:hasValue qudt-quantity:Frequency
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#GravitationalAttractionUnit
+qudt:GravitationalAttractionUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty qudt:quantityKind ;
+                                                   owl:hasValue qudt-quantity:GravitationalAttraction
+                                                 ] .
+
+
+###  http://qudt.org/schema/qudt#HeartRateUnit
+qudt:HeartRateUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:hasValue qudt-quantity:HeartRate
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#HeatCapacityAndEntropyUnit
+qudt:HeatCapacityAndEntropyUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty qudt:quantityKind ;
+                                                  owl:hasValue qudt-quantity:HeatCapacity
+                                                ] .
+
+
+###  http://qudt.org/schema/qudt#HeatFlowRateUnit
+qudt:HeatFlowRateUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:HeatFlowRate
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:Power
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#IlluminanceUnit
+qudt:IlluminanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:Illuminance
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#InductanceUnit
+qudt:InductanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty qudt:quantityKind ;
+                                      owl:hasValue qudt-quantity:Inductance
+                                    ] .
+
+
+###  http://qudt.org/schema/qudt#InformationEntropyUnit
+qudt:InformationEntropyUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:InformationEntropy
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#InformationQuantityKind
+qudt:InformationQuantityKind rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#KinematicViscosityUnit
+qudt:KinematicViscosityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:KinematicViscosity
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#LengthTemperatureTimeUnit
+qudt:LengthTemperatureTimeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty qudt:quantityKind ;
+                                                 owl:hasValue qudt-quantity:LengthTemperatureTime
+                                               ] .
+
+
+###  http://qudt.org/schema/qudt#LengthTemperatureUnit
+qudt:LengthTemperatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:hasValue qudt-quantity:LengthTemperature
+                                           ] .
+
+
+###  http://qudt.org/schema/qudt#LengthUnit
+qudt:LengthUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty qudt:quantityKind ;
+                                  owl:hasValue qudt-quantity:Length
+                                ] .
+
+
+###  http://qudt.org/schema/qudt#LinearAccelerationUnit
+qudt:LinearAccelerationUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:LinearAcceleration
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#LinearEnergyTransferUnit
+qudt:LinearEnergyTransferUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty qudt:quantityKind ;
+                                                owl:hasValue qudt-quantity:LinearEnergyTransfer
+                                              ] .
+
+
+###  http://qudt.org/schema/qudt#LinearMomentumUnit
+qudt:LinearMomentumUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:hasValue qudt-quantity:LinearMomentum
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#LinearThermalExpansionUnit
+qudt:LinearThermalExpansionUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty qudt:quantityKind ;
+                                                  owl:hasValue qudt-quantity:LinearThermalExpansion
+                                                ] .
+
+
+###  http://qudt.org/schema/qudt#LinearVelocityUnit
+qudt:LinearVelocityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:hasValue qudt-quantity:LinearVelocity
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#LuminanceUnit
+qudt:LuminanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:hasValue qudt-quantity:Luminance
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#LuminousFluxUnit
+qudt:LuminousFluxUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:LuminousFlux
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#LuminousIntensityUnit
+qudt:LuminousIntensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:hasValue qudt-quantity:LuminousIntensity
+                                           ] .
+
+
+###  http://qudt.org/schema/qudt#MagneticFieldStrengthUnit
+qudt:MagneticFieldStrengthUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty qudt:quantityKind ;
+                                                 owl:hasValue qudt-quantity:AuxillaryMagneticField
+                                               ] .
+
+
+###  http://qudt.org/schema/qudt#MagneticFluxDensityUnit
+qudt:MagneticFluxDensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty qudt:quantityKind ;
+                                               owl:hasValue qudt-quantity:MagneticField
+                                             ] .
+
+
+###  http://qudt.org/schema/qudt#MagneticFluxUnit
+qudt:MagneticFluxUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:MagneticFlux
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#MagnetomotiveForceUnit
+qudt:MagnetomotiveForceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:MagnetomotiveForce
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#MassAmountOfSubstanceTemperatureUnit
+qudt:MassAmountOfSubstanceTemperatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                            owl:onProperty qudt:quantityKind ;
+                                                            owl:hasValue qudt-quantity:MassAmountOfSubstanceTemperature
+                                                          ] .
+
+
+###  http://qudt.org/schema/qudt#MassAmountOfSubstanceUnit
+qudt:MassAmountOfSubstanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty qudt:quantityKind ;
+                                                 owl:hasValue qudt-quantity:MassAmountOfSubstance
+                                               ] .
+
+
+###  http://qudt.org/schema/qudt#MassPerAreaUnit
+qudt:MassPerAreaUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:MassPerArea
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#MassPerLengthUnit
+qudt:MassPerLengthUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:MassPerLength
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#MassPerTimeUnit
+qudt:MassPerTimeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:MassPerTime
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#MassPerVolumeUnit
+qudt:MassPerVolumeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:Density
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#MassTemperatureUnit
+qudt:MassTemperatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty qudt:quantityKind ;
+                                           owl:hasValue qudt-quantity:MassTemperature
+                                         ] .
+
+
+###  http://qudt.org/schema/qudt#MassUnit
+qudt:MassUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty qudt:quantityKind ;
+                                owl:hasValue qudt-quantity:Mass
+                              ] .
+
+
+###  http://qudt.org/schema/qudt#MechanicsQuantityKind
+qudt:MechanicsQuantityKind rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#MechanicsUnit
+qudt:MechanicsUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:allValuesFrom qudt:MechanicsQuantityKind
+                                       ] ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:allValuesFrom qudt:MechanicsQuantityKind
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#MicrobialFormationUnit
+qudt:MicrobialFormationUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:MicrobialFormation
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#MolalConcentrationUnit
+qudt:MolalConcentrationUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:AmountOfSubstancePerUnitMass
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#MolarConcentrationUnit
+qudt:MolarConcentrationUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:AmountOfSubstancePerUnitVolume
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#MolarEnergyUnit
+qudt:MolarEnergyUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:MolarEnergy
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#MolarHeatCapacityUnit
+qudt:MolarHeatCapacityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:hasValue qudt-quantity:MolarHeatCapacity
+                                           ] .
+
+
+###  http://qudt.org/schema/qudt#OpticsQuantityKind
+qudt:OpticsQuantityKind rdf:type owl:Class ;
+                        rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#OpticsUnit
+qudt:OpticsUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty qudt:quantityKind ;
+                                      owl:allValuesFrom qudt:OpticsQuantityKind
+                                    ] ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty qudt:quantityKind ;
+                                  owl:allValuesFrom qudt:OpticsQuantityKind
+                                ] .
+
+
+###  http://qudt.org/schema/qudt#PermeabilityUnit
+qudt:PermeabilityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:Permeability
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#PermittivityUnit
+qudt:PermittivityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:Permittivity
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#PhotometryQuantityKind
+qudt:PhotometryQuantityKind rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:OpticsQuantityKind .
+
+
+###  http://qudt.org/schema/qudt#PhysicalConstant
+qudt:PhysicalConstant rdf:type owl:Class ;
+                      rdfs:subClassOf qudt:Quantity ;
+                      dct:description "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used." ;
+                      rdfs:label "Physical Constant" ;
+                      skos:prefLabel "physical constant" .
+
+
+###  http://qudt.org/schema/qudt#PowerPerAreaUnit
+qudt:PowerPerAreaUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:hasValue qudt-quantity:PowerPerArea
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#PowerUnit
+qudt:PowerUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty qudt:quantityKind ;
+                                 owl:hasValue qudt-quantity:Power
+                               ] .
+
+
+###  http://qudt.org/schema/qudt#PrefixUnit
+qudt:PrefixUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty qudt:quantityKind ;
+                                  owl:hasValue qudt-quantity:Dimensionless
+                                ] .
+
+
+###  http://qudt.org/schema/qudt#PressureOrStressUnit
+qudt:PressureOrStressUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty qudt:quantityKind ;
+                                            owl:hasValue qudt-quantity:Stress
+                                          ] .
+
+
+###  http://qudt.org/schema/qudt#ProportionalityConstant
+qudt:ProportionalityConstant rdf:type owl:Class ;
+                             rdfs:subClassOf qudt:Quantity ;
+                             dct:description """Two quantities proportional if they vary in such a way that one of the quantities is a constant multiple of the other. The multiple is the constant of proportionality between the two quantities. Constants of proportionality may be dimensioned in some quantity systems and dimensionless in others. For example, in the SI system, the permittivity of a vacuum has the dimensions L^-3 M^-1 T^4 I^2 and is measured in Farads per Meter; in the CGS-EMU system it has dimensions L^-2T^2 and is measured in Abfarads per Centimeter; in the CGS-ESU system it is dimensionless.
+
+Constants of proportionality are important in the definition of systems of natural units, where units are chosen in order to make certain constants of proportionality dimensionless and equal to 1.""" ;
+                             rdfs:label "Constant of Proportionality" ;
+                             skos:prefLabel "constant of proportionality" .
+
+
+###  http://qudt.org/schema/qudt#Quantity
+qudt:Quantity rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty qudt:quantityKind ;
+                                owl:allValuesFrom qudt:QuantityKind
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty qudt:quantityValue ;
+                                owl:allValuesFrom qudt:QuantityValue
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty qudt:quantityValue ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass qudt:QuantityValue
+                              ] ;
+              dct:description "A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as \"fundamental\" in this sense." ;
+              rdfs:label "Quantity" ;
+              skos:definition "A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as \"fundamental\" in this sense." ;
+              skos:prefLabel "quantity" .
+
+
+###  http://qudt.org/schema/qudt#QuantityKind
+qudt:QuantityKind rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:generalization ;
+                                    owl:allValuesFrom qudt:QuantityKind
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:generalization ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass qudt:QuantityKind
+                                  ] ;
+                  dct:description "A Quantity Kind is an aspect common to mutually comparable quantities." ;
+                  rdfs:label "Quantity Kind" ;
+                  skos:definition "A Quantity Kind is an aspect common to mutually comparable quantities." ;
+                  skos:prefLabel "quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#QuantityValue
+qudt:QuantityValue rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:unit ;
+                                     owl:allValuesFrom qudt:Unit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:valueQuantity ;
+                                     owl:allValuesFrom qudt:Quantity
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:unit ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass qudt:Unit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:valueQuantity ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass qudt:Quantity
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:numericValue ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:double
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:relativeStandardUncertainty ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:double
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:standardUncertainty ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:double
+                                   ] ;
+                   dct:description "A quantity value expresses the numerical value of a quantity with respect to a chosen unit of measure. For example, the value of Planck's constant in Joule-Seconds (J s) is approximately 6.62606896E-34, whereas the value in Erg-Seconds (erg s) is approximately 6.62606896E-27." ;
+                   rdfs:label "Quantity Value" ;
+                   skos:definition "A quantity value expresses the numerical value of a quantity with respect to a chosen unit of measure. For example, the value of Planck's constant in Joule-Seconds (J s) is approximately 6.62606896E-34, whereas the value in Erg-Seconds (erg s) is approximately 6.62606896E-27." ;
+                   skos:prefLabel "quantity value" .
+
+
+###  http://qudt.org/schema/qudt#QuantumMechanicsQuantityKind
+qudt:QuantumMechanicsQuantityKind rdf:type owl:Class ;
+                                  rdfs:subClassOf qudt:MechanicsQuantityKind ;
+                                  rdfs:label "Quantum Mechanics Quantity Kind" ;
+                                  skos:prefLabel "quantum mechanics quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#RF-PowerUnit
+qudt:RF-PowerUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:RF-Power
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#RadianceUnit
+qudt:RadianceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:PowerPerAreaAngle
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#RadiantIntensityUnit
+qudt:RadiantIntensityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty qudt:quantityKind ;
+                                            owl:hasValue qudt-quantity:RadiantIntensity
+                                          ] .
+
+
+###  http://qudt.org/schema/qudt#RadiologyQuantityKind
+qudt:RadiologyQuantityKind rdf:type owl:Class ;
+                           rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#RadiologyUnit
+qudt:RadiologyUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:allValuesFrom qudt:RadiologyQuantityKind
+                                       ] ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:allValuesFrom qudt:RadiologyQuantityKind
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#RadiometryQuantityKind
+qudt:RadiometryQuantityKind rdf:type owl:Class ;
+                            rdfs:subClassOf qudt:OpticsQuantityKind .
+
+
+###  http://qudt.org/schema/qudt#ResistanceUnit
+qudt:ResistanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty qudt:quantityKind ;
+                                      owl:hasValue qudt-quantity:Resistance
+                                    ] .
+
+
+###  http://qudt.org/schema/qudt#RespiratoryRateUnit
+qudt:RespiratoryRateUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty qudt:quantityKind ;
+                                           owl:hasValue qudt-quantity:RespiratoryRate
+                                         ] .
+
+
+###  http://qudt.org/schema/qudt#SerumOrPlasmaLevelUnit
+qudt:SerumOrPlasmaLevelUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:SerumOrPlasmaLevel
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#SignalDetectionThresholdUnit
+qudt:SignalDetectionThresholdUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty qudt:quantityKind ;
+                                                    owl:hasValue qudt-quantity:SignalDetectionThreshold
+                                                  ] .
+
+
+###  http://qudt.org/schema/qudt#SolidAngleUnit
+qudt:SolidAngleUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty qudt:quantityKind ;
+                                      owl:hasValue qudt-quantity:SolidAngle
+                                    ] .
+
+
+###  http://qudt.org/schema/qudt#SolidMechanicsQuantityKind
+qudt:SolidMechanicsQuantityKind rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:ContinuumMechanicsQuantityKind ;
+                                rdfs:label "Solid Mechanics Quantity Kind" ;
+                                skos:prefLabel "solid mechanics quantity kind" .
+
+
+###  http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind
+qudt:SpaceAndTimeQuantityKind rdf:type owl:Class ;
+                              rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#SpaceAndTimeUnit
+qudt:SpaceAndTimeUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty qudt:quantityKind ;
+                                            owl:allValuesFrom qudt:SpaceAndTimeQuantityKind
+                                          ] ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty qudt:quantityKind ;
+                                        owl:allValuesFrom qudt:SpaceAndTimeQuantityKind
+                                      ] .
+
+
+###  http://qudt.org/schema/qudt#SpecificEnergyUnit
+qudt:SpecificEnergyUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:hasValue qudt-quantity:SpecificEnergy
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#SpecificHeatCapacityUnit
+qudt:SpecificHeatCapacityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty qudt:quantityKind ;
+                                                owl:hasValue qudt-quantity:SpecificHeatCapacity
+                                              ] .
+
+
+###  http://qudt.org/schema/qudt#SystemOfQuantities
+qudt:SystemOfQuantities rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:systemDimension ;
+                                          owl:allValuesFrom qudt:Dimension
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:systemQuantityKind ;
+                                          owl:allValuesFrom qudt:QuantityKind
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:unitSystem ;
+                                          owl:allValuesFrom qudt:SystemOfUnits
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:systemQuantityKind ;
+                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass qudt:QuantityKind
+                                        ] ;
+                        dct:description """A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position. 
+
+In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations.""" ;
+                        rdfs:label "System of Quantity Kinds" ;
+                        skos:definition """A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position. 
+
+In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations.""" ;
+                        skos:prefLabel "system of quantity kinds" .
+
+
+###  http://qudt.org/schema/qudt#TemperatureUnit
+qudt:TemperatureUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:ThermodynamicTemperature
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#ThermalConductivityUnit
+qudt:ThermalConductivityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty qudt:quantityKind ;
+                                               owl:hasValue qudt-quantity:ThermalConductivity
+                                             ] .
+
+
+###  http://qudt.org/schema/qudt#ThermalDiffusivityUnit
+qudt:ThermalDiffusivityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:ThermalDiffusivity
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#ThermalEnergyLengthUnit
+qudt:ThermalEnergyLengthUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty qudt:quantityKind ;
+                                               owl:hasValue qudt-quantity:ThermalEnergyLength
+                                             ] .
+
+
+###  http://qudt.org/schema/qudt#ThermalEnergyUnit
+qudt:ThermalEnergyUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:EnergyAndWork
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:ThermalEnergy
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#ThermalInsulanceUnit
+qudt:ThermalInsulanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty qudt:quantityKind ;
+                                            owl:hasValue qudt-quantity:ThermalInsulance
+                                          ] .
+
+
+###  http://qudt.org/schema/qudt#ThermalResistanceUnit
+qudt:ThermalResistanceUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:hasValue qudt-quantity:ThermalResistance
+                                           ] .
+
+
+###  http://qudt.org/schema/qudt#ThermalResistivityUnit
+qudt:ThermalResistivityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:hasValue qudt-quantity:ThermalResistivity
+                                            ] .
+
+
+###  http://qudt.org/schema/qudt#ThermodynamicsQuantityKind
+qudt:ThermodynamicsQuantityKind rdf:type owl:Class ;
+                                rdfs:subClassOf qudt:QuantityKind .
+
+
+###  http://qudt.org/schema/qudt#ThermodynamicsUnit
+qudt:ThermodynamicsUnit owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty qudt:quantityKind ;
+                                              owl:allValuesFrom qudt:ThermodynamicsQuantityKind
+                                            ] ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:allValuesFrom qudt:ThermodynamicsQuantityKind
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#ThrustToMassRatioUnit
+qudt:ThrustToMassRatioUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty qudt:quantityKind ;
+                                             owl:hasValue qudt-quantity:ThrustToMassRatio
+                                           ] .
+
+
+###  http://qudt.org/schema/qudt#TimeAreaUnit
+qudt:TimeAreaUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:AreaTime
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#TimeSquaredUnit
+qudt:TimeSquaredUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty qudt:quantityKind ;
+                                       owl:hasValue qudt-quantity:TimeSquared
+                                     ] .
+
+
+###  http://qudt.org/schema/qudt#TimeUnit
+qudt:TimeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty qudt:quantityKind ;
+                                owl:hasValue qudt-quantity:Time
+                              ] .
+
+
+###  http://qudt.org/schema/qudt#TurbidityUnit
+qudt:TurbidityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:quantityKind ;
+                                     owl:hasValue qudt-quantity:Turbidity
+                                   ] .
+
+
+###  http://qudt.org/schema/qudt#Unit
+qudt:Unit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty qudt:quantityKind ;
+                            owl:allValuesFrom qudt:QuantityKind
+                          ] .
+
+
+###  http://qudt.org/schema/qudt#VelocityUnit
+qudt:VelocityUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty qudt:quantityKind ;
+                                    owl:hasValue qudt-quantity:Velocity
+                                  ] .
+
+
+###  http://qudt.org/schema/qudt#VideoFrameRateUnit
+qudt:VideoFrameRateUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty qudt:quantityKind ;
+                                          owl:hasValue qudt-quantity:VideoFrameRate
+                                        ] .
+
+
+###  http://qudt.org/schema/qudt#VolumePerTimeUnit
+qudt:VolumePerTimeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty qudt:quantityKind ;
+                                         owl:hasValue qudt-quantity:VolumePerUnitTime
+                                       ] .
+
+
+###  http://qudt.org/schema/qudt#VolumeThermalExpansionUnit
+qudt:VolumeThermalExpansionUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty qudt:quantityKind ;
+                                                  owl:hasValue qudt-quantity:VolumeThermalExpansion
+                                                ] .
+
+
+###  http://qudt.org/schema/qudt#VolumeUnit
+qudt:VolumeUnit rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty qudt:quantityKind ;
+                                  owl:hasValue qudt-quantity:Volume
+                                ] .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/qudt/rights
+<http://purl.allotrope.org/voc/qudt/rights> rdf:type dct:RightsStatement ;
+                                            dct:description "The QUDT Ontologies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to NASA Ames Research Center and TopQuadrant, Inc." .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen
+<http://purl.allotrope.org/voc/qudt/contributors/DanielMekonnen> rdf:type foaf:Person ;
+                                                                 foaf:name "Daniel Mekonnen" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/DavidPrice
+<http://purl.allotrope.org/voc/qudt/contributors/DavidPrice> rdf:type foaf:Person ;
+                                                             foaf:name "David Price" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff
+<http://purl.allotrope.org/voc/qudt/contributors/IrenePolikoff> rdf:type foaf:Person ;
+                                                                foaf:name "Irene Polikoff" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters
+<http://purl.allotrope.org/voc/qudt/contributors/JamesEMasters> rdf:type foaf:Person ;
+                                                                foaf:name "James E. Masters" .
+
+
+###  http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson
+<http://purl.allotrope.org/voc/qudt/contributors/RalphHodgson> rdf:type foaf:Person ;
+                                                               foaf:name "Ralph Hodgson" .
+
+
+###  http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind
+qudt:AtomicPhysicsQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#BiologyQuantityKind
+qudt:BiologyQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#ChemistryQuantityKind
+qudt:ChemistryQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#CommunicationsQuantityKind
+qudt:CommunicationsQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind
+qudt:ElectricityAndMagnetismQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#FinancialQuantityKind
+qudt:FinancialQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#InformationQuantityKind
+qudt:InformationQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#MechanicsQuantityKind
+qudt:MechanicsQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#OpticsQuantityKind
+qudt:OpticsQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#PhotometryQuantityKind
+qudt:PhotometryQuantityKind rdf:type owl:NamedIndividual ;
+                            qudt:description "Photometry is the science of the measurement of light, in terms of its perceived brightness to the human eye. It is distinct from radiometry, which is the science of measurement of radiant energy (including light) in terms of absolute power." .
+
+
+###  http://qudt.org/schema/qudt#RadiologyQuantityKind
+qudt:RadiologyQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#RadiometryQuantityKind
+qudt:RadiometryQuantityKind rdf:type owl:NamedIndividual ;
+                            qudt:description "Photometry is the field that studies the measurement of electromagnetic radiation, including visible light. Note that light is also measured using the techniques of photometry, which deal with brightness as perceived by the human eye, rather than absolute power." .
+
+
+###  http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind
+qudt:SpaceAndTimeQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/schema/qudt#ThermodynamicsQuantityKind
+qudt:ThermodynamicsQuantityKind rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AbsorbedDose
+qudt-quantity:AbsorbedDose rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AbsorbedDoseRate
+qudt-quantity:AbsorbedDoseRate rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Activity
+qudt-quantity:Activity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AmountOfSubstance
+qudt-quantity:AmountOfSubstance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AmountOfSubstancePerUnitMass
+qudt-quantity:AmountOfSubstancePerUnitMass rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AmountOfSubstancePerUnitVolume
+qudt-quantity:AmountOfSubstancePerUnitVolume rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Angle
+qudt-quantity:Angle rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AngularAcceleration
+qudt-quantity:AngularAcceleration rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AngularMomentum
+qudt-quantity:AngularMomentum rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AngularVelocity
+qudt-quantity:AngularVelocity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Area
+qudt-quantity:Area rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AreaAngle
+qudt-quantity:AreaAngle rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AreaTemperature
+qudt-quantity:AreaTemperature rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AreaThermalExpansion
+qudt-quantity:AreaThermalExpansion rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AreaTime
+qudt-quantity:AreaTime rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AreaTimeTemperature
+qudt-quantity:AreaTimeTemperature rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AtomicCharge
+qudt-quantity:AtomicCharge rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#AuxillaryMagneticField
+qudt-quantity:AuxillaryMagneticField rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Capacitance
+qudt-quantity:Capacitance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#CatalyticActivity
+qudt-quantity:CatalyticActivity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#CoefficientOfHeatTransfer
+qudt-quantity:CoefficientOfHeatTransfer rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Currency
+qudt-quantity:Currency rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Curvature
+qudt-quantity:Curvature rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#DataRate
+qudt-quantity:DataRate rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Density
+qudt-quantity:Density rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Dimensionless
+qudt-quantity:Dimensionless rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#DoseEquivalent
+qudt-quantity:DoseEquivalent rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#DynamicViscosity
+qudt-quantity:DynamicViscosity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricCharge
+qudt-quantity:ElectricCharge rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricChargeLineDensity
+qudt-quantity:ElectricChargeLineDensity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricChargePerAmountOfSubstance
+qudt-quantity:ElectricChargePerAmountOfSubstance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricChargeVolumeDensity
+qudt-quantity:ElectricChargeVolumeDensity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricConductivity
+qudt-quantity:ElectricConductivity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricCurrent
+qudt-quantity:ElectricCurrent rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricCurrentDensity
+qudt-quantity:ElectricCurrentDensity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricCurrentPerAngle
+qudt-quantity:ElectricCurrentPerAngle rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricDipoleMoment
+qudt-quantity:ElectricDipoleMoment rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricDisplacementField
+qudt-quantity:ElectricDisplacementField rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectricField
+qudt-quantity:ElectricField rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ElectromotiveForce
+qudt-quantity:ElectromotiveForce rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#EnergyAndWork
+qudt-quantity:EnergyAndWork rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#EnergyAndWorkPerMassAmountOfSubstance
+qudt-quantity:EnergyAndWorkPerMassAmountOfSubstance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#EnergyDensity
+qudt-quantity:EnergyDensity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#EnergyPerArea
+qudt-quantity:EnergyPerArea rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Exposure
+qudt-quantity:Exposure rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Force
+qudt-quantity:Force rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ForcePerElectricCharge
+qudt-quantity:ForcePerElectricCharge rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ForcePerLength
+qudt-quantity:ForcePerLength rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Frequency
+qudt-quantity:Frequency rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#GravitationalAttraction
+qudt-quantity:GravitationalAttraction rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#HeartRate
+qudt-quantity:HeartRate rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#HeatCapacity
+qudt-quantity:HeatCapacity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#HeatFlowRate
+qudt-quantity:HeatFlowRate rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Illuminance
+qudt-quantity:Illuminance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Inductance
+qudt-quantity:Inductance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#InformationEntropy
+qudt-quantity:InformationEntropy rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#KinematicViscosity
+qudt-quantity:KinematicViscosity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Length
+qudt-quantity:Length rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LengthByForce
+qudt-quantity:LengthByForce rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LengthTemperature
+qudt-quantity:LengthTemperature rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LengthTemperatureTime
+qudt-quantity:LengthTemperatureTime rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LinearAcceleration
+qudt-quantity:LinearAcceleration rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LinearEnergyTransfer
+qudt-quantity:LinearEnergyTransfer rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LinearMomentum
+qudt-quantity:LinearMomentum rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LinearThermalExpansion
+qudt-quantity:LinearThermalExpansion rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LinearVelocity
+qudt-quantity:LinearVelocity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Luminance
+qudt-quantity:Luminance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LuminousFlux
+qudt-quantity:LuminousFlux rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#LuminousIntensity
+qudt-quantity:LuminousIntensity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MagneticField
+qudt-quantity:MagneticField rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MagneticFlux
+qudt-quantity:MagneticFlux rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MagnetomotiveForce
+qudt-quantity:MagnetomotiveForce rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Mass
+qudt-quantity:Mass rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MassAmountOfSubstance
+qudt-quantity:MassAmountOfSubstance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MassAmountOfSubstanceTemperature
+qudt-quantity:MassAmountOfSubstanceTemperature rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MassPerArea
+qudt-quantity:MassPerArea rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MassPerLength
+qudt-quantity:MassPerLength rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MassPerTime
+qudt-quantity:MassPerTime rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MassTemperature
+qudt-quantity:MassTemperature rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MicrobialFormation
+qudt-quantity:MicrobialFormation rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MolarEnergy
+qudt-quantity:MolarEnergy rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MolarHeatCapacity
+qudt-quantity:MolarHeatCapacity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#MomentOfInertia
+qudt-quantity:MomentOfInertia rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Permeability
+qudt-quantity:Permeability rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Permittivity
+qudt-quantity:Permittivity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#PolarizationField
+qudt-quantity:PolarizationField rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Power
+qudt-quantity:Power rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#PowerPerArea
+qudt-quantity:PowerPerArea rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#PowerPerAreaAngle
+qudt-quantity:PowerPerAreaAngle rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#RF-Power
+qudt-quantity:RF-Power rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#RadiantIntensity
+qudt-quantity:RadiantIntensity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Resistance
+qudt-quantity:Resistance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#RespiratoryRate
+qudt-quantity:RespiratoryRate rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#SerumOrPlasmaLevel
+qudt-quantity:SerumOrPlasmaLevel rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#SignalDetectionThreshold
+qudt-quantity:SignalDetectionThreshold rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#SolidAngle
+qudt-quantity:SolidAngle rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#SpecificEnergy
+qudt-quantity:SpecificEnergy rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#SpecificHeatCapacity
+qudt-quantity:SpecificHeatCapacity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Stress
+qudt-quantity:Stress rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#TemperatureAmountOfSubstance
+qudt-quantity:TemperatureAmountOfSubstance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermalConductivity
+qudt-quantity:ThermalConductivity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermalDiffusivity
+qudt-quantity:ThermalDiffusivity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermalEnergy
+qudt-quantity:ThermalEnergy rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermalEnergyLength
+qudt-quantity:ThermalEnergyLength rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermalInsulance
+qudt-quantity:ThermalInsulance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermalResistance
+qudt-quantity:ThermalResistance rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermalResistivity
+qudt-quantity:ThermalResistivity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThermodynamicTemperature
+qudt-quantity:ThermodynamicTemperature rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#ThrustToMassRatio
+qudt-quantity:ThrustToMassRatio rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Time
+qudt-quantity:Time rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#TimeSquared
+qudt-quantity:TimeSquared rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Turbidity
+qudt-quantity:Turbidity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Velocity
+qudt-quantity:Velocity rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#VideoFrameRate
+qudt-quantity:VideoFrameRate rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#Volume
+qudt-quantity:Volume rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#VolumePerUnitTime
+qudt-quantity:VolumePerUnitTime rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/quantity#VolumeThermalExpansion
+qudt-quantity:VolumeThermalExpansion rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+qudt:AtomicPhysicsQuantityKind rdfs:label "Atomic Physics Quantity Kind" ;
+                               skos:prefLabel "atomic physics quantity kind" .
+
+
+qudt:BiologyQuantityKind rdfs:label "Biology Quantity Kind" ;
+                         skos:prefLabel "biology quantity kind" .
+
+
+qudt:ChemistryQuantityKind rdfs:label "Chemistry Quantity Kind" ;
+                           skos:prefLabel "chemistry quantity kind" .
+
+
+qudt:CommunicationsQuantityKind rdfs:label "Communications Quantity Kind" ;
+                                skos:prefLabel "communications quantity kind" .
+
+
+qudt:ElectricityAndMagnetismQuantityKind rdfs:label "Electricity and Magnetism Quantity Kind" ;
+                                         skos:prefLabel "electricity and magnetism quantity kind" .
+
+
+qudt:FinancialQuantityKind rdfs:label "Financial Quantity Kind" ;
+                           skos:prefLabel "financial quantity kind" .
+
+
+qudt:InformationQuantityKind rdfs:label "Information Quantity Kind" ;
+                             skos:prefLabel "information quantity kind" .
+
+
+qudt:MechanicsQuantityKind rdfs:label "Mechanics Quantity Kind" ;
+                           skos:prefLabel "mechanics quantity kind" .
+
+
+qudt:OpticsQuantityKind rdfs:label "Optics Quantity Kind" ;
+                        skos:prefLabel "optics quantity kind" .
+
+
+qudt:PhotometryQuantityKind rdfs:label "Photometry Quantity Kind" ;
+                            skos:prefLabel "photometry quantity kind" .
+
+
+qudt:RadiologyQuantityKind rdfs:label "Radiology Quantity Kind" ;
+                           skos:prefLabel "radiology quantity kind" .
+
+
+qudt:RadiometryQuantityKind rdfs:label "Radiometry Quantity Kind" ;
+                            skos:prefLabel "radiometry quantity kind" .
+
+
+qudt:SpaceAndTimeQuantityKind rdfs:label "Space and Time Quantity Kind" ;
+                              skos:prefLabel "space and time quantity kind" .
+
+
+qudt:ThermodynamicsQuantityKind rdfs:label "Thermodynamics Quantity Kind" ;
+                                skos:prefLabel "thermodynamics quantity kind" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1685 @@
+@prefix : <http://purl.allotrope.org/voc/adf/REC/2023/03/audit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix adf-a: <http://purl.allotrope.org/ontologies/audit#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@base <http://purl.allotrope.org/voc/adf/REC/2023/03/audit#> .
+
+<http://purl.allotrope.org/voc/adf/REC/2023/03/audit> rdf:type owl:Ontology ;
+                                                       owl:versionIRI <http://purl.allotrope.org/voc/adf/REC/2023/03/audit> ;
+                                                       owl:imports <http://purl.allotrope.org/voc/org/REC/2018/10/org> ,
+                                                                   <http://purl.allotrope.org/voc/pav/REC/2020/06/pav> ,
+                                                                   <http://purl.allotrope.org/voc/prov/REC/2018/10/prov-o> ;
+                                                       dct:contributor <http://www.allotrope.org> ;
+                                                       dct:description "Ontology for audit trails and electronic signatures in ADF." ;
+                                                       dct:issued "2023-03-31T12:00:00Z"^^xsd:dateTime ;
+                                                       dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                       dct:modified "2023-01-26T12:00:00Z"^^xsd:dateTime ;
+                                                       dct:publisher <http://www.allotrope.org> ;
+                                                       dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                  <http://purl.allotrope.org/voc/copyright> ;
+                                                       dct:title "Allotrope Foundation Audit Trail Ontology (REC/2023/03)" ;
+                                                       void:feature <http://www.w3.org/ns/formats/Turtle> ;
+                                                       void:vocabulary dct: ,
+                                                                       pav: ,
+                                                                       ore: ,
+                                                                       <http://www.w3.org/2004/02/skos/core> ,
+                                                                       org: ,
+                                                                       prov: ,
+                                                                       foaf: ;
+                                                       rdfs:label "Allotrope Foundation Audit Trail Ontology (REC/2023/03)" ;
+                                                       owl:priorVersion <http://purl.allotrope.org/voc/adf/REC/2020/06/audit> ;
+                                                       owl:versionInfo "REC/2023/03" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/audit#blankNodeId
+adf-a:blankNodeId rdf:type owl:AnnotationProperty ;
+                  skos:altLabel "anonymous node id" ;
+                  skos:definition "The blank node id is an explicit labeling of blank nodes in a graph. [Allotrope]" ;
+                  skos:prefLabel "blank node id" .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasPart
+dct:hasPart rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://rdfs.org/ns/void#feature
+void:feature rdf:type owl:AnnotationProperty .
+
+
+###  http://rdfs.org/ns/void#vocabulary
+void:vocabulary rdf:type owl:AnnotationProperty .
+
+
+###  http://www.openarchives.org/ore/terms/similarTo
+ore:similarTo rdf:type owl:AnnotationProperty ;
+              rdfs:comment "The subject of this relationship MUST be an Aggregation.  This Aggregation should be considered an expression within the ORE context of the object of the relationship, as it is broadly equivalent to the resource. For example, the Aggregation may consist of the resources which, together, make up a journal article which has a DOI assigned to it. The Aggregation is not the article to which the DOI was assigned, but is a representation of it in some manner. [Allotrope]" ;
+              rdfs:isDefinedBy ore: ;
+              rdfs:label "Similar To" ;
+              rdfs:domain ore:Aggregation .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/audit#addition
+adf-a:addition rdf:type owl:ObjectProperty ;
+               rdfs:domain adf-a:ChangeSet ;
+               skos:definition "The collection of all resources (entities or datasets) that were added as part of a changeset. [Allotrope]" ;
+               skos:prefLabel "addition" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#approved
+adf-a:approved rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf adf-a:contributed ;
+               owl:inverseOf adf-a:approvedBy ;
+               skos:definition "The formal acceptance of a record/the changes of a record by an approver. [Allotrope]" ;
+               skos:prefLabel "approved" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#approvedBy
+adf-a:approvedBy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf pav:contributedBy ;
+                 skos:definition "The person/role who approved the record. [Allotrope]" ;
+                 skos:prefLabel "approved by" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#archivedTo
+adf-a:archivedTo rdf:type owl:ObjectProperty ;
+                 owl:inverseOf adf-a:isArchiveOf ;
+                 skos:definition "The relation of a resource to an archive of the resource. [Allotrope]" ;
+                 skos:prefLabel "archived to" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#auditTrail
+adf-a:auditTrail rdf:type owl:ObjectProperty ;
+                 skos:definition "Something has an audit trail record. [Allotrope]" ;
+                 skos:prefLabel "has audit trail" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#authored
+adf-a:authored rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf adf-a:contributed ;
+               owl:inverseOf pav:authoredBy ;
+               skos:definition "A person/role is the source of a change to a record. [Allotrope]" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#changedIn
+adf-a:changedIn rdf:type owl:ObjectProperty ;
+                owl:inverseOf adf-a:changes ;
+                rdfs:domain adf-a:ChangeSet ;
+                skos:definition "Relates to the set of changes where something is modified. [Allotrope]" ;
+                skos:prefLabel "changes of" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#changes
+adf-a:changes rdf:type owl:ObjectProperty ;
+              rdfs:range adf-a:ChangeSet ;
+              skos:definition "An action changes a change set. [Allotrope]" ;
+              skos:prefLabel "changes" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#contributed
+adf-a:contributed rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf prov:influenced ;
+                  skos:definition "Relates the person who contributed a change and the change of the record. [Allotrope]" ;
+                  skos:prefLabel "contributed" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#created
+adf-a:created rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf prov:influenced ;
+              owl:inverseOf pav:createdBy ;
+              skos:definition "Relates the person who created a record and the record. [Allotrope]" ;
+              skos:prefLabel "created" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#curated
+adf-a:curated rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf adf-a:contributed ;
+              owl:inverseOf pav:curatedBy ;
+              skos:definition "Relates the person who curated a record and the record. [Allotrope]" ;
+              skos:prefLabel "curated" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#firstAuditRecord
+adf-a:firstAuditRecord rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf adf-a:hasAuditRecord ;
+                       rdf:type owl:FunctionalProperty ;
+                       skos:definition "The first (time-related) record of a collection of audit records that documents changes of an electronic record over time. [Allotrope]" ;
+                       skos:prefLabel "first audit record" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hadMotivation
+adf-a:hadMotivation rdf:type owl:ObjectProperty ;
+                    rdfs:range adf-a:Motivation ;
+                    skos:definition "Relates to the motivation why something has been done. It is used if more then a simple textual description of the motivation is desired. [Allotrope]" ;
+                    skos:prefLabel "had motivation" ;
+                    skos:related adf-a:motivatedBy .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasAuditRecord
+adf-a:hasAuditRecord rdf:type owl:ObjectProperty ;
+                     owl:inverseOf adf-a:inAuditTrail ;
+                     rdfs:domain adf-a:AuditTrail ;
+                     rdfs:range adf-a:AuditRecord ;
+                     skos:definition "Relates an electronic record to its audit rail - a collection of its recorded changes. [Allotrope]" ;
+                     skos:prefLabel "has audit record" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasCanonicalizationAlgorithm
+adf-a:hasCanonicalizationAlgorithm rdf:type owl:ObjectProperty ;
+                                   rdfs:range adf-a:CanonicalizationAlgorithm ;
+                                   skos:definition "Relates to the algorithm used for canonicalization. [Allotrope]" ;
+                                   skos:prefLabel "has canonicalization algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasDigest
+adf-a:hasDigest rdf:type owl:ObjectProperty ;
+                rdfs:range adf-a:Digest ;
+                skos:definition "Relates an electronic record to its digest, the bitstream of an digest algorithm. [Allotrope]" ;
+                skos:prefLabel "has digest" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasDigestAlgorithm
+adf-a:hasDigestAlgorithm rdf:type owl:ObjectProperty ;
+                         rdfs:range adf-a:DigestAlgorithm ;
+                         skos:definition "Relates to the algorithm used for the digest (hashing). [Allotrope]" ;
+                         skos:prefLabel "has digest algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasDigestMethod
+adf-a:hasDigestMethod rdf:type owl:ObjectProperty ;
+                      skos:definition "Relates to the method used for digestion. [Allotrope]" ;
+                      skos:prefLabel "has digest method" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasElectronicSignature
+adf-a:hasElectronicSignature rdf:type owl:ObjectProperty ;
+                             owl:inverseOf adf-a:signedEntity ;
+                             rdfs:range adf-a:ElectronicSignature ;
+                             skos:definition "Relates an electronic record to its electronic signature. [Allotrope]" ;
+                             skos:prefLabel "has electronic signature" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasFixedDigestAlgorithm
+adf-a:hasFixedDigestAlgorithm rdf:type owl:ObjectProperty ;
+                              rdfs:range adf-a:DigestAlgorithm ;
+                              skos:definition "Relates to the algorithm used for the digest (hashing) using the correct IRI prefix. [Allotrope]" ;
+                              skos:prefLabel "has fixed digest algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#hasSerializationAlgorithm
+adf-a:hasSerializationAlgorithm rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                rdfs:range adf-a:SerializationAlgorithm ;
+                                skos:definition "Relates to the algorithm used for serialization. [Allotrope]" ;
+                                skos:prefLabel "has serialization algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#imported
+adf-a:imported rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf prov:influenced ;
+               owl:inverseOf pav:importedBy ;
+               skos:definition "Relates to something imported into the record. [Allotrope]" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#inAuditTrail
+adf-a:inAuditTrail rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain adf-a:AuditRecord ;
+                   rdfs:range adf-a:AuditTrail ;
+                   skos:definition "Relates an audit record to the audit trail, the collection of audit records. [Allotrope]" ;
+                   skos:prefLabel "in audit trail" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#isArchiveOf
+adf-a:isArchiveOf rdf:type owl:ObjectProperty ;
+                  skos:definition "The relation to the resource that was archived. [Allotrope]" ;
+                  skos:prefLabel "is archive of" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#newData
+adf-a:newData rdf:type owl:ObjectProperty ;
+              skos:definition "The new data that replaces the old data or is inserted as part of a data update. [Allotrope]" ;
+              skos:prefLabel "new data" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#newDataReference
+adf-a:newDataReference rdf:type owl:ObjectProperty ;
+                       skos:definition "Indirect pointer to the new data that is part of a data update. [Allotrope]" ;
+                       skos:prefLabel "new data reference" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#nextAuditRecord
+adf-a:nextAuditRecord rdf:type owl:ObjectProperty ;
+                      owl:inverseOf adf-a:previousAuditRecord ;
+                      rdf:type owl:FunctionalProperty ,
+                               owl:AsymmetricProperty ,
+                               owl:IrreflexiveProperty ;
+                      rdfs:domain adf-a:AuditRecord ;
+                      rdfs:range adf-a:AuditRecord ;
+                      skos:definition "The next audit record in the list of audit records of the audit trail. [Allotrope]" ;
+                      skos:prefLabel "next audit record" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#nextUpdate
+adf-a:nextUpdate rdf:type owl:ObjectProperty ;
+                 rdfs:domain adf-a:DataUpdate ;
+                 rdfs:range adf-a:DataUpdate ;
+                 skos:definition "The next data update in the list. [Allotrope]" ;
+                 skos:prefLabel "next data update" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#oldData
+adf-a:oldData rdf:type owl:ObjectProperty ;
+              skos:definition "Old data that is replaced in a data update. [Allotrope]" ;
+              skos:prefLabel "old data" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#oldDataReference
+adf-a:oldDataReference rdf:type owl:ObjectProperty ;
+                       skos:definition "Indirect pointer to the data the was updated in a data update. [Allotrope]" ;
+                       skos:prefLabel "old data reference" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#operated
+adf-a:operated rdf:type owl:ObjectProperty ;
+               owl:inverseOf adf-a:operatedBy ;
+               skos:definition "Indicates the object that an operator worked with. [Allotrope]" ;
+               skos:prefLabel "operated" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#operatedBy
+adf-a:operatedBy rdf:type owl:ObjectProperty ;
+                 skos:definition "Indicates the operator role of a device or software. [Allotrope]" ;
+                 skos:prefLabel "operated by" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#playedBy
+adf-a:playedBy rdf:type owl:ObjectProperty ;
+               skos:definition "A role that is played by an agent during his contribution. [Allotrope]" ;
+               skos:prefLabel "played by" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#previousAuditRecord
+adf-a:previousAuditRecord rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ,
+                                   owl:AsymmetricProperty ,
+                                   owl:IrreflexiveProperty ;
+                          rdfs:domain adf-a:AuditRecord ;
+                          rdfs:range adf-a:AuditRecord ;
+                          skos:definition "The previous audit record in the list of audit records of the audit trail. [Allotrope]" ;
+                          skos:prefLabel "previous audit record" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#previousUpdate
+adf-a:previousUpdate rdf:type owl:ObjectProperty ;
+                     rdfs:domain adf-a:DataUpdate ;
+                     rdfs:range adf-a:DataUpdate ;
+                     skos:definition "The previous data update in the list. [Allotrope]" ;
+                     skos:prefLabel "previous data update" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#provided
+adf-a:provided rdf:type owl:ObjectProperty ;
+               owl:inverseOf pav:providedBy .
+
+
+###  http://purl.allotrope.org/ontologies/audit#ranOn
+adf-a:ranOn rdf:type owl:ObjectProperty ;
+            rdfs:domain prov:SoftwareAgent ;
+            skos:definition "Indicates the hardware on which a software agent ran. [Allotrope]" ;
+            skos:prefLabel "ran on" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#removal
+adf-a:removal rdf:type owl:ObjectProperty ;
+              rdfs:domain adf-a:ChangeSet ;
+              skos:definition "The collection of all resources (entities or datasets) that were removed as part of a changeset. [Allotrope]" ;
+              skos:prefLabel "removal" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#retrieved
+adf-a:retrieved rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf prov:influenced ;
+                owl:inverseOf pav:retrievedBy ;
+                skos:definition "Relates the entity which retrieved a record and the record which was retrieved. [Allotrope]" ;
+                skos:prefLabel "retrieved" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#reviewed
+adf-a:reviewed rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf adf-a:contributed ;
+               owl:inverseOf adf-a:reviewedBy ;
+               skos:definition "Relates a person who reviewed a record to the record. [Allotrope]" ;
+               skos:prefLabel "reviewed" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#reviewedBy
+adf-a:reviewedBy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf pav:contributedBy ;
+                 skos:definition "Relates a record to the person who reviewed the record. [Allotrope]" ;
+                 skos:prefLabel "reviewed by" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#signed
+adf-a:signed rdf:type owl:ObjectProperty ;
+             owl:inverseOf adf-a:signedBy ;
+             skos:definition "Relates the person who signed a record to the record. [Allotrope]" ;
+             skos:prefLabel "signed" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#signedBy
+adf-a:signedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain adf-a:ElectronicSignature ;
+               rdfs:range prov:Agent ;
+               skos:definition "Relates the record to the person who signed the record. [Allotrope]" ;
+               skos:prefLabel "signed by" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#signedEntity
+adf-a:signedEntity rdf:type owl:ObjectProperty ;
+                   rdfs:domain adf-a:ElectronicSignature ;
+                   skos:definition "Relates an electronic signature record to the resource it signed. [Allotrope]" ;
+                   skos:prefLabel "signed resource" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#signedWith
+adf-a:signedWith rdf:type owl:ObjectProperty ;
+                 rdfs:domain adf-a:ElectronicSignature ;
+                 rdfs:range prov:SoftwareAgent ;
+                 skos:definition "Relates an electronic signature with the software that was used to create it. [Allotrope]" ;
+                 skos:prefLabel "signed with" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#subjectOfChange
+adf-a:subjectOfChange rdf:type owl:ObjectProperty ;
+                      rdfs:domain adf-a:ChangeSet ;
+                      skos:definition "Relates the set of changes with the entity that was changed. [Allotrope]" ;
+                      skos:prefLabel "subject of change" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#target
+adf-a:target rdf:type owl:ObjectProperty ;
+             skos:definition "The target indicates the resource that is updated in a data update. [Allotrope]" ;
+             skos:prefLabel "target" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#update
+adf-a:update rdf:type owl:ObjectProperty ;
+             rdfs:domain adf-a:ChangeSet ;
+             rdfs:range adf-a:DataUpdate ;
+             skos:definition "The relation to a linked list of data updates done as part of the changeset. [Allotrope]" ;
+             skos:prefLabel "update" .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dct:isPartOf rdf:type owl:ObjectProperty ;
+             skos:prefLabel "is part of" .
+
+
+###  http://purl.org/pav/authoredBy
+pav:authoredBy rdf:type owl:ObjectProperty ;
+               skos:prefLabel "authored by" .
+
+
+###  http://purl.org/pav/contributedBy
+pav:contributedBy rdf:type owl:ObjectProperty ;
+                  skos:prefLabel "contributed by" .
+
+
+###  http://purl.org/pav/createdBy
+pav:createdBy rdf:type owl:ObjectProperty ;
+              skos:prefLabel "created by" .
+
+
+###  http://purl.org/pav/curatedBy
+pav:curatedBy rdf:type owl:ObjectProperty ;
+              skos:prefLabel "curated by" .
+
+
+###  http://purl.org/pav/importedBy
+pav:importedBy rdf:type owl:ObjectProperty ;
+               skos:prefLabel "imported by" .
+
+
+###  http://purl.org/pav/providedBy
+pav:providedBy rdf:type owl:ObjectProperty ;
+               skos:prefLabel "provided by" .
+
+
+###  http://purl.org/pav/retrievedBy
+pav:retrievedBy rdf:type owl:ObjectProperty ;
+                skos:prefLabel "retrieved by" .
+
+
+###  http://www.openarchives.org/ore/terms/aggregates
+ore:aggregates rdf:type owl:ObjectProperty ;
+               owl:inverseOf ore:isAggregatedBy ;
+               rdfs:domain ore:Aggregation ;
+               rdfs:comment "Aggregations, by definition, aggregate resources. The ore:aggregates relationship expresses that the object resource is a member of the set of Aggregated Resources of the subject (the Aggregation). This relationship between the Aggregation and its Aggregated Resources is thus more specific than a simple part/whole relationship, as expressed by dcterms:hasPart for example. [Allotrope]" ;
+               rdfs:isDefinedBy ore: ;
+               rdfs:label "Aggregates" ;
+               skos:prefLabel "aggregates" .
+
+
+###  http://www.openarchives.org/ore/terms/describes
+ore:describes rdf:type owl:ObjectProperty ;
+              owl:inverseOf ore:isDescribedBy ;
+              rdfs:domain ore:ResourceMap ;
+              rdfs:range ore:Aggregation ;
+              rdfs:comment "This relationship asserts that the subject (a Resource Map) describes the object (an Aggregation). [Allotrope]" ;
+              rdfs:isDefinedBy ore: ;
+              rdfs:label "Describes" ;
+              skos:prefLabel "describes" .
+
+
+###  http://www.openarchives.org/ore/terms/isAggregatedBy
+ore:isAggregatedBy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dct:isPartOf ;
+                   rdfs:domain ore:AggregatedResource ;
+                   rdfs:range ore:Aggregation ;
+                   rdfs:comment "The inverse relationship of ore:aggregates, ore:isAggregatedBy asserts that an Aggregated Resource is aggregated by an Aggregation. [Allotrope]" ;
+                   rdfs:isDefinedBy ore: ;
+                   rdfs:label "Is Aggregated By" ;
+                   skos:prefLabel "is aggregated by" .
+
+
+###  http://www.openarchives.org/ore/terms/isDescribedBy
+ore:isDescribedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain ore:Aggregation ;
+                  rdfs:range ore:ResourceMap ;
+                  rdfs:comment "The inverse relationship of ore:describes, in this case the object of the relationship is the Resource Map and the subject is the Aggregation which it describes. [Allotrope]" ;
+                  rdfs:isDefinedBy ore: ;
+                  rdfs:label "Is Described By" ;
+                  skos:prefLabel "is described by" .
+
+
+###  http://www.openarchives.org/ore/terms/lineage
+ore:lineage rdf:type owl:ObjectProperty ;
+            rdfs:domain ore:Proxy ;
+            rdfs:range ore:Proxy ;
+            rdfs:comment "ore:lineage is a relationship between two Proxy objects, both of which MUST have the same Resource for which they are proxies. The meaning is that the Resource for which the subject of the relationship is a Proxy was discovered in the Aggregation in which the object Proxy's resource is aggregated. [Allotrope]" ;
+            rdfs:isDefinedBy ore: ;
+            rdfs:label "Lineage" ;
+            skos:prefLabel "lineage" .
+
+
+###  http://www.openarchives.org/ore/terms/proxyFor
+ore:proxyFor rdf:type owl:ObjectProperty ;
+             rdfs:domain ore:Proxy ;
+             rdfs:range ore:AggregatedResource ;
+             rdfs:comment "Proxy objects are used to represent a Resource as it is aggregated in a particular Aggregation. The ore:proxyFor relationship is used to link the proxy to the Aggregated Resource it is a proxy for. The subject of the relationship is a Proxy object, and the object of the relationship is the Aggregated Resource. [Allotrope]" ;
+             rdfs:isDefinedBy ore: ;
+             rdfs:label "Proxy For" ;
+             skos:prefLabel "proxy for" .
+
+
+###  http://www.openarchives.org/ore/terms/proxyIn
+ore:proxyIn rdf:type owl:ObjectProperty ;
+            rdfs:domain ore:Proxy ;
+            rdfs:range ore:Aggregation ;
+            rdfs:comment "Proxy objects must link to the Aggregation in which the resource being proxied is aggregated. The ore:proxyIn relationship is used for this purpose. The subject of the relationship is a Proxy object, and the object of the relationship is the Aggregation. [Allotrope]" ;
+            rdfs:isDefinedBy ore: ;
+            rdfs:label "Proxy In" ;
+            skos:prefLabel "proxy in" .
+
+
+###  http://www.w3.org/ns/org#hasSubOrganization
+org:hasSubOrganization rdf:type owl:ObjectProperty ;
+                       skos:prefLabel "has sub-organization" .
+
+
+###  http://www.w3.org/ns/org#hasUnit
+org:hasUnit rdf:type owl:ObjectProperty ;
+            skos:prefLabel "has unit" .
+
+
+###  http://www.w3.org/ns/org#memberOf
+org:memberOf rdf:type owl:ObjectProperty ;
+             skos:prefLabel "member of" .
+
+
+###  http://www.w3.org/ns/org#subOrganizationOf
+org:subOrganizationOf rdf:type owl:ObjectProperty ;
+                      skos:prefLabel "sub-organization of" .
+
+
+###  http://www.w3.org/ns/prov#influenced
+prov:influenced skos:prefLabel "influenced" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/audit#approvedOn
+adf-a:approvedOn rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf pav:contributedOn ;
+                 skos:definition "The date an electronic record was approved. [Allotrope]" ;
+                 skos:prefLabel "approved on" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#digestValue
+adf-a:digestValue rdf:type owl:DatatypeProperty ;
+                  rdfs:domain adf-a:DigestMethod ;
+                  rdfs:range xsd:base64Binary ;
+                  skos:definition "The result value of an digestion method for an electronic record. [Allotrope]" ;
+                  skos:prefLabel "digest value" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#index
+adf-a:index rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.allotrope.org/ontologies/audit#motivatedBy
+adf-a:motivatedBy rdf:type owl:DatatypeProperty ;
+                  rdfs:domain adf-a:ChangeSet ;
+                  rdfs:range xsd:string ;
+                  skos:definition "Motivated by describes the motivation of a change in text form. [Allotrope]" ;
+                  skos:prefLabel "motivated by" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#newDataValue
+adf-a:newDataValue rdf:type owl:DatatypeProperty ;
+                   skos:definition "New data that replaces the old data in a data update or is inserted. [Allotrope]" ;
+                   skos:prefLabel "new data value" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#oldDataValue
+adf-a:oldDataValue rdf:type owl:DatatypeProperty ;
+                   skos:definition "Old data that is replaced in a data update. [Allotrope]" ;
+                   skos:prefLabel "old data value" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#reviewedOn
+adf-a:reviewedOn rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf pav:contributedOn ;
+                 skos:definition "The date of the review. [Allotrope]" ;
+                 skos:prefLabel "reviewed on" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#signedOn
+adf-a:signedOn rdf:type owl:DatatypeProperty ;
+               rdfs:range [ rdf:type rdfs:Datatype ;
+                            owl:unionOf ( xsd:date
+                                          xsd:dateTime
+                                        )
+                          ] ;
+               skos:definition "Date the signature was done. [Allotrope]" ;
+               skos:prefLabel "signed on" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#status
+adf-a:status rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/pav/contributedOn
+pav:contributedOn rdf:type owl:DatatypeProperty ;
+                  skos:prefLabel "contributed on" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/audit#AgentRole
+adf-a:AgentRole rdf:type owl:Class ;
+                rdfs:subClassOf prov:Role ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty adf-a:playedBy ;
+                                  owl:someValuesFrom prov:Agent
+                                ] ;
+                skos:definition "The role of an agent in an audit trail record. [Allotrope]" ;
+                skos:prefLabel "agent role" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Algorithm
+adf-a:Algorithm rdf:type owl:Class ;
+                skos:definition "An algorithm is a self-contained step-by-step set of operations to be performed. Algorithms perform calculations, data processing, and/or automated reasoning tasks. [Wikipedia]" ;
+                skos:prefLabel "algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Approval
+adf-a:Approval rdf:type owl:Class ;
+               rdfs:subClassOf prov:Activity ;
+               skos:definition "The formal acceptance of a change in a record which is in an audit trail. [Allotrope]" ;
+               skos:prefLabel "approval" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Approver
+adf-a:Approver rdf:type owl:Class ;
+               rdfs:subClassOf adf-a:Contributor ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty adf-a:approved ;
+                                 owl:someValuesFrom prov:Entity
+                               ] ;
+               skos:definition "The role of an agent who approves changes in an audit trailed record. [Allotrope]" ;
+               skos:prefLabel "approver" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#AuditRecord
+adf-a:AuditRecord rdf:type owl:Class ;
+                  rdfs:subClassOf ore:Proxy ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ore:proxyFor ;
+                                    owl:allValuesFrom adf-a:AuditRecordDataset
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ore:proxyIn ;
+                                    owl:allValuesFrom adf-a:AuditTrail
+                                  ] ;
+                  skos:definition "An audit record is the role of a the audit record graph in the dataset of a specific audit trail. [Allotrope]" ;
+                  skos:prefLabel "audit record" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#AuditRecordDataset
+adf-a:AuditRecordDataset rdf:type owl:Class ;
+                         rdfs:subClassOf void:Dataset ,
+                                         rdfg:Graph ;
+                         skos:altLabel "audit record graph" ,
+                                       "audit record statements" ;
+                         skos:definition "An audit record dataset is a dataset that contains the metadata and data that is needed to record the changes on an electronic record in an activity. [Allotrope]" ;
+                         skos:prefLabel "audit record dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#AuditRecordDatasets
+adf-a:AuditRecordDatasets rdf:type owl:Class ;
+                          rdfs:subClassOf ore:Aggregation ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty ore:aggregates ;
+                                            owl:allValuesFrom adf-a:AuditRecordDataset
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty ore:isDescribedBy ;
+                                            owl:allValuesFrom adf-a:AuditTrail
+                                          ] ;
+                          skos:definition "An audit record dataset is the aggregation of audit records. [Allotrope]" ;
+                          skos:prefLabel "audit record datasets" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#AuditRecordStatus
+adf-a:AuditRecordStatus rdf:type owl:Class ;
+                        skos:definition "An audit record status describes the current state of an audit record. [Allotrope]" ;
+                        skos:prefLabel "audit record status" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#AuditTrail
+adf-a:AuditTrail rdf:type owl:Class ;
+                 rdfs:subClassOf ore:ResourceMap ,
+                                 prov:Bundle ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ore:describes ;
+                                   owl:allValuesFrom adf-a:AuditRecordDatasets
+                                 ] ;
+                 dct:source "http://www.fda.gov/iceci/inspections/inspectionguides/ucm074875.htm" ;
+                 skos:definition "A chronological record of system activities that is sufficient to enable the reconstruction, reviews, and examination of the sequence of environments and activities surrounding or leading to each event in the path of a transaction from its inception to output of final results. [FDA]" ;
+                 skos:prefLabel "audit trail" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Author
+adf-a:Author rdf:type owl:Class ;
+             rdfs:subClassOf adf-a:Contributor ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty adf-a:authored ;
+                               owl:someValuesFrom prov:Entity
+                             ] ;
+             skos:definition "The author of a record in an audit trail. [Allotrope]" ;
+             skos:prefLabel "author" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#CanonicalizationAlgorithm
+adf-a:CanonicalizationAlgorithm rdf:type owl:Class ;
+                                rdfs:subClassOf adf-a:Algorithm ;
+                                skos:definition "In computer science, canonicalization (sometimes standardization or normalization) is a process for converting data that has more than one possible representation into a standard, normal, or canonical form. This can be done to compare different representations for equivalence, to count the number of distinct data structures, to improve the efficiency of various algorithms by eliminating repeated calculations, or to make it possible to impose a meaningful sorting order. [Wikipedia]" ;
+                                skos:prefLabel "canonicalization algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#ChangeSet
+adf-a:ChangeSet rdf:type owl:Class ;
+                skos:definition "A changeset captures what was added, deleted and updated in an electronic record and the motivation why it was done. [Allotrope]" ;
+                skos:prefLabel "changeset" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Contributor
+adf-a:Contributor rdf:type owl:Class ;
+                  rdfs:subClassOf adf-a:AgentRole ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty adf-a:contributed ;
+                                    owl:someValuesFrom prov:Entity
+                                  ] ;
+                  skos:definition "A contributor is a role of a person in an audit trail. The contributor gave some content to the electronic record. [Allotrope]" ;
+                  skos:prefLabel "contributor" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Creator
+adf-a:Creator rdf:type owl:Class ;
+              rdfs:subClassOf adf-a:AgentRole ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty adf-a:created ;
+                                owl:someValuesFrom prov:Entity
+                              ] ;
+              skos:definition "A creator is a role of a person in an audit trail. The creator generated the electronic record. [Allotrope]" ;
+              skos:prefLabel "creator" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Curator
+adf-a:Curator rdf:type owl:Class ;
+              rdfs:subClassOf adf-a:Contributor ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty adf-a:curated ;
+                                owl:someValuesFrom prov:Entity
+                              ] ;
+              skos:definition "A curator is a role of a person in an audit trail, who curates the electronic record. [Allotrope]" ;
+              skos:prefLabel "curator" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#DataUpdate
+adf-a:DataUpdate rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty adf-a:target ;
+                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
+                 skos:definition "A data update is a description of individual data changes within an electronic record, that cannot be otherwise described by a remove / add combination. [Allotrope]" ;
+                 skos:prefLabel "data update" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#DerivationRecordDataset
+adf-a:DerivationRecordDataset rdf:type owl:Class ;
+                              rdfs:subClassOf adf-a:AuditRecordDataset ;
+                              skos:definition "A derivation record dataset is an audit record dataset that contains the metadata and data that is needed to record derivations on an electronic record in an activity. [Allotrope]" ;
+                              skos:prefLabel "derivation record dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Digest
+adf-a:Digest rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty adf-a:hasDigestMethod ;
+                               owl:someValuesFrom adf-a:DigestMethod
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty adf-a:hasDigestMethod ;
+                               owl:allValuesFrom adf-a:DigestMethod
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty adf-a:digestValue ;
+                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:unionOf ( xsd:base64Binary
+                                                                  xsd:hexBinary
+                                                                )
+                                                  ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty adf-a:digestValue ;
+                               owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                   owl:unionOf ( xsd:base64Binary
+                                                                 xsd:hexBinary
+                                                               )
+                                                 ]
+                             ] ;
+             skos:definition "A digest is the bitstream of applying a digest method on a bitstream. [Allotrope]" ;
+             skos:prefLabel "digest" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#DigestAlgorithm
+adf-a:DigestAlgorithm rdf:type owl:Class ;
+                      rdfs:subClassOf adf-a:Algorithm ;
+                      skos:definition "A digest algorithm is a function that maps data of arbitrary size to data of fixed size by a hashing function. [Allotrope]" ;
+                      skos:prefLabel "digest algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#DigestMethod
+adf-a:DigestMethod rdf:type owl:Class ;
+                   skos:definition "A digest method maps data of arbitrary size to data of fixed size. [Allotrope]" ;
+                   skos:prefLabel "digest method" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#DigitalSignature
+adf-a:DigitalSignature rdf:type owl:Class ;
+                       rdfs:subClassOf adf-a:ElectronicSignature ;
+                       dct:source "http://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=f86d6109af312153acbfc58dd94fcf30&mc=true&n=pt21.1.11&r=PART&ty=HTML" ;
+                       skos:definition "Digital signature means an electronic signature based upon cryptographic methods of originator authentication, computed by using a set of rules and a set of parameters such that the identity of the signer and the integrity of the data can be verified. [FDA]" ;
+                       skos:prefLabel "digital signature" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#ElectronicRecord
+adf-a:ElectronicRecord rdf:type owl:Class ;
+                       rdfs:subClassOf ore:Aggregation ,
+                                       prov:Entity ;
+                       skos:definition "Electronic record means any combination of text, graphics, data, audio, pictorial, or other information representation in digital form that is created, modified, maintained, archived, retrieved, or distributed by a computer system. [FDA]" ;
+                       skos:prefLabel "electronic record" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#ElectronicSignature
+adf-a:ElectronicSignature rdf:type owl:Class ;
+                          rdfs:subClassOf prov:Entity ;
+                          dct:source "http://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=f86d6109af312153acbfc58dd94fcf30&mc=true&n=pt21.1.11&r=PART&ty=HTML" ;
+                          skos:definition "Electronic signature means a computer data compilation of any symbol or series of symbols executed, adopted, or authorized by an individual to be the legally binding equivalent of the individual's handwritten signature. [FDA]" ;
+                          skos:prefLabel "electronic signature" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#EntityRole
+adf-a:EntityRole rdf:type owl:Class ;
+                 rdfs:subClassOf prov:Role ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty adf-a:playedBy ;
+                                   owl:someValuesFrom prov:Entity
+                                 ] ;
+                 skos:definition "The role of an entity in an audit trail record. [Allotrope]" ;
+                 skos:prefLabel "entity role" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#GenerationRecordDataset
+adf-a:GenerationRecordDataset rdf:type owl:Class ;
+                              rdfs:subClassOf adf-a:AuditRecordDataset ;
+                              skos:definition "A generation record dataset is an audit record dataset that contains the metadata and data that is needed to record the generation of an electronic record in an activity. [Allotrope]" ;
+                              skos:prefLabel "generation record dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Importer
+adf-a:Importer rdf:type owl:Class ;
+               rdfs:subClassOf adf-a:AgentRole ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( xsd:base64Binary
+                                               xsd:hexBinary
+                                             )
+                               ] ;
+               skos:definition "An importer is an agent role in an audit trail. [Allotrope]" ;
+               skos:prefLabel "importer" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#InvalidationRecordDataset
+adf-a:InvalidationRecordDataset rdf:type owl:Class ;
+                                rdfs:subClassOf adf-a:AuditRecordDataset ;
+                                skos:definition "An invalidation record dataset is an audit record dataset that contains the metadata and data that is needed to record the invalidation of an electronic record in an activity. [Allotrope]" ;
+                                skos:prefLabel "invalidation record dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Memento
+adf-a:Memento rdf:type owl:Class ;
+              rdfs:subClassOf adf-a:ElectronicRecord ;
+              dct:source "https://tools.ietf.org/html/rfc7089" ;
+              skos:definition "A memento for an electronic record is a resource that encapsulates a prior state of the original electronic record. [Allotrope]" ;
+              skos:prefLabel "memento" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Motivation
+adf-a:Motivation rdf:type owl:Class ;
+                 skos:definition "The motivation is used to record the user's intent or motivation for a change. [Allotrope]" ;
+                 skos:prefLabel "motivation" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Operator
+adf-a:Operator rdf:type owl:Class ;
+               rdfs:subClassOf adf-a:Contributor ;
+               skos:definition "The operator is an agent role in an audit trail. [Allotrope]" ;
+               skos:prefLabel "operator" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Provider
+adf-a:Provider rdf:type owl:Class ;
+               rdfs:subClassOf adf-a:AgentRole ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( xsd:base64Binary
+                                               xsd:hexBinary
+                                             )
+                               ] ;
+               skos:definition "The operator is an agent role in an audit trail. [Allotrope]" ;
+               skos:prefLabel "provider" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Purpose
+adf-a:Purpose rdf:type owl:Class ;
+              rdfs:subClassOf adf-a:Motivation ;
+              skos:prefLabel "purpose" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Reason
+adf-a:Reason rdf:type owl:Class ;
+             rdfs:subClassOf adf-a:Motivation ;
+             skos:definition "The reason of a change or an signature to an electronic record. [Allotrope]" ;
+             skos:prefLabel "reason" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Retriever
+adf-a:Retriever rdf:type owl:Class ;
+                rdfs:subClassOf adf-a:AgentRole ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty adf-a:retrieved ;
+                                  owl:someValuesFrom prov:Entity
+                                ] ;
+                skos:definition "The retriever is an agent role in an audit trail who pulled the record from somewhere. [Allotrope]" ;
+                skos:prefLabel "retriever" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Review
+adf-a:Review rdf:type owl:Class ;
+             rdfs:subClassOf prov:Activity ;
+             skos:definition "A critical assessment of an electronic record or the changes thereof. [Allotrope]" ;
+             skos:prefLabel "review" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Reviewer
+adf-a:Reviewer rdf:type owl:Class ;
+               rdfs:subClassOf adf-a:Contributor ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty adf-a:reviewed ;
+                                 owl:someValuesFrom prov:Entity
+                               ] ;
+               skos:definition "The reviewer is an agent role in an audit trail who assessed changes to an electronic record. [Allotrope]" ;
+               skos:prefLabel "reviewer" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#RevisionRecordDataset
+adf-a:RevisionRecordDataset rdf:type owl:Class ;
+                            rdfs:subClassOf adf-a:DerivationRecordDataset ;
+                            skos:definition "A revision record dataset is an audit record dataset that contains the metadata and data that is needed to record revisions of an electronic record in an activity. [Allotrope]" ;
+                            skos:prefLabel "revision record dataset" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#SerializationAlgorithm
+adf-a:SerializationAlgorithm rdf:type owl:Class ;
+                             rdfs:subClassOf adf-a:Algorithm ;
+                             skos:definition "In computer science, in the context of data storage, a serialization algorithm translates data structures or object states into a format that can be stored (for example, in a file or memory buffer, or transmitted across a network connection link) and reconstructed later in the same or another computer environment. [Allotrope]" ;
+                             skos:prefLabel "serialization algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#SignatureAlgorithm
+adf-a:SignatureAlgorithm rdf:type owl:Class ;
+                         rdfs:subClassOf adf-a:Algorithm ;
+                         skos:definition "An algorithm for creating a digital signature. [Allotrope]" ;
+                         skos:prefLabel "signature algorithm" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Signer
+adf-a:Signer rdf:type owl:Class ;
+             rdfs:subClassOf adf-a:AgentRole ;
+             skos:definition "A signer is a role in an audit trail of a person signing the electronic record. [Allotrope]" ;
+             skos:prefLabel "signer" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Source
+adf-a:Source rdf:type owl:Class ;
+             rdfs:subClassOf adf-a:EntityRole ;
+             skos:definition "An entity that plays the source role is an entity that is being derived or quoted. [Allotrope]" ;
+             skos:prefLabel "source" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Tool
+adf-a:Tool rdf:type owl:Class ;
+           rdfs:subClassOf adf-a:EntityRole ;
+           skos:definition "A tool is a device or software used to carry out a function. In this case it is the entity that is used by a contributor to generate or derive another entity. [Allotrope]" ;
+           skos:prefLabel "tool" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#TransformAlgorithm
+adf-a:TransformAlgorithm rdf:type owl:Class ;
+                         rdfs:subClassOf adf-a:Algorithm ;
+                         skos:definition "An algorithm that describes how data is transformed before a digest (hash) is calculated from it. [Allotrope]" ;
+                         skos:prefLabel "transform algorithm" .
+
+
+###  http://purl.org/dc/dcmitype/Collection
+dctype:Collection rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+###  http://rdfs.org/ns/void#Dataset
+void:Dataset rdf:type owl:Class ;
+             skos:prefLabel "dataset" .
+
+
+###  http://www.openarchives.org/ore/terms/AggregatedResource
+ore:AggregatedResource rdf:type owl:Class ;
+                       rdfs:comment "A resource which is included in an Aggregation. Note that asserting that a resource is a member of the class of Aggregated Resources does not imply anything other than that it is aggregated by at least one Aggregation. [Allotrope]" ;
+                       rdfs:isDefinedBy ore: ;
+                       rdfs:label "Aggregated Resource" ;
+                       skos:prefLabel "aggregated resource" .
+
+
+###  http://www.openarchives.org/ore/terms/Aggregation
+ore:Aggregation rdf:type owl:Class ;
+                rdfs:subClassOf dctype:Collection ;
+                rdfs:comment "A set of related resources (Aggregated Resources), grouped together such that the set can be treated as a single resource. This is the entity described within the ORE interoperability framework by a Resource Map. [Allotrope]" ;
+                rdfs:isDefinedBy ore: ;
+                rdfs:label "Aggregation" ;
+                skos:prefLabel "aggregation" .
+
+
+###  http://www.openarchives.org/ore/terms/Proxy
+ore:Proxy rdf:type owl:Class ;
+          rdfs:comment "A Proxy represents an Aggregated Resource as it exists in a specific Aggregation. All assertions made about an entity are globally true, not only within the context of the Aggregation. As such, in order to make assertions which are only true of a resource as it exists in an Aggregation, a Proxy object is required. For example, one might want to cite an article as it appears in a specific journal, or assign aggregation-specific metadata to a Resource. [Allotrope]" ;
+          rdfs:isDefinedBy ore: ;
+          rdfs:label "Proxy" ;
+          skos:prefLabel "proxy" .
+
+
+###  http://www.openarchives.org/ore/terms/ResourceMap
+ore:ResourceMap rdf:type owl:Class ;
+                rdfs:subClassOf rdfg:Graph ;
+                rdfs:comment "A description of an Aggregation according to the OAI-ORE data model. Resource Maps are serialised to a machine readable format according to the implementation guidelines. [Allotrope]" ;
+                rdfs:isDefinedBy ore: ;
+                rdfs:label "Resource Map" ;
+                skos:prefLabel "resource map" .
+
+
+###  http://www.w3.org/2001/XMLSchema#base64Binary
+xsd:base64Binary rdf:type owl:Class .
+
+
+###  http://www.w3.org/2001/XMLSchema#hexBinary
+xsd:hexBinary rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/Graph
+rdfg:Graph rdf:type owl:Class ;
+           skos:prefLabel "graph" .
+
+
+###  http://www.w3.org/ns/org#FormalOrganization
+org:FormalOrganization rdf:type owl:Class ;
+                       rdfs:subClassOf org:Organization ;
+                       skos:prefLabel "formal organization" .
+
+
+###  http://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class ;
+                 owl:equivalentClass foaf:Organization ;
+                 skos:prefLabel "organization" .
+
+
+###  http://www.w3.org/ns/org#OrganizationalUnit
+org:OrganizationalUnit rdf:type owl:Class ;
+                       rdfs:subClassOf org:Organization ;
+                       skos:prefLabel "organizational unit" .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity skos:prefLabel "activity" .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent skos:prefLabel "agent" .
+
+
+###  http://www.w3.org/ns/prov#Bundle
+prov:Bundle skos:prefLabel "bundle" .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity skos:prefLabel "entity" .
+
+
+###  http://www.w3.org/ns/prov#Role
+prov:Role skos:prefLabel "role" .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+prov:SoftwareAgent skos:altLabel "software" ;
+                   skos:prefLabel "software agent" .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           skos:prefLabel "agent" .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf foaf:Agent ;
+                  skos:prefLabel "organization" .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdfs:subClassOf foaf:Agent ;
+            skos:prefLabel "person" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/audit#AuditRecordStatusClosed
+adf-a:AuditRecordStatusClosed rdf:type owl:NamedIndividual ,
+                                       adf-a:AuditRecordStatus ;
+                              skos:definition "The state of an closed audit record. [Allotrope]" ;
+                              skos:prefLabel "closed" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#AuditRecordStatusOpen
+adf-a:AuditRecordStatusOpen rdf:type owl:NamedIndividual ,
+                                     adf-a:AuditRecordStatus ;
+                            skos:definition "The state of an open audit record. [Allotrope]" ;
+                            skos:prefLabel "open" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#CRC
+adf-a:CRC rdf:type owl:NamedIndividual ,
+                   adf-a:DigestAlgorithm ;
+          skos:definition "A cyclic redundancy check (CRC) is an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. Blocks of data entering these systems get a short check value attached, based on the remainder of a polynomial division of their contents. On retrieval, the calculation is repeated and, in the event the check values do not match, corrective action can be taken against data corruption. [Wikipedia]" ;
+          skos:prefLabel "cyclic redundancy check" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#Fletcher
+adf-a:Fletcher rdf:type owl:NamedIndividual ,
+                        adf-a:DigestAlgorithm ;
+               skos:definition "The Fletcher checksum is an algorithm for computing a position-dependent checksum devised by John G. Fletcher (1934–2012) at Lawrence Livermore Labs in the late 1970s. The objective of the Fletcher checksum was to provide error-detection properties approaching those of a cyclic redundancy check but with the lower computational effort associated with summation techniques. [Wikipedia]" ;
+               skos:prefLabel "fletcher" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#MD5
+adf-a:MD5 rdf:type owl:NamedIndividual ,
+                   adf-a:DigestAlgorithm ;
+          skos:definition "The MD5 algorithm is a widely used hash function producing a 128-bit hash value. [Wikipedia]" ;
+          skos:prefLabel "MD5" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#SHA1
+adf-a:SHA1 rdf:type owl:NamedIndividual ,
+                    adf-a:DigestAlgorithm ;
+           skos:definition "In cryptography, SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function designed by the United States National Security Agency and is a U.S. Federal Information Processing Standard published by the United States NIST. SHA-1 produces a 160-bit (20-byte) hash value known as a message digest. A SHA-1 hash value is typically rendered as a hexadecimal number, 40 digits long. [Wikipedia]" ;
+           skos:prefLabel "SHA-1" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#SHA256
+adf-a:SHA256 rdf:type owl:NamedIndividual ,
+                      adf-a:DigestAlgorithm ;
+             skos:definition "The SHA256 algorithm is a hash function producing a 256-bit hash value. [Allotrope]" ;
+             skos:prefLabel "SHA256" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#SHA384
+adf-a:SHA384 rdf:type owl:NamedIndividual ,
+                      adf-a:DigestAlgorithm ;
+             skos:definition "The SHA384 algorithm is a hash function producing a 384-bit hash value. [Allotrope]" ;
+             skos:prefLabel "SHA384" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#SHA512
+adf-a:SHA512 rdf:type owl:NamedIndividual ,
+                      adf-a:DigestAlgorithm ;
+             skos:definition "The SHA512 algorithm is a hash function producing a 512-bit hash value. [Allotrope]" ;
+             skos:prefLabel "SHA512" .
+
+
+###  http://purl.allotrope.org/ontologies/audit#c14n-adf-hdf-1.0
+adf-a:c14n-adf-hdf-1.0 rdf:type owl:NamedIndividual ,
+                                adf-a:CanonicalizationAlgorithm ;
+                       skos:definition "A canonicalization algorithm. [Allotrope]" ;
+                       skos:prefLabel "c14n-adf-hdf-1.0" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2020 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2020 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2020 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  http://www.w3.org/2000/09/xmldsig#dsa-sha1
+<http://www.w3.org/2000/09/xmldsig#dsa-sha1> rdf:type owl:NamedIndividual ,
+                                                      adf-a:SignatureAlgorithm .
+
+
+###  http://www.w3.org/2000/09/xmldsig#enveloped-signature
+<http://www.w3.org/2000/09/xmldsig#enveloped-signature> rdf:type owl:NamedIndividual ,
+                                                                 adf-a:TransformAlgorithm .
+
+
+###  http://www.w3.org/2000/09/xmldsig#hmac-sha1
+<http://www.w3.org/2000/09/xmldsig#hmac-sha1> rdf:type owl:NamedIndividual ,
+                                                       adf-a:SignatureAlgorithm .
+
+
+###  http://www.w3.org/2000/09/xmldsig#rsa-sha1
+<http://www.w3.org/2000/09/xmldsig#rsa-sha1> rdf:type owl:NamedIndividual ,
+                                                      adf-a:SignatureAlgorithm .
+
+
+###  http://www.w3.org/2006/12/xml-c14n11
+<http://www.w3.org/2006/12/xml-c14n11> rdf:type owl:NamedIndividual ,
+                                                adf-a:CanonicalizationAlgorithm .
+
+
+###  http://www.w3.org/2006/12/xml-c14n11#WithComments
+<http://www.w3.org/2006/12/xml-c14n11#WithComments> rdf:type owl:NamedIndividual ,
+                                                             adf-a:CanonicalizationAlgorithm .
+
+
+###  http://www.w3.org/TR/1999/REC-xpath-19991116
+<http://www.w3.org/TR/1999/REC-xpath-19991116> rdf:type owl:NamedIndividual ,
+                                                        adf-a:TransformAlgorithm .
+
+
+###  http://www.w3.org/TR/1999/REC-xslt-19991116
+<http://www.w3.org/TR/1999/REC-xslt-19991116> rdf:type owl:NamedIndividual ,
+                                                       adf-a:TransformAlgorithm .
+
+
+###  http://www.w3.org/TR/2001/REC-xml-c14n-20010315
+<http://www.w3.org/TR/2001/REC-xml-c14n-20010315> rdf:type owl:NamedIndividual ,
+                                                           adf-a:CanonicalizationAlgorithm .
+
+
+###  http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments
+<http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments> rdf:type owl:NamedIndividual ,
+                                                                        adf-a:CanonicalizationAlgorithm .
+
+
+[ rdfs:label "The Open Archives Initiative ORE Project"
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+pav:authoredOn skos:prefLabel "authored on" .
+
+
+pav:createdAt skos:prefLabel "created at" .
+
+
+pav:createdOn skos:prefLabel "created on" .
+
+
+pav:createdWith skos:prefLabel "created with" .
+
+
+pav:curatedOn skos:prefLabel "curated on" .
+
+
+pav:derivedFrom skos:prefLabel "derived from" .
+
+
+pav:hasCurrentVersion skos:prefLabel "has current version" .
+
+
+pav:hasEarlierVersion skos:prefLabel "has earlier version" .
+
+
+pav:hasVersion skos:prefLabel "has version" .
+
+
+pav:importedFrom skos:prefLabel "imported from" .
+
+
+pav:importedOn skos:prefLabel "imported on" .
+
+
+pav:lastRefreshedOn skos:prefLabel "last refreshed on" .
+
+
+pav:lastUpdateOn skos:prefLabel "last updated on" .
+
+
+pav:previousVersion skos:prefLabel "previous version" .
+
+
+pav:retrievedFrom skos:prefLabel "retrieved from" .
+
+
+pav:retrievedOn skos:prefLabel "retrieved on" .
+
+
+pav:sourceAccessedAt skos:prefLabel "source accessed at" .
+
+
+pav:sourceAccessedBy skos:prefLabel "source accessed by" .
+
+
+pav:sourceAccessedOn skos:prefLabel "source accessed on" .
+
+
+pav:sourceLastAccessedOn skos:prefLabel "source last accessed on" .
+
+
+pav:version skos:prefLabel "version" .
+
+
+ore: dct:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+     dct:publisher [ rdfs:label "The Open Archives Initiative ORE Project"
+                   ] ;
+     dct:title "The OAI ORE terms vocabulary" ;
+     rdfs:comment "The set of terms provided by the OAI ORE initiative. [Allotrope]" ;
+     rdfs:label "The OAI ORE terms vocabulary" ;
+     rdfs:seeAlso <http://www.openarchives.org/ore/toc> .
+
+
+prov:ActivityInfluence skos:prefLabel "activity influence" .
+
+
+prov:AgentInfluence skos:prefLabel "agent influence" .
+
+
+prov:Association skos:prefLabel "association" .
+
+
+prov:Attribution skos:prefLabel "attribution" .
+
+
+prov:Collection skos:prefLabel "collection" .
+
+
+prov:Communication skos:prefLabel "communication" .
+
+
+prov:Delegation skos:prefLabel "delegation" .
+
+
+prov:Derivation skos:prefLabel "derivation" .
+
+
+prov:EmptyCollection skos:prefLabel "empty collection" .
+
+
+prov:End skos:prefLabel "end" .
+
+
+prov:EntityInfluence skos:prefLabel "entity influence" .
+
+
+prov:Generation skos:prefLabel "generation" .
+
+
+prov:Influence skos:prefLabel "influence" .
+
+
+prov:InstantaneousEvent skos:prefLabel "instantaneous event" .
+
+
+prov:Invalidation skos:prefLabel "invalidation" .
+
+
+prov:Location skos:prefLabel "location" .
+
+
+prov:Organization skos:prefLabel "organization" .
+
+
+prov:Person skos:prefLabel "person" .
+
+
+prov:Plan skos:prefLabel "plan" .
+
+
+prov:PrimarySource skos:prefLabel "primary source" .
+
+
+prov:Quotation skos:prefLabel "quotation" .
+
+
+prov:Revision skos:prefLabel "revision" .
+
+
+prov:Start skos:prefLabel "start" .
+
+
+prov:Usage skos:prefLabel "usage" .
+
+
+prov:actedOnBehalfOf skos:prefLabel "acted on behalf of" .
+
+
+prov:activity skos:prefLabel "activity" .
+
+
+prov:agent skos:prefLabel "agent" .
+
+
+prov:alternateOf skos:prefLabel "alternate of" .
+
+
+prov:atLocation skos:prefLabel "at location" .
+
+
+prov:atTime skos:prefLabel "at time" .
+
+
+prov:endedAtTime skos:prefLabel "ended at time" .
+
+
+prov:entity skos:prefLabel "entity" .
+
+
+prov:generalizationOf skos:prefLabel "generalization of" .
+
+
+prov:generated skos:prefLabel "generated" .
+
+
+prov:generatedAtTime skos:prefLabel "generated at time" .
+
+
+prov:hadActivity skos:prefLabel "had activity" .
+
+
+prov:hadGeneration skos:prefLabel "had generation" .
+
+
+prov:hadMember skos:prefLabel "had member" .
+
+
+prov:hadPlan skos:prefLabel "had plan" .
+
+
+prov:hadPrimarySource skos:prefLabel "had primary source" .
+
+
+prov:hadRole skos:prefLabel "had role" .
+
+
+prov:hadUsage skos:prefLabel "had usage" .
+
+
+prov:influencer skos:prefLabel "influencer" .
+
+
+prov:invalidated skos:prefLabel "invalidated" .
+
+
+prov:invalidatedAtTime skos:prefLabel "invalidated at time" .
+
+
+prov:qualifiedAssociation skos:prefLabel "qualified association" .
+
+
+prov:qualifiedAttribution skos:prefLabel "qualified attribution" .
+
+
+prov:qualifiedCommunication skos:prefLabel "qualified communication" .
+
+
+prov:qualifiedDelegation skos:prefLabel "qualified delegation" .
+
+
+prov:qualifiedDerivation skos:prefLabel "qualified derivation" .
+
+
+prov:qualifiedEnd skos:prefLabel "qualified end" .
+
+
+prov:qualifiedGeneration skos:prefLabel "qualified generation" .
+
+
+prov:qualifiedInfluence skos:prefLabel "qualified influence" .
+
+
+prov:qualifiedInvalidation skos:prefLabel "qualified invalidation" .
+
+
+prov:qualifiedPrimarySource skos:prefLabel "qualified primary source" .
+
+
+prov:qualifiedQuotation skos:prefLabel "qualified quotation" .
+
+
+prov:qualifiedRevision skos:prefLabel "qualified revision" .
+
+
+prov:qualifiedStart skos:prefLabel "qualified start" .
+
+
+prov:qualifiedUsage skos:prefLabel "qualified usage" .
+
+
+prov:specializationOf skos:prefLabel "specialization of" .
+
+
+prov:startedAtTime skos:prefLabel "started at time" .
+
+
+prov:used skos:prefLabel "used" .
+
+
+prov:value skos:prefLabel "value" .
+
+
+prov:wasAssociatedWith skos:prefLabel "was associated with" .
+
+
+prov:wasAttributedTo skos:prefLabel "was attributed to" .
+
+
+prov:wasDerivedFrom skos:prefLabel "was derived from" .
+
+
+prov:wasEndedBy skos:prefLabel "was ended by" .
+
+
+prov:wasGeneratedBy skos:prefLabel "was generated by" .
+
+
+prov:wasInfluencedBy skos:prefLabel "was influenced by" .
+
+
+prov:wasInformedBy skos:prefLabel "was informed by" .
+
+
+prov:wasInvalidatedBy skos:prefLabel "was invalidated by" .
+
+
+prov:wasQuotedFrom skos:prefLabel "was quoted from" .
+
+
+prov:wasRevisionOf skos:prefLabel "was revision of" .
+
+
+prov:wasStartedBy skos:prefLabel "was started by" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

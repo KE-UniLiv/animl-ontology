@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE catalog[
+<!ELEMENT catalog (uri|group)+>
+<!ELEMENT group (uri)+>
+<!ELEMENT uri EMPTY>
+<!ATTLIST catalog
+	xmlns CDATA #IMPLIED
+	prefer (system|public) #IMPLIED
+>
+<!ATTLIST uri
+	id ID #IMPLIED
+	name CDATA #REQUIRED
+	uri CDATA #REQUIRED
+>
+<!ATTLIST group
+	id ID #IMPLIED
+	prefer (system|public) #IMPLIED
+	xml:base CDATA #IMPLIED
+>
+]>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<group id="import" prefer="public" xml:base="">
+		<uri id="id20" name="http://purl.allotrope.org/voc/org/REC/2018/10/org" uri="../../../../org/REC/2018/10/org.ttl"/>
+		<uri id="id75" name="http://purl.allotrope.org/voc/pav/REC/2020/06/pav" uri="../../../../pav/REC/2020/06/pav.ttl"/>
+		<uri id="id19" name="http://purl.allotrope.org/voc/prov/REC/2018/10/prov-o" uri="../../../../prov/REC/2018/10/prov-o.ttl"/>
+		<uri id="id46" name="http://www.w3.org/ns/prov#" uri="../../../../prov/REC/2018/10/prov-o.ttl"/>
+	</group>
+	<group id="ADF-REC" prefer="public" xml:base="">
+		<uri id="id5903" name="http://purl.allotrope.org/voc/adf/REC/2023/03/audit" uri="audit.ttl"/>
+	</group>
+</catalog>

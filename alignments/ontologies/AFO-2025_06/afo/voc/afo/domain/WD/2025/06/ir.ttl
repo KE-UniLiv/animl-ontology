@@ -1,0 +1,805 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/ir> ;
+                                                                    owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/ir> ;
+                                                                    dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                    dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                    dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                               <http://purl.allotrope.org/voc/copyright> ;
+                                                                    dct:title "AFO Infrared Domain Ontology (WD/2025/06)" ;
+                                                                    owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2018/04/infrared> ;
+                                                                    owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000497
+af-e:AFE_0000497 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000619 ;
+                 skos:altLabel "FT-IR spectrometer" ,
+                               "FTIR spectrometer" ,
+                               "FTIR spectrophotometer" ;
+                 skos:definition "A piece of apparatus consisting of an infrared laser, an interferometer and a detector, which is used to measure vibrational spectra in the infrared range. The spectrometer measures the amount of infrared radiation not absorbed by the sample, and the application of a Fourier transform converts the resulting time domain digital signal into a frequency domain digital signal. [CHMO]" ;
+                 skos:prefLabel "Fourier transform infrared spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001634
+af-e:AFE_0001634 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000619 ;
+                 dct:source "https://en.wikipedia.org/wiki/Near-infrared_spectroscopy" ;
+                 skos:altLabel "NIR spectrometer" ;
+                 skos:changeNote "2024-09-12 Changed [Amgen] attribution to [Wikipedia] and added source field." ;
+                 skos:definition "A near infrared spectrometer allows for measurements using NIRS. Near-infrared spectroscopy (NIRS) is a spectroscopic method that uses the near-infrared region of the electromagnetic spectrum to measure molecular vibration (from about 700 nm to 2500 nm). [Wikipedia]" ;
+                 skos:prefLabel "near infrared spectrometer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001681
+af-e:AFE_0001681 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ,
+                                 af-e:AFE_0001745 ;
+                 skos:altLabel "IR probe" ;
+                 skos:definition "An infrared probe is a device that allows for measurements using IR spectroscopy. [Allotrope]" ;
+                 skos:prefLabel "infrared probe" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000156
+af-p:AFP_0000156 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000780 ;
+                 skos:altLabel "SFG" ,
+                               "SFG spectroscopy" ,
+                               "SFG vibrational spectroscopy" ,
+                               "VSFG spectroscopy" ,
+                               "sum frequency generation (SFG) spectroscopy" ,
+                               "sum frequency generation (SFG) vibrational spectroscopy" ,
+                               "sum frequency generation spectroscopy" ,
+                               "vibrational sum-frequency generation (VSFG) spectroscopy" ,
+                               "vibrational sum-frequency generation spectroscopy" ;
+                 skos:definition "A method for generating surface-specific vibrational spectra by mixing two light beams at a surface and detecting the output beam, which has frequency equal to the sum of the two input frequencies. [CHMO]" ;
+                 skos:prefLabel "sum-frequency generation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000213
+af-p:AFP_0000213 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "mid infrared spectroscopy" ,
+                               "mid-IR" ,
+                               "mid-IR spectroscopy" ,
+                               "mid-infra-red spectrometry" ,
+                               "mid-infrared spectrometry" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation in the mid infrared region (3-8 µm). [CHMO]" ;
+                 skos:prefLabel "mid-infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000232
+af-p:AFP_0000232 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000780 ;
+                 skos:altLabel "IES" ,
+                               "infra-red emission spectrometry" ,
+                               "infrared emission spectrometry" ,
+                               "infrared emission spectroscopy" ;
+                 skos:definition "Any type of spectroscopy where the sample is heated and the infrared radiation (0.78-1000 µm) emitted during cooling is detected. [CHMO]" ;
+                 skos:prefLabel "infrared emission spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000233
+af-p:AFP_0000233 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001943 ;
+                 skos:altLabel "ATR spectrometry" ,
+                               "ATR spectroscopy" ,
+                               "ATR-IR" ,
+                               "ATR-IR spectrometry" ,
+                               "ATR-IR spectroscopy" ,
+                               "ATR/IR" ,
+                               "ATR/IRS" ,
+                               "IRS" ,
+                               "MIRS" ,
+                               "attenuated total reflectance infra-red spectroscopy" ,
+                               "attenuated total reflectance spectrometry" ,
+                               "internal reflection spectrometry" ,
+                               "internal reflection spectroscopy" ,
+                               "multiple internal reflection spectrometry" ,
+                               "multiple internal reflection spectroscopy" ;
+                 skos:definition "A type of spectroscopy where infrared light is introduced into a prism at an angle exceeding the critical angle for internal reflection. This produces an evanescent wave at the reflecting surface (a surface which is transparent to infrared such as thallium bromide) on which the sample is supported, and the distortion of the evanescent wave by the sample is measured. [CHMO]" ;
+                 skos:prefLabel "attenuated total reflectance infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000292
+af-p:AFP_0000292 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002227 ;
+                 skos:altLabel "IR REMPD" ,
+                               "IR REMPD spectrometry" ,
+                               "IR REMPD spectroscopy" ,
+                               "IR-REMPD" ,
+                               "resonance-enhanced infrared multiphoton dissociation spectrometry" ,
+                               "resonance-enhanced infrared multiphoton dissociation spectroscopy" ,
+                               "resonant infra-red multiphoton dissociation spectrometry" ,
+                               "resonant infra-red multiphoton dissociation spectroscopy" ,
+                               "resonant infrared multiphoton dissociation spectrometry" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs resonant radiation from the infrared region (0.78-1000 µm) with sufficient energy to cause photodissociation by the absorption of two or more photons. [CHMO]" ;
+                 skos:prefLabel "resonant infrared multiphoton dissociation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000324
+af-p:AFP_0000324 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000233 ;
+                 skos:altLabel "ATR FT-IR spectroscopy" ,
+                               "ATR FTIR spectroscopy" ,
+                               "ATR-FTIR" ,
+                               "ATR-FTIR spectroscopy" ,
+                               "FTIR-ATR" ,
+                               "Fourier transform attenuated total reflectance infra-red" ,
+                               "Fourier transform attenuated total reflectance infra-red spectroscopy" ,
+                               "Fourier transform attenuated total reflectance infrared" ,
+                               "Fourier transform attenuated total reflectance infrared spectroscopy" ,
+                               "Fourier transform attenuated total reflectance spectroscopy" ,
+                               "Fourier transform infrared attenuated total reflectance (FTIR-ATR) spectroscopy " ,
+                               "Fourier transform infrared attenuated total reflectance spectroscopy" ,
+                               "Fourier transform infrared attenuated total reflection (FTIR-ATR) spectroscopy" ,
+                               "attenuated total reflectance Fourier transform infra-red spectroscopy" ,
+                               "attenuated total reflection-Fourier transform infrared (ATR-FTIR) spectroscopy" ;
+                 skos:definition "A type of spectroscopy where infrared light is introduced into a prism at an angle exceeding the critical angle for internal reflection. This produces an evanescent wave at the reflecting surface (a surface which is transparent to infrared such as thallium bromide) on which the sample is supported. The distortion of the evanescent wave by the sample is measured producing a spectrum which is then subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "attenuated total reflectance Fourier transform infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000393
+af-p:AFP_0000393 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation from the infrared region (0.78-1000 µm). The infrared beam is passed through a diffraction grating which separates (or disperses) the wavelength of the light and directs each wavelength individually through a slit to a detector. [CHMO]" ;
+                 skos:prefLabel "dispersive infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000405
+af-p:AFP_0000405 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "2D IR" ,
+                               "2D-IR" ,
+                               "2DIR" ,
+                               "two dimensional infrared spectroscopy" ,
+                               "two-dimensional IR spectroscopy " ,
+                               "two-dimensional infrared (2D-IR) spectroscopy " ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation from the infrared region (0.78-1000 µm) over two frequency axes. Cross peaks in the spectrum encode the couplings and orientation between vibrations. [CHMO]" ;
+                 skos:prefLabel "two-dimensional infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000434
+af-p:AFP_0000434 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "IR-EWS" ,
+                               "infra-red evanescent wave spectrometry" ,
+                               "infrared evanescent wave spectrometry" ,
+                               "infrared evanescent wave spectroscopy" ;
+                 skos:definition "A type of spectroscopy using radiation in the infrared region (0.78-1000 µm) where an evanescent wave is generated using an optical fibre. [CHMO]" ;
+                 skos:prefLabel "infrared evanescent wave spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000509
+af-p:AFP_0000509 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "IR laser transient absorption spectroscopy" ,
+                               "IR transient absorption spectroscopy" ,
+                               "TIRS" ,
+                               "infrared laser transient absorption spectroscopy" ,
+                               "infrared transient absorption spectroscopy" ,
+                               "transient infrared spectrometry" ,
+                               "transient infrared spectroscopy" ;
+                 skos:definition "A type of spectroscopy where transient species such as radicals, ions or reactive intermediates are studied using pulses from an infrared laser. The infrared absorbance of the sample before and after an excitation laser pulse is measured. [CHMO]" ;
+                 skos:prefLabel "transient infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000541
+af-p:AFP_0000541 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000232 ;
+                 skos:altLabel "SPIRES" ,
+                               "single photon infra-red emission spectrometry" ,
+                               "single photon infra-red emission spectroscopy" ,
+                               "single-photon infra-red emission spectrometry" ,
+                               "single-photon infrared emission spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample is heated using ultraviolet excitation (single photon) and the infrared radiation (0.78-1000 µm) emitted during cooling is detected. [CHMO]" ;
+                 skos:prefLabel "single-photon infrared emission spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000568
+af-p:AFP_0000568 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000156 ;
+                 skos:altLabel "infrared-visible sum-frequency generation (SFG) spectroscopy" ,
+                               "infrared-visible sum-frequency generation spectroscopy" ;
+                 skos:definition "A method for generating surface-specific vibrational spectra by mixing two light beams (visible and IR) at a surface and detecting the output beam, which has frequency equal to the sum of the two input frequencies. [CHMO]" ;
+                 skos:prefLabel "infrared-visible sum-frequency generation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000619
+af-p:AFP_0000619 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "NDIR" ,
+                               "NDIR spectrometry" ,
+                               "NDIR spectroscopy" ,
+                               "non-dispersive infra-red spectrometry" ,
+                               "non-dispersive infra-red spectroscopy" ,
+                               "non-dispersive infrared spectrometry" ;
+                 skos:definition "A type of spectroscopy where the difference in infrared radiation (0.78-1000 µm) absorption of a sample cell against a reference cell is measured. [CHMO]" ;
+                 skos:prefLabel "non-dispersive infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000623
+af-p:AFP_0000623 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "SEIRA" ,
+                               "SEIRA spectrometry" ,
+                               "SEIRA spectroscopy" ,
+                               "surface enhanced infra-red absorption spectrometry" ,
+                               "surface enhanced infra-red absorption spectroscopy" ,
+                               "surface enhanced infrared absorption spectrometry" ;
+                 skos:definition "A type of spectroscopy where the rough metal surface of a sample absorbs radiation in the infrared region (0.78-1000 µm). [CHMO]" ;
+                 skos:prefLabel "surface enhanced infrared absorption spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000775
+af-p:AFP_0000775 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000232 ;
+                 skos:altLabel "PA IR" ,
+                               "PA IRES" ,
+                               "PA-IR" ,
+                               "PA-IRES" ,
+                               "planar array IR emission spectrometry" ,
+                               "planar array IR emission spectroscopy" ,
+                               "planar array IRES" ,
+                               "planar array infra-red emission spectrometry" ,
+                               "planar array infrared emission spectrometry" ,
+                               "planar array infrared emission spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample is heated and the infrared radiation (0.78-1000 µm) emitted during cooling is detected with a two-dimensional focal plane array infrared camera. [CHMO]" ;
+                 skos:prefLabel "planar array infrared emission spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000901
+af-p:AFP_0000901 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002159 ;
+                 skos:altLabel "FT-FIRE" ,
+                               "Fourier transform FIRE" ,
+                               "Fourier transform flame infra-red emission spectrometry" ,
+                               "Fourier transform flame infrared emission spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample is heated in a flame and the infrared radiation  (0.78-1000 µm) emitted during cooling is detected. The spectrum obtained is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "Fourier transform flame infrared emission spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000978
+af-p:AFP_0000978 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "Py-IR" ,
+                               "Py/IR" ,
+                               "py-IR" ,
+                               "pyrolysis IR" ,
+                               "pyrolysis-IR" ;
+                 skos:definition "A type of spectroscopy where the sample is first chemically degraded by heating then its absorption of radiation from the infrared region (0.78-1000 µm) is measured. [CHMO]" ;
+                 skos:prefLabel "pyrolysis infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000994
+af-p:AFP_0000994 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001787 ;
+                 skos:altLabel "FFT-FTIR" ,
+                               "FFT/FTIR" ,
+                               "FT infrared spectroscopy" ;
+                 skos:definition "Fast Fourier transform infrared spectroscopy is a type of spectroscopy where the sample absorbs a single pulse of radiation from the infrared region (0.78-1000 µm) and the spectrum obtained is subject to a fast Fourier transform. [CHMO]" ;
+                 skos:prefLabel "fast Fourier transform infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001255
+af-p:AFP_0001255 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001943 ;
+                 skos:altLabel "NIR reflectance spectrometry" ,
+                               "NIR reflectance spectroscopy" ,
+                               "NIRS" ,
+                               "near infra-red reflectance spectrometry" ,
+                               "near infrared reflectance spectroscopy" ;
+                 skos:definition "A type of vibrational spectroscopy where the reflection or scattering of near infrared radiation (0.8-2 µm) by a sample is detected. [CHMO]" ;
+                 skos:prefLabel "near-infrared reflectance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001566
+af-p:AFP_0001566 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000245 ;
+                 skos:altLabel "FIR" ,
+                               "FIR spectrometry" ,
+                               "FIR spectroscopy" ,
+                               "far infrared spectroscopy" ,
+                               "far-IR" ,
+                               "far-IR spectroscopy" ,
+                               "far-infra-red spectrometry" ,
+                               "far-infrared spectrometry" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation in the far infrared region (15-1000 µm). [CHMO]" ;
+                 skos:prefLabel "far-infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001568
+af-p:AFP_0001568 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002421 ;
+                 skos:altLabel "single pulse-pulsed laser polymerisation-near-infrared"@en-gb ,
+                               "SP-PLP-NIR" ,
+                               "single pulse-pulsed laser polymerization-near-infrared" ;
+                 skos:definition "A technique for measuring the time-resolved concentration of monomer during polymerization reactions. The polymerization is initiated by a single pulse of laser radiation and the monomer concentration is monitored by measuring absorbance in the near-infrared (0.8-2 µm) region. [CHMO]" ;
+                 skos:prefLabel "single pulse-pulsed laser polymerisation-near-infrared technique"@en-gb ,
+                                "single pulse-pulsed laser polymerization-near-infrared technique" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001648
+af-p:AFP_0001648 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000232 ;
+                 skos:altLabel "FT-IRES" ,
+                               "FTIRES" ,
+                               "Fourier transform IRES" ,
+                               "Fourier transform infra-red emission spectrometry" ,
+                               "Fourier transform infra-red emission spectroscopy" ,
+                               "Fourier transform infrared emission spectrometry" ,
+                               "Fourier transform infrared emission spectroscopy" ;
+                 skos:definition "IR emission spectroscopy where the spectrum is obtained by a single pulse of (UV) radiation, and is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "Fourier transform infrared emission spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001660
+af-p:AFP_0001660 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002346 ;
+                 skos:altLabel "time-resolved polarised FTIR"@en-gb ,
+                               "time-resolved polarised Fourier transform infra-red absorption spectroscopy"@en-gb ,
+                               "time-resolved polarised Fourier transform infra-red spectrometry"@en-gb ,
+                               "time-resolved polarised Fourier transform infrared (FT-IR) spectroscopy"@en-gb ,
+                               "time-resolved polarised Fourier transform infrared spectroscopy"@en-gb ,
+                               "time-resolved polarized Fourier transform infrared spectrometry"@en-gb ,
+                               "time-resolved polarised Fourier transform infrared spectrometry" ,
+                               "time-resolved polarized FTIR" ,
+                               "time-resolved polarized Fourier transform infra-red absorption spectroscopy" ,
+                               "time-resolved polarized Fourier transform infra-red spectrometry" ,
+                               "time-resolved polarized Fourier transform infrared (FT-IR) spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs a single pulse of polarized radiation from the infrared region (0.78-1000 µm) and the spectrum obtained, recorded as a function of time, is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "time-resolved polarised Fourier transform infrared spectroscopy"@en-gb ,
+                                "time-resolved polarized Fourier transform infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001789
+af-p:AFP_0001789 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000780 ;
+                 skos:altLabel "IRAS" ,
+                               "IRRAS" ,
+                               "RA-IR" ,
+                               "RAIRS" ,
+                               "infrared reflection absorption spectrometry" ,
+                               "infrared reflection absorption spectroscopy" ,
+                               "reflection absorption (RA) IR" ,
+                               "reflection absorption infra-red spectrometry" ,
+                               "reflection absorption infrared spectrometry" ,
+                               "reflection absorption infrared spectroscopy" ,
+                               "reflection-absorption infrared spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the absorption and reflection of low incident angle infrared light by the surface molecules of a highly reflective or polished sample is measured. [CHMO]" ;
+                 skos:prefLabel "reflection-absorption infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001795
+af-p:AFP_0001795 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000978 ,
+                                 af-p:AFP_0001787 ;
+                 skos:altLabel "P-FTIR" ,
+                               "P/FTIR" ,
+                               "PFTIR" ,
+                               "Py-FTIR" ,
+                               "Py/FTIR" ,
+                               "py-FTIR" ,
+                               "pyrolysis FTIR" ,
+                               "pyrolysis-FTIR" ;
+                 skos:definition "A type of spectroscopy where the sample is first chemically degraded by heating then its absorption of radiation from the infrared region (0.78-1000 µm) is measured and the spectrum obtained is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "pyrolysis Fourier transform infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001833
+af-p:AFP_0001833 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001566 ;
+                 skos:altLabel "FT-FIR" ,
+                               "FT-FIR spectrometry" ,
+                               "FT-FIR spectroscopy" ,
+                               "FT-far-IR" ,
+                               "FT-far-IR spectroscopy" ,
+                               "FT/FIR" ,
+                               "FTFIR" ,
+                               "Fourier transform far infrared spectroscopy" ,
+                               "Fourier transform far-infra-red spectrometry" ,
+                               "Fourier transform far-infrared spectrometry" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation in the far infrared region (15-1000 µm) and the spectrum obtained is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "Fourier transform far-infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001942
+af-p:AFP_0001942 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001943 ;
+                 skos:altLabel "diffuse reflectance IR spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the diffuse reflection of infrared radiation by a sample is measured. [CHMO]" ;
+                 skos:prefLabel "diffuse reflectance infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001943
+af-p:AFP_0001943 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000780 ;
+                 skos:altLabel "IR reflectance spectrometry" ,
+                               "IR reflectance spectroscopy" ,
+                               "IR reflection spectroscopy" ,
+                               "infra-red reflectance spectrometry" ,
+                               "infrared reflectance spectrometry" ,
+                               "infrared reflectance spectroscopy" ,
+                               "infrared reflection spectroscopy" ;
+                 skos:definition "A type of vibrational spectroscopy where the reflection or scattering of infrared radiation (0.78-1000 µm) by a sample is detected. [CHMO]" ;
+                 skos:prefLabel "infrared reflectance spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001981
+af-p:AFP_0001981 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001942 ;
+                 skos:altLabel "DRIFT" ,
+                               "DRIFTS" ,
+                               "diffuse reflectance infra-red Fourier transform spectrometry" ,
+                               "diffuse reflectance infrared Fourier transform spectrometry" ,
+                               "diffuse reflectance infrared Fourier transform spectroscopy" ,
+                               "diffuse reflectance infrared spectroscopy by Fourier transform" ;
+                 skos:definition "A type of spectroscopy where the diffuse reflection of a single pulse of infrared radiation by a sample is measured, and the spectrum obtained is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "diffuse reflectance infrared Fourier transform spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002001
+af-p:AFP_0002001 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "rapid scan IR" ,
+                               "rapid scan IR spectroscopy" ,
+                               "rapid scan infrared absorption spectroscopy" ,
+                               "rapid scan infrared spectroscopy" ,
+                               "rapid-scan IR" ,
+                               "rapid-scan IR spectroscopy" ,
+                               "rapid-scan infrared spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation from the infrared region (0.78-1000 µm). Spectra are collected at a rate of approx. 0.05 s per spectrum. [CHMO]" ;
+                 skos:prefLabel "rapid-scan infrared absorption spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002067
+af-p:AFP_0002067 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001789 ;
+                 skos:altLabel "PM-IRRAS" ,
+                               "polarization modulation infrared reflection adsorption spectroscopy" ,
+                               "polarization modulation-infrared reflection-adsorption spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the differential absorption and reflection of low incident angle p- and s-polarized infrared light by the surface molecules of a highly reflective or polished sample is measured. The ultra-thin layers on metal surfaces interact with the p-polarized component of light, but not with the s-polarized component. [CHMO]" ;
+                 skos:prefLabel "polarization modulation infrared reflection-adsorption spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002114
+af-p:AFP_0002114 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000232 ;
+                 skos:altLabel "MIRES" ,
+                               "mid-infra-red emission spectrometry" ,
+                               "mid-infrared emission spectrometry" ,
+                               "mid-infrared emission spectroscopy" ;
+                 skos:definition "A type of vibrational spectroscopy where the sample is heated and the mid infrared radiation (0.78-1000 µm) emitted during cooling is detected. [CHMO]" ;
+                 skos:prefLabel "mid-infrared emission spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002145
+af-p:AFP_0002145 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001789 ;
+                 skos:altLabel "FT-IRAS" ,
+                               "FT-IRRAS" ,
+                               "RA FT-IR" ,
+                               "RA FTIR" ,
+                               "RA-FTIR" ,
+                               "reflection absorption (RA) FT-IR" ,
+                               "reflection absorption Fourier transform infra-red spectrometry" ,
+                               "reflection absorption Fourier transform infrared spectrometry" ,
+                               "reflection absorption Fourier transform infrared spectroscopy" ,
+                               "reflection-absorption Fourier transform infrared spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the absorption and reflection of low-incident-angle infrared light by the surface molecules of a highly reflective or polished sample is measured. The  sample absorbs a single pulse of radiation and the spectrum obtained is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "Fourier transform infrared reflection absorption spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002159
+af-p:AFP_0002159 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000232 ;
+                 skos:altLabel "FIRE" ,
+                               "flame infra-red emission spectrometry" ,
+                               "flame infrared emission spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample is heated in a flame and the infrared radiation (0.78-1000 µm) emitted during cooling is detected. [CHMO]" ;
+                 skos:prefLabel "flame infrared emission spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002177
+af-p:AFP_0002177 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "ultra rapid scan IR" ,
+                               "ultra rapid scan IR spectroscopy" ,
+                               "ultra rapid scan infrared absorption spectroscopy" ,
+                               "ultra rapid scan infrared spectroscopy" ,
+                               "ultra-rapid-scan IR" ,
+                               "ultra-rapid-scan IR spectroscopy" ,
+                               "ultra-rapid-scan infrared spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation from the infrared region  (0.78-1000 µm). Spectra are collected at a rate of approx. 0.001 s per spectrum. [CHMO]" ;
+                 skos:prefLabel "ultra-rapid-scan infrared absorption spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002227
+af-p:AFP_0002227 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "IRMPD spectrometry" ,
+                               "IRMPD spectroscopy" ,
+                               "infra-red multiphoton dissociation spectrometry" ,
+                               "infrared multiphoton dissociation spectrometry" ,
+                               "infrared multiphoton dissociation spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation from the infrared region (0.78-1000 µm) with sufficient energy to cause photodissociation by the absorption of two or more photons. [CHMO]" ;
+                 skos:prefLabel "infrared multiphoton dissociation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002346
+af-p:AFP_0002346 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001787 ;
+                 skos:altLabel "polarised FTIR"@en-gb ,
+                               "polarised Fourier transform infra-red spectrometry"@en-gb ,
+                               "polarised Fourier transform infrared (FT-IR) spectroscopy"@en-gb ,
+                               "polarised Fourier transform infrared spectrometry"@en-gb ,
+                               "polarised Fourier transform infrared spectroscopy"@en-gb ,
+                               "polarised Fourier transform infra-red absorption spectroscopy" ,
+                               "polarized FTIR" ,
+                               "polarized Fourier transform infra-red absorption spectroscopy" ,
+                               "polarized Fourier transform infra-red spectrometry" ,
+                               "polarized Fourier transform infrared (FT-IR) spectroscopy" ,
+                               "polarized Fourier transform infrared spectrometry" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs a single pulse of polarized radiation from the infrared region (0.78-1000 µm) and the spectrum obtained is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "polarised Fourier transform infrared spectroscopy"@en-gb ,
+                                "polarized Fourier transform infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002440
+af-p:AFP_0002440 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001787 ;
+                 skos:altLabel "S-FTIR" ,
+                               "S-FTIR spectrometry" ,
+                               "S-FTIR spectroscopy" ,
+                               "SFT-IR" ,
+                               "SFTIR" ,
+                               "synchrotron Fourier transform infra-red absorption spectroscopy" ,
+                               "synchrotron Fourier transform infra-red spectrometry" ,
+                               "synchrotron Fourier transform infrared (FT-IR) spectroscopy" ,
+                               "synchrotron Fourier transform infrared (S-FTIR)" ,
+                               "synchrotron Fourier transform infrared spectrometry" ,
+                               "synchrotron Fourier transform infrared spectroscopy" ,
+                               "synchrotron-based FTIR" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs a single pulse of radiation from the infrared region (0.78-1000 µm), produced in a synchrotron, and the spectrum obtained is subject to a Fourier transform. [CHMO]" ;
+                 skos:prefLabel "synchrotron Fourier transform infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002447
+af-p:AFP_0002447 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002016 ;
+                 skos:altLabel "infrared microanalysis" ,
+                               "micro infra-red spectrometry" ,
+                               "micro-infrared spectrometry" ,
+                               "micro-infrared spectroscopy" ;
+                 skos:definition "A type of spectroscopy where the sample absorbs radiation from a finely focused beam (<10 µm diameter) of infrared light  (0.78-1000 µm). [CHMO]" ;
+                 skos:prefLabel "micro infrared spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002459
+af-p:AFP_0002459 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000156 ;
+                 skos:altLabel "ESFG spectroscopy" ,
+                               "electronic sum frequency generation spectroscopy" ,
+                               "electronic sum-frequency generation (ESFG) spectroscopy" ;
+                 skos:definition "A method for generating surface-specific electronic spectra by mixing two light beams at a surface and detecting the output beam, which has frequency equal to the sum of the two input frequencies. [CHMO]" ;
+                 skos:prefLabel "electronic sum-frequency generation spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000224
+af-r:AFR_0000224 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000403 ;
+                 skos:altLabel "FT-FIR spectra" ,
+                               "FT-FIR spectrum" ,
+                               "FT-far-IR spectra" ,
+                               "FT/FIR spectra" ,
+                               "FT/FIR spectrum" ,
+                               "FTFIR spectra" ,
+                               "FTFIR spectrum" ,
+                               "Fourier transform far infrared spectrum" ,
+                               "Fourier transform far-infra-red spectrum" ,
+                               "Fourier transform far-infrared spectra" ,
+                               "Fourier transform far-infrared spectrum" ;
+                 skos:changeNote "2024-09-12 Add missing [CHMO] attribution." ;
+                 skos:definition "A plot of absorbance or emission vs. wavelength/wavenumber/frequency obtained through a Fourier transform of the times series of the absorption of a sample that has been excited by an far-infrared-frequency pulse. [CHMO]" ;
+                 skos:prefLabel "Fourier transform far-infrared spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000362
+af-r:AFR_0000362 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000251 ;
+                 skos:altLabel "FT-IR spectra" ,
+                               "FT-IR spectrum" ,
+                               "FTIR spectra" ,
+                               "FTIR spectrum" ,
+                               "Fourier transform infrared spectra" ;
+                 skos:definition "A plot of absorbance or emission vs. wavelength/wavenumber/frequency obtained through a Fourier transform of the times series of the absorption of a sample that has been excited by an infrared-frequency pulse. [CHMO]" ;
+                 skos:prefLabel "Fourier transform infrared spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000394
+af-r:AFR_0000394 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000366 ;
+                 skos:altLabel "ATR FT-IR spectra" ,
+                               "ATR FT-IR spectrum" ,
+                               "ATR FTIR spectra" ,
+                               "ATR FTIR spectrum" ,
+                               "ATR-FTIR spectra" ,
+                               "ATR-FTIR spectrum" ,
+                               "Fourier transform infrared attenuated total reflectance (FTIR-ATR) spectra" ,
+                               "Fourier transform infrared attenuated total reflectance (FTIR-ATR) spectrum" ,
+                               "Fourier transform infrared attenuated total reflectance spectra" ,
+                               "Fourier transform infrared attenuated total reflectance spectrum" ,
+                               "Fourier transform infrared attenuated total reflection (FTIR-ATR) spectra" ,
+                               "Fourier transform infrared attenuated total reflection (FTIR-ATR) spectrum" ,
+                               "attenuated total reflectance Fourier transform infra-red spectra" ,
+                               "attenuated total reflectance Fourier transform infra-red spectrum" ,
+                               "attenuated total reflectance Fourier transform infrared spectra" ,
+                               "attenuated total reflectance Fourier transform infrared spectrum" ,
+                               "attenuated total reflection-Fourier transform infrared (ATR-FTIR) spectra" ,
+                               "attenuated total reflection-Fourier transform infrared (ATR-FTIR) spectrum" ;
+                 skos:definition "A plot of absorbance or emission vs. wavelength/wavenumber/frequency obtained through a Fourier transform of the times series of the absorption or emission of a sample that has been excited by an infrared-frequency pulse. The infrared light is introduced into a prism at an angle exceeding the critical angle for internal reflection. This produces an evanescent wave at the reflecting surface (a surface which is transparent to infrared such as thallium bromide) on which the sample is supported. The distortion of the evanescent wave by the sample is measured. [CHMO]" ;
+                 skos:prefLabel "attenuated total reflectance Fourier transform infrared spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000500
+af-r:AFR_0000500 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000362 ;
+                 skos:altLabel "S-FTIR spectra" ,
+                               "S-FTIR spectrum" ,
+                               "SFT-IR spectra" ,
+                               "SFT-IR spectrum" ,
+                               "SFTIR spectra" ,
+                               "SFTIR spectrum" ,
+                               "synchrotron Fourier transform infrared spectra" ,
+                               "synchrotron-based FTIR spectra" ;
+                 skos:definition "A plot of absorbance or emission vs. wavelength/wavenumber/frequency obtained through a Fourier transform of the times series of the absorption or emission of a sample that has been excited by an infrared-frequency pulse generated in a synchrotron. [CHMO]" ;
+                 skos:prefLabel "synchrotron Fourier transform infrared spectrum" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000778
+af-r:AFR_0000778 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000024 ;
+                 skos:altLabel "infrared band assignment" ,
+                               "infrared band assignment target" ,
+                               "infrared spectrum peak assignment" ;
+                 skos:definition "The description of the specific part of a chemical moiety that is assigned to an infrared spectrum peak. [Allotrope]" ;
+                 skos:prefLabel "infrared spectrum peak assignment target" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2020 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2020 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<Alignment>
+<xml>yes</xml>
+<level>0</level>
+<type>??</type>
+<onto1>Optional.of(http://w3id.org/animl/)</onto1>
+<onto2>Optional.of(http://w3id.org/animl/)</onto2>
+<uri1>Optional.of(http://w3id.org/animl/)</uri1>
+<uri2>Optional.of(http://w3id.org/animl/)</uri2>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Series"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Reference"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000258"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Reference"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002008"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/ContainerType"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001987"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Document"/>
+		<entity2 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003385"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>&gt;</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Method"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001606"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Method"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001501"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Function"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000139"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Function"/>
+		<entity2 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Signature"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000438"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Signature"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001963"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/ReferenceSet"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000022"/>
+		<measure rdf:datatype="xsd:float">0.46</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Experiment"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/ParameterSpecification"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
+		<measure rdf:datatype="xsd:float">0.77</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/PlotScale"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000961"/>
+		<measure rdf:datatype="xsd:float">0.27</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Units"/>
+		<entity2 rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Role"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000012"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/ItemSpecification"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001638"/>
+		<measure rdf:datatype="xsd:float">0.77</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Specification"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
+		<measure rdf:datatype="xsd:float">0.53</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Specification"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001532"/>
+		<measure rdf:datatype="xsd:float">0.81</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Parameter"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Parameter"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000478"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/ExperimentStep"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002010"/>
+		<measure rdf:datatype="xsd:float">0.47</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/SampleSet"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/DataPoint"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Agent"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000448"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Agent"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0003144"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Change"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000136"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Change"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000127"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000167"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000161"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+		<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Container"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0000407"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>&gt;</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000166"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>&gt;</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/Container"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003306"/>
+		<measure rdf:datatype="xsd:float">0.46</measure>
+		<relation>&gt;</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size"/>
+		<entity2 rdf:resource="http://purl.allotrope.org/ontologies/property#AFX_0000604"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://w3id.org/animl/hasUnits"/>
+		<entity2 rdf:resource="http://qudt.org/schema/qudt#unit"/>
+		<measure rdf:datatype="xsd:float">0.95</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
+		<entity2 rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"/>
+		<entity2 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+</Alignment>
+</rdf:RDF>

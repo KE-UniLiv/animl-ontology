@@ -1,0 +1,326 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/differential-scanning-calorimetry#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/differential-scanning-calorimetry#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/differential-scanning-calorimetry> rdf:type owl:Ontology ;
+                                                                                                    owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/differential-scanning-calorimetry> ;
+                                                                                                    owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ,
+                                                                                                                <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/calibration> ,
+                                                                                                                <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/thermal-analysis> ;
+                                                                                                    dct:contributor <http://www.allotrope.org> ;
+                                                                                                    dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                                    dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                                    dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                                    dct:publisher <http://www.allotrope.org> ;
+                                                                                                    dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                                               <http://purl.allotrope.org/voc/copyright> ;
+                                                                                                    dct:rightsHolder <http://www.allotrope.org> ;
+                                                                                                    dct:title "AFO Differential Scanning Calorimetry Domain Ontology (REC/2025/06)" ;
+                                                                                                    owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/differential-scanning-calorimetry> ;
+                                                                                                    owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000733
+af-e:AFE_0000733 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000023 ;
+                 skos:definition "A device that is used to measure the heat of chemical reactions or physical changes for both a sample and a reference. [CHMO]" ;
+                 skos:prefLabel "differential scanning calorimeter" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001622
+af-e:AFE_0001622 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001623 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:changeNote "2020-03-23 Fixed definition. [Allotrope]" ;
+                 skos:definition "A differential scanning calorimetry pan is a pan for use in a differential scanning calorimeter that contains the sample under investigation. [Allotrope]" ;
+                 skos:example "TZero pan, TZero hermetic pan" ;
+                 skos:prefLabel "differential scanning calorimetry pan" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003763
+af-p:AFP_0003763 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002124 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                   owl:someValuesFrom af-p:AFP_0002124
+                                 ] ;
+                 skos:altLabel "DSC cycle" ,
+                               "cycle for DSC" ;
+                 skos:definition "A cycle in differential scanning calorimetry is a segment of the calorimetry run with its own specific heating ramp. [Allotrope]" ;
+                 skos:prefLabel "differential scanning calorimetry cycle" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000632
+af-r:AFR_0000632 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000633 ;
+                 skos:definition "A melting peak results from energy transfer due to the transition from the solid to the liquid phase. [Allotrope]" ;
+                 skos:prefLabel "melting peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000633
+af-r:AFR_0000633 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000647 ;
+                 skos:definition "A transition peak is a peak in the differential scanning calorimetry curve that results from a structural transition of the sample. [Allotrope]" ;
+                 skos:prefLabel "transition peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000647
+af-r:AFR_0000647 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002013 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                   owl:someValuesFrom af-r:AFR_0000007
+                                 ] ;
+                 skos:definition "A  differential scanning calorimetry peak is a peak that is the result of a differential scanning calorimetry (DSC) and part of a DSC curve. [Allotrope]" ;
+                 skos:prefLabel "differential scanning calorimetry peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000682
+af-r:AFR_0000682 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000207 ;
+                 skos:altLabel "DSC result" ;
+                 skos:definition "The differential scanning calorimetry result is the result of a DSC measurement. [Allotrope]" ;
+                 skos:prefLabel "differential scanning calorimetry result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000761
+af-r:AFR_0000761 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000633 ;
+                 skos:definition "A glass transition peak is a peak of the differential scanning calorimetry curve that results from the glass transition of a sample. [Allotrope]" ;
+                 skos:prefLabel "glass transition peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000776
+af-r:AFR_0000776 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000647 ;
+                 skos:changeNote "2020-03-23 Changed definition. [Allotrope]" ;
+                 skos:definition "An exothermic peak is a differential scanning calorimetry peak resulting from energy transfer from the sample heating cell to the surrounding. [Allotrope]" ;
+                 skos:prefLabel "exothermic peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000780
+af-r:AFR_0000780 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000647 ;
+                 skos:changeNote "2020-03-23 Changed definition. [Allotrope]" ;
+                 skos:definition "An endothermic peak is a differential scanning calorimetry peak peak resulting from energy transfer to the sample heating cell. [Allotrope]" ;
+                 skos:prefLabel "endothermic peak" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001988
+af-r:AFR_0001988 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001584 ;
+                 dct:source <https://en.wikipedia.org/wiki/Glass_transition> ;
+                 skos:definition "A glass transition temperature (datum) is a quantity facet that quantifies the temperature at which a glass transition occurs. The glass transition, is the gradual and reversible transition in amorphous materials (or in amorphous regions within semicrystalline materials) from a hard and relatively brittle \"glassy\" state into a viscous or rubbery state as the temperature is increased. [Wikipedia]" ;
+                 skos:prefLabel "glass transition temperature" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001989
+af-r:AFR_0001989 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002022 ;
+                 skos:altLabel "heat capacity" ;
+                 skos:definition "A heat capacity (dsc) is a quantity facet that quantifies the difference in heat capacity of a material before and after its glass transition. [Allotrope]" ;
+                 skos:prefLabel "heat capacity (dsc)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001990
+af-r:AFR_0001990 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002021 ;
+                 skos:definition "Transition enthalpy is a quantity facet that quantifies some calorimetric enthalpy change from the area of the differential scanning calorimetry peak. [Allotrope]" ;
+                 skos:prefLabel "transition enthalpy" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002013
+af-r:AFR_0002013 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000524
+af-rl:AFRL_0000524 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000022 ,
+                                   af-rl:AFRL_0000526 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0000081> ;
+                                     owl:someValuesFrom af-e:AFE_0001622
+                                   ] ;
+                   skos:altLabel "reference pan" ;
+                   skos:definition "A reference pan role is the role of the measurement pan realized in a DSC measurement that is without sample content. [Allotrope]" ;
+                   skos:prefLabel "reference pan role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000525
+af-rl:AFRL_0000525 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000526 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0000081> ;
+                                     owl:someValuesFrom af-e:AFE_0001622
+                                   ] ;
+                   skos:altLabel "sample pan" ;
+                   skos:definition "A sample pan role is the role of the measurement pan realized in a DSC measurement that contains the sample. [Allotrope]" ;
+                   skos:prefLabel "sample pan role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000526
+af-rl:AFRL_0000526 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000023>
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                                owl:someValuesFrom af-p:AFP_0002124
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   af-x:AFX_0002798 "true"^^xsd:boolean ;
+                   skos:altLabel "DSC role" ;
+                   skos:definition "A differential calorimetry role is a role of a material entity realized in a differential scanning calorimetry process. [Allotrope]" ;
+                   skos:prefLabel "differential scanning calorimetry role" .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dct:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

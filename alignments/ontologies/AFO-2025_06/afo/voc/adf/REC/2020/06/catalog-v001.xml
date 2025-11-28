@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE catalog[
+<!ELEMENT catalog (uri|group)+>
+<!ELEMENT group (uri)+>
+<!ELEMENT uri EMPTY>
+<!ATTLIST catalog
+	xmlns CDATA #IMPLIED
+	prefer (system|public) #IMPLIED
+>
+<!ATTLIST uri
+	id ID #IMPLIED
+	name CDATA #REQUIRED
+	uri CDATA #REQUIRED
+>
+<!ATTLIST group
+	id ID #IMPLIED
+	prefer (system|public) #IMPLIED
+	xml:base CDATA #IMPLIED
+>
+]>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<group id="import" prefer="public" xml:base="">
+		<uri id="id22" name="http://purl.allotrope.org/voc/skos/REC/2018/10/skos" uri="../../../../skos/REC/2018/10/skos.ttl"/>
+	</group>
+	<group id="ADF-REC" prefer="public" xml:base="">
+		<uri id="id67" name="http://purl.allotrope.org/voc/adf/REC/2020/06/datapackage" uri="datapackage.ttl"/>
+		<uri id="id68" name="http://purl.allotrope.org/voc/adf/REC/2020/06/graph" uri="graph.ttl"/>
+	</group>
+</catalog>

@@ -1,0 +1,691 @@
+@prefix : <http://purl.allotrope.org/voc/adf/REC/2024/12/datacube#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <http://qudt.org/1.1/vocab/unit#> .
+@prefix vaem: <http://www.linkedmodel.org/1.2/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix dtype: <http://www.linkedmodel.org/1.0/schema/dtype#> .
+@prefix adf-dc: <http://purl.allotrope.org/ontologies/datacube#> .
+@prefix dimension: <http://qudt.org/1.1/schema/dimension#> .
+@prefix dimensionalunit: <http://qudt.org/1.1/vocab/dimensionalunit#> .
+@base <http://purl.allotrope.org/voc/adf/REC/2024/12/datacube#> .
+
+<http://purl.allotrope.org/voc/adf/REC/2024/12/datacube> rdf:type owl:Ontology ;
+                                                          owl:versionIRI <http://purl.allotrope.org/voc/adf/REC/2024/12/datacube> ;
+                                                          owl:imports <http://purl.allotrope.org/voc/qb/REC/2018/10/cube> ;
+                                                          dct:contributor <http://www.allotrope.org> ;
+                                                          dct:description "The Allotrope Data Cube Ontology is an extension of the RDF Data Cube Vocabulary." ;
+                                                          dct:issued "2024-12-18T12:00:00Z"^^xsd:dateTime ;
+                                                          dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                          dct:modified "2024-12-08T12:00:00Z"^^xsd:dateTime ;
+                                                          dct:publisher <http://www.allotrope.org> ;
+                                                          dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                     <http://purl.allotrope.org/voc/copyright> ;
+                                                          dct:title "The Allotrope Data Cube Ontology (REC/2024/12)" ;
+                                                          rdfs:label "The Allotrope Data Cube Ontology (REC/2024/12)" ;
+                                                          owl:priorVersion <http://purl.allotrope.org/voc/adf/REC/2020/06/datacube> ;
+                                                          owl:versionInfo "REC/2024/12" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube#componentDataType
+adf-dc:componentDataType rdf:type owl:AnnotationProperty ;
+                         rdfs:comment "Relates a qb:ComponentSpecification with the type of values comprised by the component. Examples are XSD data types such as xsd:integer or xsd:double, rdf:Resource and instances of sh:Shape. [Allotrope]" ;
+                         rdfs:label "component data type" ;
+                         skos:definition "Relates a qb:ComponentSpecification with the type of values comprised by the component. Examples are XSD data types such as xsd:integer or xsd:double, rdf:Resource and instances of sh:Shape. [Allotrope]" ;
+                         skos:prefLabel "component data type" ;
+                         rdfs:domain qb:ComponentSpecification .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#observationType
+adf-dc:observationType rdf:type owl:AnnotationProperty ;
+                       rdfs:comment "Links a cube's nD data point (qb:Observation) to a class the data point is a representation of. [Allotrope]" ;
+                       rdfs:label "observation type" ;
+                       skos:definition "Links a cube's nD data point (qb:Observation) to a class the data point is a representation of. [Allotrope]" ;
+                       skos:example "An observation represents a peak." ;
+                       skos:prefLabel "observation type" ;
+                       rdfs:domain qb:Observation .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#parentRelation
+adf-dc:parentRelation rdf:type owl:AnnotationProperty ;
+                      rdfs:comment "A parent relation is the relation between the composite information object the cube represents and the type of the (nested) dimension. [Allotrope]" ;
+                      rdfs:label "parent relation" ;
+                      skos:definition "A parent relation is the relation between the composite information object the cube represents and the type of the (nested) dimension. [Allotrope]" ;
+                      skos:example "A cube represents a peak table where an intermediate level is a peak group. The peak group is represented by its group index in the cube, but the semantic relation between the peak table and the peak group is 'ro:member of'. [Allotrope]" ;
+                      skos:prefLabel "parent relation" ;
+                      rdfs:domain qb:ComponentSpecification .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube#dataSelection
+adf-dc:dataSelection rdf:type owl:ObjectProperty ;
+                     owl:inverseOf adf-dc:dataSelectionOf ;
+                     rdfs:domain qb:DataSet ;
+                     rdfs:range adf-dc:DataSelection ;
+                     rdfs:comment "A relation between a data set (data cube) and a data selection that was defined on the data set. [Allotrope]" ;
+                     rdfs:label "has data selection" ;
+                     skos:definition "A relation between a data set (data cube) and a data selection that was defined on the data set. [Allotrope]" ;
+                     skos:prefLabel "has data selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#dataSelectionOf
+adf-dc:dataSelectionOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain adf-dc:DataSelection ;
+                       rdfs:range qb:DataSet ;
+                       rdfs:comment "Relation between a data selection and the data cube the selection is a subset of. [Allotrope]" ;
+                       rdfs:label "data selection of" ;
+                       skos:definition "Relation between a data selection and the data cube the selection is a subset of. [Allotrope]" ;
+                       skos:prefLabel "data selection of" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#hasItem
+adf-dc:hasItem rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:comment "The relation is used e.g. by a point selection to list the different selected complex data values. [Allotrope]" ;
+               rdfs:label "has item" ;
+               skos:definition "The relation is used e.g. by a point selection to list the different selected complex data values. [Allotrope]" ;
+               skos:prefLabel "has item" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#maximum
+adf-dc:maximum rdf:type owl:ObjectProperty ;
+               rdfs:domain adf-dc:ComponentSelection ;
+               rdfs:comment "A relation to define a maximum complex data value (such as a quantity value) of a component selection. [Allotrope]" ;
+               rdfs:label "maximum" ;
+               skos:definition "A relation to define a maximum complex data value (such as a quantity value) of a component selection. [Allotrope]" ;
+               skos:prefLabel "maximum" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#minimum
+adf-dc:minimum rdf:type owl:ObjectProperty ;
+               rdfs:domain adf-dc:ComponentSelection ;
+               rdfs:comment "A relation to define a minimum complex data value (such as a quantity value) of a component selection. [Allotrope]" ;
+               rdfs:label "minimum" ;
+               skos:definition "A relation to define a minimum complex data value (such as a quantity value) of a component selection. [Allotrope]" ;
+               skos:prefLabel "minimum" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#orderedBy
+adf-dc:orderedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain adf-dc:OrdinalScale ;
+                 rdfs:comment "Relation that defines the order function of a component specification which are ordinal scales. [Allotrope]" ;
+                 rdfs:label "ordered by" ;
+                 skos:definition "Relation that defines the order function of a component specification which are ordinal scales. [Allotrope]" ;
+                 skos:prefLabel "ordered by" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#parentDimension
+adf-dc:parentDimension rdf:type owl:ObjectProperty ;
+                       rdfs:domain qb:ComponentSpecification ;
+                       rdfs:range qb:ComponentSpecification ;
+                       rdfs:comment "A relation between dimensions in a nested dimension structure. [Allotrope]" ;
+                       rdfs:label "parent dimension" ;
+                       skos:definition "A relation between dimensions in a nested dimension structure. [Allotrope]" ;
+                       skos:example "In a cube of a peak table with an intermediate peak group level, the group index is the parent dimension of the peak index. So to address a peak attribute stored in the cube, you need the index of a peak within a group as well as the index of the group in the peak table. [Allotrope]" ;
+                       skos:prefLabel "parent dimension" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#representedBy
+adf-dc:representedBy rdf:type owl:ObjectProperty ;
+                     rdfs:comment "An association between a dataset and its representations, e.g. as a set of HDF datasets in an ADF file. [Allotrope]" ;
+                     rdfs:label "represented by" ;
+                     skos:definition "An association between a dataset and its representations, e.g. as a set of HDF datasets in an ADF file. [Allotrope]" ;
+                     skos:prefLabel "represented by" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#scopeOn
+adf-dc:scopeOn rdf:type owl:ObjectProperty ;
+               rdfs:domain qb:ComponentSpecification ;
+               rdfs:range qb:ComponentSpecification ;
+               rdfs:comment "A relation between dimensions or measures, where a dimension or measure is a scale of the other. [Allotrope]" ;
+               rdfs:label "scale on" ;
+               skos:definition "A relation between dimensions or measures, where a dimension or measure is a scale of the other. [Allotrope]" ;
+               skos:example "A nominal scale on an index, like a peak identifier. [Allotrope]" ;
+               skos:prefLabel "scale on" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#selectionOn
+adf-dc:selectionOn rdf:type owl:ObjectProperty ;
+                   rdfs:domain adf-dc:ComponentSelection ;
+                   rdfs:range qb:ComponentSpecification ;
+                   rdfs:comment "Relates a component selection with the corresponding component specification. [Allotrope]" ;
+                   rdfs:label "selection on" ;
+                   skos:definition "Relates a component selection with the corresponding component specification. [Allotrope]" ;
+                   skos:prefLabel "selection on" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#selectionStructure
+adf-dc:selectionStructure rdf:type owl:ObjectProperty ;
+                          rdfs:domain adf-dc:DataSelection ;
+                          rdfs:range adf-dc:SelectionStructureDefinition ;
+                          rdfs:comment "Relation between a data selection and its structure definition. [Allotrope]" ;
+                          rdfs:label "selection structure" ;
+                          skos:definition "Relation between a data selection and its structure definition. [Allotrope]" ;
+                          skos:prefLabel "selection structure" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#selects
+adf-dc:selects rdf:type owl:ObjectProperty ;
+               rdfs:domain adf-dc:SelectionStructureDefinition ;
+               rdfs:range adf-dc:ComponentSelection ;
+               rdfs:comment "A relation between a selection structure definition and a component selection. [Allotrope]" ;
+               rdfs:label "selects" ;
+               skos:definition "A relation between a selection structure definition and a component selection. [Allotrope]" ;
+               skos:prefLabel "selects" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube#hasItemValue
+adf-dc:hasItemValue rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "A data value item in a collection of values. [Allotrope]" ;
+                    rdfs:label "has item value" ;
+                    rdfs:seeAlso "adf-dc:has item" ;
+                    skos:definition "A data value item in a collection of values. [Allotrope]" ;
+                    skos:prefLabel "has item value" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#maximumValue
+adf-dc:maximumValue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain adf-dc:ComponentSelection ;
+                    rdfs:comment "A relation to define a maximum data value of a component selection. [Allotrope]" ;
+                    rdfs:label "maximum value" ;
+                    rdfs:seeAlso "adf-dc:maximum" ;
+                    skos:definition "A relation to define a maximum data value of a component selection. [Allotrope]" ;
+                    skos:prefLabel "maximum value" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#minimumValue
+adf-dc:minimumValue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain adf-dc:ComponentSelection ;
+                    rdfs:comment "A relation to define a minimum data value of a component selection. [Allotrope]" ;
+                    rdfs:label "minimum value" ;
+                    rdfs:seeAlso "adf-dc:minimum" ;
+                    skos:definition "A relation to define a minimum data value of a component selection. [Allotrope]" ;
+                    skos:prefLabel "minimum value" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#order
+adf-dc:order rdf:type owl:DatatypeProperty ;
+             rdfs:comment "The order indicates a priority order and may be used in different contexts. Lower order numbers come before higher numbers, unnumbered components come last. [Allotrope]" ;
+             rdfs:label "order" ;
+             skos:definition "The order indicates a priority order and may be used in different contexts. Lower order numbers come before higher numbers, unnumbered components come last. [Allotrope]" ;
+             skos:prefLabel "order" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#propertyPath
+adf-dc:propertyPath rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "see SPARQL 1.1 property path (http://www.w3.org/TR/sparql11-query/#pp-language)" ;
+                    rdfs:label "property path" ;
+                    skos:definition "SPARQL 1.1 property path applied. [Allotrope]" ;
+                    skos:prefLabel "property path" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/datacube#Attribute
+adf-dc:Attribute rdf:type owl:Class ;
+                 rdfs:subClassOf qb:ComponentSpecification ;
+                 rdfs:comment "The specification of component properties which represent attributes of observations in the cube, e.g. unit of measurement. [Allotrope]" ;
+                 rdfs:label "attribute" ;
+                 skos:definition "The specification of component properties which represent attributes of observations in the cube, e.g. unit of measurement. [Allotrope]" ;
+                 skos:prefLabel "attribute" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#CardinalScale
+adf-dc:CardinalScale rdf:type owl:Class ;
+                     rdfs:subClassOf adf-dc:Scale ;
+                     rdfs:comment "A Cardinal scale is scale where the difference between two values can be measured and its meaning is independent of the absolute values. [Allotrope]" ;
+                     rdfs:label "cardinal scale" ;
+                     skos:definition "A Cardinal scale is scale where the difference between two values can be measured and its meaning is independent of the absolute values. [Allotrope]" ;
+                     skos:prefLabel "cardinal scale" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#ComplexValueOrder
+adf-dc:ComplexValueOrder rdf:type owl:Class ;
+                         rdfs:subClassOf adf-dc:OrderFunction ;
+                         rdfs:comment """A complex value order is an order function which is defined for component specifications with complex data types represented by shapes. It consists of a set of items each defining a property path of the shape, an order and an ordering function.
+Thus, a complex value order can be considered as a set order orders specified for property path of a shape. [Allotrope]""" ;
+                         rdfs:label "complex value order" ;
+                         skos:definition """A complex value order is an order function which is defined for component specifications with complex data types represented by shapes. It consists of a set of items each defining a property path of the shape, an order and an ordering function.
+Thus, a complex value order can be considered as a set order orders specified for property path of a shape. [Allotrope]""" ;
+                         skos:prefLabel "complex value order" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#ComponentSelection
+adf-dc:ComponentSelection rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty adf-dc:selectionOn ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onClass qb:ComponentSpecification
+                                          ] ;
+                          rdfs:comment "A component selection is a specification of a set of values of a single component specification of a data cube. [Allotrope]" ;
+                          rdfs:label "component selection" ;
+                          skos:definition "A component selection is a specification of a set of values of a single component specification of a data cube. [Allotrope]" ;
+                          skos:prefLabel "component selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#DataSelection
+adf-dc:DataSelection rdf:type owl:Class ;
+                     rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                              owl:onProperty adf-dc:dataSelectionOf ;
+                                                              owl:someValuesFrom qb:DataSet
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty adf-dc:selectionStructure ;
+                                                              owl:someValuesFrom adf-dc:SelectionStructureDefinition
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                     rdfs:comment "A data selection is a n-dimensional subset of data of a data cube. The selection can be based on the dimensions or on the measures. [Allotrope]" ;
+                     rdfs:label "data selection" ;
+                     skos:definition "A data selection is a n-dimensional subset of data of a data cube. The selection can be based on the dimensions or on the measures. [Allotrope]" ;
+                     skos:prefLabel "data selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#Dimension
+adf-dc:Dimension rdf:type owl:Class ;
+                 rdfs:subClassOf qb:ComponentSpecification ;
+                 owl:disjointWith adf-dc:Measure ;
+                 rdfs:comment "A dimension is a component specification which serves to identify observations. [Allotrope]" ,
+                              "A set of values for all the dimension components is sufficient to identify a single observation. [W3C]" ;
+                 rdfs:label "dimension" ;
+                 skos:definition "A dimension is a component specification which serves to identify observations. [Allotrope]" ;
+                 skos:prefLabel "dimension" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#DimensionSelection
+adf-dc:DimensionSelection rdf:type owl:Class ;
+                          rdfs:subClassOf adf-dc:ComponentSelection ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty adf-dc:selectionOn ;
+                                            owl:allValuesFrom adf-dc:Dimension
+                                          ] ;
+                          owl:disjointWith adf-dc:MeasureSelection ;
+                          rdfs:comment "A dimension selection is a component selection on a dimension of a data cube. [Allotrope]" ;
+                          rdfs:label "dimension selection" ;
+                          skos:definition "A dimension selection is a component selection on a dimension of a data cube. [Allotrope]" ;
+                          skos:prefLabel "dimension selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#IntervalScale
+adf-dc:IntervalScale rdf:type owl:Class ;
+                     rdfs:subClassOf adf-dc:CardinalScale ;
+                     rdfs:comment "The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has an arbitrarily-defined zero point (the freezing point of a particular substance under particular conditions), date when measured from an arbitrary epoch (such as AD) and direction measured in degrees from true or magnetic north. Ratios are not allowed since 20 °C cannot be said to be \"twice as hot\" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called \"scaled variables\", but the formal mathematical term is an affine space (in this case an affine line). [Allotrope]" ;
+                     rdfs:label "interval scale" ;
+                     skos:definition "The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has an arbitrarily-defined zero point (the freezing point of a particular substance under particular conditions), date when measured from an arbitrary epoch (such as AD) and direction measured in degrees from true or magnetic north. Ratios are not allowed since 20 °C cannot be said to be \"twice as hot\" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called \"scaled variables\", but the formal mathematical term is an affine space (in this case an affine line). [Allotrope]" ;
+                     skos:prefLabel "interval scale" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#LeftUnboundedSelection
+adf-dc:LeftUnboundedSelection rdf:type owl:Class ;
+                              rdfs:subClassOf adf-dc:ComponentSelection ,
+                                              [ rdf:type owl:Class ;
+                                                owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                owl:onProperty adf-dc:maximum ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty adf-dc:maximumValue ;
+                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                              ]
+                                                            )
+                                              ] ;
+                              owl:disjointWith adf-dc:PointSelection ,
+                                               adf-dc:RangeSelection ,
+                                               adf-dc:RightUnboundedSelection ,
+                                               adf-dc:UnboundedSelection ;
+                              rdfs:comment "A left unbounded selection is a dimension selection on a dimension which represents an ordinal scale. A left unbounded selection must define a maximum. [Allotrope]" ;
+                              rdfs:label "left unbounded selection" ;
+                              skos:definition "A left unbounded selection is a dimension selection on a dimension which represents an ordinal scale. A left unbounded selection must define a maximum. [Allotrope]" ;
+                              skos:prefLabel "left unbounded selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#LexicographicalOrder
+adf-dc:LexicographicalOrder rdf:type owl:Class ;
+                            rdfs:subClassOf adf-dc:OrderFunction ;
+                            rdfs:comment "The lexicographical order is an order function which is defined for a  qb:ComponentSpecification with component value type xsd:string. [Allotrope]" ;
+                            rdfs:label "lexicographical order" ;
+                            skos:definition "The lexicographical order is an order function which is defined for a  qb:ComponentSpecification with component value type xsd:string. [Allotrope]" ;
+                            skos:prefLabel "lexicographical order" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#Measure
+adf-dc:Measure rdf:type owl:Class ;
+               rdfs:subClassOf qb:ComponentSpecification ;
+               rdfs:comment "A measure is a component specification which represent the phenomenon being observed. [W3C]" ;
+               rdfs:label "measure" ;
+               skos:definition "A measure is a component specification which represent the phenomenon being observed. [W3C]" ;
+               skos:prefLabel "measure" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#MeasureSelection
+adf-dc:MeasureSelection rdf:type owl:Class ;
+                        rdfs:subClassOf adf-dc:ComponentSelection ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty adf-dc:selectionOn ;
+                                          owl:allValuesFrom adf-dc:Measure
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty adf-dc:propertyPath ;
+                                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
+                                        ] ;
+                        rdfs:comment "A measure selection is a component selection on a measure of a data cube. [Allotrope]" ;
+                        rdfs:label "measure selection" ;
+                        skos:definition "A measure selection is a component selection on a measure of a data cube. [Allotrope]" ;
+                        skos:prefLabel "measure selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#NativeOrder
+adf-dc:NativeOrder rdf:type owl:Class ;
+                   rdfs:subClassOf adf-dc:OrderFunction ;
+                   rdfs:comment "The native order is the total order of real numbers or subsets thereof if component specifications refer to xsd:integer, xsd:decimal, xsd:double, xsd:float. The native order for timestamps and durations (xsd:dateTime, xsd:date, xsd:duration) are in increasing time and the native order of Booleans (xsd:boolean) are false is less than true. [Allotrope]" ;
+                   rdfs:label "native order" ;
+                   skos:definition "The native order is the total order of real numbers or subsets thereof if component specifications refer to xsd:integer, xsd:decimal, xsd:double, xsd:float. The native order for timestamps and durations (xsd:dateTime, xsd:date, xsd:duration) are in increasing time and the native order of Booleans (xsd:boolean) are false is less than true. [Allotrope]" ;
+                   skos:prefLabel "native order" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#NominalScale
+adf-dc:NominalScale rdf:type owl:Class ;
+                    rdfs:subClassOf adf-dc:Scale ;
+                    rdfs:comment "The nominal type differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship. [Wikipedia]" ;
+                    rdfs:label "nominal scale" ;
+                    skos:definition "The nominal type differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship. [Wikipedia]" ;
+                    skos:prefLabel "nominal scale" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#OrderFunction
+adf-dc:OrderFunction rdf:type owl:Class ;
+                     rdfs:comment "An order function specifies the comparison of values for a component specification. [Allotrope]" ;
+                     rdfs:label "order function" ;
+                     skos:definition "An order function specifies the comparison of values for a component specification. [Allotrope]" ;
+                     skos:prefLabel "order function" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#OrdinalScale
+adf-dc:OrdinalScale rdf:type owl:Class ;
+                    rdfs:subClassOf adf-dc:Scale ;
+                    rdfs:comment "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion. [Wikipedia]" ;
+                    rdfs:label "ordinal scale" ;
+                    skos:definition "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion. [Wikipedia]" ;
+                    skos:prefLabel "ordinal scale" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#PointSelection
+adf-dc:PointSelection rdf:type owl:Class ;
+                      rdfs:subClassOf adf-dc:ComponentSelection ,
+                                      [ rdf:type owl:Class ;
+                                        owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                        owl:onProperty adf-dc:hasItem ;
+                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty adf-dc:hasItemValue ;
+                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                      ]
+                                                    )
+                                      ] ;
+                      owl:disjointWith adf-dc:RangeSelection ,
+                                       adf-dc:RightUnboundedSelection ,
+                                       adf-dc:UnboundedSelection ;
+                      rdfs:comment "A point selection is a dimension selection on a dimension which represents a nominal scale. [Allotrope]" ;
+                      rdfs:label "point selection" ;
+                      skos:definition "A point selection is a dimension selection on a dimension which represents a nominal scale. [Allotrope]" ;
+                      skos:prefLabel "point selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#QuantityValueOrder
+adf-dc:QuantityValueOrder rdf:type owl:Class ;
+                          rdfs:subClassOf adf-dc:OrderFunction ;
+                          rdfs:comment "The quantity value order is a order function which is defined for instances of qudt:QuantityValue which describe values with the same underlying quantity kind. [Allotrope]" ;
+                          rdfs:label "quantity value order" ;
+                          skos:definition "The quantity value order is a order function which is defined for instances of qudt:QuantityValue which describe values with the same underlying quantity kind. [Allotrope]" ;
+                          skos:prefLabel "quantity value order" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#RangeSelection
+adf-dc:RangeSelection rdf:type owl:Class ;
+                      rdfs:subClassOf adf-dc:ComponentSelection ,
+                                      [ rdf:type owl:Class ;
+                                        owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty adf-dc:maximum ;
+                                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty adf-dc:minimum ;
+                                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty adf-dc:maximumValue ;
+                                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty adf-dc:minimumValue ;
+                                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                                    )
+                                      ] ;
+                      owl:disjointWith adf-dc:RightUnboundedSelection ,
+                                       adf-dc:UnboundedSelection ;
+                      rdfs:comment "A range selection is a dimension selection on a dimension which represents an ordinal scale. A range selection must define minimum and maximum. [Allotrope]" ;
+                      rdfs:label "range selection" ;
+                      skos:definition "A range selection is a dimension selection on a dimension which represents an ordinal scale. A range selection must define minimum and maximum. [Allotrope]" ;
+                      skos:prefLabel "range selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#RatioScale
+adf-dc:RatioScale rdf:type owl:Class ;
+                  rdfs:subClassOf adf-dc:CardinalScale ;
+                  rdfs:comment "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. Ratios are allowed because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero. [Wikipedia]" ;
+                  rdfs:label "ratio scale" ;
+                  skos:definition "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. Ratios are allowed because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero. [Wikipedia]" ;
+                  skos:prefLabel "ratio scale" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#RightUnboundedSelection
+adf-dc:RightUnboundedSelection rdf:type owl:Class ;
+                               rdfs:subClassOf adf-dc:ComponentSelection ,
+                                               [ rdf:type owl:Class ;
+                                                 owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty adf-dc:minimum ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ]
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty adf-dc:minimumValue ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ]
+                                                             )
+                                               ] ;
+                               owl:disjointWith adf-dc:UnboundedSelection ;
+                               rdfs:comment "A right unbounded selection is a dimension selection on a dimension which represents an ordinal scale. A right unbounded selection must define a minimum. [Allotrope]" ;
+                               rdfs:label "right unbounded selection" ;
+                               skos:definition "A right unbounded selection is a dimension selection on a dimension which represents an ordinal scale. A right unbounded selection must define a minimum. [Allotrope]" ;
+                               skos:prefLabel "right unbounded selection" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#Scale
+adf-dc:Scale rdf:type owl:Class ;
+             rdfs:comment "A scale is a categorization of types of variables. [Allotrope]" ;
+             rdfs:label "scale" ;
+             rdfs:seeAlso <http://sweet.jpl.nasa.gov/2.3/repr.owl#Scale> ;
+             skos:definition "A scale is a categorization of types of variables. [Allotrope]" ;
+             skos:prefLabel "scale" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#SelectionStructureDefinition
+adf-dc:SelectionStructureDefinition rdf:type owl:Class ;
+                                    rdfs:comment "A selection structure definition is a set of component selections on the  components of a data structure definition. [Allotrope]" ;
+                                    rdfs:label "selection structure definition" ;
+                                    skos:definition "A selection structure definition is a set of component selections on the  components of a data structure definition. [Allotrope]" ;
+                                    skos:prefLabel "selection structure definition" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#UnboundedSelection
+adf-dc:UnboundedSelection rdf:type owl:Class ;
+                          rdfs:subClassOf adf-dc:ComponentSelection ;
+                          rdfs:comment "An unbounded selection is a dimension selection which selects all values. [Allotrope]" ;
+                          rdfs:label "unbounded selection" ;
+                          skos:definition "An unbounded selection is a dimension selection which selects all values. [Allotrope]" ;
+                          skos:prefLabel "unbounded selection" .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#lexicographicalOrder
+adf-dc:lexicographicalOrder rdf:type owl:NamedIndividual ,
+                                     adf-dc:LexicographicalOrder ;
+                            rdfs:label "lexicographical order (instance)" ;
+                            skos:prefLabel "lexicographical order (instance)" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#nativeOrder
+adf-dc:nativeOrder rdf:type owl:NamedIndividual ,
+                            adf-dc:NativeOrder ;
+                   rdfs:label "native order (instance)" ;
+                   skos:prefLabel "native order (instance)" .
+
+
+###  http://purl.allotrope.org/ontologies/datacube#quantityValueOrder
+adf-dc:quantityValueOrder rdf:type owl:NamedIndividual ,
+                                   adf-dc:QuantityValueOrder ;
+                          rdfs:label "quantity value order (instance)" ;
+                          skos:prefLabel "quantity value order (instance)" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ;
+                                          dct:description "Copyright © 2015-2024 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2024 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2024 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+qb:ComponentSet rdfs:comment "Abstract class of things which reference one or more ComponentProperties. [Allotrope]" ;
+                rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
+                rdfs:label "Component set" ;
+                skos:definition "Abstract class of things which reference one or more ComponentProperties. [Allotrope]" ;
+                skos:prefLabel "Component set" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

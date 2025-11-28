@@ -1,0 +1,420 @@
+@prefix : <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix ops: <http://www.openphacts.org/units/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix af-cq: <http://purl.allotrope.org/ontologies/common/qualifier#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix afs-c: <http://purl.allotrope.org/shapes/common#> .
+@prefix afs-q: <http://purl.allotrope.org/shapes/qudt#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@prefix af-map: <http://purl.allotrope.org/ontologies/mapping#> .
+@prefix afs-dc: <http://purl.allotrope.org/shapes/datacube#> .
+@prefix afs-hr: <http://purl.allotrope.org/shapes/resources#> .
+@prefix af-math: <http://purl.allotrope.org/ontologies/math#> .
+@prefix af-ec-001: <http://purl.allotrope.org/ontologies/equipment/codelist/001#> .
+@prefix af-ec-002: <http://purl.allotrope.org/ontologies/equipment/codelist/002#> .
+@prefix af-ec-003: <http://purl.allotrope.org/ontologies/equipment/codelist/003#> .
+@prefix af-ec-004: <http://purl.allotrope.org/ontologies/equipment/codelist/004#> .
+@prefix af-ec-005: <http://purl.allotrope.org/ontologies/equipment/codelist/005#> .
+@prefix af-ec-006: <http://purl.allotrope.org/ontologies/equipment/codelist/006#> .
+@base <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system#> .
+
+<http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system> rdf:type owl:Ontology ;
+                                                                              owl:versionIRI <http://purl.allotrope.org/voc/afo/perspective/REC/2025/06/system> ;
+                                                                              owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/curation> ,
+                                                                                          <http://purl.allotrope.org/voc/bfo/REC/2018/04/bfo-2-0> ;
+                                                                              dct:contributor <http://www.allotrope.org> ;
+                                                                              dct:description "Allotrope Foundation Taxonomy of materials, roles and functions under a system perspective" ;
+                                                                              dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                              dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                              dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                              dct:publisher <http://www.allotrope.org> ;
+                                                                              dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                         <http://purl.allotrope.org/voc/copyright> ;
+                                                                              dct:rightsHolder <http://www.allotrope.org> ;
+                                                                              dct:title "AFT System - Perspective (REC/2025/06)" ;
+                                                                              void:feature <http://www.w3.org/ns/formats/Turtle> ;
+                                                                              owl:priorVersion <http://purl.allotrope.org/voc/afo/perspective/REC/2025/03/system> ;
+                                                                              owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://rdfs.org/ns/void#feature
+void:feature rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000074
+af-e:AFE_0000074 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002158 ;
+                 skos:altLabel "system" ;
+                 skos:definition "An artificial system that is mainly composed of devices. [Allotrope]" ;
+                 skos:prefLabel "device system" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000327
+af-e:AFE_0000327 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002184 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:definition "A sensor that measures the pressure. [Allotrope]" ;
+                 skos:prefLabel "pressure sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000354
+af-e:AFE_0000354 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002099 ;
+                 af-x:AFX_0002865 <http://purl.allotrope.org/voc/afo/REC/2018/07/aft> ;
+                 skos:prefLabel "device" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000462
+af-e:AFE_0000462 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002190 ;
+                 skos:definition "A sample inlet is an in port of a measurement or separation device where sample material is passing in to the device. [Allotrope]" ;
+                 skos:prefLabel "sample inlet" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000847
+af-e:AFE_0000847 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000024 ;
+                 skos:definition "Connection point of a system through which flows material, energy or information. [Allotrope]" ;
+                 skos:example "A port is used to transfer sample from a sample container to the sample measuring device or instrument. [Allotrope]" ;
+                 skos:prefLabel "port" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002099
+af-e:AFE_0002099 rdf:type owl:Class ;
+                 rdfs:subClassOf af-m:AFM_0000275 ;
+                 af-x:AFX_0002865 <http://purl.allotrope.org/voc/afo/REC/2018/07/aft> ;
+                 skos:prefLabel "artifact" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002141
+af-e:AFE_0002141 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000074 ;
+                 skos:definition "A measuring system is a device system which has the designed function of measurement. [Allotrope]" ;
+                 skos:prefLabel "measuring system" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002153
+af-e:AFE_0002153 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000074 ;
+                 skos:altLabel "piping" ,
+                               "plumbing" ,
+                               "tubing" ;
+                 skos:definition "Plumbing is the system of pipes, tubing, drains, fittings, valves, and fixtures installed for the distribution of a liquid. [Wikipedia]" ;
+                 skos:prefLabel "plumbing system" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002158
+af-e:AFE_0002158 rdf:type owl:Class ;
+                 rdfs:subClassOf ro:_0002577 ;
+                 skos:altLabel "engineered system" ;
+                 skos:definition "A system that is created for a specific purpose. [Allotrope]" ;
+                 skos:prefLabel "artificial system" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002184
+af-e:AFE_0002184 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000354 ;
+                 dct:source "https://jcgm.bipm.org/vim/en/3.8.html" ;
+                 skos:definition "A sensor is a component of a measuring system that is directly affected by a phenomenon, body, or substance carrying a quantity to be measured. [Allotrope]" ;
+                 skos:editorialNote "A sensor can be a measuring device on its own, but is typically a part of it." ;
+                 skos:prefLabel "sensor" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002190
+af-e:AFE_0002190 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000847 ;
+                 skos:altLabel "inlet" ;
+                 skos:definition "An in port is a port in a device where material is flowing into the system boundary. [Allotrope]" ;
+                 skos:prefLabel "in port" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002191
+af-e:AFE_0002191 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000847 ;
+                 skos:altLabel "outlet" ;
+                 skos:definition "An out port is a port in a device where material is flowing out of the system boundary. [Allotrope]" ;
+                 skos:prefLabel "out port" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002192
+af-e:AFE_0002192 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000847 ;
+                 skos:altLabel "bidirectional port" ;
+                 skos:definition "An in/out port is a port where a flow is going in both directions. [Allotrope]" ;
+                 skos:prefLabel "in/out port" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002232
+af-e:AFE_0002232 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002158 ;
+                 skos:altLabel "IT system" ,
+                               "cyber-physical system" ,
+                               "information technology system" ;
+                 skos:definition "A data system is an artificial  system of physical devices and software running on it designed to process information or control. [Allotrope]" ;
+                 skos:prefLabel "data system" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002234
+af-e:AFE_0002234 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002232 ;
+                 dct:source <https://en.wikipedia.org/wiki/Laboratory_information_management_system> ;
+                 skos:altLabel "LIMS" ,
+                               "LIS" ,
+                               "LMS" ,
+                               "laboratory information system" ,
+                               "laboratory management system" ;
+                 skos:definition "A laboratory information management system is a data system used in laboratories to manage laboratory operations. [Allotrope]" ;
+                 skos:prefLabel "laboratory information management system" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0000275
+af-m:AFM_0000275 rdf:type owl:Class ;
+                 rdfs:subClassOf bfo:_0000040 ;
+                 af-x:AFX_0002865 <http://purl.allotrope.org/voc/afo/REC/2018/07/aft> ;
+                 skos:prefLabel "material" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001059
+af-m:AFM_0001059 rdf:type owl:Class ;
+                 rdfs:subClassOf ro:_0002577 ;
+                 skos:definition "A system that can be discovered in nature. [Allotrope]" ;
+                 skos:prefLabel "natural system" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001004
+af-r:AFR_0001004 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000030 ;
+                 dct:source "https://en.wikipedia.org/wiki/Signal" ;
+                 skos:definition "An information content entity that is an input or output in a process at the boundary of a system. The signal is sent or received via ports of the system. The signal conveys information about the behavior or attributes of some phenomenon. [Allotrope]" ;
+                 skos:prefLabel "signal" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001170
+af-r:AFR_0001170 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000030 ;
+                 dct:source "https://en.wikipedia.org/wiki/Noise_(electronics)" ,
+                            "https://en.wikipedia.org/wiki/Signal" ;
+                 skos:definition "An information content entity that describes the unwanted random and systematic fluctuations to the signal that limit the ability to detect a signal contribution of interest. [Allotrope]" ;
+                 skos:prefLabel "noise" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0001964
+af-r:AFR_0001964 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001004 ;
+                 dct:replaces af-e:AFE_0001830 ;
+                 skos:altLabel "signal" ;
+                 skos:changeNote "2018-07-24 Replaces af-e:AFE_0001830 [Allotrope]" ;
+                 skos:definition "A signal is information transported over an communication channel. [Allotrope]" ;
+                 skos:prefLabel "signal (communication)" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000083
+af-rl:AFRL_0000083 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   skos:altLabel "port" ;
+                   skos:definition "A site that is part of a system has the port role if a component is connected to other components or systems at the site and material or energy can flow at the site. [Allotrope]" ;
+                   skos:prefLabel "port role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000096
+af-rl:AFRL_0000096 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   skos:altLabel "component" ;
+                   skos:definition "An granular part of an object aggregate that plays the role of a system. [Allotrope]" ;
+                   skos:prefLabel "component role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000101
+af-rl:AFRL_0000101 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   skos:altLabel "system" ;
+                   skos:definition "A role of an object aggregate that consists of multiple components that are causally integrated. [Allotrope]" ;
+                   skos:prefLabel "system role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000102
+af-rl:AFRL_0000102 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000101 ;
+                   skos:definition "Parts of a system that are a building a system on its own. [Allotrope]" ;
+                   skos:prefLabel "subsystem role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000146
+af-rl:AFRL_0000146 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   skos:altLabel "bond" ;
+                   skos:definition "A system bond is the role of a site where two components are connected via their ports. At this site energy or material can flow. [Allotrope]" ;
+                   skos:prefLabel "system bond role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000147
+af-rl:AFRL_0000147 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000083 ;
+                   skos:altLabel "source" ;
+                   skos:definition "A role of a site where material or energy is outgoing from the component. [Allotrope]" ;
+                   skos:prefLabel "out-port role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000148
+af-rl:AFRL_0000148 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000083 ;
+                   skos:altLabel "target" ;
+                   skos:definition "A role of a site where material or energy is incoming into the component. [Allotrope]" ;
+                   skos:prefLabel "in-port role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000159
+af-rl:AFRL_0000159 rdf:type owl:Class ;
+                   rdfs:subClassOf bfo:_0000023 ;
+                   af-x:AFX_0002865 <http://purl.allotrope.org/voc/afo/REC/2018/07/afo> ;
+                   skos:altLabel "signal role" ;
+                   skos:definition "A signal is a role of some material entity that disposed to provide information. In the physical world, any quantity exhibiting variation in time or variation in space (such as an image) is potentially a signal that might provide information on the status of a physical system, or convey a message between observers, among other possibilities. [Allotrope, Wikipedia]" ;
+                   skos:prefLabel "physical signal role" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000275
+af-rl:AFRL_0000275 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000159 ;
+                   skos:definition "The initial response is the role of an outgoing signal as it was generated raw without signal processing from a processing component. [Allotrope]" ;
+                   skos:prefLabel "initial response" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000276
+af-rl:AFRL_0000276 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000159 ;
+                   skos:definition "The primary response is the role of an outgoing signal that serves the intended main function of the system. [Allotrope]" ;
+                   skos:prefLabel "primary response" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000335
+af-rl:AFRL_0000335 rdf:type owl:Class ;
+                   rdfs:subClassOf af-rl:AFRL_0000159 ;
+                   skos:definition "Reference signal is the role of a signal that relates to another signal as reference for comparison. [Allotrope]" ;
+                   skos:prefLabel "reference signal" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+iao:_0000030 rdf:type owl:Class ;
+             rdfs:subClassOf bfo:_0000031 .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002577
+ro:_0002577 rdf:type owl:Class ;
+            rdfs:subClassOf bfo:_0000040 ;
+            skos:definition "A material entity consisting of multiple components that are causally integrated. [RO]" ;
+            skos:prefLabel "system" .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dct:RightsStatement rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

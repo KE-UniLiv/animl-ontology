@@ -1,0 +1,349 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/qpcr#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/qpcr#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/qpcr> rdf:type owl:Ontology ;
+                                                                       owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/qpcr> ;
+                                                                       owl:imports <http://purl.allotrope.org/voc/afo/REC/2025/06/afo> ,
+                                                                                   <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/pcr> ;
+                                                                       dct:contributor <http://www.allotrope.org> ;
+                                                                       dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                       dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                       dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                       dct:publisher <http://www.allotrope.org> ;
+                                                                       dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                  <http://purl.allotrope.org/voc/copyright> ;
+                                                                       dct:rightsHolder <http://www.allotrope.org> ;
+                                                                       dct:title "AFO Quantitative Polymerase Chain Reaction (qPCR) Domain Ontology (REC/2025/06)" ;
+                                                                       owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/qpcr> ;
+                                                                       owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003775
+af-p:AFP_0003775 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003784 ;
+                 skos:altLabel "standard curve" ,
+                               "standard curve experiment" ;
+                 skos:definition "A standard curve qPCR experiment is an experiment using qPCR that measures prepared samples and standards to determine absolute DNA target quantity in samples. [Allotrope]" ;
+                 skos:prefLabel "standard curve qPCR experiment" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003776
+af-p:AFP_0003776 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003784 ;
+                 skos:altLabel "relative standard curve" ,
+                               "relative standard curve experiment" ;
+                 skos:definition "A relative standard curve qPCR experiment is an experiment using qPCR that measures relative quantity by comparison of diluted samples and known target DNA. [Allotrope]" ;
+                 skos:prefLabel "relative standard curve qPCR experiment" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003777
+af-p:AFP_0003777 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003784 ;
+                 skos:altLabel "comparative CT experiment" ,
+                               "comparative cycle threshold qPCR experiment" ,
+                               "∆∆CT" ;
+                 skos:definition "A comparative CT experiment is an experiment using qPCR that determines relative target quantity in samples.  Samples are compared to a normalized target quantity to determine relative quantity of the sample. [Allotrope]" ;
+                 skos:prefLabel "comparative CT qPCR experiment" ;
+                 skos:scopeNote "comparative CT" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003778
+af-p:AFP_0003778 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003784 ;
+                 skos:altLabel "melt curve" ,
+                               "melt curve experiment" ;
+                 skos:definition "A melt curve qPCR experiment is an experiment using qPCR that identifies non-specific PCR amplification by evaluating the melting temperature of the DNA target. [Allotrope]" ;
+                 skos:prefLabel "melt curve qPCR experiment" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003779
+af-p:AFP_0003779 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003784 ;
+                 skos:altLabel "genotyping" ,
+                               "genotyping experiment" ;
+                 skos:definition "A genotyping qPCR experiment is an experiment using qPCR that identifies known mutations in a DNA Sample. DNA primers are used to target and identify specific alleles in a sample. [Allotrope]" ;
+                 skos:prefLabel "genotyping qPCR experiment" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003780
+af-p:AFP_0003780 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003784 ;
+                 skos:altLabel "presence/absence" ,
+                               "presence/absence experiment" ;
+                 skos:definition "A presence/absence qPCR experiment is an experiment using qPCR that identifies if DNA targets are present in samples. [Allotrope]" ;
+                 skos:prefLabel "presence/absence qPCR experiment" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003784
+af-p:AFP_0003784 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003842 ;
+                 skos:definition "A qPCR experiment is a PCR experiment that uses qPCR to achieve its goals. [Allotrope]" ;
+                 skos:prefLabel "qPCR experiment" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002235
+af-r:AFR_0002235 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002277 ,
+                                 af-r:AFR_0002278 ;
+                 skos:definition "An automatic cycle threshold enabled setting is a control setting that sets whether the cycle threshold determination is automated or manual. [Allotrope]" ;
+                 skos:prefLabel "automatic cycle threshold enabled setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002236
+af-r:AFR_0002236 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ,
+                                 af-r:AFR_0002278 ;
+                 skos:altLabel "cycle threshold value setting" ;
+                 skos:definition "A cycle threshold value setting is a setting that sets the threshold value used for automatic qPCR cycle threshold determination. [Allotrope]" ;
+                 skos:prefLabel "cycle threshold value setting (qPCR)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002238
+af-r:AFR_0002238 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002278 ;
+                 skos:definition "A baseline determination start cycle setting is a PCR setting that specifies the start cycle for baseline determination. [Allotrope]" ;
+                 skos:prefLabel "baseline determination start cycle setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002239
+af-r:AFR_0002239 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002278 ;
+                 skos:definition "A baseline determination end cycle setting is a PCR setting that specifies the end cycle for baseline determination. [Allotrope]" ;
+                 skos:prefLabel "baseline determination end cycle setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002246
+af-r:AFR_0002246 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002279 ;
+                 skos:altLabel "cycle threshold result" ;
+                 skos:definition "A cycle threshold result is an qPCR assay result that records the cycle at which the threshold was passed. [Allotrope]" ;
+                 skos:prefLabel "cycle threshold result (qPCR)" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002247
+af-r:AFR_0002247 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002279 ;
+                 skos:definition "A normalized reporter result is a qPCR assay result that specifies the fluorescent signal of the reporter dye normalized to the signal of the passive reference dye. [Allotrope]" ;
+                 skos:prefLabel "normalized reporter result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002248
+af-r:AFR_0002248 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002279 ;
+                 skos:definition "A baseline corrected reporter result is a qPCR assay result that specifies the normalized reporter result minus the baseline signal of the instrument. [Allotrope]" ;
+                 skos:prefLabel "baseline corrected reporter result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002309
+af-r:AFR_0002309 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002279 ,
+                                 qb:DataSet ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0002247
+                                 ] ;
+                 rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/domain/REC/2021/03/qpcr> ;
+                 skos:altLabel "Rn data cube" ;
+                 skos:definition "A normalized reporter data cube is a data cube that represents a plot of normalized reporter result against cycle. [Allotrope]" ;
+                 skos:prefLabel "normalized reporter data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002310
+af-r:AFR_0002310 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002279 ,
+                                 qb:DataSet ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty [ owl:inverseOf af-x:AFX_0002737
+                                                  ] ;
+                                   owl:someValuesFrom af-r:AFR_0002248
+                                 ] ;
+                 skos:altLabel "ΔRn data cube" ;
+                 skos:definition "A baseline corrected reporter data cube is a data cube that represents a plot of  baseline corrected  reporter result against cycle. [Allotrope]" ;
+                 skos:prefLabel "baseline corrected reporter data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002899
+af-r:AFR_0002899 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000160 ,
+                                 iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002890
+                                 ] ;
+                 skos:definition "A qPCR aggregate document is a document that aggregates qPCR documents. [Allotrope]" ;
+                 skos:prefLabel "qPCR aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002900
+af-r:AFR_0002900 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0003282
+                                 ] ;
+                 skos:definition "A qPCR document is a document that encompasses the information associated with some qPCR experiment. [Allotrope]" ;
+                 skos:prefLabel "qPCR document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002908
+af-r:AFR_0002908 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0002034 ;
+                 skos:definition "A genotyping qPCR method identifier is an identifier that identifies the method used for some genotyping qPCR experiment. [Allotrope]" ;
+                 skos:prefLabel "genotyping qPCR method identifier" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002909
+af-r:AFR_0002909 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0001243 ;
+                 skos:definition "A genotyping qPCR method setting is a control setting that specifies the threshold of some genotyping qPCR experiment. [Allotrope]" ;
+                 skos:prefLabel "genotyping qPCR method setting" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002910
+af-r:AFR_0002910 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-r:AFR_0000207
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0002734 ;
+                                                              owl:someValuesFrom af-p:AFP_0003779
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "genotyping qPCR assay result" ,
+                               "genotyping qualitative PCR result" ,
+                               "genotyping qualitative polymerase chain reaction result" ;
+                 skos:definition "A genotyping qPCR result is an assay result that is output of a genotyping qPCR experiment. [Allotrope]" ;
+                 skos:prefLabel "genotyping qPCR result" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002911
+af-r:AFR_0002911 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002279 ,
+                                 qb:DataSet ;
+                 skos:definition "A reporter data cube is a data cube that represents a plot of reporter dye result against cycle. [Allotrope]" ;
+                 skos:prefLabel "reporter data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002912
+af-r:AFR_0002912 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002279 ,
+                                 qb:DataSet ;
+                 skos:definition "A passive reference dye data cube is a data cube that represents a plot of passive reference dye result against cycle. [Allotrope]" ;
+                 skos:prefLabel "passive reference dye data cube" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002913
+af-r:AFR_0002913 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000992 ,
+                                 af-r:AFR_0002279 ,
+                                 qb:DataSet ;
+                 skos:definition "A melting curve data cube is a data cube that represents a plot of fluorescence against temperature. [Allotrope]" ;
+                 skos:prefLabel "melting curve data cube" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

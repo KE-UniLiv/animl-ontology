@@ -1,0 +1,274 @@
+{
+    "http://w3id.org/2002/07/owl#Thing": [],
+    "http://w3id.org/animl/Agent": [
+        [
+            "http://w3id.org/animl/Agent",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000448",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Agent",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000095",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Agent",
+            "http://purl.allotrope.org/ontologies/result#AFR_0003144",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/AgentType": [
+        [
+            "http://w3id.org/animl/AgentType",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000448",
+            0.9999008178710938
+        ],
+        [
+            "http://w3id.org/animl/AgentType",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000095",
+            0.9998975396156311
+        ],
+        [
+            "http://w3id.org/animl/AgentType",
+            "http://purl.allotrope.org/ontologies/result#AFR_0003144",
+            0.9998974800109863
+        ],
+        [
+            "http://w3id.org/animl/AgentType",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000446",
+            0.9569036960601807
+        ]
+    ],
+    "http://w3id.org/animl/AuditTrail": [],
+    "http://w3id.org/animl/AuditTrailEntry": [],
+    "http://w3id.org/animl/Category": [],
+    "http://w3id.org/animl/Change": [
+        [
+            "http://w3id.org/animl/Change",
+            "http://purl.allotrope.org/ontologies/function#AFFN_0000136",
+            0.9998781681060791
+        ],
+        [
+            "http://w3id.org/animl/Change",
+            "http://purl.allotrope.org/ontologies/process#AFP_0003816",
+            0.9997819066047668
+        ],
+        [
+            "http://w3id.org/animl/Change",
+            "http://purl.allotrope.org/ontologies/result#AFR_0002150",
+            0.9947392344474792
+        ],
+        [
+            "http://w3id.org/animl/Change",
+            "http://purl.allotrope.org/ontologies/function#AFFN_0000127",
+            0.9924529790878296
+        ],
+        [
+            "http://w3id.org/animl/Change",
+            "http://purl.allotrope.org/ontologies/result#AFR_0002151",
+            0.9227139949798584
+        ]
+    ],
+    "http://w3id.org/animl/ChangeType": [],
+    "http://w3id.org/animl/Container": [
+        [
+            "http://w3id.org/animl/Container",
+            "http://purl.allotrope.org/ontologies/equipment#AFE_0000407",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/ContainerType": [
+        [
+            "http://w3id.org/animl/ContainerType",
+            "http://purl.allotrope.org/ontologies/result#AFR_0001987",
+            0.9999042749404907
+        ],
+        [
+            "http://w3id.org/animl/ContainerType",
+            "http://purl.allotrope.org/ontologies/result#AFR_0002623",
+            0.9998067021369934
+        ],
+        [
+            "http://w3id.org/animl/ContainerType",
+            "http://purl.allotrope.org/ontologies/result#AFR_0002425",
+            0.999699592590332
+        ]
+    ],
+    "http://w3id.org/animl/DataPoint": [
+        [
+            "http://w3id.org/animl/DataPoint",
+            "http://purl.allotrope.org/ontologies/result#AFR_0000186",
+            0.9998207688331604
+        ]
+    ],
+    "http://w3id.org/animl/DataPointSpecifcation": [],
+    "http://w3id.org/animl/DataPointSpecification": [],
+    "http://w3id.org/animl/DataPointType": [
+        [
+            "http://w3id.org/animl/DataPointType",
+            "http://purl.allotrope.org/ontologies/result#AFR_0000186",
+            0.9996693134307861
+        ]
+    ],
+    "http://w3id.org/animl/DataType": [],
+    "http://w3id.org/animl/Document": [],
+    "http://w3id.org/animl/Experiment": [
+        [
+            "http://w3id.org/animl/Experiment",
+            "http://purl.allotrope.org/ontologies/process#AFP_0003735",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/ExperimentStep": [],
+    "http://w3id.org/animl/Function": [],
+    "http://w3id.org/animl/Infrastructure": [],
+    "http://w3id.org/animl/ItemSpecification": [],
+    "http://w3id.org/animl/Method": [
+        [
+            "http://w3id.org/animl/Method",
+            "http://purl.allotrope.org/ontologies/result#AFR_0001501",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/Parameter": [
+        [
+            "http://w3id.org/animl/Parameter",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000019",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Parameter",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000478",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/ParameterSpecification": [],
+    "http://w3id.org/animl/PlotScale": [],
+    "http://w3id.org/animl/Reference": [],
+    "http://w3id.org/animl/ReferenceSet": [],
+    "http://w3id.org/animl/ReferenceSpecification": [],
+    "http://w3id.org/animl/Result": [
+        [
+            "http://w3id.org/animl/Result",
+            "http://purl.allotrope.org/ontologies/result#AFR_0000207",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Result",
+            "http://purl.allotrope.org/ontologies/result#AFR_0002011",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Result",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000299",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Result",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000043",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/Role": [
+        [
+            "http://w3id.org/animl/Role",
+            "http://purl.allotrope.org/ontologies/result#AFR_0001509",
+            0.9997386336326599
+        ],
+        [
+            "http://w3id.org/animl/Role",
+            "http://purl.allotrope.org/ontologies/result#AFR_0000979",
+            0.9996814727783203
+        ],
+        [
+            "http://w3id.org/animl/Role",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000091",
+            0.9916223287582397
+        ],
+        [
+            "http://w3id.org/animl/Role",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000420",
+            0.9802283644676208
+        ],
+        [
+            "http://w3id.org/animl/Role",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000543",
+            0.9790536165237427
+        ]
+    ],
+    "http://w3id.org/animl/SIUnit": [],
+    "http://w3id.org/animl/Sample": [
+        [
+            "http://w3id.org/animl/Sample",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000508",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Sample",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000035",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/SampleInContainer": [],
+    "http://w3id.org/animl/SampleSet": [],
+    "http://w3id.org/animl/Series": [
+        [
+            "http://w3id.org/animl/Series",
+            "http://purl.allotrope.org/ontologies/common#AFC_0000162",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/SeriesSet": [
+        [
+            "http://w3id.org/animl/SeriesSet",
+            "http://purl.allotrope.org/ontologies/common#AFC_0000162",
+            0.9968315958976746
+        ]
+    ],
+    "http://w3id.org/animl/SeriesSpecification": [
+        [
+            "http://w3id.org/animl/SeriesSpecification",
+            "http://purl.allotrope.org/ontologies/common#AFC_0000162",
+            0.9690530896186829
+        ]
+    ],
+    "http://w3id.org/animl/Signature": [
+        [
+            "http://w3id.org/animl/Signature",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000438",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Signature",
+            "http://purl.allotrope.org/ontologies/result#AFR_0001963",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/SignatureSet": [],
+    "http://w3id.org/animl/Specification": [
+        [
+            "http://w3id.org/animl/Specification",
+            "http://purl.allotrope.org/ontologies/role#AFRL_0000064",
+            1.0
+        ],
+        [
+            "http://w3id.org/animl/Specification",
+            "http://purl.allotrope.org/ontologies/result#AFR_0000957",
+            1.0
+        ]
+    ],
+    "http://w3id.org/animl/Tag": [],
+    "http://w3id.org/animl/TagSet": [],
+    "http://w3id.org/animl/Technique": [],
+    "http://w3id.org/animl/Template": [],
+    "http://w3id.org/animl/Units": [
+        [
+            "http://w3id.org/animl/Units",
+            "http://qudt.org/schema/qudt#SystemOfUnits",
+            0.9998055100440979
+        ]
+    ],
+    "http://w3id.org/animl/UseCase": [],
+    "http://www.w3.org/2001/XMLSchema#anysimpletype": [],
+    "http://www.w3.org/2002/07/owl#Thing": []
+}

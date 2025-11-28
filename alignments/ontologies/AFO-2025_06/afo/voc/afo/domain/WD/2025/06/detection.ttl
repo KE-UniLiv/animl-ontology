@@ -1,0 +1,812 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/detection#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/detection#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/detection> rdf:type owl:Ontology ;
+                                                                           owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/detection> ;
+                                                                           owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                       <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/detection> ;
+                                                                           dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                           dct:modified "2025-05-05T12:00:00Z"^^xsd:dateTime ;
+                                                                           dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                      <http://purl.allotrope.org/voc/copyright> ;
+                                                                           dct:title "AFO Detection/Detector Domain Ontology (WD/2025/06)" ;
+                                                                           owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/WD/2025/03/detection> ;
+                                                                           owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002796
+af-x:AFX_0002796 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002798
+af-x:AFX_0002798 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.allotrope.org/ontologies/property#AFX_0002809
+af-x:AFX_0002809 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000046
+af-e:AFE_0000046 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 chmo:_0002247 ;
+                 skos:altLabel "DLATGS detector" ,
+                               "DLaTGS detector" ,
+                               "dLaTgS detector" ,
+                               "deuterated L-alanine doped triglycine sulfate (DLaTGS) detector" ,
+                               "deuterated lanthanum triglycine sulfate (DLATGS) detector " ,
+                               "dlatgs detector" ;
+                 skos:definition "A very sensitive temperature-controlled detector for mid-infrared range measurement that employs temperature-sensitive ferroelectric crystals of either deuterated lanthanum triglycine sulfate or deuterated L-alanine doped triglycine sulfate. As the temperature and hence polarizability of the crystals changes (due to the absorption of infrared radiation) a charge is generated which is detected by two parallel electrodes. The deuterated forms of the crystals are used because they have a higher Curie point. [CHMO]" ;
+                 skos:prefLabel "deuterated lanthanum triglycine sulfate detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000059
+af-e:AFE_0000059 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000642 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/MS_1000114> ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "Wiza, J. (1979). \"Microchannel plate detectors\". Nuclear Instruments and Methods 162 (1–3): 587–601" ;
+                 skos:altLabel "CEMA" ,
+                               "channel electron multiplier array" ,
+                               "multichannel plate" ;
+                 skos:definition "Thin plate that contains a closely spaced array of channels each of which acts as a continuous dynode particle multiplier. A fast charged or neutral particle, or a photon, that strikes the plate causes a cascade of secondary electrons that ultimately exits the opposite side of the plate. [IUPAC]" ;
+                 skos:prefLabel "microchannel plate detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000159
+af-e:AFE_0000159 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000642 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/MS_1000349> ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "F. Dubois, R. Knochenmuss, R. Zenobi. Int. J. Mass Spectrom. Ion Processes 169, 89 (1997)."@en-gb ;
+                 skos:definition "Detector in which ions strike a conversion dynode to produce electrons that in turn strike a phosphor and the resulting photons are detected by a photomultiplier. [IUPAC]" ;
+                 skos:prefLabel "ion-to-photon detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000166
+af-e:AFE_0000166 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 chmo:_0002248 ;
+                 skos:altLabel "MCT detector" ;
+                 skos:definition "A detector for infrared measurements that employs a thin layer of the semiconductor HgCdTe. Incident photons with energy greater than the semiconductor band-gap energy excite electrons into the conduction band, creating an increase in the conductivity of the layer which is detected by two electrodes. [CHMO]" ;
+                 skos:prefLabel "mercury cadmium tellurium detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000178
+af-e:AFE_0000178 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000567 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "LIF" ;
+                 skos:definition "A laser induced fluorescence detector detects species after excitation with a laser. The excited compounds deexcite after some time and emit light at a different wavelength which is recorded with photodiodes. [Allotrope]" ;
+                 skos:prefLabel "laser induced fluorescence detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000206
+af-e:AFE_0000206 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000642 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 <http://purl.obolibrary.org/obo/MS_1000624> ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "M. B. Comisarow. J. Chem. Phys. 69, 4097 (1978)." ,
+                            "S. D. Fuerstenau, W. H. Benner. Rapid Commun. Mass Spectrom. 9, 1528 (1995)." ;
+                 skos:altLabel "image current detector" ;
+                 skos:definition "Method of ion detection by measuring the current that results from the image charge induced by a coherent motion of ions passing near a conductor. [IUPAC]" ;
+                 skos:note "In Fourier transform mass spectrometers or Kingdon traps, the coherent orbital motion of ions between a pair of electrodes induces a radio frequency image charge in the electrodes and an alternating image current in the detection circuit connecting to the electrodes.  [IUPAC]" ;
+                 skos:prefLabel "inductive detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000215
+af-e:AFE_0000215 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000642 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 dct:source "Langmuir, Irving (1925). \"Thermionic Effects Caused by Vapours of Alkali Metals\". Proceedings of the Royal Society A 107: 61–79" ,
+                            "Taylor, John (1930). \"The Reflection of Beams of the Alkali Metals from Crystals\". Physical Review 35 (4): 375–380" ;
+                 skos:altLabel "surface ionisation detector"@en-gb ,
+                               "hot wire detector" ,
+                               "surface ionization detector" ;
+                 skos:changeNote "2016-03-23 remove duplicate definition [Allotrope]" ;
+                 skos:definition "A Langmuir–Taylor detector, also called surface ionization detector or hot wire detector, is a kind of detector developed by Taylor based on the work of Langmuir and Kingdon. This detector usually consists of a heated thin filament or ribbon of a metal with a high work function (typically tungsten or rhenium). Neutral atoms or molecules that strike the filament can boil off as positive ions in a process known as surface ionization, and these may be either measured as a current or detected, individually, using an electron multiplier and particle counting electronics. [Wikipedia]" ;
+                 skos:prefLabel "Langmuir-Taylor detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000357
+af-e:AFE_0000357 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 obi:_0000547 ;
+                 skos:altLabel "ELSD" ;
+                 skos:definition "A detector that uses the evaporative light scattering detection method. [Allotrope]" ;
+                 skos:prefLabel "evaporative light scattering detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000419
+af-e:AFE_0000419 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 obi:_0000588 ;
+                 skos:altLabel "FPD" ,
+                               "SCD" ,
+                               "sulfur chemiluminescence detector" ;
+                 skos:definition "A detector the uses the flame photometric detection method. [Allotrope]" ;
+                 skos:prefLabel "flame photometric detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000444
+af-e:AFE_0000444 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000642 ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/MS_1000348> ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "J. A. Hill, J. E. Biller, S. A. Martin, K. Biemann, K. Yoshidome, K. Sato. Int. J. Mass Spectrom. Ion Processes 92, 211 (1989)." ,
+                            "K. K. Murray, R. K. Boyd, M. N. Eberlin, G. J. Langley, L. Li and Y. Naito, Pure Appl. Chem., 2013, 85, 1515-1609, 10.1351/PAC-REC-06-04-06" ;
+                 skos:altLabel "focal plane collector" ;
+                 skos:definition "Detector for m/z spatially dispersed ion beams in which all ions simultaneously impinge on the detector plane to produce spatially defined signals. [IUPAC]" ;
+                 skos:prefLabel "focal plane detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000547
+af-e:AFE_0000547 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 chmo:_0002532 ;
+                 skos:altLabel "ET detector" ;
+                 skos:definition "A detector used in scanning electron microscopy experiments to detect secondary electrons. The detector consists of a scintillator inside a Faraday cage inside the specimen chamber of the microscope. A low positive voltage is applied to the Faraday cage to attract the relatively low-energy (less than 50 eV) secondary electrons. [CHMO]" ;
+                 skos:prefLabel "Everhart-Thornley detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000606
+af-e:AFE_0000606 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000642 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/MS_1000115> ;
+                 skos:changeNote "2024-09-12 Replaced unlicensed definition with an Allotrope written one." ;
+                 skos:definition "A multi collector is an ion detector using multiple collectors in series to detect ions simultaneously. [Allotrope]" ;
+                 skos:prefLabel "multi-collector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000829
+af-e:AFE_0000829 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000642 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 chmo:_0001063 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "W. K. Van Asselt, B. Poelsema, A. L. Boers. J. Phys. D: Appl. Phys. 11, L107 (1978)."@en-gb ;
+                 skos:altLabel "Daly" ;
+                 skos:definition "Detector consisting of an off-axis conversion dynode, scintillator, and photomultiplier. The dynode at high potential emits secondary electrons when ions impinge on the surface. The secondary electrons are accelerated onto the scintillator that produces light that is then detected by the photomultiplier detector, which can be outside the vacuum system. [IUPAC]" ;
+                 skos:prefLabel "Daly detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000861
+af-e:AFE_0000861 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 chmo:_0002246 ;
+                 skos:altLabel "DGTS detector" ,
+                               "DTGS detector" ,
+                               "deuterated-triglycine sulfate (DTGS) detector" ;
+                 skos:changeNote "2017-09-05 Linked to obo exact match [Allotrope]" ;
+                 skos:definition "A very sensitive room-temperature detector for mid-infrared range measurements that employs temperature-sensitive ferroelectric crystals of deuterated triglycine sulfate. As the temperature and hence polarizability of the crystals changes (due to the absorption of infrared radiation) a charge is generated which is detected by two parallel electrodes. The deuterated form of the crystals are used because they have a higher Curie point. [CHMO]" ;
+                 skos:prefLabel "deuterated triglycine sulfate detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001666
+af-e:AFE_0001666 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 obi:_0001086 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC. Compendium of Chemical Terminology, 2nd ed. (the \"Gold Book\"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997)." ;
+                 skos:changeNote "2015-11-25 Added concept [Amgen]" ,
+                                 "2024-09-12 Changed [IUPAC Gold Book] attribution to [IUPAC] and added license, rights, and source fields." ;
+                 skos:definition "A radiation detector using a medium in which a burst of luminescence radiation, produced along the path of an ionizing particle, is quantified. [IUPAC]" ;
+                 skos:prefLabel "radiation counter" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001667
+af-e:AFE_0001667 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001666 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 obi:_0001070 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 dct:source "IUPAC. Compendium of Chemical Terminology, 2nd ed. (the \"Gold Book\"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997)." ;
+                 skos:altLabel "scintillation counter" ,
+                               "spot counter" ;
+                 skos:changeNote "2015-11-25 Added concept [Amgen]" ,
+                                 "2024-09-12 Changed [IUPAC Gold Book] attribution to [IUPAC] and added license, rights, and source fields." ;
+                 skos:definition "A scintillation detector is a scintillator that is coupled to a photomultiplier tube. Incident X-ray photons are converted in the scintillator into bursts of visible light photons, some of which fall on the photocathode and can be measured. For incident photons having energies higher than the absorption edge of the elements contained in the scintillator, an escape peak can be observed. [IUPAC]" ;
+                 skos:prefLabel "scintillation detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001702
+af-e:AFE_0001702 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002808 obi:_0000637 ;
+                 skos:altLabel "air detector" ,
+                               "air sensor" ;
+                 skos:changeNote "2015-11-25 Added concept [Amgen]" ,
+                                 "2024-09-12 Changed [Amgen] attribution to [Allotrope]." ;
+                 skos:definition "A gas detector is a device that detects the presence of gases (bubbles) in liquids. [Allotrope]" ;
+                 skos:example "A sensor used to detect air (i.e. air bubbles) in the system flow path or sample flow path. Protects against air entering the pumps and columns and causing erratic flow, noisy UV detector signal and irregular pressure." ;
+                 skos:prefLabel "gas detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001720
+af-e:AFE_0001720 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000317 ;
+                 skos:changeNote "2015-11-25 Added concept [Amgen]" ;
+                 skos:definition "A metal checker is a device that detects metal fragments. [Allotrope]" ;
+                 skos:example "metal checker of a tablet press that rejects fragments of metal" ;
+                 skos:prefLabel "metal checker" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0001756
+af-e:AFE_0001756 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0001666 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "position sensitive detector" ,
+                               "silicon strip detector" ;
+                 skos:changeNote "2015-11-25 Added concept [Amgen]" ;
+                 skos:definition "A strip detector is a detector that is based on silicon strips which serve as charge collecting electrodes. [Allotrope]" ;
+                 skos:prefLabel "strip detector" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000007
+af-p:AFP_0000007 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000831 ;
+                 skos:altLabel "argon pulse discharge photoionisation detection"@en-gb ,
+                               "argon pulsed discharge photoionisation detection"@en-gb ,
+                               "argon pulsed-discharge photoionisation detection"@en-gb ,
+                               "Ar-PDPID" ,
+                               "Ar/PDPID" ,
+                               "argon pulse discharge photoionization detection" ,
+                               "argon pulsed discharge photoionization detection" ,
+                               "argon pulsed-discharge photoionization detection" ;
+                 skos:definition "A detection method where a DC voltage pulse is passed through argon gas generating high-energy (13.5-17.5 eV) photons which photoionize the elements in the sample mixture, and the current generated by this ionization is measured. [CHMO]" ;
+                 skos:prefLabel "argon pulse-discharge photoionisation detection"@en-gb ,
+                                "argon pulse-discharge photoionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000027
+af-p:AFP_0000027 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001711 ;
+                 skos:altLabel "PED" ;
+                 skos:definition "A detection method that is sensitive to compounds which can be either reduced or oxidised. A liquid containing the sample passes directly over the working electrode, which is subject to a periodic potential. The current produced is then measured. [CHMO]" ;
+                 skos:prefLabel "pulsed electrochemical detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000088
+af-p:AFP_0000088 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002222 ;
+                 skos:altLabel "SCL detection" ,
+                               "sono chemiluminescence detection" ,
+                               "sono-chemiluminescence detection" ,
+                               "sonodynamic chemiluminescence detection" ;
+                 skos:definition "The detection of chemiluminescence caused the emission of light by tiny bubbles in a liquid excited by sound. [CHMO]" ;
+                 skos:prefLabel "sonochemiluminescence detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000243
+af-p:AFP_0000243 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000831 ;
+                 skos:altLabel "krypton pulse discharge photoionisation detection"@en-gb ,
+                               "krypton pulsed discharge photoionisation detection"@en-gb ,
+                               "krypton pulsed-discharge photoionisation detection"@en-gb ,
+                               "Kr-PDPID" ,
+                               "Kr/PDPID" ,
+                               "krypton pulse discharge photoionization detection" ,
+                               "krypton pulsed discharge photoionization detection" ,
+                               "krypton pulsed-discharge photoionization detection" ;
+                 skos:definition "A detection method where a DC voltage pulse is passed through krypton gas generating high-energy (13.5-17.5 eV) photons which photoionize the elements in the sample mixture, and the current generated by this ionization is measured. [CHMO]" ;
+                 skos:prefLabel "krypton pulse-discharge photoionisation detection"@en-gb ,
+                                "krypton pulse-discharge photoionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000302
+af-p:AFP_0000302 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "PDD" ,
+                               "pulse discharge detection" ,
+                               "pulsed discharge detection" ,
+                               "pulsed-discharge detection" ;
+                 skos:definition "A detection method where a DC voltage pulse is passed through a carrier gas (e.g. helium) and the current generated by this ionization is measured. [CHMO]" ;
+                 skos:prefLabel "pulse-discharge detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000327
+af-p:AFP_0000327 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "CCD" ;
+                 skos:definition "A detection method that is sensitive to compounds containing C-H bonds. An electric current is passed through a tiny coil of platinum wire embedded in a catalytic ceramic bead (heated to 500 deg. C by the coil). A flow of air carries the sample to the bed and when a hydrogen or a hydrocarbon molecule impacts the hot coil, it combusts on the surface raising the temperature and resistance of the platinum wire. The resistance change is then measured. [CHMO]" ;
+                 skos:prefLabel "catalytic combustion detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000352
+af-p:AFP_0000352 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002222 ;
+                 skos:altLabel "CIEEL " ,
+                               "catalysed chemiluminescence" ,
+                               "catalyzed chemiluminescence" ,
+                               "chemically initiated electron exchange luminescence" ,
+                               "chemically-initiated electron exchange luminescence" ;
+                 skos:definition "The detection of luminescence resulting from a thermal electron-transfer reaction. [CHMO]" ;
+                 skos:prefLabel "catalysed chemiluminescence detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000435
+af-p:AFP_0000435 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "AED" ,
+                               "atomic-emission detection" ;
+                 skos:definition "A detection method that is sensitive to individual elements. The sample is atomised and excited by an excitation source and the characteristic radiation emitted by the atoms in the sample is then detected using a photodiode array. [CHMO]" ;
+                 skos:prefLabel "atomic emission detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000456
+af-p:AFP_0000456 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001189 ;
+                 skos:altLabel "DELCD" ;
+                 skos:definition "A detection method that is sensitive to compounds containing Br or Cl. A carrier gas flow containing the sample is heated in a ceramic chamber to 1000 deg. C, forming gaseous Cl and Br ions. The change in electrical conductivity of the gas-phase current is then measured. [CHMO]" ;
+                 skos:prefLabel "dry electrolytic conductivity detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000528
+af-p:AFP_0000528 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001749 ;
+                 skos:altLabel "TC-SPC" ,
+                               "TCSPC" ,
+                               "time correlated single photon counting" ;
+                 skos:definition "A method that is used to measure the relaxation rate of molecules in fluorescent samples. A laser pulse excites the molecule, and the time taken for it to emit a single photon is measured. [CHMO]" ;
+                 skos:prefLabel "time-correlated single photon counting" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000579
+af-p:AFP_0000579 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001909 ;
+                 skos:altLabel "RET" ;
+                 skos:definition "Any method where a biological sample is illuminated with a light source and the energy transfer between molecules can be used for imaging and to measure inter-molecular distances. [CHMO]" ;
+                 skos:prefLabel "resonance energy transfer" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000603
+af-p:AFP_0000603 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001009 ;
+                 skos:altLabel "pulse-discharge helium ionisation detection"@en-gb ,
+                               "PDHID" ,
+                               "pulse-discharge helium ionization detection" ;
+                 skos:definition "A detection method that is sensitive to small gas molecules (e.g. O2, N2, CO2). A low-power, pulsed DC discharge is used to ionize the sample (which is held in He carrier gas). The resulting electrons are focused toward a collector electrode and the current is measured. [CHMO]" ;
+                 skos:prefLabel "pulsed discharge helium ionisation detection"@en-gb ,
+                                "pulsed discharge helium ionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000831
+af-p:AFP_0000831 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "pulse discharge photoionisation detection"@en-gb ,
+                               "pulsed discharge photoionisation detection"@en-gb ,
+                               "pulsed-discharge photoionisation detection"@en-gb ,
+                               "PDPID" ,
+                               "pulse discharge photoionization detection" ,
+                               "pulsed discharge photoionization detection" ,
+                               "pulses-discharge photoionization detection" ;
+                 skos:definition "A detection method where a DC voltage pulse is passed through a carrier gas generating high-energy (13.5-17.5 eV) photons which photoionize the elements in the sample mixture, and the current generated by this ionization is measured. [CHMO]" ;
+                 skos:prefLabel "pulse-discharge photoionisation detection"@en-gb ,
+                                "pulse-discharge photoionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000888
+af-p:AFP_0000888 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 dct:source "J.E.P. Syka, J.J. Coon, M.J. Schroeder, J. Shabanowitz, and D.F. Hunt, Proc. Nat. Acad. Sci. USA 101, 9528–9533 (2004)" ;
+                 skos:altLabel "ETD" ,
+                               "electron transfer dissociation" ;
+                 skos:definition "A detection method that is sensitive to peptides. Anions transfer electrons to multiply protonated peptides inducing fragmentation of the peptide backbone. [CHMO]" ;
+                 skos:prefLabel "electron transfer detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001009
+af-p:AFP_0001009 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002095 ;
+                 skos:altLabel "HDID" ;
+                 skos:definition "A detection method where metastable helium ions (generated by an electric arc) ionize the molecules in the sample (held in He carrier gas). The resulting electrons are focused toward a collector electrode and the current is measured. [CHMO]" ;
+                 skos:prefLabel "helium discharge ionisation detection"@en-gb ,
+                                "helium discharge ionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001024
+af-p:AFP_0001024 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001909 ;
+                 skos:altLabel "EL detection" ;
+                 skos:definition "The detection of luminescence emitted from a sample as a result of the application of an electric current or a strong electric field. [CHMO]" ;
+                 skos:prefLabel "electroluminescence detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001029
+af-p:AFP_0001029 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "FPD" ,
+                               "SCD" ,
+                               "sulfur chemiluminescence detection" ;
+                 skos:definition "A detection method that is sensitive to sulfur- and phosphorus-containing compounds. A flow of carrier gas containing the sample is mixed with oxygen or air and ignited. Any chemiluminescence due to these compounds is then detected. [CHMO]" ;
+                 skos:prefLabel "flame photometric detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001113
+af-p:AFP_0001113 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "ECD" ,
+                               "electron capture dissociation" ;
+                 skos:definition "A detection method that is sensitive to electronegative compounds (e.g. halogenated compounds). A beta-particle emitter (e.g. 63Ni) is used to produce an electron beam, which is passed between two electrodes. As the sample is passed through the e-beam, organic functional groups interact with the electrons, interrupting the current. [CHMO]" ;
+                 skos:prefLabel "electron capture detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001189
+af-p:AFP_0001189 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "Coulson electrolytic conductivity detection" ,
+                               "ELCD" ,
+                               "HECD" ,
+                               "Hall electrolytic conductivity detection" ;
+                 skos:definition "A detection method that is sensitive to compounds containing Br or Cl. The pyrolysed sample is dissolved in water, forming aqueous solutions of HBr or HCl. The change in electrical conductivity of the solution is then measured. [CHMO]" ;
+                 skos:prefLabel "electrolytic conductivity detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001205
+af-p:AFP_0001205 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000435 ;
+                 skos:altLabel "MIP-AED" ,
+                               "MIP/AED" ,
+                               "microwave-induced plasma atomic emission detection" ;
+                 skos:definition "A detection method that is sensitive to individual elements. The sample is both atomised and excited by a microwave-induced plasma (a partially ionized gas containing free electrons and radicals). The characteristic radiation emitted by the atoms in the sample is then detected using a photodiode array. [CHMO]" ;
+                 skos:prefLabel "microwave induced plasma atomic emission detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001223
+af-p:AFP_0001223 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001909 ;
+                 skos:definition "The detection of luminescence emitted from a sample as a result of the impact of high-energy electrons. [CHMO]" ;
+                 skos:prefLabel "cathodoluminescence detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001314
+af-p:AFP_0001314 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001909 ;
+                 skos:altLabel "SL detection" ;
+                 skos:definition "The detection of short bursts of light emitted from a liquid sample excited by sound. [CHMO]" ;
+                 skos:prefLabel "sonoluminescence detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001316
+af-p:AFP_0001316 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "ELS" ,
+                               "ELSD" ,
+                               "evaporative light scattering" ;
+                 skos:definition "A detection method where a liquid containing the sample is atomised in a gas, forming small droplets which are allowed to evaporate leaving the sample as fine particles. The suspended particles pass through a light beam and the scattered light transmitted by the particles is sensed by a photomultiplier. The response is proportional to the mass of the molecules in the sample. [CHMO]" ;
+                 skos:prefLabel "evaporative light scattering detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001428
+af-p:AFP_0001428 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "MS detection" ;
+                 skos:definition "A detection method where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance. [CHMO]" ;
+                 skos:prefLabel "mass detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001535
+af-p:AFP_0001535 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002188 ;
+                 skos:altLabel "DAD" ,
+                               "PDA" ,
+                               "photodiode array detection" ;
+                 skos:definition "Photodiode array detection is a type of detection that uses an array of photodiodes to detect changes of the incoming light. [Allotrope]" ;
+                 skos:prefLabel "photodiode array measurement" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001592
+af-p:AFP_0001592 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "PEDD" ,
+                               "paired emitter-detector diode detection" ;
+                 skos:definition "A detection method that is based on light emitting diodes (LEDs). One LED functions as a light source and the other LED is reverse biased to function as a light detector. Light from the source LED is passed through the sample and the intensity received by the detector LED is measured. [CHMO]" ;
+                 skos:prefLabel "paired emitter-detector diode detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001613
+af-p:AFP_0001613 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "PID" ;
+                 skos:definition "A detection method that is sensitive to volatile organic compounds. A carrier gas (e.g. methane) containing the sample is bombarded with high-energy (UV) photons, resulting in ionization. The current generated by these gaseous ions is then measured. [CHMO]" ;
+                 skos:prefLabel "photoionisation detection"@en-gb ,
+                                "photoionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001634
+af-p:AFP_0001634 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "TEA" ,
+                               "thermal energy analyser detection" ;
+                 skos:definition "A detection method that is sensitive to molecules containing NO and NO2 groups. The sample is pyrolysed (at 275 deg. C) producing radicals, which react with ozone under low pressure to produce chemiluminescence. [CHMO]" ;
+                 skos:prefLabel "thermal energy analyzer detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001711
+af-p:AFP_0001711 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "ED" ,
+                               "coulometric detection" ;
+                 skos:definition "A detection method that is sensitive to compounds which can be either reduced or oxidised. A liquid containing the sample passes directly over the working electrode, which is set to the specific potential required for oxidation or reduction. The current produced is then measured. [CHMO]" ;
+                 skos:prefLabel "electrochemical detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001776
+af-p:AFP_0001776 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001749 ;
+                 skos:altLabel "LIF" ,
+                               "laser induced fluorescence detection" ;
+                 skos:definition "A detection method which is sensitive to naturally fluorescent or tagged compounds. As the sample passes through a small cell it is excited by a focused ultraviolet laser and any fluorescence is detected. [CHMO]" ;
+                 skos:prefLabel "laser-induced fluorescence detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001782
+af-p:AFP_0001782 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000579 ;
+                 skos:altLabel "F&#xf6;rster resonance energy transfer" ,
+                               "F&ouml;rster resonance energy transfer" ,
+                               "FRET" ,
+                               "Forster resonance energy transfer" ,
+                               "Förster resonant energy transfer" ;
+                 skos:definition "A method for determining the distance between molecules using an energy transfer between two chromophores (a donor and an acceptor) in close proximity (typically <10 nm) via a nonradiative, long-range dipole-dipole coupling mechanism. [CHMO]" ;
+                 skos:prefLabel "Forster resonance energy transfer" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001859
+af-p:AFP_0001859 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002222 ;
+                 skos:altLabel "ECL " ,
+                               "electrogenerated chemiluminescence" ;
+                 skos:definition "The detection of luminescence emitted by electrochemically-generated intermediates during an electrochemical reaction. [CHMO]" ;
+                 skos:prefLabel "electrochemiluminescence detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001977
+af-p:AFP_0001977 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "NPD" ,
+                               "nitrogen-phosphorus detection" ;
+                 skos:definition "A detection method that is sensitive to compounds containing N and P. A flow of carrier gas containing the sample is mixed with H2 and air in the presence of a small, heated bead of an alkali salt such as Rb2SO4. Any positively-charged radicals resulting from this process are collected at a cathode allowing the current to be measured. [CHMO]" ;
+                 skos:prefLabel "nitrogen-phosphorus detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002095
+af-p:AFP_0002095 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "HID" ;
+                 skos:definition "A detection method where metastable helium ions (generated by irradiation with beta-particles from a radioactive source) ionize the molecules in the sample (held in He carrier gas). The resulting electrons are focused toward a collector electrode and the current is measured. [CHMO]" ;
+                 skos:prefLabel "helium ionisation detection"@en-gb ,
+                                "helium ionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002160
+af-p:AFP_0002160 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 skos:altLabel "AID" ;
+                 skos:definition "A detection method where metastable Ar atoms are used to ionize the sample, which is held in a carrier gas. The resulting electrons are focused toward a collector electrode and the current is measured. [CHMO]" ;
+                 skos:prefLabel "argon ionisation detection"@en-gb ,
+                                "argon ionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002269
+af-p:AFP_0002269 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000831 ;
+                 skos:altLabel "helium pulse discharge photoionisation detection"@en-gb ,
+                               "helium pulsed discharge photoionisation detection"@en-gb ,
+                               "helium pulsed-discharge photoionisation detection"@en-gb ,
+                               "He-PDPID" ,
+                               "He/PDPID" ,
+                               "helium pulse discharge photoionization detection" ,
+                               "helium pulsed discharge photoionization detection" ,
+                               "helium pulsed-discharge photoionization detection" ;
+                 skos:definition "A detection method where a DC voltage pulse is passed through helium gas generating high-energy (13.5-17.5 eV) photons which photoionize the elements in the sample mixture, and the current generated by this ionization is measured. [CHMO]" ;
+                 skos:prefLabel "helium pulse-discharge photoionisation detection"@en-gb ,
+                                "helium pulse-discharge photoionization detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002353
+af-p:AFP_0002353 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000579 ;
+                 skos:altLabel "PRET" ,
+                               "plasmonic resonance energy transfer" ;
+                 skos:definition "A type of spectroscopy where by intentionally matching the plasmon resonance frequency of a gold nanoparticle with the frequency of the electronic transition energy of a biomolecule, energy transfer occurs which gives rise to resonant quenching dips in the Rayleigh scattering spectrum of the particle. [CHMO]" ;
+                 skos:prefLabel "plasmon resonance energy transfer" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002528
+af-p:AFP_0002528 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000925 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Method of ion detection by measuring the current that results from the image charge induced by a coherent motion of ions passing near a conductor. [IUPAC]" ;
+                 skos:note "In Fourier transform mass spectrometers or Kingdon traps, the coherent orbital motion of ions between a pair of electrodes induces a radio frequency image charge in the electrodes and an alternating image current in the detection circuit connecting to the electrodes. [IUPAC]" ;
+                 skos:prefLabel "image current detection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002552
+af-p:AFP_0002552 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002541 ;
+                 dct:license <http://purl.allotrope.org/voc/iupac-license> ;
+                 dct:rights <http://purl.allotrope.org/voc/iupac-copyright> ;
+                 skos:definition "Recording of ion currents by allowing them to strike a photographic plate, which is subsequently developed. [IUPAC]" ;
+                 skos:note "This technique is typically associated with ion-beams that have been spatially separated by m/z and focused across a focal plane as in a Mattauch–Herzog geometry magnetic sector instrument. [IUPAC]" ;
+                 skos:prefLabel "photographic plate recording" .
+
+
+###  http://purl.allotrope.org/ontologies/quality#AFQ_0000153
+af-q:AFQ_0000153 rdf:type owl:Class ;
+                 rdfs:subClassOf af-q:AFQ_0000036 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0000080 ;
+                                   owl:someValuesFrom af-e:AFE_0000317
+                                 ] ;
+                 af-x:AFX_0002811 af-x:AFX_0001034 ;
+                 skos:definition "The detector polarity is the direction of electric current in a detector. [Allotrope]" ;
+                 skos:prefLabel "detector polarity" .
+
+
+###  http://purl.allotrope.org/ontologies/role#AFRL_0000110
+af-rl:AFRL_0000110 rdf:type owl:Class ;
+                   rdfs:subClassOf [ owl:intersectionOf ( af-rl:AFRL_0000167
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty bfo:_0000054 ;
+                                                            owl:someValuesFrom af-p:AFP_0000925
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   skos:definition "A role inhered when the bearer is the objective of some detection process. [Allotrope]" ;
+                   skos:prefLabel "detection target" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

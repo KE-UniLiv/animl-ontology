@@ -1,0 +1,874 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-microscopy#> .
+@prefix cl: <http://purl.obolibrary.org/obo/CL> .
+@prefix go: <http://purl.obolibrary.org/obo/GO> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-microscopy#> .
+
+<http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-microscopy> rdf:type owl:Ontology ;
+                                                                                     owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/WD/2025/06/electron-microscopy> ;
+                                                                                     owl:imports <http://purl.allotrope.org/voc/afo/WD/2025/06/afo> ,
+                                                                                                 <http://purl.allotrope.org/voc/afo/domain/CR/2025/06/electron-microscopy> ;
+                                                                                     dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                                     dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                                     dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                                     dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                                <http://purl.allotrope.org/voc/copyright> ;
+                                                                                     dct:title "AFO Electron Microscopy Domain Ontology (WD/2025/06)" ;
+                                                                                     owl:versionInfo "WD/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000086
+af-e:AFE_0000086 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000667 ;
+                 skos:altLabel "FEG-TEM" ,
+                               "FEGTEM" ,
+                               "TEM-FEG" ,
+                               "field emission transmission electron microscope" ,
+                               "field-emission TEM" ,
+                               "field-emission-gun transmission electron microscope" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of an electron transparent specimen using a finely focused (less than 10 nm diameter) electron beam (produced by thermionic emission heating) with an acceleration voltage of 50-150 kV under vacuum. The energies and intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "field-emission transmission electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000146
+af-e:AFE_0000146 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000767 ;
+                 skos:altLabel "FE-SEM" ,
+                               "FEG-SEM" ,
+                               "field emission SEM" ,
+                               "field emission scanning electron microscope" ,
+                               "field-emission SEM" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of a specimen by scanning a finely focused (less than 10 nm diameter) electron beam produced by thermionic emission heating (field emission) with an acceleration voltage of 50-150 kV across the specimen under vacuum and measuring interaction of the electrons with the specimen. [CHMO]" ;
+                 skos:prefLabel "field-emission scanning electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000186
+af-e:AFE_0000186 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000667 ;
+                 skos:altLabel "TEM/EDX" ,
+                               "transmission electron microscope equipped with an energy dispersive X-ray analyzer" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of an electron- transparent specimen using a finely focused (less than 10 nm diameter) electron beam with an acceleration voltage of 50--150 kV under vacuum. X-rays emerging from the sample (as a result of electron bombardment) pass through a slit, then a grating disperses them by diffraction according to their wavelength. Finally, X-ray energy (which is characteristic of atomic number) is converted to voltage pulses or 'counts' by a detector. [CHMO]" ;
+                 skos:prefLabel "transmission electron microscope with an energy dispersive X-ray analyzer" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000449
+af-e:AFE_0000449 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000767 ;
+                 skos:altLabel "E-SEM" ,
+                               "ESEM" ,
+                               "environmental SEM" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of a specimen by scanning a finely focused (less than 10 nm diameter) electron beam with an acceleration voltage of 50--150 kV across the specimen in a gaseous environment and measuring interaction of the electrons with the specimen. [CHMO]" ;
+                 skos:prefLabel "environmental scanning electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000515
+af-e:AFE_0000515 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000667 ;
+                 skos:altLabel "HRTEM" ,
+                               "high resolution transmission electron microscope" ,
+                               "high-resolution (HR) TEM" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of an electron transparent specimen using several finely focused (less than 10 nm diameter) electron beams with an acceleration voltage of 50--150 kV under vacuum. The amplitude of the interference of the transmitted electron waves is then measured and the phase contrast is used to produce an image. [CHMO]" ;
+                 skos:prefLabel "high-resolution transmission electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000660
+af-e:AFE_0000660 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000767 ;
+                 skos:altLabel "CFE-SEM" ,
+                               "cold field emission SEM" ,
+                               "cold field emission scanning electron microscope" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of a specimen by scanning a finely focused (<10 nm diameter) electron beam produced  by applying a high voltage to a tungsten crystal (cold-field emission) with an acceleration voltage of 50--150 kV across the specimen under vacuum and measuring interaction of the electrons with the specimen. [CHMO]" ;
+                 skos:prefLabel "cold-field-emission scanning electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000667
+af-e:AFE_0000667 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000143 ;
+                 skos:altLabel "TEM" ,
+                               "transmission EM" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of an electron transparent specimen using a finely focused (less than 10 nm diameter) electron beam with an acceleration voltage of 50--150 kV under vacuum. The energies and intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "transmission electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000767
+af-e:AFE_0000767 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000143 ;
+                 skos:altLabel "SEM" ;
+                 skos:definition "A piece of apparatus which is used to produce an enlarged image of a specimen by scanning a finely focused (less than 10 nm diameter) electron beam with an acceleration voltage of 50--150 kV across the specimen under vacuum and measuring the interaction of the electrons with the specimen. [CHMO]" ;
+                 skos:prefLabel "scanning electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000797
+af-e:AFE_0000797 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000407 ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 af-x:AFX_0002809 <http://purl.obolibrary.org/obo/CHMO_0002610> ;
+                 skos:altLabel "TEM micro-grid" ,
+                               "TEM microgrid" ,
+                               "transmission electron microscope microgrid" ;
+                 skos:definition "A thin film of micrometre thickness which is used as a support for specimens during transmission electron microscopy. [CHMO]" ;
+                 skos:prefLabel "transmission electron microscope grid" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000845
+af-e:AFE_0000845 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000667 ;
+                 skos:altLabel "STEM" ;
+                 skos:definition "A transmission electron microscope where the electron beam is scanned across an electron-transparent specimen under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "scanning transmission electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000848
+af-e:AFE_0000848 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000143 ;
+                 skos:altLabel "SPELEEM" ;
+                 skos:definition "A piece of apparatus which combines a low energy electron microscope (LEEM) and an energy filtered x-ray photoemission electron microscope (XPEEM). [CHMO]" ;
+                 skos:prefLabel "spectroscopic photoemission and low energy electron microscope" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000332
+af-p:AFP_0000332 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001515 ,
+                                 af-p:AFP_0002311 ;
+                 skos:altLabel "BF-STEM" ,
+                               "bright field scanning transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron-transparent specimen under vacuum. The beam of electrons passes directly through an aperture before reaching the specimen. The image results from a weakening of the direct beam by its interaction with the sample. [CHMO]" ;
+                 skos:prefLabel "bright-field scanning transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000334
+af-p:AFP_0000334 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "negative stain EM" ,
+                               "negative stain electron microscopy" ,
+                               "negative-stain EM" ;
+                 skos:definition "A type of microscopy where the specimen is stained with heavy metals salts (to improve contrast) before being bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum. The interaction of the electrons with the specimen produces transmitted, secondary, backscattered and diffracted electrons and characteristic X-rays which are detected. [CHMO]" ;
+                 skos:prefLabel "negative-stain electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000397
+af-p:AFP_0000397 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002221 ;
+                 skos:altLabel "HAADF-STEM" ,
+                               "high angle annular dark field scanning transmission electron microscopy" ,
+                               "high angular annular dark-field scanning transmission electron microscopy" ,
+                               "high-angle annular dark-field scanning transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron-transparent specimen under vacuum. The beam of electrons is scattered or diffracted at high angles before reaching the specimen, and the image results from a weakening of the beam by its interaction with the sample. An annular aperture is used to select electrons that have passed through given symmetric zones within the objective lens of the microscope. [CHMO]" ;
+                 skos:prefLabel "high-angular annular dark-field scanning transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000409
+af-p:AFP_0000409 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000496 ;
+                 skos:altLabel "SEAM" ;
+                 skos:definition "A type of microscopy where a pulsed electron beam is scanned over the surface of the specimen in order to generate elastic waves which are reflected and detected. [CHMO]" ;
+                 skos:prefLabel "scanning electron acoustic microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000496
+af-p:AFP_0000496 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "SEM" ,
+                               "scanning electronic microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across the specimen under vacuum and the interaction of the electrons with the specimen is determined. [CHMO]" ;
+                 skos:prefLabel "scanning electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000600
+af-p:AFP_0000600 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ,
+                                 af-p:AFP_0002248 ;
+                 skos:altLabel "LT-TEM" ,
+                               "cryo TEM" ,
+                               "cryo-TEM" ,
+                               "cryo-transmission electron microscopy " ,
+                               "cryogenic TEM" ,
+                               "low-temperature transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen, which is cooled in liquid ethane to 180 deg. C, is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "cryogenic transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000631
+af-p:AFP_0000631 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "REM" ,
+                               "reflection EM" ;
+                 skos:definition "A type of microscopy where the specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum. The electrons elastically scattered by the specimen are detected. [CHMO]" ;
+                 skos:prefLabel "reflection electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000639
+af-p:AFP_0000639 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "HREM" ,
+                               "high resolution EM" ,
+                               "high resolution electron microscopy" ,
+                               "high-resolution EM" ;
+                 skos:definition "A type of microscopy where the specimen bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum. The specimen is tilted such that a low-order zone axis is closely parallel to the incident beam, and columns of atoms are viewed end-on by the beam. The interaction of the electrons with the specimen produces transmitted, secondary, backscattered and diffracted electrons and characteristic X-rays which are detected. HREM imaging is used to explore crystal structures and imperfections on the atomic scale. [CHMO]" ;
+                 skos:prefLabel "high-resolution electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000697
+af-p:AFP_0000697 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001285 ;
+                 skos:altLabel "aberration corrected high resolution transmission electron microscopy" ,
+                               "aberration-corrected HRTEM" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the phase contrast between transmitted electron waves is used to produce an image. The beam is focused using a set of magnetic lenses which removes spherical aberration (an effect where the electron beam is deflected too strongly, resulting in a blurred image). [CHMO]" ;
+                 skos:prefLabel "aberration-corrected high-resolution transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000818
+af-p:AFP_0000818 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "PEEM" ,
+                               "PEM" ,
+                               "photo-electron microscopy" ,
+                               "photo-emission microscopy" ,
+                               "photoelectron microscopy" ;
+                 skos:definition "A type of electron microscopy where the distribution of electrons emitted by a specimen sample following excitation by UV light, synchrotron radiation or X-ray sources is used to produce an image. [CHMO]" ;
+                 skos:prefLabel "photoemission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000860
+af-p:AFP_0000860 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "FEM" ,
+                               "field electron microscopy" ,
+                               "field emission electron microscopy" ,
+                               "field emission microscopy" ,
+                               "field-emission microscopy" ;
+                 skos:definition "A type of microscopy where the specimen is bombarded with a finely focused (<10 nm diameter) electron beam produced by field emission with an acceleration voltage 50-150 kV under vacuum. The interaction of the electrons with the specimen produces transmitted, secondary, backscattered and diffracted electrons and characteristic X-rays which are detected. [CHMO]" ;
+                 skos:prefLabel "field-emission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000922
+af-p:AFP_0000922 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "EF-TEM" ,
+                               "EF/TEM" ,
+                               "EFTEM" ,
+                               "ESI" ,
+                               "electron spectroscopic imaging" ,
+                               "energy filtered TEM" ,
+                               "energy filtered transmission electron microscopy" ,
+                               "energy-filtered TEM" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the intensities of transmitted electrons of particular kinetic energies are measured. [CHMO]" ;
+                 skos:prefLabel "energy-filtered transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000924
+af-p:AFP_0000924 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "WBDF electron microscopy" ,
+                               "weak beam dark field electron microscopy" ,
+                               "weak-beam dark-field (WBDF) electron microscopy" ;
+                 skos:definition "A type of microscopy where the specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum. The interaction of the electrons with the specimen produces transmitted, secondary, backscattered and diffracted electrons and characteristic X-rays which are detected. A diffracted beam harmonic  (a 'weak beam') is used rather than the diffracted beam itself, allowing much higher resolution to be obtained. [CHMO]" ;
+                 skos:prefLabel "weak-beam dark-field electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000940
+af-p:AFP_0000940 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001515 ,
+                                 af-p:AFP_0002439 ;
+                 skos:altLabel "DF-STEM" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron-transparent specimen under vacuum. The beam of electrons is scattered or diffracted before reaching the specimen, and the image results from a weakening of the beam by its interaction with the sample. [CHMO]" ;
+                 skos:prefLabel "dark-field scanning transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000996
+af-p:AFP_0000996 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000818 ;
+                 skos:altLabel "X-ray excited PEEM" ,
+                               "X-ray photoelectron microscopy" ,
+                               "XPEEM" ;
+                 skos:definition "A type of electron microscopy where the distribution of electrons emitted by a specimen sample following excitation with an X-ray source is used to produce an image. [CHMO]" ;
+                 skos:prefLabel "X-ray photoemission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001006
+af-p:AFP_0001006 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "Cs-corrected TEM" ,
+                               "aberration-corrected TEM" ,
+                               "spherical-aberration-corrected TEM" ,
+                               "spherical-aberration-corrected transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron-transparent specimen under vacuum and the intensities of the transmitted electrons are measured. The electron beam is focused using a set of magnetic lenses which removes spherical aberration (an effect where the electron beam is deflected too strongly, described by the spherical aberration coefficient 'Cs', which results in a blurred image). [CHMO]" ;
+                 skos:prefLabel "aberration-corrected transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001014
+af-p:AFP_0001014 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000496 ;
+                 skos:altLabel "FE SEM" ,
+                               "FE-SEM" ,
+                               "FE/SEM" ,
+                               "FEG-SEM" ,
+                               "FEGSEM" ,
+                               "FESEM" ,
+                               "FSEM" ,
+                               "field emission gun scanning electron microscopy" ,
+                               "field emission scanning electron microscopy" ,
+                               "field-emission gun scanning electron microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam produced by thermionic emission heating (field emission) and with an acceleration voltage 50-150 kV is scanned across the specimen under vacuum and the interaction of the electrons with the specimen is determined. [CHMO]" ;
+                 skos:prefLabel "field-emission scanning electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001055
+af-p:AFP_0001055 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001063 ;
+                 skos:altLabel "SPLEEM" ,
+                               "spin polarized LEEM" ,
+                               "spin-polarized LEEM" ;
+                 skos:definition "A type of microscopy where the specimen is bombarded with a finely focused (<10 nm diameter) low energy (1-100 eV) electron beam with an acceleration voltage 50-150 kV under vacuum. The interaction of the electrons with the specimen produces transmitted, secondary, backscattered and diffracted electrons and characteristic X-rays which are detected. A magnet is used to align all electron spins parallel to the sample surface. [CHMO]" ;
+                 skos:prefLabel "spin-polarized low-energy electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001063
+af-p:AFP_0001063 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "LE EM" ,
+                               "LEEM" ,
+                               "low energy EM" ,
+                               "low energy electron microscopy" ,
+                               "low-energy EM" ;
+                 skos:definition "A type of microscopy where the specimen is bombarded with a finely focused (<10 nm diameter) low energy (1-100 eV) electron beam with an acceleration voltage 50-150 kV under vacuum. The interaction of the electrons with the specimen produces transmitted, secondary, backscattered and diffracted electrons and characteristic X-rays which are detected. [CHMO]" ;
+                 skos:prefLabel "low-energy electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001072
+af-p:AFP_0001072 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000924 ,
+                                 af-p:AFP_0001395 ;
+                 skos:altLabel "WBDF TEM" ,
+                               "WBDF transmission electron microscopy" ,
+                               "weak beam dark field transmission electron microscopy" ,
+                               "weak-beam dark-field (WBDF) transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the intensities of the transmitted electrons are measured. A diffracted beam harmonic (a 'weak beam') is used rather than the diffracted beam itself, allowing much higher resolution to be obtained. [CHMO]" ;
+                 skos:prefLabel "weak-beam dark-field transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001285
+af-p:AFP_0001285 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "HR TEM" ,
+                               "HR-TEM" ,
+                               "HR/TEM" ,
+                               "HRTEM" ,
+                               "high resolution (HR) TEM" ,
+                               "high resolution TEM" ,
+                               "high resolution transmission electron microscopy" ,
+                               "high-resolution TEM" ,
+                               "phase contrast TEM" ,
+                               "phase contrast transmission electron microscopy" ,
+                               "phase-contrast TEM" ,
+                               "phase-contrast transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with several finely focused (<10 nm diameter) electron beams with an acceleration voltage 50-150 kV under vacuum, and the phase contrast between the transmitted interfering electron waves is used to produce an image. [CHMO]" ;
+                 skos:prefLabel "high-resolution transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001395
+af-p:AFP_0001395 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "TEM" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001406
+af-p:AFP_0001406 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "HV TEM" ,
+                               "HV-TEM" ,
+                               "HV/TEM" ,
+                               "HVTEM" ,
+                               "high voltage TEM" ,
+                               "high voltage transmission electron microscopy" ,
+                               "high-voltage TEM" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 700-3000 kV under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "high-voltage transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001491
+af-p:AFP_0001491 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "FF-TEM" ,
+                               "FF/TEM" ,
+                               "FFTEM" ,
+                               "freeze fracture TEM" ,
+                               "freeze fracture transmission electron microscopy" ,
+                               "freeze-fracture TEM" ;
+                 skos:definition "A type of microscopy where the electron-transparent specimen (normally a fresh tissue or cell suspension) is prepared by rapid freezing using liquid nitrogen, then fractured, and the cold fractured surface is coated with Pt or Au by evaporation. The specimen is then bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "freeze-fracture transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001515
+af-p:AFP_0001515 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "STEM" ,
+                               "scanning TEM" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron-transparent specimen under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "scanning transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001616
+af-p:AFP_0001616 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001014 ;
+                 skos:altLabel "CFE SEM" ,
+                               "CFE-SEM" ,
+                               "CFE/SEM" ,
+                               "CFEG-SEM" ,
+                               "CFEGSEM" ,
+                               "CFSEM" ,
+                               "cold field emission gun scanning electron microscopy" ,
+                               "cold field emission scanning electron microscopy" ,
+                               "cold-field-emission gun scanning electron microscopy" ,
+                               "cold-field-emission scanning electron microscopy" ,
+                               "cold-field-gun scanning electron microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam produced by applying a high voltage to a tungsten crystal (cold-field emission) and with an acceleration voltage 50-150 kV is scanned across the specimen under vacuum and the interaction of the electrons with the specimen is determined. [CHMO]" ;
+                 skos:prefLabel "cold-field-emission scanning electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001629
+af-p:AFP_0001629 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "TEM SAD" ,
+                               "TEM SAED" ,
+                               "TEM-SAD" ,
+                               "TEM-SAED" ;
+                 skos:definition "A method for determining structure by directing a beam of high energy (10-200 keV) electrons at the sample within a transmission electron microscope and recording the resulting diffraction pattern produced by any electrons transmitted through the sample. [CHMO]" ;
+                 skos:prefLabel "transmission electron microscopy selected area electron diffraction" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001934
+af-p:AFP_0001934 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000496 ;
+                 skos:altLabel "E-SEM" ,
+                               "ESEM" ,
+                               "environmental SEM" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across the specimen in a gaseous environment and the interaction of the electrons with the specimen is determined. [CHMO]" ;
+                 skos:prefLabel "environmental scanning electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0001961
+af-p:AFP_0001961 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000496 ;
+                 skos:altLabel "HR SEM" ,
+                               "HR-SEM" ,
+                               "HRSEM" ,
+                               "high resolution SEM" ,
+                               "high-resolution SEM" ,
+                               "high-resolution scanning electron microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused electron beam is scanned across the specimen under vacuum and the secondary and backscattered electrons produced are detected. [CHMO]" ;
+                 skos:prefLabel "high resolution scanning electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002024
+af-p:AFP_0002024 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000496 ,
+                                 af-p:AFP_0002248 ;
+                 skos:altLabel "LT-SEM" ,
+                               "cryo SEM" ,
+                               "cryo-SEM" ,
+                               "cryo-scanning electron microscopy " ,
+                               "cryogenic SEM" ,
+                               "low-temperature scanning electron microscopy " ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron transparent specimen under vacuum and the intensities of the transmitted electrons are measured. A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across the specimen, which is cooled in liquid ethane to 180 deg. C, under vacuum and the interaction of the electrons with the specimen is determined. [CHMO]" ;
+                 skos:prefLabel "cryogenic scanning electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002069
+af-p:AFP_0002069 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000496 ;
+                 skos:altLabel "SEM EDX" ,
+                               "SEM-EDX" ,
+                               "SEM-EDXA" ,
+                               "SEM/EDX" ,
+                               "SEM/EDXA" ,
+                               "scanning electron microscopy-energy dispersive X-ray spectroscopy" ,
+                               "scanning electron microscopy/energy dispersive X-ray analysis" ,
+                               "scanning electron microscopy/energy dispersive X-ray spectroscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across the specimen under vacuum. The interaction of electrons with the specimen produces X-rays (with energies characteristic of atomic number) which are detected as a function of wavelength. [CHMO]" ;
+                 skos:prefLabel "scanning electron microscopy energy dispersive X-ray spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002123
+af-p:AFP_0002123 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "negative staining TEM" ,
+                               "negative staining transmission electron microscopy" ,
+                               "negative-staining TEM" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen, that has been stained with heavy metals salts (e.g. uranyl acetate), is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "negative-staining transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002221
+af-p:AFP_0002221 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000940 ;
+                 skos:altLabel "ADF-STEM" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron-transparent specimen under vacuum. The beam of electrons is scattered or diffracted before reaching the specimen, and the image results from a weakening of the beam by its interaction with the sample. An annular aperture is used to select electrons that have passed through given symmetric zones within the objective lens of the microscope. [CHMO]" ;
+                 skos:prefLabel "annular dark-field scanning transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002248
+af-p:AFP_0002248 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0002244 ;
+                 skos:altLabel "LT-EM" ,
+                               "cryo EM" ,
+                               "cryo-EM" ,
+                               "cryo-electron microscopy " ,
+                               "cryogenic EM" ,
+                               "cryogenic-electron microscopy" ,
+                               "low-temperature electron microscopy" ;
+                 skos:definition "A type of microscopy where the specimen, which is cooled in liquid ethane to 180 deg. C, is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum and the interaction of the electrons with the specimen produces transmitted, secondary, backscattered and diffracted electrons and characteristic X-rays which are detected. [CHMO]" ;
+                 skos:prefLabel "cryogenic electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002258
+af-p:AFP_0002258 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000397 ,
+                                 af-p:AFP_0001006 ;
+                 skos:altLabel "AC-HAADF-STEM" ,
+                               "abberration corrected high angular annular dark field scanning transmission electron microscopy" ,
+                               "abberration-corrected high-angle annular dark-field scanning transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV is scanned across an electron-transparent specimen under vacuum. The beam of electrons is scattered or diffracted at high angles before reaching the specimen, and the image results from a weakening of the beam by its interaction with the sample. An annular aperture is used to select electrons that have passed through given symmetric zones within the objective lens of the microscope. The electron beam is focused using a set of magnetic lenses which removes spherical aberration (an effect where the electron beam is deflected too strongly, resulting in a blurred image). [CHMO]" ;
+                 skos:prefLabel "abberration-corrected high-angular annular dark-field scanning transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002281
+af-p:AFP_0002281 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0000496 ;
+                 skos:altLabel "SAM" ,
+                               "scanning Auger electron microscopy" ;
+                 skos:definition "A type of microscopy where a focused electron beam of small diameter is used to produce Auger electrons which are detected. [CHMO]" ;
+                 skos:prefLabel "scanning Auger microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002311
+af-p:AFP_0002311 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "BF-TEM" ,
+                               "bright field TEM" ,
+                               "bright field transmission electron microscopy" ,
+                               "bright-field TEM" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV. under vacuum. The beam of electrons passes directly through an aperture before reaching the specimen. The image results from a weakening of the direct beam by its interaction with the sample. [CHMO]" ;
+                 skos:prefLabel "bright-field transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002319
+af-p:AFP_0002319 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "TEM-EDS" ,
+                               "TEM-EDX" ,
+                               "TEM/EDS" ,
+                               "TEM/EDX analysis" ;
+                 skos:definition "A type of microscopy where the specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV under vacuum. The interaction of electrons with the specimen produces X-rays (with energies characteristic of atomic number) which are detected as a function of wavelength. [CHMO]" ;
+                 skos:prefLabel "transmission electron microscopy energy-dispersive X-ray spectroscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002373
+af-p:AFP_0002373 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "FE TEM" ,
+                               "FE-TEM" ,
+                               "FE/TEM" ,
+                               "FEG-TEM" ,
+                               "FEGTEM" ,
+                               "FETEM" ,
+                               "FTEM" ,
+                               "field emission gun transmission electron microscopy" ,
+                               "field emission transmission electron microscopy" ,
+                               "field-emission-gun transmission electron microscopy" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam produced by thermionic emission heating (field emission) and with an acceleration voltage 50-150 kV under vacuum and the intensities of the transmitted electrons are measured. [CHMO]" ;
+                 skos:prefLabel "field-emission transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0002439
+af-p:AFP_0002439 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001395 ;
+                 skos:altLabel "DF-TEM" ;
+                 skos:definition "A type of microscopy where an electron-transparent specimen is bombarded with a finely focused (<10 nm diameter) electron beam with an acceleration voltage 50-150 kV. under vacuum. The beam of electrons is scattered or diffracted before reaching the specimen, and the image results from a weakening of the beam by its interaction with the sample. [CHMO]" ;
+                 skos:prefLabel "dark-field transmission electron microscopy" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000082
+af-r:AFR_0000082 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000381 ;
+                 skos:altLabel "HREM image" ,
+                               "HREM images" ,
+                               "HREM micrograph" ,
+                               "high resolution electron micrograph" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam with an acceleration voltage under vacuum, and detecting the transmitted, secondary, backscattered and diffracted electrons, and characteristic X-rays emitted. The specimen is tilted such that a low-order zone axis is closely parallel to the incident beam, and columns of atoms are viewed end-on by the beam. [CHMO]" ;
+                 skos:prefLabel "high-resolution electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000086
+af-r:AFR_0000086 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000332 ;
+                 skos:altLabel "STEM image" ,
+                               "STEM images" ,
+                               "scanning transmission electron micrographs" ,
+                               "scanning transmission electron microscopy image" ,
+                               "scanning transmission electron microscopy images" ;
+                 skos:definition "An image obtained by scanning the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the transmitted electrons. [CHMO]" ;
+                 skos:prefLabel "scanning transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000107
+af-r:AFR_0000107 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000381 ;
+                 skos:altLabel "SEM image" ,
+                               "SEM images" ,
+                               "SEM micrograph" ,
+                               "SEM micrographs" ,
+                               "scanning electron micrograph" ,
+                               "scanning electron microphotograph" ,
+                               "scanning electron microscope (SEM) image" ,
+                               "scanning electron microscope (SEM) images" ,
+                               "scanning electron microscope (SEM) micrograph" ,
+                               "scanning electron microscope (SEM) micrographs" ,
+                               "scanning electron microscopy (SEM) image" ;
+                 skos:definition "An image obtained by scanning a finely  focused (<10 nm diameter) electron beam across the specimen under vacuum. [CHMO]" ;
+                 skos:prefLabel "scanning electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000111
+af-r:AFR_0000111 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000332 ;
+                 skos:altLabel "Cs-corrected TEM image" ,
+                               "Cs-corrected TEM images" ,
+                               "aberration-corrected STEM image" ,
+                               "aberration-corrected STEM images" ,
+                               "spherical-aberration-corrected STEM image" ,
+                               "spherical-aberration-corrected STEM images" ,
+                               "spherical-aberration-corrected transmission electron micrograph" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the transmitted electrons. The electron beam is focused using a set of magnetic lenses which removes spherical aberration (an effect where the electron beam is deflected too strongly, described by the spherical aberration coefficient 'Cs', which results in a blurred image). [CHMO]" ;
+                 skos:prefLabel "aberration-corrected transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000154
+af-r:AFR_0000154 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000332 ;
+                 skos:altLabel "WBDF TEM image" ,
+                               "WBDF TEM images" ,
+                               "WBDF transmission electron micrograph" ,
+                               "weak beam dark field electron micrograph" ,
+                               "weak-beam dark-field (WBDF) transmission electron micrograph" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the transmitted electrons. A diffracted beam harmonic (a 'weak beam') is used rather than the diffracted beam itself, allowing much higher resolution to be obtained. [CHMO]" ;
+                 skos:prefLabel "weak-beam dark-field transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000167
+af-r:AFR_0000167 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000332 ;
+                 skos:altLabel "dark field transmission electron micrograph" ,
+                               "dark-field TEM image" ,
+                               "dark-field TEM images" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the scattered transmitted electrons. [CHMO]" ;
+                 skos:prefLabel "dark-field transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000194
+af-r:AFR_0000194 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000332 ;
+                 skos:altLabel "bright field transmission electron micrograph" ,
+                               "bright-field TEM image" ,
+                               "bright-field TEM images" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the directly transmitted electrons. [CHMO]" ;
+                 skos:prefLabel "bright-field transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000205
+af-r:AFR_0000205 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000332 ;
+                 skos:altLabel "negative stained transmission electron micrograph" ,
+                               "negative-stain TEM image" ,
+                               "negative-stain TEM images" ,
+                               "negative-stain TEM micrograph" ,
+                               "negative-stain TEM micrographs" ,
+                               "negative-stained TEM image" ,
+                               "negatively stained TEM image" ,
+                               "negatively stained transmission electron micrograph" ,
+                               "negatively-stained TEM micrograph" ,
+                               "negatively-stained TEM micrographs" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the transmitted electrons. The specimen is stained with heavy metals salts (e.g. uranyl acetate) to improve contrast. [CHMO]" ;
+                 skos:prefLabel "negative-stained transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000332
+af-r:AFR_0000332 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000381 ;
+                 skos:altLabel "TEM image" ,
+                               "TEM images" ,
+                               "TEM micrograph" ,
+                               "transmission electron micrograph" ,
+                               "transmission electron microphotograph" ,
+                               "transmission electron microscope (TEM) image" ,
+                               "transmission electron microscope image" ,
+                               "transmission electron microscope images" ,
+                               "transmission electron microscopic (TEM) images" ,
+                               "transmission electron microscopic (TEM) imagess" ,
+                               "transmission electron microscopy (TEM) image" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the transmitted electrons. [CHMO]" ;
+                 skos:prefLabel "transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000381
+af-r:AFR_0000381 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000038 ;
+                 skos:altLabel "EM image" ,
+                               "EM micrograph" ,
+                               "electron microphotograph" ,
+                               "electron microscopy image" ;
+                 skos:definition "An image obtained by bombarding the specimen with a finely focused (<10 nm diameter) electron beam with an acceleration voltage under vacuum, and detecting the transmitted, secondary, backscattered and diffracted electrons, and characteristic X-rays emitted. [CHMO]" ;
+                 skos:prefLabel "electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000388
+af-r:AFR_0000388 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000381 ;
+                 skos:altLabel "FE-SEM image" ,
+                               "FE-SEM images" ,
+                               "FE-SEM micrograph" ,
+                               "FESEM image" ,
+                               "FESEM images" ,
+                               "FESEM micrographs" ,
+                               "field emission scanning electron micrograph" ,
+                               "field-emission scanning electron microphotograph" ,
+                               "field-emission scanning electron microscopy (FE-SEM) image" ,
+                               "field-emission scanning electron microscopy (SEM) image" ;
+                 skos:definition "An image obtained by scanning a finely focused (<10 nm diameter) electron beam, produced by thermionic emission heating (field emission), across the specimen under vacuum. [CHMO]" ;
+                 skos:prefLabel "field-emission scanning electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000401
+af-r:AFR_0000401 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000086 ;
+                 skos:altLabel "HAADF-STEM image" ,
+                               "HAADF-STEM images" ,
+                               "high angle annular dark field scanning transmission electron micrograph" ,
+                               "high angular annular dark-field scanning transmission electron micrograph" ,
+                               "high-angle annular dark-field scanning transmission electron micrograph" ;
+                 skos:definition "An image obtained by scanning the specimen with a finely focused (<10 nm diameter) electron beam under vacuum and measuring the intensities of the transmitted electrons. The beam of electrons is scattered or diffracted at high angles before reaching the specimen, and the image results from a weakening of the beam by its interaction with the sample. An annular aperture is used to select electrons that have passed through given symmetric zones within the objective lens of the microscope. [CHMO]" ;
+                 skos:prefLabel "high-angular annular dark-field scanning transmission electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000420
+af-r:AFR_0000420 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000107 ;
+                 skos:altLabel "high resolution scanning electron micrograph" ,
+                               "high-resolution SEM image" ,
+                               "high-resolution SEM images" ,
+                               "high-resolution SEM micrograph" ,
+                               "high-resolution SEM micrographs" ;
+                 skos:definition "An image obtained by scanning a finely  focused (<10 nm diameter) electron beam across the specimen under vacuum. The specimen is tilted such that a low-order zone axis is closely parallel to the incident beam, and columns of atoms are viewed end-on by the beam. [CHMO]" ;
+                 skos:prefLabel "high-resolution scanning electron micrograph" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0000458
+af-r:AFR_0000458 rdf:type owl:Class ;
+                 rdfs:subClassOf af-r:AFR_0000332 ;
+                 skos:altLabel "HRTEM image" ,
+                               "high resolution (HR) TEM images" ,
+                               "high-resolution TEM image" ,
+                               "high-resolution TEM images" ,
+                               "high-resolution transmission electron image" ,
+                               "high-resolution transmission electron microscopy (HRTEM) image" ,
+                               "phase contrast TEM image" ,
+                               "phase-contrast TEM image" ,
+                               "phase-contrast TEM images" ,
+                               "phase-contrast TEM micrograph" ,
+                               "phase-contrast transmission electron micrograph" ,
+                               "phase-contrast transmission electron microphotograph" ,
+                               "phase-contrast transmission electron microscopy (TEM) image" ;
+                 skos:definition "An image obtained by bombarding the specimen with several finely focused (<10 nm diameter) electron beams under vacuum and using the phase contrast between transmitted interfering electron waves. [CHMO]" ;
+                 skos:prefLabel "high-resolution transmission electron micrograph" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Copyright Notice and Terms for IUPAC Gold Book
+______________________________________________________________________________
+Copyright © 1998, Regents of the University of California
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+******************************************************************************
+Copyright Notice and Terms for PSI-MS (Proteomics Standards Initiative - Mass Spectrometry) Mass spectrometer output files and spectra interpretation
+_____________________________________________________________________________
+Created by Matt Chambers, Andreas Bertsch, Marius Kallhardt, Eric Deutsch Fredrik Levander, Pierre-Alain Binz, and Gerhard Mayer. Publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group and HUPO Proteomics Standards Initiative Proteomics Informatics Working Group. This work is used pursuant to a Creative Commons license available here: http://creativecommons.org/licenses/by/3.0/legalcode
+
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2021 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2021 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/

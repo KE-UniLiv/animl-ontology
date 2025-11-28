@@ -1,0 +1,297 @@
+@prefix : <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/gc#> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix af-c: <http://purl.allotrope.org/ontologies/common#> .
+@prefix af-e: <http://purl.allotrope.org/ontologies/equipment#> .
+@prefix af-m: <http://purl.allotrope.org/ontologies/material#> .
+@prefix af-p: <http://purl.allotrope.org/ontologies/process#> .
+@prefix af-q: <http://purl.allotrope.org/ontologies/quality#> .
+@prefix af-r: <http://purl.allotrope.org/ontologies/result#> .
+@prefix af-x: <http://purl.allotrope.org/ontologies/property#> .
+@prefix chmo: <http://purl.obolibrary.org/obo/CHMO> .
+@prefix envo: <http://purl.obolibrary.org/obo/ENVO> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/PATO> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix af-fn: <http://purl.allotrope.org/ontologies/function#> .
+@prefix af-re: <http://purl.allotrope.org/ontologies/realizable#> .
+@prefix af-rl: <http://purl.allotrope.org/ontologies/role#> .
+@prefix af-cur: <http://purl.allotrope.org/ontologies/curation#> .
+@base <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/gc#> .
+
+<http://purl.allotrope.org/voc/afo/domain/REC/2025/06/gc> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/gc> ;
+                                                                     owl:imports <http://purl.allotrope.org/voc/afo/domain/REC/2025/06/chromatography> ;
+                                                                     dct:contributor <http://www.allotrope.org> ;
+                                                                     dct:issued "2025-06-25T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:license <http://purl.allotrope.org/voc/creative-commons-attribution-license> ;
+                                                                     dct:modified "2025-04-04T12:00:00Z"^^xsd:dateTime ;
+                                                                     dct:publisher <http://www.allotrope.org> ;
+                                                                     dct:rights <http://purl.allotrope.org/voc/attribution> ,
+                                                                                <http://purl.allotrope.org/voc/copyright> ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "AFO Gas Chromatography Domain Ontology (REC/2025/06)" ;
+                                                                     owl:priorVersion <http://purl.allotrope.org/voc/afo/domain/REC/2025/03/gc> ;
+                                                                     owl:versionInfo "REC/2025/06" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000161
+af-e:AFE_0000161 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000266 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000974 ;
+                                   owl:someValuesFrom af-e:AFE_0000462
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0001025 ;
+                                   owl:someValuesFrom af-e:AFE_0000024
+                                 ] ;
+                 dct:source "K. Grob, Split and Splitless Injection for Quantitative Gas Chromatography: Concepts, Processes, Practical Guidelines, Sources of Error, 4th, Completely Revised Edition (Wiley, Hoboken, New Jersey, 2001)." ;
+                 skos:altLabel "GC injector" ,
+                               "GC inlet" ,
+                               "column injector" ,
+                               "column inlet" ,
+                               "gas chromatograph injector" ;
+                 skos:definition "An inlet into a gas chromatograph. [Allotrope]" ;
+                 skos:prefLabel "gas chromatograph inlet" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000209
+af-e:AFE_0000209 rdfs:subClassOf af-e:AFE_0002188 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000316
+af-e:AFE_0000316 rdfs:subClassOf af-e:AFE_0002188 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000534
+af-e:AFE_0000534 rdfs:subClassOf af-e:AFE_0002188 .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000755
+af-e:AFE_0000755 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000161 ;
+                 skos:altLabel "SL" ,
+                               "splitless" ,
+                               "splitless injector" ;
+                 skos:definition "A splitless inlet is a gas chromatograph inlet enabling the carrier gas to sweep the volatilized sample onto the GC column. [Allotrope]" ;
+                 skos:prefLabel "splitless inlet" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0000811
+af-e:AFE_0000811 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000161 ;
+                 skos:altLabel "S" ,
+                               "split" ,
+                               "split injector" ;
+                 skos:definition "A split inlet is a gas chromatograph inlet followed by a splitter enabling the carrier gas to sweep a part of volatilized sample onto the GC column, with that remaining split/swept to waste. [Allotrope]" ;
+                 skos:prefLabel "split inlet" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002188
+af-e:AFE_0002188 rdf:type owl:Class ;
+                 rdfs:subClassOf [ owl:intersectionOf ( af-e:AFE_0000246
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty ro:_0000056 ;
+                                                          owl:someValuesFrom af-p:AFP_0000310
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0000939 ;
+                                   owl:someValuesFrom af-e:AFE_0002195
+                                 ] ;
+                 af-x:AFX_0002798 "true"^^xsd:boolean ;
+                 skos:altLabel "GC detector" ;
+                 skos:definition "A gas chromatography detector is a detector that is used in gas chromatography as component of a GC system. [Allotrope]" ;
+                 skos:prefLabel "gas chromatography detector" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002194
+af-e:AFE_0002194 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000161 ;
+                 skos:definition "A split/splitless inlet is a gas chromatograph inlet that supports both split and splitless injection modes. [Allotrope]" ;
+                 skos:prefLabel "split/splitless inlet" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002195
+af-e:AFE_0002195 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( af-e:AFE_0000074
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty af-x:AFX_0000972 ;
+                                                              owl:someValuesFrom af-e:AFE_0000024
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf af-e:AFE_0000074 ;
+                 skos:definition "A GC system is a device system that has a gas chromatograph component. [Allotrope]" ;
+                 skos:prefLabel "GC system" .
+
+
+###  http://purl.allotrope.org/ontologies/equipment#AFE_0002201
+af-e:AFE_0002201 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0000161 ,
+                                 af-e:AFE_0001799 ;
+                 skos:definition "A packed injector is a GC injector device in which the entire sample aliquot is vaporized and directly introduced onto the column. [Allotrope]" ;
+                 skos:prefLabel "packed injector" .
+
+
+###  http://purl.allotrope.org/ontologies/material#AFM_0001095
+af-m:AFM_0001095 rdf:type owl:Class ;
+                 rdfs:subClassOf af-e:AFE_0002099 ,
+                                 af-m:AFM_0000154 ,
+                                 af-m:AFM_0001065 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty af-x:AFX_0002735 ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( af-p:AFP_0000812
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty af-x:AFX_0000696 ;
+                                                                               owl:someValuesFrom envo:_00002005
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0001000 ;
+                                   owl:someValuesFrom envo:_00002005
+                                 ] ;
+                 skos:definition "Zero grade air is air that is purified to contain less than 0.1 ppm of hydrocarbons. [Allotrope]" ;
+                 skos:prefLabel "zero grade air" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0000812
+af-p:AFP_0000812 rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003683
+af-p:AFP_0003683 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0001611 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:altLabel "GC injection" ,
+                               "GC sample introduction" ,
+                               "gas chromatography sample introduction" ;
+                 skos:definition "Gas chromatography injection is the process of loading a sample into a gas chromatography system. [Allotrope]" ;
+                 skos:prefLabel "gas chromatography injection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003684
+af-p:AFP_0003684 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003683 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:definition "Splitless injection is a GC injection whereby the carrier gas sweeps the volatilized sample onto the GC column for a specified period of time before diverting the remaining sample to waste. [Allotrope]" ;
+                 skos:prefLabel "splitless injection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003685
+af-p:AFP_0003685 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003683 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:definition "Split injection is a GC injection whereby a fraction of the volatilized sample is swept onto the GC column with the remaining split/swept to waste. [Allotrope]" ;
+                 skos:prefLabel "split injection" .
+
+
+###  http://purl.allotrope.org/ontologies/process#AFP_0003686
+af-p:AFP_0003686 rdf:type owl:Class ;
+                 rdfs:subClassOf af-p:AFP_0003683 ;
+                 af-x:AFX_0002818 "true"^^xsd:boolean ;
+                 skos:definition "Packed injection is a GC injection type whereby all of the volatilized sample is swept onto the GC column. [Allotrope]" ;
+                 skos:prefLabel "packed injection" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002605
+af-r:AFR_0002605 rdf:type owl:Class ;
+                 rdfs:subClassOf af-c:AFC_0000160 ,
+                                 iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ro:_0002351 ;
+                                   owl:someValuesFrom af-r:AFR_0002606
+                                 ] ;
+                 skos:definition "A gas chromatography aggregate document is a document that aggregates gas chromatography documents. [Allotrope]" ;
+                 skos:prefLabel "gas chromatography aggregate document" .
+
+
+###  http://purl.allotrope.org/ontologies/result#AFR_0002606
+af-r:AFR_0002606 rdf:type owl:Class ;
+                 rdfs:subClassOf iao:_0000310 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty iao:_0000136 ;
+                                   owl:someValuesFrom af-p:AFP_0000310
+                                 ] ;
+                 skos:definition "A gas chromatography document is a document that encompasses the information associated with a gas chromatography run. [Allotrope]" ;
+                 skos:prefLabel "gas chromatography document" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.allotrope.org
+<http://www.allotrope.org> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           foaf:name "Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/attribution
+<http://purl.allotrope.org/voc/attribution> rdf:type owl:NamedIndividual ,
+                                                     dct:RightsStatement ;
+                                            dct:description """
+These taxonomies contain material or may constitute derivative works of material which may be subject to copyright by one of the following organizations.  By using these taxonomies, you agree to the following terms and conditions applicable to its contents:
+******************************************************************************
+Attribution Notice for National Center for Biomedical Ontology materials.
+
+This work contains material from the Cell Ontology and Clinical Measurement Ontology, available here: http://bioportal.bioontology.org/.
+******************************************************************************
+Attribution Notice for ChEBI
+This work contains material from the European Bioinformatics Institute’s ChEBI database.
+******************************************************************************
+Attribution Notice for Quantities Units Dimensions Data Types (http://www.qudt.org/)
+This work contains content from www.qudt.org and is used pursuant to a Creative Commons License available here: http://creativecommons.org/licenses/by-sa/3.0/us/legalcode. The original work may have been modified.
+******************************************************************************
+Copyright and Attribution Notice for Dublin Core Metadata Initiative Document
+This work contains material from the following DCMI document used pursuant to a creative commons license available here: https://creativecommons.org/licenses/by/4.0/legalcode. This material may have been modified or changed.
+Timestamped URL:          http://dublincore.org/documents/2012/06/14/dcmi-terms/
+Date Issued:                       2012-06-14
+Document Status:            This is a DCMI Recommendation.
+Copyright © 1995-2015 DCMI. All Rights Reserved. DCMI liability, trademark/service mark, document use and software licensing rules apply.
+******************************************************************************
+
+""" ;
+                                            dct:title "Derivative works attribution" .
+
+
+###  http://purl.allotrope.org/voc/copyright
+<http://purl.allotrope.org/voc/copyright> rdf:type owl:NamedIndividual ,
+                                                   dct:RightsStatement ;
+                                          dct:description "Copyright © 2015-2025 Allotrope Foundation" ;
+                                          dct:rightsHolder <http://www.allotrope.org> ;
+                                          dct:title "Copyright © 2015-2025 Allotrope Foundation" .
+
+
+###  http://purl.allotrope.org/voc/creative-commons-attribution-license
+<http://purl.allotrope.org/voc/creative-commons-attribution-license> rdf:type owl:NamedIndividual ,
+                                                                              dct:LicenseDocument ;
+                                                                     dct:description """This work is licensed under a Creative Commons Attribution 4.0 International License http://creativecommons.org/licenses/by/4.0/.
+
+THESE MATERIALS ARE PROVIDED \"AS IS\" AND ALLOTROPE EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF NON-INFRINGEMENT, TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+Copyright © 2015-2025 Allotrope Foundation
+""" ;
+                                                                     dct:rightsHolder <http://www.allotrope.org> ;
+                                                                     dct:title "Creative Commons Attribution 4.0 International Public License" .
+
+
+###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/
