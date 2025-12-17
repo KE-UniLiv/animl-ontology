@@ -155,6 +155,9 @@ If you use the AnIML Ontology in your work, please cite the following paper:
 }
 ```
 
+## Acknowledgement
+This work was supported by the Royal Academy of Engineering under the Google DeepMind Research Ready Scheme, and by an EPSRC ICASE studentship (201146) with Unilever PLC.
+
 ## References
 
 [1] Schäfer, B. A., Poetz, D., & Kramer, G. W. (2004). Documenting laboratory workflows using the analytical information markup language. JALA: Journal of the Association for Laboratory Automation, 9(6), 375-381.
