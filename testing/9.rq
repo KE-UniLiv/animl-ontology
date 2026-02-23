@@ -1,14 +1,17 @@
-# CQ-9: What is the sample ID of the container in which a sample is located?
+# CQ-9: What is the sample ID of those containers in which a sample is located?
 # This requires traversing the aml:SampleInContainer situation described in the text and Core Module. The sample is associated with the situation, which links to the container (itself a Sample).
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 
 SELECT ?containerID
 WHERE {
-    ?sample a aml:Sample ;
-            aml:associatedWith ?situation .
+    ?Container a aml:Container .
+    ?Container aml:container ?containerID .
 
-    ?situation a aml:SampleInContainer ;
-               aml:hasContainer ?container .
-               
-    ?container aml:id ?containerID .
+    ?Sample a aml:Sample .
+
+    ?Situation a aml:SampleInContainer .
+    ?Situation aml:isContainedBy ?Container .
+    ?Situation aml:isContained ?Sample .
+
+    FILTER ( ?Container != ?Sample )
 }

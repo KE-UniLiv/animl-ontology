@@ -1,5 +1,5 @@
 # CQ-17: What is the label of a unit?
-# The Technique Module shows aml:Units (and aml:SIUnit) linked to xsd:string via the aml:label property.
+# needs population confirmation.
 
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 

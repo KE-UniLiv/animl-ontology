@@ -308,6 +308,7 @@
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Container"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Agent"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Change"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Role"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataPoint"/>
                 </owl:unionOf>
             </owl:Class>
@@ -317,6 +318,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ContainerType"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/AgentType"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/RoleType"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ChangeType"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataPointType"/>
                 </owl:unionOf>
@@ -424,6 +426,14 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/animl/ontology/usesTechnique">
         <rdfs:comment xml:lang="en">This denotes the inclusion of a technique in an experiment step, and also indicates that a technique is something that is utilised in an exmperiment step rather than being part of it</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/seriesSetSpecification"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
     </owl:ObjectProperty>
 
@@ -471,6 +481,22 @@
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/minValue">
+        <rdfs:comment xml:lang="en">This is the minimum allowed value for a parameter</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    </owl:DatatypeProperty>
+
+    
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/maxValue">
+        <rdfs:comment xml:lang="en">This is the maximum allowed value for a parameter</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -517,6 +543,8 @@
     
 
 
+
+
     <!-- this represents the column position of a sample in a container, within the reified sampleInContainer situation -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/containmentColumn">
@@ -542,6 +570,15 @@
 
     <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/identifier">
         <rdfs:comment xml:lang="en">This is any machine readable code not assigned within the system, for example if an agent has an employee number</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- this represents the version of an agent-->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/version">
+        <rdfs:comment xml:lang="en">This represents the version of an agent</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -892,6 +929,12 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/RoleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -901,6 +944,11 @@
     <owl:Class rdf:about="http://www.w3id.org/animl/ontology/AgentType">
         <rdfs:comment xml:lang="en">This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible types of intentional objects that could interact with the system</rdfs:comment>
     </owl:Class>
+
+      <!-- this is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class,
+    in this case the individuals for this class correspond to the possible types of roles an agent may need to perform -->
+    <owl:Class rdf:about="http://www.w3id.org/animl/ontology/RoleType">
+    </owl:Class>   
 
     <!-- enumeration class for encodings-->
     <owl:Class rdf:about="http://www.w3id.org/animl/ontology/DataPointType">
@@ -1437,7 +1485,14 @@
         <rdfs:comment xml:lang="en">A person as a human agent type</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/AgentType"/>
     </owl:NamedIndividual>
-    
+
+    <!-- a type of role an agent may perform -->
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/Author">
+        <rdfs:comment xml:lang="en">A creator role type</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/RoleType"/>
+    </owl:NamedIndividual>
+
+ 
 
 
     <!-- a type of change to a an element of a document -->
@@ -1699,6 +1754,17 @@
                 <owl:Restriction>
                     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/usedBy"/>
                     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                </owl:Restriction>
+            </rdfs:subClassOf>
+        </owl:Class>
+
+        <owl:Class rdf:about="http://www.w3id.org/animl/ontology/seriesSetSpecification">
+            <rdfs:comment xml:lang="en">This is the class for series set specifications</rdfs:comment>
+            <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+            <rdfs:subClassOf>
+                <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/usesTechnique"/>
+                    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
                 </owl:Restriction>
             </rdfs:subClassOf>
         </owl:Class>

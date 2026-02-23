@@ -1,5 +1,5 @@
 # CQ-14: What is the increment value for an auto-incremented series?
-# In the Technique Module, aml:DataPointSpecification links to aml:EncodingType, which has a subclass aml:AutoIncrementedEncodingType. While the specific data property isn't drawn as a node in the diagram, standard ontology practice for this pattern uses a property like aml:increment.
+# needs population confirmation.
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 
 SELECT ?incrementValue

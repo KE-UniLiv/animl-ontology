@@ -1,8 +1,5 @@
-# CQ-19: What is the required data type for a series in a technique definition?
-# In the Technique Module, aml:SeriesSpecification defines the constraints for a series. It links to aml:DataType via the aml:hasType property.
-
-PREFIX aml: <http://www.w3.org/animl/ontology/>
-
+# CQ-19: What are the required data types for series in a technique definition?
+# needs population confirmation.
 SELECT ?dataType
 WHERE {
     ?technique aml:includes ?specification .

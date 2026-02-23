@@ -2,9 +2,16 @@
 # The Reference Pattern explicitly defines aml:startValue and aml:endValue on the aml:AnimlReference class to support data slicing.
 
 PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX set: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#>
 
-SELECT ?endValue
+SELECT ?referenceSet ?Series ?DataPoint
 WHERE {
-    ?reference a aml:AnimlReference ;
-               aml:endValue ?endValue .
+    ?referenceSet a aml:AnimlReferenceSet .
+    ?referenceSet aml:subject ?Series .
+    ?referenceSet aml:hasMember ?reference .
+    ?reference aml:pointsTo ?DataPoint .
+    FILTER NOT EXISTS {
+        ?DataPoint aml:directlyPrecedes ?x .
+    }
 }
+ORDER BY ?referenceSet ?Series ?DataPoint

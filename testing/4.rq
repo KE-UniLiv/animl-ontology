@@ -1,5 +1,5 @@
 # CQ-4: What is the unique ID of an experiment step?
-
+# requires population confirmation
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 
 SELECT ?stepID

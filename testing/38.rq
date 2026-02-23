@@ -1,13 +1,17 @@
 # CQ-38: What are the individual string values in a series?
-# In the Core Module, a aml:Series holds values. If the series contains strings (as defined by its type), the values are accessed via the aml:value property.
+# needs population confirmation.
 
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?stringValue
+SELECT ?series ?stringValue
 WHERE {
     ?series a aml:Series ;
             aml:value ?stringValue .
+    ?series aml:hasSpecification ?seriesSpec .
+    ?seriesSpec aml:hasType ?dataType .
+    FILTER(?dataType = aml:string)
             
     FILTER (datatype(?stringValue) = xsd:string)
 }
+ORDER BY ?series ?stringValue

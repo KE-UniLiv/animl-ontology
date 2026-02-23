@@ -1,11 +1,13 @@
 # CQ-36: What is the expected dependency (independent/dependent) for a series in a technique?
-# The Technique Module shows aml:SeriesSpecification with the data property aml:dependency.
-
+# needs population confirmation.
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 
-SELECT ?dependency
+SELECT ?Technique ?seriesSpec ?dependency
 WHERE {
+    ?Technique a aml:Technique .
+    ?Technique aml:includes ?seriesSpec .
     ?seriesSpec a aml:SeriesSpecification ;
                 aml:dependency ?dependency .
                 
 }
+ORDER BY ?Technique ?seriesSpec ?dependency

@@ -1,10 +1,13 @@
 # CQ-8: What are the individual 32-bit integer values in a series?
-# The Technique Module defines aml:DataType individuals like aml:int32. A Series linked to this type would expose its values.
+# requries populated validation
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 
-SELECT ?value
+SELECT ?dataPoint
 WHERE {
-    ?series a aml:Series ;
-            aml:hasType aml:int32 ;
-            aml:value ?value .
+    ?series a aml:Series .
+    ?series aml:hasSpecification ?seriesSpecification .
+    ?seriesSpecification aml:hasType ?dataType .
+    FILTER (?dataType = aml:int32) .
+    ?series aml:hasMember ?dataPoint
+
 }
