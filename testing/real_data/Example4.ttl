@@ -1,0 +1,118 @@
+@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/animl/example4#document> a aml:Document ;
+    aml:animlVersion "1.0" ;
+    aml:denotes <http://example.org/animl/example4#experiment> ;
+    aml:hasSampleSet <http://example.org/animl/example4#sampleset> .
+
+<http://example.org/animl/example4#category_Matcha_00001_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example4#parameter_Matcha_00001_1_1>,
+        <http://example.org/animl/example4#parameter_Matcha_00001_1_2> .
+
+<http://example.org/animl/example4#experiment> a aml:Experiment ;
+    ce:hasMember <http://example.org/animl/example4#step_e_1> .
+
+<http://example.org/animl/example4#paramSpec_Matcha_00001_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example4#parameter_Matcha_00001_1_1> .
+
+<http://example.org/animl/example4#paramSpec_Matcha_00001_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example4#parameter_Matcha_00001_1_2> .
+
+<http://example.org/animl/example4#result_e_1_1> a aml:Result ;
+    aml:name "Trace" ;
+    ce:hasMember <http://example.org/animl/example4#seriesSet_e_1_1_1> .
+
+<http://example.org/animl/example4#result_e_1_2> a aml:Result ;
+    aml:name "Single Results" .
+
+<http://example.org/animl/example4#sample_Matcha_00001> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example4#category_Matcha_00001_1> ;
+    aml:identifier "Matcha-00001" ;
+    aml:name "Matcha" .
+
+<http://example.org/animl/example4#sampleset> a aml:SampleSet ;
+    ce:hasMember <http://example.org/animl/example4#sample_Matcha_00001> .
+
+<http://example.org/animl/example4#seriesSet_e_1_1_1> a aml:SeriesSet ;
+    aml:name "Trace" ;
+    aml:value 27 ;
+    ce:hasMember <http://example.org/animl/example4#series_e_1_1_1_1>,
+        <http://example.org/animl/example4#series_e_1_1_1_2>,
+        <http://example.org/animl/example4#series_e_1_1_1_3>,
+        <http://example.org/animl/example4#series_e_1_1_1_4>,
+        <http://example.org/animl/example4#series_e_1_1_1_5>,
+        <http://example.org/animl/example4#series_e_1_1_1_6> .
+
+<http://example.org/animl/example4#seriesSpec_e_1_1_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:int32 ;
+    aml:usedBy <http://example.org/animl/example4#series_e_1_1_1_1> .
+
+<http://example.org/animl/example4#seriesSpec_e_1_1_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example4#series_e_1_1_1_2> .
+
+<http://example.org/animl/example4#seriesSpec_e_1_1_1_3> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example4#series_e_1_1_1_3> .
+
+<http://example.org/animl/example4#seriesSpec_e_1_1_1_4> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example4#series_e_1_1_1_4> .
+
+<http://example.org/animl/example4#seriesSpec_e_1_1_1_5> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example4#series_e_1_1_1_5> .
+
+<http://example.org/animl/example4#seriesSpec_e_1_1_1_6> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example4#series_e_1_1_1_6> .
+
+<http://example.org/animl/example4#step_e_1> a aml:ExperimentStep ;
+    aml:name "Tiamo Experiment Step 1" ;
+    aml:producesResult <http://example.org/animl/example4#result_e_1_1>,
+        <http://example.org/animl/example4#result_e_1_2> .
+
+<http://example.org/animl/example4#parameter_Matcha_00001_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example4#paramSpec_Matcha_00001_1_1> ;
+    aml:name "Limscode" ;
+    aml:pointValue "Matcha"^^xsd:string .
+
+<http://example.org/animl/example4#parameter_Matcha_00001_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example4#paramSpec_Matcha_00001_1_2> ;
+    aml:name "Electrodenumber" ;
+    aml:pointValue 1 .
+
+<http://example.org/animl/example4#series_e_1_1_1_1> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example4#seriesSpec_e_1_1_1_1> ;
+    aml:name "Index" .
+
+<http://example.org/animl/example4#series_e_1_1_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example4#seriesSpec_e_1_1_1_2> ;
+    aml:name "Volume [mL]" .
+
+<http://example.org/animl/example4#series_e_1_1_1_3> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example4#seriesSpec_e_1_1_1_3> ;
+    aml:name "Measured value [mV]" .
+
+<http://example.org/animl/example4#series_e_1_1_1_4> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example4#seriesSpec_e_1_1_1_4> ;
+    aml:name "ERC" .
+
+<http://example.org/animl/example4#series_e_1_1_1_5> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example4#seriesSpec_e_1_1_1_5> ;
+    aml:name "Time [s]" .
+
+<http://example.org/animl/example4#series_e_1_1_1_6> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example4#seriesSpec_e_1_1_1_6> ;
+    aml:name "Temperature [°C]" .
+

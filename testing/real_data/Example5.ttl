@@ -1,0 +1,942 @@
+@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/animl/example5#document> a aml:Document ;
+    aml:animlVersion "1.0" ;
+    aml:denotes <http://example.org/animl/example5#experiment> ;
+    aml:hasSampleSet <http://example.org/animl/example5#sampleset> .
+
+<http://example.org/animl/example5#category_Basil_00002_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Basil_00002_1_1>,
+        <http://example.org/animl/example5#parameter_Basil_00002_1_2>,
+        <http://example.org/animl/example5#parameter_Basil_00002_1_3>,
+        <http://example.org/animl/example5#parameter_Basil_00002_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Cinnamon_00005_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Cinnamon_00005_1_1>,
+        <http://example.org/animl/example5#parameter_Cinnamon_00005_1_2>,
+        <http://example.org/animl/example5#parameter_Cinnamon_00005_1_3>,
+        <http://example.org/animl/example5#parameter_Cinnamon_00005_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Cocoa_00013_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Cocoa_00013_1_1>,
+        <http://example.org/animl/example5#parameter_Cocoa_00013_1_2>,
+        <http://example.org/animl/example5#parameter_Cocoa_00013_1_3>,
+        <http://example.org/animl/example5#parameter_Cocoa_00013_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Coffee_00011_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Coffee_00011_1_1>,
+        <http://example.org/animl/example5#parameter_Coffee_00011_1_2>,
+        <http://example.org/animl/example5#parameter_Coffee_00011_1_3>,
+        <http://example.org/animl/example5#parameter_Coffee_00011_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Ginger_00006_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Ginger_00006_1_1>,
+        <http://example.org/animl/example5#parameter_Ginger_00006_1_2>,
+        <http://example.org/animl/example5#parameter_Ginger_00006_1_3>,
+        <http://example.org/animl/example5#parameter_Ginger_00006_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Matcha_00001_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Matcha_00001_1_1>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_2>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_3>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_4>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_5>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_6>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_7>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_8>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_1_9> ;
+    aml:name "Formulation details" .
+
+<http://example.org/animl/example5#category_Matcha_00001_2> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Matcha_00001_2_1>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_2_2>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_2_3>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_2_4>,
+        <http://example.org/animl/example5#parameter_Matcha_00001_2_5> ;
+    aml:name "Back Weighing Information" .
+
+<http://example.org/animl/example5#category_Oregano_00003_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Oregano_00003_1_1>,
+        <http://example.org/animl/example5#parameter_Oregano_00003_1_2>,
+        <http://example.org/animl/example5#parameter_Oregano_00003_1_3>,
+        <http://example.org/animl/example5#parameter_Oregano_00003_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Pepper_00004_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Pepper_00004_1_1>,
+        <http://example.org/animl/example5#parameter_Pepper_00004_1_2>,
+        <http://example.org/animl/example5#parameter_Pepper_00004_1_3>,
+        <http://example.org/animl/example5#parameter_Pepper_00004_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Rosemary_00009_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Rosemary_00009_1_1>,
+        <http://example.org/animl/example5#parameter_Rosemary_00009_1_2>,
+        <http://example.org/animl/example5#parameter_Rosemary_00009_1_3>,
+        <http://example.org/animl/example5#parameter_Rosemary_00009_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Tea_00012_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Tea_00012_1_1>,
+        <http://example.org/animl/example5#parameter_Tea_00012_1_2>,
+        <http://example.org/animl/example5#parameter_Tea_00012_1_3>,
+        <http://example.org/animl/example5#parameter_Tea_00012_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Thyme_00010_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Thyme_00010_1_1>,
+        <http://example.org/animl/example5#parameter_Thyme_00010_1_2>,
+        <http://example.org/animl/example5#parameter_Thyme_00010_1_3>,
+        <http://example.org/animl/example5#parameter_Thyme_00010_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Turmeric_00007_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Turmeric_00007_1_1>,
+        <http://example.org/animl/example5#parameter_Turmeric_00007_1_2>,
+        <http://example.org/animl/example5#parameter_Turmeric_00007_1_3>,
+        <http://example.org/animl/example5#parameter_Turmeric_00007_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#category_Vanilla_00008_1> a aml:Category ;
+    aml:hasParameter <http://example.org/animl/example5#parameter_Vanilla_00008_1_1>,
+        <http://example.org/animl/example5#parameter_Vanilla_00008_1_2>,
+        <http://example.org/animl/example5#parameter_Vanilla_00008_1_3>,
+        <http://example.org/animl/example5#parameter_Vanilla_00008_1_4> ;
+    aml:name "Ingredient details" .
+
+<http://example.org/animl/example5#experiment> a aml:Experiment ;
+    ce:hasMember <http://example.org/animl/example5#step_BS_372904>,
+        <http://example.org/animl/example5#step_BS_372905>,
+        <http://example.org/animl/example5#step_BS_372906>,
+        <http://example.org/animl/example5#step_BS_372907>,
+        <http://example.org/animl/example5#step_BS_372908>,
+        <http://example.org/animl/example5#step_BS_372909>,
+        <http://example.org/animl/example5#step_BS_372910>,
+        <http://example.org/animl/example5#step_BS_372911>,
+        <http://example.org/animl/example5#step_BS_372912>,
+        <http://example.org/animl/example5#step_BS_372913>,
+        <http://example.org/animl/example5#step_BS_372914>,
+        <http://example.org/animl/example5#step_BS_372915>,
+        <http://example.org/animl/example5#step_BS_372916>,
+        <http://example.org/animl/example5#step_BS_372917>,
+        <http://example.org/animl/example5#step_BS_372918>,
+        <http://example.org/animl/example5#step_BS_372919> .
+
+<http://example.org/animl/example5#paramSpec_Basil_00002_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Basil_00002_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Basil_00002_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Basil_00002_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Basil_00002_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Basil_00002_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Basil_00002_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Basil_00002_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cinnamon_00005_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cinnamon_00005_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cinnamon_00005_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cinnamon_00005_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Cocoa_00013_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cocoa_00013_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Cocoa_00013_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cocoa_00013_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Cocoa_00013_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cocoa_00013_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Cocoa_00013_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Cocoa_00013_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Coffee_00011_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Coffee_00011_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Coffee_00011_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Coffee_00011_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Coffee_00011_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Coffee_00011_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Coffee_00011_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Coffee_00011_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Ginger_00006_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Ginger_00006_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Ginger_00006_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Ginger_00006_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Ginger_00006_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Ginger_00006_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Ginger_00006_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Ginger_00006_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:datetime ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_5> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_5> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_6> a aml:ParameterSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_6> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_7> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_7> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_8> a aml:ParameterSpecification ;
+    aml:hasDataType aml:datetime ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_8> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_1_9> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_1_9> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_2_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_2_1> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_2_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_2_2> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_2_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_2_3> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_2_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_2_4> .
+
+<http://example.org/animl/example5#paramSpec_Matcha_00001_2_5> a aml:ParameterSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Matcha_00001_2_5> .
+
+<http://example.org/animl/example5#paramSpec_Oregano_00003_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Oregano_00003_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Oregano_00003_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Oregano_00003_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Oregano_00003_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Oregano_00003_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Oregano_00003_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Oregano_00003_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Pepper_00004_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Pepper_00004_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Pepper_00004_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Pepper_00004_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Pepper_00004_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Pepper_00004_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Pepper_00004_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Pepper_00004_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Rosemary_00009_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Rosemary_00009_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Rosemary_00009_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Rosemary_00009_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Rosemary_00009_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Rosemary_00009_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Rosemary_00009_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Rosemary_00009_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Tea_00012_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Tea_00012_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Tea_00012_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Tea_00012_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Tea_00012_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Tea_00012_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Tea_00012_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Tea_00012_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Thyme_00010_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Thyme_00010_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Thyme_00010_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Thyme_00010_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Thyme_00010_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Thyme_00010_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Thyme_00010_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Thyme_00010_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Turmeric_00007_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Turmeric_00007_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Turmeric_00007_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Turmeric_00007_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Turmeric_00007_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Turmeric_00007_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Turmeric_00007_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Turmeric_00007_1_4> .
+
+<http://example.org/animl/example5#paramSpec_Vanilla_00008_1_1> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Vanilla_00008_1_1> .
+
+<http://example.org/animl/example5#paramSpec_Vanilla_00008_1_2> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Vanilla_00008_1_2> .
+
+<http://example.org/animl/example5#paramSpec_Vanilla_00008_1_3> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Vanilla_00008_1_3> .
+
+<http://example.org/animl/example5#paramSpec_Vanilla_00008_1_4> a aml:ParameterSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example5#parameter_Vanilla_00008_1_4> .
+
+<http://example.org/animl/example5#result_BS_372904_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372905_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372906_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372907_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372908_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372909_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372910_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372911_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372912_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372913_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372914_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372915_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372916_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372917_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372918_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#result_BS_372919_1> a aml:Result ;
+    aml:name "Step Results" .
+
+<http://example.org/animl/example5#sample_Basil_00002> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Basil_00002_1> ;
+    aml:identifier "Basil-00002" ;
+    aml:name "Basil" .
+
+<http://example.org/animl/example5#sample_Cinnamon_00005> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Cinnamon_00005_1> ;
+    aml:identifier "Cinnamon-00005" ;
+    aml:name "Cinnamon" .
+
+<http://example.org/animl/example5#sample_Cocoa_00013> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Cocoa_00013_1> ;
+    aml:identifier "Cocoa-00013" ;
+    aml:name "Cocoa" .
+
+<http://example.org/animl/example5#sample_Coffee_00011> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Coffee_00011_1> ;
+    aml:identifier "Coffee-00011" ;
+    aml:name "Coffee" .
+
+<http://example.org/animl/example5#sample_Ginger_00006> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Ginger_00006_1> ;
+    aml:identifier "Ginger-00006" ;
+    aml:name "Ginger" .
+
+<http://example.org/animl/example5#sample_Matcha_00001> a aml:Sample ;
+    aml:comment "DEFT DOE EU Blue 4% Comete 0% 555 36deg" ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Matcha_00001_1>,
+        <http://example.org/animl/example5#category_Matcha_00001_2> ;
+    aml:identifier "Matcha-00001" ;
+    aml:name "Matcha" .
+
+<http://example.org/animl/example5#sample_Oregano_00003> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Oregano_00003_1> ;
+    aml:identifier "Oregano-00003" ;
+    aml:name "Oregano" .
+
+<http://example.org/animl/example5#sample_Pepper_00004> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Pepper_00004_1> ;
+    aml:identifier "Pepper-00004" ;
+    aml:name "Pepper" .
+
+<http://example.org/animl/example5#sample_Rosemary_00009> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Rosemary_00009_1> ;
+    aml:identifier "Rosemary-00009" ;
+    aml:name "Rosemary" .
+
+<http://example.org/animl/example5#sample_Tea_00012> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Tea_00012_1> ;
+    aml:identifier "Tea-00012" ;
+    aml:name "Tea" .
+
+<http://example.org/animl/example5#sample_Thyme_00010> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Thyme_00010_1> ;
+    aml:identifier "Thyme-00010" ;
+    aml:name "Thyme" .
+
+<http://example.org/animl/example5#sample_Turmeric_00007> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Turmeric_00007_1> ;
+    aml:identifier "Turmeric-00007" ;
+    aml:name "Turmeric" .
+
+<http://example.org/animl/example5#sample_Vanilla_00008> a aml:Sample ;
+    aml:hasSampleCategory <http://example.org/animl/example5#category_Vanilla_00008_1> ;
+    aml:identifier "Vanilla-00008" ;
+    aml:name "Vanilla" .
+
+<http://example.org/animl/example5#sampleset> a aml:SampleSet ;
+    ce:hasMember <http://example.org/animl/example5#sample_Basil_00002>,
+        <http://example.org/animl/example5#sample_Cinnamon_00005>,
+        <http://example.org/animl/example5#sample_Cocoa_00013>,
+        <http://example.org/animl/example5#sample_Coffee_00011>,
+        <http://example.org/animl/example5#sample_Ginger_00006>,
+        <http://example.org/animl/example5#sample_Matcha_00001>,
+        <http://example.org/animl/example5#sample_Oregano_00003>,
+        <http://example.org/animl/example5#sample_Pepper_00004>,
+        <http://example.org/animl/example5#sample_Rosemary_00009>,
+        <http://example.org/animl/example5#sample_Tea_00012>,
+        <http://example.org/animl/example5#sample_Thyme_00010>,
+        <http://example.org/animl/example5#sample_Turmeric_00007>,
+        <http://example.org/animl/example5#sample_Vanilla_00008> .
+
+<http://example.org/animl/example5#step_BS_372904> a aml:ExperimentStep ;
+    aml:name "#15 - Wait for 360.0s" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372904_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372904> .
+
+<http://example.org/animl/example5#step_BS_372905> a aml:ExperimentStep ;
+    aml:name "#16 - Heat to 28.1C and continue" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372905_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372905> .
+
+<http://example.org/animl/example5#step_BS_372906> a aml:ExperimentStep ;
+    aml:name "#4 - Heat to 28.08C and wait until reached" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372906_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372906> .
+
+<http://example.org/animl/example5#step_BS_372907> a aml:ExperimentStep ;
+    aml:name "#2 - Start stirring at 159.74rpm" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372907_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372907> .
+
+<http://example.org/animl/example5#step_BS_372908> a aml:ExperimentStep ;
+    aml:name "#1 - Add 3152.212778g of Basil" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372908_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372908> .
+
+<http://example.org/animl/example5#step_BS_372909> a aml:ExperimentStep ;
+    aml:name "#3 - Add 35.0g of Oregano" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372909_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372909> .
+
+<http://example.org/animl/example5#step_BS_372910> a aml:ExperimentStep ;
+    aml:name "#5 - Add 12.6g of Pepper" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372910_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372910> .
+
+<http://example.org/animl/example5#step_BS_372911> a aml:ExperimentStep ;
+    aml:name "#6 - Add 1.75g of Cinnamon" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372911_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372911> .
+
+<http://example.org/animl/example5#step_BS_372912> a aml:ExperimentStep ;
+    aml:name "#7 - Add 0.291667g of Ginger" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372912_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372912> .
+
+<http://example.org/animl/example5#step_BS_372913> a aml:ExperimentStep ;
+    aml:name "#8 - Add 38.5g of Turmeric" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372913_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372913> .
+
+<http://example.org/animl/example5#step_BS_372914> a aml:ExperimentStep ;
+    aml:name "#9 - Add 155.555555g of Vanilla" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372914_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372914> .
+
+<http://example.org/animl/example5#step_BS_372915> a aml:ExperimentStep ;
+    aml:name "#10 - Add 0.875g of Rosemary" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372915_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372915> .
+
+<http://example.org/animl/example5#step_BS_372916> a aml:ExperimentStep ;
+    aml:name "#11 - Add 9.1g of Thyme" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372916_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372916> .
+
+<http://example.org/animl/example5#step_BS_372917> a aml:ExperimentStep ;
+    aml:name "#12 - Add 2.45g of Coffee" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372917_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372917> .
+
+<http://example.org/animl/example5#step_BS_372918> a aml:ExperimentStep ;
+    aml:name "#13 - Add 313.25g of Tea" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372918_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372918> .
+
+<http://example.org/animl/example5#step_BS_372919> a aml:ExperimentStep ;
+    aml:name "#14 - Add 28.665g of Cocoa" ;
+    aml:producesResult <http://example.org/animl/example5#result_BS_372919_1> ;
+    aml:usesTechnique <http://example.org/animl/example5#technique_BS_372919> .
+
+<http://example.org/animl/example5#technique_BS_372904> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/waitforduration.atdd" ;
+    aml:name "Add Wait Duration Instruction" .
+
+<http://example.org/animl/example5#technique_BS_372905> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/heatcool.atdd" ;
+    aml:name "Add Temperature Instruction" .
+
+<http://example.org/animl/example5#technique_BS_372906> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/heatcool.atdd" ;
+    aml:name "Add Temperature Instruction" .
+
+<http://example.org/animl/example5#technique_BS_372907> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/stir.atdd" ;
+    aml:name "Add Stirring Instruction" .
+
+<http://example.org/animl/example5#technique_BS_372908> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372909> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372910> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372911> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372912> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372913> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372914> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372915> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372916> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372917> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372918> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#technique_BS_372919> a aml:Technique ;
+    aml:identifier "https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd" ;
+    aml:name "Add Ingredient" .
+
+<http://example.org/animl/example5#parameter_Basil_00002_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Basil_00002_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Basil_00002_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Basil_00002_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-220513-00015"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Basil_00002_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Basil_00002_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000000007"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Basil_00002_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Basil_00002_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Cinnamon_00005_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Cinnamon_00005_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-250819-00040"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Cinnamon_00005_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000001746"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Cinnamon_00005_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Cocoa_00013_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cocoa_00013_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Cocoa_00013_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cocoa_00013_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-250606-00060"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Cocoa_00013_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cocoa_00013_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000124462"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Cocoa_00013_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Cocoa_00013_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Coffee_00011_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Coffee_00011_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Coffee_00011_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Coffee_00011_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "M-250725-00036"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Coffee_00011_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Coffee_00011_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Mixt-000000237992"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Coffee_00011_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Coffee_00011_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Ginger_00006_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Ginger_00006_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Ginger_00006_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Ginger_00006_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-241205-00087"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Ginger_00006_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Ginger_00006_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000000071"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Ginger_00006_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Ginger_00006_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_1> ;
+    aml:name "Owner" ;
+    aml:pointValue "Danny.McMahon"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_2> ;
+    aml:name "Created by" ;
+    aml:pointValue "Sophia.Sarfraz"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_3> ;
+    aml:name "Created" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_4> ;
+    aml:name "Status" ;
+    aml:pointValue "Released"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_5> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_5> ;
+    aml:name "Group" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_6> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_6> ;
+    aml:name "Total Amount Made" ;
+    aml:pointValue 3.5e+03 .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_7> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_7> ;
+    aml:name "Batch Type" ;
+    aml:pointValue "formulation"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_8> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_8> ;
+    aml:name "Expiry" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_1_9> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_1_9> ;
+    aml:name "Manufactured" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_2_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_2_1> ;
+    aml:name "Start Weight" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_2_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_2_2> ;
+    aml:name "Beaker + Stirrer + Formulation" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_2_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_2_3> ;
+    aml:name "End Weight" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_2_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_2_4> ;
+    aml:name "Amount Lost" .
+
+<http://example.org/animl/example5#parameter_Matcha_00001_2_5> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Matcha_00001_2_5> ;
+    aml:name "Amount Added" .
+
+<http://example.org/animl/example5#parameter_Oregano_00003_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Oregano_00003_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Oregano_00003_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Oregano_00003_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-250826-00145"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Oregano_00003_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Oregano_00003_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000092512"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Oregano_00003_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Oregano_00003_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Pepper_00004_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Pepper_00004_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Pepper_00004_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Pepper_00004_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-250910-00035"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Pepper_00004_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Pepper_00004_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000111323"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Pepper_00004_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Pepper_00004_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Rosemary_00009_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Rosemary_00009_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Rosemary_00009_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Rosemary_00009_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "M-240726-00030"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Rosemary_00009_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Rosemary_00009_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Mixt-000000097526"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Rosemary_00009_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Rosemary_00009_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Tea_00012_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Tea_00012_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Tea_00012_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Tea_00012_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-250128-00079"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Tea_00012_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Tea_00012_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000012786"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Tea_00012_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Tea_00012_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Thyme_00010_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Thyme_00010_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Thyme_00010_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Thyme_00010_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "M-250725-00037"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Thyme_00010_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Thyme_00010_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Mixt-000000237994"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Thyme_00010_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Thyme_00010_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Turmeric_00007_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Turmeric_00007_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Turmeric_00007_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Turmeric_00007_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "M-250723-00018"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Turmeric_00007_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Turmeric_00007_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Mixt-000000134021"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Turmeric_00007_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Turmeric_00007_1_4> ;
+    aml:name "Link" .
+
+<http://example.org/animl/example5#parameter_Vanilla_00008_1_1> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Vanilla_00008_1_1> ;
+    aml:name "Type" ;
+    aml:pointValue "Lot"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Vanilla_00008_1_2> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Vanilla_00008_1_2> ;
+    aml:name "Lot Number" ;
+    aml:pointValue "I-231204-00124"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Vanilla_00008_1_3> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Vanilla_00008_1_3> ;
+    aml:name "Ingredient ID" ;
+    aml:pointValue "Ingr-000000099047"^^xsd:string .
+
+<http://example.org/animl/example5#parameter_Vanilla_00008_1_4> a aml:Parameter ;
+    aml:hasSpecification <http://example.org/animl/example5#paramSpec_Vanilla_00008_1_4> ;
+    aml:name "Link" .
+

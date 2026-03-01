@@ -1,0 +1,33 @@
+@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+
+<http://example.org/animl/example3#document> a aml:Document ;
+    aml:animlVersion "1.0" ;
+    aml:denotes <http://example.org/animl/example3#experiment> ;
+    aml:hasSampleSet <http://example.org/animl/example3#sampleset> .
+
+<http://example.org/animl/example3#experiment> a aml:Experiment ;
+    ce:hasMember <http://example.org/animl/example3#step_es_1>,
+        <http://example.org/animl/example3#step_es_2> .
+
+<http://example.org/animl/example3#result_es_1_1> a aml:Result ;
+    aml:name "D33 Water (LO / Duplex emulsions)" .
+
+<http://example.org/animl/example3#result_es_2_1> a aml:Result ;
+    aml:name "External/Free Water Duplex" .
+
+<http://example.org/animl/example3#sample_Matcha_00001> a aml:Sample ;
+    aml:identifier "Matcha-00001" ;
+    aml:name "Matcha" .
+
+<http://example.org/animl/example3#sampleset> a aml:SampleSet ;
+    ce:hasMember <http://example.org/animl/example3#sample_Matcha_00001> .
+
+<http://example.org/animl/example3#step_es_1> a aml:ExperimentStep ;
+    aml:name "D33 Water (LO / Duplex emulsions)" ;
+    aml:producesResult <http://example.org/animl/example3#result_es_1_1> .
+
+<http://example.org/animl/example3#step_es_2> a aml:ExperimentStep ;
+    aml:name "External/Free Water Duplex" ;
+    aml:producesResult <http://example.org/animl/example3#result_es_2_1> .
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1771860920364" name="http://www.w3id.org/animl/ontology/" uri="animl_ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1772380688675" name="http://www.w3id.org/animl/ontology/" uri="animl_ontology.owl"/>
     </group>
 </catalog>

@@ -1,0 +1,113 @@
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix seq: <http://www.w3id.org/seq> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+aml:seriesSpec_TempTime_001
+    a aml:SeriesSpecification ;
+    aml:label "Temperature vs Time" ;
+    aml:quantity "Temperature" ;
+    aml:hasUnits aml:units_Celsius ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:float32 ;
+    aml:hasPart aml:dataPointSpec_TempTime_001 .
+
+aml:dataPointSpec_TempTime_001
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:IndividualEncodingType .
+
+aml:units_Celsius 
+    a aml:Units;
+    aml:hasPart aml:unit_Celsius .
+
+aml:unit_Celsius 
+    a aml:Unit;
+    aml:offset 273.15 ;
+    aml:adjusts aml:k .
+
+aml:series_TempTime_001
+    a aml:Series ;
+    aml:label "Temperature readings" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_TempTime_001 ;
+    ce:hasMember aml:dp_TempTime_001 ;
+    ce:hasMember aml:dp_TempTime_002 ;
+    ce:hasMember aml:dp_TempTime_003 .
+
+
+
+aml:dp_TempTime_001
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_TempTime_002 .
+
+aml:dp_TempTime_002
+    a aml:DataPoint ;
+    aml:value "22.0"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_TempTime_003 .
+
+aml:dp_TempTime_003
+    a aml:DataPoint ;
+    aml:value "22.4"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_TempTime_002 .
+
+
+aml:seriesSpec_FrogNumbers
+    a aml:SeriesSpecification ;
+    aml:label "Frogs over time" ;
+    aml:quantity "Frogs" ;
+    aml:hasUnits aml:units_null ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:dataPointSpec_FrogNumber .
+
+aml:dataPointSpec_FrogNumber
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:IndividualEncodingType .
+
+aml:units_null
+    a aml:Units;
+    aml:hasPart aml:unit_null .
+
+aml:unit_null 
+    a aml:Unit;
+    aml:adjusts aml:1 .
+
+
+aml:Frog_numbers
+    a aml:Series ;
+    aml:label "Frog" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_FrogNumbers ;
+    ce:hasMember aml:dp_FrogNumber_001 ;
+    ce:hasMember aml:dp_FrogNumber_002 ;
+    ce:hasMember aml:dp_FrogNumber_003 .
+
+
+aml:dp_FrogNumber_001
+    a aml:DataPoint ;
+    aml:value "7" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_002 .
+
+aml:dp_FrogNumber_002
+    a aml:DataPoint ;
+    aml:value "11" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_FrogNumber_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_003 .
+
+aml:dp_FrogNumber_003
+    a aml:DataPoint ;
+    aml:value "21" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_FrogNumber_002 .

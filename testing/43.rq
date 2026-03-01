@@ -3,9 +3,4 @@
 
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 
-ASK {
-    ?result a aml:Result ;
-            aml:hasPart ?nestedStep .
-            
-    ?nestedStep a aml:ExperimentStep .
-}
+SELECT 

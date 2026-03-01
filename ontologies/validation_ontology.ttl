@@ -1,0 +1,1798 @@
+@prefix : <http://www.w3id.org/animl/ontology/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://www.w3id.org/animl/ontology/> .
+
+<http://www.w3id.org/animl/ontology/> rdf:type owl:Ontology ;
+                                       owl:versionIRI <http://www.w3id.org/animl/ontology/1.0.0/> ;
+                                       owl:imports <http://www.ontologydesignpatterns.org/cp/owl/bag.owl> ,
+                                                   <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> ,
+                                                   <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> ;
+                                       cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                       dc:creator "Andrew Mitchell"@en ,
+                                                  "Andrew Ng"@en ,
+                                                  "Elliott Watkiss-Leek"@en ,
+                                                  "Ewan Johnson"@en ,
+                                                  "George Hannah"@en ,
+                                                  "Harry Rostron"@en ,
+                                                  "Jacopo de Berardinis"@en ,
+                                                  "Terry R. Payne"@en ,
+                                                  "Valentina Tamma"@en ,
+                                                  "Wilf Morlidge"@en ;
+                                       dc:description "The AnIML Ontology is a OWL-based model that formalises the semantics of the Analytical Information Markup Language (AnIML) and aligns it with the Allotrope Data Format to support cross-system and cross-lab interoperability."@en ;
+                                       dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                       dc:title "The AnIML Ontology"@en ;
+                                       terms:issued "2025-02-01" ;
+                                       terms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                       terms:modified "2025-02-27" ;
+                                       vann:preferredNamespacePrefix "aml" ;
+                                       vann:preferredNamespaceUri "http://www.w3id.org/animl/ontology/" ;
+                                       rdfs:comment "The AnIML Ontology is a OWL-based model that formalises the semantics of the Analytical Information Markup Language (AnIML) and aligns it with the Allotrope Data Format to support cross-system and cross-lab interoperability."@en ;
+                                       rdfs:label "The AnIML Ontology"@en ;
+                                       owl:versionInfo "1.0.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+cc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+terms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+terms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#anySimpleType
+xsd:anySimpleType rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain aml:Agent ;
+                                                                      rdfs:range aml:Role ;
+                                                                      rdfs:comment "This is the inverse of the bag association, however it carries the connotation that the agent becomes defined by their task. This is in the same way that if a human practices medicine to fulfill a need for medical treatment, then that need becomes met, however it also makes the human a doctor."@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isItemOf
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isItemOf> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isRoleOf
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isRoleOf> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain aml:Role ;
+                                                                rdfs:range aml:Agent ;
+                                                                rdfs:comment "A reified property for the concept of a role being fulfilled by an agent, in english the concept of a task / job being done by someone"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember
+<http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain [ rdf:type owl:Class ;
+                                                                                            owl:unionOf ( aml:AnimlReferenceSet
+                                                                                                          aml:Series
+                                                                                                          aml:SignatureSet
+                                                                                                          aml:TagSet
+                                                                                                          aml:seriesSet
+                                                                                                        )
+                                                                                          ] ;
+                                                                              rdfs:range [ rdf:type owl:Class ;
+                                                                                           owl:unionOf ( aml:AnimlReference
+                                                                                                         aml:DataPoint
+                                                                                                         aml:Signature
+                                                                                                         aml:Tag
+                                                                                                         aml:series
+                                                                                                       )
+                                                                                         ] ;
+                                                                              rdfs:comment "This denotes the inclusion of a technique in an experiment step, and also indicates that a technique is something that is utilised in an exmperiment step rather than being part of it"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Adjusts
+aml:Adjusts rdf:type owl:ObjectProperty ;
+            rdfs:domain aml:AdjustedUnit ;
+            rdfs:range aml:SIUnit ;
+            rdfs:comment "This denotes the adjustment of a fundamental unit"@en .
+
+
+###  http://www.w3id.org/animl/ontology/affects
+aml:affects rdf:type owl:ObjectProperty ;
+            rdfs:domain aml:Change ;
+            rdfs:range owl:Thing ;
+            rdfs:comment "This relationship indicates the object, conceptually the area of the animl document describing that object, that a change has been made to"@en .
+
+
+###  http://www.w3id.org/animl/ontology/consumedBy
+aml:consumedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain aml:AnimlReferenceSpecification ;
+               rdfs:range aml:Technique ;
+               owl:propertyDisjointWith aml:derivedFrom ;
+               rdfs:comment "Denotes the relationship contained within the context of the specification for a AnimlReferenced item, a relationship which indicates the requirement for the AnimlReferenced item to have been consumed in a particular technique here technique may be viewed in its form as a specification for an experiment step"@en .
+
+
+###  http://www.w3id.org/animl/ontology/consumes
+aml:consumes rdf:type owl:ObjectProperty ;
+             rdfs:domain aml:Technique ;
+             rdfs:range aml:AnimlReferenceSpecification ;
+             owl:propertyDisjointWith aml:derives ;
+             rdfs:comment "Denotes the requirement for a technique to consume the AnimlReferenced item of a referenec in order for that item to be AnimlReferenced this relationship is not entirely intuitive, but it is necessary to preserve expressivity found in the original xml"@en .
+
+
+###  http://www.w3id.org/animl/ontology/denotedBy
+aml:denotedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain aml:Experiment ;
+              rdfs:range aml:Document ;
+              rdfs:comment "This is the inverse of the denotes relation"@en .
+
+
+###  http://www.w3id.org/animl/ontology/denotes
+aml:denotes rdf:type owl:ObjectProperty ;
+            rdfs:domain aml:Document ;
+            rdfs:range aml:Experiment ;
+            rdfs:comment "This relationship shows that an animl document contains all the information regarding (e.i denotes) a particular experiment"@en .
+
+
+###  http://www.w3id.org/animl/ontology/derivedFrom
+aml:derivedFrom rdf:type owl:ObjectProperty ;
+                rdfs:domain aml:AnimlReferenceSpecification ;
+                rdfs:range aml:Technique ;
+                rdfs:comment "Denotes the relationship contained within the context of the specification for a AnimlReferenced item, a relationship which indicates the requirement for the AnimlReferenced item to have been derived from a particular technique here technique may be viewed in its form as a specification for an experiment step"@en .
+
+
+###  http://www.w3id.org/animl/ontology/derives
+aml:derives rdf:type owl:ObjectProperty ;
+            rdfs:domain aml:Technique ;
+            rdfs:range aml:AnimlReferenceSpecification ;
+            rdfs:comment "Denotes the requirement for a technique to derive the AnimlReferenced item of a referenec in order for that item to be AnimlReferenced this relationship is not entirely intuitive, but it is necessary to preserve expressivity found in the original xml"@en .
+
+
+###  http://www.w3id.org/animl/ontology/extends
+aml:extends rdf:type owl:ObjectProperty ;
+            rdfs:domain aml:Technique ;
+            rdfs:range aml:Technique ;
+            rdfs:comment "Denotes that the 'extension' (itself a subclass of technique) exists to: extend the technqiue if you consider techniques as independent complete the specification for an experiment step, if you consider technqieus as specifications for experiment steps"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasAuditTrail
+aml:hasAuditTrail rdf:type owl:ObjectProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( aml:Agent
+                                              aml:Document
+                                            )
+                              ] ;
+                  rdfs:range aml:AuditTrail ;
+                  rdfs:comment "This is the property linking a document and agents to their version history"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasAuditTrailEntry
+aml:hasAuditTrailEntry rdf:type owl:ObjectProperty ;
+                       rdfs:domain aml:AuditTrail ;
+                       rdfs:range aml:AuditTrailEntry .
+
+
+###  http://www.w3id.org/animl/ontology/hasDataType
+aml:hasDataType rdf:type owl:ObjectProperty ;
+                rdfs:domain aml:ParameterSpecification ;
+                rdfs:range aml:DataType ;
+                rdfs:comment "Conceptually this relationship is the property of being bound to a specific data type, which forces classes representing data containers to have individuals that only contain data of specific types however it is attached to the specification for such containers, since the type of data a container may hold is governed by its specification"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasFunction
+aml:hasFunction rdf:type owl:ObjectProperty ;
+                rdfs:domain aml:AnimlReference ;
+                rdfs:range aml:Function ;
+                rdfs:comment "This relation represents a reified data property, where a AnimlReference is related to the textual description of the function of the data it points to"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasMethodCategory
+aml:hasMethodCategory rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3id.org/animl/ontology/hasParameter
+aml:hasParameter rdf:type owl:ObjectProperty ;
+                 rdfs:domain aml:Category ;
+                 rdfs:range aml:Parameter ;
+                 rdfs:comment "This denotes that a category includes a parameter"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasPart
+aml:hasPart rdf:type owl:ObjectProperty ;
+            rdfs:domain aml:SeriesSpecification ;
+            rdfs:range aml:DataPointSpecification ;
+            rdfs:comment "An implementation of the common 'hasPart' realtion to denote the special relation between series and datapoint specifications, wherein series specifications govern some of the attributes of their corresponding dataPointSpecifications"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasPlotScale
+aml:hasPlotScale rdf:type owl:ObjectProperty ;
+                 rdfs:domain aml:SeriesSpecification ;
+                 rdfs:range aml:PlotScale ;
+                 rdfs:comment "A reified data property denoting that the domain (which is conceptually a component of a series determined before the series is created) has a plotscale, which itself is a class of individuals equivalent to the possible settings of the reified data property"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasResultCategory
+aml:hasResultCategory rdf:type owl:ObjectProperty ;
+                      rdfs:domain aml:Result ;
+                      rdfs:range aml:Category ;
+                      rdfs:comment "This denotes the relationship between a result and a category"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasSampleCategory
+aml:hasSampleCategory rdf:type owl:ObjectProperty ;
+                      rdfs:domain aml:Sample ;
+                      rdfs:range aml:Category ;
+                      rdfs:comment "This denotes the relationship between a sample and a category"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasSampleSet
+aml:hasSampleSet rdf:type owl:ObjectProperty ;
+                 rdfs:domain aml:Document ;
+                 rdfs:range aml:SampleSet ;
+                 rdfs:comment "This denotes the inclusion of a set of samples in a document, they are attached to the doucment as samples exist outside of the"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasSpecification
+aml:hasSpecification rdf:type owl:ObjectProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( aml:AnimlReference
+                                                 aml:Category
+                                                 aml:DataPoint
+                                                 aml:ExperimentStep
+                                                 aml:Method
+                                                 aml:Parameter
+                                                 aml:Result
+                                                 aml:Series
+                                                 aml:SeriesSet
+                                                 aml:SeriesSpecification
+                                                 aml:UseCase
+                                               )
+                                 ] ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( aml:AnimlReferenceSpecification
+                                                aml:DataPointSpecification
+                                                aml:ItemSpecification
+                                                aml:ParameterSpecification
+                                                aml:SeriesSpecification
+                                              )
+                                ] ;
+                     rdfs:comment "This denotes the property of an object having a governing specification"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasSubCategory
+aml:hasSubCategory rdf:type owl:ObjectProperty ;
+                   rdfs:domain aml:Category ;
+                   rdfs:range aml:Category ;
+                   rdfs:comment "This denotes the relationship of a category object with another of the same class, where the information of one category may be a component of another broader one"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasTags
+aml:hasTags rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( aml:ExperimentStep
+                                        aml:Sample
+                                      )
+                        ] ;
+            rdfs:range aml:TagSet ;
+            rdfs:comment "This denotes the property of have tags attached to you, as well as specifying the set of tags for which this is true"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasType
+aml:hasType rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( aml:Agent
+                                        aml:Change
+                                        aml:Container
+                                        aml:DataPoint
+                                        aml:Role
+                                      )
+                        ] ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( aml:AgentType
+                                       aml:ChangeType
+                                       aml:ContainerType
+                                       aml:DataPointType
+                                       aml:RoleType
+                                     )
+                       ] ;
+            rdfs:comment "This is distinct from the concept of data type where a classes equivalent in the animl xml was bound by an attribute to one of a set of enumerated types, we have reified that attribute and created type classes whose individuals are the possible settings of type for the relevant class. this relationship is the relation between a class and its type class"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasUnits
+aml:hasUnits rdf:type owl:ObjectProperty ;
+             rdfs:domain aml:ParameterSpecification ;
+             rdfs:range aml:Units ;
+             rdfs:comment "Denotes that a class is a container for data with corresponding units of measurement, a complex quantity may have multiple units e.i mph, or rpm"@en .
+
+
+###  http://www.w3id.org/animl/ontology/hasUseCase
+aml:hasUseCase rdf:type owl:ObjectProperty ;
+               rdfs:domain aml:AnimlReference ;
+               rdfs:range aml:UseCase ;
+               rdfs:comment "This relation represents a reified data property, where a AnimlReference is related to the textual description of the role of the data it points to, this is an optional property distinct from function and the consumes/derives relationship, it is used when further infromation about the purpose of the data is necessary to store"@en .
+
+
+###  http://www.w3id.org/animl/ontology/includes
+aml:includes rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( aml:Infrastructure
+                                         aml:Result
+                                       )
+                         ] ;
+             rdfs:range aml:AnimlReferenceSet .
+
+
+###  http://www.w3id.org/animl/ontology/includesInfrastructure
+aml:includesInfrastructure rdf:type owl:ObjectProperty ;
+                           rdfs:domain aml:ExperimentStep ;
+                           rdfs:range aml:Infrastructure ;
+                           rdfs:comment "This property is designed to link an experiment step to is associated infrastructure"@en .
+
+
+###  http://www.w3id.org/animl/ontology/isContained
+aml:isContained rdf:type owl:ObjectProperty ;
+                rdfs:domain aml:Sample ;
+                rdfs:range aml:SampleInContainer ;
+                rdfs:comment "This property does not make complete sense at a human level it ties a sample into the sampleincontainer situation since a sample in that situation has the property of being contained"@en .
+
+
+###  http://www.w3id.org/animl/ontology/isContainedBy
+aml:isContainedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain aml:SampleInContainer ;
+                  rdfs:range aml:Container ;
+                  rdfs:comment "This is not the inverse of the above property, it links a sampleIncontainer situation to a container as the object doing the containing within the situation"@en .
+
+
+###  http://www.w3id.org/animl/ontology/isPartOf
+aml:isPartOf rdf:type owl:ObjectProperty ;
+             rdfs:domain aml:DataPointSpecification ;
+             rdfs:range aml:SeriesSpecification .
+
+
+###  http://www.w3id.org/animl/ontology/makesChange
+aml:makesChange rdf:type owl:ObjectProperty ;
+                rdfs:domain aml:AuditTrailEntry ;
+                rdfs:range aml:Change ;
+                rdfs:comment "This relation indicates that it is at a particular version that a change is made"@en .
+
+
+###  http://www.w3id.org/animl/ontology/marks
+aml:marks rdf:type owl:ObjectProperty ;
+          rdfs:domain aml:Signature ;
+          rdfs:range owl:Thing ;
+          rdfs:comment "This relation links a signature to the signableitem, conceptually an area of the animl file (or one of the files it represents), it is attached it. it also indicates that the given signable item is watermarked by the signature"@en .
+
+
+###  http://www.w3id.org/animl/ontology/pointValue
+aml:pointValue rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( aml:DataPoint
+                                           aml:Parameter
+                                         )
+                           ] ;
+               rdfs:range xsd:anysimpletype .
+
+
+###  http://www.w3id.org/animl/ontology/pointsTo
+aml:pointsTo rdf:type owl:ObjectProperty ;
+             rdfs:domain aml:AnimlReference ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( aml:DataPoint
+                                        aml:ExperimentStep
+                                        aml:Sample
+                                      )
+                        ] ;
+             rdfs:comment "This indicates that the domain AnimlReference points to something of the range class"@en .
+
+
+###  http://www.w3id.org/animl/ontology/producesResult
+aml:producesResult rdf:type owl:ObjectProperty ;
+                   rdfs:domain aml:ExperimentStep ;
+                   rdfs:range aml:Result ;
+                   rdfs:comment "This relation is to link an experimentStep to its results, and also to indicate that said results are created in the step"@en .
+
+
+###  http://www.w3id.org/animl/ontology/requiresRole
+aml:requiresRole rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( aml:AuditTrailEntry
+                                             aml:Method
+                                           )
+                             ] ;
+                 rdfs:range aml:Role ;
+                 rdfs:comment "This property denotes that an object of a class has a role associated with it, this generalises asociations to several classes of objects that are now generalised as role"@en .
+
+
+###  http://www.w3id.org/animl/ontology/subject
+aml:subject rdf:type owl:ObjectProperty ;
+            rdfs:domain aml:AnimlReferenceSet ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( aml:Experiment
+                                       aml:SampleSet
+                                       aml:Series
+                                     )
+                       ] ;
+            rdfs:comment "This relation denotes that the AnimlReferenceset in the domain contains AnimlReferences to data within a data structure of the range class"@en .
+
+
+###  http://www.w3id.org/animl/ontology/usedBy
+aml:usedBy rdf:type owl:ObjectProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( aml:AnimlReferenceSpecification
+                                       aml:DataPointSpecification
+                                       aml:ItemSpecification
+                                       aml:ParameterSpecification
+                                       aml:SeriesSpecification
+                                     )
+                       ] ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( aml:AnimlReference
+                                      aml:Category
+                                      aml:DataPoint
+                                      aml:ExperimentStep
+                                      aml:Method
+                                      aml:Parameter
+                                      aml:Result
+                                      aml:Role
+                                      aml:Series
+                                      aml:SeriesSet
+                                      aml:SeriesSpecification
+                                    )
+                      ] ;
+           rdfs:comment "The inverse of the specification property which denotes that a specification is used by an object"@en .
+
+
+###  http://www.w3id.org/animl/ontology/usesMethod
+aml:usesMethod rdf:type owl:ObjectProperty ;
+               rdfs:domain aml:ExperimentStep ;
+               rdfs:range aml:Method ;
+               rdfs:comment "This denotes the inclusion of a method in an experiment step, and also indicates that a method is something that is utilised in an exmperiment step rather than being part of it"@en .
+
+
+###  http://www.w3id.org/animl/ontology/usesTechnique
+aml:usesTechnique rdf:type owl:ObjectProperty ;
+                  rdfs:domain aml:ExperimentStep ,
+                              [ rdf:type owl:Class ;
+                                owl:unionOf ( aml:ExperimentStep
+                                              aml:seriesSetSpecification
+                                            )
+                              ] ;
+                  rdfs:range aml:Technique ;
+                  rdfs:comment "This denotes the inclusion of a technique in an experiment step, and also indicates that a technique is something that is utilised in an exmperiment step rather than being part of it"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3id.org/animl/ontology/abstract
+aml:abstract rdf:type owl:DatatypeProperty ;
+             rdfs:domain aml:Technique ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "A boolean denoting whether or not a technique or extension will work without being extended"@en .
+
+
+###  http://www.w3id.org/animl/ontology/animlVersion
+aml:animlVersion rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain aml:Document ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "This is used to indicate which version of the animl markup language was used to create the document"@en .
+
+
+###  http://www.w3id.org/animl/ontology/barcode
+aml:barcode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain aml:Sample ;
+            rdfs:range xsd:string ;
+            rdfs:comment "This is used to store the characters underlying the barcode for a sample"@en .
+
+
+###  http://www.w3id.org/animl/ontology/citations
+aml:citations rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( aml:ItemSpecification
+                                          aml:Technique
+                                        )
+                          ] ;
+              rdfs:range xsd:string ;
+              rdfs:comment "A string space for the bibliography related to an object"@en .
+
+
+###  http://www.w3id.org/animl/ontology/comment
+aml:comment rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range xsd:string ;
+            rdfs:comment "This exists to enable human readable comments to be attached to all objects in the ontology"@en .
+
+
+###  http://www.w3id.org/animl/ontology/containerColumn
+aml:containerColumn rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain aml:SampleInContainer ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment "This represents the column position of a sample in a container, within the reified sampleInContainer situation"@en .
+
+
+###  http://www.w3id.org/animl/ontology/containerId
+aml:containerId rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain aml:Container ;
+                rdfs:range xsd:string ;
+                rdfs:comment "This expresses the Id which a container is given to allow it be found in a group of containers"@en .
+
+
+###  http://www.w3id.org/animl/ontology/containerRow
+aml:containerRow rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain aml:SampleInContainer ;
+                 rdfs:range xsd:int ;
+                 rdfs:comment "This represents the row position of a sample in a container, within the reified sampleInContainer situation"@en .
+
+
+###  http://www.w3id.org/animl/ontology/dependency
+aml:dependency rdf:type owl:DatatypeProperty ;
+               rdfs:domain aml:SeriesSpecification ;
+               rdfs:range xsd:string ;
+               rdfs:comment "A string space for a software requirement enumeration for an object"@en .
+
+
+###  http://www.w3id.org/animl/ontology/email
+aml:email rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain aml:Agent ;
+          rdfs:range xsd:string ;
+          rdfs:comment "This represents the email address of an agent"@en .
+
+
+###  http://www.w3id.org/animl/ontology/endValue
+aml:endValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain aml:AnimlReferenceSet ;
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "This indicates the last position in an ordered set that a contained item will be pointed to by a AnimlReference in the domain AnimlReference set"@en .
+
+
+###  http://www.w3id.org/animl/ontology/exponent
+aml:exponent rdf:type owl:DatatypeProperty ;
+             rdfs:domain aml:SIUnit ;
+             rdfs:range xsd:double ;
+             rdfs:comment "A raised power, typically used to raise the dimensionality of spacial data"@en .
+
+
+###  http://www.w3id.org/animl/ontology/factor
+aml:factor rdf:type owl:DatatypeProperty ;
+           rdfs:domain aml:SIUnit ;
+           rdfs:range xsd:double ;
+           rdfs:comment "A coefficient upon a set of units, typically an order of magnitude"@en .
+
+
+###  http://www.w3id.org/animl/ontology/identifier
+aml:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain aml:Agent ;
+               rdfs:range xsd:string ;
+               rdfs:comment "This is any machine readable code not assigned within the system, for example if an agent has an employee number"@en .
+
+
+###  http://www.w3id.org/animl/ontology/location
+aml:location rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain aml:Agent ;
+             rdfs:range xsd:string ;
+             rdfs:comment "This represents a human readable physical location (typically an address, site number, or building space ref) for an agent"@en .
+
+
+###  http://www.w3id.org/animl/ontology/maxValue
+aml:maxValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain aml:parameterSpecification ;
+             rdfs:range xsd:anySimpleType ;
+             rdfs:comment "This is the maximum allowed value for a parameter"@en .
+
+
+###  http://www.w3id.org/animl/ontology/minValue
+aml:minValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain aml:parameterSpecification ;
+             rdfs:range xsd:anySimpleType ;
+             rdfs:comment "This is the minimum allowed value for a parameter"@en .
+
+
+###  http://www.w3id.org/animl/ontology/modality
+aml:modality rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain aml:AnimlReferenceSpecification ;
+             rdfs:range xsd:string ;
+             rdfs:comment "This expresses whether the inclusion of data via a AnimlReference is mandatory"@en .
+
+
+###  http://www.w3id.org/animl/ontology/name
+aml:name rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( aml:Agent
+                                     aml:ItemSpecification
+                                     aml:Tag
+                                     aml:Template
+                                   )
+                     ] ;
+         rdfs:range xsd:string ;
+         rdfs:comment "This is a generalisation of name,model, etc meaning the human understood identifier for something"@en .
+
+
+###  http://www.w3id.org/animl/ontology/newValue
+aml:newValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain aml:Change ;
+             rdfs:range xsd:string ;
+             rdfs:comment "This represents as a string literal the post change state of an item changed in a change"@en .
+
+
+###  http://www.w3id.org/animl/ontology/offset
+aml:offset rdf:type owl:DatatypeProperty ;
+           rdfs:domain aml:SIUnit ;
+           rdfs:range xsd:double ;
+           rdfs:comment "A constant value added to the equation resulting from the combination of data with units"@en .
+
+
+###  http://www.w3id.org/animl/ontology/oldValue
+aml:oldValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain aml:Change ;
+             rdfs:range xsd:string ;
+             rdfs:comment "This represents as a string literal the per change state of an item changed in a change"@en .
+
+
+###  http://www.w3id.org/animl/ontology/operatingSystem
+aml:operatingSystem rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain aml:Agent ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "This is an optional property recording the operating system of an agent, where an agent is human, or a piece of mechanical hardware this value will be none."@en .
+
+
+###  http://www.w3id.org/animl/ontology/organisation
+aml:organisation rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain aml:Agent ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "This denotes the organisation to which an agent belongs, this can be the employer of a human agent, or the owner of a non human agent."@en .
+
+
+###  http://www.w3id.org/animl/ontology/phone
+aml:phone rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain aml:Agent ;
+          rdfs:range xsd:string ;
+          rdfs:comment "This is an optional property denoting the phone number of an agent, where the agent is not human this will be none"@en .
+
+
+###  http://www.w3id.org/animl/ontology/pointValue
+aml:pointValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.w3id.org/animl/ontology/quantity
+aml:quantity rdf:type owl:DatatypeProperty ;
+             rdfs:domain aml:Units ;
+             rdfs:range xsd:double ;
+             rdfs:comment "A description of type of objects or measurements to which units may be assigned"@en .
+
+
+###  http://www.w3id.org/animl/ontology/reason
+aml:reason rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain aml:AuditTrail ;
+           rdfs:range xsd:string ;
+           rdfs:comment "This is a natural language description justifying a change"@en .
+
+
+###  http://www.w3id.org/animl/ontology/scope
+aml:scope rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain aml:Change ;
+          rdfs:range xsd:string ;
+          rdfs:comment "This is used to indicate effects an attribute, or an entire element"@en .
+
+
+###  http://www.w3id.org/animl/ontology/sourceDataLocation
+aml:sourceDataLocation rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( aml:ExperimentStep
+                                                   aml:Sample
+                                                 )
+                                   ] ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "This is an optional parameter which points outside of the file to the location of storage for the raw data that was later translated into a sample or experimentStep"@en .
+
+
+###  http://www.w3id.org/animl/ontology/startValue
+aml:startValue rdf:type owl:DatatypeProperty ;
+               rdfs:domain aml:AnimlReferenceSet ;
+               rdfs:range xsd:nonNegativeInteger ;
+               rdfs:comment "This indicates the first position in an ordered set that a contained item will be pointed to by a AnimlReference in the domain AnimlReference set"@en .
+
+
+###  http://www.w3id.org/animl/ontology/timeStamp
+aml:timeStamp rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( aml:AuditTrail
+                                          aml:Infrastructure
+                                        )
+                          ] ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "This is a dataTime indicating the exact point in time at which an object was created"@en .
+
+
+###  http://www.w3id.org/animl/ontology/token
+aml:token rdf:type owl:DatatypeProperty ;
+          rdfs:domain aml:Technique ;
+          rdfs:range xsd:token ;
+          rdfs:comment "A unique token used to authenticate identity of an ATDD for security purposes"@en .
+
+
+###  http://www.w3id.org/animl/ontology/value
+aml:value rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain aml:Tag ;
+          rdfs:range xsd:string ;
+          rdfs:comment "This is an untyped string serving as a container for any data that may need to be included in a tag"@en .
+
+
+###  http://www.w3id.org/animl/ontology/version
+aml:version rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain aml:Agent ;
+            rdfs:range xsd:string ;
+            rdfs:comment "This represents the version of an agent"@en .
+
+
+###  http://www.w3id.org/animl/ontology/visability
+aml:visability rdf:type owl:DatatypeProperty ;
+               rdfs:domain aml:Series ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#anysimpletype
+xsd:anysimpletype rdf:type owl:Class .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdfs:comment "The fundamental root element for all ontologies"@en .
+
+
+###  http://www.w3id.org/animl/ontology/AdjustedUnit
+aml:AdjustedUnit rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
+                                   owl:allValuesFrom aml:Units
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> ;
+                                   owl:allValuesFrom aml:Units
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> ;
+                                   owl:allValuesFrom aml:Units
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty aml:Adjusts ;
+                                   owl:allValuesFrom aml:SIUnit
+                                 ] ;
+                 rdfs:comment "This is unique in the document in that it is both an enumeration class, e.i a class that  reifies the enumeration of a property of another class, and links to members of its own class to indicate its position in an ordered set. this is because it is known that its individuals must correspond to one of the limited set of Siunits, but those units can still be combined in an intractable number of ways, making direct enumeration of options impossible."@en .
+
+
+###  http://www.w3id.org/animl/ontology/Agent
+aml:Agent rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy> ;
+                            owl:allValuesFrom aml:Role
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty aml:hasAuditTrail ;
+                            owl:allValuesFrom aml:AuditTrail
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty aml:hasType ;
+                            owl:allValuesFrom aml:AgentType
+                          ] ;
+          rdfs:comment "An agent is a generalisation of several classes, author, software, device etc and may denote any external intentional object that acts on the system"@en .
+
+
+###  http://www.w3id.org/animl/ontology/AgentType
+aml:AgentType rdf:type owl:Class ;
+              rdfs:comment "This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible types of intentional objects that could interact with the system"@en .
+
+
+###  http://www.w3id.org/animl/ontology/AnimlReference
+aml:AnimlReference rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
+                                     owl:allValuesFrom aml:AnimlReferenceSet
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:hasFunction ;
+                                     owl:allValuesFrom aml:Function
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:hasSpecification ;
+                                     owl:allValuesFrom aml:AnimlReferenceSpecification
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:hasUseCase ;
+                                     owl:allValuesFrom aml:UseCase
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:pointsTo ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( aml:DataPoint
+                                                                       aml:ExperimentStep
+                                                                       aml:Sample
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:pointsTo ;
+                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
+                   rdfs:comment "This is a AnimlReference for the odp, note that it can only point to one piece of data"@en .
+
+
+###  http://www.w3id.org/animl/ontology/AnimlReferenceSet
+aml:AnimlReferenceSet rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                                        owl:allValuesFrom aml:AnimlReference
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty aml:subject ;
+                                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                                            owl:unionOf ( aml:Experiment
+                                                                          aml:SampleSet
+                                                                          aml:Series
+                                                                        )
+                                                          ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty aml:pointsTo ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
+                      rdfs:comment "This is a AnimlReference set as discussed in the header for this odp, note that it can only look within one data structure"@en .
+
+
+###  http://www.w3id.org/animl/ontology/AnimlReferenceSpecification
+aml:AnimlReferenceSpecification rdf:type owl:Class ;
+                                rdfs:subClassOf aml:Specification ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty aml:consumedBy ;
+                                                  owl:allValuesFrom aml:Technique
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty aml:derivedFrom ;
+                                                  owl:allValuesFrom aml:Technique
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty aml:usedBy ;
+                                                  owl:allValuesFrom aml:AnimlReference
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty aml:consumedBy ;
+                                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty aml:derivedFrom ;
+                                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                ] ;
+                                rdfs:comment "This is the specification subclass for a AnimlReference, it may have either a consumedby or derived from relation to any technique (and exactly one of each relation). this is because the technique of an experimentstep governs whether a sample is produced or consumed during it. this could be considered to be a property of a sample specification, except that samples are understood to exist outside of the context of the experiment (especially since some are neither consumed or produced in the experiment) and as such the ATDD can only govern the way in which they are linked into the experiment."@en .
+
+
+###  http://www.w3id.org/animl/ontology/AuditTrail
+aml:AuditTrail rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty aml:hasAuditTrailEntry ;
+                                 owl:allValuesFrom aml:AuditTrail
+                               ] ;
+               rdfs:comment "This is the set of versions of a document ,as well as the structure allowing navigation between them"@en .
+
+
+###  http://www.w3id.org/animl/ontology/AuditTrailEntry
+aml:AuditTrailEntry rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> ;
+                                      owl:allValuesFrom aml:AuditTrailEntry
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> ;
+                                      owl:allValuesFrom aml:AuditTrailEntry
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty aml:makesChange ;
+                                      owl:allValuesFrom aml:Change
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty aml:requiresRole ;
+                                      owl:allValuesFrom aml:Role
+                                    ] ;
+                    rdfs:comment "This is a specific version, representing the state of the document at a particular moment in time, it links to an unordered collection of changes (denoting the difference between this and the previous version), as well as indicating its own relative position by pointing to the previous and next version. it also has metadata attributes and links to the agents responsible for it"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Category
+aml:Category rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty aml:hasParameter ;
+                               owl:allValuesFrom aml:Parameter
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty aml:hasSpecification ;
+                               owl:allValuesFrom aml:ItemSpecification
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty aml:hasSubCategory ;
+                               owl:allValuesFrom aml:Category
+                             ] ;
+             rdfs:comment "A container for all the parameter and seriesSet data structures associated with something since it contains data structures, and thus is a data structure, a category may also contain another category as a sub-category"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Change
+aml:Change rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:affects ;
+                             owl:allValuesFrom owl:Thing
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasType ;
+                             owl:allValuesFrom aml:ChangeType
+                           ] ;
+           rdfs:comment "This denotes the conceptual object of a change to the document, and is used to link to information regarding the context of a change as well as the state of the system before and after it"@en .
+
+
+###  http://www.w3id.org/animl/ontology/ChangeType
+aml:ChangeType rdf:type owl:Class ;
+               rdfs:comment "This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible types of actions that could have been perfromed on an area of the document to consistute a change"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Container
+aml:Container rdf:type owl:Class ;
+              rdfs:subClassOf aml:Sample ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:hasType ;
+                                owl:someValuesFrom aml:ContainerType
+                              ] ;
+              rdfs:comment "This is a subclass / special case of sample which is used to denote a sample which contains other samples, it is pointed to by the sampleincontinare situation to indicate the containing sample without allowing samples to directly contain themselves or force them to have a containerid when they may not always have one"@en .
+
+
+###  http://www.w3id.org/animl/ontology/ContainerType
+aml:ContainerType rdf:type owl:Class ;
+                  rdfs:comment "This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible types of a container object"@en .
+
+
+###  http://www.w3id.org/animl/ontology/DataPoint
+aml:DataPoint rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
+                                owl:allValuesFrom aml:Series
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> ;
+                                owl:allValuesFrom aml:DataPoint
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> ;
+                                owl:allValuesFrom aml:DataPoint
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:hasSpecification ;
+                                owl:allValuesFrom aml:DataPointSpecification
+                              ] ;
+              rdfs:comment "A subclass of datapoint which contains a freely assignable value."@en .
+
+
+###  http://www.w3id.org/animl/ontology/DataPointSpecification
+aml:DataPointSpecification rdf:type owl:Class ;
+                           rdfs:subClassOf aml:Specification ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:hasDataType ;
+                                             owl:allValuesFrom aml:DataType
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:hasType ;
+                                             owl:allValuesFrom aml:DataPointType
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:usedBy ;
+                                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( aml:DataPoint
+                                                                               aml:SeriesSpecification
+                                                                             )
+                                                               ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:isPartOf ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass aml:SeriesSpecification
+                                           ] ;
+                           rdfs:comment "Data point specification"@en .
+
+
+###  http://www.w3id.org/animl/ontology/DataPointType
+aml:DataPointType rdf:type owl:Class ;
+                  rdfs:comment "Enumeration class for encodings"@en .
+
+
+###  http://www.w3id.org/animl/ontology/DataType
+aml:DataType rdf:type owl:Class ;
+             rdfs:comment "This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible data types for a datapoint"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Document
+aml:Document rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty aml:denotes ;
+                               owl:allValuesFrom aml:Experiment
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty aml:hasAuditTrail ;
+                               owl:allValuesFrom aml:AuditTrail
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty aml:hasSampleSet ;
+                               owl:allValuesFrom aml:SampleSet
+                             ] ;
+             rdfs:comment "This is the root node of the document, and links into its major componentw"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Experiment
+aml:Experiment rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                                 owl:allValuesFrom aml:ExperimentStep
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty aml:denotedBy ;
+                                 owl:allValuesFrom aml:Document
+                               ] ;
+               rdfs:comment "This is a conceptual representation of an experiment in which operations occur, and a container for the ordered set of experiment steps"@en .
+
+
+###  http://www.w3id.org/animl/ontology/ExperimentStep
+aml:ExperimentStep rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isItemOf> ;
+                                     owl:allValuesFrom aml:Template
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
+                                     owl:allValuesFrom aml:Experiment
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> ;
+                                     owl:allValuesFrom aml:ExperimentStep
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> ;
+                                     owl:allValuesFrom aml:ExperimentStep
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:hasSpecification ;
+                                     owl:allValuesFrom aml:ItemSpecification
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:hasTags ;
+                                     owl:allValuesFrom aml:TagSet
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:includesInfrastructure ;
+                                     owl:allValuesFrom aml:Infrastructure
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:producesResult ;
+                                     owl:allValuesFrom aml:Result
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:usesMethod ;
+                                     owl:allValuesFrom aml:Method
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:usesTechnique ;
+                                     owl:allValuesFrom aml:Technique
+                                   ] ;
+                   rdfs:comment "This is the root for the largest subsections of the document, it is a representation of a single action undertaken during an experiment, and consists of several components, external supporting factors, and outputs"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Function
+aml:Function rdf:type owl:Class ;
+             rdfs:comment "This is a reified natural language field for the 'function' of data when being AnimlReferenced this is optional and works to distinguish the general purpose of data from its immediate use this is an artefact from the construction of owl that has been left in to avoid damaging expressivity"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Infrastructure
+aml:Infrastructure rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty aml:includes ;
+                                     owl:allValuesFrom aml:AnimlReferenceSet
+                                   ] ;
+                   rdfs:comment "This is a container for all the data needed to begin / which consitute, an experiment, this is expected to include a set of sample and can also include previous results, or any component of a previous experiment. this is deliberately vague so that whatever information is deemed relevant may be include, for example you may or may not wish to store the fact that a piece of machinary has finished moving an is free to be acquired."@en .
+
+
+###  http://www.w3id.org/animl/ontology/ItemSpecification
+aml:ItemSpecification rdf:type owl:Class ;
+                      rdfs:subClassOf aml:Specification ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty aml:usedBy ;
+                                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                                            owl:unionOf ( aml:Category
+                                                                          aml:ExperimentStep
+                                                                          aml:Method
+                                                                          aml:Result
+                                                                          aml:Role
+                                                                        )
+                                                          ]
+                                      ] ;
+                      rdfs:comment "A simple class which exists only to be a component of those classes whose only governed components are those in specification these classes (A) cannot be directly part of specification, as then it would be possible for classes in A to have part to the more complex and specialised subclasses of specification"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Method
+aml:Method rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasMethodCategory ;
+                             owl:allValuesFrom aml:Category
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasSpecification ;
+                             owl:allValuesFrom aml:ItemSpecification
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:requiresRole ;
+                             owl:allValuesFrom aml:Role
+                           ] ;
+           rdfs:comment "This broadly denotes the procedure employed to carry out the experiment, and typically consists of a set of parameters describing the steps involved. however since this component contains a category (a largely unrestricted data container) it may take a variety of forms"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Parameter
+aml:Parameter rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:hasSpecification ;
+                                owl:allValuesFrom aml:ParameterSpecification
+                              ] ;
+              rdfs:comment "A container for a datapoint, despite transitively being a container for a single datapoint, this is not equivalent to a datapoint, as it is independent of an enclosing data structure"@en .
+
+
+###  http://www.w3id.org/animl/ontology/ParameterSpecification
+aml:ParameterSpecification rdf:type owl:Class ;
+                           rdfs:subClassOf aml:Specification ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:hasDataType ;
+                                             owl:allValuesFrom aml:DataType
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:hasUnits ;
+                                             owl:allValuesFrom aml:Units
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:usedBy ;
+                                             owl:allValuesFrom aml:Parameter
+                                           ] ;
+                           rdfs:comment "This is the subclass of specification which applies to parameters, and includes additional attribute restrictions, as well as indicating that the data in a parameter must be linked to a certain set of units"@en .
+
+
+###  http://www.w3id.org/animl/ontology/PlotScale
+aml:PlotScale rdf:type owl:Class ;
+              rdfs:comment "This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible kinds of scale a datapoint with units may be on. e.i it determines whether a datapoint is on a linear, logarithmic, or other kind of scale"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Result
+aml:Result rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasResultCategory ;
+                             owl:allValuesFrom aml:Category
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasSpecification ;
+                             owl:allValuesFrom aml:ItemSpecification
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:includes ;
+                             owl:allValuesFrom aml:AnimlReferenceSet
+                           ] ;
+           rdfs:comment "This is a container for any subset of data that is output from an experimentstep, though conventionally the salient 'results' as with the other direct components of experimentstep its sturcutre allows for freely assigned data to be introduced though sub elements, allowing this to take a variety of forms"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Role
+aml:Role rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isRoleOf> ;
+                           owl:allValuesFrom aml:Agent
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty aml:hasType ;
+                           owl:allValuesFrom aml:RoleType
+                         ] ;
+         rdfs:comment "This is the concept of a role that an object in the system may need an agent to fulfil"@en .
+
+
+###  http://www.w3id.org/animl/ontology/RoleType
+aml:RoleType rdf:type owl:Class .
+
+
+###  http://www.w3id.org/animl/ontology/SIUnit
+aml:SIUnit rdf:type owl:Class .
+
+
+###  http://www.w3id.org/animl/ontology/Sample
+aml:Sample rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasSampleCategory ;
+                             owl:allValuesFrom aml:Category
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasTags ;
+                             owl:allValuesFrom aml:TagSet
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:isContained ;
+                             owl:allValuesFrom aml:SampleInContainer
+                           ] ;
+           rdfs:comment "A sample is any item which is used, or that data regarding which is used, in an experiment in the document, they are often the subject of referencing to indicate that they are used in an experimentstep, however their set is attached to the document itself since they exist outside the context of the experiments described"@en .
+
+
+###  http://www.w3id.org/animl/ontology/SampleInContainer
+aml:SampleInContainer rdf:type owl:Class ;
+                      rdfs:subClassOf owl:Thing ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty aml:isContainedBy ;
+                                        owl:allValuesFrom aml:Container
+                                      ] ;
+                      rdfs:comment "This is a reification of the situation wherein a sample is present a container, used to allow information about the position of the sample in the container to be encoded"@en .
+
+
+###  http://www.w3id.org/animl/ontology/SampleSet
+aml:SampleSet rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                                owl:allValuesFrom aml:Sample
+                              ] ;
+              rdfs:comment "This is a container for the set of samples used in the experiment"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Series
+aml:Series rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                             owl:allValuesFrom aml:DataPoint
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
+                             owl:allValuesFrom aml:SeriesSet
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty aml:hasSpecification ;
+                             owl:allValuesFrom aml:SeriesSpecification
+                           ] ;
+           rdfs:comment "A series is a data sturcture containing ordered data points, a series may contain data points of any of the three data point subclasses, but the subclass of all the datapoints in a series must be the same"@en .
+
+
+###  http://www.w3id.org/animl/ontology/SeriesSet
+aml:SeriesSet rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                                owl:allValuesFrom aml:Series
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:hasSpecification ;
+                                owl:allValuesFrom aml:ItemSpecification
+                              ] ;
+              rdfs:comment "This is an ordered set of series data structures, series generally appear in sets when it is necessary to express multiple dimensions of data captured over the same interval or otherwise in the same context window"@en .
+
+
+###  http://www.w3id.org/animl/ontology/SeriesSpecification
+aml:SeriesSpecification rdf:type owl:Class ;
+                        rdfs:subClassOf aml:Specification ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty aml:hasDataType ;
+                                          owl:allValuesFrom aml:DataType
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty aml:hasPlotScale ;
+                                          owl:allValuesFrom aml:PlotScale
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty aml:hasUnits ;
+                                          owl:allValuesFrom aml:Units
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty aml:usedBy ;
+                                          owl:allValuesFrom aml:Series
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty aml:hasPart ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass aml:DataPointSpecification
+                                        ] ;
+                        rdfs:comment "This is the subclass of specification which applies to series, and includes additional attribute restrictions, as well as indicating that the data points of a series must all have a common set of units"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Signature
+aml:Signature rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
+                                owl:allValuesFrom aml:SignatureSet
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:marks ;
+                                owl:allValuesFrom owl:Thing
+                              ] ;
+              rdfs:comment "This is a member of a set of signatures which, when linked to a signable item, causes it to be watermarked"@en .
+
+
+###  http://www.w3id.org/animl/ontology/SignatureSet
+aml:SignatureSet rdf:type owl:Class ;
+                 rdfs:comment "This is a container for the set of signatures present in the document"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Specification
+aml:Specification rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty aml:usedBy ;
+                                    owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
+                  rdfs:comment "This is the generic superclass for specifications, those objects which represent components of animl-core classes which are governed by the relevant ATDD file,each specification may be a part of exactly one other object"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Tag
+aml:Tag rdf:type owl:Class ;
+        rdfs:comment "This is a loosely governed container which can be attached to an experiment step or sample to provide additional data about them, where said data is not otherwise expressable"@en .
+
+
+###  http://www.w3id.org/animl/ontology/TagSet
+aml:TagSet rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                             owl:allValuesFrom aml:Tag
+                           ] ;
+           rdfs:comment "This is the set of tags which exist in the document"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Technique
+aml:Technique rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:consumes ;
+                                owl:allValuesFrom aml:AnimlReferenceSpecification
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:derives ;
+                                owl:allValuesFrom aml:AnimlReferenceSpecification
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty aml:extends ;
+                                owl:allValuesFrom aml:Technique
+                              ] ;
+              rdfs:comment "This is a container for all the specification objects that exist in the ATDD governance component of a animl KB. conceptually it is also the broader specification for an experiment step, it is identical to its superclass of definition except in that it can be extended by extensions, and can have derive and consume relations, which express the ability of an ATDD to govern when samples are created or destroyed during experiment steps. as with their inverses, a technique may not have a derive and consume relation to the same AnimlReference specification. however unlike a AnimlReference specification, it may have multiple derive and consume relations over all."@en .
+
+
+###  http://www.w3id.org/animl/ontology/Template
+aml:Template rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem> ;
+                               owl:allValuesFrom aml:ExperimentStep
+                             ] ;
+             rdfs:comment "This is a subclass of experimentstep used in place of its superclass when the author wishes to denote that the experiment is an example of / specification for a type of experimentstep"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Units
+aml:Units rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
+                            owl:allValuesFrom aml:SIUnit
+                          ] ;
+          rdfs:comment "This is an ordered collection of Siunits which acts to create a compound unit"@en .
+
+
+###  http://www.w3id.org/animl/ontology/UseCase
+aml:UseCase rdf:type owl:Class ;
+            rdfs:comment "This is a reified natural language field for the use case of a set of AnimlReferenced datapoints"@en .
+
+
+###  http://www.w3id.org/animl/ontology/parameterSpecification
+aml:parameterSpecification rdf:type owl:Class .
+
+
+###  http://www.w3id.org/animl/ontology/series
+aml:series rdf:type owl:Class .
+
+
+###  http://www.w3id.org/animl/ontology/seriesSet
+aml:seriesSet rdf:type owl:Class .
+
+
+###  http://www.w3id.org/animl/ontology/seriesSetSpecification
+aml:seriesSetSpecification rdf:type owl:Class ;
+                           rdfs:subClassOf aml:Specification ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty aml:usesTechnique ;
+                                             owl:allValuesFrom aml:Technique
+                                           ] ;
+                           rdfs:comment "This is the class for series set specifications"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3id.org/animl/ontology/Author
+aml:Author rdf:type owl:NamedIndividual ,
+                    aml:RoleType ;
+           rdfs:comment "A creator role type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Experimenter
+aml:Experimenter rdf:type owl:NamedIndividual ,
+                          aml:RoleType ;
+                 rdfs:comment "An experimenter role type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/HumanAgent
+aml:HumanAgent rdf:type owl:NamedIndividual ,
+                        aml:AgentType ;
+               rdfs:comment "A person as a human agent type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/Reviewer
+aml:Reviewer rdf:type owl:NamedIndividual ,
+                      aml:RoleType ;
+             rdfs:comment "A reviewer role type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/autoIncrementedEncoding
+aml:autoIncrementedEncoding rdf:type owl:NamedIndividual ,
+                                     aml:DataPointType ;
+                            rdfs:comment "An auto incremented encoding data point type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/binaryEncoding
+aml:binaryEncoding rdf:type owl:NamedIndividual ,
+                            aml:DataPointType ;
+                   rdfs:comment "A binary encoding data point type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/boolean
+aml:boolean rdf:type owl:NamedIndividual ,
+                     aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/cD
+aml:cD rdf:type owl:NamedIndividual ,
+                aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/creation
+aml:creation rdf:type owl:NamedIndividual ,
+                      aml:ChangeType ;
+             rdfs:comment "A creation change type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/dateTime
+aml:dateTime rdf:type owl:NamedIndividual ,
+                      aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/deletion
+aml:deletion rdf:type owl:NamedIndividual ,
+                      aml:ChangeType ;
+             rdfs:comment "A deletion change type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/determinate
+aml:determinate rdf:type owl:NamedIndividual ,
+                         aml:ContainerType ;
+                rdfs:comment "Determinate container type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/embeddedXML
+aml:embeddedXML rdf:type owl:NamedIndividual ,
+                         aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/float32
+aml:float32 rdf:type owl:NamedIndividual ,
+                     aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/float64
+aml:float64 rdf:type owl:NamedIndividual ,
+                     aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/hardwareAgent
+aml:hardwareAgent rdf:type owl:NamedIndividual ,
+                           aml:AgentType ;
+                  rdfs:comment "A hardware agent type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/includes
+aml:includes rdf:type owl:NamedIndividual ,
+                      aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/indeterminate
+aml:indeterminate rdf:type owl:NamedIndividual ,
+                           aml:ContainerType ;
+                  rdfs:comment "Indeterminate container type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/individualEncoding
+aml:individualEncoding rdf:type owl:NamedIndividual ,
+                                aml:DataPointType ;
+                       rdfs:comment "An individual encoding data point type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/int32
+aml:int32 rdf:type owl:NamedIndividual ,
+                   aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/int64
+aml:int64 rdf:type owl:NamedIndividual ,
+                   aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/k
+aml:k rdf:type owl:NamedIndividual ,
+               aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/kG
+aml:kG rdf:type owl:NamedIndividual ,
+                aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/linear
+aml:linear rdf:type owl:NamedIndividual ,
+                    aml:PlotScale .
+
+
+###  http://www.w3id.org/animl/ontology/ln
+aml:ln rdf:type owl:NamedIndividual ,
+                aml:PlotScale .
+
+
+###  http://www.w3id.org/animl/ontology/log
+aml:log rdf:type owl:NamedIndividual ,
+                 aml:PlotScale .
+
+
+###  http://www.w3id.org/animl/ontology/m
+aml:m rdf:type owl:NamedIndividual ,
+               aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/modification
+aml:modification rdf:type owl:NamedIndividual ,
+                          aml:ChangeType ;
+                 rdfs:comment "A modification change type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/mol
+aml:mol rdf:type owl:NamedIndividual ,
+                 aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/none
+aml:none rdf:type owl:NamedIndividual ,
+                  aml:PlotScale .
+
+
+###  http://www.w3id.org/animl/ontology/pNG
+aml:pNG rdf:type owl:NamedIndividual ,
+                 aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/rectangular_Tray
+aml:rectangular_Tray rdf:type owl:NamedIndividual ,
+                              aml:ContainerType ;
+                     rdfs:comment "Rectangular tray container type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/s
+aml:s rdf:type owl:NamedIndividual ,
+               aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/sVG
+aml:sVG rdf:type owl:NamedIndividual ,
+                 aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/softwareAgent
+aml:softwareAgent rdf:type owl:NamedIndividual ,
+                           aml:AgentType ;
+                  rdfs:comment "A software agent type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/string
+aml:string rdf:type owl:NamedIndividual ,
+                    aml:DataType .
+
+
+###  http://www.w3id.org/animl/ontology/1
+<http://www.w3id.org/animl/ontology/1> rdf:type owl:NamedIndividual ,
+                                                aml:SIUnit .
+
+
+###  http://www.w3id.org/animl/ontology/1536_Wells
+<http://www.w3id.org/animl/ontology/1536_Wells> rdf:type owl:NamedIndividual ,
+                                                         aml:ContainerType ;
+                                                rdfs:comment "1536 wells container type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/24_Wells
+<http://www.w3id.org/animl/ontology/24_Wells> rdf:type owl:NamedIndividual ,
+                                                       aml:ContainerType ;
+                                              rdfs:comment "24 wells container type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/384_Wells
+<http://www.w3id.org/animl/ontology/384_Wells> rdf:type owl:NamedIndividual ,
+                                                        aml:ContainerType ;
+                                               rdfs:comment "384 wells container type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/6_Wells
+<http://www.w3id.org/animl/ontology/6_Wells> rdf:type owl:NamedIndividual ,
+                                                      aml:ContainerType ;
+                                             rdfs:comment "6 wells container type"@en .
+
+
+###  http://www.w3id.org/animl/ontology/96_Wells
+<http://www.w3id.org/animl/ontology/96_Wells> rdf:type owl:NamedIndividual ,
+                                                       aml:ContainerType ;
+                                              rdfs:comment "96 wells container type"@en .
+
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+
+aml:sampleSet_Basil_00010
+    a aml:SampleSet ;
+    aml:name "Sample Set A" ;
+    ce:hasMember aml:sample_Basil_00010 ;
+    ce:hasMember aml:sample_Basil_00020 .
+
+aml:sample_Basil_00010
+    a aml:Sample ;
+    aml:name "Sample A" .
+
+aml:sample_Basil_00020
+    a aml:Sample ;
+    aml:name "Sample B" .
+
+
+aml:refSpec_Step_0001_A
+    a aml:AnimlReferenceSpecification ;
+    aml:name "Input reference spec A" .
+
+aml:refSpec_Step_0001_B
+    a aml:AnimlReferenceSpecification ;
+    aml:name "Input reference spec B" .
+
+
+aml:ref_Step_0001_A
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00010 ;
+    aml:hasSpecification aml:refSpec_Step_0001_A .
+
+
+aml:ref_Step_0001_B
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00020 ;
+    aml:hasSpecification aml:refSpec_Step_0001_B .
+
+
+
+aml:refSet_Step_0001
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Step_0001_A ;
+    ce:hasMember aml:ref_Step_0001_B ;
+    aml:subject aml:sample_Basil_00010 .
+
+
+aml:technique_Step_0001
+    a aml:Technique ;
+    aml:name "Weighing" ;
+    aml:version "1.0" ;
+    aml:citation "Internal SOP 2025" ;
+    aml:derives aml:refSpec_Step_0001_A ;
+    aml:consumes aml:refSpec_Step_0001_B .
+
+
+aml:method_Step_0001
+    a aml:Method ;
+    aml:name "Standard gravimetric method" .
+
+
+
+aml:balance_001
+    a aml:Infrastructure ;
+    aml:name "Analytical Balance" ;
+    aml:barcode "BAL-001" .
+
+aml:result_Step_0001
+    a aml:Result ;
+    aml:name "Mass measurement result" ;
+    aml:sourceDataLocation "file://results/step0001_mass.csv" ;
+    aml:includes aml:refSet_Step_0001 .
+
+aml:experimentStep_0001
+    a aml:ExperimentStep ;
+    aml:name "Weigh Sample A" ;
+    aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
+    aml:includes aml:refSet_Step_0001 ;
+    aml:usesTechnique aml:technique_Step_0001 ;
+    aml:useMethod aml:method_Step_0001 ;
+    aml:includeInfrastructure aml:balance_001 ;
+    aml:producesResult aml:result_Step_0001 .
+
+
+
+
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+aml:includes rdfs:comment "This represents the idea of an object containing an object, without having neccessary parthood"@en .
+
+
+aml:pointValue rdfs:comment "This property represents the actual data corresponding to a datapoint object of the individual sub class"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

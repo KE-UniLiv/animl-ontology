@@ -1,8 +1,8 @@
 # CQ-2: What is the phone number of an author?
 # requires populated testing
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
-SELECT ?phoneNumber
+SELECT ?Agent ?phoneNumber
 WHERE {
     ?Agent a aml:Agent ;
            aml:phone ?phoneNumber .

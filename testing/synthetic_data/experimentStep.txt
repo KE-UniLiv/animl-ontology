@@ -1,0 +1,81 @@
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+
+aml:sampleSet_Basil_00010
+    a aml:SampleSet ;
+    aml:name "Sample Set A" ;
+    ce:hasMember aml:sample_Basil_00010 ;
+    ce:hasMember aml:sample_Basil_00020 .
+
+aml:sample_Basil_00010
+    a aml:Sample ;
+    aml:name "Sample A" .
+
+aml:sample_Basil_00020
+    a aml:Sample ;
+    aml:name "Sample B" .
+
+
+aml:refSpec_Step_0001_A
+    a aml:AnimlReferenceSpecification ;
+    aml:name "Input reference spec A" .
+
+aml:refSpec_Step_0001_B
+    a aml:AnimlReferenceSpecification ;
+    aml:name "Input reference spec B" .
+
+
+aml:ref_Step_0001_A
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00010 ;
+    aml:hasSpecification aml:refSpec_Step_0001_A .
+
+
+aml:ref_Step_0001_B
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00020 ;
+    aml:hasSpecification aml:refSpec_Step_0001_B .
+
+
+
+aml:refSet_Step_0001
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Step_0001_A ;
+    ce:hasMember aml:ref_Step_0001_B ;
+    aml:subject aml:sample_Basil_00010 .
+
+
+aml:technique_Step_0001
+    a aml:Technique ;
+    aml:name "Weighing" ;
+    aml:version "1.0" ;
+    aml:citation "Internal SOP 2025" ;
+    aml:derives aml:refSpec_Step_0001_A .
+    aml:consumes aml:refSpec_Step_0001_B .
+
+
+aml:method_Step_0001
+    a aml:Method ;
+    aml:name "Standard gravimetric method" .
+
+
+
+aml:balance_001
+    a aml:Infrastructure ;
+    aml:name "Analytical Balance" ;
+    aml:barcode "BAL-001" .
+
+aml:result_Step_0001
+    a aml:Result ;
+    aml:name "Mass measurement result" ;
+    aml:sourceDataLocation "file://results/step0001_mass.csv" ;
+    aml:includes aml:refSet_Step_0001 .
+
+aml:experimentStep_0001
+    a aml:ExperimentStep ;
+    aml:name "Weigh Sample A" ;
+    aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
+    aml:includes aml:refSet_Step_0001 ;
+    aml:useTechnique aml:technique_Step_0001 ;
+    aml:useMethod aml:method_Step_0001 ;
+    aml:includeInfrastructure aml:balance_001 ;
+    aml:producesResult aml:result_Step_0001 .
