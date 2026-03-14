@@ -1,0 +1,22 @@
+# CQ-27: What role did a specific sample used in an experimentStep play?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX ce:  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
+
+SELECT ?Step ?relation2 ?sample
+WHERE {
+    ?Step a aml:ExperimentStep .
+
+    VALUES ?relation { aml:includesInfrastructure aml:producesResult }
+  
+    # Reference sets included in infrastructure
+    ?Step ?relation ?infra .
+    ?infra aml:includes ?referenceSet .
+  	?referenceSet ce:hasMember ?reference .
+  	?reference aml:pointsTo ?sample .
+  	?sample a aml:Sample .
+  	?Step aml:usesTechnique ?Technique .
+  	?reference aml:hasSpecification ?referenceSpec .
+  	?Technique  ?relation2 ?referenceSpec .
+
+}

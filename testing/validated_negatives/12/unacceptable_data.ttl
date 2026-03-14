@@ -173,7 +173,7 @@ aml:initial_velocity
 
 aml:increment_1_acceleration
     a aml:DataPoint ;
-    aml:value "2.1"^^xsd:double ;
+    aml:value "42"^^xsd:integer ;
     aml:hasSpecification aml:Acceleration_increment_spec ;
     ce:isMemberOf aml:series_acceleration ;
     seq:directlyFollows aml:initial_velocity  ;
@@ -181,7 +181,7 @@ aml:increment_1_acceleration
 
 aml:increment_2_acceleration
     a aml:DataPoint ;
-    aml:value "3.6"^^xsd:double ;
+    aml:value "cheese"^^xsd:string ;
     aml:hasSpecification aml:Acceleration_increment_spec ;
     ce:isMemberOf aml:series_acceleration ;
     seq:directlyFollows aml:increment_1_acceleration .

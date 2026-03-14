@@ -1,0 +1,9 @@
+# CQ-18: What technique was applied in an experiment step?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?step ?technique
+WHERE {
+    ?step a aml:ExperimentStep .
+  	?step aml:usesTechnique ?technique .
+}

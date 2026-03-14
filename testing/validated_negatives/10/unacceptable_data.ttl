@@ -18,7 +18,6 @@ aml:Step_002
 
 aml:role_Author_01
     a aml:Role ;
-    bag:isRoleOf aml:agent_JohnDoe ;
     aml:hasType aml:Author .
 
 aml:role_Reviewer_01
@@ -29,8 +28,7 @@ aml:role_Reviewer_01
 aml:agent_JohnDoe
     a aml:Agent ;
     aml:phone "01189901897253" ;
-    aml:hasType aml:HumanAgent ;
-    bag:isClassifiedBy aml:role_Author_01 .
+    aml:hasType aml:HumanAgent .
 
 aml:agent_steve
     a aml:Agent ;

@@ -1,6 +1,4 @@
-#################################################################
-# Sample, Experiment, Step, DataPoint
-#################################################################
+
 
 aml:sample_Basil_00010
     a aml:Sample ;
@@ -17,22 +15,10 @@ aml:sampleSet_Basil_00010
     ce:hasMember aml:sample_Basil_00020 .
 
 
-#################################################################
-# Function (referenced by AnIMLReference)
-#################################################################
-
 aml:function_Basil_00010
     a aml:Function ;
     aml:name "Linear interpolation" .
 
-#################################################################
-# UseCase (referenced by AnIMLReference)
-#################################################################
-
-
-#################################################################
-# AnIMLReference (pointsTo Sample, Step, DataPoint)
-#################################################################
 
 aml:ref_Basil_00010_1
     a aml:AnIMLReference ;
@@ -49,9 +35,6 @@ aml:ref_Basil_00020_1
     aml:startValue "0"^^xsd:nonNegativeInteger ;
     aml:endValue "10"^^xsd:nonNegativeInteger .
 
-#################################################################
-# AnIMLReferenceSet (hasMember AnIMLReference, subject SampleSet/Experiment/Series)
-#################################################################
 
 aml:refSet_Basil_00010
     a aml:AnIMLReferenceSet ;

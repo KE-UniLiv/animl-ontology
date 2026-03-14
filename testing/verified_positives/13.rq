@@ -1,0 +1,10 @@
+# CQ-13: What is the conversion factor for a unit to its SI base representation?
+
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?unit ?conversionFactor
+WHERE {
+    ?unit a aml:Unit ;
+          aml:factor ?conversionFactor .
+}

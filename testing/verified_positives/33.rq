@@ -1,0 +1,13 @@
+# CQ-33: What is the container type for a sample?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?container ?containerType
+WHERE {
+    ?sample a aml:Sample ;
+            aml:isContained ?situation .
+  	?situation a aml:SampleInContainer ;
+         aml:isContainedBy ?container .
+    ?container a aml:Container ;
+               aml:hasType ?containerType .
+    ?containerType a aml:ContainerType .
+}

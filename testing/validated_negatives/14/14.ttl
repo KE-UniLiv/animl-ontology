@@ -1,0 +1,17 @@
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:UniqueAmlIdShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf aml:id ;
+    sh:message "Two or more aml:ids may not have the same value." ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:select """
+            SELECT ?this WHERE {
+                ?this aml:id ?value .
+                ?other aml:id ?value .
+                FILTER (?this != ?other)
+            }
+        """ ;
+    ] .

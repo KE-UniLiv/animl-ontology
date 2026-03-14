@@ -1,0 +1,9 @@
+# CQ-31: What was the old value of an item that was changed?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?item ?oldValue
+WHERE {
+    ?change a aml:Change ;
+            aml:oldValue ?oldValue .
+  	?change aml:affects ?item .
+}

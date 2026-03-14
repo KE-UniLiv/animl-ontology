@@ -159,6 +159,14 @@
         <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
     </owl:ObjectProperty>
 
+    <!-- this is having a series set-->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasSeriesSet">
+        <rdfs:comment xml:lang="en">This is the inverse of the bag association, however it carries the connotation that the agent becomes defined by their task. This is in the same way that if a human practices medicine to fulfill a need for medical treatment, then that need becomes met, however it also makes the human a doctor.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/SeriesSet"/>
+    </owl:ObjectProperty>
+
 
     <!-- this is an implementation of the common 'hasPart' realtion to denote the special relation between series and datapoint specifications,
     wherein series specifications govern some of the attributes of their corresponding dataPointSpecifications-->
@@ -461,13 +469,12 @@
         <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
     </owl:ObjectProperty>
 
-    <!-- the concept of membership-->
+    <!-- the concept of ordered membership-->
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember">
         <rdfs:comment xml:lang="en">This denotes the inclusion of a technique in an experiment step, and also indicates that a technique is something that is utilised in an exmperiment step rather than being part of it</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/seriesSet"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Series"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SignatureSet"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/TagSet"/>
@@ -478,11 +485,72 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/series"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataPoint"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Signature"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Tag"/>
                     <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/AnimlReference"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataPoint"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Signature"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Tag"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/AnimlReference"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Series"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SignatureSet"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/TagSet"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/AnimlReferenceSet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <!-- the concept of ordered membership-->
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SeriesSet"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Template"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Series"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SeriesSet"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Template"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SeriesSet"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Template"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -519,6 +587,14 @@
         <rdfs:comment xml:lang="en">This is used to indicate effects an attribute, or an entire element</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- htdd file reference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/sha256">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -849,6 +925,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasSeriesSet"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/SeriesSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasParameter"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Parameter"/>
             </owl:Restriction>
@@ -1152,7 +1234,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isItemOf"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Template"/>
             </owl:Restriction>
         </rdfs:subClassOf>

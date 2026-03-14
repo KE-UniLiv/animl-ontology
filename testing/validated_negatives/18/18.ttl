@@ -1,0 +1,34 @@
+#18 the infrastructure of an experiment step may not include references to samples consumed by earlier experimentsteps 
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix aml:  <http://www.w3id.org/animl/ontology/> .
+@prefix seq:  <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+
+# Constraint: an ExperimentStep’s infrastructure must not refer to any Sample
+# that has been consumed by an earlier ExperimentStep.
+aml:ExperimentStep_InfrastructureMustNotIncludeConsumedSamples
+    a sh:NodeShape ;
+    sh:targetClass aml:ExperimentStep ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Infrastructure may not include references to samples consumed by earlier experiment steps." ;
+        sh:select """
+            SELECT $this
+            WHERE {
+              # infrastructure references in this step
+              $this aml:includesInfrastructure ?infra .
+              ?infra aml:includes ?infraRefSet .
+              ?infraRefSet ce:hasMember ?infraRef .
+              ?infraRef aml:pointsTo ?sample .
+              ?infraRef a aml:AnimlReference .
+
+
+
+              # find any sample consumed by those earlier steps
+              ?earlierStep aml:usesTechnique ?tech .
+              FILTER (?earlierStep != ?this)
+              ?tech aml:consumes ?consumedSpec .
+              ?consumedRef aml:hasSpecification ?consumedSpec .
+              ?consumedRef aml:pointsTo ?sample .
+            }
+        """ ;
+    ] .

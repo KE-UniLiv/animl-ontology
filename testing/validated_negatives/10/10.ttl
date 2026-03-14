@@ -1,0 +1,22 @@
+#10 no role may be required by something without also being the role of an agent.
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:RoleRequiredBySomethingMustAlsoBeRoleOfAgentShape
+    a sh:NodeShape ;
+    sh:message "A role that is required by something must also be the role of an agent." ;
+    sh:targetClass aml:Role ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:select """
+            SELECT ?this WHERE {
+                # ?this is a role that is required by something...
+                ?someThing aml:requiresRole ?this .
+
+                # ...but is not the role of any agent
+                FILTER NOT EXISTS {
+                    ?agne bag:isClassifiedBy ?this .
+                }
+            }
+        """ ;
+    ] .

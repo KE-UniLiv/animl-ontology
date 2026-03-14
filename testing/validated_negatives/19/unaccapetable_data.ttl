@@ -31,19 +31,15 @@ aml:sample_Basil_00040
     a aml:Sample ;
     aml:name "Sample D" .
 
-aml:refSpec_Step_0001_A
-    a aml:AnimlReferenceSpecification ;
-    aml:name "output reference spec A" .
+
 
 aml:refSpec_Step_0001_B
     a aml:AnimlReferenceSpecification ;
+    aml:modality "optional" ;
     aml:name "output reference spec B" .
 
 
-aml:ref_Step_0001_A
-    a aml:AnimlReference ;
-    aml:pointsTo aml:sample_Basil_00010 ;
-    aml:hasSpecification aml:refSpec_Step_0001_A .
+
 
 
 aml:ref_Step_0001_B
@@ -60,14 +56,7 @@ aml:refSet_Step_0001
     aml:subject aml:sampleSet_Basil_00010 .
 
 
-aml:technique_Step_0001
-    a aml:Technique ;
-    aml:name "Weighing" ;
-    aml:version "1.0" ;
-    aml:citation "Internal SOP 2025" ;
-    aml:consume aml:refSpec_Step_0002_output ;
-    aml:derives aml:refSpec_Step_0001_A ;
-    aml:derives aml:refSpec_Step_0001_B .
+
 
 
 aml:refSet_Step_0002
@@ -89,10 +78,12 @@ aml:ref_Step_0002_B
 
 aml:refSpec_Step_0002_A
     a aml:AnimlReferenceSpecification ;
+    aml:modality "required" ;
     aml:name "input reference spec A" .
 
 aml:refSpec_Step_0002_B
     a aml:AnimlReferenceSpecification ;
+    aml:modality "required" ;
     aml:name "input reference spec B" .
 
 aml:balance_001
@@ -108,15 +99,34 @@ aml:result_Step_0001
     aml:includes aml:refSet_Step_0001 ;
     aml:hasResultCategory aml:measurements_001.
 
+aml:technique_Step_0001
+    a aml:Technique ;
+    aml:name "Weighing" ;
+    aml:version "1.0" ;
+    aml:citation "Internal SOP 2025" ;
+    aml:consume aml:refSpec_Step_0002_output ;
+    aml:derives aml:refSpec_Step_0001_A ;
+    aml:derives aml:refSpec_Step_0001_B .
+
+aml:refSpec_Step_0001_A
+    a aml:AnimlReferenceSpecification ;
+    aml:modality "required" ;
+    aml:name "output reference spec A" .
+
+aml:ref_Step_0001_A
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00010 ;
+    aml:hasSpecification aml:refSpec_Step_0001_A .
+
 aml:experimentStep_0001
     a aml:ExperimentStep ;
     aml:name "Weigh Sample A" ;
     aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
     aml:usesTechnique aml:technique_Step_0001 ;
     aml:usesMethod aml:centaur_pipeline ;
-    aml:includesInfrastructure aml:balance_001 ;
+    aml:includeInfrastructure aml:balance_001 ;
     aml:producesResult aml:result_Step_0001 ;
-    seq:directlyFollows aml:experimentStep_0002 .
+    seq:directlyPrecedes aml:experimentStep_0002 .
 
 aml:experimentStep_0002
     a aml:ExperimentStep ;
@@ -124,15 +134,25 @@ aml:experimentStep_0002
     aml:timeStamp "2026-02-26T12:30:00Z"^^xsd:dateTime ;
     aml:producesResult aml:result_Step_0002 ;
     aml:usesMethod aml:automated_pipeline ;
-    seq:directlyPrecedes aml:experimentStep_0001 .
+    ce:directlyFollows aml:experimentStep_0001 .
+
+aml:refSet_Step_0002_inputs
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Step_0007_output .
+
+aml:ref_Step_0007_output
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00010 .
 
 aml:result_Step_0002
     a aml:Result ;
     aml:name "Mass measurement result" ;
+    aml:includes aml:refSet_Step_0002_inputs ;
     aml:sourceDataLocation "file://results/step0001_mass.csv" .
 
 aml:refSpec_Step_0002_output
     a aml:AnimlReferenceSpecification ;
+    aml:modality "optional" ;
     aml:name "output reference spec for step 0002" .
 
 aml:ref_Step_0002_output

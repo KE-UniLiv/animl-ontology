@@ -1,0 +1,11 @@
+# CQ-92: What is the name of a series set within a result?
+
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?result ?seriesSet
+WHERE {
+    ?result a aml:Result .
+  	?result aml:hasResultCategory ?category .
+  	?category aml:hasSeriesSet ?seriesSet .
+}

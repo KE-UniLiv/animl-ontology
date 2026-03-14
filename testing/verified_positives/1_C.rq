@@ -1,0 +1,12 @@
+# CQ-39: What is the name of an experiment step?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#>
+
+SELECT ?step ?stepName
+WHERE {
+    ?step a aml:ExperimentStep .
+    ?step bag:isItemOf ?Template .
+    ?Template a aml:Template .
+    ?Template aml:name ?stepName .
+}
+ORDER BY ?step ?stepName

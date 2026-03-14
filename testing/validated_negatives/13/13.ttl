@@ -1,0 +1,20 @@
+#13 a datapoint (whose specification is of type binary encoding) may not have a value of any other type than binary
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:BinaryEncodingValueShape
+    a sh:NodeShape ;
+    sh:message "If a DataPoint is encoded as binary, its aml:value must be a binary string (only 0 and 1)." ;
+    sh:targetClass aml:DataPoint ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:select """
+            SELECT ?this WHERE {
+                ?this a aml:DataPoint ;
+                      aml:hasSpecification ?spec ;
+                      aml:value ?val .
+                ?spec aml:EncodingType aml:binaryEncoding .
+                FILTER ( !regex(str(?val), "^[01]+$") )
+            }
+        """ ;
+    ] .

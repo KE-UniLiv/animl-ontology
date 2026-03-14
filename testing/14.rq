@@ -1,9 +1,0 @@
-# CQ-14: What is the increment value for an auto-incremented series?
-# needs population confirmation.
-PREFIX aml: <http://www.w3.org/animl/ontology/>
-
-SELECT ?incrementValue
-WHERE {
-    ?encoding a aml:AutoIncrementedEncodingType ;
-              aml:increment ?incrementValue . 
-}

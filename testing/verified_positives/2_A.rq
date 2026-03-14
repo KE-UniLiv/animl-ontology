@@ -1,0 +1,15 @@
+# CQ-68: How many data points are in a given series set?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX seq: <http://www.w3id.org/seq>
+PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#>
+PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
+
+SELECT ?seriesSet (COUNT(DISTINCT ?dataPoint) AS ?numDataPoints)
+WHERE {
+    ?seriesSet a aml:SeriesSet .
+  	?seriesSet bag:hasItem ?series .
+  	?series ce:hasMember ?dataPoint
+
+}
+GROUP BY ?seriesSet

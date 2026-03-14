@@ -223,8 +223,8 @@ aml:heights
     aml:visibility true ;
     aml:hasSpecification aml:height_spec ;
     bag:isItemOf aml:tracking_information ;
-    ce:hasMember aml:height_at_time_1 ;
-    ce:hasMember aml:height_at_time_2 .
+    ce:hasMember aml:initial_velocity ;
+    ce:hasMember aml:increment_1_acceleration .
 
 aml:height_at_time_1
     a aml:DataPoint ;

@@ -1,0 +1,43 @@
+aml:measurements_002
+    a aml:Category ;
+    aml:id "0001" ;
+    aml:hasParameter aml:name ;
+    aml:hasParameter aml:FrogNumber ;
+    aml:hasParameter aml:StockPrice .
+
+aml:name
+    a aml:Parameter ;
+    aml:id "0002" ;
+    aml:hasSpecification aml:nameSpec ;
+    aml:pointValue "jeff"^^xsd:string .
+
+aml:FrogNumber 
+    a aml:Parameter ;
+    aml:id "0003" ;
+    aml:hasSpecification aml:FrogNumberSpec ;
+    aml:pointValue "12"^^xsd:integer .
+
+aml:StockPrice
+    a aml:Parameter ;
+    aml:id "0004" ;
+    aml:hasSpecification aml:StockPriceSpec ;
+    aml:pointValue "123.56"^^xsd:float .
+
+aml:FrogNumberSpec
+    a aml:parameterSpecification ;
+    aml:id "0005" ;
+    aml:hasType aml:int32 ;
+    aml:maxValue "5000"^^xsd:integer ;
+    aml:minValue "0"^^xsd:integer .
+
+aml:StockPriceSpec
+    a aml:parameterSpecification ;
+    aml:id "0006" ;
+    aml:hasType aml:float32 ;
+    aml:maxValue "200.66"^^xsd:float ;
+    aml:minValue "1"^^xsd:float .
+
+aml:TemperatureSpec
+    a aml:parameterSpecification ;
+    aml:id "0007" ;
+    aml:hasType aml:string .

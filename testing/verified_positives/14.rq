@@ -1,0 +1,15 @@
+# CQ-14: What are the increment values in an auto-incremented series?
+PREFIX seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?series ?incrementValue
+WHERE {
+    ?dataPoint a aml:DataPoint .
+    ?dataPoint aml:hasSpecification ?specification .
+    ?specification aml:hasType aml:autoIncrementedEncoding.
+    ?dataPoint aml:value ?incrementValue .
+    ?series a aml:Series .
+    ?series aml:hasSpecification ?seriesSpec .
+    ?seriesSpec aml:hasPart ?specification .
+  FILTER EXISTS {?dataPoint seq:directlyFollows ?w . } .
+}

@@ -22,14 +22,13 @@ aml:drink_holder a aml:Container ;
     aml:comment "null" ;
     aml:hasSampleCategory aml:category_drink_holder ;
     aml:identifier "F-00007" ;
-    aml:hasType aml:6_Wells ;
+    aml:hasType aml:simple ;
     aml:name "drink_holder" .
 
 aml:sample_Matcha_00001 a aml:Sample ;
     aml:comment "null" ;
     aml:hasSampleCategory aml:category_Matcha_00001_1 ;
     aml:identifier "F-00001" ;
-    aml:isContained aml:sampleInContainer_Matcha_001 ;
     aml:name "Matcha" .
 
 aml:sample_Oregano_00003 a aml:Sample ;
@@ -71,4 +70,3 @@ aml:category_Pepper_00004_1 a aml:Category ;
 
 aml:category_drink_holder a aml:Category ;
     aml:name "Formulation details" .
-

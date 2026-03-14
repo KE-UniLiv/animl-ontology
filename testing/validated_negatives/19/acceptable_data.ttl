@@ -114,9 +114,9 @@ aml:experimentStep_0001
     aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
     aml:usesTechnique aml:technique_Step_0001 ;
     aml:usesMethod aml:centaur_pipeline ;
-    aml:includesInfrastructure aml:balance_001 ;
+    aml:includeInfrastructure aml:balance_001 ;
     aml:producesResult aml:result_Step_0001 ;
-    seq:directlyFollows aml:experimentStep_0002 .
+    seq:directlyPrecedes aml:experimentStep_0002 .
 
 aml:experimentStep_0002
     a aml:ExperimentStep ;
@@ -124,7 +124,7 @@ aml:experimentStep_0002
     aml:timeStamp "2026-02-26T12:30:00Z"^^xsd:dateTime ;
     aml:producesResult aml:result_Step_0002 ;
     aml:usesMethod aml:automated_pipeline ;
-    seq:directlyPrecedes aml:experimentStep_0001 .
+    ce:directlyFollows aml:experimentStep_0001 .
 
 aml:result_Step_0002
     a aml:Result ;

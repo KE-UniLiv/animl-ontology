@@ -59,14 +59,12 @@ aml:refSet_Step_0001
     ce:hasMember aml:ref_Step_0001_B ;
     aml:subject aml:sampleSet_Basil_00010 .
 
-
 aml:technique_Step_0001
     a aml:Technique ;
     aml:name "Weighing" ;
     aml:version "1.0" ;
     aml:citation "Internal SOP 2025" ;
-    aml:consume aml:refSpec_Step_0002_output ;
-    aml:derives aml:refSpec_Step_0001_A ;
+    aml:consumes aml:refSpec_Step_0001_A ;
     aml:derives aml:refSpec_Step_0001_B .
 
 
@@ -116,7 +114,7 @@ aml:experimentStep_0001
     aml:usesMethod aml:centaur_pipeline ;
     aml:includesInfrastructure aml:balance_001 ;
     aml:producesResult aml:result_Step_0001 ;
-    seq:directlyFollows aml:experimentStep_0002 .
+    seq:directlyPrecedes aml:experimentStep_0002 .
 
 aml:experimentStep_0002
     a aml:ExperimentStep ;
@@ -124,7 +122,7 @@ aml:experimentStep_0002
     aml:timeStamp "2026-02-26T12:30:00Z"^^xsd:dateTime ;
     aml:producesResult aml:result_Step_0002 ;
     aml:usesMethod aml:automated_pipeline ;
-    seq:directlyPrecedes aml:experimentStep_0001 .
+    ce:directlyFollows aml:experimentStep_0001 .
 
 aml:result_Step_0002
     a aml:Result ;
@@ -142,8 +140,8 @@ aml:ref_Step_0002_output
 
 aml:refSet_Step_0001_inputs
     a aml:AnimlReferenceSet ;
-    ce:hasMember aml:ref_Step_0002_output ;
-    aml:subject aml:experimentStep_0002 .
+    ce:hasMember aml:ref_Step_0001_B ;
+    aml:subject aml:sampleSet_Basil_00010 .
 
 aml:experiment_0001
     a aml:Experiment ;

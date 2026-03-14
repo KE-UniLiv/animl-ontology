@@ -1,9 +1,0 @@
-# CQ-31: What was the old value of an item that was changed?
-# needs population confirmation.
-PREFIX aml: <http://www.w3.org/animl/ontology/>
-
-SELECT ?oldValue
-WHERE {
-    ?change a aml:Change ;
-            aml:oldValue ?oldValue .
-}

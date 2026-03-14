@@ -1,0 +1,11 @@
+# CQ-26: What changes have been recorded in the audit trail?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?auditTrail ?entry ?change
+WHERE {
+    ?auditTrail a aml:AuditTrail ;
+                aml:hasAuditTrailEntry ?entry .
+                
+    ?entry a aml:AuditTrailEntry ;
+           aml:makesChange ?change .
+}

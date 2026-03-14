@@ -1,0 +1,13 @@
+# CQ-28: What sample roles are defined as blueprints for a technique?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?Technique ?relation ?sample
+WHERE {
+	?Technique a aml:Technique .
+  	?reference a aml:AnimlReference .
+  	?reference aml:hasSpecification ?referenceSpec .
+	?Technique ?relation ?referenceSpec .
+  	?reference aml:pointsTo ?sample .
+  	?sample a aml:Sample .
+}

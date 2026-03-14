@@ -1,0 +1,30 @@
+#17 the infrastructure of an experiment step may not include references to experiment steps occuring after the one they are linked to
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix ce:  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+
+aml:ExperimentStep_InfrastructureMustNotReferenceLaterStep
+    a sh:NodeShape ;
+    sh:targetClass aml:ExperimentStep ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message
+            "Infrastructure must not include references to experiment steps that occur after the step being validated." ;
+        sh:select """
+            SELECT $this
+            WHERE {
+              # infrastructure references in this step
+              $this aml:includesInfrastructure ?infra .
+              ?infra aml:includes ?infraRefSet .
+              ?infraRefSet ce:hasMember ?infraRef .
+              ?infraRef aml:pointsTo ?referencedStep .
+              ?referencedStep a aml:ExperimentStep .
+
+              # referenced step must be after $this via a chain of directlyPrecedes / directlyFollows
+              $this
+                ( seq:directlyPrecedes)+
+                ?referencedStep .
+            }
+        """ ;
+    ] .

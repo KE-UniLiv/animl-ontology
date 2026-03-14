@@ -1,0 +1,40 @@
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+aml:measurements_002
+    a aml:Category ;
+    aml:hasParameter aml:name ;
+    aml:hasParameter aml:FrogNumber ;
+    aml:hasParameter aml:StockPrice .
+
+
+aml:name
+    a aml:Parameter ;
+    aml:hasSpecification aml:nameSpec ;
+    aml:pointValue "jeff"^^xsd:string .
+
+aml:FrogNumber 
+    a aml:Parameter ;
+    aml:hasSpecification aml:FrogNumberSpec ;
+    aml:pointValue "12"^^xsd:integer .
+
+aml:StockPrice
+    a aml:Parameter ;
+    aml:hasSpecification aml:StockPriceSpec ;
+    aml:pointValue "123.56"^^xsd:float .
+
+aml:FrogNumberSpec
+    a aml:parameterSpecification ;
+    aml:hasType aml:int32 ;
+    aml:maxValue "5000"^^xsd:integer ;
+    aml:minValue "0"^^xsd:integer .
+
+aml:StockPriceSpec
+    a aml:parameterSpecification ;
+    aml:hasType aml:float32 ;
+    aml:maxValue "200.66"^^xsd:float .
+
+aml:TemperatureSpec
+    a aml:parameterSpecification ;
+    aml:hasType aml:string ;
+    aml:maxValue "zzzzzzzzzzzzz"^^xsd:string .
