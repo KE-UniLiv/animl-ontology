@@ -1,0 +1,86 @@
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+
+
+
+aml:sample_Basil_00010
+    a aml:Sample ;
+    aml:name "Sample A" .
+
+aml:sample_Basil_00020
+    a aml:Sample ;
+    aml:name "Sample B" .
+
+aml:sampleSet_Basil_00010
+    a aml:SampleSet ;
+    aml:name "Sample Set A" ;
+    ce:hasMember aml:sample_Basil_00010 ;
+    ce:hasMember aml:sample_Basil_00020 .
+
+
+aml:function_Basil_00010
+    a aml:Function ;
+    aml:name "Linear interpolation" .
+
+
+aml:ref_Basil_00010_1
+    a aml:AnIMLReference ;
+    aml:pointsTo aml:sample_Basil_00010 ;
+    aml:hasFunction aml:function_Basil_00010 ;
+    aml:hasSpecification aml:refSpec_Basil_00001 ;
+    aml:startValue "0"^^xsd:nonNegativeInteger ;
+    aml:endValue "10"^^xsd:nonNegativeInteger .
+
+aml:ref_Basil_00020_1
+    a aml:AnIMLReference ;
+    aml:pointsTo aml:sample_Basil_00020 ;
+    aml:hasSpecification aml:refSpec_Basil_00002 ;
+    aml:startValue "0"^^xsd:nonNegativeInteger ;
+    aml:endValue "10"^^xsd:nonNegativeInteger .
+
+
+aml:refSet_Basil_00010
+    a aml:AnIMLReferenceSet ;
+    ce:hasMember aml:ref_Basil_00010_1 ;
+    ce:hasMember aml:ref_Basil_00020_1 ;
+    aml:subject aml:sampleSet_Basil_00010 .
+
+
+aml:technique_Basil_00001
+    a aml:Technique ;
+    aml:name "UV-Vis Spectroscopy" ;
+    aml:version "1.0" ;
+    aml:citation "Smith et al. (2024) UV-Vis Methods" ;
+    aml:consumes aml:refSpec_Basil_00001 ;
+    aml:consumes aml:refSpec_Basil_00002 .
+
+
+aml:refSpec_Basil_00001
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference1" ;
+    aml:modality "required" .
+
+aml:refSpec_Basil_00002
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "reference2" ;
+    aml:modality "optional" .
+
+aml:technique_Basil_00002
+    a aml:Technique ;
+    aml:name "science" ;
+    aml:version "1.0" ;
+    aml:citation "Smith et al. (2024) UV-Vis Methods" ;
+    aml:consumes aml:refSpec_Basil_00003 ;
+    aml:derives aml:refSpec_Basil_00004 .
+
+
+aml:refSpec_Basil_00003
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference3" ;
+    aml:modality "optional" .
+
+aml:refSpec_Basil_00004
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference4" ;
+    aml:modality "optional" .
