@@ -1,3 +1,4 @@
+# 2 there may not be cycles in directly precedes / follows relations
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .

@@ -1,0 +1,85 @@
+#3 a reference may not point to a data structure member unless its corresponding reference set points to the data structure of which it is a member
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:ReferenceTargetConsistencyShape
+    a sh:NodeShape ;
+    sh:targetClass aml:AnimlReference ;
+
+    #################################################################
+    # 1. Reference → DataPoint requires ReferenceSet → Series containing that DataPoint
+    #################################################################
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Reference points to a DataPoint, but its reference set's subject is not a Series containing that DataPoint." ;
+        sh:select """
+            SELECT ?this WHERE {
+                # A points to B (DataPoint)
+                ?this aml:pointsTo ?dp .
+                ?dp a aml:DataPoint .
+
+                # Find C: the reference set containing A
+                ?refSet ce:hasMember ?this .
+
+                # C must have subject D which is a Series containing B
+                FILTER NOT EXISTS {
+                    ?refSet aml:subject ?series .
+                    ?series a aml:Series ;
+                            ce:hasMember ?dp .
+                }
+            }
+        """ ;
+    ] ;
+
+    #################################################################
+    # 2. Reference → Sample requires ReferenceSet → SampleSet containing that Sample
+    #################################################################
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Reference points to a Sample, but its reference set's subject is not a SampleSet containing that Sample." ;
+        sh:select """
+            SELECT $this WHERE {
+                # A points to B (Sample)
+                $this aml:pointsTo ?sample .
+                ?sample a aml:Sample .
+
+                # Find C: the reference set containing A
+                ?refSet ce:hasMember $this .
+
+                # C must have subject D which is a SampleSet containing B
+                FILTER NOT EXISTS {
+                    ?refSet aml:subject ?sampleSet .
+                    ?sampleSet a aml:SampleSet ;
+                               ce:hasMember ?sample .
+                }
+            }
+        """ ;
+    ] ;
+
+    #################################################################
+    # 3. Reference → ExperimentStep requires ReferenceSet → Experiment containing that Step
+    #################################################################
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Reference points to an ExperimentStep, but its reference set's subject is not an Experiment containing that step." ;
+        sh:select """
+            SELECT $this WHERE {
+                # A points to B (ExperimentStep)
+                $this aml:pointsTo ?step .
+                ?step a aml:ExperimentStep .
+
+                # Find C: the reference set containing A
+                ?refSet ce:hasMember $this .
+
+                # C must have subject D which is an Experiment containing B
+                FILTER NOT EXISTS {
+                    ?refSet aml:subject ?experiment .
+                    ?experiment a aml:Experiment ;
+                                ce:hasMember ?step .
+                }
+            }
+        """ ;
+    ] .

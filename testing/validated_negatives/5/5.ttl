@@ -1,0 +1,24 @@
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:NoHardwareAgentContactInfoShape
+    a sh:NodeShape ;
+    sh:targetClass aml:Agent ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A HardwareAgent may not have a phone or email." ;
+
+        sh:select """
+            SELECT $this WHERE {
+                $this aml:hasType aml:HardwareAgent .
+                {
+                    $this aml:phone ?phone .
+                }
+                UNION
+                {
+                    $this aml:email ?email .
+                }
+            }
+        """ ;
+    ] .
