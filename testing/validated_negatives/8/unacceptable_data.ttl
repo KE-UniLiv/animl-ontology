@@ -1,0 +1,298 @@
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+
+aml:seriesSpec_TempTime_001
+    a aml:SeriesSpecification ;
+    aml:label "Temperature vs Time" ;
+    aml:quantity "Temperature" ;
+    aml:hasUnits aml:units_Celsius ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:float32 ;
+    aml:hasPart aml:dataPointSpec_TempTime_001 .
+
+aml:dataPointSpec_TempTime_001
+    a aml:DataPointSpecification ;
+    aml:hasType aml:float32 ;
+    aml:EncodingType aml:IndividualEncodingType .
+
+aml:units_Celsius 
+    a aml:Units;
+    aml:hasPart aml:unit_Celsius .
+
+aml:unit_Celsius 
+    a aml:Unit;
+    aml:offset 273.15 ;
+    aml:adjusts aml:k .
+
+
+aml:units_KPH 
+    a aml:Units;
+    aml:hasPart aml:unit_Km ;
+    aml:hasPart aml:unit_Hour .
+
+aml:unit_Km 
+    a aml:Unit;
+    aml:factor 1000 ;
+    aml:adjusts aml:m .
+
+aml:unit_Hour 
+    a aml:Unit;
+    aml:factor 3600 ;
+    aml:adjusts aml:s .
+
+
+
+
+aml:series_TempTime_001
+    a aml:Series ;
+    aml:label "Temperature readings" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_TempTime_001 ;
+    bag:isItemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:dp_TempTime_001 ;
+    ce:hasMember aml:dp_TempTime_002 ;
+    ce:hasMember aml:dp_TempTime_003 .
+
+
+
+aml:dp_TempTime_001
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_TempTime_002 .
+
+aml:dp_TempTime_002
+    a aml:DataPoint ;
+    aml:value "22.0"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_TempTime_003 .
+
+aml:dp_TempTime_003
+    a aml:DataPoint ;
+    aml:value "22.4"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_TempTime_002 .
+
+
+aml:seriesSpec_FrogNumbers
+    a aml:SeriesSpecification ;
+    aml:label "Frogs over time" ;
+    aml:quantity "Frogs" ;
+    aml:hasUnits aml:units_null ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:dataPointSpec_FrogNumber ;
+    aml:hasPart aml:dataPointSpec_binary .
+
+aml:dataPointSpec_FrogNumber
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:IndividualEncoding .
+
+aml:binarySpec_FrogNumber
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:binaryEncodingType .
+
+aml:units_null
+    a aml:Units;
+    aml:hasPart aml:unit_null .
+
+aml:unit_null 
+    a aml:Unit;
+    aml:adjusts aml:1 .
+
+
+aml:Frog_numbers
+    a aml:Series ;
+    aml:label "Frog" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_FrogNumbers ;
+    bag:isItemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:dp_FrogNumber_001 ;
+    ce:hasMember aml:dp_FrogNumber_002 ;
+    ce:hasMember aml:dp_FrogNumber_003 .
+
+
+aml:dp_FrogNumber_001
+    a aml:DataPoint ;
+    aml:value "7" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_002 .
+
+aml:dp_FrogNumber_002
+    a aml:DataPoint ;
+    aml:value "11" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_FrogNumber_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_003 .
+
+aml:dp_FrogNumber_003
+    a aml:DataPoint ;
+    aml:value "21" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_FrogNumber_002 .
+
+aml:seriesSpec_acceleration
+    a aml:SeriesSpecification ;
+    aml:label "Acceleration over Time" ;
+    aml:hasUnits aml:units_KPH ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:Acceleration_increment_spec ;
+    aml:hasPart aml:velocity_base_spec .
+
+aml:Acceleration_increment_spec
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:velocity_base_spec
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:individualEncodingType .
+
+aml:series_acceleration
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_acceleration ;
+    bag:isItemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:initial_velocity ;
+    ce:hasMember aml:increment_1_acceleration ;
+    ce:hasMember aml:increment_2_acceleration .
+
+
+
+aml:initial_velocity 
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyPrecedes aml:increment_1_acceleration .
+
+aml:increment_1_acceleration
+    a aml:DataPoint ;
+    aml:value "2.1"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyFollows aml:initial_velocity  ;
+    seq:directlyPrecedes aml:increment_2_acceleration .
+
+aml:increment_2_acceleration
+    a aml:DataPoint ;
+    aml:value "3.6"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyFollows aml:increment_1_acceleration .
+
+aml:seriesSpec_acceleration_2
+    a aml:SeriesSpecification ;
+    aml:label "Acceleration over Time" ;
+    aml:hasUnits aml:units_KPH ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:Acceleration_increment_spec_2 ;
+    aml:hasPart aml:velocity_base_spec_2 .
+
+aml:Acceleration_increment_spec_2
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:velocity_base_spec_2
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:individualEncodingType .
+
+aml:series_acceleration_2
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_acceleration_2 ;
+    ce:hasMember aml:initial_velocity_2 ;
+    ce:hasMember aml:increment_1_acceleration_2 ;
+    ce:hasMember aml:increment_2_acceleration_2 .
+
+
+
+aml:initial_velocity_2
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec_2 ;
+    ce:isMemberOf aml:series_acceleration_2 ;
+    seq:directlyPrecedes aml:increment_1_acceleration_2 .
+
+aml:increment_1_acceleration_2
+    a aml:DataPoint ;
+    aml:value "2.1"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec_2 ;
+    ce:isMemberOf aml:series_acceleration_2 ;
+    seq:directlyFollows aml:initial_velocity_2  ;
+    seq:directlyPrecedes aml:increment_2_acceleration_2 .
+
+aml:increment_2_acceleration_2
+    a aml:DataPoint ;
+    aml:value "3.6"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec_2 ;
+    ce:isMemberOf aml:series_acceleration_2 ;
+    seq:directlyFollows aml:increment_1_acceleration_2 .
+
+aml:seriesSpec_acceleration_3
+    a aml:SeriesSpecification ;
+    aml:label "Acceleration over Time" ;
+    aml:hasUnits aml:units_KPH ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:Acceleration_increment_spec_3 ;
+    aml:hasPart aml:velocity_base_spec_3 ;
+    aml:hasPart aml:binarySpec_FrogNumber_2 .
+
+aml:binarySpec_FrogNumber_2
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:binaryEncodingType .
+
+aml:Acceleration_increment_spec_3
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:velocity_base_spec_3
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:individualEncodingType .
+
+aml:series_acceleration_3
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_acceleration_3 ;
+    ce:hasMember aml:initial_velocity_3 ;
+    ce:hasMember aml:increment_1_acceleration_3 ;
+    ce:hasMember aml:increment_2_acceleration_3 .
+
+
+
+aml:initial_velocity_3 
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec_3 ;
+    ce:isMemberOf aml:series_acceleration_3 ;
+    seq:directlyPrecedes aml:increment_1_acceleration_3 .
+
+aml:increment_1_acceleration_3
+    a aml:DataPoint ;
+    aml:value "2.1"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration_3 ;
+    seq:directlyFollows aml:initial_velocity_3  ;
+    seq:directlyPrecedes aml:increment_2_acceleration_3 .
+
+aml:increment_2_acceleration_3
+    a aml:DataPoint ;
+    aml:value "3.6"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec_3 ;
+    ce:isMemberOf aml:series_acceleration_3 ;
+    seq:directlyFollows aml:increment_1_acceleration_3 .
