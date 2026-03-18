@@ -1752,41 +1752,167 @@ aml:string rdf:type owl:NamedIndividual ,
                                                        aml:ContainerType ;
                                               rdfs:comment "96 wells container type"@en .
 
-@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
-@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
-@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 
-aml:dataPoint_001
+aml:seriesSpec_acceleration
+    a aml:SeriesSpecification ;
+    aml:label "Acceleration over Time" ;
+    aml:hasUnits aml:units_KPH ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:Acceleration_increment_spec ;
+    aml:hasPart aml:velocity_base_spec .
+
+aml:Acceleration_increment_spec
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:velocity_base_spec
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:individualEncodingType .
+
+aml:series_acceleration
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_acceleration ;
+    bag:isItemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:initial_velocity ;
+    ce:hasMember aml:increment_1_acceleration ;
+    ce:hasMember aml:increment_2_acceleration .
+
+
+
+aml:initial_velocity 
     a aml:DataPoint ;
-    ce:isMemberOf aml:series_001 ;
-    seq:directlyPrecedes aml:dataPoint_001 .
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyPrecedes aml:increment_1_acceleration .
 
-aml:dataPoint_002
+aml:increment_1_acceleration
     a aml:DataPoint ;
-    ce:isMemberOf aml:series_001 ;
-    seq:directlyPrecedes aml:dataPoint_003 ;
-    seq:directlyFollows aml:dataPoint_001 .
+    aml:value "2.1"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyFollows aml:initial_velocity  ;
+    seq:directlyPrecedes aml:increment_2_acceleration .
 
-aml:dataPoint_003
+aml:increment_2_acceleration
     a aml:DataPoint ;
-    ce:isMemberOf aml:series_001 ;
-    seq:directlyPrecedes aml:dataPoint_004 ;
-    seq:directlyFollows aml:dataPoint_002 ;
-    seq:directlyFollows aml:dataPoint_004 .
+    aml:value "3.6"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyFollows aml:increment_1_acceleration .
 
-aml:dataPoint_004
+aml:seriesSpec_acceleration_2
+    a aml:SeriesSpecification ;
+    aml:label "Acceleration over Time" ;
+    aml:hasUnits aml:units_KPH ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:Acceleration_increment_spec_2 ;
+    aml:hasPart aml:velocity_base_spec_2 .
+
+aml:Acceleration_increment_spec_2
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:velocity_base_spec_2
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:series_acceleration_2
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_acceleration_2 ;
+    ce:hasMember aml:initial_velocity_2 ;
+    ce:hasMember aml:increment_1_acceleration_2 ;
+    ce:hasMember aml:increment_2_acceleration_2 .
+
+
+
+aml:initial_velocity_2
     a aml:DataPoint ;
-    ce:isMemberOf aml:series_001 ;
-    seq:directlyPrecedes aml:dataPoint_002 ;
-    seq:directlyFollows aml:dataPoint_003 .
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec_2 ;
+    ce:isMemberOf aml:series_acceleration_2 ;
+    seq:directlyPrecedes aml:increment_1_acceleration_2 .
 
-aml:series_001
-  a aml:Series ;
-  ce:hasMember aml:dataPoint_001;
-  ce:hasMember aml:dataPoint_002;
-  ce:hasMember aml:dataPoint_003;
-  ce:hasMember aml:dataPoint_004.
+aml:increment_1_acceleration_2
+    a aml:DataPoint ;
+    aml:value "2.1"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec_2 ;
+    ce:isMemberOf aml:series_acceleration_2 ;
+    seq:directlyFollows aml:initial_velocity_2  ;
+    seq:directlyPrecedes aml:increment_2_acceleration_2 .
+
+aml:increment_2_acceleration_2
+    a aml:DataPoint ;
+    aml:value "3.6"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec_2 ;
+    ce:isMemberOf aml:series_acceleration_2 ;
+    seq:directlyFollows aml:increment_1_acceleration_2 .
+
+aml:seriesSpec_acceleration_3
+    a aml:SeriesSpecification ;
+    aml:label "Acceleration over Time" ;
+    aml:hasUnits aml:units_KPH ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:Acceleration_increment_spec_3 ;
+    aml:hasPart aml:velocity_base_spec_3 ;
+    aml:hasPart aml:binarySpec_FrogNumber_2 .
+
+aml:binarySpec_FrogNumber_2
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:binaryEncodingType .
+
+aml:Acceleration_increment_spec_3
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:velocity_base_spec_3
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:individualEncodingType .
+
+aml:series_acceleration_3
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_acceleration_3 ;
+    ce:hasMember aml:initial_velocity_3 ;
+    ce:hasMember aml:increment_1_acceleration_3 ;
+    ce:hasMember aml:increment_2_acceleration_3 .
+
+
+
+aml:initial_velocity_3 
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec_3 ;
+    ce:isMemberOf aml:series_acceleration_3 ;
+    seq:directlyPrecedes aml:increment_1_acceleration_3 .
+
+aml:increment_1_acceleration_3
+    a aml:DataPoint ;
+    aml:value "2.1"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration_3 ;
+    seq:directlyFollows aml:initial_velocity_3  ;
+    seq:directlyPrecedes aml:increment_2_acceleration_3 .
+
+aml:increment_2_acceleration_3
+    a aml:DataPoint ;
+    aml:value "3.6"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec_3 ;
+    ce:isMemberOf aml:series_acceleration_3 ;
+    seq:directlyFollows aml:increment_1_acceleration_3 .
 
 
 #################################################################
