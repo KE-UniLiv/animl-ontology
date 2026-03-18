@@ -1,370 +1,43 @@
-@prefix aml: <http://www.w3id.org/animl/ontology/> .
-@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
-@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+aml:measurements_002
+    a aml:Category ;
+    aml:id "0001" ;
+    aml:hasParameter aml:name ;
+    aml:hasParameter aml:FrogNumber ;
+    aml:hasParameter aml:StockPrice .
 
-aml:seriesSpec_TempTime_001
-    a aml:SeriesSpecification ;
-    aml:label "Temperature vs Time" ;
-    aml:quantity "Temperature" ;
-    aml:hasUnits aml:units_Celsius ;
-    aml:hasPlotScale aml:linear ;
-    aml:hasType aml:float32 ;
-    aml:hasPart aml:dataPointSpec_TempTime_001 .
+aml:name
+    a aml:Parameter ;
+    aml:id "0002" ;
+    aml:hasSpecification aml:nameSpec ;
+    aml:pointValue "jeff"^^xsd:string .
 
-aml:dataPointSpec_TempTime_001
-    a aml:DataPointSpecification ;
-    aml:hasType aml:float32 ;
-    aml:EncodingType aml:IndividualEncodingType .
+aml:FrogNumber 
+    a aml:Parameter ;
+    aml:id "0003" ;
+    aml:hasSpecification aml:FrogNumberSpec ;
+    aml:pointValue "12"^^xsd:integer .
 
-aml:units_Celsius 
-    a aml:Units;
-    aml:hasPart aml:unit_Celsius .
+aml:StockPrice
+    a aml:Parameter ;
+    aml:id "0004" ;
+    aml:hasSpecification aml:StockPriceSpec ;
+    aml:pointValue "123.56"^^xsd:float .
 
-aml:unit_Celsius 
-    a aml:Unit;
-    aml:offset 273.15 ;
-    aml:adjusts aml:k .
-
-
-aml:units_KPH 
-    a aml:Units;
-    aml:hasPart aml:unit_Km ;
-    aml:hasPart aml:unit_Hour .
-
-aml:unit_Km 
-    a aml:Unit;
-    aml:factor 1000 ;
-    aml:adjusts aml:m .
-
-aml:unit_Hour 
-    a aml:Unit;
-    aml:factor 3600 ;
-    aml:adjusts aml:s .
-
-
-
-
-aml:series_TempTime_001
-    a aml:Series ;
-    aml:label "Temperature readings" ;
-    aml:visibility true ;
-    aml:hasSpecification aml:seriesSpec_TempTime_001 ;
-    bag:isItemOf aml:Frog_entropy_information ;
-    ce:hasMember aml:dp_TempTime_001 ;
-    ce:hasMember aml:dp_TempTime_002 ;
-    ce:hasMember aml:dp_TempTime_003 .
-
-
-
-aml:dp_TempTime_001
-    a aml:DataPoint ;
-    aml:value "21.5"^^xsd:double ;
-    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
-    ce:isMemberOf aml:series_TempTime_001 ;
-    seq:directlyPrecedes aml:dp_TempTime_002 .
-
-aml:dp_TempTime_002
-    a aml:DataPoint ;
-    aml:value "22.0"^^xsd:double ;
-    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
-    ce:isMemberOf aml:series_TempTime_001 ;
-    seq:directlyFollows aml:dp_TempTime_001 ;
-    seq:directlyPrecedes aml:dp_TempTime_003 .
-
-aml:dp_TempTime_003
-    a aml:DataPoint ;
-    aml:value "22.4"^^xsd:double ;
-    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
-    ce:isMemberOf aml:series_TempTime_001 ;
-    seq:directlyFollows aml:dp_TempTime_002 .
-
-
-aml:seriesSpec_FrogNumbers
-    a aml:SeriesSpecification ;
-    aml:label "Frogs over time" ;
-    aml:quantity "Frogs" ;
-    aml:hasUnits aml:units_null ;
-    aml:hasPlotScale aml:linear ;
+aml:FrogNumberSpec
+    a aml:parameterSpecification ;
+    aml:id "0005" ;
     aml:hasType aml:int32 ;
-    aml:hasPart aml:dataPointSpec_FrogNumber .
+    aml:maxValue "5000"^^xsd:integer ;
+    aml:minValue "0"^^xsd:integer .
 
-aml:dataPointSpec_FrogNumber
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:IndividualEncodingType .
-
-aml:units_null
-    a aml:Units;
-    aml:hasPart aml:unit_null .
-
-aml:unit_null 
-    a aml:Unit;
-    aml:adjusts aml:1 .
-
-
-aml:Frog_numbers
-    a aml:Series ;
-    aml:label "Frog" ;
-    aml:visibility true ;
-    aml:hasSpecification aml:seriesSpec_FrogNumbers ;
-    bag:isItemOf aml:Frog_entropy_information ;
-    ce:hasMember aml:dp_FrogNumber_001 ;
-    ce:hasMember aml:dp_FrogNumber_002 ;
-    ce:hasMember aml:dp_FrogNumber_003 .
-
-
-aml:dp_FrogNumber_001
-    a aml:DataPoint ;
-    aml:value "7" ;
-    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
-    ce:isMemberOf aml:series_TempTime_001 ;
-    seq:directlyPrecedes aml:dp_FrogNumber_002 .
-
-aml:dp_FrogNumber_002
-    a aml:DataPoint ;
-    aml:value "11" ;
-    aml:hasSpecification aml:dataPointSpec_FrogNumber;
-    ce:isMemberOf aml:series_TempTime_001 ;
-    seq:directlyFollows aml:dp_FrogNumber_001 ;
-    seq:directlyPrecedes aml:dp_FrogNumber_003 .
-
-aml:dp_FrogNumber_003
-    a aml:DataPoint ;
-    aml:value "21" ;
-    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
-    ce:isMemberOf aml:series_TempTime_001 ;
-    seq:directlyFollows aml:dp_FrogNumber_002 .
-
-aml:seriesSpec_acceleration
-    a aml:SeriesSpecification ;
-    aml:label "Acceleration over Time" ;
-    aml:hasUnits aml:units_KPH ;
-    aml:hasPlotScale aml:linear ;
-    aml:hasType aml:int32 ;
-    aml:hasPart aml:Acceleration_increment_spec .
-
-aml:Acceleration_increment_spec
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:AutoIncrementedEncodingType .
-
-aml:velocity_base_spec
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:individualEncodingType .
-
-aml:series_acceleration
-    a aml:Series ;
-    aml:label "acceleration" ;
-    aml:visibility true ;
-    aml:hasSpecification aml:seriesSpec_acceleration ;
-    bag:isItemOf aml:Frog_entropy_information ;
-    ce:hasMember aml:initial_velocity ;
-    ce:hasMember aml:increment_1_acceleration ;
-    ce:hasMember aml:increment_2_acceleration .
-
-
-
-aml:initial_velocity 
-    a aml:DataPoint ;
-    aml:value "21.5"^^xsd:double ;
-    aml:hasSpecification aml:velocity_base_spec ;
-    ce:isMemberOf aml:series_acceleration ;
-    seq:directlyPrecedes aml:increment_1_acceleration .
-
-aml:increment_1_acceleration
-    a aml:DataPoint ;
-    aml:value "2.1"^^xsd:double ;
-    aml:hasSpecification aml:Acceleration_increment_spec ;
-    ce:isMemberOf aml:series_acceleration ;
-    seq:directlyFollows aml:initial_velocity  ;
-    seq:directlyPrecedes aml:increment_2_acceleration .
-
-aml:increment_2_acceleration
-    a aml:DataPoint ;
-    aml:value "3.6"^^xsd:double ;
-    aml:hasSpecification aml:Acceleration_increment_spec ;
-    ce:isMemberOf aml:series_acceleration ;
-    seq:directlyFollows aml:increment_1_acceleration .
-
-aml:Frog_entropy_information
-    a aml:SeriesSet ;
-    bag:hasItem aml:series_TempTime_001 ;
-    bag:hasItem aml:Frog_numbers ;
-    bag:hasItem aml:series_acceleration .
-
-aml:tracking_information
-    a aml:SeriesSet ;
-    bag:hasItem aml:heights .
-
-aml:height_spec
-    a aml:SeriesSpecification ;
-    aml:label "height of tracked object" ;
-    aml:hasUnits aml:units_meters ;
-    aml:hasPlotScale aml:linear ;
+aml:StockPriceSpec
+    a aml:parameterSpecification ;
+    aml:id "0005" ;
     aml:hasType aml:float32 ;
-    aml:hasPart aml:dataPointSpec_heights .
+    aml:maxValue "200.66"^^xsd:float ;
+    aml:minValue "1"^^xsd:float .
 
-aml:dataPointSpec_heights
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:IndividualEncodingType .
-
-aml:units_meters 
-    a aml:Units;
-    aml:hasPart aml:unit_m .
-
-aml:unit_m 
-    a aml:Unit;
-    aml:factor 1 ;
-    aml:adjusts aml:m .
-
-aml:heights
-    a aml:Series ;
-    aml:label "acceleration" ;
-    aml:visibility true ;
-    aml:hasSpecification aml:height_spec ;
-    bag:isItemOf aml:tracking_information ;
-    ce:hasMember aml:initial_velocity ;
-    ce:hasMember aml:increment_1_acceleration .
-
-aml:height_at_time_1
-    a aml:DataPoint ;
-    aml:value "300.5"^^xsd:double ;
-    aml:hasSpecification aml:dataPointSpec_heights ;
-    ce:isMemberOf aml:heights ;
-    seq:directlyPrecedes aml:height_at_time_2 .
-
-aml:height_at_time_2
-    a aml:DataPoint ;
-    aml:value "297.3"^^xsd:double ;
-    aml:hasSpecification aml:dataPointSpec_heights ;
-    ce:isMemberOf aml:heights ;
-    seq:directlyFollows aml:height_at_time_1  .
-
-
-aml:frog_entropy_specification
-    a aml:seriesSetSpecification ;
-    aml:usesTechnique aml:data_technique_001 .
-
-aml:tracking_specification
-    a aml:seriesSetSpecification ;
-    aml:usesTechnique aml:data_technique_002 .
-
-aml:technique_Step_0001
-    a aml:Technique ;
-    aml:includes aml:tracking_specification ;
-    aml:includes aml:frog_entropy_specification .
-
-aml:data_technique_001
-    a aml:Technique ;
-    aml:extends aml:technique_Step_0001 ;
-    aml:includes aml:seriesSpec_acceleration ;
-    aml:includes aml:seriesSpec_FrogNumbers ;
-    aml:includes aml:seriesSpec_TempTime_001 .
-
-aml:data_technique_002
-    a aml:Technique ;
-    aml:extends aml:technique_Step_0001 ;
-    aml:includes aml:height_spec .
-
-aml:seriesSpec_prime_minister
-    a aml:SeriesSpecification ;
-    aml:label "current prime minster" ;
-    aml:hasUnits aml:units_null ;
-    aml:hasPlotScale aml:linear ;
-    aml:hasType aml:string ;
-    aml:hasPart aml:dataPointSpec_prime_minister .
-
-aml:dataPointSpec_prime_minister
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:IndividualEncodingType .
-
-aml:units_null
-    a aml:Units;
-    aml:hasPart aml:unit_null .
-
-aml:unit_null 
-    a aml:Unit;
-    aml:adjusts aml:1 .
-
-aml:series_prime_minister
-    a aml:Series ;
-    aml:visibility true ;
-    aml:hasSpecification aml:seriesSpec_prime_minister ;
-    ce:hasMember aml:dp_prime_minister_001 ;
-    ce:hasMember aml:dp_prime_minister_002 ;
-    ce:hasMember aml:dp_prime_minister_003 .
-
-
-aml:dp_prime_minister_001
-    a aml:DataPoint ;
-    aml:value "lizz truss" ;
-    aml:hasSpecification aml:dataPointSpec_prime_minister ;
-    ce:isMemberOf aml:series_prime_minister ;
-    seq:directlyPrecedes aml:dp_prime_minister_002 .
-
-aml:dp_prime_minister_002
-    a aml:DataPoint ;
-    aml:value "richi sunak" ;
-    aml:hasSpecification aml:dataPointSpec_prime_minister;
-    ce:isMemberOf aml:series_prime_minister ;
-    seq:directlyFollows aml:dp_prime_minister_001 ;
-    seq:directlyPrecedes aml:dp_prime_minister_003 .
-
-aml:dp_prime_minister_003
-    a aml:DataPoint ;
-    aml:value "keir starma" ;
-    aml:hasSpecification aml:dataPointSpec_prime_minister ;
-    ce:isMemberOf aml:series_prime_minister ;
-    seq:directlyFollows aml:dp_prime_minister_002 .
-
-
-aml:seriesSpec_binary
-    a aml:SeriesSpecification ;
-    aml:label "binary strings" ;
-    aml:hasUnits aml:units_null ;
-    aml:hasPlotScale aml:linear ;
-    aml:hasType aml:string ;
-    aml:hasPart aml: .
-
-aml:dataPointSpec_binary
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:binaryEncoding .
-
-aml:units_null
-    a aml:Units;
-    aml:hasPart aml:unit_null .
-
-aml:unit_null 
-    a aml:Unit;
-    aml:adjusts aml:1 .
-
-aml:series_binary
-    a aml:Series ;
-    aml:visibility true ;
-    aml:hasSpecification aml:seriesSpec_binary ;
-    ce:hasMember aml:dp_binary_001 ;
-    ce:hasMember aml:dp_binary_002 ;
-    ce:hasMember aml:binary_003 .
-
-
-aml:dp_binary_001
-    a aml:DataPoint ;
-    aml:value "00000000111" ;
-    aml:hasSpecification aml:dataPointSpec_binary ;
-    ce:isMemberOf aml:series_binary ;
-    seq:directlyPrecedes aml:dp_binary_002 .
-
-aml:dp_binary_002
-    a aml:DataPoint ;
-    aml:value "101010101" ;
-    aml:hasSpecification aml:dataPointSpec_binary;
-    ce:isMemberOf aml:series_binary ;
-    seq:directlyFollows aml:dp_binary_001 ;
-    seq:directlyPrecedes aml:dp_binary_003 .
-
-aml:dp_binary_003
-    a aml:DataPoint ;
-    aml:value "greg" ;
-    aml:hasSpecification aml:dataPointSpec_binary ;
-    ce:isMemberOf aml:series_binary ;
-    seq:directlyFollows aml:dp_binary_002 .
+aml:TemperatureSpec
+    a aml:parameterSpecification ;
+    aml:id "0007" ;
+    aml:hasType aml:string .

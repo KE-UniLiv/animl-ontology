@@ -1,22 +1,23 @@
-#10 no role may be required by something without also being the role of an agent.
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:RoleRequiredBySomethingMustAlsoBeRoleOfAgentShape
+aml:ContainerTypeMustBeSimpleIfEmptyShape
     a sh:NodeShape ;
-    sh:message "A role that is required by something must also be the role of an agent." ;
-    sh:targetClass aml:Role ;
+    sh:message "A container that does not contain a sample (via an aml:SampleInContainer situation) may not have any type other than aml:simple." ;
+    sh:targetClass aml:Container ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:select """
             SELECT ?this WHERE {
-                # ?this is a role that is required by something...
-                ?someThing aml:requiresRole ?this .
-
-                # ...but is not the role of any agent
+                ?this a aml:Container .
                 FILTER NOT EXISTS {
-                    ?agne bag:isClassifiedBy ?this .
+                    ?s a aml:SampleInContainer ;
+                       aml:isContainedBy ?this .
+                    ?sample a aml:Sample .
+                    ?sample aml:isContained ?s .
                 }
+                ?this aml:hasType ?type .
+                FILTER (?type != aml:simple)
             }
         """ ;
     ] .

@@ -173,7 +173,7 @@ aml:initial_velocity
 
 aml:increment_1_acceleration
     a aml:DataPoint ;
-    aml:value "42"^^xsd:integer ;
+    aml:value "2.1"^^xsd:double ;
     aml:hasSpecification aml:Acceleration_increment_spec ;
     ce:isMemberOf aml:series_acceleration ;
     seq:directlyFollows aml:initial_velocity  ;
@@ -181,7 +181,7 @@ aml:increment_1_acceleration
 
 aml:increment_2_acceleration
     a aml:DataPoint ;
-    aml:value "cheese"^^xsd:string ;
+    aml:value "3.6"^^xsd:double ;
     aml:hasSpecification aml:Acceleration_increment_spec ;
     ce:isMemberOf aml:series_acceleration ;
     seq:directlyFollows aml:increment_1_acceleration .
@@ -223,8 +223,8 @@ aml:heights
     aml:visibility true ;
     aml:hasSpecification aml:height_spec ;
     bag:isItemOf aml:tracking_information ;
-    ce:hasMember aml:height_at_time_1 ;
-    ce:hasMember aml:height_at_time_2 .
+    ce:hasMember aml:initial_velocity ;
+    ce:hasMember aml:increment_1_acceleration .
 
 aml:height_at_time_1
     a aml:DataPoint ;
@@ -364,7 +364,7 @@ aml:dp_binary_002
 
 aml:dp_binary_003
     a aml:DataPoint ;
-    aml:value "0001110001" ;
+    aml:value "greg" ;
     aml:hasSpecification aml:dataPointSpec_binary ;
     ce:isMemberOf aml:series_binary ;
     seq:directlyFollows aml:dp_binary_002 .

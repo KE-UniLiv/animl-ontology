@@ -1,20 +1,75 @@
-#7 a technique used by a seriesset specification may not include anything not of type series specification
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:SeriesSetSpecificationTechniqueSPARQLShape
-  a sh:NodeShape ;
-  sh:targetClass aml:seriesSetSpecification ;
-  sh:sparql [
-    a sh:SPARQLConstraint ;
-    sh:message "Technique used by seriesSetSpecification may not include non-SeriesSpecification." ;
-    sh:select """
-      SELECT $this
-      WHERE {
-        $this a aml:seriesSetSpecification .
-        $this aml:usesTechnique ?tech .
-        ?tech aml:includes ?sub .
-        FILTER NOT EXISTS { ?sub a aml:SeriesSpecification. }
-      }
-    """ ;
-  ] .
+
+aml:SeriesSpecificationEncodingRuleShape
+    a sh:NodeShape ;
+    sh:targetClass aml:SeriesSpecification ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A SeriesSpecification must not have more than two DataPointSpecifications." ;
+            sh:select """
+                SELECT DISTINCT ?this WHERE {
+                    ?this a aml:SeriesSpecification .
+
+                    ?this aml:hasPart ?spec1 .
+                    ?spec1 a aml:DataPointSpecification .
+
+                    ?this aml:hasPart ?spec2 .
+                    ?spec2 a aml:DataPointSpecification .
+                    FILTER(?spec1 != ?spec2)
+
+                    ?this aml:hasPart ?spec3 .
+                    ?spec3 a aml:DataPointSpecification .
+                    FILTER(?spec1 != ?spec3 && ?spec2 != ?spec3)
+                }
+            """ ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Unidirectional cycle detected in seq:directlyFollows." ;
+        sh:select """
+            SELECT DISTINCT ?this WHERE {
+                ?this a aml:SeriesSpecification .
+                
+                ?this aml:hasPart ?spec1 .
+                ?spec1 a aml:DataPointSpecification .
+
+                ?this aml:hasPart ?spec2 .
+                ?spec2 a aml:DataPointSpecification .
+                FILTER(?spec1 != ?spec2)
+                
+                ?spec1 aml:EncodingType ?t1 .
+                ?spec2 aml:EncodingType ?t2 .
+                FILTER (
+                    !( ?t1 = aml:AutoIncrementedEncodingType && ?t2 = aml:individualEncodingType ) &&
+                    !( ?t1 = aml:individualEncodingType && ?t2 = aml:AutoIncrementedEncodingType )
+                )
+            }
+        """ ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "fuckin the third one." ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                ?this a aml:SeriesSpecification .
+                ?this aml:hasPart ?spec .
+                
+                    # datapoint uses auto-increment encoding
+                ?dp aml:hasSpecification ?spec .
+                ?spec aml:EncodingType aml:AutoIncrementedEncodingType .
+
+                # datapoint has NO predecessor → it is the first
+                FILTER NOT EXISTS {
+                    ?dp seq:directlyFollows ?prev .
+                }
+
+
+            }
+        """ ;
+    ] .

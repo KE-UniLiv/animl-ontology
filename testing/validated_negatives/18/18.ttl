@@ -1,34 +1,29 @@
-#18 the infrastructure of an experiment step may not include references to samples consumed by earlier experimentsteps 
-@prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix aml:  <http://www.w3id.org/animl/ontology/> .
-@prefix seq:  <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+#19 the results of an experiment step may not include references to samples already derived by another experimentstep
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 
-# Constraint: an ExperimentStep’s infrastructure must not refer to any Sample
-# that has been consumed by an earlier ExperimentStep.
-aml:ExperimentStep_InfrastructureMustNotIncludeConsumedSamples
+
+aml:NoResultsMayIncludeDerivedSamplesShape
     a sh:NodeShape ;
     sh:targetClass aml:ExperimentStep ;
+
     sh:sparql [
-        a sh:SPARQLConstraint ;
-        sh:message "Infrastructure may not include references to samples consumed by earlier experiment steps." ;
+        sh:message "An ExperimentStep result may not include samples derived by ANY ExperimentStep." ;
         sh:select """
-            SELECT $this
+            SELECT ?this
             WHERE {
-              # infrastructure references in this step
-              $this aml:includesInfrastructure ?infra .
-              ?infra aml:includes ?infraRefSet .
-              ?infraRefSet ce:hasMember ?infraRef .
-              ?infraRef aml:pointsTo ?sample .
-              ?infraRef a aml:AnimlReference .
+                # Samples included in THIS step's result
+                ?this aml:producesResult/aml:includes/ce:hasMember/aml:pointsTo ?badSample .
 
+                # Samples derived by ANY step
+                ?anyStep a aml:ExperimentStep ;
+                         aml:usesTechnique/aml:derives ?spec .
 
+                FILTER (?anyStep != ?this)
 
-              # find any sample consumed by those earlier steps
-              ?earlierStep aml:usesTechnique ?tech .
-              FILTER (?earlierStep != ?this)
-              ?tech aml:consumes ?consumedSpec .
-              ?consumedRef aml:hasSpecification ?consumedSpec .
-              ?consumedRef aml:pointsTo ?sample .
+                ?ref aml:hasSpecification ?spec ;
+                     aml:pointsTo ?badSample .
             }
         """ ;
     ] .

@@ -1,26 +1,20 @@
+#7 a technique used by a seriesset specification may not include anything not of type series specification
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
-@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 
-aml:NoHardwareAgentAsAuthorShape
-    a sh:NodeShape ;
-    sh:targetClass aml:Role ;
-
-    sh:sparql [
-        a sh:SPARQLConstraint ;
-        sh:message "A HardwareAgent may not be assigned to an Author role." ;
-
-        sh:select """
-            SELECT $this WHERE {
-
-                # This role must be an Author role
-                $this aml:hasType aml:Author .
-
-                # The agent assigned to this role
-                $this bag:isRoleOf ?agent .
-
-                # The agent must NOT be a HardwareAgent
-                ?agent aml:hasType aml:HardwareAgent .
-            }
-        """ ;
-    ] .
+aml:SeriesSetSpecificationTechniqueSPARQLShape
+  a sh:NodeShape ;
+  sh:targetClass aml:seriesSetSpecification ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Technique used by seriesSetSpecification may not include non-SeriesSpecification." ;
+    sh:select """
+      SELECT $this
+      WHERE {
+        $this a aml:seriesSetSpecification .
+        $this aml:usesTechnique ?tech .
+        ?tech aml:includes ?sub .
+        FILTER NOT EXISTS { ?sub a aml:SeriesSpecification. }
+      }
+    """ ;
+  ] .

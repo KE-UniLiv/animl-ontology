@@ -1,27 +1,30 @@
-#16 where either of the min/max constraints for a parameter specification are set, no concrete parameter of that spec may have a value outside those ranges.
-@prefix aml: <http://www.w3id.org/animl/ontology/> .
+#17 the infrastructure of an experiment step may not include references to experiment steps occuring after the one they are linked to
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix ce:  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 
-aml:ParameterValueWithinSpecRangeShape
+aml:ExperimentStep_InfrastructureMustNotReferenceLaterStep
     a sh:NodeShape ;
-    sh:targetClass aml:Parameter ;
+    sh:targetClass aml:ExperimentStep ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "Parameter value must not be outside the min/max range defined on its ParameterSpecification." ;
+        sh:message
+            "Infrastructure must not include references to experiment steps that occur after the step being validated." ;
         sh:select """
             SELECT $this
             WHERE {
-                $this aml:pointValue ?value .
-                $this aml:hasSpecification ?spec .
+              # infrastructure references in this step
+              $this aml:includesInfrastructure ?infra .
+              ?infra aml:includes ?infraRefSet .
+              ?infraRefSet ce:hasMember ?infraRef .
+              ?infraRef aml:pointsTo ?referencedStep .
+              ?referencedStep a aml:ExperimentStep .
 
-                OPTIONAL { ?spec aml:minValue ?min . }
-                OPTIONAL { ?spec aml:maxValue ?max . }
-
-                FILTER (
-                    (BOUND(?min) && ?value < ?min) ||
-                    (BOUND(?max) && ?value > ?max)
-                )
+              # referenced step must be after $this via a chain of directlyPrecedes / directlyFollows
+              $this
+                ( seq:directlyPrecedes)+
+                ?referencedStep .
             }
         """ ;
     ] .

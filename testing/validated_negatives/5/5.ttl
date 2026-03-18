@@ -1,24 +1,26 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 
-aml:NoHardwareAgentContactInfoShape
+aml:NoHardwareAgentAsAuthorShape
     a sh:NodeShape ;
-    sh:targetClass aml:Agent ;
+    sh:targetClass aml:Role ;
 
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "A HardwareAgent may not have a phone or email." ;
+        sh:message "A HardwareAgent may not be assigned to an Author role." ;
 
         sh:select """
             SELECT $this WHERE {
-                $this aml:hasType aml:HardwareAgent .
-                {
-                    $this aml:phone ?phone .
-                }
-                UNION
-                {
-                    $this aml:email ?email .
-                }
+
+                # This role must be an Author role
+                $this aml:hasType aml:Author .
+
+                # The agent assigned to this role
+                $this bag:isRoleOf ?agent .
+
+                # The agent must NOT be a HardwareAgent
+                ?agent aml:hasType aml:HardwareAgent .
             }
         """ ;
     ] .

@@ -1,10 +1,10 @@
+#13 a datapoint (whose specification is of type binary encoding) may not have a value of any other type than binary
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-aml:IncrementEncodingValueShape
+aml:BinaryEncodingValueShape
     a sh:NodeShape ;
-    sh:message "If a DataPoint is encoded as increment, its aml:value must be a float literal." ;
+    sh:message "If a DataPoint is encoded as binary, its aml:value must be a binary string (only 0 and 1)." ;
     sh:targetClass aml:DataPoint ;
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -13,8 +13,8 @@ aml:IncrementEncodingValueShape
                 ?this a aml:DataPoint ;
                       aml:hasSpecification ?spec ;
                       aml:value ?val .
-                ?spec aml:EncodingType aml:AutoIncrementedEncodingType .
-                FILTER ( datatype(?val) != xsd:double )
+                ?spec aml:EncodingType aml:binaryEncoding .
+                FILTER ( !regex(str(?val), "^[01]+$") )
             }
         """ ;
     ] .

@@ -1,41 +1,541 @@
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+aml:sampleSet_Basil_00010
+    a aml:SampleSet ;
+    aml:name "Sample Set A" ;
+    ce:hasMember aml:sample_Basil_00010 ;
+    ce:hasMember aml:sample_Basil_00020 .
+
+aml:sample_Basil_00010
+    a aml:Sample ;
+    aml:name "Sample A" .
+
+aml:sample_Basil_00020
+    a aml:Sample ;
+    aml:name "Sample B" .
+
+aml:sampleSet_Basil_00020
+    a aml:SampleSet ;
+    aml:name "Sample Set B" ;
+    ce:hasMember aml:sample_Basil_00030 ;
+    ce:hasMember aml:sample_Basil_00040 .
+
+aml:sample_Basil_00030
+    a aml:Sample ;
+    aml:name "Sample C" .
+
+aml:sample_Basil_00040
+    a aml:Sample ;
+    aml:name "Sample D" .
+
+aml:refSpec_Step_0001_A
+    a aml:AnimlReferenceSpecification ;
+    aml:name "output reference spec A" .
+
+aml:refSpec_Step_0001_B
+    a aml:AnimlReferenceSpecification ;
+    aml:name "output reference spec B" .
+
+
+aml:ref_Step_0001_A
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00010 ;
+    aml:hasSpecification aml:refSpec_Step_0001_A .
+
+
+aml:ref_Step_0001_B
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00020 ;
+    aml:hasSpecification aml:refSpec_Step_0001_B .
+
+
+
+aml:refSet_Step_0001
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Step_0001_A ;
+    ce:hasMember aml:ref_Step_0001_B ;
+    aml:subject aml:sampleSet_Basil_00010 .
+
+
+aml:technique_Step_0001
+    a aml:Technique ;
+    aml:name "Weighing" ;
+    aml:version "1.0" ;
+    aml:citation "Internal SOP 2025" ;
+    aml:consume aml:refSpec_Step_0002_output ;
+    aml:derives aml:refSpec_Step_0001_A ;
+    aml:derives aml:refSpec_Step_0001_B .
+
+
+aml:refSet_Step_0002
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Step_0002_A ;
+    ce:hasMember aml:ref_Step_0002_B ;
+    aml:subject aml:sampleSet_Basil_00020 .
+
+aml:ref_Step_0002_A
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00030 ;
+    aml:hasSpecification aml:refSpec_Step_0002_A .
+
+
+aml:ref_Step_0002_B
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00040 ;
+    aml:hasSpecification aml:refSpec_Step_0002_B .
+
+aml:refSpec_Step_0002_A
+    a aml:AnimlReferenceSpecification ;
+    aml:name "input reference spec A" .
+
+aml:refSpec_Step_0002_B
+    a aml:AnimlReferenceSpecification ;
+    aml:name "input reference spec B" .
+
+aml:balance_001
+    a aml:Infrastructure ;
+    aml:name "Analytical Balance" ;
+    aml:barcode "BAL-001" ;
+    aml:includes aml:refSet_Step_0001_inputs . 
+
+aml:result_Step_0001
+    a aml:Result ;
+    aml:name "Mass measurement result" ;
+    aml:sourceDataLocation "file://results/step0001_mass.csv" ;
+    aml:includes aml:refSet_Step_0001 ;
+    aml:hasResultCategory aml:measurements_001.
+
+aml:experimentStep_0001
+    a aml:ExperimentStep ;
+    aml:name "Weigh Sample A" ;
+    aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
+    aml:usesTechnique aml:technique_Step_0001 ;
+    aml:usesMethod aml:centaur_pipeline ;
+    aml:includesInfrastructure aml:balance_001 ;
+    aml:producesResult aml:result_Step_0001 ;
+    seq:directlyFollows aml:experimentStep_0002 .
+
+aml:experimentStep_0002
+    a aml:ExperimentStep ;
+    aml:name "Prepare Sample Set B" ;
+    aml:timeStamp "2026-02-26T12:30:00Z"^^xsd:dateTime ;
+    aml:producesResult aml:result_Step_0002 ;
+    aml:usesMethod aml:automated_pipeline ;
+    seq:directlyPrecedes aml:experimentStep_0001 .
+
+aml:result_Step_0002
+    a aml:Result ;
+    aml:name "Mass measurement result" ;
+    aml:sourceDataLocation "file://results/step0001_mass.csv" .
+
+aml:refSpec_Step_0002_output
+    a aml:AnimlReferenceSpecification ;
+    aml:name "output reference spec for step 0002" .
+
+aml:ref_Step_0002_output
+    a aml:AnimlReference ;
+    aml:pointsTo aml:experimentStep_0002 ;
+    aml:hasSpecification aml:refSpec_Step_0002_output .
+
+aml:refSet_Step_0001_inputs
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Step_0002_output ;
+    aml:subject aml:experimentStep_0002 .
+
+aml:experiment_0001
+    a aml:Experiment ;
+    ce:hasMember aml:experimentStep_0001;
+    ce:hasMember aml:experimentStep_0002.
+
+aml:measure
+    a aml:Template ;
+    aml:name "stanley" ;
+    bag:hasItem aml:experimentStep_0001 .
+
+aml:prepare
+    a aml:Template ;
+    aml:name "jim" ;
+    bag:hasItem aml:experimentStep_0002 .
+
+aml:measurements_001
+    a aml:Category ;
+    aml:hasParameter aml:startTime_001 ;
+    aml:hasSeriesSet aml:Frog_entropy_information .
+
+aml:startTime_001
+    a aml:Parameter ;
+    aml:value "2026-03-03T10:15:00Z"^^xsd:dateTime .
 
 aml:measurements_002
     a aml:Category ;
-    aml:hasParameter aml:startTime_002 ;
-    aml:hasParameter aml:FrogNumber ;
-    aml:hasParameter aml:StockPrice .
+    aml:hasParameter aml:startTime_002 .
 
-
-aml:Temperature
+aml:startTime_002
     a aml:Parameter ;
-    aml:hasSpecification aml:TemperatureSpec ;
-    aml:pointValue "13"^^xsd:integer .
+    aml:value "2026-03-03T10:15:00Z"^^xsd:dateTime .
 
-aml:FrogNumber 
+aml:role_Reviewer_01
+    a aml:Role ;
+    bag:isRoleOf aml:agent_QCSoftware ;
+    aml:hasType aml:Reviewer .
+
+aml:agent_QCSoftware
+    a aml:Agent ;
+    aml:hasType aml:softwareAgent ;
+    bag:isClassifiedBy aml:role_Reviewer_01 .
+
+aml:role_Experimenter_01
+    a aml:Role ;
+    bag:isRoleOf aml:agent_robot_arm ;
+    aml:hasType aml:Experimenter .
+
+aml:agent_robot_arm
+    a aml:Agent ;
+    aml:hasType aml:HardwareAgent ;
+    bag:isClassifiedBy aml:role_Experimenter_01 .
+
+aml:role_Reviewer_02
+    a aml:Role ;
+    bag:isRoleOf aml:agent_Dave_in_assurance ;
+    aml:hasType aml:Reviewer.
+
+aml:agent_Dave_in_assurance
+    a aml:Agent ;
+    aml:hasType aml:HumanAgent ;
+    bag:isClassifiedBy aml:role_Reviewer_02 .
+
+
+aml:role_Author_02
+    a aml:Role ;
+    bag:isRoleOf aml:NLP_Software ;
+    aml:hasType aml:Author.
+
+aml:NLP_Software
+    a aml:Agent ;
+    aml:hasType aml:SoftwareAgent ;
+    bag:isClassifiedBy aml:role_Author_02 .
+
+aml:role_Reviewer_01
+    a aml:Role ;
+    bag:isRoleOf aml:agent_QCSoftware ;
+    aml:hasType aml:Reviewer .
+
+aml:agent_QCSoftware
+    a aml:Agent ;
+    aml:hasType aml:softwareAgent ;
+    bag:isClassifiedBy aml:role_Reviewer_01 .
+
+aml:automated_pipeline 
+    a aml:Method ;
+    aml:requiresRole aml:role_Reviewer_01 .
+
+aml:centaur_pipeline 
+    a aml:Method ;
+    aml:requiresRole aml:role_Experimenter_01 ;
+    aml:requiresRole aml:role_Reviewer_02 ;
+    aml:requiresRole aml:role_Author_02 .
+
+aml:robot_settings
+    a aml:Category ;
+    aml:hasParameter aml:bearing_A_x ;
+    aml:hasParameter aml:bearing_A_y ;
+    aml:hasParameter aml:bearing_A_z ;
+    aml:hasParameter aml:caliper_distance .
+
+aml:bearing_A_x
     a aml:Parameter ;
-    aml:hasSpecification aml:FrogNumberSpec ;
-    aml:pointValue "12"^^xsd:integer .
+    aml:value "236" .
 
-aml:StockPrice
+aml:bearing_A_y
     a aml:Parameter ;
-    aml:hasSpecification aml:StockPriceSpec ;
-    aml:pointValue "123.56"^^xsd:float .
+    aml:value "12" .
 
-aml:FrogNumberSpec
-    a aml:parameterSpecification ;
-    aml:hasType aml:int32 ;
-    aml:maxValue "5000"^^xsd:integer ;
-    aml:minValue "0"^^xsd:integer .
+aml:bearing_A_z
+    a aml:Parameter ;
+    aml:value "150" .
 
-aml:StockPriceSpec
-    a aml:parameterSpecification ;
+aml:caliper_distance
+    a aml:Parameter ;
+    aml:value "2.1" .
+
+
+aml:review_procedures
+    a aml:Category ;
+    aml:hasParameter aml:F1_score_threshold .
+
+aml:F1_score_threshold
+    a aml:Parameter ;
+    aml:value "0.7" .
+
+
+aml:seriesSpec_TempTime_001
+    a aml:SeriesSpecification ;
+    aml:label "Temperature vs Time" ;
+    aml:quantity "Temperature" ;
+    aml:hasUnits aml:units_Celsius ;
+    aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
-    aml:maxValue "200.66"^^xsd:float ;
-    aml:minValue "1"^^xsd:float .
+    aml:hasPart aml:dataPointSpec_TempTime_001 .
 
-aml:TemperatureSpec
-    a aml:parameterSpecification ;
+aml:dataPointSpec_TempTime_001
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:IndividualEncodingType .
+
+aml:units_Celsius 
+    a aml:Units;
+    aml:hasPart aml:unit_Celsius .
+
+aml:unit_Celsius 
+    a aml:Unit;
+    aml:offset 273.15 ;
+    aml:adjusts aml:k .
+
+
+
+aml:units_KPH 
+    a aml:Units;
+    aml:hasPart aml:unit_Km ;
+    aml:hasPart aml:unit_Hour .
+
+aml:unit_Km 
+    a aml:Unit;
+    aml:factor 1000 ;
+    aml:adjusts aml:m .
+
+aml:unit_Hour 
+    a aml:Unit;
+    aml:factor 3600 ;
+    aml:adjusts aml:s .
+
+
+
+
+aml:series_TempTime_001
+    a aml:Series ;
+    aml:label "Temperature readings" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_TempTime_001 ;
+    bag:isItemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:dp_TempTime_001 ;
+    ce:hasMember aml:dp_TempTime_002 ;
+    ce:hasMember aml:dp_TempTime_003 .
+
+aml:units_Celsius 
+    a aml:Units;
+    aml:hasPart aml:unit_Celsius .
+
+aml:unit_Celsius 
+    a aml:Unit;
+    aml:offset 273.15 ;
+    aml:adjusts aml:k .
+
+
+aml:units_KPH 
+    a aml:Units;
+    aml:hasPart aml:unit_Km ;
+    aml:hasPart aml:unit_Hour .
+
+aml:unit_Km 
+    a aml:Unit;
+    aml:factor 1000 ;
+    aml:adjusts aml:m .
+
+aml:unit_Hour 
+    a aml:Unit;
+    aml:factor 3600 ;
+    aml:adjusts aml:s .
+
+
+aml:series_TempTime_001
+    a aml:Series ;
+    aml:label "Temperature readings" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_TempTime_001 ;
+    bag:isItemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:dp_TempTime_001 ;
+    ce:hasMember aml:dp_TempTime_002 ;
+    ce:hasMember aml:dp_TempTime_003 .
+
+
+
+aml:dp_TempTime_001
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_TempTime_002 .
+
+aml:dp_TempTime_002
+    a aml:DataPoint ;
+    aml:value "22.0"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_TempTime_003 .
+
+aml:dp_TempTime_003
+    a aml:DataPoint ;
+    aml:value "22.4"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_TempTime_001 ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_TempTime_002 .
+
+aml:seriesSpec_FrogNumbers
+    a aml:SeriesSpecification ;
+    aml:label "Frogs over time" ;
+    aml:quantity "Frogs" ;
+    aml:hasUnits aml:units_null ;
+    aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
-    aml:minValue "-276"^^xsd:int .
+    aml:hasPart aml:dataPointSpec_FrogNumber .
+
+aml:dataPointSpec_FrogNumber
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:IndividualEncodingType .
+
+aml:units_null
+    a aml:Units;
+    aml:hasPart aml:unit_null .
+
+aml:unit_null 
+    a aml:Unit;
+    aml:adjusts aml:1 .
+
+
+aml:Frog_numbers
+    a aml:Series ;
+    aml:label "Frog" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_FrogNumbers ;
+    bag:isItemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:dp_FrogNumber_001 ;
+    ce:hasMember aml:dp_FrogNumber_002 ;
+    ce:hasMember aml:dp_FrogNumber_003 .
+
+aml:dp_FrogNumber_001
+    a aml:DataPoint ;
+    aml:value "7" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_002 .
+
+aml:dp_FrogNumber_002
+    a aml:DataPoint ;
+    aml:value "11" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_FrogNumber_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_003 .
+
+aml:dp_FrogNumber_003
+    a aml:DataPoint ;
+    aml:value "21" ;
+    aml:hasSpecification aml:dataPointSpec_FrogNumber ;
+    ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyFollows aml:dp_FrogNumber_002 .
+
+aml:seriesSpec_acceleration
+    a aml:SeriesSpecification ;
+    aml:label "Acceleration over Time" ;
+    aml:hasUnits aml:units_KPH ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:int32 ;
+    aml:hasPart aml:Acceleration_increment_spec .
+
+aml:Acceleration_increment_spec
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:AutoIncrementedEncodingType .
+
+aml:velocity_base_spec
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:individualEncodingType .
+
+aml:series_acceleration
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:seriesSpec_acceleration ;
+    bag:itemOf aml:Frog_entropy_information ;
+    ce:hasMember aml:initial_velocity ;
+    ce:hasMember aml:increment_1_acceleration ;
+    ce:hasMember aml:increment_2_acceleration .
+
+aml:initial_velocity 
+    a aml:DataPoint ;
+    aml:value "21.5"^^xsd:double ;
+    aml:hasSpecification aml:velocity_base_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyPrecedes aml:increment_1_acceleration .
+
+aml:increment_1_acceleration
+    a aml:DataPoint ;
+    aml:value "2.1"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyFollows aml:initial_velocity  ;
+    seq:directlyPrecedes aml:increment_2_acceleration .
+
+aml:increment_2_acceleration
+    a aml:DataPoint ;
+    aml:value "3.6"^^xsd:double ;
+    aml:hasSpecification aml:Acceleration_increment_spec ;
+    ce:isMemberOf aml:series_acceleration ;
+    seq:directlyFollows aml:increment_1_acceleration .
+
+aml:Frog_entropy_information
+    a aml:SeriesSet ;
+    bag:hasItem aml:series_TempTime_001 ;
+    bag:hasItem aml:Frog_numbers ;
+    bag:hasItem aml:series_acceleration .
+
+aml:tracking_information
+    a aml:SeriesSet ;
+    bag:hasItem aml:heights .
+
+
+aml:height_spec
+    a aml:SeriesSpecification ;
+    aml:label "height of tracked object" ;
+    aml:hasUnits aml:units_meters ;
+    aml:hasPlotScale aml:linear ;
+    aml:hasType aml:float32 ;
+    aml:hasPart aml:dataPointSpec_heights .
+
+aml:dataPointSpec_heights
+    a aml:DataPointSpecification ;
+    aml:EncodingType aml:IndividualEncodingType .
+
+aml:units_meters 
+    a aml:Units;
+    aml:hasPart aml:unit_m .
+
+aml:unit_m 
+    a aml:Unit;
+    aml:factor 1 ;
+    aml:adjusts aml:m .
+
+aml:heights
+    a aml:Series ;
+    aml:label "acceleration" ;
+    aml:visibility true ;
+    aml:hasSpecification aml:height_spec ;
+    bag:isItemOf aml:tracking_information ;
+    ce:hasMember aml:initial_velocity ;
+    ce:hasMember aml:increment_1_acceleration .
+
+aml:height_at_time_1
+    a aml:DataPoint ;
+    aml:value "300.5"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_heights ;
+    ce:isMemberOf aml:heights ;
+    seq:directlyPrecedes aml:height_at_time_2 .
+
+aml:height_at_time_2
+    a aml:DataPoint ;
+    aml:value "297.3"^^xsd:double ;
+    aml:hasSpecification aml:dataPointSpec_heights ;
+    ce:isMemberOf aml:heights ;
+    seq:directlyFollows aml:height_at_time_1  .

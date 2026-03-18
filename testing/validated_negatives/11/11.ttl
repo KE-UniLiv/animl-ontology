@@ -1,23 +1,20 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-aml:ContainerTypeMustBeSimpleIfEmptyShape
+aml:IncrementEncodingValueShape
     a sh:NodeShape ;
-    sh:message "A container that does not contain a sample (via an aml:SampleInContainer situation) may not have any type other than aml:simple." ;
-    sh:targetClass aml:Container ;
+    sh:message "If a DataPoint is encoded as increment, its aml:value must be a float literal." ;
+    sh:targetClass aml:DataPoint ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:select """
             SELECT ?this WHERE {
-                ?this a aml:Container .
-                FILTER NOT EXISTS {
-                    ?s a aml:SampleInContainer ;
-                       aml:isContainedBy ?this .
-                    ?sample a aml:Sample .
-                    ?sample aml:isContained ?s .
-                }
-                ?this aml:hasType ?type .
-                FILTER (?type != aml:simple)
+                ?this a aml:DataPoint ;
+                      aml:hasSpecification ?spec ;
+                      aml:value ?val .
+                ?spec aml:EncodingType aml:AutoIncrementedEncodingType .
+                FILTER ( datatype(?val) != xsd:double )
             }
         """ ;
     ] .

@@ -34,14 +34,12 @@ aml:role_Reviewer_01
 aml:agent_JohnDoe
     a aml:Agent ;
     aml:phone "01189901897253" ;
-    aml:operatingSystem "windows 2000";
     aml:hasType aml:HumanAgent ;
     bag:isClassifiedBy aml:role_Author_01 .
 
 aml:agent_steve
     a aml:Agent ;
     aml:phone "999999999999" ;
-    aml:version "1.6.1";
     aml:hasType aml:HumanAgent ; .
 
 aml:agent_QCSoftware
@@ -52,11 +50,13 @@ aml:agent_QCSoftware
 aml:agent_rinsing_machine
     a aml:Agent ;
     aml:hasType aml:HardwareAgent ;
+    aml:phone "00000000000" ;
     aml:identifier "F-0001-A" .
 
 aml:agent_filling_machine
     a aml:Agent ;
     aml:hasType aml:HardwareAgent ;
+    aml:email "fake@placeholder.com" ;
     bag:isClassifiedBy aml:role_Experimenter_01 .
 
 aml:Change_001

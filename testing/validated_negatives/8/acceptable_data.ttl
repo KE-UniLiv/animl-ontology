@@ -1,60 +1,86 @@
-@prefix aml: <http://www.w3id.org/animl/ontology/> .
-@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 
 
 
-aml:seriesSpec_acceleration
-    a aml:SeriesSpecification ;
-    aml:label "Acceleration over Time" ;
-    aml:hasUnits aml:units_KPH ;
-    aml:hasPlotScale aml:linear ;
-    aml:hasType aml:int32 ;
-    aml:hasPart aml:Acceleration_increment_spec ;
-    aml:hasPart aml:velocity_base_spec .
+aml:sample_Basil_00010
+    a aml:Sample ;
+    aml:name "Sample A" .
+
+aml:sample_Basil_00020
+    a aml:Sample ;
+    aml:name "Sample B" .
+
+aml:sampleSet_Basil_00010
+    a aml:SampleSet ;
+    aml:name "Sample Set A" ;
+    ce:hasMember aml:sample_Basil_00010 ;
+    ce:hasMember aml:sample_Basil_00020 .
 
 
-aml:Acceleration_increment_spec
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:AutoIncrementedEncodingType .
-
-aml:velocity_base_spec
-    a aml:DataPointSpecification ;
-    aml:EncodingType aml:individualEncodingType .
-
-aml:series_acceleration
-    a aml:Series ;
-    aml:label "acceleration" ;
-    aml:visibility true ;
-    aml:hasSpecification aml:seriesSpec_acceleration ;
-    bag:isItemOf aml:Frog_entropy_information ;
-    ce:hasMember aml:initial_velocity ;
-    ce:hasMember aml:increment_1_acceleration ;
-    ce:hasMember aml:increment_2_acceleration .
+aml:function_Basil_00010
+    a aml:Function ;
+    aml:name "Linear interpolation" .
 
 
+aml:ref_Basil_00010_1
+    a aml:AnIMLReference ;
+    aml:pointsTo aml:sample_Basil_00010 ;
+    aml:hasFunction aml:function_Basil_00010 ;
+    aml:hasSpecification aml:refSpec_Basil_00001 ;
+    aml:startValue "0"^^xsd:nonNegativeInteger ;
+    aml:endValue "10"^^xsd:nonNegativeInteger .
 
-aml:initial_velocity 
-    a aml:DataPoint ;
-    aml:value "21.5"^^xsd:double ;
-    aml:hasSpecification aml:velocity_base_spec ;
-    ce:isMemberOf aml:series_acceleration ;
-    seq:directlyPrecedes aml:increment_1_acceleration .
+aml:ref_Basil_00020_1
+    a aml:AnIMLReference ;
+    aml:pointsTo aml:sample_Basil_00020 ;
+    aml:hasSpecification aml:refSpec_Basil_00002 ;
+    aml:startValue "0"^^xsd:nonNegativeInteger ;
+    aml:endValue "10"^^xsd:nonNegativeInteger .
 
-aml:increment_1_acceleration
-    a aml:DataPoint ;
-    aml:value "2.1"^^xsd:double ;
-    aml:hasSpecification aml:Acceleration_increment_spec ;
-    ce:isMemberOf aml:series_acceleration ;
-    seq:directlyFollows aml:initial_velocity  ;
-    seq:directlyPrecedes aml:increment_2_acceleration .
 
-aml:increment_2_acceleration
-    a aml:DataPoint ;
-    aml:value "3.6"^^xsd:double ;
-    aml:hasSpecification aml:Acceleration_increment_spec ;
-    ce:isMemberOf aml:series_acceleration ;
-    seq:directlyFollows aml:increment_1_acceleration .
+aml:refSet_Basil_00010
+    a aml:AnIMLReferenceSet ;
+    ce:hasMember aml:ref_Basil_00010_1 ;
+    ce:hasMember aml:ref_Basil_00020_1 ;
+    aml:subject aml:sampleSet_Basil_00010 .
 
+
+aml:technique_Basil_00001
+    a aml:Technique ;
+    aml:name "UV-Vis Spectroscopy" ;
+    aml:version "1.0" ;
+    aml:citation "Smith et al. (2024) UV-Vis Methods" ;
+    aml:consumes aml:refSpec_Basil_00001 ;
+    aml:consumes aml:refSpec_Basil_00002 .
+
+
+aml:refSpec_Basil_00001
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference1" ;
+    aml:modality "required" .
+
+aml:refSpec_Basil_00002
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "reference2" ;
+    aml:modality "optional" .
+
+aml:technique_Basil_00002
+    a aml:Technique ;
+    aml:name "science" ;
+    aml:version "1.0" ;
+    aml:citation "Smith et al. (2024) UV-Vis Methods" ;
+    aml:consumes aml:refSpec_Basil_00003 ;
+    aml:derives aml:refSpec_Basil_00004 .
+
+
+aml:refSpec_Basil_00003
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference3" ;
+    aml:modality "optional" .
+
+aml:refSpec_Basil_00004
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference4" ;
+    aml:modality "optional" .

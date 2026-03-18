@@ -1,0 +1,40 @@
+# 2 there may not be cycles in directly precedes / follows relations
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:NoUnidirectionalCyclesShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf seq:directlyPrecedes, seq:directlyFollows ;
+
+    ############################################################
+    # 1. Cycles using ONLY seq:directlyPrecedes
+    ############################################################
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Unidirectional cycle detected in seq:directlyPrecedes." ;
+        sh:select """
+            SELECT $this WHERE {
+                FILTER EXISTS {
+                    $this (seq:directlyPrecedes)+ $this .
+                }
+            }
+        """ ;
+    ] ;
+
+    ############################################################
+    # 2. Cycles using ONLY seq:directlyFollows
+    ############################################################
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Unidirectional cycle detected in seq:directlyFollows." ;
+        sh:select """
+            SELECT $this WHERE {
+                FILTER EXISTS {
+                    $this (seq:directlyFollows)+ $this .
+                }
+            }
+        """ ;
+    ] .

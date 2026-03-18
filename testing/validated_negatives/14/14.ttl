@@ -1,17 +1,23 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:UniqueAmlIdShape
+aml:ParameterSpecMinMaxTypeConstraint
     a sh:NodeShape ;
-    sh:targetSubjectsOf aml:id ;
-    sh:message "Two or more aml:ids may not have the same value." ;
+    sh:targetClass aml:parameterSpecification ;
     sh:sparql [
         a sh:SPARQLConstraint ;
+        sh:message "the value of a parameters specifications min/max settings may not be other than null unless it has type int or float." ;
         sh:select """
-            SELECT ?this WHERE {
-                ?this aml:id ?value .
-                ?other aml:id ?value .
-                FILTER (?this != ?other)
+            SELECT $this
+            WHERE {
+                # minValue or maxValue is present
+                $this (aml:minValue|aml:maxValue) ?boundValue .
+
+                # But the type is not an allowed numeric type
+                FILTER NOT EXISTS {
+                    $this aml:hasType ?dtype .
+                    FILTER(?dtype IN (aml:int32, aml:int64, aml:float32, aml:float64))
+                }
             }
         """ ;
     ] .

@@ -65,10 +65,19 @@ aml:technique_Step_0001
     aml:name "Weighing" ;
     aml:version "1.0" ;
     aml:citation "Internal SOP 2025" ;
-    aml:consume aml:refSpec_Step_0002_output ;
+    aml:consumes aml:refSpec_Step_0002_output ;
+    aml:consumes aml:refSpec_step_0001_con ;
     aml:derives aml:refSpec_Step_0001_A ;
     aml:derives aml:refSpec_Step_0001_B .
 
+aml:refSpec_step_0001_con
+    a aml:AnimlReferenceSpecification ;
+    aml:name "con output reference" .
+
+aml:ref_Step_0001_C
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_Basil_00030 ;
+    aml:hasSpecification aml:refSpec_step_0001_con .
 
 aml:refSet_Step_0002
     a aml:AnimlReferenceSet ;
@@ -118,40 +127,31 @@ aml:experimentStep_0001
     aml:producesResult aml:result_Step_0001 ;
     seq:directlyPrecedes aml:experimentStep_0002 .
 
+
+
 aml:experimentStep_0002
     a aml:ExperimentStep ;
     aml:name "Prepare Sample Set B" ;
     aml:timeStamp "2026-02-26T12:30:00Z"^^xsd:dateTime ;
     aml:producesResult aml:result_Step_0002 ;
-    aml:includesInfrastructure aml:balance_002 ;
     aml:usesMethod aml:automated_pipeline ;
-    seq:directlyFollows aml:experimentStep_0001 ;
-    seq:directlyPrecedes aml:experimentStep_0003 .
-
-aml:balance_002
-    a aml:Infrastructure ;
-    aml:name "bad data" ;
-    aml:barcode "BAD-002" ;
-    aml:includes aml:refSet_Step_0002_inputs . 
-
-aml:refSet_Step_0002_inputs
-    a aml:AnimlReferenceSet ;
-    ce:hasMember aml:ref_Step_0002_input ;
-    aml:subject aml:experiment_0001 .
-
-aml:ref_Step_0002_input
-    a aml:AnimlReference ;
-    aml:pointsTo aml:experimentStep_0004 .
-  
+    ce:directlyFollows aml:experimentStep_0001 .
 
 aml:experimentStep_0003
     a aml:ExperimentStep ;
-    seq:directlyFollows aml:experimentStep_0002 ;
-    seq:directlyPrecedes aml:experimentStep_0004 .
+    aml:name "bad_data" ;
+    aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
+    aml:includesInfrastructure aml:balance_003 .
 
-aml:experimentStep_0004
-    a aml:ExperimentStep ;
-    seq:directlyFollows aml:experimentStep_0003 .
+aml:balance_003
+    a aml:Infrastructure ;
+    aml:name "data_data" ;
+    aml:barcode "BAD-003" ;
+    aml:includes aml:refSet_Step_0003 . 
+
+aml:refSet_Step_0003
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Step_0001_C .
 
 aml:result_Step_0002
     a aml:Result ;
@@ -566,3 +566,20 @@ aml:height_at_time_2
     aml:hasSpecification aml:dataPointSpec_heights ;
     ce:isMemberOf aml:heights ;
     seq:directlyFollows aml:height_at_time_1  .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

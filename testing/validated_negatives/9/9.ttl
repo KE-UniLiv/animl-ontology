@@ -1,21 +1,21 @@
-#9 an animlreferencespecification with "required" modality may not exist unless it specifies a concrete animl reference
+#10 no role may be required by something without also being the role of an agent.
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:AnimlReferenceSpecificationRequiredMustHaveConcreteAnimlReferenceShape
+aml:RoleRequiredBySomethingMustAlsoBeRoleOfAgentShape
     a sh:NodeShape ;
-    sh:targetClass aml:AnimlReferenceSpecification ;
-    sh:message "AnimlReferenceSpecification with modality 'required' must be realized by at least one concrete AnimlReference." ;
+    sh:message "A role that is required by something must also be the role of an agent." ;
+    sh:targetClass aml:Role ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:select """
             SELECT ?this WHERE {
-                ?this a aml:AnimlReferenceSpecification ;
-                      aml:modality "required" .
+                # ?this is a role that is required by something...
+                ?someThing aml:requiresRole ?this .
+
+                # ...but is not the role of any agent
                 FILTER NOT EXISTS {
-                    ?ref a aml:AnimlReference ;
-                         aml:hasSpecification ?this ;
-                         aml:pointsTo ?target .
+                    ?agne bag:isClassifiedBy ?this .
                 }
             }
         """ ;
