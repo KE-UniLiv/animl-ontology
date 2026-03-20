@@ -893,6 +893,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3id.org/animl/ontology/Function">
+        <owl:disjointWith rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    </owl:Class>
     
 
 
@@ -1323,7 +1327,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasAuditTrailEntry"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AuditTrailEntry"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
