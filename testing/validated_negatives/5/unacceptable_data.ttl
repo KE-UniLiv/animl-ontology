@@ -23,7 +23,7 @@ aml:role_Author_01
 
 aml:role_experimenter_01
     a aml:Role ;
-    bag:isRoleOf aml:agent_JohnDoee ;
+    bag:isRoleOf aml:agent_JohnDoe ;
     aml:hasType aml:Experimenter .
 
 aml:role_Reviewer_01
