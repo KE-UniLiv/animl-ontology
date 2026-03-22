@@ -69,13 +69,13 @@ aml:Change_002
     aml:affects aml:sample_001 ;
     aml:newValue "Updated metadata fields" .
 
-aml:Change_003 ;
+aml:Change_003 
     a aml:Change ;
     aml:hasType aml:creation ;
     aml:affects aml:Step_001 ;
     aml:newValue "recorded results" .
 
-aml:Change_004 ;
+aml:Change_004 
     a aml:Change ;
     aml:hasType aml:creation ;
     aml:affects aml:Step_002 ;
