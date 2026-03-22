@@ -15,7 +15,7 @@ aml:RoleRequiredBySomethingMustAlsoBeRoleOfAgentShape
 
                 # ...but is not the role of any agent
                 FILTER NOT EXISTS {
-                    ?agne bag:isClassifiedBy ?this .
+                    ?agent bag:isClassifiedBy ?this .
                 }
             }
         """ ;
