@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:ns1="http://purl.allotrope.org/ontologies/role#"
+  xmlns:aml="http://w3id.org/animl/ontology"
+  xmlns:ns2="http://qudt.org/schema/qudt#"
+  xmlns:ns3="http://purl.allotrope.org/ontologies/common#"
+  xmlns:ce="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#"
+  xmlns:ns4="http://purl.obolibrary.org/obo/"
+  xmlns:ns5="http://purl.allotrope.org/ontologies/result#"
+  xmlns:ns6="http://purl.allotrope.org/ontologies/process#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <aml:Document rdf:about="http://example.org/animl/example7#document">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+    <aml:animlVersion>1.0</aml:animlVersion>
+    <aml:denotes>
+      <aml:Experiment rdf:about="http://example.org/animl/example7#experiment">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#step_es_0"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#step_es_1"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#step_es_2"/>
+      </aml:Experiment>
+    </aml:denotes>
+    <aml:hasSampleSet>
+      <aml:SampleSet rdf:about="http://example.org/animl/example7#sampleset">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#sample_Matcha_00001"/>
+      </aml:SampleSet>
+    </aml:hasSampleSet>
+  </aml:Document>
+  <aml:Result rdf:about="http://example.org/animl/example7#result_es_0_1">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
+    <aml:name>Rheometry</aml:name>
+    <ce:hasMember>
+      <aml:SeriesSet rdf:about="http://example.org/animl/example7#seriesSet_es_0_1_1">
+        <aml:name>Rheometry_data</aml:name>
+        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</aml:value>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_0_1_1_1"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_0_1_1_2"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_0_1_1_3"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_0_1_1_4"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_0_1_1_5"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_0_1_1_6"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_0_1_1_7"/>
+      </aml:SeriesSet>
+    </ce:hasMember>
+  </aml:Result>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_1_1_1_5">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_1_1_1_5">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_MPa"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_1_1_1_5"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>NormalStress</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_5">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">2SuCuNjYCL9pwX7dn4oIv/4UTwVxoQi/krR6ytN5Cb9czNTGBkIKvysO446wUQq/ojoBvGqGCb8PcN9nd2gKv5tlg4YmGwu/6AkpUrHXCr+EOQzya04Lv//ov7FlhQu/DuCm6IyUC79sY2S4XjQLv1fTwlMyegq/</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_1_1_1_5"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_3">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">bxKDwMoBOUCoxks3iQE5QMP1KFyPAjlA5dAi2/n+OEA5tMh2vv84QMdLN4lBADlAc2iR7Xz/OEA9CtejcP04QDm0yHa+/zhAx0s3iUEAOUCwcmiR7fw4QKwcWmQ7/zhAqMZLN4kBOUBU46WbxAA5QI2XbhKDADlA</aml:pointValue>
+    <ce:isMemberOf>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_3">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_2_1_1_3"/>
+        <aml:name>Temperature</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_3"/>
+      </aml:Series>
+    </ce:isMemberOf>
+  </aml:DataPoint>
+  <aml:Units rdf:about="http://example.org/animl/example7#unit_1_s">
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
+    <aml:token>1/s</aml:token>
+  </aml:Units>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_5">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">f5bJ2UQ5C789bzx+PCsKv09vpWN+EQy/yGiLzYG8C7/7BpT43S4Lv2g9C2ll5wq/XVEAxFpOC78muuUlKhQMv857Wd+rkgu/Dri3Ln89C7+kN/rm55cLv+Dy65YDjgu/nQnDROdjDL+GCmsyRSoMv515YmvwnQy/</aml:pointValue>
+    <ce:isMemberOf>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_5">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_2_1_1_5"/>
+        <aml:name>NormalStress</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_5"/>
+      </aml:Series>
+    </ce:isMemberOf>
+  </aml:DataPoint>
+  <aml:Units rdf:about="http://example.org/animl/example7#unit__C">
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
+    <aml:token>°C</aml:token>
+  </aml:Units>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_1">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>independent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_1">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyint32"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_2_1_1_1"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>Point No.</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_1">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_2_1_1_1"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_0_1_1_6">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_0_1_1_6">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_1_s"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_0_1_1_6"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>ShearRate</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_6">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">mdNlMbH5/z+Z02Uxsfn/PyEf9GxW/f8/rOKNzCP//z8MyF7v/vj/Pzi+9sySAABAVDVB1H0AAEA8TtGRXP7/P3ZsBOJ1/f8/jX+fceEAAEDFPZY+dAEAQF+1MuGX+v8/7zhFR3L5/z+qglFJnQAAQB6n6Egu//8/</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_0_1_1_6"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_3">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">Gy/dJAYBOUCNl24SgwA5QOXQItv5/jhAjZduEoMAOUBU46WbxAA5QOF6FK5HATlAjZduEoMAOUBYObTIdv44QN0kBoGVAzlAke18PzX+OECsHFpkO/84QI2XbhKDADlAqMZLN4kBOUBvEoPAygE5QBsv3SQGATlA</aml:pointValue>
+    <ce:isMemberOf>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_1_1_1_3">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_1_1_1_3"/>
+        <aml:name>Temperature</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_3"/>
+      </aml:Series>
+    </ce:isMemberOf>
+  </aml:DataPoint>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_1">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA</aml:pointValue>
+    <ce:isMemberOf>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_1_1_1_1">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>independent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_1_1_1_1"/>
+        <aml:name>Point No.</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_1"/>
+      </aml:Series>
+    </ce:isMemberOf>
+  </aml:DataPoint>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_6">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_1_s"/>
+    <aml:usedBy>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_6">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_2_1_1_6"/>
+        <aml:name>ShearRate</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_6"/>
+      </aml:Series>
+    </aml:usedBy>
+  </aml:SeriesSpecification>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_3">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">VOOlm8QAOUBvEoPAygE5QPyp8dJNAjlA4XoUrkcBOUDHSzeJQQA5QFg5tMh2/jhAAAAAAAAAOUAAAAAAAAA5QG8Sg8DKATlAObTIdr7/OECR7Xw/Nf44QJZDi2zn+zhAVOOlm8QAOUA5tMh2vv84QAAAAAAAADlA</aml:pointValue>
+    <ce:isMemberOf>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_0_1_1_3">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_0_1_1_3"/>
+        <aml:name>Temperature</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_3"/>
+      </aml:Series>
+    </ce:isMemberOf>
+  </aml:DataPoint>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_1_1_1_2">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_1_1_1_2">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_s"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_1_1_1_2"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>SegmentTime</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_2">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">Vg4tsp3v/z9WDi2yne8PQAAAAAAAABhAAAAAAAAAIEA1XrpJDAIkQGq8dJMYBChAy6FFtvP9K0AbL90kBgEwQBsv3SQGATJAGy/dJAYBNEA1XrpJDAI2QDVeukkMAjhANV66SQwCOkA1XrpJDAI8QDVeukkMAj5A</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_1_1_1_2"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_7">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits>
+      <aml:Units rdf:about="http://example.org/animl/example7#unit_Pa_s">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
+        <aml:token>Pa.s</aml:token>
+      </aml:Units>
+    </aml:hasUnits>
+    <aml:usedBy>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_7">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_2_1_1_7"/>
+        <aml:name>Viscosity</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_7"/>
+      </aml:Series>
+    </aml:usedBy>
+  </aml:SeriesSpecification>
+  <aml:Result rdf:about="http://example.org/animl/example7#result_es_2_1">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
+    <aml:name>Rheometry</aml:name>
+    <ce:hasMember>
+      <aml:SeriesSet rdf:about="http://example.org/animl/example7#seriesSet_es_2_1_1">
+        <aml:name>Rheometry_data</aml:name>
+        <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</aml:value>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_2_1_1_1"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_2_1_1_2"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_2_1_1_3"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_2_1_1_4"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_2_1_1_5"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_2_1_1_6"/>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_2_1_1_7"/>
+      </aml:SeriesSet>
+    </ce:hasMember>
+  </aml:Result>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_7">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">+wJ64c6F0T87jEl/L4XRPyWwOQfPhNE/MuauJeSD0T9C0TyARX7RP3/6z5off9E/xvmbUIiA0T+s4o3MI3/RP8h+FkuRfNE/G4S53ct90T8PfuIA+n3RP57RViWRfdE/f/rPmh9/0T/fNehLb3/RP/Kxu0BJgdE/</aml:pointValue>
+    <ce:isMemberOf>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_1_1_1_7">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_1_1_1_7"/>
+        <aml:name>Viscosity</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_7"/>
+      </aml:Series>
+    </ce:isMemberOf>
+  </aml:DataPoint>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_0_1_1_1">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>independent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_0_1_1_1">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyint32"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_0_1_1_1"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>Point No.</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_1">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAA</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_0_1_1_1"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_1_1_1_7">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_Pa_s"/>
+    <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_1_1_1_7"/>
+  </aml:SeriesSpecification>
+  <aml:ParameterSpecification rdf:about="http://example.org/animl/example7#paramSpec_Matcha_00001_1_1">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:usedBy>
+      <aml:Parameter rdf:about="http://example.org/animl/example7#parameter_Matcha_00001_1_1">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#paramSpec_Matcha_00001_1_1"/>
+        <aml:name>FluidDensity</aml:name>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</aml:pointValue>
+      </aml:Parameter>
+    </aml:usedBy>
+  </aml:ParameterSpecification>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_4">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_4">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_MPa"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_2_1_1_4"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>ShearStress</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_4">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">hLtN3bBE+z5KoNyNuT/7PrmN4nK+TPs+sipKGn9B+z5ULhIrA037Puz0LwTaSPs+kSOVWWhW+z68CQsdZUz7Ps3+W+l3Ufs+FBtQh75I+z4EkUa/nU/7Pvu+44viS/s+EqyFrEJQ+z589kh5IEj7PrpJtdxMVvs+</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_2_1_1_4"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_0_1_1_2">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_0_1_1_2">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_s"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_0_1_1_2"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>SegmentTime</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_2">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">Vg4tsp3v/z8rhxbZzvcPQJZDi2zn+xdAlkOLbOf7H0DLoUW28/0jQMuhRbbz/SdAy6FFtvP9K0DLoUW28/0vQOXQItv5/jFA5dAi2/n+M0Dl0CLb+f41QOXQItv5/jdA5dAi2/n+OUAAAAAAAAA8QOXQItv5/j1A</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_0_1_1_2"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:Sample rdf:about="http://example.org/animl/example7#sample_Matcha_00001">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
+    <aml:comment></aml:comment>
+    <aml:hasSampleCategory>
+      <aml:Category rdf:about="http://example.org/animl/example7#category_Matcha_00001_1">
+        <aml:hasParameter rdf:resource="http://example.org/animl/example7#parameter_Matcha_00001_1_1"/>
+        <aml:name>Sample data</aml:name>
+      </aml:Category>
+    </aml:hasSampleCategory>
+    <aml:identifier>Matcha-00001</aml:identifier>
+    <aml:name>Matcha</aml:name>
+  </aml:Sample>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_0_1_1_4">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_0_1_1_4">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_MPa"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_0_1_1_4"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>ShearStress</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_4">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">+7qC2HvGpD7jhVO2D4OkPnY4BcokhKQ+MnGOzCmZpD4GKk8bbI+kPnFk7ipei6Q+F06/ztiapD6v5j1z9smkPsP8Pgm9tqQ+Q/uXlEqSpD76skr9aomkPmKL6zH3zaQ+iGStWKLMpD5rozCbaaWkPvpfCviIrqQ+</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_0_1_1_4"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_6">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">9P3UeOl+WkBkO99PjX9aQAAAAAAAgFpA46WbxCCAWkAAAAAAAIBaQA4tsp3vf1pAAAAAAACAWkCq8dJNYoBaQCuHFtnOf1pAAAAAAACAWkDHSzeJQYBaQEjhehSuf1pA8tJNYhCAWkAOLbKd739aQDm0yHa+f1pA</aml:pointValue>
+    <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_2_1_1_6"/>
+  </aml:DataPoint>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_1_1_1_1">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyint32"/>
+    <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_1_1_1_1"/>
+  </aml:SeriesSpecification>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_1_1_1_6">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_1_s"/>
+    <aml:usedBy>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_1_1_1_6">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_1_1_1_6"/>
+        <aml:name>ShearRate</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_6"/>
+      </aml:Series>
+    </aml:usedBy>
+  </aml:SeriesSpecification>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_4">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">+l7WSGcd2D5s+6aV9hzYPnLz9+lDHNg+adAJUewa2D61JKRpexPYPrYC41FMFNg+LDlwV04W2D5lR4PXGhTYPrEbyDygENg+yFn1wpwS2D5BO3XAshLYPhI/xQCwEtg+IxaCvvYU2D7ZMLKA4xTYPnEm70AUF9g+</aml:pointValue>
+    <ce:isMemberOf>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_1_1_1_4">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_1_1_1_4"/>
+        <aml:name>ShearStress</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_4"/>
+      </aml:Series>
+    </ce:isMemberOf>
+  </aml:DataPoint>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_1_1_1_3">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit__C"/>
+    <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_1_1_1_3"/>
+  </aml:SeriesSpecification>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_0_1_1_5">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_0_1_1_5">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_MPa"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_0_1_1_5"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>NormalStress</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_5">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">MAuMBRV/Cr/y6NUnkWkKvwx7UMssjQq/+wLpx0dQCr+neWm4OJIKv2gDZr0VWwq/cAgBtIfoCb8svUP8DdsJv/PSiDK/zgm/lRGPsw09Cb90cl8/5jkJv34ocGk3JQm/1kws5FkfCb9QvstOgFYJv1hWnQPyRgm/</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_0_1_1_5"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_0_1_1_7">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_Pa_s"/>
+    <aml:usedBy>
+      <aml:Series rdf:about="http://example.org/animl/example7#series_es_0_1_1_7">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+        <aml:dependency>dependent</aml:dependency>
+        <aml:hasSpecification rdf:resource="http://example.org/animl/example7#seriesSpec_es_0_1_1_7"/>
+        <aml:name>Viscosity</aml:name>
+        <ce:hasMember rdf:resource="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_7"/>
+      </aml:Series>
+    </aml:usedBy>
+  </aml:SeriesSpecification>
+  <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_2">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
+    <aml:dependency>dependent</aml:dependency>
+    <aml:hasSpecification>
+      <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_2">
+        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_s"/>
+        <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_2_1_1_2"/>
+      </aml:SeriesSpecification>
+    </aml:hasSpecification>
+    <aml:name>SegmentTime</aml:name>
+    <ce:hasMember>
+      <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_2">
+        <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+        <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AAAAAAAAAEArhxbZzvcPQJZDi2zn+xdAlkOLbOf7H0DLoUW28/0jQAAAAAAAAChAAAAAAAAALEAAAAAAAAAwQAAAAAAAADJAGy/dJAYBNEAbL90kBgE2QBsv3SQGAThAGy/dJAYBOkAbL90kBgE8QBsv3SQGAT5A</aml:pointValue>
+        <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_2_1_1_2"/>
+      </aml:DataPoint>
+    </ce:hasMember>
+  </aml:Series>
+  <aml:SeriesSet rdf:about="http://example.org/animl/example7#seriesSet_es_1_1_1">
+    <aml:name>Rheometry_data</aml:name>
+    <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</aml:value>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_1_1_1_1"/>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_1_1_1_2"/>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_1_1_1_3"/>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_1_1_1_4"/>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_1_1_1_5"/>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_1_1_1_6"/>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#series_es_1_1_1_7"/>
+  </aml:SeriesSet>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_1_1_1_6">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">j+TyH9L/NEBxGw3gLQA1QMe6uI0GADVAcoqO5PL/NEA51sVtNAA1QOQUHcnl/zRAcoqO5PL/NEBy+Q/pt/80QABvgQTF/zRAx7q4jQYANUAdWmQ73/80QOM2GsBbADVA/yH99nUANUDHuriNBgA1QHL5D+m3/zRA</aml:pointValue>
+    <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_1_1_1_6"/>
+  </aml:DataPoint>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_5">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits>
+      <aml:Units rdf:about="http://example.org/animl/example7#unit_MPa">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
+        <aml:token>MPa</aml:token>
+      </aml:Units>
+    </aml:hasUnits>
+    <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_2_1_1_5"/>
+  </aml:SeriesSpecification>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_0_1_1_7">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">y/J1Gf7T0z8cYVERp5PTPyMsKuJ0ktM/soF0sWml0z+l9bcE4J/TP4dNZOYCl9M/B7e1heel0z9qh78ma9TTP9NmnIaowtM/ONkG7kCd0z+69ZoeFJTTP2VyameY2tM/LbRzmgXa0z9WgsXhzK/TP1vuzATDudM/</aml:pointValue>
+    <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_0_1_1_7"/>
+  </aml:DataPoint>
+  <aml:ExperimentStep rdf:about="http://example.org/animl/example7#step_es_2">
+    <aml:name>Rotational Viscosimetry 3</aml:name>
+    <aml:producesResult rdf:resource="http://example.org/animl/example7#result_es_2_1"/>
+  </aml:ExperimentStep>
+  <aml:Result rdf:about="http://example.org/animl/example7#result_es_1_1">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
+    <aml:name>Rheometry</aml:name>
+    <ce:hasMember rdf:resource="http://example.org/animl/example7#seriesSet_es_1_1_1"/>
+  </aml:Result>
+  <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_7">
+    <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
+    <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">1bK1vkhozz96jPLMy2HPP+MZNPRPcM8/wYu+gjRjzz8WbY5zm3DPP5BpbRrba88/WAIpsWt7zz9LICV2bW/PPwEXZMvydc8/boeGxahrzz85KjdRS3PPPyOjA5Kwb88/h8Q9lj50zz+uEFZjCWvPP3rkDwaee88/</aml:pointValue>
+    <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_2_1_1_7"/>
+  </aml:DataPoint>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_1_1_1_4">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit_MPa"/>
+    <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_1_1_1_4"/>
+  </aml:SeriesSpecification>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_0_1_1_3">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit__C"/>
+    <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_0_1_1_3"/>
+  </aml:SeriesSpecification>
+  <aml:ExperimentStep rdf:about="http://example.org/animl/example7#step_es_1">
+    <aml:name>Rotational Viscosimetry 2</aml:name>
+    <aml:producesResult rdf:resource="http://example.org/animl/example7#result_es_1_1"/>
+  </aml:ExperimentStep>
+  <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_3">
+    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit__C"/>
+    <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_2_1_1_3"/>
+  </aml:SeriesSpecification>
+  <aml:Units rdf:about="http://example.org/animl/example7#unit_s">
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
+    <aml:token>s</aml:token>
+  </aml:Units>
+  <aml:ExperimentStep rdf:about="http://example.org/animl/example7#step_es_0">
+    <aml:name>Rotational Viscosimetry 1</aml:name>
+    <aml:producesResult rdf:resource="http://example.org/animl/example7#result_es_0_1"/>
+  </aml:ExperimentStep>
+</rdf:RDF>
