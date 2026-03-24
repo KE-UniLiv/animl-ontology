@@ -1,3 +1,4 @@
+# 7 a series specification may not havepart more than 1 datapoint specification unless it has exactly two; and of those datapoint specs one is of type autoincremented (with this being applied only to datapoints with no directly follows relation) and the other must be of type individual encoding.
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .

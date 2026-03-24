@@ -1,3 +1,4 @@
+# 14 the value of a parameters min/max settings may not be other than null unless it has type int or float
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

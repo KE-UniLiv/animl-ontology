@@ -1,3 +1,4 @@
+# 10 A container which does not contain a sample through a sample in container situation may not have any type other than simple
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

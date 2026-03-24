@@ -1,3 +1,4 @@
+# 13 two or more aml:ids may not have the same value.
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

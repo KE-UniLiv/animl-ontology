@@ -1,4 +1,4 @@
-#20 nothing may both directly follow and directly proceed anything else.
+#19 nothing may both directly follow and directly proceed anything else.
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .

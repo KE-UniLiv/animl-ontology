@@ -1,4 +1,4 @@
-#10 no role may be required by something without also being the role of an agent.
+#9 no role may be required by something without also being the role of an agent.
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .

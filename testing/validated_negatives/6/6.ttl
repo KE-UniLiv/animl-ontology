@@ -1,4 +1,4 @@
-#7 a technique used by a seriesset specification may not include anything not of type series specification
+#6 a technique used by a seriesset specification may not include anything not of type series specification
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

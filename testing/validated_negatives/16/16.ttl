@@ -1,4 +1,4 @@
-#17 the infrastructure of an experiment step may not include references to experiment steps occuring after the one they are linked to
+#16 the infrastructure of an experiment step may not include references to experiment steps occuring after the one they are linked to
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .

@@ -1,3 +1,4 @@
+# 3 a human agent may not have an operating system or version.
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

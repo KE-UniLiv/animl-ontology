@@ -1,4 +1,4 @@
-#21 infrastructure may not reference samples derived by its experiment step and result may not reference samples consumed by its experiment step
+#20 infrastructure may not reference samples derived by its experiment step and result may not reference samples consumed by its experiment step
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .

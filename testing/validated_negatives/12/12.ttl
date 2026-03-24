@@ -1,4 +1,4 @@
-#13 a datapoint (whose specification is of type binary encoding) may not have a value of any other type than binary
+#12 a datapoint (whose specification is of type binary encoding) may not have a value of any other type than binary
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

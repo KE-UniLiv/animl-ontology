@@ -1,3 +1,4 @@
+# 11 a datapoint (whose specification is of type increment) may not have a value of any other type than float
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

@@ -1,4 +1,4 @@
-#3 a reference may not point to a data structure member unless its corresponding reference set points to the data structure of which it is a member
+#2 a reference may not point to a data structure member unless its corresponding reference set points to the data structure of which it is a member
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .

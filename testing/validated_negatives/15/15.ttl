@@ -1,4 +1,4 @@
-#16 where either of the min/max constraints for a parameter specification are set, no concrete parameter of that spec may have a value outside those ranges.
+#15 where either of the min/max constraints for a parameter specification are set, no concrete parameter of that spec may have a value outside those ranges.
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

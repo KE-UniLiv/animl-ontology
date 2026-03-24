@@ -1,3 +1,4 @@
+# 4 a hardware agent may not have a phone or email
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

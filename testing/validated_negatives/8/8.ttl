@@ -1,4 +1,4 @@
-#9 an animlreferencespecification with "required" modality may not exist unless it specifies a concrete animl reference
+#8 an animlreferencespecification with "required" modality may not exist unless it specifies a concrete animl reference
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 

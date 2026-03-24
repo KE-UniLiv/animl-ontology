@@ -1,4 +1,4 @@
-#19 the results of an experiment step may not include references to samples already derived by another experimentstep
+#18 the results of an experiment step may not include references to samples already derived by another experimentstep
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
