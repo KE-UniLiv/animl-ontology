@@ -12,7 +12,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.w3id.org/animl/ontology/">
-        <owl:versionIRI rdf:resource="http://www.w3id.org/animl/ontology/1.0.0/"/>
+        <owl:versionIRI rdf:resource="http://www.w3id.org/animl/ontology/1.1.0/"/>
 
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
@@ -39,9 +39,9 @@
         <dc:description xml:lang="en">The AnIML Ontology is a OWL-based model that formalises the semantics of the Analytical Information Markup Language (AnIML) and aligns it with the Allotrope Data Format to support cross-system and cross-lab interoperability.</dc:description>
         <rdfs:comment xml:lang="en">The AnIML Ontology is a OWL-based model that formalises the semantics of the Analytical Information Markup Language (AnIML) and aligns it with the Allotrope Data Format to support cross-system and cross-lab interoperability.</rdfs:comment>
 
-        <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">1.1.0</owl:versionInfo>
         <terms:issued>2025-02-01</terms:issued>
-        <terms:modified>2025-02-27</terms:modified>
+        <terms:modified>2026-03-24</terms:modified>
         <vann:preferredNamespacePrefix>aml</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://www.w3id.org/animl/ontology/</vann:preferredNamespaceUri>
     </owl:Ontology>
