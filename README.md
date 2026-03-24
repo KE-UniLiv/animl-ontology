@@ -4,7 +4,7 @@
 
 <!-- [![DOI](https://zenodo.org/badge/latestdoi/animl-ontology)](https://zenodo.org/badge/latestdoi/animl-ontology) -->
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Version](https://img.shields.io/badge/Version-1.0.0-blue)](https://semver.org/)
+[![Version](https://img.shields.io/badge/Version-1.1.0-blue)](https://semver.org/)
 [![Status](https://img.shields.io/badge/Status-Released-green)]()
 
 > 🔗 **Ontology URI:** [http://www.w3id.org/animl/ontology/](http://www.w3id.org/animl/ontology/)
@@ -69,7 +69,7 @@ We reify these pointers into the `aml:AnimlReference` class, which explicitly mo
 
 ## Competency Questions
 
-The ontology covers 102 validated Competency Questions (CQs) extracted from the standard. The complete list is available in `requirements/cqs.txt`, with corresponding SPARQL queries in the `testing/` directory. Below is a selection of questions the ontology is designed to answer:
+The ontology covers 102 validated Competency Questions (CQs) extracted from the standard. The complete list is available in `requirements/cqs.txt`, with corresponding SPARQL queries in the `testing/` directory. Below is a selection of questions driving the desing of the ontology:
 
 **Experiment & Provenance**
 * What is the unique ID of an experiment step?
@@ -151,7 +151,7 @@ If you use the AnIML Ontology in your work, please cite the following paper:
   title={The AnIML Ontology: Enabling Semantic Interoperability for Large-Scale Experimental Data in Interconnected Scientific Labs},
   author={Morlidge, Wilf and Watkiss-Leek, Elliott and Hannah, George and Rostron, Harry and Ng, Andrew and Johnson, Ewan and Mitchell, Andrew and Payne, Terry R. and Tamma, Valentina and de Berardinis, Jacopo},
   journal={Under Review},
-  year={2025},
+  year={2026},
 }
 ```
 
