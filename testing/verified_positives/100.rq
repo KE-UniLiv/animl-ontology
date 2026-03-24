@@ -1,0 +1,14 @@
+# CQ-100: What are the names of the result definitions specified by a technique?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?resultDefName
+WHERE {
+    ?technique a aml:Technique .
+    ?xpstep a aml:ExperimentStep ;
+                aml:usesTechnique ?technique ;
+                aml:producesResult ?resultSpec .
+               
+    ?resultSpec a aml:ResultSpecification ;
+                aml:name ?resultDefName .
+}

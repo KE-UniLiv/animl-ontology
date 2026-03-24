@@ -1,0 +1,10 @@
+# CQ-43: Are there nested experiment steps within a result?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+ASK {
+    ?result a aml:Result ;
+            aml:hasPart ?nestedStep .
+            
+    ?nestedStep a aml:ExperimentStep .
+}

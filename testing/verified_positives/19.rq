@@ -1,5 +1,4 @@
 PREFIX aml: <http://www.w3id.org/animl/ontology/>
-# CQ-19: What are the required data types for series in a technique definition?
 SELECT ?technique ?series ?dataType
 WHERE {
     ?technique aml:includes ?specification .

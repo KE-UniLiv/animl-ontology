@@ -1,0 +1,10 @@
+# CQ-86: What is the URI for a specific technique extension?
+
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?parentTechniqueURI
+WHERE {
+    ?extensionTechnique a aml:Technique ;
+                        aml:extends ?parentTechniqueURI .
+}

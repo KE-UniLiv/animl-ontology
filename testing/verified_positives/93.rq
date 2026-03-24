@@ -1,0 +1,9 @@
+# CQ-93: What is the unit associated with a series?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?unit
+WHERE {
+    ?series a aml:Series ;
+            aml:hasUnit ?unit .
+}

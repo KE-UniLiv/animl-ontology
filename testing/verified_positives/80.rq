@@ -1,0 +1,8 @@
+# CQ-80: What is the data type of a parameter?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT (datatype(?value) AS ?dataType)
+WHERE {
+    ?parameter a aml:Parameter ;
+               aml:value ?value .
+}

@@ -1,0 +1,14 @@
+# CQ-78: What parameters are defined in a category blueprint for a technique?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?parameterBlueprint
+WHERE {
+    ?technique a aml:Technique ;
+               aml:hasPart ?categoryBlueprint .
+               
+    # Assuming CategoryBlueprint is represented as a structural Specification/Blueprint
+    ?categoryBlueprint aml:hasPart ?parameterBlueprint .
+    
+    ?parameterBlueprint a aml:ParameterSpecification .
+}

@@ -1,5 +1,4 @@
 # CQ-8: What are the individual 32-bit integer values in a series?
-# requries populated validation
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 PREFIX seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#>
 PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#/>

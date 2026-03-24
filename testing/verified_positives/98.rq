@@ -1,0 +1,11 @@
+# CQ-98: Which template was used for a specific experiment step?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?template
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:isItemOf ?template .
+    
+    ?template a aml:Template .
+}

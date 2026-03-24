@@ -1,5 +1,4 @@
 # CQ-10: Which samples were produced in an experiment step?
-
 PREFIX aml: <http://www.w3id.org/animl/ontology/>
 PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 

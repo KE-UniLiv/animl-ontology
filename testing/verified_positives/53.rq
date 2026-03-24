@@ -1,0 +1,11 @@
+# CQ-53: Is a specific result required by a technique's definition?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?modality
+WHERE {
+    ?technique aml:hasPart ?resultBlueprint .
+    
+    ?resultBlueprint a aml:ResultSpecification ; # Subclass of Specification
+                     aml:name "SpecificResultName" ;
+                     aml:modality ?modality .
+}

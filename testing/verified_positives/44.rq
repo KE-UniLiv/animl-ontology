@@ -1,0 +1,15 @@
+# CQ-44: Which series does a parent data point reference point to?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?series
+WHERE {
+    ?reference a aml:AnimlReference ;
+               aml:pointsTo ?dataPoint .
+               
+    ?dataPoint a aml:DataPoint .
+    
+    # Find the series containing this data point
+    ?series a aml:Series ;
+            aml:hasMember ?dataPoint .
+}

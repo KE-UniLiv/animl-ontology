@@ -1,0 +1,9 @@
+# CQ-59: On which operating system was the software running?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?operatingSystem
+WHERE {
+    ?software a aml:SoftwareAgent ;
+              aml:operatingSystem ?operatingSystem .
+}

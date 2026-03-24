@@ -1,0 +1,8 @@
+# CQ-65: What is the email address of an author?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?email
+WHERE {
+    ?author a aml:Agent ;
+            aml:email ?email .
+}

@@ -1,5 +1,4 @@
 # CQ-6: What is the unique identifier of the device?
-# requries populated validation
 
 PREFIX aml: <http://www.w3.org/animl/ontology/>
 

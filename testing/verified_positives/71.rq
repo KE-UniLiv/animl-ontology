@@ -1,0 +1,8 @@
+# CQ-71: What is the serial number of the device?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?serialNumber
+WHERE {
+    ?device a aml:HardwareAgent ;
+            aml:serialNumber ?serialNumber .
+}

@@ -1,5 +1,4 @@
 # CQ-5: which series are independent?
-# The Technique Module explicitly depicts the aml:SeriesSpecification class having an aml:dependency property, which dictates the axis type (dependent vs independent) of the series.
 PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?series ?dependency

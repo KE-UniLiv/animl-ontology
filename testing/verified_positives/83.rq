@@ -1,0 +1,10 @@
+# CQ-83: Is a given technique definition abstract, requiring an extension?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?isAbstract
+WHERE {
+    ?technique a aml:Technique ;
+               aml:isAbstract ?isAbstract . 
+    # Or aml:isExtension depending on exact mapping of the "extension" attribute
+}

@@ -1,0 +1,9 @@
+# CQ-95: What is the unique ID of a specific sample?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?sampleID
+WHERE {
+    ?sample a aml:Sample ;
+            aml:id ?sampleID .
+}
