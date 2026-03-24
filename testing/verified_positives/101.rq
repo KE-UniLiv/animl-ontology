@@ -1,0 +1,15 @@
+# CQ-101: What is the location of a sample within its container, if specified?
+
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?sample ?container ?row ?column
+WHERE {
+    # The situation links the sample to the container
+    ?sample a aml:Sample ;
+            aml:isContained ?situation .
+    ?situation a aml:SampleInContainer ;
+            aml:isContainedBy ?container ;
+            aml:containerRow ?row ;
+            aml:containerColumn ?column .
+}

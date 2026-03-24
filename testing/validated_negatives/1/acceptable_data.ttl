@@ -1,0 +1,33 @@
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+
+aml:dataPoint_001
+    a aml:DataPoint ;
+    ce:isMemberOf aml:series_001 ;
+    seq:directlyPrecedes aml:dataPoint_002 .
+
+aml:dataPoint_002
+    a aml:DataPoint ;
+    ce:isMemberOf aml:series_001 ;
+    seq:directlyPrecedes aml:dataPoint_003 ;
+    seq:directlyFollows aml:dataPoint_001 .
+
+aml:dataPoint_003
+    a aml:DataPoint ;
+    ce:isMemberOf aml:series_001 ;
+    seq:directlyPrecedes aml:dataPoint_004 ;
+    seq:directlyFollows aml:dataPoint_002 .
+
+aml:dataPoint_004
+    a aml:DataPoint ;
+    ce:isMemberOf aml:series_001 ;
+    seq:directlyFollows aml:dataPoint_003 .
+
+aml:series_001
+  a aml:Series ;
+  ce:hasMember aml:dataPoint_001;
+  ce:hasMember aml:dataPoint_002;
+  ce:hasMember aml:dataPoint_003;
+  ce:hasMember aml:dataPoint_004.

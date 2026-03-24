@@ -1,0 +1,8 @@
+# CQ-64: What is the URI of the technique definition used in an experiment step?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?techniqueURI
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:hasTechnique ?techniqueURI .
+}

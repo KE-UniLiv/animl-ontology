@@ -1,0 +1,12 @@
+# CQ-85: According to the technique blueprint, is a sample in a specific role expected to be produced or consumed?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?purpose
+WHERE {
+    ?technique aml:hasPart ?roleBlueprint .
+    
+    ?roleBlueprint a aml:Role ;
+                   aml:name "SpecificRoleName" ;
+                   aml:purpose ?purpose .
+}

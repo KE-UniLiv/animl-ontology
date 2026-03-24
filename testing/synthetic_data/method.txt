@@ -1,0 +1,51 @@
+aml:role_Reviewer_01
+    a aml:Role ;
+    bag:isRoleOf aml:agent_QCSoftware ;
+    aml:hasType aml:Reviewer .
+
+aml:agent_QCSoftware
+    a aml:Agent ;
+    aml:hasType aml:softwareAgent ;
+    bag:isClassifiedBy aml:role_Reviewer_01 .
+
+aml:automated_pipeline 
+    a aml:Method ;
+    aml:requiresRole aml:role_Reviewer_01 ;
+
+
+aml:role_Experimenter_01
+    a aml:Role ;
+    bag:isRoleOf aml:agent_robot_arm ;
+    aml:hasType aml:Experimenter .
+
+aml:agent_robot_arm
+    a aml:Agent ;
+    aml:hasType aml:HardwareAgent ;
+    bag:isClassifiedBy aml:role_Experimenter_01 .
+
+aml:role_Reviewer_02
+    a aml:Role ;
+    bag:isRoleOf aml:agent_Dave_in_assurance ;
+    aml:hasType aml:Reviewer.
+
+aml:agent_Dave_in_assurance
+    a aml:Agent ;
+    aml:hasType aml:HumanAgent ;
+    bag:isClassifiedBy aml:role_Reviewer_02 .
+
+
+aml:role_Author_02
+    a aml:Role ;
+    bag:isRoleOf aml:NLP_Software ;
+    aml:hasType aml:Author.
+
+aml:NLP_Software
+    a aml:Agent ;
+    aml:hasType aml:SoftwareAgent ;
+    bag:isClassifiedBy aml:role_Author_02 .
+
+aml:centaur_pipeline 
+    a aml:Method ;
+    aml:requiresRole aml:role_Experimenter_01 ;
+    aml:requiresRole aml:role_Reviewer_02 ;
+    aml:requiresRole aml:role_Author_02 .

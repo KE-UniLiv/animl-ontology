@@ -1,0 +1,15 @@
+# CQ-10: Which samples were produced in an experiment step?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
+
+SELECT ?step ?reference ?sample
+WHERE {
+    ?step a aml:ExperimentStep ;
+		aml:producesResult ?result .
+    ?result aml:includes ?referenceSet .
+    ?referenceSet ce:hasMember ?reference .
+  	?reference aml:hasSpecification ?itemSpec .
+	?reference aml:pointsTo ?sample .
+    ?step aml:usesTechnique ?Technique .
+  	?Technique aml:derives ?itemSpec .
+}

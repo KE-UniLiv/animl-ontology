@@ -1,0 +1,319 @@
+@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/animl/example8#document> a aml:Document ;
+    aml:animlVersion "1.0" ;
+    aml:denotes <http://example.org/animl/example8#experiment> ;
+    aml:hasSampleSet <http://example.org/animl/example8#sampleset> .
+
+<http://example.org/animl/example8#experiment> a aml:Experiment ;
+    ce:hasMember <http://example.org/animl/example8#step_2>,
+        <http://example.org/animl/example8#step_d218f48f_2b8b_40d1_825f_20920163af77> .
+
+<http://example.org/animl/example8#result_2_1> a aml:Result ;
+    aml:name "UserProperties" .
+
+<http://example.org/animl/example8#result_d218f48f_2b8b_40d1_825f_20920163af77_1> a aml:Result ;
+    aml:name "Peak hold - 1" ;
+    ce:hasMember <http://example.org/animl/example8#seriesSet_d218f48f_2b8b_40d1_825f_20920163af77_1_1> .
+
+<http://example.org/animl/example8#sample_Matcha_00001> a aml:Sample ;
+    aml:identifier "Matcha-00001" ;
+    aml:name "Matcha" .
+
+<http://example.org/animl/example8#sampleset> a aml:SampleSet ;
+    ce:hasMember <http://example.org/animl/example8#sample_Matcha_00001> .
+
+<http://example.org/animl/example8#seriesSet_d218f48f_2b8b_40d1_825f_20920163af77_1_1> a aml:SeriesSet ;
+    aml:name "Peak hold - 1_data" ;
+    aml:value 100 ;
+    ce:hasMember <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_1>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_10>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_11>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_12>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_13>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_14>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_15>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_16>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_17>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_18>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_19>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_2>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_20>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_21>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_22>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_23>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_24>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_25>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_26>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_27>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_28>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_3>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_4>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_5>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_6>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_7>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_8>,
+        <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_9> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_1> a aml:SeriesSpecification ;
+    aml:hasDataType aml:int32 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_1> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_10> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_10> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_11> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_11> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_12> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_12> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_13> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_13> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_14> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_14> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_15> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_15> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_16> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_16> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_17> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_17> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_18> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_18> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_19> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_19> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_2> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_2> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_20> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_20> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_21> a aml:SeriesSpecification ;
+    aml:hasDataType aml:datetime ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_21> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_22> a aml:SeriesSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_22> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_23> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_23> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_24> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_24> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_25> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_25> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_26> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_26> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_27> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_27> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_28> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_28> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_3> a aml:SeriesSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_3> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_4> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_4> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_5> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_5> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_6> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_6> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_7> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_7> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_8> a aml:SeriesSpecification ;
+    aml:hasDataType aml:float64 ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_8> .
+
+<http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_9> a aml:SeriesSpecification ;
+    aml:hasDataType aml:string ;
+    aml:usedBy <http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_9> .
+
+<http://example.org/animl/example8#step_2> a aml:ExperimentStep ;
+    aml:name "Additional Properties" ;
+    aml:producesResult <http://example.org/animl/example8#result_2_1> .
+
+<http://example.org/animl/example8#step_d218f48f_2b8b_40d1_825f_20920163af77> a aml:ExperimentStep ;
+    aml:name "Flow-Peak Hold" ;
+    aml:producesResult <http://example.org/animl/example8#result_d218f48f_2b8b_40d1_825f_20920163af77_1> .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_1> a aml:Series ;
+    aml:dependency "independent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_1> ;
+    aml:name "Point No." .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_10> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_10> ;
+    aml:name "Run time" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_11> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_11> ;
+    aml:name "Stress" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_12> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_12> ;
+    aml:name "1/temperature" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_13> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_13> ;
+    aml:name "Strain" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_14> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_14> ;
+    aml:name "Normal stress" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_15> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_15> ;
+    aml:name "Displacement" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_16> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_16> ;
+    aml:name "Stress step" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_17> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_17> ;
+    aml:name "Torque step" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_18> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_18> ;
+    aml:name "Shear rate" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_19> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_19> ;
+    aml:name "Compliance" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_2> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_2> ;
+    aml:name "Temperature" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_20> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_20> ;
+    aml:name "Strain constant" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_21> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_21> ;
+    aml:name "Date and time" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_22> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_22> ;
+    aml:name "Results Step Id" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_23> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_23> ;
+    aml:name "Time" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_24> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_24> ;
+    aml:name "Gap" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_25> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_25> ;
+    aml:name "Displacement step" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_26> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_26> ;
+    aml:name "Modulus" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_27> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_27> ;
+    aml:name "Axial force" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_28> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_28> ;
+    aml:name "Normal stress coefficient" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_3> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_3> ;
+    aml:name "Procedure Step Id" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_4> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_4> ;
+    aml:name "Strain step" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_5> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_5> ;
+    aml:name "Velocity" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_6> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_6> ;
+    aml:name "Torque" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_7> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_7> ;
+    aml:name "Step time" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_8> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_8> ;
+    aml:name "Viscosity" .
+
+<http://example.org/animl/example8#series_d218f48f_2b8b_40d1_825f_20920163af77_1_1_9> a aml:Series ;
+    aml:dependency "dependent" ;
+    aml:hasSpecification <http://example.org/animl/example8#seriesSpec_d218f48f_2b8b_40d1_825f_20920163af77_1_1_9> ;
+    aml:name "Termination reason" .
+

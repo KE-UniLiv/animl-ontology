@@ -1,0 +1,9 @@
+# CQ-29: What is the role of an author within their organization?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?organizationRole
+WHERE {
+    ?author a aml:Agent ;
+            aml:hasRole ?organizationRole .
+}

@@ -1,0 +1,20 @@
+#6 a technique used by a seriesset specification may not include anything not of type series specification
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:SeriesSetSpecificationTechniqueSPARQLShape
+  a sh:NodeShape ;
+  sh:targetClass aml:seriesSetSpecification ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Technique used by seriesSetSpecification may not include non-SeriesSpecification." ;
+    sh:select """
+      SELECT $this
+      WHERE {
+        $this a aml:seriesSetSpecification .
+        $this aml:usesTechnique ?tech .
+        ?tech aml:includes ?sub .
+        FILTER NOT EXISTS { ?sub a aml:SeriesSpecification. }
+      }
+    """ ;
+  ] .

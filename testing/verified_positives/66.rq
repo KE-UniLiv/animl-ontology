@@ -1,0 +1,11 @@
+# CQ-66: What parameters are defined in the method section of an experiment step?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?step ?method ?category ?parameter
+WHERE {
+    ?step a aml:ExperimentStep .
+  	?step aml:usesMethod ?method .
+    ?method aml:hasMethodCategory ?category .
+    ?category aml:hasParameter ?parameter .
+}

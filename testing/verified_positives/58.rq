@@ -1,0 +1,9 @@
+# CQ-58: What is the new value of an item that was changed?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?newValue
+WHERE {
+    ?change a aml:Change ;
+            aml:newValue ?newValue .
+}

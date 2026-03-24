@@ -1,0 +1,15 @@
+# CQ-9: What is the sample ID of those containers in which a sample is located?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?Container ?Sample ?containerID ?Situation
+WHERE {
+    ?Container a aml:Container .
+    ?Container aml:containerID ?containerID .
+  
+    ?Sample a aml:Sample .
+  
+    ?Situation a aml:SampleInContainer .
+    ?Situation aml:isContainedBy ?Container .
+  	?Sample aml:isContained ?Situation .
+    FILTER ( ?Container != ?Sample )
+}

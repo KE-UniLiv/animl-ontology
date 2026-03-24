@@ -1,0 +1,16 @@
+# CQ-16: Which samples were consumed in an experiment step?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
+
+SELECT ?step ?Technique ?ReferenceSet ?ReferenceSpec
+WHERE {
+    ?step a aml:ExperimentStep .
+    ?step aml:includesInfrastructure ?infrastructure .
+    ?infrastructure aml:includes ?referenceSet .
+	?referenceSet ce:hasMember ?reference .
+    ?reference aml:pointsTo ?Sample .
+    ?Sample a aml:Sample .
+    ?step aml:usesTechnique ?Technique .
+    ?Technique aml:consumes ?ReferenceSpec .
+    ?reference aml:hasSpecification ?ReferenceSpec	
+}

@@ -1,0 +1,16 @@
+# CQ-35: Which other experiment steps' data were used as input for the current step?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
+
+SELECT ?ExperimentStep ?inputStep
+WHERE {
+    ?currentStep a aml:ExperimentStep .
+  	?currentStep aml:includesInfrastructure ?infrastructure .
+    ?infrastructure aml:includes ?referenceSet .
+    ?referenceSet ce:hasMember ?reference .
+    ?reference a aml:AnimlReference .
+  	?reference aml:pointsTo ?inputStep .
+    ?inputStep a aml:ExperimentStep .
+  	?Experiment a aml:Experiment .
+}
+ORDER BY ?ExperimentStep ?inputStep

@@ -1,0 +1,103 @@
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+
+aml:sample_001
+    a aml:Sample ;
+    aml:name "Sample A" .
+
+aml:sample_002
+    a aml:Sample ;
+    aml:name "Sample B" .
+
+aml:Step_001
+    a aml:experimentStep .
+
+aml:Step_002
+    a aml:experimentStep .
+
+aml:role_Author_01
+    a aml:Role ;
+    bag:isRoleOf aml:agent_JohnDoe ;
+    aml:hasType aml:Author .
+
+aml:role_Reviewer_01
+    a aml:Role ;
+    bag:isRoleOf aml:agent_QCSoftware ;
+    aml:hasType aml:Reviewer .
+
+aml:agent_JohnDoe
+    a aml:Agent ;
+    aml:phone "01189901897253" ;
+    aml:hasType aml:HumanAgent ;
+    bag:isClassifiedBy aml:role_Author_01 .
+
+aml:agent_steve
+    a aml:Agent ;
+    aml:phone "999999999999" ;
+    aml:hasType aml:HumanAgent ; .
+
+aml:agent_QCSoftware
+    a aml:Agent ;
+    aml:hasType aml:softwareAgent ;
+    bag:isClassifiedBy aml:role_Reviewer_01 .
+
+aml:Change_001
+    a aml:Change ;
+    aml:hasType aml:creation ;
+    aml:affects aml:sample_001 ;
+    aml:newValue "Initial creation of sample" .
+
+aml:Change_002
+    a aml:Change ;
+    aml:hasType aml:modification ;
+    aml:affects aml:sample_001 ;
+    aml:newValue "Updated metadata fields" .
+
+aml:Change_003 ;
+    a aml:Change ;
+    aml:hasType aml:creation ;
+    aml:affects aml:Step_001 ;
+    aml:newValue "recorded results" .
+
+aml:Change_004 ;
+    a aml:Change ;
+    aml:hasType aml:creation ;
+    aml:affects aml:Step_002 ;
+    aml:newValue "recorded more results" .
+
+aml:signature_001
+    a aml:Signature ;
+    aml:marks aml:sample_001 .
+
+
+aml:signature_002
+    a aml:Signature ;
+    aml:marks aml:sample_002 .
+
+aml:entry_001
+    a aml:AuditTrailEntry ;
+    aml:requiresRole aml:role_Author_01 ;
+    aml:makesChange aml:Change_001 ;
+    seq:directlyPrecedes aml:entry_002 ;
+    aml:timeStep "2025-01-12T10:15:00Z"^^xsd:dateTime .
+
+aml:entry_002
+    a aml:AuditTrailEntry ;
+    aml:requiresRole aml:role_Reviewer_01 ;
+    aml:makesChange aml:Change_002 ;
+    aml:makesChange aml:Change_003 ;
+    seq:directlyPrecedes aml:entry_003 ;
+    seq:directlyFollows aml:entry_001 ;
+    aml:timeStep "2025-01-12T10:15:00Z"^^xsd:dateTime .
+
+aml:entry_003
+    a aml:AuditTrailEntry ;
+    aml:makesChange aml:Change_004 ;
+    seq:directlyFollows aml:entry_002 ;
+    aml:timeStep "2025-01-12T10:15:00Z"^^xsd:dateTime .
+
+aml:auditTrail_001
+    a aml:AuditTrail ;
+    aml:hasAuditTrailEntry aml:entry_001 ;
+    aml:hasAuditTrailEntry aml:entry_002 .

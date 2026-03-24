@@ -1,0 +1,8 @@
+# CQ-60: What is the unit of a parameter?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?unit
+WHERE {
+    ?parameter a aml:Parameter ;
+               aml:hasUnit ?unit .
+}

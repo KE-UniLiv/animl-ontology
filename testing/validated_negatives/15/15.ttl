@@ -1,0 +1,27 @@
+#15 where either of the min/max constraints for a parameter specification are set, no concrete parameter of that spec may have a value outside those ranges.
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+aml:ParameterValueWithinSpecRangeShape
+    a sh:NodeShape ;
+    sh:targetClass aml:Parameter ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Parameter value must not be outside the min/max range defined on its ParameterSpecification." ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this aml:pointValue ?value .
+                $this aml:hasSpecification ?spec .
+
+                OPTIONAL { ?spec aml:minValue ?min . }
+                OPTIONAL { ?spec aml:maxValue ?max . }
+
+                FILTER (
+                    (BOUND(?min) && ?value < ?min) ||
+                    (BOUND(?max) && ?value > ?max)
+                )
+            }
+        """ ;
+    ] .

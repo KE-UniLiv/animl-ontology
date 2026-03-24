@@ -1,0 +1,11 @@
+# CQ-21: When was a specific change made?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?AuditTrailEntry ?change ?timestamp
+WHERE {
+    ?change a aml:Change .
+    ?AuditTrailEntry a aml:AuditTrailEntry .
+    ?AuditTrailEntry aml:makesChange ?change .
+    ?AuditTrailEntry aml:timeStep ?timestamp .
+}
+ORDER BY ?timestamp

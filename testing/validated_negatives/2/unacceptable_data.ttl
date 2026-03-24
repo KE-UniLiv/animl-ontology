@@ -1,0 +1,79 @@
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+@prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+
+aml:ref_Basil_00010_1
+    a aml:AnimlReference ;
+    aml:pointsTo aml:sample_001 .
+
+aml:ref_Basil_00020_1
+    a aml:AnimlReference ;
+    aml:pointsTo aml:step_002 .
+
+aml:refSet_Basil_00010
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_Basil_00010_1 ;
+    ce:hasMember aml:ref_Basil_00020_1 ;
+    aml:subject aml:experiment_001 .
+
+aml:step_001
+    a aml:ExperimentStep .
+
+aml:step_002
+    a aml:ExperimentStep .
+
+aml:experiment_001
+  a aml:Experiment ;
+  ce:hasMember aml:step_001;
+  ce:hasMember aml:step_002.
+
+aml:ref_003
+    a aml:AnimlReference ;
+    aml:pointsTo aml:step_001 .
+
+aml:ref_004
+    a aml:AnimlReference ;
+    aml:pointsTo aml:dataPoint_001 .
+
+aml:refSet_002
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_003 ;
+    ce:hasMember aml:ref_004 ;
+    aml:subject aml:sampleSet_001 .
+
+aml:sample_001
+    a aml:Sample .
+
+aml:sample_002
+    a aml:Sample .
+
+aml:sampleSet_001
+  a aml:SampleSet ;
+  ce:hasMember aml:sample_001;
+  ce:hasMember aml:sample_002.
+
+
+aml:ref_005
+    a aml:AnimlReference ;
+    aml:pointsTo aml:dataPoint_001 .
+
+aml:ref_006
+    a aml:AnimlReference ;
+    aml:pointsTo aml:dataPoint_002 .
+
+aml:refSet_003
+    a aml:AnimlReferenceSet ;
+    ce:hasMember aml:ref_005 ;
+    ce:hasMember aml:ref_006 ;
+    aml:subject aml:series_001 .
+
+aml:dataPoint_001
+    a aml:DataPoint .
+
+aml:dataPoint_002
+    a aml:DataPoint .
+
+aml:series_001
+  a aml:Series ;
+  ce:hasMember aml:dataPoint_001 .

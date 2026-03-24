@@ -1,0 +1,12 @@
+# CQ-15: What type of actions were performed during audit trail events (e.g., created, modified)?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?auditEntry ?change ?actionType
+WHERE {
+    ?auditEntry a aml:AuditTrailEntry .
+    ?auditEntry aml:makesChange ?change.
+    ?change a aml:Change .
+    ?change aml:hasType ?actionType .
+            
+}

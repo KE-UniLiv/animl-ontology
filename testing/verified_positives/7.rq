@@ -1,0 +1,23 @@
+# CQ-7: What is the stated function of a sample being used?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?Technique ?referenceSpecification ?reference ?Function
+WHERE {
+    ?Technique a aml:Technique .
+
+    # Bind only the specifications actually used by the technique
+    {
+        ?Technique aml:consumes ?referenceSpecification .
+    }
+    UNION
+    {
+        ?Technique aml:derives ?referenceSpecification .
+    }
+
+    # Now restrict references to those that use exactly those specifications
+    ?reference a aml:AnIMLReference ;
+               aml:hasSpecification ?referenceSpecification ;
+               aml:hasFunction ?Function .
+}
+ORDER BY ?Technique ?referenceSpecification ?reference

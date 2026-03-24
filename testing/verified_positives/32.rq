@@ -1,0 +1,10 @@
+# CQ-32: Who is the manufacturer of a device?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT DISTINCT ?device ?manufacturer
+WHERE {
+    ?device a aml:Agent ;
+            aml:organisation ?manufacturer .
+    ?device aml:hasType ?Type .
+    FILTER(?Type = aml:HardwareAgent)
+}

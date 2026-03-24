@@ -1,0 +1,25 @@
+# 3 a human agent may not have an operating system or version.
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+
+aml:NoHumanAgentSoftwareFieldsShape
+    a sh:NodeShape ;
+    sh:targetClass aml:Agent ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A HumanAgent may not have an operating system or version." ;
+
+        sh:select """
+            SELECT $this WHERE {
+                $this aml:hasType aml:HumanAgent .
+                {
+                    $this aml:operatingSystem ?os .
+                }
+                UNION
+                {
+                    $this aml:version ?ver .
+                }
+            }
+        """ ;
+    ] .

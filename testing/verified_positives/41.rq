@@ -1,0 +1,10 @@
+# CQ-41: What is the maximum number of times a specific result can occur according to its blueprint?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?maxOccurs
+WHERE {
+    # Assuming ResultSpecification is a subclass of Specification
+    ?resultSpec a aml:ResultSpecification ; 
+                aml:maxCardinality ?maxOccurs .
+}

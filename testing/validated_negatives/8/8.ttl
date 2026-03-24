@@ -1,0 +1,22 @@
+#8 an animlreferencespecification with "required" modality may not exist unless it specifies a concrete animl reference
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+aml:AnimlReferenceSpecificationRequiredMustHaveConcreteAnimlReferenceShape
+    a sh:NodeShape ;
+    sh:targetClass aml:AnimlReferenceSpecification ;
+    sh:message "AnimlReferenceSpecification with modality 'required' must be realized by at least one concrete AnimlReference." ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:select """
+            SELECT ?this WHERE {
+                ?this a aml:AnimlReferenceSpecification ;
+                      aml:modality "required" .
+                FILTER NOT EXISTS {
+                    ?ref a aml:AnimlReference ;
+                         aml:hasSpecification ?this ;
+                         aml:pointsTo ?target .
+                }
+            }
+        """ ;
+    ] .

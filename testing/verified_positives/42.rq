@@ -1,0 +1,14 @@
+# CQ-42: Is a sample with a specific role required or optional for a technique?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+SELECT ?Technique ?Sample ?value
+WHERE {
+    ?Technique a aml:Technique .
+    ?referenceSpecification a aml:AnimlReferenceSpecification .
+    ?reference aml:hasSpecification ?referenceSpecification .
+    ?reference aml:pointsTo ?Sample .
+    ?Sample a aml:Sample .
+	?Technique ?relation ?referenceSpecification .
+  	?referenceSpecification aml:modality ?value .
+
+}
+ORDER BY ?Technique ?Sample 

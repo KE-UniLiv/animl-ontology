@@ -1,0 +1,43 @@
+@prefix aml: <http://example.org/animl/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+aml:technique_Basil_00001
+    a aml:Technique ;
+    aml:name "UV-Vis Spectroscopy" ;
+    aml:version "1.0" ;
+    aml:citation "Smith et al. (2024) UV-Vis Methods" ;
+    aml:consumes aml:refSpec_Basil_00001 ;
+    aml:consumes aml:refSpec_Basil_00002 .
+
+
+aml:refSpec_Basil_00001
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference1" ;
+    aml:modality "optional" .
+
+aml:refSpec_Basil_00002
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "reference2" ;
+    aml:modality "optional" .
+
+aml:technique_Basil_00002
+    a aml:Technique ;
+    aml:name "science" ;
+    aml:version "1.0" ;
+    aml:citation "Smith et al. (2024) UV-Vis Methods" ;
+    aml:consumes aml:refSpec_Basil_00003 ;
+    aml:derives aml:refSpec_Basil_00004 .
+
+
+aml:refSpec_Basil_00003
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference3" ;
+    aml:modality "optional" .
+
+aml:refSpec_Basil_00004
+    a aml:AnIMLReferenceSpecification ;
+    aml:name "Reference4" ;
+    aml:modality "optional" .
+

@@ -1,0 +1,11 @@
+# CQ-20: What is the version of a software agent?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?software ?softwareVersion
+WHERE {
+    ?software a aml:Agent .
+    ?software aml:hasType ?Type .
+    FILTER (?Type = aml:SoftwareAgent) .
+    ?software aml:version ?softwareVersion .
+
+}

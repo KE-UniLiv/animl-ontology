@@ -1,0 +1,9 @@
+# CQ-62: What units are allowed for a specific quantity in a technique definition?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?unit
+WHERE {
+    ?unit a aml:Units ;
+          aml:quantity "QuantityNamePlaceholder" .
+}

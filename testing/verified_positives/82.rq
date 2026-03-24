@@ -1,0 +1,9 @@
+# CQ-82: Who is the manufacturer of the software?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?manufacturer
+WHERE {
+    ?software a aml:SoftwareAgent ;
+              aml:manufacturer ?manufacturer .
+}

@@ -1,0 +1,9 @@
+# CQ-25: What is the SHA256 checksum of the technique definition file?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?checksum
+WHERE {
+    ?technique a aml:Technique ;
+               aml:sha256 ?checksum .
+}

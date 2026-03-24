@@ -1,0 +1,10 @@
+# CQ-5: which series are independent?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?series ?dependency
+WHERE {
+    # Check the series specification or the series instance itself
+    ?series a aml:Series ;
+              aml:dependency ?dependency .
+    FILTER (?dependency = "independent")
+}

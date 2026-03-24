@@ -1,0 +1,22 @@
+# CQ-52: Was the data from a referenced experiment step consumed or produced?
+
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?dataFlowType
+WHERE {
+    ?step a aml:ExperimentStep .
+    
+    {
+        ?step aml:hasInfrastructure ?container .
+        BIND("Consumed" AS ?dataFlowType)
+    }
+    UNION
+    {
+        ?step aml:hasResult ?container .
+        BIND("Produced" AS ?dataFlowType)
+    }
+    
+    # The container includes the reference set holding the specific reference
+    ?container aml:includes ?referenceSet .
+    ?referenceSet aml:hasMember <http://example.org/specific_reference> .
+}

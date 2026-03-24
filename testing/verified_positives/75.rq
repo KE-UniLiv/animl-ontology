@@ -1,0 +1,10 @@
+# CQ-75: What technique extensions were applied in an experiment step?
+PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+SELECT ?baseTechnique
+WHERE {
+    ?step a aml:ExperimentStep ;
+          aml:usesTechnique ?appliedTechnique .
+          
+    ?appliedTechnique aml:extends ?baseTechnique .
+}

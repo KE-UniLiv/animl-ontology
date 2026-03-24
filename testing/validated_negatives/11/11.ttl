@@ -1,0 +1,21 @@
+# 11 a datapoint (whose specification is of type increment) may not have a value of any other type than float
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+aml:IncrementEncodingValueShape
+    a sh:NodeShape ;
+    sh:message "If a DataPoint is encoded as increment, its aml:value must be a float literal." ;
+    sh:targetClass aml:DataPoint ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:select """
+            SELECT ?this WHERE {
+                ?this a aml:DataPoint ;
+                      aml:hasSpecification ?spec ;
+                      aml:value ?val .
+                ?spec aml:EncodingType aml:AutoIncrementedEncodingType .
+                FILTER ( datatype(?val) != xsd:double )
+            }
+        """ ;
+    ] .

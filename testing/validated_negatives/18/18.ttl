@@ -1,0 +1,29 @@
+#18 the results of an experiment step may not include references to samples already derived by another experimentstep
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+
+
+aml:NoResultsMayIncludeDerivedSamplesShape
+    a sh:NodeShape ;
+    sh:targetClass aml:ExperimentStep ;
+
+    sh:sparql [
+        sh:message "An ExperimentStep result may not include samples derived by ANY ExperimentStep." ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                # Samples included in THIS step's result
+                ?this aml:producesResult/aml:includes/ce:hasMember/aml:pointsTo ?badSample .
+
+                # Samples derived by ANY step
+                ?anyStep a aml:ExperimentStep ;
+                         aml:usesTechnique/aml:derives ?spec .
+
+                FILTER (?anyStep != ?this)
+
+                ?ref aml:hasSpecification ?spec ;
+                     aml:pointsTo ?badSample .
+            }
+        """ ;
+    ] .

@@ -1,0 +1,12 @@
+# CQ-36: What is the expected dependency (independent/dependent) for a series in a technique?
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?Technique ?seriesSpec ?dependency
+WHERE {
+    ?Technique a aml:Technique .
+    ?Technique aml:includes ?seriesSpec .
+    ?seriesSpec a aml:SeriesSpecification ;
+                aml:dependency ?dependency .
+                
+}
+ORDER BY ?Technique ?seriesSpec ?dependency

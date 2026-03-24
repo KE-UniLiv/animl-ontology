@@ -1,0 +1,14 @@
+# CQ-38: What are the individual string values in a series?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
+
+SELECT ?series ?stringValue ?string
+WHERE {
+    ?series a aml:Series .
+    ?series aml:hasSpecification ?seriesSpec .
+    ?seriesSpec aml:hasType aml:string .
+  	?series ce:hasMember ?stringValue .
+  	?stringValue aml:value ?string .
+}
+ORDER BY ?series ?stringValue

@@ -1,0 +1,9 @@
+# CQ-30: What is the physical location of an agent?
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
+SELECT ?author ?location
+WHERE {
+    ?author a aml:Agent ;
+            aml:location ?location .
+}
