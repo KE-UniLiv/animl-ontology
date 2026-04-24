@@ -147,11 +147,14 @@ We welcome contributions from the community to improve and extend the AnIML Onto
 If you use the AnIML Ontology in your work, please cite the following paper:
 
 ```bibtex
-@article{morlidge2025animowl,
+@inproceedings{morlidge2025animowl,
   title={The AnIML Ontology: Enabling Semantic Interoperability for Large-Scale Experimental Data in Interconnected Scientific Labs},
   author={Morlidge, Wilf and Watkiss-Leek, Elliott and Hannah, George and Rostron, Harry and Ng, Andrew and Johnson, Ewan and Mitchell, Andrew and Payne, Terry R. and Tamma, Valentina and de Berardinis, Jacopo},
-  journal={Under Review},
+  booktitle={Proceedings of the 38th International Conference on Advanced Information Systems Engineering (CAiSE)},
   year={2026},
+  month={June},
+  address={Verona, Italy},
+  note={To appear}
 }
 ```
 
