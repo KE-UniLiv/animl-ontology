@@ -7,7 +7,7 @@
 aml:seriesSpec_acceleration
     a aml:SeriesSpecification ;
     aml:label "Acceleration over Time" ;
-    aml:hasUnits aml:units_KPH ;
+    aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec ;
@@ -58,7 +58,7 @@ aml:increment_2_acceleration
 aml:seriesSpec_acceleration_2
     a aml:SeriesSpecification ;
     aml:label "Acceleration over Time" ;
-    aml:hasUnits aml:units_KPH ;
+    aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec_2 ;
@@ -108,7 +108,7 @@ aml:increment_2_acceleration_2
 aml:seriesSpec_acceleration_3
     a aml:SeriesSpecification ;
     aml:label "Acceleration over Time" ;
-    aml:hasUnits aml:units_KPH ;
+    aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec_3 ;

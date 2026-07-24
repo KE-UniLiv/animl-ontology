@@ -79,11 +79,11 @@
       </aml:Series>
     </ce:isMemberOf>
   </aml:DataPoint>
-  <aml:Units rdf:about="http://example.org/animl/example7#unit_1_s">
+  <aml:Unit rdf:about="http://example.org/animl/example7#unit_1_s">
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
     <aml:token>1/s</aml:token>
-  </aml:Units>
+  </aml:Unit>
   <aml:DataPoint rdf:about="http://example.org/animl/example7#datapoint_encoded_es_2_1_1_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">f5bJ2UQ5C789bzx+PCsKv09vpWN+EQy/yGiLzYG8C7/7BpT43S4Lv2g9C2ll5wq/XVEAxFpOC78muuUlKhQMv857Wd+rkgu/Dri3Ln89C7+kN/rm55cLv+Dy65YDjgu/nQnDROdjDL+GCmsyRSoMv515YmvwnQy/</aml:pointValue>
@@ -97,11 +97,11 @@
       </aml:Series>
     </ce:isMemberOf>
   </aml:DataPoint>
-  <aml:Units rdf:about="http://example.org/animl/example7#unit__C">
+  <aml:Unit rdf:about="http://example.org/animl/example7#unit__C">
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
     <aml:token>°C</aml:token>
-  </aml:Units>
+  </aml:Unit>
   <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>independent</aml:dependency>
@@ -213,11 +213,11 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_7">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example7#unit_Pa_s">
+      <aml:Unit rdf:about="http://example.org/animl/example7#unit_Pa_s">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>Pa.s</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example7#series_es_2_1_1_7">
@@ -475,11 +475,11 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example7#seriesSpec_es_2_1_1_5">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example7#unit_MPa">
+      <aml:Unit rdf:about="http://example.org/animl/example7#unit_MPa">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>MPa</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_2_1_1_5"/>
   </aml:SeriesSpecification>
@@ -523,11 +523,11 @@
     <aml:hasUnits rdf:resource="http://example.org/animl/example7#unit__C"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example7#series_es_2_1_1_3"/>
   </aml:SeriesSpecification>
-  <aml:Units rdf:about="http://example.org/animl/example7#unit_s">
+  <aml:Unit rdf:about="http://example.org/animl/example7#unit_s">
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
     <aml:token>s</aml:token>
-  </aml:Units>
+  </aml:Unit>
   <aml:ExperimentStep rdf:about="http://example.org/animl/example7#step_es_0">
     <aml:name>Rotational Viscosimetry 1</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example7#result_es_0_1"/>

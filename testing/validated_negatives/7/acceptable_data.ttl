@@ -9,7 +9,7 @@
 aml:seriesSpec_acceleration
     a aml:SeriesSpecification ;
     aml:label "Acceleration over Time" ;
-    aml:hasUnits aml:units_KPH ;
+    aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec ;

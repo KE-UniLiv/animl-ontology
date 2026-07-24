@@ -303,7 +303,7 @@ aml:seriesSpec_TempTime_001
     a aml:SeriesSpecification ;
     aml:label "Temperature vs Time" ;
     aml:quantity "Temperature" ;
-    aml:hasUnits aml:units_Celsius ;
+    aml:hasUnits aml:Unit_Celsius ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
     aml:hasPart aml:dataPointSpec_TempTime_001 .
@@ -312,31 +312,31 @@ aml:dataPointSpec_TempTime_001
     a aml:DataPointSpecification ;
     aml:EncodingType aml:IndividualEncodingType .
 
-aml:units_Celsius 
-    a aml:Units;
+aml:Unit_Celsius 
+    a aml:Unit;
     aml:hasPart aml:unit_Celsius .
 
 aml:unit_Celsius 
     a aml:Unit;
     aml:offset 273.15 ;
-    aml:adjusts aml:k .
+    aml:Adjusts aml:k .
 
 
 
-aml:units_KPH 
-    a aml:Units;
+aml:Unit_KPH 
+    a aml:Unit;
     aml:hasPart aml:unit_Km ;
     aml:hasPart aml:unit_Hour .
 
 aml:unit_Km 
     a aml:Unit;
     aml:factor 1000 ;
-    aml:adjusts aml:m .
+    aml:Adjusts aml:m .
 
 aml:unit_Hour 
     a aml:Unit;
     aml:factor 3600 ;
-    aml:adjusts aml:s .
+    aml:Adjusts aml:s .
 
 
 
@@ -351,30 +351,30 @@ aml:series_TempTime_001
     ce:hasMember aml:dp_TempTime_002 ;
     ce:hasMember aml:dp_TempTime_003 .
 
-aml:units_Celsius 
-    a aml:Units;
+aml:Unit_Celsius 
+    a aml:Unit;
     aml:hasPart aml:unit_Celsius .
 
 aml:unit_Celsius 
     a aml:Unit;
     aml:offset 273.15 ;
-    aml:adjusts aml:k .
+    aml:Adjusts aml:k .
 
 
-aml:units_KPH 
-    a aml:Units;
+aml:Unit_KPH 
+    a aml:Unit;
     aml:hasPart aml:unit_Km ;
     aml:hasPart aml:unit_Hour .
 
 aml:unit_Km 
     a aml:Unit;
     aml:factor 1000 ;
-    aml:adjusts aml:m .
+    aml:Adjusts aml:m .
 
 aml:unit_Hour 
     a aml:Unit;
     aml:factor 3600 ;
-    aml:adjusts aml:s .
+    aml:Adjusts aml:s .
 
 
 aml:series_TempTime_001
@@ -415,7 +415,7 @@ aml:seriesSpec_FrogNumbers
     a aml:SeriesSpecification ;
     aml:label "Frogs over time" ;
     aml:quantity "Frogs" ;
-    aml:hasUnits aml:units_null ;
+    aml:hasUnits aml:Unit_null ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:dataPointSpec_FrogNumber .
@@ -424,13 +424,13 @@ aml:dataPointSpec_FrogNumber
     a aml:DataPointSpecification ;
     aml:EncodingType aml:IndividualEncodingType .
 
-aml:units_null
-    a aml:Units;
+aml:Unit_null
+    a aml:Unit;
     aml:hasPart aml:unit_null .
 
 aml:unit_null 
     a aml:Unit;
-    aml:adjusts aml:1 .
+    aml:Adjusts aml:1 .
 
 
 aml:Frog_numbers
@@ -468,7 +468,7 @@ aml:dp_FrogNumber_003
 aml:seriesSpec_acceleration
     a aml:SeriesSpecification ;
     aml:label "Acceleration over Time" ;
-    aml:hasUnits aml:units_KPH ;
+    aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec .
@@ -527,7 +527,7 @@ aml:tracking_information
 aml:height_spec
     a aml:SeriesSpecification ;
     aml:label "height of tracked object" ;
-    aml:hasUnits aml:units_meters ;
+    aml:hasUnits aml:Unit_meters ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
     aml:hasPart aml:dataPointSpec_heights .
@@ -536,14 +536,14 @@ aml:dataPointSpec_heights
     a aml:DataPointSpecification ;
     aml:EncodingType aml:IndividualEncodingType .
 
-aml:units_meters 
-    a aml:Units;
+aml:Unit_meters 
+    a aml:Unit;
     aml:hasPart aml:unit_m .
 
 aml:unit_m 
     a aml:Unit;
     aml:factor 1 ;
-    aml:adjusts aml:m .
+    aml:Adjusts aml:m .
 
 aml:heights
     a aml:Series ;

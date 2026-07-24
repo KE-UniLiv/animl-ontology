@@ -396,7 +396,7 @@ aml:hasType rdf:type owl:ObjectProperty ;
 ###  http://www.w3id.org/animl/ontology/hasUnits
 aml:hasUnits rdf:type owl:ObjectProperty ;
              rdfs:domain aml:ParameterSpecification ;
-             rdfs:range aml:Units ;
+             rdfs:range aml:Unit ;
              rdfs:comment "Denotes that a class is a container for data with corresponding units of measurement, a complex quantity may have multiple units e.i mph, or rpm"@en .
 
 
@@ -770,7 +770,7 @@ aml:pointValue rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/animl/ontology/quantity
 aml:quantity rdf:type owl:DatatypeProperty ;
-             rdfs:domain aml:Units ;
+             rdfs:domain aml:Unit ;
              rdfs:range xsd:double ;
              rdfs:comment "A description of type of objects or measurements to which units may be assigned"@en .
 
@@ -853,7 +853,7 @@ aml:version rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.w3id.org/animl/ontology/visability
-aml:visability rdf:type owl:DatatypeProperty ;
+aml:visibility rdf:type owl:DatatypeProperty ;
                rdfs:domain aml:Series ;
                rdfs:range xsd:boolean ;
                rdfs:comment "This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data"@en .
@@ -875,15 +875,15 @@ owl:Thing rdfs:comment "The fundamental root element for all ontologies"@en .
 aml:AdjustedUnit rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
-                                   owl:allValuesFrom aml:Units
+                                   owl:allValuesFrom aml:Unit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> ;
-                                   owl:allValuesFrom aml:Units
+                                   owl:allValuesFrom aml:Unit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> ;
-                                   owl:allValuesFrom aml:Units
+                                   owl:allValuesFrom aml:Unit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty aml:Adjusts ;
@@ -1279,7 +1279,7 @@ aml:ParameterSpecification rdf:type owl:Class ;
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty aml:hasUnits ;
-                                             owl:allValuesFrom aml:Units
+                                             owl:allValuesFrom aml:Unit
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty aml:usedBy ;
@@ -1410,7 +1410,7 @@ aml:SeriesSpecification rdf:type owl:Class ;
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty aml:hasUnits ;
-                                          owl:allValuesFrom aml:Units
+                                          owl:allValuesFrom aml:Unit
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty aml:usedBy ;
@@ -1492,7 +1492,7 @@ aml:Template rdf:type owl:Class ;
 
 
 ###  http://www.w3id.org/animl/ontology/Units
-aml:Units rdf:type owl:Class ;
+aml:Unit rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
                             owl:allValuesFrom aml:SIUnit

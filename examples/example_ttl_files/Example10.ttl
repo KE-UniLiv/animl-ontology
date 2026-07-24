@@ -289,9 +289,9 @@
     aml:hasSpecification <http://example.org/animl/example10#seriesSpec_es_7_2_1_2> ;
     aml:name "Volume Density" .
 
-<http://example.org/animl/example10#unit__> a aml:Units ;
+<http://example.org/animl/example10#unit__> a aml:Unit ;
     aml:token "%" .
 
-<http://example.org/animl/example10#unit__m> a aml:Units ;
+<http://example.org/animl/example10#unit__m> a aml:Unit ;
     aml:token "µm" .
 

@@ -278,11 +278,11 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_4_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example2#unit_rpm">
+      <aml:Unit rdf:about="http://example.org/animl/example2#unit_rpm">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>rpm</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_4_1_y"/>
   </aml:SeriesSpecification>
@@ -328,11 +328,11 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_2_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example2#unit_C">
+      <aml:Unit rdf:about="http://example.org/animl/example2#unit_C">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>C</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example2#series_1_2_1_y">
@@ -559,11 +559,11 @@
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">0PUoXI8CNEC6HoXrUUBgQLoehetR4GBAuh6F61FAYEB0PQrXo0BVQND1KFyPAjlA0PUoXI8CNEA=</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_3_1_y"/>
   </aml:DataPoint>
-  <aml:Units rdf:about="http://example.org/animl/example2#unit_A">
+  <aml:Unit rdf:about="http://example.org/animl/example2#unit_A">
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
     <aml:token>A</aml:token>
-  </aml:Units>
+  </aml:Unit>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>

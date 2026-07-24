@@ -2296,7 +2296,7 @@ index f919f78..fe73c3f 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example1#unit_C">
+       <aml:Unit rdf:about="http://example.org/animl/example1#unit_C">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -681,11 +681,11 @@
    </aml:SeriesSpecification>
@@ -2346,7 +2346,7 @@ index f919f78..fe73c3f 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example1#unit_A">
+       <aml:Unit rdf:about="http://example.org/animl/example1#unit_A">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -861,7 +861,7 @@
      <seq:directlyPrecedes rdf:resource="http://example.org/animl/example1#datapoint_1_5_1_y_3"/>
@@ -2417,7 +2417,7 @@ index 95a02e9..3634174 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example10#unit__">
+       <aml:Unit rdf:about="http://example.org/animl/example10#unit__">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -147,7 +147,7 @@
      <aml:dependency>dependent</aml:dependency>
@@ -2453,7 +2453,7 @@ index 95a02e9..3634174 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example10#unit__m">
+       <aml:Unit rdf:about="http://example.org/animl/example10#unit__m">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -224,7 +224,7 @@
      </aml:usedBy>
@@ -2580,7 +2580,7 @@ index 13f072a..ca2ed2d 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example2#unit_rpm">
+       <aml:Unit rdf:about="http://example.org/animl/example2#unit_rpm">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -301,7 +301,7 @@
      </ce:hasMember>
@@ -2607,7 +2607,7 @@ index 13f072a..ca2ed2d 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example2#unit_C">
+       <aml:Unit rdf:about="http://example.org/animl/example2#unit_C">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -402,7 +402,7 @@
    </aml:DataPoint>
@@ -2646,7 +2646,7 @@ index 13f072a..ca2ed2d 100644
        </aml:SeriesSpecification>
      </aml:hasSpecification>
 @@ -566,7 +566,7 @@
-   </aml:Units>
+   </aml:Unit>
    <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_1">
      <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
@@ -4073,7 +4073,7 @@ index 94c301a..1aacb58 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example7#unit_Pa_s">
+       <aml:Unit rdf:about="http://example.org/animl/example7#unit_Pa_s">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -266,7 +266,7 @@
      <aml:dependency>independent</aml:dependency>
@@ -4184,7 +4184,7 @@ index 94c301a..1aacb58 100644
 -    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
 +    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
      <aml:hasUnits>
-       <aml:Units rdf:about="http://example.org/animl/example7#unit_MPa">
+       <aml:Unit rdf:about="http://example.org/animl/example7#unit_MPa">
          <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
 @@ -505,12 +505,12 @@
      <ce:isMemberOf rdf:resource="http://example.org/animl/example7#series_es_2_1_1_7"/>

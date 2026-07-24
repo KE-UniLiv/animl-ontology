@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?label
 WHERE {
-    ?unit a aml:Units ; # or aml:SIUnit
+    ?unit a aml:Unit ; # or aml:SIUnit
           aml:label ?label .
 }

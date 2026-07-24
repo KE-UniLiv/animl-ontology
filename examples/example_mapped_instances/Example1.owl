@@ -671,11 +671,11 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_3_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example1#unit_C">
+      <aml:Unit rdf:about="http://example.org/animl/example1#unit_C">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>C</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_3_1_y"/>
   </aml:SeriesSpecification>
@@ -841,19 +841,19 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_6_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example1#unit_A">
+      <aml:Unit rdf:about="http://example.org/animl/example1#unit_A">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>A</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_6_1_y"/>
   </aml:SeriesSpecification>
-  <aml:Units rdf:about="http://example.org/animl/example1#unit_rpm">
+  <aml:Unit rdf:about="http://example.org/animl/example1#unit_rpm">
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
     <aml:token>rpm</aml:token>
-  </aml:Units>
+  </aml:Unit>
   <aml:DataPoint rdf:about="http://example.org/animl/example1#datapoint_1_5_1_y_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1004.75</aml:pointValue>

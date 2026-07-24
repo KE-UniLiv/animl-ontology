@@ -100,11 +100,11 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_5_2_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example10#unit__">
+      <aml:Unit rdf:about="http://example.org/animl/example10#unit__">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>%</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example10#series_es_5_2_1_2">
@@ -208,11 +208,11 @@
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_3_2_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits>
-      <aml:Units rdf:about="http://example.org/animl/example10#unit__m">
+      <aml:Unit rdf:about="http://example.org/animl/example10#unit__m">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>µm</aml:token>
-      </aml:Units>
+      </aml:Unit>
     </aml:hasUnits>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example10#series_es_3_2_1_1">
