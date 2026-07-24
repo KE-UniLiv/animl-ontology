@@ -1,6 +1,6 @@
 # CQ-45: What physical quantity does a unit represent?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?quantity
 WHERE {

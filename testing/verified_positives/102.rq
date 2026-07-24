@@ -1,6 +1,6 @@
 # CQ-102: What is the defined format of a sample container, such as the number of wells in a microtiter plate?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?container ?rowCount ?colCount
 WHERE {

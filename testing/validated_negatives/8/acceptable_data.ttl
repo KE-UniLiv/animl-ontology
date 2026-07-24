@@ -1,6 +1,8 @@
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
 

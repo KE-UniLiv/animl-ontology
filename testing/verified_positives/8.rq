@@ -1,16 +1,16 @@
 # CQ-8: What are the individual 32-bit integer values in a series?
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 PREFIX seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#>
-PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#/>
-PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
+PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#>
+PREFIX ce:  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 
 SELECT ?seriesSpecification ?series ?dataPoint
 WHERE {
-    ?series a aml:Series .
-    ?series aml:hasSpecification ?seriesSpecification .
+    ?series a aml:Series ;
+            aml:hasSpecification ?seriesSpecification ;
+            ce:hasMember ?dataPoint .
     ?seriesSpecification aml:hasType ?dataType .
-    FILTER (?dataType = aml:int32) .
-    ?series ce:hasMember ?dataPoint
-
+    FILTER (?dataType = aml:int32)
 }
 ORDER BY ?seriesSpecification ?series ?dataPoint

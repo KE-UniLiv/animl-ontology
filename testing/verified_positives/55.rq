@@ -1,6 +1,6 @@
 # CQ-55: What data points from a parent result were referenced by a child experiment step?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?dataPoint
 WHERE {

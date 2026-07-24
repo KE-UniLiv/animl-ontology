@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:aml="http://w3id.org/animl/ontology"
+  xmlns:aml="http://www.w3id.org/animl/ontology/"
   xmlns:ce="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#"
   xmlns:ns1="http://purl.allotrope.org/ontologies/role#"
   xmlns:ns2="http://qudt.org/schema/qudt#"
@@ -98,7 +98,7 @@
     </aml:producesResult>
   </aml:ExperimentStep>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_5_2_1_2">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits>
       <aml:Units rdf:about="http://example.org/animl/example10#unit__">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
@@ -147,7 +147,7 @@
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
       <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_7_2_1_2">
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_7_2_1_2"/>
       </aml:SeriesSpecification>
@@ -159,7 +159,7 @@
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
       <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_3_2_1_2">
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_3_2_1_2"/>
       </aml:SeriesSpecification>
@@ -167,7 +167,7 @@
     <aml:name>Volume Density</aml:name>
   </aml:Series>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_4_2_1_2">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example10#series_es_4_2_1_2">
@@ -206,7 +206,7 @@
     <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_4_2_1_2"/>
   </aml:SeriesSet>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_3_2_1_1">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits>
       <aml:Units rdf:about="http://example.org/animl/example10#unit__m">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
@@ -224,7 +224,7 @@
     </aml:usedBy>
   </aml:SeriesSpecification>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_7_2_1_1">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example10#series_es_7_2_1_1">
@@ -263,7 +263,7 @@
     <ce:hasMember rdf:resource="http://example.org/animl/example10#seriesSet_es_4_2_1"/>
   </aml:Result>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_1_2_1_1">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_1_2_1_1"/>
   </aml:SeriesSpecification>
@@ -300,7 +300,7 @@
     </aml:producesResult>
   </aml:ExperimentStep>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_6_2_1_2">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_6_2_1_2"/>
   </aml:SeriesSpecification>
@@ -312,7 +312,7 @@
     <ce:hasMember rdf:resource="http://example.org/animl/example10#seriesSet_es_6_2_1"/>
   </aml:Result>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_4_2_1_1">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_4_2_1_1"/>
   </aml:SeriesSpecification>
@@ -341,7 +341,7 @@
     <aml:producesResult rdf:resource="http://example.org/animl/example10#result_es_6_2"/>
   </aml:ExperimentStep>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_2_2_1_2">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example10#series_es_2_2_1_2">
@@ -353,12 +353,12 @@
     </aml:usedBy>
   </aml:SeriesSpecification>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_1_2_1_2">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_1_2_1_2"/>
   </aml:SeriesSpecification>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_5_2_1_1">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_5_2_1_1"/>
   </aml:SeriesSpecification>
@@ -373,7 +373,7 @@
     <aml:dependency>independent</aml:dependency>
     <aml:hasSpecification>
       <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_2_2_1_1">
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_2_2_1_1"/>
       </aml:SeriesSpecification>
@@ -392,7 +392,7 @@
     <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_7_2_1_2"/>
   </aml:SeriesSet>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_6_2_1_1">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat32"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_6_2_1_1"/>
   </aml:SeriesSpecification>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:animl="http://w3id.org/animl/ontology/"
+   xmlns:animl="http://www.w3id.org/animl/ontology/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:dcterms="http://purl.org/dc/terms/"
@@ -147,7 +147,7 @@
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasType"/>
     <owl:someValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/animl/ontology/mappingTool">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/mappingTool">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf094a8d055e247319eb43e7dc817e46f">
@@ -2145,7 +2145,7 @@
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasType"/>
     <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ChangeType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/animl/ontology/mappingConfidence">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/mappingConfidence">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf7270e5eb0684f2d9d61980a4da5004c">

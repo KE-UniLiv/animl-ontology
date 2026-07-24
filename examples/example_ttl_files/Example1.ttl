@@ -1,4 +1,4 @@
-@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

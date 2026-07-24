@@ -1,6 +1,6 @@
 # CQ-78: What parameters are defined in a category blueprint for a technique?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?parameterBlueprint
 WHERE {

@@ -1,6 +1,6 @@
 # CQ-48: What was the reason given for a change in the audit trail?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?reason
 WHERE {

@@ -2,6 +2,7 @@
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 aml:sampleSet_Basil_00010
     a aml:SampleSet ;

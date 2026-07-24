@@ -96,7 +96,7 @@ The ontology covers 102 validated Competency Questions (CQs) extracted from the 
 This query demonstrates how to retrieve the start index of a specific value set in a series using the Reference Pattern (CQ-96).
 
 ```sparql
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?startIndex
 WHERE {

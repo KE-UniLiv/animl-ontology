@@ -16,7 +16,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:void="http://rdfs.org/ns/void#"
-     xmlns:animl="http://w3id.org/animl/"
+     xmlns:animl="http://www.w3id.org/animl/ontology/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:property="http://purl.allotrope.org/ontologies/property#"
      xmlns:sequence="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"

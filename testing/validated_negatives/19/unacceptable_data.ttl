@@ -66,19 +66,10 @@ aml:technique_Step_0001
     aml:name "Weighing" ;
     aml:version "1.0" ;
     aml:citation "Internal SOP 2025" ;
-    aml:consumes aml:refSpec_Step_0002_output ;
-    aml:consumes aml:refSpec_step_0001_con ;
+    aml:consume aml:refSpec_Step_0002_output ;
     aml:derives aml:refSpec_Step_0001_A ;
     aml:derives aml:refSpec_Step_0001_B .
 
-aml:refSpec_step_0001_con
-    a aml:AnimlReferenceSpecification ;
-    aml:name "con output reference" .
-
-aml:ref_Step_0001_C
-    a aml:AnimlReference ;
-    aml:pointsTo aml:sample_Basil_00030 ;
-    aml:hasSpecification aml:refSpec_step_0001_con .
 
 aml:refSet_Step_0002
     a aml:AnimlReferenceSet ;
@@ -124,11 +115,9 @@ aml:experimentStep_0001
     aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
     aml:usesTechnique aml:technique_Step_0001 ;
     aml:usesMethod aml:centaur_pipeline ;
-    aml:includesInfrastructure aml:balance_001 ;
+    aml:includeInfrastructure aml:balance_001 ;
     aml:producesResult aml:result_Step_0001 ;
     seq:directlyPrecedes aml:experimentStep_0002 .
-
-
 
 aml:experimentStep_0002
     a aml:ExperimentStep ;
@@ -137,22 +126,6 @@ aml:experimentStep_0002
     aml:producesResult aml:result_Step_0002 ;
     aml:usesMethod aml:automated_pipeline ;
     ce:directlyFollows aml:experimentStep_0001 .
-
-aml:experimentStep_0003
-    a aml:ExperimentStep ;
-    aml:name "bad_data" ;
-    aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
-    aml:includesInfrastructure aml:balance_003 .
-
-aml:balance_003
-    a aml:Infrastructure ;
-    aml:name "data_data" ;
-    aml:barcode "BAD-003" ;
-    aml:includes aml:refSet_Step_0003 . 
-
-aml:refSet_Step_0003
-    a aml:AnimlReferenceSet ;
-    ce:hasMember aml:ref_Step_0001_C .
 
 aml:result_Step_0002
     a aml:Result ;
@@ -456,13 +429,14 @@ aml:dp_FrogNumber_002
     aml:hasSpecification aml:dataPointSpec_FrogNumber;
     ce:isMemberOf aml:series_TempTime_001 ;
     seq:directlyFollows aml:dp_FrogNumber_001 ;
-    seq:directlyPrecedes aml:dp_FrogNumber_003 .
+    seq:directlyPrecedes aml:dp_FrogNumber_001 .
 
 aml:dp_FrogNumber_003
     a aml:DataPoint ;
     aml:value "21" ;
     aml:hasSpecification aml:dataPointSpec_FrogNumber ;
     ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_002 ;
     seq:directlyFollows aml:dp_FrogNumber_002 .
 
 aml:seriesSpec_acceleration
@@ -567,20 +541,3 @@ aml:height_at_time_2
     aml:hasSpecification aml:dataPointSpec_heights ;
     ce:isMemberOf aml:heights ;
     seq:directlyFollows aml:height_at_time_1  .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

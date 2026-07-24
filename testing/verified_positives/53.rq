@@ -1,5 +1,5 @@
 # CQ-53: Is a specific result required by a technique's definition?
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?modality
 WHERE {

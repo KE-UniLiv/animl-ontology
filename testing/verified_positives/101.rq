@@ -1,7 +1,7 @@
 # CQ-101: What is the location of a sample within its container, if specified?
 
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?sample ?container ?row ?column
 WHERE {

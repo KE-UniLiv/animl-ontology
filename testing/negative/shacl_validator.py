@@ -36,8 +36,8 @@ conforms, results_graph, results_text = validate(
 # ---------------------------------------------------------
 # 4. Output results
 # ---------------------------------------------------------
-print("Conforms:", conforms)
-print("\nValidation Report:\n")
+#print("Conforms:", conforms)
+#print("\nValidation Report:\n")
 print(results_text)
 
 
@@ -64,6 +64,6 @@ conforms, results_graph, results_text = validate(
 # ---------------------------------------------------------
 # 4. Output results
 # ---------------------------------------------------------
-print("Conforms:", conforms)
-print("\nValidation Report:\n")
+#print("Conforms:", conforms)
+#print("\nValidation Report:\n")
 print(results_text)

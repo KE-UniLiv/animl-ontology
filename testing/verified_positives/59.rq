@@ -1,6 +1,6 @@
 # CQ-59: On which operating system was the software running?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?operatingSystem
 WHERE {

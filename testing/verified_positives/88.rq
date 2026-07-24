@@ -1,6 +1,6 @@
 # CQ-88: What is the barcode associated with a sample?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?barcode
 WHERE {

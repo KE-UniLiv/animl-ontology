@@ -1,6 +1,6 @@
 # CQ-44: Which series does a parent data point reference point to?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?series
 WHERE {

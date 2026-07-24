@@ -1,6 +1,6 @@
 # CQ-90: What are the allowed enumerated values for a string parameter in a technique definition?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?allowedValue
 WHERE {

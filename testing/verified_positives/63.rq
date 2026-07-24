@@ -1,6 +1,6 @@
 # CQ-63: What is the firmware version of the device?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?firmwareVersion
 WHERE {

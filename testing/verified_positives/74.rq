@@ -1,6 +1,6 @@
 # CQ-74: What are the results of an experiment step?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?result
 WHERE {

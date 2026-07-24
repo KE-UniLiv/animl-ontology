@@ -1,7 +1,7 @@
 # CQ-84: What is the ID of a specific template?
 
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?templateID
 WHERE {

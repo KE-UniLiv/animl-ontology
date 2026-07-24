@@ -1,6 +1,6 @@
 # CQ-77: What categories of information are defined for a sample?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?category
 WHERE {

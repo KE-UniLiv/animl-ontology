@@ -1,6 +1,6 @@
-# CQ-23: What series are defined in a series set blueprint for a technique?
+# CQ-24: What role did the data from a previous experiment step play?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?role
 WHERE {

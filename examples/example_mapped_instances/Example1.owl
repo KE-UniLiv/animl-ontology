@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:ns1="http://purl.allotrope.org/ontologies/role#"
-  xmlns:aml="http://w3id.org/animl/ontology"
+  xmlns:aml="http://www.w3id.org/animl/ontology/"
   xmlns:ns2="http://qudt.org/schema/qudt#"
   xmlns:ns3="http://purl.allotrope.org/ontologies/common#"
   xmlns:ce="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#"
@@ -37,7 +37,7 @@
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
       <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_2_1_y">
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example1#unit_C"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_2_1_y"/>
       </aml:SeriesSpecification>
@@ -168,7 +168,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Matcha_00001_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Matcha_00001_1_1"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -180,7 +180,7 @@
     <aml:dependency>independent</aml:dependency>
     <aml:hasSpecification>
       <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_5_1_x">
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_5_1_x"/>
       </aml:SeriesSpecification>
     </aml:hasSpecification>
@@ -199,7 +199,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Basil_00002_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Basil_00002_1_3"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -275,7 +275,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Basil_00002_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Basil_00002_1_2"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -287,7 +287,7 @@
     <aml:dependency>independent</aml:dependency>
     <aml:hasSpecification>
       <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_2_1_x">
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_2_1_x"/>
       </aml:SeriesSpecification>
     </aml:hasSpecification>
@@ -306,7 +306,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Oregano_00003_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Oregano_00003_1_3"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -362,7 +362,7 @@
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
       <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_4_1_y">
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example1#unit_rpm"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_4_1_y"/>
       </aml:SeriesSpecification>
@@ -452,7 +452,7 @@
     </ce:isMemberOf>
   </aml:DataPoint>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_1_1_x">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_1_1_x"/>
   </aml:SeriesSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example1#datapoint_1_5_1_y_0">
@@ -486,7 +486,7 @@
     </seq:directlyPrecedes>
   </aml:DataPoint>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_4_1_x">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
       <aml:Series rdf:about="http://example.org/animl/example1#series_1_4_1_x">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
@@ -500,7 +500,7 @@
   </aml:SeriesSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Oregano_00003_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example1#parameter_Oregano_00003_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -515,7 +515,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Oregano_00003_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Oregano_00003_1_1"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -540,7 +540,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Pepper_00004_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Pepper_00004_1_3"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -570,7 +570,7 @@
   </aml:DataPoint>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Matcha_00001_1_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Matcha_00001_1_5"/>
   </aml:ParameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example1#datapoint_1_6_1_y_2">
@@ -669,7 +669,7 @@
     <ce:isMemberOf rdf:resource="http://example.org/animl/example1#series_1_6_1_x"/>
   </aml:DataPoint>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_3_1_y">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
       <aml:Units rdf:about="http://example.org/animl/example1#unit_C">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
@@ -681,11 +681,11 @@
   </aml:SeriesSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Matcha_00001_1_6">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Matcha_00001_1_6"/>
   </aml:ParameterSpecification>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_6_1_x">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_6_1_x"/>
   </aml:SeriesSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example1#parameter_Pepper_00004_1_2">
@@ -693,7 +693,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Pepper_00004_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Pepper_00004_1_2"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -722,7 +722,7 @@
   </aml:Result>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Matcha_00001_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Matcha_00001_1_2"/>
   </aml:ParameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example1#datapoint_encoded_1_3_1_x">
@@ -823,7 +823,7 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Matcha_00001_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Matcha_00001_1_3"/>
   </aml:ParameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example1#datapoint_1_1_1_y_2">
@@ -839,7 +839,7 @@
     <aml:name>Step Results</aml:name>
   </aml:Result>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_6_1_y">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
       <aml:Units rdf:about="http://example.org/animl/example1#unit_A">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
@@ -861,7 +861,7 @@
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example1#datapoint_1_5_1_y_3"/>
   </aml:DataPoint>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_1_1_y">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example1#unit_C"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_1_1_y"/>
   </aml:SeriesSpecification>
@@ -889,7 +889,7 @@
   </aml:DataPoint>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Matcha_00001_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Matcha_00001_1_4"/>
   </aml:ParameterSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example1#parameter_Pepper_00004_1_1">
@@ -897,7 +897,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Pepper_00004_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Pepper_00004_1_1"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -943,7 +943,7 @@
     <ce:hasMember rdf:resource="http://example.org/animl/example1#series_1_5_1_y"/>
   </aml:SeriesSet>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_3_1_x">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_3_1_x"/>
   </aml:SeriesSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example1#datapoint_encoded_1_6_1_y">
@@ -1000,11 +1000,11 @@
   </aml:SeriesSet>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example1#paramSpec_Basil_00002_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#parameter_Basil_00002_1_1"/>
   </aml:ParameterSpecification>
   <aml:SeriesSpecification rdf:about="http://example.org/animl/example1#seriesSpec_1_5_1_y">
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example1#unit_rpm"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example1#series_1_5_1_y"/>
   </aml:SeriesSpecification>
