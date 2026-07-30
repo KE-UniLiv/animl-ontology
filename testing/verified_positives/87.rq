@@ -5,6 +5,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?startValue
 WHERE {
-    ?autoIncrementedEncoding a aml:AutoIncrementedEncodingType ;
+    ?autoIncremented a aml:autoIncrementedType ;
                              aml:startValue ?startValue .
 }

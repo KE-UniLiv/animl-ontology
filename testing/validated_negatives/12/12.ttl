@@ -2,7 +2,7 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:BinaryEncodingValueShape
+aml:binaryEncodedValueShape
     a sh:NodeShape ;
     sh:message "If a DataPoint is encoded as binary, its aml:value must be a binary string (only 0 and 1)." ;
     sh:targetClass aml:DataPoint ;
@@ -13,7 +13,7 @@ aml:BinaryEncodingValueShape
                 ?this a aml:DataPoint ;
                       aml:hasSpecification ?spec ;
                       aml:value ?val .
-                ?spec aml:EncodingType aml:binaryEncoding .
+                ?spec aml:hasType aml:binaryEncoded .
                 FILTER ( !regex(str(?val), "^[01]+$") )
             }
         """ ;

@@ -909,7 +909,7 @@
     <!-- this is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be 
     used to display animl data -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/visability">
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/visibility">
         <rdfs:comment xml:lang="en">This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -1696,19 +1696,19 @@
     </owl:NamedIndividual>
 
     <!-- a type of dataPoint-->
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/binaryEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/binaryEncoded">
         <rdfs:comment xml:lang="en">A binary encoding data point type</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     </owl:NamedIndividual>
 
     <!-- a type of dataPoint-->
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/autoIncrementedEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/autoIncremented">
         <rdfs:comment xml:lang="en">An auto incremented encoding data point type</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     </owl:NamedIndividual>
 
     <!-- a type of dataPoint-->
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/individualEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/individual">
         <rdfs:comment xml:lang="en">An individual encoding data point type</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     </owl:NamedIndividual>

@@ -272,7 +272,7 @@ aml:F1_score_threshold
 
 aml:seriesSpec_TempTime_001
     a aml:SeriesSpecification ;
-    aml:label "Temperature vs Time" ;
+    aml:description "Temperature vs Time" ;
     aml:quantity "Temperature" ;
     aml:hasUnits aml:Unit_Celsius ;
     aml:hasPlotScale aml:linear ;
@@ -281,7 +281,7 @@ aml:seriesSpec_TempTime_001
 
 aml:dataPointSpec_TempTime_001
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:IndividualEncodingType .
+    aml:hasType aml:individualType .
 
 aml:Unit_Celsius 
     a aml:Unit;
@@ -314,7 +314,7 @@ aml:unit_Hour
 
 aml:series_TempTime_001
     a aml:Series ;
-    aml:label "Temperature readings" ;
+    aml:description "Temperature readings" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_TempTime_001 ;
     bag:isItemOf aml:Frog_entropy_information ;
@@ -350,7 +350,7 @@ aml:unit_Hour
 
 aml:series_TempTime_001
     a aml:Series ;
-    aml:label "Temperature readings" ;
+    aml:description "Temperature readings" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_TempTime_001 ;
     bag:isItemOf aml:Frog_entropy_information ;
@@ -384,7 +384,7 @@ aml:dp_TempTime_003
 
 aml:seriesSpec_FrogNumbers
     a aml:SeriesSpecification ;
-    aml:label "Frogs over time" ;
+    aml:description "Frogs over time" ;
     aml:quantity "Frogs" ;
     aml:hasUnits aml:Unit_null ;
     aml:hasPlotScale aml:linear ;
@@ -393,7 +393,7 @@ aml:seriesSpec_FrogNumbers
 
 aml:dataPointSpec_FrogNumber
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:IndividualEncodingType .
+    aml:hasType aml:individualType .
 
 aml:Unit_null
     a aml:Unit;
@@ -406,7 +406,7 @@ aml:unit_null
 
 aml:Frog_numbers
     a aml:Series ;
-    aml:label "Frog" ;
+    aml:description "Frog" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_FrogNumbers ;
     bag:isItemOf aml:Frog_entropy_information ;
@@ -438,7 +438,7 @@ aml:dp_FrogNumber_003
 
 aml:seriesSpec_acceleration
     a aml:SeriesSpecification ;
-    aml:label "Acceleration over Time" ;
+    aml:description "Acceleration over Time" ;
     aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
@@ -446,15 +446,15 @@ aml:seriesSpec_acceleration
 
 aml:Acceleration_increment_spec
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:AutoIncrementedEncodingType .
+    aml:hasType aml:autoIncrementedType .
 
 aml:velocity_base_spec
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:individualEncodingType .
+    aml:hasType aml:individualType .
 
 aml:series_acceleration
     a aml:Series ;
-    aml:label "acceleration" ;
+    aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration ;
     bag:itemOf aml:Frog_entropy_information ;
@@ -497,7 +497,7 @@ aml:tracking_information
 
 aml:height_spec
     a aml:SeriesSpecification ;
-    aml:label "height of tracked object" ;
+    aml:description "height of tracked object" ;
     aml:hasUnits aml:Unit_meters ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
@@ -505,7 +505,7 @@ aml:height_spec
 
 aml:dataPointSpec_heights
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:IndividualEncodingType .
+    aml:hasType aml:individualType .
 
 aml:Unit_meters 
     a aml:Unit;
@@ -518,7 +518,7 @@ aml:unit_m
 
 aml:heights
     a aml:Series ;
-    aml:label "acceleration" ;
+    aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:height_spec ;
     bag:isItemOf aml:tracking_information ;

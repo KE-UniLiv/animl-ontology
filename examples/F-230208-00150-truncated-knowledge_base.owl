@@ -232,7 +232,7 @@
 
                 <owl:NamedIndividual rdf:about="Units_2">
                     <rdf:type rdf:resource="Units"/>
-                    <aml:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</aml:label>
+                    <aml:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</aml:description>
                     <aml:hasPart rdf:resource="SIUnit_1"/>
                 </owl:NamedIndividual>
 
@@ -481,7 +481,7 @@
 
                         <owl:NamedIndividual rdf:about="Units_3">
                             <rdf:type rdf:resource="Units"/>
-                            <aml:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%</aml:label>
+                            <aml:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%</aml:description>
                             <aml:hasPart rdf:resource="SIUnit_2"/>
                         </owl:NamedIndividual>
 
@@ -714,7 +714,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_1_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_1"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_2">
@@ -727,7 +727,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_2_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_2"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_3">
@@ -740,7 +740,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_3_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_3"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                     <owl:NamedIndividual rdf:about="Series_2">
@@ -772,7 +772,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_4_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_4"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_5">
@@ -784,7 +784,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_5_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_5"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_6">
@@ -796,7 +796,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_6_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_6"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                     <owl:NamedIndividual rdf:about="Series_3">
@@ -827,7 +827,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_7_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_7"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_8">
@@ -839,7 +839,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_8_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_8"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_9">
@@ -851,7 +851,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_9_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_9"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                    <owl:NamedIndividual rdf:about="Series_4">
@@ -883,7 +883,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_10_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_10"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_11">
@@ -896,7 +896,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_11_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_11"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
                         <owl:NamedIndividual rdf:about="dataPoint_12">
@@ -909,7 +909,7 @@
                             <owl:NamedIndividual rdf:about="dataPoint_12_Specification">
                                 <rdf:type rdf:resource="DataPointSpecification"/>
                                 <aml:usedBy rdf:resource="dataPoint_12"/>
-                                <aml:EncodingType rdf:resources="aml:Individual"/>
+                                <aml:hasType rdf:resources="aml:Individual"/>
                             </owl:NamedIndividual>
 
 

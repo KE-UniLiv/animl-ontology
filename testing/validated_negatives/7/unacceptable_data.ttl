@@ -6,7 +6,7 @@
 
 aml:seriesSpec_acceleration
     a aml:SeriesSpecification ;
-    aml:label "Acceleration over Time" ;
+    aml:description "Acceleration over Time" ;
     aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
@@ -15,15 +15,15 @@ aml:seriesSpec_acceleration
 
 aml:Acceleration_increment_spec
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:AutoIncrementedEncodingType .
+    aml:hasType aml:autoIncrementedType .
 
 aml:velocity_base_spec
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:individualEncodingType .
+    aml:hasType aml:individualType .
 
 aml:series_acceleration
     a aml:Series ;
-    aml:label "acceleration" ;
+    aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration ;
     bag:isItemOf aml:Frog_entropy_information ;
@@ -57,7 +57,7 @@ aml:increment_2_acceleration
 
 aml:seriesSpec_acceleration_2
     a aml:SeriesSpecification ;
-    aml:label "Acceleration over Time" ;
+    aml:description "Acceleration over Time" ;
     aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
@@ -66,15 +66,15 @@ aml:seriesSpec_acceleration_2
 
 aml:Acceleration_increment_spec_2
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:AutoIncrementedEncodingType .
+    aml:hasType aml:autoIncrementedType .
 
 aml:velocity_base_spec_2
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:individualEncodingType .
+    aml:hasType aml:individualType .
 
 aml:series_acceleration_2
     a aml:Series ;
-    aml:label "acceleration" ;
+    aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration_2 ;
     ce:hasMember aml:initial_velocity_2 ;
@@ -107,7 +107,7 @@ aml:increment_2_acceleration_2
 
 aml:seriesSpec_acceleration_3
     a aml:SeriesSpecification ;
-    aml:label "Acceleration over Time" ;
+    aml:description "Acceleration over Time" ;
     aml:hasUnits aml:Unit_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
@@ -117,19 +117,19 @@ aml:seriesSpec_acceleration_3
 
 aml:binarySpec_FrogNumber_2
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:binaryEncodingType .
+    aml:hasType aml:binaryEncodedType .
 
 aml:Acceleration_increment_spec_3
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:AutoIncrementedEncodingType .
+    aml:hasType aml:autoIncrementedType .
 
 aml:velocity_base_spec_3
     a aml:DataPointSpecification ;
-    aml:EncodingType aml:individualEncodingType .
+    aml:hasType aml:individualType .
 
 aml:series_acceleration_3
     a aml:Series ;
-    aml:label "acceleration" ;
+    aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration_3 ;
     ce:hasMember aml:initial_velocity_3 ;

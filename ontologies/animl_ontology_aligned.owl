@@ -703,7 +703,7 @@
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
     <rdf:rest rdf:nodeID="Nc7a71f44cb6b4c9f8a3274a39b38afbe"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/visability">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/visibility">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
@@ -1176,7 +1176,7 @@
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasSpecification"/>
     <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSpecification"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/autoIncrementedEncoding">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/autoIncremented">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     <rdfs:comment xml:lang="en">An auto incremented encoding data point type</rdfs:comment>
@@ -2247,7 +2247,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:unionOf rdf:nodeID="N77292e6bf7284710a8f255f626f1143b"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/binaryEncoding">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/binaryEncoded">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     <rdfs:comment xml:lang="en">A binary encoding data point type</rdfs:comment>
@@ -2277,7 +2277,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/individualEncoding">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/individual">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     <rdfs:comment xml:lang="en">An individual encoding data point type</rdfs:comment>

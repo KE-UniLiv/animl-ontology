@@ -1023,9 +1023,9 @@
     
 
 
-    <!-- http://www.w3id.org/animl/ontology/visability -->
+    <!-- http://www.w3id.org/animl/ontology/visibility -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/visability">
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/visibility">
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data</rdfs:comment>
@@ -2018,18 +2018,18 @@
     
 
 
-    <!-- http://www.w3id.org/animl/ontology/autoIncrementedEncoding -->
+    <!-- http://www.w3id.org/animl/ontology/autoIncremented -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/autoIncrementedEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/autoIncremented">
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
         <rdfs:comment xml:lang="en">An auto incremented encoding data point type</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.w3id.org/animl/ontology/binaryEncoding -->
+    <!-- http://www.w3id.org/animl/ontology/binaryEncoded -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/binaryEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/binaryEncoded">
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
         <rdfs:comment xml:lang="en">A binary encoding data point type</rdfs:comment>
     </owl:NamedIndividual>
@@ -2137,9 +2137,9 @@
     
 
 
-    <!-- http://www.w3id.org/animl/ontology/individualEncoding -->
+    <!-- http://www.w3id.org/animl/ontology/individual -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/individualEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/individual">
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
         <rdfs:comment xml:lang="en">An individual encoding data point type</rdfs:comment>
     </owl:NamedIndividual>

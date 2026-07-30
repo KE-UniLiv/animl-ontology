@@ -6,7 +6,7 @@ SELECT ?series ?incrementValue
 WHERE {
     ?dataPoint a aml:DataPoint .
     ?dataPoint aml:hasSpecification ?specification .
-    ?specification aml:hasType aml:autoIncrementedEncoding.
+    ?specification aml:hasType aml:autoIncremented.
     ?dataPoint aml:value ?incrementValue .
     ?series a aml:Series .
     ?series aml:hasSpecification ?seriesSpec .
