@@ -1,6 +1,6 @@
 # CQ-22: What is the maximum number of samples allowed for a given role in a technique definition?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?maxSamples
 WHERE {

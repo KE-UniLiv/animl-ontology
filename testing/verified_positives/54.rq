@@ -1,6 +1,6 @@
 # CQ-54: Who was the author of the method?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?author
 WHERE {

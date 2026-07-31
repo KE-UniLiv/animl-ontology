@@ -1,6 +1,6 @@
 # CQ-69: What literature references are cited in a technique definition?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?citation
 WHERE {

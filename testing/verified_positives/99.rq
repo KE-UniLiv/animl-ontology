@@ -1,7 +1,7 @@
 # CQ-99: Which organization is an author affiliated with?
 
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?organization
 WHERE {

@@ -1,6 +1,6 @@
 # CQ-76: How is a unit defined using SI base units?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?factor ?exponent ?offset
 WHERE {

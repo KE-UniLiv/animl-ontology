@@ -1,6 +1,6 @@
 # CQ-40: What is the end value of a parent data point reference?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?endValue
 WHERE {

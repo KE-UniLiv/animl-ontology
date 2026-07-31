@@ -1,9 +1,9 @@
 # CQ-17: What is the label of a unit?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?label
 WHERE {
-    ?unit a aml:Units ; # or aml:SIUnit
-          aml:label ?label .
+    ?unit a aml:Unit ; # or aml:SIUnit
+          aml:description ?label .
 }

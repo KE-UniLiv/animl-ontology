@@ -486,7 +486,7 @@
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/unit_A> a aml:Units ;
+<http://w3id.org/animl/ontology/unit_A> a aml:Unit ;
     aml:token "A" .
 
 <http://w3id.org/animl/ontology/datapoint_1_1_1_y_1> a aml:DataPoint ;
@@ -818,7 +818,7 @@
     aml:name "Status" ;
     aml:pointValue "null"^^xsd:string .
 
-<http://w3id.org/animl/ontology/unit_rpm> a aml:Units ;
+<http://w3id.org/animl/ontology/unit_rpm> a aml:Unit ;
     aml:token "rpm" .
 
 <http://w3id.org/animl/ontology/series_1_1_1_x> a aml:Series ;
@@ -863,7 +863,7 @@
     aml:name "Relative Time" ;
     ce:hasMember <http://w3id.org/animl/ontology/datapoint_encoded_1_6_1_x> .
 
-<http://w3id.org/animl/ontology/unit_C> a aml:Units ;
+<http://w3id.org/animl/ontology/unit_C> a aml:Unit ;
     aml:token "C" .
 
 <http://w3id.org/animl/ontology/series_1_4_1_y> a aml:Series ;

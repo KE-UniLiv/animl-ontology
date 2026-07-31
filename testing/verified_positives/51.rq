@@ -1,6 +1,6 @@
 # CQ-51: Was a sample in an experiment step inherited from a parent step?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 ASK {
     # Current step uses a sample

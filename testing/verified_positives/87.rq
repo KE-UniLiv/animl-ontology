@@ -1,10 +1,10 @@
 # CQ-87: What is the start value for an auto-incremented series?
 
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?startValue
 WHERE {
-    ?autoIncrementedEncoding a aml:AutoIncrementedEncodingType ;
+    ?autoIncremented a aml:autoIncrementedType ;
                              aml:startValue ?startValue .
 }

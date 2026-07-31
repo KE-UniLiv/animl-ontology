@@ -2,7 +2,7 @@
 <rdf:RDF
   xmlns:ce="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#"
   xmlns:ns1="http://purl.allotrope.org/ontologies/role#"
-  xmlns:aml="http://w3id.org/animl/ontology"
+  xmlns:aml="http://www.w3id.org/animl/ontology/"
   xmlns:ns2="http://purl.allotrope.org/ontologies/process#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:ns3="http://purl.obolibrary.org/obo/"

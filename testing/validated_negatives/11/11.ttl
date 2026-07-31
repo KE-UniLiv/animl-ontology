@@ -14,7 +14,7 @@ aml:IncrementEncodingValueShape
                 ?this a aml:DataPoint ;
                       aml:hasSpecification ?spec ;
                       aml:value ?val .
-                ?spec aml:EncodingType aml:AutoIncrementedEncodingType .
+                ?spec aml:hasType aml:autoIncrementedType .
                 FILTER ( datatype(?val) != xsd:double )
             }
         """ ;

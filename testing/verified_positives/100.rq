@@ -1,6 +1,6 @@
 # CQ-100: What are the names of the result definitions specified by a technique?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?resultDefName
 WHERE {

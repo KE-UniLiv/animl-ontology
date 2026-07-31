@@ -1,6 +1,6 @@
 # CQ-56: What is the data type of the values in a series?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?dataType
 WHERE {

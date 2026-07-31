@@ -1,6 +1,6 @@
 # CQ-37: What is the allowed numeric range for a parameter in a technique definition?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?minValue ?maxValue
 WHERE {

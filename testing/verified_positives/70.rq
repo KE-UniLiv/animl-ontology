@@ -1,5 +1,5 @@
 # CQ-70: What is the name of the method used in an experiment step?
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?methodName
 WHERE {

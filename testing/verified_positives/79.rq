@@ -1,6 +1,6 @@
 # CQ-79: Is a series intended to be visible by default in a plot?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?isVisible
 WHERE {

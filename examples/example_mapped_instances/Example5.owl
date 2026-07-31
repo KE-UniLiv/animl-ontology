@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:aml="http://w3id.org/animl/ontology"
+  xmlns:aml="http://www.w3id.org/animl/ontology/"
   xmlns:ns1="http://purl.obolibrary.org/obo/"
   xmlns:ns2="http://purl.allotrope.org/ontologies/role#"
   xmlns:ce="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#"
@@ -53,7 +53,7 @@
   </aml:Document>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Rosemary_00009_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -102,7 +102,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_3"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -114,7 +114,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_2"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -127,7 +127,7 @@
   </aml:Technique>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -139,7 +139,7 @@
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Cinnamon_00005_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -158,7 +158,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_2"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -166,7 +166,7 @@
   </aml:Parameter>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Oregano_00003_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -184,7 +184,7 @@
   </aml:Result>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Cinnamon_00005_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -216,7 +216,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cinnamon_00005_1_3"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -286,7 +286,7 @@
   </aml:Category>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Basil_00002_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -301,7 +301,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_3"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -326,7 +326,7 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Basil_00002_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -341,7 +341,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_5">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_5"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -352,7 +352,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Vanilla_00008_1_2"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -361,7 +361,7 @@
   </aml:Parameter>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_9">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_9">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -375,7 +375,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_4"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -396,12 +396,12 @@
   </aml:Category>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cinnamon_00005_1_4"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Basil_00002_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -421,7 +421,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_7">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_7"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -433,7 +433,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_8">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologydatetime"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/datetime"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_8"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -441,7 +441,7 @@
   </aml:Parameter>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Vanilla_00008_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -452,7 +452,7 @@
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Rosemary_00009_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -490,7 +490,7 @@
   </aml:Category>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Turmeric_00007_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -501,7 +501,7 @@
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_4"/>
   </aml:ParameterSpecification>
   <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372905_1">
@@ -549,7 +549,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_6">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_6"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -575,7 +575,7 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Turmeric_00007_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -615,7 +615,7 @@
   </aml:Sample>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Turmeric_00007_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -627,7 +627,7 @@
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_2"/>
   </aml:ParameterSpecification>
   <aml:Sample rdf:about="http://example.org/animl/example5#sample_Rosemary_00009">
@@ -673,7 +673,7 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_3"/>
   </aml:ParameterSpecification>
   <aml:Sample rdf:about="http://example.org/animl/example5#sample_Ginger_00006">
@@ -684,12 +684,12 @@
   </aml:Sample>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_4"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Tea_00012_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -705,7 +705,7 @@
   </aml:Technique>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -738,7 +738,7 @@
   </aml:Technique>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Tea_00012_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -784,22 +784,22 @@
   </aml:Category>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_1"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_1"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_1"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Rosemary_00009_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -843,7 +843,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Tea_00012_1_2"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -869,7 +869,7 @@
     <aml:hasSpecification>
       <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-        <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+        <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Turmeric_00007_1_2"/>
       </aml:ParameterSpecification>
     </aml:hasSpecification>
@@ -927,17 +927,17 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_4"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_2"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Tea_00012_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -948,7 +948,7 @@
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologydatetime"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/datetime"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -965,12 +965,12 @@
   </aml:Sample>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_1"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_4"/>
   </aml:ParameterSpecification>
   <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372913">
@@ -992,7 +992,7 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_4"/>
   </aml:ParameterSpecification>
   <aml:Sample rdf:about="http://example.org/animl/example5#sample_Matcha_00001">
@@ -1030,7 +1030,7 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_3"/>
   </aml:ParameterSpecification>
   <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372908">
@@ -1039,7 +1039,7 @@
   </aml:Technique>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_1"/>
   </aml:ParameterSpecification>
   <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372908_1">
@@ -1066,7 +1066,7 @@
   </aml:Technique>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -1089,7 +1089,7 @@
   </aml:Sample>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Vanilla_00008_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -1107,7 +1107,7 @@
   </aml:Sample>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Basil_00002_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -1124,17 +1124,17 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_4"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_2"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologyfloat64"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_5"/>
   </aml:ParameterSpecification>
   <aml:Sample rdf:about="http://example.org/animl/example5#sample_Tea_00012">
@@ -1149,12 +1149,12 @@
   </aml:Technique>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_2"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Vanilla_00008_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -1172,12 +1172,12 @@
   </aml:Result>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_1"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Rosemary_00009_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -1188,7 +1188,7 @@
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_1"/>
   </aml:ParameterSpecification>
   <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372918">
@@ -1205,7 +1205,7 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_3"/>
   </aml:ParameterSpecification>
   <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372906">
@@ -1215,12 +1215,12 @@
   </aml:ExperimentStep>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_3"/>
   </aml:ParameterSpecification>
   <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
-    <aml:hasDataType rdf:resource="http://w3id.org/animl/ontologystring"/>
+    <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_3"/>
   </aml:ParameterSpecification>
 </rdf:RDF>

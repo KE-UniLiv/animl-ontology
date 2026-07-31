@@ -1,5 +1,7 @@
 # CQ-96: What is the start index for a specific value set in a series?
 
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
+
 
 SELECT ?startIndex
 WHERE {

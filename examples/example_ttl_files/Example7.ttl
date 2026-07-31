@@ -1,4 +1,4 @@
-@prefix aml: <http://w3id.org/animl/ontology> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -403,18 +403,18 @@
     aml:name "Viscosity" ;
     ce:hasMember <http://example.org/animl/example7#datapoint_encoded_es_2_1_1_7> .
 
-<http://example.org/animl/example7#unit_1_s> a aml:Units ;
+<http://example.org/animl/example7#unit_1_s> a aml:Unit ;
     aml:token "1/s" .
 
-<http://example.org/animl/example7#unit_Pa_s> a aml:Units ;
+<http://example.org/animl/example7#unit_Pa_s> a aml:Unit ;
     aml:token "Pa.s" .
 
-<http://example.org/animl/example7#unit__C> a aml:Units ;
+<http://example.org/animl/example7#unit__C> a aml:Unit ;
     aml:token "°C" .
 
-<http://example.org/animl/example7#unit_s> a aml:Units ;
+<http://example.org/animl/example7#unit_s> a aml:Unit ;
     aml:token "s" .
 
-<http://example.org/animl/example7#unit_MPa> a aml:Units ;
+<http://example.org/animl/example7#unit_MPa> a aml:Unit ;
     aml:token "MPa" .
 

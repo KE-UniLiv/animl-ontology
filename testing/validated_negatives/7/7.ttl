@@ -43,11 +43,11 @@ aml:SeriesSpecificationEncodingRuleShape
                 ?spec2 a aml:DataPointSpecification .
                 FILTER(?spec1 != ?spec2)
                 
-                ?spec1 aml:EncodingType ?t1 .
-                ?spec2 aml:EncodingType ?t2 .
+                ?spec1 aml:hasType ?t1 .
+                ?spec2 aml:hasType ?t2 .
                 FILTER (
-                    !( ?t1 = aml:AutoIncrementedEncodingType && ?t2 = aml:individualEncodingType ) &&
-                    !( ?t1 = aml:individualEncodingType && ?t2 = aml:AutoIncrementedEncodingType )
+                    !( ?t1 = aml:autoIncrementedType && ?t2 = aml:individualType ) &&
+                    !( ?t1 = aml:individualType && ?t2 = aml:autoIncrementedType )
                 )
             }
         """ ;
@@ -63,7 +63,7 @@ aml:SeriesSpecificationEncodingRuleShape
                 
                     # datapoint uses auto-increment encoding
                 ?dp aml:hasSpecification ?spec .
-                ?spec aml:EncodingType aml:AutoIncrementedEncodingType .
+                ?spec aml:hasType aml:autoIncrementedType .
 
                 # datapoint has NO predecessor → it is the first
                 FILTER NOT EXISTS {

@@ -1,6 +1,7 @@
 @prefix ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
 
 aml:sample_001
     a aml:Sample ;

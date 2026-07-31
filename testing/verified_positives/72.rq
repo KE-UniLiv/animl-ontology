@@ -1,5 +1,5 @@
 # CQ-72: What is the ID of a specific series?
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?seriesID
 WHERE {

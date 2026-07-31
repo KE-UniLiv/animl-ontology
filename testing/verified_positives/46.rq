@@ -1,6 +1,6 @@
 # CQ-46: Which item in the document was affected by an audit trail change?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?affectedItem
 WHERE {

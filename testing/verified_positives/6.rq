@@ -1,11 +1,10 @@
 # CQ-6: What is the unique identifier of the device?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?device ?deviceID
 WHERE {
     ?device a aml:Agent ;
-    ?device aml:hasType aml:HardwareAgent ;
-    ?device aml:identifier ?deviceID .
-    
+            aml:hasType aml:hardwareAgent ;
+            aml:identifier ?deviceID .
 }

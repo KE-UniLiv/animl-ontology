@@ -1,7 +1,7 @@
 # CQ-89: What is the name of a series?
 
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?seriesName
 WHERE {

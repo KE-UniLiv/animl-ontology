@@ -1,6 +1,6 @@
 # CQ-52: Was the data from a referenced experiment step consumed or produced?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?dataFlowType
 WHERE {

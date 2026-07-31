@@ -1,3 +1,5 @@
+@prefix aml: <http://www.w3id.org/animl/ontology/> .
+
 aml:measurements_002
     a aml:Category ;
     aml:id "0001" ;

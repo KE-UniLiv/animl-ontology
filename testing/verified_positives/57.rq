@@ -1,6 +1,6 @@
 # CQ-57: What is the recommended plot scale for a series?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?plotScale
 WHERE {

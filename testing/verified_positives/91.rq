@@ -1,5 +1,5 @@
 # CQ-91: What is the URI for a cited literature reference in a technique definition?
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?referenceURI

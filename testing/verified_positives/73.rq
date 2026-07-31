@@ -1,6 +1,6 @@
 # CQ-73: What is the name of a result?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?resultName
 WHERE {

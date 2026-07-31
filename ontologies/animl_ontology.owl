@@ -61,6 +61,25 @@
 
     <!-- this denotes the property of an object having a governing specification -->
 
+    <owl:Class rdf:about="http://www.w3id.org/animl/ontology/SIUnit">
+        <rdfs:label xml:lang="en">SI Unit</rdfs:label>
+        <rdfs:comment xml:lang="en">A base unit of the International System of Units, used to ground the units of a quantity.</rdfs:comment>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasSeriesSet">
+        <rdfs:comment xml:lang="en">Retained for backward compatibility: referenced by ontologies/validation_ontology.ttl and the negative test fixtures. Superseded by aml:hasSeriesSet; migrate the fixtures and remove.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/animl/ontology/hasSeriesSet">
+        <rdfs:label xml:lang="en">has series set</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a Category to the SeriesSet it contains.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/animl/ontology/hasMethodCategory">
+        <rdfs:label xml:lang="en">has method category</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a Method to a Category holding its parameters.</rdfs:comment>
+    </owl:ObjectProperty>
+
     <owl:ObjectProperty rdf:about="http://www.w3id.org/animl/ontology/hasSpecification">
     <rdfs:comment xml:lang="en">This denotes the property of an object having a governing specification</rdfs:comment>
     <rdfs:domain>
@@ -161,7 +180,7 @@
 
     <!-- this is having a series set-->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasSeriesSet">
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/animl/ontology/hasSeriesSet">
         <rdfs:comment xml:lang="en">This is the inverse of the bag association, however it carries the connotation that the agent becomes defined by their task. This is in the same way that if a human practices medicine to fulfill a need for medical treatment, then that need becomes met, however it also makes the human a doctor.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
         <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/SeriesSet"/>
@@ -890,7 +909,7 @@
     <!-- this is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be 
     used to display animl data -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/visability">
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/animl/ontology/visibility">
         <rdfs:comment xml:lang="en">This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -1677,19 +1696,19 @@
     </owl:NamedIndividual>
 
     <!-- a type of dataPoint-->
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/binaryEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/binaryEncoded">
         <rdfs:comment xml:lang="en">A binary encoding data point type</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     </owl:NamedIndividual>
 
     <!-- a type of dataPoint-->
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/autoIncrementedEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/autoIncremented">
         <rdfs:comment xml:lang="en">An auto incremented encoding data point type</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     </owl:NamedIndividual>
 
     <!-- a type of dataPoint-->
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/individualEncoding">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/individual">
         <rdfs:comment xml:lang="en">An individual encoding data point type</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataPointType"/>
     </owl:NamedIndividual>
@@ -2226,10 +2245,6 @@
      -->
 
          <!-- a fundamental scientific unit -->
-
-        <owl:NamedIndividual rdf:about="http://www.w3id.org/animl/ontology/includes">
-            <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
-        </owl:NamedIndividual>
         
 
 

@@ -115,6 +115,11 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
                                                                     rdfs:range aml:SeriesSet ;
                                                                     rdfs:comment "This is the inverse of the bag association, however it carries the connotation that the agent becomes defined by their task. This is in the same way that if a human practices medicine to fulfill a need for medical treatment, then that need becomes met, however it also makes the human a doctor."@en .
 
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasSignatures
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasSignatures> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain aml:Document ;
+                                                                    rdfs:range aml:SignatureSet ;
+                                                                    rdfs:comment "This denotes the property of a conceptual document having a set of signatures which sign parts of it"@en .
 
 ###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy
 <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy> rdf:type owl:ObjectProperty ;
@@ -129,6 +134,11 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
                                                                 rdfs:range aml:Agent ;
                                                                 rdfs:comment "A reified property for the concept of a role being fulfilled by an agent, in english the concept of a task / job being done by someone"@en .
 
+###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isRoleOf
+<http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasSignatures> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain aml:document ;
+                                                                rdfs:range aml:SignatureSet ;
+                                                                rdfs:comment "A reified property for the concept of a role being fulfilled by an agent, in english the concept of a task / job being done by someone"@en .
 
 ###  http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf
 <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf> rdf:type owl:ObjectProperty ;
@@ -396,7 +406,7 @@ aml:hasType rdf:type owl:ObjectProperty ;
 ###  http://www.w3id.org/animl/ontology/hasUnits
 aml:hasUnits rdf:type owl:ObjectProperty ;
              rdfs:domain aml:ParameterSpecification ;
-             rdfs:range aml:Units ;
+             rdfs:range aml:Unit ;
              rdfs:comment "Denotes that a class is a container for data with corresponding units of measurement, a complex quantity may have multiple units e.i mph, or rpm"@en .
 
 
@@ -566,6 +576,18 @@ aml:abstract rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:boolean ;
              rdfs:comment "A boolean denoting whether or not a technique or extension will work without being extended"@en .
 
+###  http://www.w3id.org/animl/ontology/animlId
+aml:abstract rdf:type owl:DatatypeProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range xsd:int32 ;
+             rdfs:comment "an integer denoting the animl languages id for an object"@en .
+
+###  http://www.w3id.org/animl/ontology/description
+aml:abstract rdf:type owl:DatatypeProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range xsd:string ;
+             rdfs:comment "a natural language textual description of an object"@en .
+
 
 ###  http://www.w3id.org/animl/ontology/animlVersion
 aml:animlVersion rdf:type owl:DatatypeProperty ;
@@ -586,7 +608,7 @@ aml:barcode rdf:type owl:DatatypeProperty ;
 ###  http://www.w3id.org/animl/ontology/citations
 aml:citations rdf:type owl:DatatypeProperty ;
               rdfs:domain [ rdf:type owl:Class ;
-                            owl:unionOf ( aml:ItemSpecification
+                            owl:unionOf ( aml:Specification
                                           aml:Technique
                                         )
                           ] ;
@@ -770,7 +792,7 @@ aml:pointValue rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3id.org/animl/ontology/quantity
 aml:quantity rdf:type owl:DatatypeProperty ;
-             rdfs:domain aml:Units ;
+             rdfs:domain aml:Unit ;
              rdfs:range xsd:double ;
              rdfs:comment "A description of type of objects or measurements to which units may be assigned"@en .
 
@@ -852,8 +874,8 @@ aml:version rdf:type owl:DatatypeProperty ;
             rdfs:comment "This represents the version of an agent"@en .
 
 
-###  http://www.w3id.org/animl/ontology/visability
-aml:visability rdf:type owl:DatatypeProperty ;
+###  http://www.w3id.org/animl/ontology/visibility
+aml:visibility rdf:type owl:DatatypeProperty ;
                rdfs:domain aml:Series ;
                rdfs:range xsd:boolean ;
                rdfs:comment "This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data"@en .
@@ -875,15 +897,15 @@ owl:Thing rdfs:comment "The fundamental root element for all ontologies"@en .
 aml:AdjustedUnit rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf> ;
-                                   owl:allValuesFrom aml:Units
+                                   owl:allValuesFrom aml:Unit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> ;
-                                   owl:allValuesFrom aml:Units
+                                   owl:allValuesFrom aml:Unit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> ;
-                                   owl:allValuesFrom aml:Units
+                                   owl:allValuesFrom aml:Unit
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty aml:adjusts ;
@@ -1279,7 +1301,7 @@ aml:ParameterSpecification rdf:type owl:Class ;
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty aml:hasUnits ;
-                                             owl:allValuesFrom aml:Units
+                                             owl:allValuesFrom aml:Unit
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty aml:usedBy ;
@@ -1410,7 +1432,7 @@ aml:SeriesSpecification rdf:type owl:Class ;
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty aml:hasUnits ;
-                                          owl:allValuesFrom aml:Units
+                                          owl:allValuesFrom aml:Unit
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty aml:usedBy ;
@@ -1492,7 +1514,7 @@ aml:Template rdf:type owl:Class ;
 
 
 ###  http://www.w3id.org/animl/ontology/Units
-aml:Units rdf:type owl:Class ;
+aml:Unit rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember> ;
                             owl:allValuesFrom aml:SIUnit
@@ -1547,14 +1569,14 @@ aml:Reviewer rdf:type owl:NamedIndividual ,
              rdfs:comment "A reviewer role type"@en .
 
 
-###  http://www.w3id.org/animl/ontology/autoIncrementedEncoding
-aml:autoIncrementedEncoding rdf:type owl:NamedIndividual ,
+###  http://www.w3id.org/animl/ontology/autoIncrementedType
+aml:autoIncrementedType rdf:type owl:NamedIndividual ,
                                      aml:DataPointType ;
                             rdfs:comment "An auto incremented encoding data point type"@en .
 
 
-###  http://www.w3id.org/animl/ontology/binaryEncoding
-aml:binaryEncoding rdf:type owl:NamedIndividual ,
+###  http://www.w3id.org/animl/ontology/binaryEncodedType
+aml:binaryEncodedType rdf:type owl:NamedIndividual ,
                             aml:DataPointType ;
                    rdfs:comment "A binary encoding data point type"@en .
 
@@ -1624,8 +1646,8 @@ aml:indeterminate rdf:type owl:NamedIndividual ,
                   rdfs:comment "Indeterminate container type"@en .
 
 
-###  http://www.w3id.org/animl/ontology/individualEncoding
-aml:individualEncoding rdf:type owl:NamedIndividual ,
+###  http://www.w3id.org/animl/ontology/individualType
+aml:individualType rdf:type owl:NamedIndividual ,
                                 aml:DataPointType ;
                        rdfs:comment "An individual encoding data point type"@en .
 

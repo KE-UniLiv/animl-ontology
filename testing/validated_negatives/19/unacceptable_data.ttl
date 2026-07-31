@@ -115,7 +115,7 @@ aml:experimentStep_0001
     aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
     aml:usesTechnique aml:technique_Step_0001 ;
     aml:usesMethod aml:centaur_pipeline ;
-    aml:includesInfrastructure aml:balance_001 ;
+    aml:includeInfrastructure aml:balance_001 ;
     aml:producesResult aml:result_Step_0001 ;
     seq:directlyPrecedes aml:experimentStep_0002 .
 
@@ -124,35 +124,8 @@ aml:experimentStep_0002
     aml:name "Prepare Sample Set B" ;
     aml:timeStamp "2026-02-26T12:30:00Z"^^xsd:dateTime ;
     aml:producesResult aml:result_Step_0002 ;
-    aml:includesInfrastructure aml:balance_002 ;
     aml:usesMethod aml:automated_pipeline ;
-    seq:directlyFollows aml:experimentStep_0001 ;
-    seq:directlyPrecedes aml:experimentStep_0003 .
-
-aml:balance_002
-    a aml:Infrastructure ;
-    aml:name "bad data" ;
-    aml:barcode "BAD-002" ;
-    aml:includes aml:refSet_Step_0002_inputs . 
-
-aml:refSet_Step_0002_inputs
-    a aml:AnimlReferenceSet ;
-    ce:hasMember aml:ref_Step_0002_input ;
-    aml:subject aml:experiment_0001 .
-
-aml:ref_Step_0002_input
-    a aml:AnimlReference ;
-    aml:pointsTo aml:experimentStep_0004 .
-  
-
-aml:experimentStep_0003
-    a aml:ExperimentStep ;
-    seq:directlyFollows aml:experimentStep_0002 ;
-    seq:directlyPrecedes aml:experimentStep_0004 .
-
-aml:experimentStep_0004
-    a aml:ExperimentStep ;
-    seq:directlyFollows aml:experimentStep_0003 .
+    ce:directlyFollows aml:experimentStep_0001 .
 
 aml:result_Step_0002
     a aml:Result ;
@@ -456,13 +429,14 @@ aml:dp_FrogNumber_002
     aml:hasSpecification aml:dataPointSpec_FrogNumber;
     ce:isMemberOf aml:series_TempTime_001 ;
     seq:directlyFollows aml:dp_FrogNumber_001 ;
-    seq:directlyPrecedes aml:dp_FrogNumber_003 .
+    seq:directlyPrecedes aml:dp_FrogNumber_001 .
 
 aml:dp_FrogNumber_003
     a aml:DataPoint ;
     aml:value "21" ;
     aml:hasSpecification aml:dataPointSpec_FrogNumber ;
     ce:isMemberOf aml:series_TempTime_001 ;
+    seq:directlyPrecedes aml:dp_FrogNumber_002 ;
     seq:directlyFollows aml:dp_FrogNumber_002 .
 
 aml:seriesSpec_acceleration

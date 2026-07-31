@@ -1,6 +1,6 @@
 # CQ-97: What is the name of a template?
 
-PREFIX aml: <http://www.w3.org/animl/ontology/>
+PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?templateName
 WHERE {
