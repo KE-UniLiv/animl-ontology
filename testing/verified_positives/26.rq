@@ -3,9 +3,9 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?auditTrail ?entry ?change
 WHERE {
-    ?auditTrail a aml:AuditTrail ;
+    ?auditTrail a aml:auditTrail ;
                 aml:hasAuditTrailEntry ?entry .
                 
-    ?entry a aml:AuditTrailEntry ;
+    ?entry a aml:auditTrailEntry ;
            aml:makesChange ?change .
 }

@@ -4,9 +4,9 @@
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix ce:  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#> .
 
-aml:ExperimentStep_InfrastructureMustNotReferenceLaterStep
+aml:experimentStep_InfrastructureMustNotReferenceLaterStep
     a sh:NodeShape ;
-    sh:targetClass aml:ExperimentStep ;
+    sh:targetClass aml:experimentStep ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message
@@ -19,7 +19,7 @@ aml:ExperimentStep_InfrastructureMustNotReferenceLaterStep
               ?infra aml:includes ?infraRefSet .
               ?infraRefSet ce:hasMember ?infraRef .
               ?infraRef aml:pointsTo ?referencedStep .
-              ?referencedStep a aml:ExperimentStep .
+              ?referencedStep a aml:experimentStep .
 
               # referenced step must be after $this via a chain of directlyPrecedes / directlyFollows
               $this

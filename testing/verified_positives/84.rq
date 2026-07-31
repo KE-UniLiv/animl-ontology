@@ -5,6 +5,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?templateID
 WHERE {
-    ?template a aml:Template ;
+    ?template a aml:template ;
               aml:id ?templateID .
 }

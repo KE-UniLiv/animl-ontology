@@ -4,7 +4,7 @@
 
 aml:NoHardwareAgentContactInfoShape
     a sh:NodeShape ;
-    sh:targetClass aml:Agent ;
+    sh:targetClass aml:agent ;
 
     sh:sparql [
         a sh:SPARQLConstraint ;

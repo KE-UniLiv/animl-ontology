@@ -5,7 +5,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?result ?seriesSet
 WHERE {
-    ?result a aml:Result .
+    ?result a aml:result .
   	?result aml:hasResultCategory ?category .
   	?category aml:hasSeriesSet ?seriesSet .
 }

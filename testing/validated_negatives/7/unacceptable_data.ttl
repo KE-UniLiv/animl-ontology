@@ -5,9 +5,9 @@
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 
 aml:seriesSpec_acceleration
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Acceleration over Time" ;
-    aml:hasUnits aml:Unit_KPH ;
+    aml:hasUnits aml:units_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec ;
@@ -22,7 +22,7 @@ aml:velocity_base_spec
     aml:hasType aml:individualType .
 
 aml:series_acceleration
-    a aml:Series ;
+    a aml:series ;
     aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration ;
@@ -56,9 +56,9 @@ aml:increment_2_acceleration
     seq:directlyFollows aml:increment_1_acceleration .
 
 aml:seriesSpec_acceleration_2
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Acceleration over Time" ;
-    aml:hasUnits aml:Unit_KPH ;
+    aml:hasUnits aml:units_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec_2 ;
@@ -73,7 +73,7 @@ aml:velocity_base_spec_2
     aml:hasType aml:individualType .
 
 aml:series_acceleration_2
-    a aml:Series ;
+    a aml:series ;
     aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration_2 ;
@@ -106,9 +106,9 @@ aml:increment_2_acceleration_2
     seq:directlyFollows aml:increment_1_acceleration_2 .
 
 aml:seriesSpec_acceleration_3
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Acceleration over Time" ;
-    aml:hasUnits aml:Unit_KPH ;
+    aml:hasUnits aml:units_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec_3 ;
@@ -128,7 +128,7 @@ aml:velocity_base_spec_3
     aml:hasType aml:individualType .
 
 aml:series_acceleration_3
-    a aml:Series ;
+    a aml:series ;
     aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration_3 ;

@@ -4,11 +4,11 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?resultDefName
 WHERE {
-    ?technique a aml:Technique .
-    ?xpstep a aml:ExperimentStep ;
+    ?technique a aml:technique .
+    ?xpstep a aml:experimentStep ;
                 aml:usesTechnique ?technique ;
                 aml:producesResult ?resultSpec .
                
-    ?resultSpec a aml:ResultSpecification ;
+    ?resultSpec a aml:resultSpecification ;
                 aml:name ?resultDefName .
 }

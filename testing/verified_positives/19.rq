@@ -2,7 +2,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 SELECT ?technique ?series ?dataType
 WHERE {
     ?technique aml:includes ?specification .
-  	?specification a aml:SeriesSpecification .
+  	?specification a aml:seriesSpecification .
   	?specification aml:hasType ?dataType .
   	?series aml:hasSpecification ?specification
 }

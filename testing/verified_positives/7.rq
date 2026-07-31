@@ -4,7 +4,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?Technique ?referenceSpecification ?reference ?Function
 WHERE {
-    ?Technique a aml:Technique .
+    ?Technique a aml:technique .
 
     # Bind only the specifications actually used by the technique
     {
@@ -16,7 +16,7 @@ WHERE {
     }
 
     # Now restrict references to those that use exactly those specifications
-    ?reference a aml:AnIMLReference ;
+    ?reference a aml:anIMLReference ;
                aml:hasSpecification ?referenceSpecification ;
                aml:hasFunction ?Function .
 }

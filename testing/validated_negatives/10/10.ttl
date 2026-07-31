@@ -2,19 +2,19 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:ContainerTypeMustBeSimpleIfEmptyShape
+aml:containerTypeMustBeSimpleIfEmptyShape
     a sh:NodeShape ;
-    sh:message "A container that does not contain a sample (via an aml:SampleInContainer situation) may not have any type other than aml:simple." ;
-    sh:targetClass aml:Container ;
+    sh:message "A container that does not contain a sample (via an aml:sampleInContainer situation) may not have any type other than aml:simple." ;
+    sh:targetClass aml:container ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:select """
             SELECT ?this WHERE {
-                ?this a aml:Container .
+                ?this a aml:container .
                 FILTER NOT EXISTS {
-                    ?s a aml:SampleInContainer ;
+                    ?s a aml:sampleInContainer ;
                        aml:isContainedBy ?this .
-                    ?sample a aml:Sample .
+                    ?sample a aml:sample .
                     ?sample aml:isContained ?s .
                 }
                 ?this aml:hasType ?type .

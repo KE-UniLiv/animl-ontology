@@ -3,8 +3,8 @@
 PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 ASK {
-    ?result a aml:Result ;
+    ?result a aml:result ;
             aml:hasPart ?nestedStep .
             
-    ?nestedStep a aml:ExperimentStep .
+    ?nestedStep a aml:experimentStep .
 }

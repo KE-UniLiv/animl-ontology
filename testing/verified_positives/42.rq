@@ -2,11 +2,11 @@
 PREFIX aml: <http://www.w3id.org/animl/ontology/>
 SELECT ?Technique ?Sample ?value
 WHERE {
-    ?Technique a aml:Technique .
-    ?referenceSpecification a aml:AnimlReferenceSpecification .
+    ?Technique a aml:technique .
+    ?referenceSpecification a aml:anIMLReferenceSpecification .
     ?reference aml:hasSpecification ?referenceSpecification .
     ?reference aml:pointsTo ?Sample .
-    ?Sample a aml:Sample .
+    ?Sample a aml:sample .
 	?Technique ?relation ?referenceSpecification .
   	?referenceSpecification aml:modality ?value .
 

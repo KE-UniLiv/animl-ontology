@@ -3,7 +3,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?methodName
 WHERE {
-    ?step a aml:ExperimentStep ;
+    ?step a aml:experimentStep ;
           aml:hasMethod ?method .
           
     ?method aml:name ?methodName .

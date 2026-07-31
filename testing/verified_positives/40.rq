@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?endValue
 WHERE {
-    ?reference a aml:AnimlReference ;
+    ?reference a aml:anIMLReference ;
                aml:endValue ?endValue .
 }

@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?reason
 WHERE {
-    ?entry a aml:AuditTrailEntry ;
+    ?entry a aml:auditTrailEntry ;
            aml:hasChange ?change .
            
     ?change aml:reason ?reason .

@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?organizationRole
 WHERE {
-    ?author a aml:Agent ;
+    ?author a aml:agent ;
             aml:hasRole ?organizationRole .
 }

@@ -2,7 +2,7 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:SeriesSetSpecificationTechniqueSPARQLShape
+aml:seriesSetSpecificationTechniqueSPARQLShape
   a sh:NodeShape ;
   sh:targetClass aml:seriesSetSpecification ;
   sh:sparql [
@@ -14,7 +14,7 @@ aml:SeriesSetSpecificationTechniqueSPARQLShape
         $this a aml:seriesSetSpecification .
         $this aml:usesTechnique ?tech .
         ?tech aml:includes ?sub .
-        FILTER NOT EXISTS { ?sub a aml:SeriesSpecification. }
+        FILTER NOT EXISTS { ?sub a aml:seriesSpecification. }
       }
     """ ;
   ] .

@@ -3,7 +3,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#>
 SELECT ?method ?Agent
 WHERE {
-    ?method a aml:Method ;
+    ?method a aml:method ;
             aml:requiresRole ?role .
   	?Agent bag:isClassifiedBy ?role .
  	?Agent aml:hasType aml:SoftwareAgent .

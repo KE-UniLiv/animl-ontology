@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?plotScale
 WHERE {
-    ?series a aml:Series ;
+    ?series a aml:series ;
             aml:hasSpecification ?specification .
             
     ?specification aml:hasPlotScale ?plotScale .

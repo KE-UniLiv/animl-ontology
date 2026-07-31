@@ -8,46 +8,46 @@
   xmlns:ns3="http://purl.obolibrary.org/obo/"
   xmlns:ns4="http://purl.allotrope.org/ontologies/result#"
 >
-  <aml:Document rdf:about="http://example.org/animl/example3#document">
+  <aml:document rdf:about="http://example.org/animl/example3#document">
     <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-    <aml:animlVersion>1.0</aml:animlVersion>
+    <aml:anIMLVersion>1.0</aml:anIMLVersion>
     <aml:denotes>
-      <aml:Experiment rdf:about="http://example.org/animl/example3#experiment">
+      <aml:experiment rdf:about="http://example.org/animl/example3#experiment">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example3#step_es_1"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example3#step_es_2"/>
-      </aml:Experiment>
+      </aml:experiment>
     </aml:denotes>
     <aml:hasSampleSet>
-      <aml:SampleSet rdf:about="http://example.org/animl/example3#sampleset">
+      <aml:sampleSet rdf:about="http://example.org/animl/example3#sampleset">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example3#sample_Matcha_00001"/>
-      </aml:SampleSet>
+      </aml:sampleSet>
     </aml:hasSampleSet>
-  </aml:Document>
-  <aml:Result rdf:about="http://example.org/animl/example3#result_es_2_1">
+  </aml:document>
+  <aml:result rdf:about="http://example.org/animl/example3#result_es_2_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>External/Free Water Duplex</aml:name>
-  </aml:Result>
-  <aml:Sample rdf:about="http://example.org/animl/example3#sample_Matcha_00001">
+  </aml:result>
+  <aml:sample rdf:about="http://example.org/animl/example3#sample_Matcha_00001">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:identifier>Matcha-00001</aml:identifier>
     <aml:name>Matcha</aml:name>
-  </aml:Sample>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example3#step_es_2">
+  </aml:sample>
+  <aml:experimentStep rdf:about="http://example.org/animl/example3#step_es_2">
     <aml:name>External/Free Water Duplex</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example3#result_es_2_1"/>
-  </aml:ExperimentStep>
-  <aml:Result rdf:about="http://example.org/animl/example3#result_es_1_1">
+  </aml:experimentStep>
+  <aml:result rdf:about="http://example.org/animl/example3#result_es_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>D33 Water (LO / Duplex emulsions)</aml:name>
-  </aml:Result>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example3#step_es_1">
+  </aml:result>
+  <aml:experimentStep rdf:about="http://example.org/animl/example3#step_es_1">
     <aml:name>D33 Water (LO / Duplex emulsions)</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example3#result_es_1_1"/>
-  </aml:ExperimentStep>
+  </aml:experimentStep>
 </rdf:RDF>

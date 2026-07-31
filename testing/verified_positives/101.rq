@@ -6,9 +6,9 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 SELECT ?sample ?container ?row ?column
 WHERE {
     # The situation links the sample to the container
-    ?sample a aml:Sample ;
+    ?sample a aml:sample ;
             aml:isContained ?situation .
-    ?situation a aml:SampleInContainer ;
+    ?situation a aml:sampleInContainer ;
             aml:isContainedBy ?container ;
             aml:containerRow ?row ;
             aml:containerColumn ?column .

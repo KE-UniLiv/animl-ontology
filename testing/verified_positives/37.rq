@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?minValue ?maxValue
 WHERE {
-    ?paramSpec a aml:ParameterSpecification ;
+    ?paramSpec a aml:parameterSpecification ;
                aml:hasMinValue ?minValue ;
                aml:hasMaxValue ?maxValue .
 }

@@ -3,11 +3,11 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?container ?containerType
 WHERE {
-    ?sample a aml:Sample ;
+    ?sample a aml:sample ;
             aml:isContained ?situation .
-  	?situation a aml:SampleInContainer ;
+  	?situation a aml:sampleInContainer ;
          aml:isContainedBy ?container .
-    ?container a aml:Container ;
+    ?container a aml:container ;
                aml:hasType ?containerType .
-    ?containerType a aml:ContainerType .
+    ?containerType a aml:containerType .
 }

@@ -2,18 +2,18 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
-aml:AnimlReferenceSpecificationRequiredMustHaveConcreteAnimlReferenceShape
+aml:anIMLReferenceSpecificationRequiredMustHaveConcreteAnimlReferenceShape
     a sh:NodeShape ;
-    sh:targetClass aml:AnimlReferenceSpecification ;
+    sh:targetClass aml:anIMLReferenceSpecification ;
     sh:message "AnimlReferenceSpecification with modality 'required' must be realized by at least one concrete AnimlReference." ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:select """
             SELECT ?this WHERE {
-                ?this a aml:AnimlReferenceSpecification ;
+                ?this a aml:anIMLReferenceSpecification ;
                       aml:modality "required" .
                 FILTER NOT EXISTS {
-                    ?ref a aml:AnimlReference ;
+                    ?ref a aml:anIMLReference ;
                          aml:hasSpecification ?this ;
                          aml:pointsTo ?target .
                 }

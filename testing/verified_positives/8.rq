@@ -7,7 +7,7 @@ PREFIX ce:  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 
 SELECT ?seriesSpecification ?series ?dataPoint
 WHERE {
-    ?series a aml:Series ;
+    ?series a aml:series ;
             aml:hasSpecification ?seriesSpecification ;
             ce:hasMember ?dataPoint .
     ?seriesSpecification aml:hasType ?dataType .

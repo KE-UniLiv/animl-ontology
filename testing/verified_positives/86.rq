@@ -5,6 +5,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?parentTechniqueURI
 WHERE {
-    ?extensionTechnique a aml:Technique ;
+    ?extensionTechnique a aml:technique ;
                         aml:extends ?parentTechniqueURI .
 }

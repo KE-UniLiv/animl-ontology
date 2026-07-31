@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?dataFlowType
 WHERE {
-    ?step a aml:ExperimentStep .
+    ?step a aml:experimentStep .
     
     {
         ?step aml:hasInfrastructure ?container .

@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?quantity
 WHERE {
-    ?unit a aml:Unit ;
+    ?unit a aml:units ;
           aml:quantity ?quantity .
 }

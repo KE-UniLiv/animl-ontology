@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?step ?method ?category ?parameter
 WHERE {
-    ?step a aml:ExperimentStep .
+    ?step a aml:experimentStep .
   	?step aml:usesMethod ?method .
     ?method aml:hasMethodCategory ?category .
     ?category aml:hasParameter ?parameter .

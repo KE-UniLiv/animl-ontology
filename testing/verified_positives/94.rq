@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?value
 WHERE {
-    ?result a aml:Result ;
+    ?result a aml:result ;
             aml:hasCategory ?category .
             
     ?category aml:hasParameter ?parameter .

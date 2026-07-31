@@ -5,6 +5,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?name
 WHERE {
-    ?technique a aml:Technique ;
+    ?technique a aml:technique ;
                aml:name ?name .
 }

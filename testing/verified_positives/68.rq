@@ -7,7 +7,7 @@ PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 
 SELECT ?seriesSet (COUNT(DISTINCT ?dataPoint) AS ?numDataPoints)
 WHERE {
-    ?seriesSet a aml:SeriesSet .
+    ?seriesSet a aml:seriesSet .
   	?seriesSet bag:hasItem ?series .
   	?series ce:hasMember ?dataPoint
 

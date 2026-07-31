@@ -6,15 +6,15 @@
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 
 
-aml:SeriesSpecificationEncodingRuleShape
+aml:seriesSpecificationEncodingRuleShape
     a sh:NodeShape ;
-    sh:targetClass aml:SeriesSpecification ;
+    sh:targetClass aml:seriesSpecification ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "A SeriesSpecification must not have more than two DataPointSpecifications." ;
             sh:select """
                 SELECT DISTINCT ?this WHERE {
-                    ?this a aml:SeriesSpecification .
+                    ?this a aml:seriesSpecification .
 
                     ?this aml:hasPart ?spec1 .
                     ?spec1 a aml:DataPointSpecification .
@@ -34,7 +34,7 @@ aml:SeriesSpecificationEncodingRuleShape
         sh:message "Unidirectional cycle detected in seq:directlyFollows." ;
         sh:select """
             SELECT DISTINCT ?this WHERE {
-                ?this a aml:SeriesSpecification .
+                ?this a aml:seriesSpecification .
                 
                 ?this aml:hasPart ?spec1 .
                 ?spec1 a aml:DataPointSpecification .
@@ -58,7 +58,7 @@ aml:SeriesSpecificationEncodingRuleShape
         sh:select """
             SELECT ?this
             WHERE {
-                ?this a aml:SeriesSpecification .
+                ?this a aml:seriesSpecification .
                 ?this aml:hasPart ?spec .
                 
                     # datapoint uses auto-increment encoding

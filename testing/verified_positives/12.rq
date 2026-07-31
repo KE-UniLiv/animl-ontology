@@ -5,10 +5,10 @@ PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#>
 
 SELECT ?Agent ?AuditTrailEntry ?AgentType
 WHERE {
-    ?AuditTrailEntry a aml:AuditTrailEntry .
+    ?AuditTrailEntry a aml:auditTrailEntry .
     ?AuditTrailEntry aml:requiresRole ?Role .
     ?Role aml:hasType ?RoleType .
-    FILTER (?RoleType = aml:Author)
+    FILTER (?RoleType = aml:author)
     ?Role bag:isRoleOf ?Agent .
     ?Agent aml:hasType ?AgentType .
 }

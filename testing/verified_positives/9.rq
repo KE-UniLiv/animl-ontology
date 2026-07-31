@@ -3,12 +3,12 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?Container ?Sample ?containerID ?Situation
 WHERE {
-    ?Container a aml:Container .
+    ?Container a aml:container .
     ?Container aml:containerID ?containerID .
   
-    ?Sample a aml:Sample .
+    ?Sample a aml:sample .
   
-    ?Situation a aml:SampleInContainer .
+    ?Situation a aml:sampleInContainer .
     ?Situation aml:isContainedBy ?Container .
   	?Sample aml:isContained ?Situation .
     FILTER ( ?Container != ?Sample )

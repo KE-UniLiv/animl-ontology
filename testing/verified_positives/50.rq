@@ -5,6 +5,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?version
 WHERE {
-    ?doc a aml:Document ;
+    ?doc a aml:document ;
          aml:version ?version .
 }

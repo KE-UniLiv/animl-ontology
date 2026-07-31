@@ -6,6 +6,6 @@ SELECT ?maxSamples
 WHERE {
     ?technique aml:hasPart ?role .
     
-    ?role a aml:Role ;
+    ?role a aml:role ;
           aml:maxCardinality ?maxSamples .
 }

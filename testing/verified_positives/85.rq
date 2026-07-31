@@ -6,7 +6,7 @@ SELECT ?purpose
 WHERE {
     ?technique aml:hasPart ?roleBlueprint .
     
-    ?roleBlueprint a aml:Role ;
+    ?roleBlueprint a aml:role ;
                    aml:name "SpecificRoleName" ;
                    aml:purpose ?purpose .
 }

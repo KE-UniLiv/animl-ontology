@@ -5,7 +5,7 @@
 
 aml:NoHardwareAgentAsAuthorShape
     a sh:NodeShape ;
-    sh:targetClass aml:Role ;
+    sh:targetClass aml:role ;
 
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -15,7 +15,7 @@ aml:NoHardwareAgentAsAuthorShape
             SELECT $this WHERE {
 
                 # This role must be an Author role
-                $this aml:hasType aml:Author .
+                $this aml:hasType aml:author .
 
                 # The agent assigned to this role
                 $this bag:isRoleOf ?agent .

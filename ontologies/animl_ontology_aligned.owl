@@ -10,14 +10,14 @@
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SIUnit">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/sIUnit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is unique in the document in that it is both an enumeration class, e.i a class that  reifies the enumeration of a property of another class, and links to members of its own class to indicate its position in an ordered set. this is because it is known that its individuals must correspond to one of the limited set of Siunits, but those units can still be combined in an intractable number of ways, making direct enumeration of options impossible.</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N4173c8db71cc49488ac773f808063102"/>
     <rdfs:subClassOf rdf:nodeID="Na9a87f1eb79548b7aa9d6e708bb135e2"/>
     <rdfs:subClassOf rdf:nodeID="Nee1a6dcc59fa4315bee3d7ea6ccae588"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Specification">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/specification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the generic superclass for specifications, those objects which represent components of animl-core classes which are governed by the relevant ATDD file,each specification may be a part of exactly one other object</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Nafa1e5218e514f6db6066065c51c5bf2"/>
@@ -30,43 +30,43 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nbc3c4773b372455d88bba38edbd9aaf4">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Container"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/container"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0000407"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000119209289</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConvE</animl:mappingTool>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ncc4621c6da724164b9873f38cab2934f">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/series"/>
     <rdf:rest rdf:nodeID="Ne70f9626871a4068894aa8d47f79501d"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N4c1be29fe720453789f65d7f0c724fac">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasUseCase"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/UseCase"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/useCase"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N29d1bb1134304ffe91614b8d90358717">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:unionOf rdf:nodeID="Nd04d6cf4d1ce44e3b8e58d53652f5e3d"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N74706f8515494f649f5b25c6136c999b">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
     <rdf:rest rdf:nodeID="Ncf797f5ecd65455c97d6d61c7d26bb71"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/rectangular_Tray">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">Rectangular tray container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N168b6f3f7ac847c2aac6e6529a6b223a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Function"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/function"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000119209289</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistMult</animl:mappingTool>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Template">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/template">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a subclass of experimentstep used in place of its superclass when the author wishes to denote that the experiment is an example of / specification for a type of experimentstep</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Ncca0a1e5f03c4d538aef7cf560085cb6"/>
@@ -78,8 +78,8 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasSampleSet">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes the inclusion of a set of samples in a document, they are attached to the doucment as samples exist outside of the</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/SampleSet"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/document"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/sampleSet"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/float64">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -87,16 +87,16 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/linear">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/PlotScale"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/plotScale"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N67d59a855f134af68073a17f8825c27d">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ChangeType"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/changeType"/>
     <rdf:rest rdf:nodeID="N47c505764ec2412195e04ee80097d412"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ItemSpecification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A simple class which exists only to be a component of those classes whose only governed components are those in specification these classes (A) cannot be directly part of specification, as then it would be possible for classes in A to have part to the more complex and specialised subclasses of specification</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <rdfs:subClassOf rdf:nodeID="Nf5fbf942d1264259aae89c4f4c86fb11"/>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001638"/>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001285"/>
@@ -105,12 +105,12 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/exponent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A raised power, typically used to raise the dimensionality of spacial data</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/24_Wells">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">24 wells container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N45251a746b27439d9e50f0b194ed0ce2">
@@ -121,52 +121,52 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/denotes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This relationship shows that an animl document contains all the information regarding (e.i denotes) a particular experiment</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Experiment"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/document"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/experiment"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasPlotScale">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">A reified data property denoting that the domain (which is conceptually a component of a series determined before the series is created) has a plotscale, which itself is a class of individuals equivalent to the possible settings of the reified data property</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/PlotScale"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/plotScale"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf97f5c904d1a4136b3c95fc7074141d7">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BERTmap</animl:mappingTool>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N296cdcb18b93491ca8cc54344e0f9f1b">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/category"/>
     <rdf:rest rdf:nodeID="N035a22a3f22d4596b83129acaabd35d4"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nac36db3a7f2f435da6f538b22dd52b1d">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasType"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/mappingTool">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf094a8d055e247319eb43e7dc817e46f">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdf:rest rdf:nodeID="N6402b98ceef84c8bb1f08e53c37cf39f"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N9334cef3ad99487e93a4cd00d8738c70">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf5598c2f50644ba688b7704fb4e5234c">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/SeriesSet"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/seriesSet"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N9b8dfff5dff644d4b3c31d9672dc38c3">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/method"/>
     <owl:annotatedProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001606"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.505</animl:mappingConfidence>
@@ -206,16 +206,16 @@
   <rdf:Description rdf:nodeID="N2ba7e225e4424437aa0e06e0682d0811">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/makesChange"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/change"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/reason">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is a natural language description justifying a change</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/auditTrail"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Technique">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/technique">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a container for all the specification objects that exist in the ATDD governance component of a animl KB. conceptually it is also the broader specification for an experiment step, it is identical to its superclass of definition except in that it can be extended by extensions, and can have derive and consume relations, which express the ability of an ATDD to govern when samples are created or destroyed during experiment steps. as with their inverses, a technique may not have a derive and consume relation to the same reference specification. however unlike a reference specification, it may have multiple derive and consume relations over all.</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N96710ff017f44072931dcc72105acced"/>
@@ -223,7 +223,7 @@
     <rdfs:subClassOf rdf:nodeID="N82345d2530434b3993d6e010cb37a2fa"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N560fc793b2814ffe80c3fd04f1402a09">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/role"/>
     <rdf:rest rdf:nodeID="N296cdcb18b93491ca8cc54344e0f9f1b"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/sourceDataLocation">
@@ -236,7 +236,7 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/dependency">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A string space for a software requirement enumeration for an object</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasSpecification">
@@ -247,14 +247,14 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N25c0d4507d324d679c32ff919fafafce">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/role"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000979"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9723528027534484</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BERTmap</animl:mappingTool>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nd04d6cf4d1ce44e3b8e58d53652f5e3d">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/series"/>
     <rdf:rest rdf:nodeID="N742bf1734b274134abe73bb047fa9d08"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf2c3bcda0f7c4b72b6c49491b8f28765">
@@ -263,7 +263,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/creation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ChangeType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/changeType"/>
     <rdfs:comment xml:lang="en">A creation change type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf45eef0b7a794bca835dc6fdda30db21">
@@ -272,7 +272,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N053e5b0330a3475c95cd6da86b3019a9">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000095"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -280,7 +280,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N25d4f6e044594e17ace6a8e57ebadb7f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/document"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000238</animl:mappingConfidence>
@@ -290,7 +290,7 @@
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/DataPoint"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Experiment">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/experiment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a conceptual representation of an experiment in which operations occur, and a container for the ordered set of experiment steps</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Ne288bbdb2cc84344a4b23434e1e884c4"/>
@@ -299,7 +299,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="Naefbf750289d4658aae2bf6bfa4cd863">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000064"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -308,7 +308,7 @@
   <rdf:Description rdf:nodeID="N68f186a5a2aa4b57946ac85e6ff20675">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isClassifiedBy"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/role"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N41a2f1b1fffb4bf48ae279eb158275b4">
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/DataPoint"/>
@@ -317,12 +317,12 @@
   <rdf:Description rdf:nodeID="N1ba6a8311baa40c78fdfda5685bb7e0a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/producesResult"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/result"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">An implementation of the common 'hasPart' realtion to denote the special relation between series and datapoint specifications, wherein series specifications govern some of the attributes of their corresponding dataPointSpecifications</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
     <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/DataPointSpecification"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N0b81da7311214d7ca0b251fad43fcae0">
@@ -333,7 +333,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This denotes the organisation to which an agent belongs, this can be the employer of a human agent, or the owner of a non human agent.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N42e66c971ccc4b359c00f26be932a4cc">
@@ -348,12 +348,12 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/affects">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This relationship indicates the object, conceptually the area of the animl document describing that object, that a change has been made to</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nc1f6a898e88e4fb1b172b14defedc4d5">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Signature"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/signature"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000438"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -361,7 +361,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2de13e2700cf40bb8d9f6ffd97c26af5">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/method"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001501"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -381,7 +381,7 @@
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.70835644</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistMult</animl:mappingTool>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Result">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/result">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a container for any subset of data that is output from an experimentstep, though conventionally the salient 'results' as with the other direct components of experimentstep its sturcutre allows for freely assigned data to be introduced though sub elements, allowing this to take a variety of forms</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N7a77589ab0c547858d146bc8be8b3ff6"/>
@@ -411,23 +411,23 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/offset">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A constant value added to the equation resulting from the combination of data with units</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Container">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/container">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a subclass / special case of sample which is used to denote a sample which contains other samples, it is pointed to by the sampleincontinare situation to indicate the containing sample without allowing samples to directly contain themselves or force them to have a containerid when they may not always have one</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
     <rdfs:subClassOf rdf:nodeID="Nac36db3a7f2f435da6f538b22dd52b1d"/>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/equipment#AFE_0000407"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasSampleCategory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes the relationship between a sample and a category</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/category"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Role">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/role">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the concept of a role that an object in the system may need an agent to fulfil</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Ncbb70a1c78d742a18673f8703963d612"/>
@@ -438,7 +438,7 @@
   <rdf:Description rdf:nodeID="Ndda3a496b56741288a7147cbfa51bf50">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasAuditTrailEntry"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/auditTrail"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N7e2157b10cfe43bb9eb319773fd97855">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -447,15 +447,15 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ndf555a8124044aaa8d52653317fb51de">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Signature"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/signature"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001963"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000238</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistMult</animl:mappingTool>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/HumanAgent">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/humanAgent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/AgentType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/agentType"/>
     <rdfs:comment xml:lang="en">A person as a human agent type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataPointType">
@@ -465,17 +465,17 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/usesTechnique">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes the inclusion of a technique in an experiment step, and also indicates that a technique is something that is utilised in an exmperiment step rather than being part of it</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N54578914517344b6a2bb7265d17c5dc8">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasMethodCategory"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/category"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N6ab5b8a5d7da41a08e1d2cf313e0cd3c">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/units"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9970190525054932</animl:mappingConfidence>
@@ -493,9 +493,9 @@
   <rdf:Description rdf:nodeID="N82345d2530434b3993d6e010cb37a2fa">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/extends"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Sample">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/sample">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A sample is any item which is used, or that data regarding which is used, in an experiment in the document, they are often the subject of referencing to indicate that they are used in an experimentstep, however their set is attached to the document itself since they exist outside the context of the experiments described</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N8b3cf8cea03f49a99c6e120fe394396d"/>
@@ -503,7 +503,7 @@
     <rdfs:subClassOf rdf:nodeID="N9aa997556e504c92826f3f5eaa22f617"/>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Signature">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/signature">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a member of a set of signatures which, when linked to a signable item, causes it to be watermarked</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N386e5f263f7a49139255ce4b6cbac9d1"/>
@@ -511,7 +511,7 @@
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001963"/>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000438"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Series">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/series">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A series is a data sturcture containing ordered data points, a series may contain data points of any of the three data point subclasses, but the subclass of all the datapoints in a series must be the same</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N6449c208374143ea92b2d3deb68788a0"/>
@@ -527,12 +527,12 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ncf797f5ecd65455c97d6d61c7d26bb71">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2ff0a2b0a6d04798ac0f6075e9d3221e">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000127"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9983247518539428</animl:mappingConfidence>
@@ -540,22 +540,22 @@
     <rdfs:comment xml:lang="en">AnIML represents the value of change where allotrope represents the concept of change</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nc809180e0ce04f949d3daa6761f7fe25">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
     <rdf:rest rdf:nodeID="Naf6d5b6c89344f9ba7f16f793b473541"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nb411e9aa50ae46d0b0c6394dfdf1e458">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasSampleSet"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/SampleSet"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/sampleSet"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/determinate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">Determinate container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N6279f2148ddb4ac98ea5f6099ef4c6b9">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001987"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9985504746437072</animl:mappingConfidence>
@@ -571,13 +571,13 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataPointSpecification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Data point specification</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <rdfs:subClassOf rdf:nodeID="N70098e6563134aa48d8e7eb853a2c519"/>
     <rdfs:subClassOf rdf:nodeID="N410f4ddb04754d8ba8be9680ab282998"/>
     <rdfs:subClassOf rdf:nodeID="N22a611b3171c46e4aac5fb6067dc1c85"/>
     <rdfs:subClassOf rdf:nodeID="Nb2946fcc20754c05a4565dbb9bdd440a"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Change">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/change">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This denotes the conceptual object of a change to the document, and is used to link to information regarding the context of a change as well as the state of the system before and after it</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N010aa65cc0eb45b99178ab7609394a96"/>
@@ -597,8 +597,8 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/includesInfrastructure">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This property is designed to link an experiment step to is associated infrastructure</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Infrastructure"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/infrastructure"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N91433ce1975c4a5fa39d9948c595b0fe">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
@@ -612,7 +612,7 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/marks">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This relation links a signature to the signableitem, conceptually an area of the animl file (or one of the files it represents), it is attached it. it also indicates that the given signable item is watermarked by the signature</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Signature"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/signature"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N009cf5f17a5a4ec0a9666510434804bf">
@@ -620,7 +620,7 @@
     <rdf:rest rdf:nodeID="Nba1e93443c964417a7f8132f2bf36fa9"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nbac9b118c7e44abf859f44d026968071">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nb4052a53a2144ca592ee08151a4baccd">
@@ -630,7 +630,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N6a4646235f194a8aa0e76fab2506abee">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -663,16 +663,16 @@
   <rdf:Description rdf:nodeID="N50030ab4f34941cb9872d13de358acd4">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasUnits"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/units"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2bbaca8214714f75a3eb72199c761c55">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:unionOf rdf:nodeID="N9bb12f1355934f3da6c278a1a5ffa841"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SeriesSpecification">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/seriesSpecification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the subclass of specification which applies to series, and includes additional attribute restrictions, as well as indicating that the data points of a series must all have a common set of units</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <rdfs:subClassOf rdf:nodeID="N2e4a1f4c75ee45089bce523f14ce4399"/>
     <rdfs:subClassOf rdf:nodeID="Nfcd97eb921ab4d3b95fbfd71d71ebca3"/>
     <rdfs:subClassOf rdf:nodeID="Nb5ae6ca8571144d8a028f1bee37012fa"/>
@@ -680,53 +680,53 @@
     <rdfs:subClassOf rdf:nodeID="N3cbc6f1766bc417ebde7d83cbe125ea1"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N20ac46444ad347edb639d2ee1e004ae7">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
     <rdf:rest rdf:nodeID="Nb1ed56d8ccf54d3eb2a827d2c612e26d"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/animlVersion">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is used to indicate which version of the animl markup language was used to create the document</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/document"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N05b5b01549fb458ca0404d22e32a168a">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/AuditTrailEntry"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/auditTrailEntry"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N78cefa42936e47a9867f1b17513f5e16">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N7d9ffe5bdcdf4c6a941c3c65437d531b">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/category"/>
     <rdf:rest rdf:nodeID="Nc7a71f44cb6b4c9f8a3274a39b38afbe"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/visibility">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is a parameter indicating whether a series should be seen, it is intended as a flag for external systems that may be used to display animl data</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/series"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N751adb7c9e3b4f61b8cd3ac91a06951a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/role"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000119209289</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CompGCN</animl:mappingTool>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nb2b7f919f01241299fd1612211e1e2c3">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SampleSet"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/sampleSet"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N3c863c8331924914bcdcd3e966c59b10">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isItemOf"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Template"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/template"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Agent">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/agent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">An agent is a generalisation of several classes, author, software, device etc and may denote any external intentional object that acts on the system</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N03127c3837dc41518c94cc051f329464"/>
@@ -738,7 +738,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N13ac504ab5f3467eb9c7b9777ac91e01">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003816"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9974251985549928</animl:mappingConfidence>
@@ -746,10 +746,10 @@
     <rdfs:comment xml:lang="en">AnIML represents the value of change where allotrope represents the concept of change</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf0bbe4f3c1794e9dbde3fb4ee85853f8">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SeriesSet"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/seriesSet"/>
     <rdf:rest rdf:nodeID="N132344f7b9f649cea30033b767d4bd4d"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Units">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/units">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is an ordered collection of Siunits which acts to create a compound unit</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Nfb41cdbbb53242c19819bb1cd18ad534"/>
@@ -760,8 +760,8 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/isClassifiedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This is the inverse of the bag association, however it carries the connotation that the agent becomes defined by their task. This is in the same way that if a human practices medicine to fulfill a need for medical treatment, then that need becomes met, however it also makes the human a doctor.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/role"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N5ee20c5bdcb0461f86f97ec79e7385d3">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -771,19 +771,19 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/makesChange">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This relation indicates that it is at a particular version that a change is made</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/AuditTrailEntry"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/auditTrailEntry"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/change"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2ff4cd041b1242c9abd03c1405119108">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasSpecification"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nd87d9f6594cc46a18e0a5509d52a45e4">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/method"/>
     <rdf:rest rdf:nodeID="N291d6fde58344313837af25890549482"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Document">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/document">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the root node of the document, and links into its major componentw</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N0860ed03ebac40bbbada66ecb1c2cc30"/>
@@ -797,17 +797,17 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hardwareAgent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/AgentType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/agentType"/>
     <rdfs:comment xml:lang="en">A hardware agent type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nd525e46ce77444d3adb12a90bd9bf332">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
     <rdf:rest rdf:nodeID="N580cbf00a11248e7b2e586b84fd069ee"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ReferenceSpecification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the specification subclass for a reference, it may have either a consumedby or derived from relation to any technique (and exactly one of each relation). this is because the technique of an experimentstep governs whether a sample is produced or consumed during it. this could be considered to be a property of a sample specification, except that samples are understood to exist outside of the context of the experiment (especially since some are neither consumed or produced in the experiment) and as such the ATDD can only govern the way in which they are linked into the experiment.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <rdfs:subClassOf rdf:nodeID="N13bbe0b7b47945068733649cc221a548"/>
     <rdfs:subClassOf rdf:nodeID="N411187c29f3845ee89fdfcdd887f6b34"/>
     <rdfs:subClassOf rdf:nodeID="Ne93f5e037db24eeaaeffc411d68cbc87"/>
@@ -824,7 +824,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ne97b28709dcb4433bb6c89545f93f095">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/ParameterSpecification"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.775</animl:mappingConfidence>
@@ -836,7 +836,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N17b549d1474d49cd90f0119583dc4d3a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -846,7 +846,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Denotes the relationship contained within the context of the specification for a referenced item, a relationship which indicates the requirement for the referenced item to have been consumed in a particular technique here technique may be viewed in its form as a specification for an experiment step</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSpecification"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nc4a11478f0f94df8ac33b369233a6963">
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSpecification"/>
@@ -866,13 +866,13 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N1d0c1d5c801040998f6add610b3b46a8">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/series"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000357627868</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConvE</animl:mappingTool>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ExperimentStep">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/experimentStep">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the root for the largest subsections of the document, it is a representation of a single action undertaken during an experiment, and consists of several components, external supporting factors, and outputs</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Ncf397c84d0734af59802ff103a751ded"/>
@@ -889,7 +889,7 @@
   <rdf:Description rdf:nodeID="Nb5ae6ca8571144d8a028f1bee37012fa">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasUnits"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/units"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf8f0c7bbebdc4617949ab10a7335eebc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -898,13 +898,13 @@
   <rdf:Description rdf:nodeID="Nf43fb609387746f5a7e803793b12ff78">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N793469f5f7f04e648672421e6258acb6">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <rdf:rest rdf:nodeID="N34d622bbbb9f4dee8b8fa6bbb550214a"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/AuditTrail">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/auditTrail">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the set of versions of a document ,as well as the structure allowing navigation between them</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Ndda3a496b56741288a7147cbfa51bf50"/>
@@ -913,7 +913,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This relation represents a reified data property, where a reference is related to the textual description of the role of the data it points to, this is an optional property distinct from function and the consumes/derives relationship, it is used when further infromation about the purpose of the data is necessary to store</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Reference"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/UseCase"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/useCase"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N371f568105fb49e09e0d2874a3ede358">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -926,7 +926,7 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/token">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A unique token used to authenticate identity of an ATDD for security purposes</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item">
@@ -934,7 +934,7 @@
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000167"/>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000161"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/AgentType">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/agentType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible types of intentional objects that could interact with the system</rdfs:comment>
   </rdf:Description>
@@ -945,16 +945,16 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/m">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N76e13fc428304f49af5b2d2cdb22a29e">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf0180ddb2823416881c7a0c98b1fbc08">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N544f1d99639f46af9069a6e7b059055f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -970,20 +970,20 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This relation represents a reified data property, where a reference is related to the textual description of the function of the data it points to</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Reference"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Function"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/function"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/isPartOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/DataPointSpecification"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N57657664f3224ebba4978d85dfe1e55b">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
     <rdf:rest rdf:nodeID="Ncf1e55541b6d4672bd4dee6fe2bb0771"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nef247723d26b4ff5a005d2f77b7fd645">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000207"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -996,23 +996,23 @@
   <rdf:Description rdf:nodeID="N0aa7c9b0f27c46e0a26dd309699002a0">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Tag"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/tag"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasDataType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Conceptually this relationship is the property of being bound to a specific data type, which forces classes representing data containers to have individuals that only contain data of specific types however it is attached to the specification for such containers, since the type of data a container may hold is governed by its specification</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ParameterSpecification"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
     <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/DataType"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/extends">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Denotes that the 'extension' (itself a subclass of technique) exists to: extend the technqiue if you consider techniques as independent complete the specification for an experiment step, if you consider technqieus as specifications for experiment steps</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N7258efe80d5543e69b82126c9e0a545f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001532"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.811</animl:mappingConfidence>
@@ -1033,40 +1033,40 @@
   <rdf:Description rdf:nodeID="Na5fe08f724fd4d36914d82b8c9ef5ab8">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/usesTechnique"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N5339a9e41b6840d39b752cd706faf739">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdf:rest rdf:nodeID="N009cf5f17a5a4ec0a9666510434804bf"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/identifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is any machine readable code not assigned within the system, for example if an agent has an employee number</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N9e77a347ab874c9c9487bf2f499af250">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Experiment"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/experiment"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000119209289</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistMult</animl:mappingTool>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SampleInContainer">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/sampleInContainer">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a reification of the situation wherein a sample is present a container, used to allow information about the position of the sample in the container to be encoded</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:subClassOf rdf:nodeID="N0d1d320bf13046fa9675091c4bf7dd20"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N3411b1b79afe4f04b44ba388f997548f">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ParameterSpecification"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
     <rdf:rest rdf:nodeID="Nc4a11478f0f94df8ac33b369233a6963"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/s">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Reference">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1083,31 +1083,31 @@
   <rdf:Description rdf:nodeID="N13bbe0b7b47945068733649cc221a548">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/consumedBy"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/consumes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Denotes the requirement for a technique to consume the referenced item of a referenec in order for that item to be referenced this relationship is not entirely intuitive, but it is necessary to preserve expressivity found in the original xml</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
     <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSpecification"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N580cbf00a11248e7b2e586b84fd069ee">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N103226473aab4c6ead0f5b6ed84587cd">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Infrastructure"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/infrastructure"/>
     <rdf:rest rdf:nodeID="N76e13fc428304f49af5b2d2cdb22a29e"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N411187c29f3845ee89fdfcdd887f6b34">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/derivedFrom"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N4c474c45eddc4865a6a22564d5fe379f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AuditTrailEntry"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/auditTrailEntry"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2e4a1f4c75ee45089bce523f14ce4399">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1118,7 +1118,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This represents a human readable physical location (typically an address, site number, or building space ref) for an agent</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/float32">
@@ -1127,7 +1127,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nc5c26dda510d4f849393d63e48ab7178">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000448"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -1136,8 +1136,8 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasResultCategory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes the relationship between a result and a category</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/result"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/category"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/embeddedXML">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -1145,31 +1145,31 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/384_Wells">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">384 wells container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N567bf411af224cb19c1390361fdc2655">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/operatingSystem">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is an optional property recording the operating system of an agent, where an agent is human, or a piece of mechanical hardware this value will be none.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/phone">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is an optional property denoting the phone number of an agent, where the agent is not human this will be none</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nf7650e838f704d77b30f6063b0c69288">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/requiresRole"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/role"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2de65ca24a424dd3972f52223167ebbe">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1185,17 +1185,17 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This represents the email address of an agent</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N42420ea4b0484e8ca7666ad48ccff960">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/series"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nb0f884ad01bd4cfa867ba275bb3c0357">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/units"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://qudt.org/schema/qudt#unit"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.953333333</animl:mappingConfidence>
@@ -1203,7 +1203,7 @@
     <rdfs:comment xml:lang="en">hasUnits is a property not class</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ne58a6b444e9546e0a663329d5108489a">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Container"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/container"/>
     <rdf:rest rdf:nodeID="Nff9e365d15784782a2835e2b8bc34b8b"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Na017961a28e14a6884e451697a52cd20">
@@ -1215,7 +1215,7 @@
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LogMap</animl:mappingTool>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ncf1e55541b6d4672bd4dee6fe2bb0771">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/method"/>
     <rdf:rest rdf:nodeID="N4f86e1839473482d9562a2285a59f867"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N1b00b4d71e8844548123b7b3310d9fce">
@@ -1249,7 +1249,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/1">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N1864d1996e33470db365032937489dfc">
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/DataPoint"/>
@@ -1272,7 +1272,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/PlotScale">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/plotScale">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible kinds of scale a datapoint with units may be on. e.i it determines whether a datapoint is on a linear, logarithmic, or other kind of scale</rdfs:comment>
   </rdf:Description>
@@ -1289,15 +1289,15 @@
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/pointsTo"/>
     <owl:allValuesFrom rdf:nodeID="N1b00b4d71e8844548123b7b3310d9fce"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Tag">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/tag">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a loosely governed container which can be attached to an experiment step or sample to provide additional data about them, where said data is not otherwise expressable</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasSubCategory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes the relationship of a category object with another of the same class, where the information of one category may be a component of another broader one</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/category"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/category"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N8b8743b769484d51b7d0feb947836e6a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
@@ -1307,7 +1307,7 @@
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
     <animl:mappingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LogMap</animl:mappingTool>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ContainerType">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/containerType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible types of a container object</rdfs:comment>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001987"/>
@@ -1315,14 +1315,14 @@
   <rdf:Description rdf:nodeID="Ne288bbdb2cc84344a4b23434e1e884c4">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/denotedBy"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/document"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N3d99af9e2ed94bcf979a06fad43d0ec7">
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/DataPoint"/>
     <rdf:rest rdf:nodeID="Nd5d9785981b74d888b1c068287cfa996"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N7cf5f1452a504d999f8b49a8b80d3831">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
     <rdf:rest rdf:nodeID="Nd9700d229c4342a39d82db256d9c7ac0"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N5fcc3fc791b94821acc951855d7d1846">
@@ -1330,7 +1330,7 @@
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasParameter"/>
     <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Parameter"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Function">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/function">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a reified natural language field for the 'function' of data when being referenced this is optional and works to distinguish the general purpose of data from its immediate use this is an artefact from the construction of owl that has been left in to avoid damaging expressivity</rdfs:comment>
     <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
@@ -1370,32 +1370,32 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/6_Wells">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">6 wells container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N742bf1734b274134abe73bb047fa9d08">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Experiment"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experiment"/>
     <rdf:rest rdf:nodeID="Nb2b7f919f01241299fd1612211e1e2c3"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/containerRow">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This represents the row position of a sample in a container, within the reified sampleInContainer situation</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SampleInContainer"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sampleInContainer"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/deletion">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ChangeType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/changeType"/>
     <rdfs:comment xml:lang="en">A deletion change type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Na9ebb4cc43404d2f80b823dec195bfca">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/requiresRole"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/role"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ncb862b20304b4055830367cd6ae36538">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/method"/>
     <rdf:rest rdf:nodeID="N05b5b01549fb458ca0404d22e32a168a"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/endValue">
@@ -1407,20 +1407,20 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/includes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
     <rdfs:comment xml:lang="en">This represents the idea of an object containing an object, without having neccessary parthood</rdfs:comment>
     <rdfs:domain rdf:nodeID="N9ef5a3e90e734d9b9ee261cc8b9f7906"/>
     <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSet"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#isRoleOf">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/isRoleOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">A reified property for the concept of a role being fulfilled by an agent, in english the concept of a task / job being done by someone</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/role"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N4ca657d49dc64b1a8392f185545c7f23">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/units"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://qudt.org/schema/qudt#Unit"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.703</animl:mappingConfidence>
@@ -1429,24 +1429,24 @@
   <rdf:Description rdf:nodeID="N313f38bf8af3412995b0ca14d30ad175">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasTags"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/TagSet"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/tagSet"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N57b1bc4fe38f4877bfb482ebd4df1142">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/containerId">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This expresses the Id which a container is given to allow it be found in a group of containers</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Container"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/container"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/k">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SampleSet">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/sampleSet">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a container for the set of samples used in the experiment</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N9334cef3ad99487e93a4cd00d8738c70"/>
@@ -1455,9 +1455,9 @@
   <rdf:Description rdf:nodeID="Nee1a6dcc59fa4315bee3d7ea6ccae588">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/units"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SeriesSet">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/seriesSet">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is an ordered set of series data structures, series generally appear in sets when it is necessary to express multiple dimensions of data captured over the same interval or otherwise in the same context window</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N544f1d99639f46af9069a6e7b059055f"/>
@@ -1465,7 +1465,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="N72cfe3fdb2e1447694d0a8ecbbac6d17">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000957"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000476837158</animl:mappingConfidence>
@@ -1478,13 +1478,13 @@
   <rdf:Description rdf:nodeID="N8b3cf8cea03f49a99c6e120fe394396d">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasSampleCategory"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/category"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/denotedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This is the inverse of the denotes relation</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Experiment"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/experiment"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/document"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1493,7 +1493,7 @@
     <rdfs:range rdf:nodeID="Na27486ff965048dab339d9b802901456"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N927f110fa75440bba3a2e7deaf82a3fb">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Infrastructure"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/infrastructure"/>
     <rdf:rest rdf:nodeID="N5488c5ac234440658204de9d79e04ceb"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N3cbc6f1766bc417ebde7d83cbe125ea1">
@@ -1502,30 +1502,30 @@
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     <owl:onClass rdf:resource="http://www.w3id.org/animl/ontology/DataPointSpecification"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ParameterSpecification">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/parameterSpecification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the subclass of specification which applies to parameters, and includes additional attribute restrictions, as well as indicating that the data in a parameter must be linked to a certain set of units</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/Specification"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3id.org/animl/ontology/specification"/>
     <rdfs:subClassOf rdf:nodeID="N4a65b6f5def848d39a2cfb60c2b3b8ee"/>
     <rdfs:subClassOf rdf:nodeID="N50030ab4f34941cb9872d13de358acd4"/>
     <rdfs:subClassOf rdf:nodeID="N535883bbe17f42fe9cb084b34a85b0b4"/>
     <owl:equivalentClass rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N190d3c5046c345518ab9967d2e211909">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N1314fd28306d42fda2732d2f2d4d57c8">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/series"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/log">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/PlotScale"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/plotScale"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N70582ceae5fc44afbd5f20a77e7d03f7">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/role"/>
     <rdf:rest rdf:nodeID="N7d9ffe5bdcdf4c6a941c3c65437d531b"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collection">
@@ -1535,7 +1535,7 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/derives">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Denotes the requirement for a technique to derive the referenced item of a referenec in order for that item to be referenced this relationship is not entirely intuitive, but it is necessary to preserve expressivity found in the original xml</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
     <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSpecification"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N35074e98a7e646ecbb595f8e47efdd60">
@@ -1545,11 +1545,11 @@
   <rdf:Description rdf:nodeID="Ned11c6eea008472c9148d508b11ead25">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasResultCategory"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/category"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N17d219385bf34b2082614bebeab12f18">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/function#AFFN_0000136"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9991700649261476</animl:mappingConfidence>
@@ -1560,7 +1560,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Denotes the relationship contained within the context of the specification for a referenced item, a relationship which indicates the requirement for the referenced item to have been derived from a particular technique here technique may be viewed in its form as a specification for an experiment step</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSpecification"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/boolean">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -1573,11 +1573,11 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N035a22a3f22d4596b83129acaabd35d4">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
     <rdf:rest rdf:nodeID="N7df9b886c2d74d9989f05f87126aa14d"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N7df9b886c2d74d9989f05f87126aa14d">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/method"/>
     <rdf:rest rdf:nodeID="N190d3c5046c345518ab9967d2e211909"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N410f4ddb04754d8ba8be9680ab282998">
@@ -1599,17 +1599,17 @@
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N9bb12f1355934f3da6c278a1a5ffa841">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
     <rdf:rest rdf:nodeID="N2c17cca0a56e4a859fb63e64b0ba1db8"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/modification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ChangeType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/changeType"/>
     <rdfs:comment xml:lang="en">A modification change type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nd63a888df3ad4e2681741db7826ec979">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</animl:mappingConfidence>
@@ -1625,21 +1625,21 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes the property of have tags attached to you, as well as specifying the set of tags for which this is true</rdfs:comment>
     <rdfs:domain rdf:nodeID="Nc7933697c27a46dc9c91a932c5e60b79"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/TagSet"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/tagSet"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N5488c5ac234440658204de9d79e04ceb">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/auditTrail"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ncbb70a1c78d742a18673f8703963d612">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/isRoleOf"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Na61beeaa88b44719ac30f58ea3391a5f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Experiment"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/experiment"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataPoint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1653,12 +1653,12 @@
   <rdf:Description rdf:nodeID="N386e5f263f7a49139255ce4b6cbac9d1">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#isMemberOf"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/SignatureSet"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/signatureSet"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nfcd97eb921ab4d3b95fbfd71d71ebca3">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasPlotScale"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/PlotScale"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/plotScale"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N287cd343e4fa4bd79e266667e5e7093f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1667,29 +1667,29 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/isContainedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This is not the inverse of the above property, it links a sampleIncontainer situation to a container as the object doing the containing within the situation</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SampleInContainer"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Container"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sampleInContainer"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/container"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nb2946fcc20754c05a4565dbb9bdd440a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/isPartOf"/>
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onClass rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <owl:onClass rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/TagSet">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/tagSet">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is the set of tags which exist in the document</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N0aa7c9b0f27c46e0a26dd309699002a0"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Naf6d5b6c89344f9ba7f16f793b473541">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/newValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This represents as a string literal the post change state of an item changed in a change</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ne0e768cec1d1413b92b7a9b011b39a7e">
@@ -1699,7 +1699,7 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nfd0de3f808e3411a949a6a615c4cde11">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/SampleSet"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/sampleSet"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.703</animl:mappingConfidence>
@@ -1709,7 +1709,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This represents the column position of a sample in a container, within the reified sampleInContainer situation</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SampleInContainer"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sampleInContainer"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ne93f5e037db24eeaaeffc411d68cbc87">
@@ -1721,7 +1721,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:unionOf rdf:nodeID="N776b331401de4217899eb655d7019c37"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Method">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/method">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This broadly denotes the procedure employed to carry out the experiment, and typically consists of a set of parameters describing the steps involved. however since this component contains a category (a largely unrestricted data container) it may take a variety of forms</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="Nb4052a53a2144ca592ee08151a4baccd"/>
@@ -1732,21 +1732,21 @@
     <dcterms:isPartOf rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001606"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nfbf47b73214c4f7c900994b173a0b2f3">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/UseCase"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/useCase"/>
     <rdf:rest rdf:nodeID="Nc195d25c23514123a1399774362b536b"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2c17cca0a56e4a859fb63e64b0ba1db8">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N6a9f30e2d28544af9997f916f6340d50">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/usesMethod"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/method"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nada12ebb14b44373ad251b83c7b9657d">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0003144"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.000000238</animl:mappingConfidence>
@@ -1755,28 +1755,28 @@
   <rdf:Description rdf:nodeID="N5e4c06da67b847579963e3ed0be2caeb">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasAuditTrail"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/auditTrail"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/1536_Wells">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">1536 wells container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/indeterminate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">Indeterminate container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N7a72e94e505f4fa3a386cb69ba9f866d">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/series"/>
     <rdf:rest rdf:nodeID="N3d99af9e2ed94bcf979a06fad43d0ec7"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N4173c8db71cc49488ac773f808063102">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/units"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/SignatureSet">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/signatureSet">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a container for the set of signatures present in the document</rdfs:comment>
   </rdf:Description>
@@ -1789,16 +1789,16 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This represents as a string literal the per change state of an item changed in a change</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ncca0a1e5f03c4d538aef7cf560085cb6">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nccea892ba5354beeae10c26e3bea0109">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SeriesSet"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/seriesSet"/>
     <rdf:rest rdf:nodeID="N57657664f3224ebba4978d85dfe1e55b"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/subject">
@@ -1814,18 +1814,18 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasParameter">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes that a category includes a parameter</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/category"/>
     <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Parameter"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/abstract">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A boolean denoting whether or not a technique or extension will work without being extended</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N69e698a78fd94dac8ce3d0feeb0542a1">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/method"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001606"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.505</animl:mappingConfidence>
@@ -1834,7 +1834,7 @@
   <rdf:Description rdf:nodeID="Nbc5cffccf1ee4d2f96beecce0127670a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/usedBy"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/series"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N5c09ae618fdf48c792e1dc6780d00e72">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
@@ -1847,8 +1847,8 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/producesResult">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This relation is to link an experimentStep to its results, and also to indicate that said results are created in the step</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/result"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N9ef5a3e90e734d9b9ee261cc8b9f7906">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1857,16 +1857,16 @@
   <rdf:Description rdf:nodeID="N0d1d320bf13046fa9675091c4bf7dd20">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/isContainedBy"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Container"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/container"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/factor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A coefficient upon a set of units, typically an order of magnitude</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N132344f7b9f649cea30033b767d4bd4d">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
     <rdf:rest rdf:nodeID="Nd87d9f6594cc46a18e0a5509d52a45e4"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2d570ad12ad44ccaae0dc8833431054e">
@@ -1875,7 +1875,7 @@
     <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N7ce57d7570df44ca89950fc7e3dcc3f7">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SampleSet"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/sampleSet"/>
     <rdf:rest rdf:nodeID="N41cc1edd2d774086b82fd24d0e2baeb0"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/DataType">
@@ -1885,30 +1885,30 @@
   <rdf:Description rdf:nodeID="Nca51d791eb804cbcbf41a3681c0761bd">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/includesInfrastructure"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Infrastructure"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/infrastructure"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/int64">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N291d6fde58344313837af25890549482">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <rdf:rest rdf:nodeID="N7a72e94e505f4fa3a386cb69ba9f866d"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N82e17b6821f04eceb8cca2998bbad07a">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Experiment"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/experiment"/>
     <rdf:rest rdf:nodeID="N7ce57d7570df44ca89950fc7e3dcc3f7"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasAuditTrail">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This is the property linking a document and agents to their version history</rdfs:comment>
     <rdfs:domain rdf:nodeID="N0b81da7311214d7ca0b251fad43fcae0"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/auditTrail"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N03127c3837dc41518c94cc051f329464">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasType"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AgentType"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/agentType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N836d468fd94f465288a0b5e97145906f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1918,19 +1918,19 @@
   <rdf:Description rdf:nodeID="Nf39d3d8906124806886be751f88a62fe">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasSubCategory"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/category"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N4f86e1839473482d9562a2285a59f867">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Result"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/result"/>
     <rdf:rest rdf:nodeID="Ncc4621c6da724164b9873f38cab2934f"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N77292e6bf7284710a8f255f626f1143b">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Technique"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/technique"/>
     <rdf:rest rdf:nodeID="N220f892aa1dd4fb2a5b083e544c52e16"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/cD">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N2c308d45cac048bc824c1fa9ef528263">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
@@ -1947,8 +1947,8 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasUnits">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Denotes that a class is a container for data with corresponding units of measurement, a complex quantity may have multiple units e.i mph, or rpm</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ParameterSpecification"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/units"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N34d622bbbb9f4dee8b8fa6bbb550214a">
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/DataPoint"/>
@@ -1967,13 +1967,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This property denotes that an object of a class has a role associated with it, this generalises asociations to several classes of objects that are now generalised as role</rdfs:comment>
     <rdfs:domain rdf:nodeID="Nf2c3bcda0f7c4b72b6c49491b8f28765"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/role"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nd5d9785981b74d888b1c068287cfa996">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/SeriesSpecification"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/seriesSpecification"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ChangeType">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/changeType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is an enumeration class, e.i a class that exists only to reify the enumeration of a property of another class, in this case the individuals for this class correspond to the possible types of actions that could have been perfromed on an area of the document to consistute a change</rdfs:comment>
   </rdf:Description>
@@ -1981,7 +1981,7 @@
     <owl:equivalentProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N58c24079da54419b8c7b9870924ccca7">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Template"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/template"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N22a611b3171c46e4aac5fb6067dc1c85">
@@ -1992,18 +1992,18 @@
   <rdf:Description rdf:nodeID="N35d4fb2c9eeb4297b0a3ba5bc98da2c7">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasSpecification"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ParameterSpecification"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nc195d25c23514123a1399774362b536b">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Category"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/category"/>
     <rdf:rest rdf:nodeID="N634083f96636446ea7e9e84cafb2021f"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Ne8c7e71cdbc54e3ba53f0d7877b5cdcc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasTags"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/TagSet"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/tagSet"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Infrastructure">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/infrastructure">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a container for all the data needed to begin / which consitute, an experiment, this is expected to include a set of sample and can also include previous results, or any component of a previous experiment. this is deliberately vague so that whatever information is deemed relevant may be include, for example you may or may not wish to store the fact that a piece of machinary has finished moving an is free to be acquired.</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N784adf20842a464a973db739f0c59ad7"/>
@@ -2011,34 +2011,34 @@
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/quantity">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A description of type of objects or measurements to which units may be assigned</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/units"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/isContained">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This property does not make complete sense at a human level it ties a sample into the sampleincontainer situation since a sample in that situation has the property of being contained</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/SampleInContainer"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/sampleInContainer"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/ln">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/PlotScale"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/plotScale"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/scope">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is used to indicate effects an attribute, or an entire element</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Change"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/change"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/value">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is an untyped string serving as a container for any data that may need to be included in a tag</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Tag"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/tag"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/AuditTrailEntry">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/auditTrailEntry">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a specific version, representing the state of the document at a particular moment in time, it links to an unordered collection of changes (denoting the difference between this and the previous version), as well as indicating its own relative position by pointing to the previous and next version. it also has metadata attributes and links to the agents responsible for it</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N87f9308eda144b20869844d0c39f3dcb"/>
@@ -2048,7 +2048,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/none">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/PlotScale"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/plotScale"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes">
     <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
@@ -2061,7 +2061,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">This is used to store the characters underlying the barcode for a sample</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/Sample"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/sample"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N47c505764ec2412195e04ee80097d412">
@@ -2071,11 +2071,11 @@
   <rdf:Description rdf:nodeID="N75d0a7c8f015403587a366110fac5c95">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasFunction"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Function"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/function"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N331ee5686af94b65b0a39765242e0a32">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/Role"/>
+    <owl:annotatedSource rdf:resource="http://www.w3id.org/animl/ontology/role"/>
     <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
     <owl:annotatedTarget rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000012"/>
     <animl:mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.703</animl:mappingConfidence>
@@ -2083,20 +2083,20 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/hasAuditTrailEntry">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/AuditTrailEntry"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/auditTrail"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/auditTrailEntry"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nba1e93443c964417a7f8132f2bf36fa9">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Tag"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/tag"/>
     <rdf:rest rdf:nodeID="N58c24079da54419b8c7b9870924ccca7"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/usesMethod">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">This denotes the inclusion of a method in an experiment step, and also indicates that a method is something that is utilised in an exmperiment step rather than being part of it</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/ExperimentStep"/>
-    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/Method"/>
+    <rdfs:domain rdf:resource="http://www.w3id.org/animl/ontology/experimentStep"/>
+    <rdfs:range rdf:resource="http://www.w3id.org/animl/ontology/method"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/Category">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/category">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A container for all the parameter and seriesSet data structures associated with something since it contains data structures, and thus is a data structure, a category may also contain another category as a sub-category</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="N5ee20c5bdcb0461f86f97ec79e7385d3"/>
@@ -2123,13 +2123,13 @@
     <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ReferenceSet"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N41cc1edd2d774086b82fd24d0e2baeb0">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Series"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/series"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N9aa997556e504c92826f3f5eaa22f617">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/isContained"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/SampleInContainer"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/sampleInContainer"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/int32">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -2137,13 +2137,13 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/softwareAgent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/AgentType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/agentType"/>
     <rdfs:comment xml:lang="en">A software agent type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nb0f6fda224404421be44f3439d229159">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasType"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/ChangeType"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/changeType"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/mappingConfidence">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -2156,17 +2156,17 @@
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/DataPointSpecification"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/UseCase">
+  <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/useCase">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">This is a reified natural language field for the use case of a set of referenced datapoints</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/mol">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/96_Wells">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/ContainerType"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/containerType"/>
     <rdfs:comment xml:lang="en">96 wells container type</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N57441d511d2345a0bc155c0a42019f23">
@@ -2174,7 +2174,7 @@
     <rdf:rest rdf:nodeID="N3411b1b79afe4f04b44ba388f997548f"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N5bc97f5d463041cba3ce68812034469e">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Document"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/document"/>
     <rdf:rest rdf:nodeID="N567bf411af224cb19c1390361fdc2655"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nd84e2988feb94bbcaeda8e0f33379c77">
@@ -2184,12 +2184,12 @@
   <rdf:Description rdf:nodeID="N0860ed03ebac40bbbada66ecb1c2cc30">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/denotes"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Experiment"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/experiment"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N1722936348674df3acce0f5d512625bb">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3id.org/animl/ontology/hasAuditTrail"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AuditTrail"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/auditTrail"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N414748b01e654728bb980d89efac9ba9">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -2207,18 +2207,18 @@
   <rdf:Description rdf:nodeID="Nfb41cdbbb53242c19819bb1cd18ad534">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#hasMember"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/pNG">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/DataType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N6402b98ceef84c8bb1f08e53c37cf39f">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/AgentType"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/agentType"/>
     <rdf:rest rdf:nodeID="N67d59a855f134af68073a17f8825c27d"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nff9e365d15784782a2835e2b8bc34b8b">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Agent"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/agent"/>
     <rdf:rest rdf:nodeID="N793469f5f7f04e648672421e6258acb6"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N586f1b852b4545de95e6290076eb603b">
@@ -2233,7 +2233,7 @@
   <rdf:Description rdf:nodeID="Na9a87f1eb79548b7aa9d6e708bb135e2">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/Units"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/units"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/string">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -2241,7 +2241,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/kG">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/SIUnit"/>
+    <rdf:type rdf:resource="http://www.w3id.org/animl/ontology/sIUnit"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N708e863f1f544db8b622c8cdc87ccd5c">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -2255,7 +2255,7 @@
   <rdf:Description rdf:nodeID="N87f9308eda144b20869844d0c39f3dcb">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes"/>
-    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/AuditTrailEntry"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3id.org/animl/ontology/auditTrailEntry"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N78f16a62407d4d77bd4c871afa570c19">
     <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/Parameter"/>
@@ -2270,7 +2270,7 @@
     <owl:unionOf rdf:nodeID="N927f110fa75440bba3a2e7deaf82a3fb"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nc0a9de792cae43e9b33f57ea2cada74e">
-    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/ParameterSpecification"/>
+    <rdf:first rdf:resource="http://www.w3id.org/animl/ontology/parameterSpecification"/>
     <rdf:rest rdf:nodeID="N726eb5a524ec409aa19aad4d9637ba35"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3id.org/animl/ontology/dateTime">

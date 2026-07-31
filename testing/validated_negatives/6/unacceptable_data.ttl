@@ -5,10 +5,10 @@
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 
 aml:seriesSpec_TempTime_001
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Temperature vs Time" ;
     aml:quantity "Temperature" ;
-    aml:hasUnits aml:Unit_Celsius ;
+    aml:hasUnits aml:units_Celsius ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
     aml:hasPart aml:dataPointSpec_TempTime_001 .
@@ -18,36 +18,36 @@ aml:dataPointSpec_TempTime_001
     aml:hasType aml:float32 ;
     aml:hasType aml:individualType .
 
-aml:Unit_Celsius 
-    a aml:Unit;
-    aml:hasPart aml:unit_Celsius .
+aml:units_Celsius 
+    a aml:units;
+    aml:hasPart aml:units_Celsius .
 
-aml:unit_Celsius 
-    a aml:Unit;
+aml:units_Celsius 
+    a aml:units;
     aml:offset 273.15 ;
-    aml:Adjusts aml:k .
+    aml:adjustsaml:k .
 
 
-aml:Unit_KPH 
-    a aml:Unit;
-    aml:hasPart aml:unit_Km ;
-    aml:hasPart aml:unit_Hour .
+aml:units_KPH 
+    a aml:units;
+    aml:hasPart aml:units_Km ;
+    aml:hasPart aml:units_Hour .
 
-aml:unit_Km 
-    a aml:Unit;
+aml:units_Km 
+    a aml:units;
     aml:factor 1000 ;
-    aml:Adjusts aml:m .
+    aml:adjustsaml:m .
 
-aml:unit_Hour 
-    a aml:Unit;
+aml:units_Hour 
+    a aml:units;
     aml:factor 3600 ;
-    aml:Adjusts aml:s .
+    aml:adjustsaml:s .
 
 
 
 
 aml:series_TempTime_001
-    a aml:Series ;
+    a aml:series ;
     aml:description "Temperature readings" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_TempTime_001 ;
@@ -82,10 +82,10 @@ aml:dp_TempTime_003
 
 
 aml:seriesSpec_FrogNumbers
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Frogs over time" ;
     aml:quantity "Frogs" ;
-    aml:hasUnits aml:Unit_null ;
+    aml:hasUnits aml:units_null ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:dataPointSpec_FrogNumber .
@@ -94,17 +94,17 @@ aml:dataPointSpec_FrogNumber
     a aml:DataPointSpecification ;
     aml:hasType aml:individualType .
 
-aml:Unit_null
-    a aml:Unit;
-    aml:hasPart aml:unit_null .
+aml:units_null
+    a aml:units;
+    aml:hasPart aml:units_null .
 
-aml:unit_null 
-    a aml:Unit;
-    aml:Adjusts aml:1 .
+aml:units_null 
+    a aml:units;
+    aml:adjustsaml:1 .
 
 
 aml:Frog_numbers
-    a aml:Series ;
+    a aml:series ;
     aml:description "Frog" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_FrogNumbers ;
@@ -137,9 +137,9 @@ aml:dp_FrogNumber_003
     seq:directlyFollows aml:dp_FrogNumber_002 .
 
 aml:seriesSpec_acceleration
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Acceleration over Time" ;
-    aml:hasUnits aml:Unit_KPH ;
+    aml:hasUnits aml:units_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec .
@@ -153,7 +153,7 @@ aml:velocity_base_spec
     aml:hasType aml:individualType .
 
 aml:series_acceleration
-    a aml:Series ;
+    a aml:series ;
     aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration ;
@@ -187,19 +187,19 @@ aml:increment_2_acceleration
     seq:directlyFollows aml:increment_1_acceleration .
 
 aml:Frog_entropy_information
-    a aml:SeriesSet ;
+    a aml:seriesSet ;
     bag:hasItem aml:series_TempTime_001 ;
     bag:hasItem aml:Frog_numbers ;
     bag:hasItem aml:series_acceleration .
 
 aml:tracking_information
-    a aml:SeriesSet ;
+    a aml:seriesSet ;
     bag:hasItem aml:heights .
 
 aml:height_spec
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "height of tracked object" ;
-    aml:hasUnits aml:Unit_meters ;
+    aml:hasUnits aml:units_meters ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
     aml:hasPart aml:dataPointSpec_heights .
@@ -208,17 +208,17 @@ aml:dataPointSpec_heights
     a aml:DataPointSpecification ;
     aml:hasType aml:individualType .
 
-aml:Unit_meters 
-    a aml:Unit;
-    aml:hasPart aml:unit_m .
+aml:units_meters 
+    a aml:units;
+    aml:hasPart aml:units_m .
 
-aml:unit_m 
-    a aml:Unit;
+aml:units_m 
+    a aml:units;
     aml:factor 1 ;
-    aml:Adjusts aml:m .
+    aml:adjustsaml:m .
 
 aml:heights
-    a aml:Series ;
+    a aml:series ;
     aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:height_spec ;
@@ -250,19 +250,19 @@ aml:tracking_specification
     aml:usesTechnique aml:data_technique_002 .
 
 aml:technique_Step_0001
-    a aml:Technique ;
+    a aml:technique ;
     aml:includes aml:tracking_specification ;
     aml:includes aml:frog_entropy_specification .
 
 aml:data_technique_001
-    a aml:Technique ;
+    a aml:technique ;
     aml:extends aml:technique_Step_0001 ;
     aml:includes aml:seriesSpec_acceleration ;
     aml:includes aml:seriesSpec_FrogNumbers ;
     aml:includes aml:seriesSpec_TempTime_001 .
 
 aml:data_technique_002
-    a aml:Technique ;
+    a aml:technique ;
     aml:extends aml:technique_Step_0001 ;
     aml:includes aml:height_spec ;
     aml:includes aml:wrong_spec .
@@ -271,9 +271,9 @@ aml:wrong_spec
     a aml:parameterSpecification .
 
 aml:seriesSpec_prime_minister
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "current prime minster" ;
-    aml:hasUnits aml:Unit_null ;
+    aml:hasUnits aml:units_null ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:string ;
     aml:hasPart aml:dataPointSpec_prime_minister .
@@ -282,16 +282,16 @@ aml:dataPointSpec_prime_minister
     a aml:DataPointSpecification ;
     aml:hasType aml:individualType .
 
-aml:Unit_null
-    a aml:Unit;
-    aml:hasPart aml:unit_null .
+aml:units_null
+    a aml:units;
+    aml:hasPart aml:units_null .
 
-aml:unit_null 
-    a aml:Unit;
-    aml:Adjusts aml:1 .
+aml:units_null 
+    a aml:units;
+    aml:adjustsaml:1 .
 
 aml:series_prime_minister
-    a aml:Series ;
+    a aml:series ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_prime_minister ;
     ce:hasMember aml:dp_prime_minister_001 ;
@@ -323,9 +323,9 @@ aml:dp_prime_minister_003
 
 
 aml:seriesSpec_binary
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "binary strings" ;
-    aml:hasUnits aml:Unit_null ;
+    aml:hasUnits aml:units_null ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:string ;
     aml:hasPart aml: .
@@ -334,16 +334,16 @@ aml:dataPointSpec_binary
     a aml:DataPointSpecification ;
     aml:hasType aml:binaryEncoded .
 
-aml:Unit_null
-    a aml:Unit;
-    aml:hasPart aml:unit_null .
+aml:units_null
+    a aml:units;
+    aml:hasPart aml:units_null .
 
-aml:unit_null 
-    a aml:Unit;
-    aml:Adjusts aml:1 .
+aml:units_null 
+    a aml:units;
+    aml:adjustsaml:1 .
 
 aml:series_binary
-    a aml:Series ;
+    a aml:series ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_binary ;
     ce:hasMember aml:dp_binary_001 ;

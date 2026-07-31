@@ -4,8 +4,8 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?template
 WHERE {
-    ?step a aml:ExperimentStep ;
+    ?step a aml:experimentStep ;
           aml:isItemOf ?template .
     
-    ?template a aml:Template .
+    ?template a aml:template .
 }

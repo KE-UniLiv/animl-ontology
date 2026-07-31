@@ -4,66 +4,66 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 
 aml:ref_Basil_00010_1
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:sample_001 .
 
 aml:ref_Basil_00020_1
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:step_002 .
 
 aml:refSet_Basil_00010
-    a aml:AnimlReferenceSet ;
+    a aml:anIMLReferenceSet ;
     ce:hasMember aml:ref_Basil_00010_1 ;
     ce:hasMember aml:ref_Basil_00020_1 ;
     aml:subject aml:experiment_001 .
 
 aml:step_001
-    a aml:ExperimentStep .
+    a aml:experimentStep .
 
 aml:step_002
-    a aml:ExperimentStep .
+    a aml:experimentStep .
 
 aml:experiment_001
-  a aml:Experiment ;
+  a aml:experiment ;
   ce:hasMember aml:step_001;
   ce:hasMember aml:step_002.
 
 aml:ref_003
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:step_001 .
 
 aml:ref_004
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:dataPoint_001 .
 
 aml:refSet_002
-    a aml:AnimlReferenceSet ;
+    a aml:anIMLReferenceSet ;
     ce:hasMember aml:ref_003 ;
     ce:hasMember aml:ref_004 ;
     aml:subject aml:sampleSet_001 .
 
 aml:sample_001
-    a aml:Sample .
+    a aml:sample .
 
 aml:sample_002
-    a aml:Sample .
+    a aml:sample .
 
 aml:sampleSet_001
-  a aml:SampleSet ;
+  a aml:sampleSet ;
   ce:hasMember aml:sample_001;
   ce:hasMember aml:sample_002.
 
 
 aml:ref_005
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:dataPoint_001 .
 
 aml:ref_006
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:dataPoint_002 .
 
 aml:refSet_003
-    a aml:AnimlReferenceSet ;
+    a aml:anIMLReferenceSet ;
     ce:hasMember aml:ref_005 ;
     ce:hasMember aml:ref_006 ;
     aml:subject aml:series_001 .
@@ -75,5 +75,5 @@ aml:dataPoint_002
     a aml:DataPoint .
 
 aml:series_001
-  a aml:Series ;
+  a aml:series ;
   ce:hasMember aml:dataPoint_001 .

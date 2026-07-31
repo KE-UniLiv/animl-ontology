@@ -5,7 +5,7 @@
 
 aml:NoInfrastructureMayIncludeDerivedSamplesShape
     a sh:NodeShape ;
-    sh:targetClass aml:Infrastructure ;
+    sh:targetClass aml:infrastructure ;
     sh:sparql [
         sh:message "Infrastructure may not include samples derived by its ExperimentStep." ;
         sh:select """
@@ -15,7 +15,7 @@ aml:NoInfrastructureMayIncludeDerivedSamplesShape
                 ?this aml:includes/ce:hasMember/aml:pointsTo ?badSample .
 
                 # ExperimentStep that includes this infrastructure
-                ?step a aml:ExperimentStep ;
+                ?step a aml:experimentStep ;
                       aml:includesInfrastructure ?this ;
                       aml:usesTechnique/aml:derives ?spec .
 
@@ -29,7 +29,7 @@ aml:NoInfrastructureMayIncludeDerivedSamplesShape
 
 aml:NoResultMayIncludeConsumedSamplesShape
     a sh:NodeShape ;
-    sh:targetClass aml:ExperimentStep ;
+    sh:targetClass aml:experimentStep ;
     sh:sparql [
         sh:message "An ExperimentStep result may not include samples consumed by the same ExperimentStep." ;
         sh:select """

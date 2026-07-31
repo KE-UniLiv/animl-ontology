@@ -3,6 +3,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?email
 WHERE {
-    ?author a aml:Agent ;
+    ?author a aml:agent ;
             aml:email ?email .
 }

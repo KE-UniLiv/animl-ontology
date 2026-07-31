@@ -3,7 +3,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?item ?oldValue
 WHERE {
-    ?change a aml:Change ;
+    ?change a aml:change ;
             aml:oldValue ?oldValue .
   	?change aml:affects ?item .
 }

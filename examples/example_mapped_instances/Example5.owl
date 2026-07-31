@@ -8,11 +8,11 @@
   xmlns:ns4="http://purl.allotrope.org/ontologies/result#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <aml:Document rdf:about="http://example.org/animl/example5#document">
+  <aml:document rdf:about="http://example.org/animl/example5#document">
     <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-    <aml:animlVersion>1.0</aml:animlVersion>
+    <aml:anIMLVersion>1.0</aml:anIMLVersion>
     <aml:denotes>
-      <aml:Experiment rdf:about="http://example.org/animl/example5#experiment">
+      <aml:experiment rdf:about="http://example.org/animl/example5#experiment">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#step_BS_372904"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#step_BS_372905"/>
@@ -30,10 +30,10 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example5#step_BS_372917"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#step_BS_372918"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#step_BS_372919"/>
-      </aml:Experiment>
+      </aml:experiment>
     </aml:denotes>
     <aml:hasSampleSet>
-      <aml:SampleSet rdf:about="http://example.org/animl/example5#sampleset">
+      <aml:sampleSet rdf:about="http://example.org/animl/example5#sampleset">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#sample_Basil_00002"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#sample_Cinnamon_00005"/>
@@ -48,10 +48,10 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example5#sample_Thyme_00010"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#sample_Turmeric_00007"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example5#sample_Vanilla_00008"/>
-      </aml:SampleSet>
+      </aml:sampleSet>
     </aml:hasSampleSet>
-  </aml:Document>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_1">
+  </aml:document>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -62,8 +62,8 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Cocoa_00013_1">
+  </aml:parameterSpecification>
+  <aml:category rdf:about="http://example.org/animl/example5#category_Cocoa_00013_1">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Cocoa_00013_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -96,15 +96,15 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
+  </aml:category>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Oregano_00003_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_3">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_3"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Ingredient ID</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingr-000000092512</aml:pointValue>
@@ -112,20 +112,20 @@
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Pepper_00004_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_2">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_2"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Lot Number</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I-250910-00035</aml:pointValue>
   </aml:Parameter>
-  <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372907">
+  <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372907">
     <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/stir.atdd</aml:identifier>
     <aml:name>Add Stirring Instruction</aml:name>
-  </aml:Technique>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_2">
+  </aml:technique>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -136,8 +136,8 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sophia.Sarfraz</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_1">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -148,23 +148,23 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372910">
+  </aml:parameterSpecification>
+  <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372910">
     <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
     <aml:name>Add Ingredient</aml:name>
-  </aml:Technique>
+  </aml:technique>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_2_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_2">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_2"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Beaker + Stirrer + Formulation</aml:name>
   </aml:Parameter>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_2">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -175,14 +175,14 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I-250826-00145</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372914_1">
+  </aml:parameterSpecification>
+  <aml:result rdf:about="http://example.org/animl/example5#result_BS_372914_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_2">
+  </aml:result>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -193,37 +193,37 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I-250819-00040</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372915">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372915">
     <aml:name>#10 - Add 0.875g of Rosemary</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372915_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372915_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372915">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372915">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
+  </aml:experimentStep>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Cinnamon_00005_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_3">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cinnamon_00005_1_3"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Ingredient ID</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingr-000000001746</aml:pointValue>
   </aml:Parameter>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Pepper_00004_1">
+  <aml:category rdf:about="http://example.org/animl/example5#category_Pepper_00004_1">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Pepper_00004_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -249,8 +249,8 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Ginger_00006_1">
+  </aml:category>
+  <aml:category rdf:about="http://example.org/animl/example5#category_Ginger_00006_1">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Ginger_00006_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -283,8 +283,8 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_2">
+  </aml:category>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -295,36 +295,36 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I-220513-00015</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_2_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_3">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_3"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>End Weight</aml:name>
   </aml:Parameter>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372904">
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372904">
     <aml:name>#15 - Wait for 360.0s</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372904_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372904_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372904">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372904">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/waitforduration.atdd</aml:identifier>
         <aml:name>Add Wait Duration Instruction</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_1">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -335,31 +335,31 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_5">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_5">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_5"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Group</aml:name>
   </aml:Parameter>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Vanilla_00008_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_2">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Vanilla_00008_1_2"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Lot Number</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I-231204-00124</aml:pointValue>
   </aml:Parameter>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_9">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_9">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -369,19 +369,19 @@
         <aml:name>Manufactured</aml:name>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Oregano_00003_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_4">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_4"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Link</aml:name>
   </aml:Parameter>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Cinnamon_00005_1">
+  <aml:category rdf:about="http://example.org/animl/example5#category_Cinnamon_00005_1">
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Cinnamon_00005_1_1"/>
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Cinnamon_00005_1_2"/>
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Cinnamon_00005_1_3"/>
@@ -393,13 +393,13 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_4">
+  </aml:category>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cinnamon_00005_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cinnamon_00005_1_4"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_4">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -409,21 +409,21 @@
         <aml:name>Link</aml:name>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Pepper_00004">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Pepper_00004">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Pepper_00004_1"/>
     <aml:identifier>Pepper-00004</aml:identifier>
     <aml:name>Pepper</aml:name>
-  </aml:Sample>
+  </aml:sample>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_7">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_7">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_7">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_7"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Batch Type</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formulation</aml:pointValue>
@@ -431,15 +431,15 @@
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_8">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_8">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_8">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/datetime"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_8"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Expiry</aml:name>
   </aml:Parameter>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_4">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -449,8 +449,8 @@
         <aml:name>Link</aml:name>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_3">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -461,8 +461,8 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mixt-000000097526</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Matcha_00001_2">
+  </aml:parameterSpecification>
+  <aml:category rdf:about="http://example.org/animl/example5#category_Matcha_00001_2">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_2_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -487,8 +487,8 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Back Weighing Information</aml:name>
-  </aml:Category>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_4">
+  </aml:category>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -498,19 +498,19 @@
         <aml:name>Link</aml:name>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_4">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_4"/>
-  </aml:ParameterSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372905_1">
+  </aml:parameterSpecification>
+  <aml:result rdf:about="http://example.org/animl/example5#result_BS_372905_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Thyme_00010_1">
+  </aml:result>
+  <aml:category rdf:about="http://example.org/animl/example5#category_Thyme_00010_1">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Thyme_00010_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -543,37 +543,37 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
+  </aml:category>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Matcha_00001_1_6">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_6">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_6">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_6"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Total Amount Made</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3500.0</aml:pointValue>
   </aml:Parameter>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372916">
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372916">
     <aml:name>#11 - Add 9.1g of Thyme</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372916_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372916_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372916">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372916">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_3">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -584,36 +584,36 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mixt-000000134021</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Basil_00002">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Basil_00002">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example5#category_Basil_00002_1">
+      <aml:category rdf:about="http://example.org/animl/example5#category_Basil_00002_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Basil_00002_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Basil_00002_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Basil_00002_1_3"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Basil_00002_1_4"/>
         <aml:name>Ingredient details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Basil-00002</aml:identifier>
     <aml:name>Basil</aml:name>
-  </aml:Sample>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Turmeric_00007">
+  </aml:sample>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Turmeric_00007">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example5#category_Turmeric_00007_1">
+      <aml:category rdf:about="http://example.org/animl/example5#category_Turmeric_00007_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Turmeric_00007_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Turmeric_00007_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Turmeric_00007_1_3"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Turmeric_00007_1_4"/>
         <aml:name>Ingredient details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Turmeric-00007</aml:identifier>
     <aml:name>Turmeric</aml:name>
-  </aml:Sample>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_1">
+  </aml:sample>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -624,70 +624,70 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_2">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_2"/>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Rosemary_00009">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Rosemary_00009">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example5#category_Rosemary_00009_1">
+      <aml:category rdf:about="http://example.org/animl/example5#category_Rosemary_00009_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Rosemary_00009_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Rosemary_00009_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Rosemary_00009_1_3"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Rosemary_00009_1_4"/>
         <aml:name>Ingredient details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Rosemary-00009</aml:identifier>
     <aml:name>Rosemary</aml:name>
-  </aml:Sample>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372909">
+  </aml:sample>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372909">
     <aml:name>#3 - Add 35.0g of Oregano</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372909_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372909_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372909">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372909">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372914">
+  </aml:experimentStep>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372914">
     <aml:name>#9 - Add 155.555555g of Vanilla</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example5#result_BS_372914_1"/>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372914">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372914">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_3">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_3"/>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Ginger_00006">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Ginger_00006">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Ginger_00006_1"/>
     <aml:identifier>Ginger-00006</aml:identifier>
     <aml:name>Ginger</aml:name>
-  </aml:Sample>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_4">
+  </aml:sample>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_4"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_3">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -698,12 +698,12 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingr-000000012786</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372905">
+  </aml:parameterSpecification>
+  <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372905">
     <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/heatcool.atdd</aml:identifier>
     <aml:name>Add Temperature Instruction</aml:name>
-  </aml:Technique>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_4">
+  </aml:technique>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -714,29 +714,29 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Released</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372919">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372919">
     <aml:name>#14 - Add 28.665g of Cocoa</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372919_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372919_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372919">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372919">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372911">
+  </aml:experimentStep>
+  <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372911">
     <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
     <aml:name>Add Ingredient</aml:name>
-  </aml:Technique>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_1">
+  </aml:technique>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -747,8 +747,8 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Coffee_00011_1">
+  </aml:parameterSpecification>
+  <aml:category rdf:about="http://example.org/animl/example5#category_Coffee_00011_1">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Coffee_00011_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -781,23 +781,23 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_1">
+  </aml:category>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_1"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_1">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_1"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_1">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_1"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_2">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -808,98 +808,98 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-240726-00030</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Thyme_00010">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Thyme_00010">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Thyme_00010_1"/>
     <aml:identifier>Thyme-00010</aml:identifier>
     <aml:name>Thyme</aml:name>
-  </aml:Sample>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372912">
+  </aml:sample>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372912">
     <aml:name>#7 - Add 0.291667g of Ginger</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372912_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372912_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372912">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372912">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Cocoa_00013">
+  </aml:experimentStep>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Cocoa_00013">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Cocoa_00013_1"/>
     <aml:identifier>Cocoa-00013</aml:identifier>
     <aml:name>Cocoa</aml:name>
-  </aml:Sample>
+  </aml:sample>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Tea_00012_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_2">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Tea_00012_1_2"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Lot Number</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I-250128-00079</aml:pointValue>
   </aml:Parameter>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Vanilla_00008">
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Vanilla_00008">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example5#category_Vanilla_00008_1">
+      <aml:category rdf:about="http://example.org/animl/example5#category_Vanilla_00008_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Vanilla_00008_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Vanilla_00008_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Vanilla_00008_1_3"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Vanilla_00008_1_4"/>
         <aml:name>Ingredient details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Vanilla-00008</aml:identifier>
     <aml:name>Vanilla</aml:name>
-  </aml:Sample>
+  </aml:sample>
   <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Turmeric_00007_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_2">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Turmeric_00007_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Turmeric_00007_1_2"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Lot Number</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-250723-00018</aml:pointValue>
   </aml:Parameter>
-  <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372911_1">
+  <aml:result rdf:about="http://example.org/animl/example5#result_BS_372911_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372917">
+  </aml:result>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372917">
     <aml:name>#12 - Add 2.45g of Coffee</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372917_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372917_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372917">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372917">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Oregano_00003_1">
+  </aml:experimentStep>
+  <aml:category rdf:about="http://example.org/animl/example5#category_Oregano_00003_1">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example5#parameter_Oregano_00003_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -912,30 +912,30 @@
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_3"/>
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_4"/>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372910">
+  </aml:category>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372910">
     <aml:name>#5 - Add 12.6g of Pepper</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372910_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372910_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example5#technique_BS_372910"/>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_4">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_4"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_2">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_2"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_4">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Tea_00012_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -945,8 +945,8 @@
         <aml:name>Link</aml:name>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_3">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/datetime"/>
     <aml:usedBy>
@@ -956,50 +956,50 @@
         <aml:name>Created</aml:name>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Cinnamon_00005">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Cinnamon_00005">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Cinnamon_00005_1"/>
     <aml:identifier>Cinnamon-00005</aml:identifier>
     <aml:name>Cinnamon</aml:name>
-  </aml:Sample>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_1">
+  </aml:sample>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_1"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_4">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_4"/>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372913">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372913">
     <aml:name>#8 - Add 38.5g of Turmeric</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372913_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372913_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372913">
+      <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372913">
         <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
         <aml:name>Add Ingredient</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_4">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_4"/>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Matcha_00001">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Matcha_00001">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:comment>DEFT DOE EU Blue 4% Comete 0% 555 36deg</aml:comment>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example5#category_Matcha_00001_1">
+      <aml:category rdf:about="http://example.org/animl/example5#category_Matcha_00001_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_3"/>
@@ -1010,61 +1010,61 @@
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_8"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_1_9"/>
         <aml:name>Formulation details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Matcha_00001_2"/>
     <aml:identifier>Matcha-00001</aml:identifier>
     <aml:name>Matcha</aml:name>
-  </aml:Sample>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372907">
+  </aml:sample>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372907">
     <aml:name>#2 - Start stirring at 159.74rpm</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372907_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372907_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example5#technique_BS_372907"/>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_3">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_3"/>
-  </aml:ParameterSpecification>
-  <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372908">
+  </aml:parameterSpecification>
+  <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372908">
     <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
     <aml:name>Add Ingredient</aml:name>
-  </aml:Technique>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_1">
+  </aml:technique>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_1"/>
-  </aml:ParameterSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372908_1">
+  </aml:parameterSpecification>
+  <aml:result rdf:about="http://example.org/animl/example5#result_BS_372908_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372905">
+  </aml:result>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372905">
     <aml:name>#16 - Heat to 28.1C and continue</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example5#result_BS_372905_1"/>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example5#technique_BS_372905"/>
-  </aml:ExperimentStep>
-  <aml:Category rdf:about="http://example.org/animl/example5#category_Tea_00012_1">
+  </aml:experimentStep>
+  <aml:category rdf:about="http://example.org/animl/example5#category_Tea_00012_1">
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Tea_00012_1_1"/>
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Tea_00012_1_2"/>
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Tea_00012_1_3"/>
     <aml:hasParameter rdf:resource="http://example.org/animl/example5#parameter_Tea_00012_1_4"/>
     <aml:name>Ingredient details</aml:name>
-  </aml:Category>
-  <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372918">
+  </aml:category>
+  <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372918">
     <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/add.atdd</aml:identifier>
     <aml:name>Add Ingredient</aml:name>
-  </aml:Technique>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_1">
+  </aml:technique>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -1075,19 +1075,19 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danny.McMahon</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372908">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372908">
     <aml:name>#1 - Add 3152.212778g of Basil</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example5#result_BS_372908_1"/>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example5#technique_BS_372908"/>
-  </aml:ExperimentStep>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Oregano_00003">
+  </aml:experimentStep>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Oregano_00003">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Oregano_00003_1"/>
     <aml:identifier>Oregano-00003</aml:identifier>
     <aml:name>Oregano</aml:name>
-  </aml:Sample>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_1">
+  </aml:sample>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -1098,14 +1098,14 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lot</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Coffee_00011">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Coffee_00011">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Coffee_00011_1"/>
     <aml:identifier>Coffee-00011</aml:identifier>
     <aml:name>Coffee</aml:name>
-  </aml:Sample>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_3">
+  </aml:sample>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Basil_00002_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -1116,43 +1116,43 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingr-000000000007</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372911">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372911">
     <aml:name>#6 - Add 1.75g of Cinnamon</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example5#result_BS_372911_1"/>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example5#technique_BS_372911"/>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_4">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Thyme_00010_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Thyme_00010_1_4"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_2">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Coffee_00011_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Coffee_00011_1_2"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_5">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Matcha_00001_2_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Matcha_00001_2_5"/>
-  </aml:ParameterSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example5#sample_Tea_00012">
+  </aml:parameterSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example5#sample_Tea_00012">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example5#category_Tea_00012_1"/>
     <aml:identifier>Tea-00012</aml:identifier>
     <aml:name>Tea</aml:name>
-  </aml:Sample>
-  <aml:Technique rdf:about="http://example.org/animl/example5#technique_BS_372906">
+  </aml:sample>
+  <aml:technique rdf:about="http://example.org/animl/example5#technique_BS_372906">
     <aml:identifier>https://github.com/applied-scientific-technologies/AnIMLTechniques/raw/main/heatcool.atdd</aml:identifier>
     <aml:name>Add Temperature Instruction</aml:name>
-  </aml:Technique>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_2">
+  </aml:technique>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_2"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_3">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Vanilla_00008_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -1163,19 +1163,19 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingr-000000099047</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372906_1">
+  </aml:parameterSpecification>
+  <aml:result rdf:about="http://example.org/animl/example5#result_BS_372906_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_1">
+  </aml:result>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Oregano_00003_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Oregano_00003_1_1"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_4">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Rosemary_00009_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -1185,42 +1185,42 @@
         <aml:name>Link</aml:name>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_1">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_1"/>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372918">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372918">
     <aml:name>#13 - Add 313.25g of Tea</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example5#result_BS_372918_1">
+      <aml:result rdf:about="http://example.org/animl/example5#result_BS_372918_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example5#technique_BS_372918"/>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_3">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Pepper_00004_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Pepper_00004_1_3"/>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example5#step_BS_372906">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example5#step_BS_372906">
     <aml:name>#4 - Heat to 28.08C and wait until reached</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example5#result_BS_372906_1"/>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example5#technique_BS_372906"/>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_3">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Ginger_00006_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Ginger_00006_1_3"/>
-  </aml:ParameterSpecification>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_3">
+  </aml:parameterSpecification>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example5#paramSpec_Cocoa_00013_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example5#parameter_Cocoa_00013_1_3"/>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
 </rdf:RDF>

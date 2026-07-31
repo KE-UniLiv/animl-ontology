@@ -4,7 +4,7 @@ PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 
 SELECT ?step ?reference ?sample
 WHERE {
-    ?step a aml:ExperimentStep ;
+    ?step a aml:experimentStep ;
 		aml:producesResult ?result .
     ?result aml:includes ?referenceSet .
     ?referenceSet ce:hasMember ?reference .

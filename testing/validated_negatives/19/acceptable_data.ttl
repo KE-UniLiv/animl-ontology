@@ -5,64 +5,64 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 aml:sampleSet_Basil_00010
-    a aml:SampleSet ;
+    a aml:sampleSet ;
     aml:name "Sample Set A" ;
     ce:hasMember aml:sample_Basil_00010 ;
     ce:hasMember aml:sample_Basil_00020 .
 
 aml:sample_Basil_00010
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample A" .
 
 aml:sample_Basil_00020
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample B" .
 
 aml:sampleSet_Basil_00020
-    a aml:SampleSet ;
+    a aml:sampleSet ;
     aml:name "Sample Set B" ;
     ce:hasMember aml:sample_Basil_00030 ;
     ce:hasMember aml:sample_Basil_00040 .
 
 aml:sample_Basil_00030
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample C" .
 
 aml:sample_Basil_00040
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample D" .
 
 aml:refSpec_Step_0001_A
-    a aml:AnimlReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "output reference spec A" .
 
 aml:refSpec_Step_0001_B
-    a aml:AnimlReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "output reference spec B" .
 
 
 aml:ref_Step_0001_A
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:sample_Basil_00010 ;
     aml:hasSpecification aml:refSpec_Step_0001_A .
 
 
 aml:ref_Step_0001_B
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:sample_Basil_00020 ;
     aml:hasSpecification aml:refSpec_Step_0001_B .
 
 
 
 aml:refSet_Step_0001
-    a aml:AnimlReferenceSet ;
+    a aml:anIMLReferenceSet ;
     ce:hasMember aml:ref_Step_0001_A ;
     ce:hasMember aml:ref_Step_0001_B ;
     aml:subject aml:sampleSet_Basil_00010 .
 
 
 aml:technique_Step_0001
-    a aml:Technique ;
+    a aml:technique ;
     aml:name "Weighing" ;
     aml:version "1.0" ;
     aml:citation "Internal SOP 2025" ;
@@ -72,45 +72,45 @@ aml:technique_Step_0001
 
 
 aml:refSet_Step_0002
-    a aml:AnimlReferenceSet ;
+    a aml:anIMLReferenceSet ;
     ce:hasMember aml:ref_Step_0002_A ;
     ce:hasMember aml:ref_Step_0002_B ;
     aml:subject aml:sampleSet_Basil_00020 .
 
 aml:ref_Step_0002_A
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:sample_Basil_00030 ;
     aml:hasSpecification aml:refSpec_Step_0002_A .
 
 
 aml:ref_Step_0002_B
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:sample_Basil_00040 ;
     aml:hasSpecification aml:refSpec_Step_0002_B .
 
 aml:refSpec_Step_0002_A
-    a aml:AnimlReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "input reference spec A" .
 
 aml:refSpec_Step_0002_B
-    a aml:AnimlReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "input reference spec B" .
 
 aml:balance_001
-    a aml:Infrastructure ;
+    a aml:infrastructure ;
     aml:name "Analytical Balance" ;
     aml:barcode "BAL-001" ;
     aml:includes aml:refSet_Step_0001_inputs . 
 
 aml:result_Step_0001
-    a aml:Result ;
+    a aml:result ;
     aml:name "Mass measurement result" ;
     aml:sourceDataLocation "file://results/step0001_mass.csv" ;
     aml:includes aml:refSet_Step_0001 ;
     aml:hasResultCategory aml:measurements_001.
 
 aml:experimentStep_0001
-    a aml:ExperimentStep ;
+    a aml:experimentStep ;
     aml:name "Weigh Sample A" ;
     aml:timeStamp "2026-02-26T13:05:00Z"^^xsd:dateTime ;
     aml:usesTechnique aml:technique_Step_0001 ;
@@ -120,7 +120,7 @@ aml:experimentStep_0001
     seq:directlyPrecedes aml:experimentStep_0002 .
 
 aml:experimentStep_0002
-    a aml:ExperimentStep ;
+    a aml:experimentStep ;
     aml:name "Prepare Sample Set B" ;
     aml:timeStamp "2026-02-26T12:30:00Z"^^xsd:dateTime ;
     aml:producesResult aml:result_Step_0002 ;
@@ -128,41 +128,41 @@ aml:experimentStep_0002
     ce:directlyFollows aml:experimentStep_0001 .
 
 aml:result_Step_0002
-    a aml:Result ;
+    a aml:result ;
     aml:name "Mass measurement result" ;
     aml:sourceDataLocation "file://results/step0001_mass.csv" .
 
 aml:refSpec_Step_0002_output
-    a aml:AnimlReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "output reference spec for step 0002" .
 
 aml:ref_Step_0002_output
-    a aml:AnimlReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:experimentStep_0002 ;
     aml:hasSpecification aml:refSpec_Step_0002_output .
 
 aml:refSet_Step_0001_inputs
-    a aml:AnimlReferenceSet ;
+    a aml:anIMLReferenceSet ;
     ce:hasMember aml:ref_Step_0002_output ;
     aml:subject aml:experimentStep_0002 .
 
 aml:experiment_0001
-    a aml:Experiment ;
+    a aml:experiment ;
     ce:hasMember aml:experimentStep_0001;
     ce:hasMember aml:experimentStep_0002.
 
 aml:measure
-    a aml:Template ;
+    a aml:template ;
     aml:name "stanley" ;
     bag:hasItem aml:experimentStep_0001 .
 
 aml:prepare
-    a aml:Template ;
+    a aml:template ;
     aml:name "jim" ;
     bag:hasItem aml:experimentStep_0002 .
 
 aml:measurements_001
-    a aml:Category ;
+    a aml:category ;
     aml:hasParameter aml:startTime_001 ;
     aml:hasSeriesSet aml:Frog_entropy_information .
 
@@ -171,7 +171,7 @@ aml:startTime_001
     aml:value "2026-03-03T10:15:00Z"^^xsd:dateTime .
 
 aml:measurements_002
-    a aml:Category ;
+    a aml:category ;
     aml:hasParameter aml:startTime_002 .
 
 aml:startTime_002
@@ -179,68 +179,68 @@ aml:startTime_002
     aml:value "2026-03-03T10:15:00Z"^^xsd:dateTime .
 
 aml:role_Reviewer_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_QCSoftware ;
-    aml:hasType aml:Reviewer .
+    aml:hasType aml:reviewer .
 
 aml:agent_QCSoftware
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:softwareAgent ;
     bag:isClassifiedBy aml:role_Reviewer_01 .
 
 aml:role_Experimenter_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_robot_arm ;
-    aml:hasType aml:Experimenter .
+    aml:hasType aml:experimenter .
 
 aml:agent_robot_arm
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:HardwareAgent ;
     bag:isClassifiedBy aml:role_Experimenter_01 .
 
 aml:role_Reviewer_02
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_Dave_in_assurance ;
-    aml:hasType aml:Reviewer.
+    aml:hasType aml:reviewer.
 
 aml:agent_Dave_in_assurance
-    a aml:Agent ;
-    aml:hasType aml:HumanAgent ;
+    a aml:agent ;
+    aml:hasType aml:humanagent ;
     bag:isClassifiedBy aml:role_Reviewer_02 .
 
 
 aml:role_Author_02
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:NLP_Software ;
-    aml:hasType aml:Author.
+    aml:hasType aml:author.
 
 aml:NLP_Software
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:SoftwareAgent ;
     bag:isClassifiedBy aml:role_Author_02 .
 
 aml:role_Reviewer_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_QCSoftware ;
-    aml:hasType aml:Reviewer .
+    aml:hasType aml:reviewer .
 
 aml:agent_QCSoftware
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:softwareAgent ;
     bag:isClassifiedBy aml:role_Reviewer_01 .
 
 aml:automated_pipeline 
-    a aml:Method ;
+    a aml:method ;
     aml:requiresRole aml:role_Reviewer_01 .
 
 aml:centaur_pipeline 
-    a aml:Method ;
+    a aml:method ;
     aml:requiresRole aml:role_Experimenter_01 ;
     aml:requiresRole aml:role_Reviewer_02 ;
     aml:requiresRole aml:role_Author_02 .
 
 aml:robot_settings
-    a aml:Category ;
+    a aml:category ;
     aml:hasParameter aml:bearing_A_x ;
     aml:hasParameter aml:bearing_A_y ;
     aml:hasParameter aml:bearing_A_z ;
@@ -264,7 +264,7 @@ aml:caliper_distance
 
 
 aml:review_procedures
-    a aml:Category ;
+    a aml:category ;
     aml:hasParameter aml:F1_score_threshold .
 
 aml:F1_score_threshold
@@ -273,10 +273,10 @@ aml:F1_score_threshold
 
 
 aml:seriesSpec_TempTime_001
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Temperature vs Time" ;
     aml:quantity "Temperature" ;
-    aml:hasUnits aml:Unit_Celsius ;
+    aml:hasUnits aml:units_Celsius ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
     aml:hasPart aml:dataPointSpec_TempTime_001 .
@@ -285,37 +285,37 @@ aml:dataPointSpec_TempTime_001
     a aml:DataPointSpecification ;
     aml:hasType aml:individualType .
 
-aml:Unit_Celsius 
-    a aml:Unit;
-    aml:hasPart aml:unit_Celsius .
+aml:units_Celsius 
+    a aml:units;
+    aml:hasPart aml:units_Celsius .
 
-aml:unit_Celsius 
-    a aml:Unit;
+aml:units_Celsius 
+    a aml:units;
     aml:offset 273.15 ;
-    aml:Adjusts aml:k .
+    aml:adjustsaml:k .
 
 
 
-aml:Unit_KPH 
-    a aml:Unit;
-    aml:hasPart aml:unit_Km ;
-    aml:hasPart aml:unit_Hour .
+aml:units_KPH 
+    a aml:units;
+    aml:hasPart aml:units_Km ;
+    aml:hasPart aml:units_Hour .
 
-aml:unit_Km 
-    a aml:Unit;
+aml:units_Km 
+    a aml:units;
     aml:factor 1000 ;
-    aml:Adjusts aml:m .
+    aml:adjustsaml:m .
 
-aml:unit_Hour 
-    a aml:Unit;
+aml:units_Hour 
+    a aml:units;
     aml:factor 3600 ;
-    aml:Adjusts aml:s .
+    aml:adjustsaml:s .
 
 
 
 
 aml:series_TempTime_001
-    a aml:Series ;
+    a aml:series ;
     aml:description "Temperature readings" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_TempTime_001 ;
@@ -324,34 +324,34 @@ aml:series_TempTime_001
     ce:hasMember aml:dp_TempTime_002 ;
     ce:hasMember aml:dp_TempTime_003 .
 
-aml:Unit_Celsius 
-    a aml:Unit;
-    aml:hasPart aml:unit_Celsius .
+aml:units_Celsius 
+    a aml:units;
+    aml:hasPart aml:units_Celsius .
 
-aml:unit_Celsius 
-    a aml:Unit;
+aml:units_Celsius 
+    a aml:units;
     aml:offset 273.15 ;
-    aml:Adjusts aml:k .
+    aml:adjustsaml:k .
 
 
-aml:Unit_KPH 
-    a aml:Unit;
-    aml:hasPart aml:unit_Km ;
-    aml:hasPart aml:unit_Hour .
+aml:units_KPH 
+    a aml:units;
+    aml:hasPart aml:units_Km ;
+    aml:hasPart aml:units_Hour .
 
-aml:unit_Km 
-    a aml:Unit;
+aml:units_Km 
+    a aml:units;
     aml:factor 1000 ;
-    aml:Adjusts aml:m .
+    aml:adjustsaml:m .
 
-aml:unit_Hour 
-    a aml:Unit;
+aml:units_Hour 
+    a aml:units;
     aml:factor 3600 ;
-    aml:Adjusts aml:s .
+    aml:adjustsaml:s .
 
 
 aml:series_TempTime_001
-    a aml:Series ;
+    a aml:series ;
     aml:description "Temperature readings" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_TempTime_001 ;
@@ -385,10 +385,10 @@ aml:dp_TempTime_003
     seq:directlyFollows aml:dp_TempTime_002 .
 
 aml:seriesSpec_FrogNumbers
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Frogs over time" ;
     aml:quantity "Frogs" ;
-    aml:hasUnits aml:Unit_null ;
+    aml:hasUnits aml:units_null ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:dataPointSpec_FrogNumber .
@@ -397,17 +397,17 @@ aml:dataPointSpec_FrogNumber
     a aml:DataPointSpecification ;
     aml:hasType aml:individualType .
 
-aml:Unit_null
-    a aml:Unit;
-    aml:hasPart aml:unit_null .
+aml:units_null
+    a aml:units;
+    aml:hasPart aml:units_null .
 
-aml:unit_null 
-    a aml:Unit;
-    aml:Adjusts aml:1 .
+aml:units_null 
+    a aml:units;
+    aml:adjustsaml:1 .
 
 
 aml:Frog_numbers
-    a aml:Series ;
+    a aml:series ;
     aml:description "Frog" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_FrogNumbers ;
@@ -439,9 +439,9 @@ aml:dp_FrogNumber_003
     seq:directlyFollows aml:dp_FrogNumber_002 .
 
 aml:seriesSpec_acceleration
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "Acceleration over Time" ;
-    aml:hasUnits aml:Unit_KPH ;
+    aml:hasUnits aml:units_KPH ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:int32 ;
     aml:hasPart aml:Acceleration_increment_spec .
@@ -455,7 +455,7 @@ aml:velocity_base_spec
     aml:hasType aml:individualType .
 
 aml:series_acceleration
-    a aml:Series ;
+    a aml:series ;
     aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:seriesSpec_acceleration ;
@@ -487,20 +487,20 @@ aml:increment_2_acceleration
     seq:directlyFollows aml:increment_1_acceleration .
 
 aml:Frog_entropy_information
-    a aml:SeriesSet ;
+    a aml:seriesSet ;
     bag:hasItem aml:series_TempTime_001 ;
     bag:hasItem aml:Frog_numbers ;
     bag:hasItem aml:series_acceleration .
 
 aml:tracking_information
-    a aml:SeriesSet ;
+    a aml:seriesSet ;
     bag:hasItem aml:heights .
 
 
 aml:height_spec
-    a aml:SeriesSpecification ;
+    a aml:seriesSpecification ;
     aml:description "height of tracked object" ;
-    aml:hasUnits aml:Unit_meters ;
+    aml:hasUnits aml:units_meters ;
     aml:hasPlotScale aml:linear ;
     aml:hasType aml:float32 ;
     aml:hasPart aml:dataPointSpec_heights .
@@ -509,17 +509,17 @@ aml:dataPointSpec_heights
     a aml:DataPointSpecification ;
     aml:hasType aml:individualType .
 
-aml:Unit_meters 
-    a aml:Unit;
-    aml:hasPart aml:unit_m .
+aml:units_meters 
+    a aml:units;
+    aml:hasPart aml:units_m .
 
-aml:unit_m 
-    a aml:Unit;
+aml:units_m 
+    a aml:units;
     aml:factor 1 ;
-    aml:Adjusts aml:m .
+    aml:adjustsaml:m .
 
 aml:heights
-    a aml:Series ;
+    a aml:series ;
     aml:description "acceleration" ;
     aml:visibility true ;
     aml:hasSpecification aml:height_spec ;

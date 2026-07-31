@@ -8,7 +8,7 @@ WHERE {
     ?dataPoint aml:hasSpecification ?specification .
     ?specification aml:hasType aml:autoIncremented.
     ?dataPoint aml:value ?incrementValue .
-    ?series a aml:Series .
+    ?series a aml:series .
     ?series aml:hasSpecification ?seriesSpec .
     ?seriesSpec aml:hasPart ?specification .
   FILTER EXISTS {?dataPoint seq:directlyFollows ?w . } .

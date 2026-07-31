@@ -5,6 +5,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?unit ?conversionFactor
 WHERE {
-    ?unit a aml:units;
+    ?unit a aml:unitss;
           aml:factor ?conversionFactor .
 }

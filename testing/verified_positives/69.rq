@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?citation
 WHERE {
-    ?technique a aml:Technique ;
+    ?technique a aml:technique ;
                aml:citation ?citation .
 }

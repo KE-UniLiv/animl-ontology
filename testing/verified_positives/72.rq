@@ -3,6 +3,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?seriesID
 WHERE {
-    ?series a aml:Series ;
+    ?series a aml:series ;
             aml:id ?seriesID .
 }

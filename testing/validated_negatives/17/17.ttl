@@ -5,9 +5,9 @@
 
 # Constraint: an ExperimentStep’s infrastructure must not refer to any Sample
 # that has been consumed by an earlier ExperimentStep.
-aml:ExperimentStep_InfrastructureMustNotIncludeConsumedSamples
+aml:experimentStep_InfrastructureMustNotIncludeConsumedSamples
     a sh:NodeShape ;
-    sh:targetClass aml:ExperimentStep ;
+    sh:targetClass aml:experimentStep ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "Infrastructure may not include references to samples consumed by earlier experiment steps." ;
@@ -19,7 +19,7 @@ aml:ExperimentStep_InfrastructureMustNotIncludeConsumedSamples
               ?infra aml:includes ?infraRefSet .
               ?infraRefSet ce:hasMember ?infraRef .
               ?infraRef aml:pointsTo ?sample .
-              ?infraRef a aml:AnimlReference .
+              ?infraRef a aml:anIMLReference .
 
 
 

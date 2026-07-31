@@ -5,7 +5,7 @@ PREFIX ce:  <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 
 SELECT ?Step ?relation2 ?sample
 WHERE {
-    ?Step a aml:ExperimentStep .
+    ?Step a aml:experimentStep .
 
     VALUES ?relation { aml:includesInfrastructure aml:producesResult }
   
@@ -14,7 +14,7 @@ WHERE {
     ?infra aml:includes ?referenceSet .
   	?referenceSet ce:hasMember ?reference .
   	?reference aml:pointsTo ?sample .
-  	?sample a aml:Sample .
+  	?sample a aml:sample .
   	?Step aml:usesTechnique ?Technique .
   	?reference aml:hasSpecification ?referenceSpec .
   	?Technique  ?relation2 ?referenceSpec .

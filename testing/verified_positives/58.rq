@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?newValue
 WHERE {
-    ?change a aml:Change ;
+    ?change a aml:change ;
             aml:newValue ?newValue .
 }

@@ -3,30 +3,30 @@
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/animl/ontology/document> a aml:Document ;
-    aml:animlVersion "1.0" ;
+<http://w3id.org/animl/ontology/document> a aml:document ;
+    aml:anIMLVersion "1.0" ;
     aml:denotes <http://w3id.org/animl/ontology/experiment> ;
     aml:hasSampleSet <http://w3id.org/animl/ontology/sampleset> .
 
-<http://w3id.org/animl/ontology/category_Basil_00002_1> a aml:Category ;
+<http://w3id.org/animl/ontology/category_Basil_00002_1> a aml:category ;
     aml:hasParameter <http://w3id.org/animl/ontology/parameter_Basil_00002_1_1>,
         <http://w3id.org/animl/ontology/parameter_Basil_00002_1_2>,
         <http://w3id.org/animl/ontology/parameter_Basil_00002_1_3> ;
     aml:name "Formulation details" .
 
-<http://w3id.org/animl/ontology/category_Cinnamon_00005_1> a aml:Category ;
+<http://w3id.org/animl/ontology/category_Cinnamon_00005_1> a aml:category ;
     aml:hasParameter <http://w3id.org/animl/ontology/parameter_Cinnamon_00005_1_1>,
         <http://w3id.org/animl/ontology/parameter_Cinnamon_00005_1_2>,
         <http://w3id.org/animl/ontology/parameter_Cinnamon_00005_1_3> ;
     aml:name "Formulation details" .
 
-<http://w3id.org/animl/ontology/category_Ginger_00006_1> a aml:Category ;
+<http://w3id.org/animl/ontology/category_Ginger_00006_1> a aml:category ;
     aml:hasParameter <http://w3id.org/animl/ontology/parameter_Ginger_00006_1_1>,
         <http://w3id.org/animl/ontology/parameter_Ginger_00006_1_2>,
         <http://w3id.org/animl/ontology/parameter_Ginger_00006_1_3> ;
     aml:name "Formulation details" .
 
-<http://w3id.org/animl/ontology/category_Matcha_00001_1> a aml:Category ;
+<http://w3id.org/animl/ontology/category_Matcha_00001_1> a aml:category ;
     aml:hasParameter <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_1>,
         <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_2>,
         <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_3>,
@@ -35,13 +35,13 @@
         <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_6> ;
     aml:name "Formulation details" .
 
-<http://w3id.org/animl/ontology/category_Oregano_00003_1> a aml:Category ;
+<http://w3id.org/animl/ontology/category_Oregano_00003_1> a aml:category ;
     aml:hasParameter <http://w3id.org/animl/ontology/parameter_Oregano_00003_1_1>,
         <http://w3id.org/animl/ontology/parameter_Oregano_00003_1_2>,
         <http://w3id.org/animl/ontology/parameter_Oregano_00003_1_3> ;
     aml:name "Formulation details" .
 
-<http://w3id.org/animl/ontology/category_Pepper_00004_1> a aml:Category ;
+<http://w3id.org/animl/ontology/category_Pepper_00004_1> a aml:category ;
     aml:hasParameter <http://w3id.org/animl/ontology/parameter_Pepper_00004_1_1>,
         <http://w3id.org/animl/ontology/parameter_Pepper_00004_1_2>,
         <http://w3id.org/animl/ontology/parameter_Pepper_00004_1_3> ;
@@ -125,7 +125,7 @@
     aml:pointValue "2/l+arx0oz85tMh2vp+KP6AaL90kBsE/w/UoXI/CxT+q8dJNYhDIPx1aZDvfT80/YOXQItv5zj/wp8ZLN4nRP+F6FK5H4dI/WDm0yHa+zz8IrBxaZDvPP+58PzVeutE/NV66SQwC0z+amZmZmZnRP7ByaJHtfM8/4XoUrkfh0j/VeOkmMQjUP57vp8ZLN9E/okW28/3U0D+F61G4HoXTPylcj8L1KNQ/oBov3SQG0T9t5/up8dLNP5qZmZmZmdE/ke18PzVe0j8QWDm0yHbOPxSuR+F6FM4/nMQgsHJo0T85tMh2vp/SP7TIdr6fGs8/wcqhRbbzzT+cxCCwcmjRP+Olm8QgsNI/sHJoke18zz/FILByaJHNP6AaL90kBtE/PzVeukkM0j+8dJMYBFbOP9V46SYxCMw/+n5qvHST0D+amZmZmZnRPx1aZDvfT80/2c73U+Olyz/6fmq8dJPQP+kmMQisHNI/EFg5tMh2zj+F61G4HoXLPwAAAAAAANA/9P3UeOkm0T/VeOkmMQjMP9nO91Pjpcs/okW28/3U0D9GtvP91HjRP8UgsHJokc0/JQaBlUOLzD/2KFyPwvXQP+xRuB6F69E/EFg5tMh2zj8xCKwcWmTLP6JFtvP91NA/9ihcj8L10D+4HoXrUbjOPzVeukkMAss/vHSTGARWzj9OYhBYObTQPylcj8L1KMw/PQrXo3A9yj8EVg4tsp3PP6JFtvP91NA/yXa+nxovzT+JQWDl0CLLP6jGSzeJQdA/SgwCK4cW0T/FILByaJHNP4XrUbgehcs/pHA9Ctej0D+e76fGSzfRP23n+6nx0s0/1XjpJjEIzD/0/dR46SbRP+xRuB6F69E/wcqhRbbzzT/RItv5fmrMP57vp8ZLN9E/mG4Sg8DK0T8MAiuHFtnOP3WTGARWDs0/mpmZmZmZ0T/sUbgehevRPxBYObTIds4/cT0K16NwzT9U46WbxCDQPz81XrpJDNI/FK5H4XoUzj91kxgEVg7NP0SLbOf7qdE/j8L1KFyP0j+mm8QgsHLQPxkEVg4tss0/7FG4HoXr0T+R7Xw/NV7SPxBYObTIds4/aJHtfD81zj+WQ4ts5/vRP4/C9Shcj9I/qMZLN4lB0D8QWDm0yHbOPz81XrpJDNI/ObTIdr6f0j8EVg4tsp3PPyUGgZVDi8w/UI2XbhKD0D+YbhKDwMrRPx1aZDvfT80/KVyPwvUozD9KDAIrhxbRP/Cnxks3idE/vHSTGARWzj8pXI/C9SjMP0w3iUFg5dA/SOF6FK5H0T8hsHJoke3MP+kmMQisHMo/DAIrhxbZzj9MN4lBYOXQP8UgsHJokc0/3SQGgZVDyz9SuB6F61HQP6JFtvP91NA/0SLb+X5qzD81XrpJDALLP1CNl24Sg9A/SOF6FK5H0T8UrkfhehTOP4lBYOXQIss/rBxaZDvfzz9KDAIrhxbRPx1aZDvfT80/LbKd76fGyz9OYhBYObTQP0Jg5dAi29E/bef7qfHSzT8dWmQ730/NP5qZmZmZmdE/5/up8dJN0j9cj8L1KFzPPxSuR+F6FM4/mpmZmZmZ0T85tMh2vp/SPwRWDi2ync8/wcqhRbbzzT+gGi/dJAbRP+f7qfHSTdI/EFg5tMh2zj/ByqFFtvPNP0SLbOf7qdE/MzMzMzMz0z+q8dJNYhDQPwAAAAAAANA/6SYxCKwc0j/Xo3A9CtfTP/YoXI/C9dA/qMZLN4lB0D+R7Xw/NV7KP57vp8ZLN8k/tMh2vp8azz8AAAAAAADQPzVeukkMAss/9ihcj8L1yD+LbOf7qfHCPwisHFpkO78/kxgEVg4tsj/b+X5qvHSTP3npJjEIrIw/"^^xsd:base64Binary ;
     ce:isMemberOf <http://w3id.org/animl/ontology/series_1_6_1_y> .
 
-<http://w3id.org/animl/ontology/experiment> a aml:Experiment ;
+<http://w3id.org/animl/ontology/experiment> a aml:experiment ;
     ce:hasMember <http://w3id.org/animl/ontology/step_1>,
         <http://w3id.org/animl/ontology/step_2>,
         <http://w3id.org/animl/ontology/step_3>,
@@ -135,173 +135,173 @@
         <http://w3id.org/animl/ontology/step_7>,
         <http://w3id.org/animl/ontology/step_8> .
 
-<http://w3id.org/animl/ontology/paramSpec_Basil_00002_1_1> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Basil_00002_1_1> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Basil_00002_1_1> .
 
-<http://w3id.org/animl/ontology/paramSpec_Basil_00002_1_2> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Basil_00002_1_2> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Basil_00002_1_2> .
 
-<http://w3id.org/animl/ontology/paramSpec_Basil_00002_1_3> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Basil_00002_1_3> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Basil_00002_1_3> .
 
-<http://w3id.org/animl/ontology/paramSpec_Cinnamon_00005_1_1> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Cinnamon_00005_1_1> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Cinnamon_00005_1_1> .
 
-<http://w3id.org/animl/ontology/paramSpec_Cinnamon_00005_1_2> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Cinnamon_00005_1_2> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Cinnamon_00005_1_2> .
 
-<http://w3id.org/animl/ontology/paramSpec_Cinnamon_00005_1_3> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Cinnamon_00005_1_3> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Cinnamon_00005_1_3> .
 
-<http://w3id.org/animl/ontology/paramSpec_Ginger_00006_1_1> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Ginger_00006_1_1> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Ginger_00006_1_1> .
 
-<http://w3id.org/animl/ontology/paramSpec_Ginger_00006_1_2> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Ginger_00006_1_2> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Ginger_00006_1_2> .
 
-<http://w3id.org/animl/ontology/paramSpec_Ginger_00006_1_3> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Ginger_00006_1_3> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Ginger_00006_1_3> .
 
-<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_1> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_1> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_1> .
 
-<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_2> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_2> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_2> .
 
-<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_3> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_3> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_3> .
 
-<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_4> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_4> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_4> .
 
-<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_5> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_5> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_5> .
 
-<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_6> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Matcha_00001_1_6> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Matcha_00001_1_6> .
 
-<http://w3id.org/animl/ontology/paramSpec_Oregano_00003_1_1> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Oregano_00003_1_1> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Oregano_00003_1_1> .
 
-<http://w3id.org/animl/ontology/paramSpec_Oregano_00003_1_2> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Oregano_00003_1_2> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Oregano_00003_1_2> .
 
-<http://w3id.org/animl/ontology/paramSpec_Oregano_00003_1_3> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Oregano_00003_1_3> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Oregano_00003_1_3> .
 
-<http://w3id.org/animl/ontology/paramSpec_Pepper_00004_1_1> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Pepper_00004_1_1> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Pepper_00004_1_1> .
 
-<http://w3id.org/animl/ontology/paramSpec_Pepper_00004_1_2> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Pepper_00004_1_2> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Pepper_00004_1_2> .
 
-<http://w3id.org/animl/ontology/paramSpec_Pepper_00004_1_3> a aml:ParameterSpecification ;
+<http://w3id.org/animl/ontology/paramSpec_Pepper_00004_1_3> a aml:parameterSpecification ;
     aml:hasDataType aml:string ;
     aml:usedBy <http://w3id.org/animl/ontology/parameter_Pepper_00004_1_3> .
 
-<http://w3id.org/animl/ontology/result_1_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_1_1> a aml:result ;
     aml:name "Reactor Temperature",
         "Step Results" ;
     ce:hasMember <http://w3id.org/animl/ontology/seriesSet_1_1_1> .
 
-<http://w3id.org/animl/ontology/result_1_2> a aml:Result ;
+<http://w3id.org/animl/ontology/result_1_2> a aml:result ;
     aml:name "Jacket Temperature" ;
     ce:hasMember <http://w3id.org/animl/ontology/seriesSet_1_2_1> .
 
-<http://w3id.org/animl/ontology/result_1_3> a aml:Result ;
+<http://w3id.org/animl/ontology/result_1_3> a aml:result ;
     aml:name "Temperature Set Point" ;
     ce:hasMember <http://w3id.org/animl/ontology/seriesSet_1_3_1> .
 
-<http://w3id.org/animl/ontology/result_1_4> a aml:Result ;
+<http://w3id.org/animl/ontology/result_1_4> a aml:result ;
     aml:name "Scraping Speed" ;
     ce:hasMember <http://w3id.org/animl/ontology/seriesSet_1_4_1> .
 
-<http://w3id.org/animl/ontology/result_1_5> a aml:Result ;
+<http://w3id.org/animl/ontology/result_1_5> a aml:result ;
     aml:name "Stirring Speed" ;
     ce:hasMember <http://w3id.org/animl/ontology/seriesSet_1_5_1> .
 
-<http://w3id.org/animl/ontology/result_1_6> a aml:Result ;
+<http://w3id.org/animl/ontology/result_1_6> a aml:result ;
     aml:name "Stirring Power" ;
     ce:hasMember <http://w3id.org/animl/ontology/seriesSet_1_6_1> .
 
-<http://w3id.org/animl/ontology/result_2_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_2_1> a aml:result ;
     aml:name "Step Results" .
 
-<http://w3id.org/animl/ontology/result_3_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_3_1> a aml:result ;
     aml:name "Step Results" .
 
-<http://w3id.org/animl/ontology/result_4_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_4_1> a aml:result ;
     aml:name "Step Results" .
 
-<http://w3id.org/animl/ontology/result_5_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_5_1> a aml:result ;
     aml:name "Step Results" .
 
-<http://w3id.org/animl/ontology/result_6_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_6_1> a aml:result ;
     aml:name "Step Results" .
 
-<http://w3id.org/animl/ontology/result_7_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_7_1> a aml:result ;
     aml:name "Step Results" .
 
-<http://w3id.org/animl/ontology/result_8_1> a aml:Result ;
+<http://w3id.org/animl/ontology/result_8_1> a aml:result ;
     aml:name "Step Results" .
 
-<http://w3id.org/animl/ontology/sample_Basil_00002> a aml:Sample ;
+<http://w3id.org/animl/ontology/sample_Basil_00002> a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory <http://w3id.org/animl/ontology/category_Basil_00002_1> ;
     aml:identifier "Basil-00002" ;
     aml:name "Basil" .
 
-<http://w3id.org/animl/ontology/sample_Cinnamon_00005> a aml:Sample ;
+<http://w3id.org/animl/ontology/sample_Cinnamon_00005> a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory <http://w3id.org/animl/ontology/category_Cinnamon_00005_1> ;
     aml:identifier "Cinnamon-00005" ;
     aml:name "Cinnamon" .
 
-<http://w3id.org/animl/ontology/sample_Ginger_00006> a aml:Sample ;
+<http://w3id.org/animl/ontology/sample_Ginger_00006> a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory <http://w3id.org/animl/ontology/category_Ginger_00006_1> ;
     aml:identifier "Ginger-00006" ;
     aml:name "Ginger" .
 
-<http://w3id.org/animl/ontology/sample_Matcha_00001> a aml:Sample ;
+<http://w3id.org/animl/ontology/sample_Matcha_00001> a aml:sample ;
     aml:comment "null" ;
     aml:hasSampleCategory <http://w3id.org/animl/ontology/category_Matcha_00001_1> ;
     aml:identifier "Matcha-00001" ;
     aml:name "Matcha" .
 
-<http://w3id.org/animl/ontology/sample_Oregano_00003> a aml:Sample ;
+<http://w3id.org/animl/ontology/sample_Oregano_00003> a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory <http://w3id.org/animl/ontology/category_Oregano_00003_1> ;
     aml:identifier "Oregano-00003" ;
     aml:name "Oregano" .
 
-<http://w3id.org/animl/ontology/sample_Pepper_00004> a aml:Sample ;
+<http://w3id.org/animl/ontology/sample_Pepper_00004> a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory <http://w3id.org/animl/ontology/category_Pepper_00004_1> ;
     aml:identifier "Pepper-00004" ;
     aml:name "Pepper" .
 
-<http://w3id.org/animl/ontology/sampleset> a aml:SampleSet ;
+<http://w3id.org/animl/ontology/sampleset> a aml:sampleSet ;
     ce:hasMember <http://w3id.org/animl/ontology/sample_Basil_00002>,
         <http://w3id.org/animl/ontology/sample_Cinnamon_00005>,
         <http://w3id.org/animl/ontology/sample_Ginger_00006>,
@@ -309,97 +309,97 @@
         <http://w3id.org/animl/ontology/sample_Oregano_00003>,
         <http://w3id.org/animl/ontology/sample_Pepper_00004> .
 
-<http://w3id.org/animl/ontology/seriesSet_1_1_1> a aml:SeriesSet ;
+<http://w3id.org/animl/ontology/seriesSet_1_1_1> a aml:seriesSet ;
     aml:name "Reactor Temperature" ;
     aml:value 582 ;
     ce:hasMember <http://w3id.org/animl/ontology/series_1_1_1_x>,
         <http://w3id.org/animl/ontology/series_1_1_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSet_1_2_1> a aml:SeriesSet ;
+<http://w3id.org/animl/ontology/seriesSet_1_2_1> a aml:seriesSet ;
     aml:name "Jacket Temperature" ;
     aml:value 646 ;
     ce:hasMember <http://w3id.org/animl/ontology/series_1_2_1_x>,
         <http://w3id.org/animl/ontology/series_1_2_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSet_1_3_1> a aml:SeriesSet ;
+<http://w3id.org/animl/ontology/seriesSet_1_3_1> a aml:seriesSet ;
     aml:name "Temperature Set Point" ;
     aml:value 7 ;
     ce:hasMember <http://w3id.org/animl/ontology/series_1_3_1_x>,
         <http://w3id.org/animl/ontology/series_1_3_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSet_1_4_1> a aml:SeriesSet ;
+<http://w3id.org/animl/ontology/seriesSet_1_4_1> a aml:seriesSet ;
     aml:name "Scraping Speed" ;
     aml:value 6 ;
     ce:hasMember <http://w3id.org/animl/ontology/series_1_4_1_x>,
         <http://w3id.org/animl/ontology/series_1_4_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSet_1_5_1> a aml:SeriesSet ;
+<http://w3id.org/animl/ontology/seriesSet_1_5_1> a aml:seriesSet ;
     aml:name "Stirring Speed" ;
     aml:value 9 ;
     ce:hasMember <http://w3id.org/animl/ontology/series_1_5_1_x>,
         <http://w3id.org/animl/ontology/series_1_5_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSet_1_6_1> a aml:SeriesSet ;
+<http://w3id.org/animl/ontology/seriesSet_1_6_1> a aml:seriesSet ;
     aml:name "Stirring Power" ;
     aml:value 174 ;
     ce:hasMember <http://w3id.org/animl/ontology/series_1_6_1_x>,
         <http://w3id.org/animl/ontology/series_1_6_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_1_1_x> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_1_1_x> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_1_1_x> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_1_1_y> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_1_1_y> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:hasUnits <http://w3id.org/animl/ontology/unit_C> ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_1_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_2_1_x> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_2_1_x> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_2_1_x> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_2_1_y> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_2_1_y> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:hasUnits <http://w3id.org/animl/ontology/unit_C> ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_2_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_3_1_x> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_3_1_x> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_3_1_x> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_3_1_y> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_3_1_y> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:hasUnits <http://w3id.org/animl/ontology/unit_C> ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_3_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_4_1_x> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_4_1_x> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_4_1_x> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_4_1_y> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_4_1_y> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:hasUnits <http://w3id.org/animl/ontology/unit_rpm> ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_4_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_5_1_x> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_5_1_x> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_5_1_x> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_5_1_y> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_5_1_y> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:hasUnits <http://w3id.org/animl/ontology/unit_rpm> ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_5_1_y> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_6_1_x> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_6_1_x> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_6_1_x> .
 
-<http://w3id.org/animl/ontology/seriesSpec_1_6_1_y> a aml:SeriesSpecification ;
+<http://w3id.org/animl/ontology/seriesSpec_1_6_1_y> a aml:seriesSpecification ;
     aml:hasDataType aml:float64 ;
     aml:hasUnits <http://w3id.org/animl/ontology/unit_A> ;
     aml:usedBy <http://w3id.org/animl/ontology/series_1_6_1_y> .
 
-<http://w3id.org/animl/ontology/step_1> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_1> a aml:experimentStep ;
     aml:name "Add 4.0g of Basil",
         "Process Information" ;
     aml:producesResult <http://w3id.org/animl/ontology/result_1_1>,
@@ -410,83 +410,83 @@
         <http://w3id.org/animl/ontology/result_1_6> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_1> .
 
-<http://w3id.org/animl/ontology/step_2> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_2> a aml:experimentStep ;
     aml:name "Add 4.0g of Oregano" ;
     aml:id "00000000002";
     aml:producesResult <http://w3id.org/animl/ontology/result_2_1> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_2> .
 
-<http://w3id.org/animl/ontology/step_3> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_3> a aml:experimentStep ;
     aml:name "Add 2.3g of Pepper" ;
     aml:id "00000000003";
     aml:producesResult <http://w3id.org/animl/ontology/result_3_1> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_3> .
 
-<http://w3id.org/animl/ontology/step_4> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_4> a aml:experimentStep ;
     aml:name "Add 2.3g of Pepper" ;
     aml:id "00000000004";
     aml:producesResult <http://w3id.org/animl/ontology/result_4_1> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_4> .
 
-<http://w3id.org/animl/ontology/step_5> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_5> a aml:experimentStep ;
     aml:name "Add 2.3g of Pepper" ;
     aml:id "00000000005";
     aml:producesResult <http://w3id.org/animl/ontology/result_5_1> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_5> .
 
-<http://w3id.org/animl/ontology/step_6> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_6> a aml:experimentStep ;
     aml:name "Add 2.3g of Pepper" ;
     aml:id "00000000006";
     aml:producesResult <http://w3id.org/animl/ontology/result_6_1> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_6> .
 
-<http://w3id.org/animl/ontology/step_7> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_7> a aml:experimentStep ;
     aml:name "Add 38.4g of Cinnamon" ;
     aml:id "00000000007";
     aml:producesResult <http://w3id.org/animl/ontology/result_7_1> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_7> .
 
-<http://w3id.org/animl/ontology/step_8> a aml:ExperimentStep ;
+<http://w3id.org/animl/ontology/step_8> a aml:experimentStep ;
     aml:name "Add 20.0g of Ginger" ;
     aml:id "00000000008";
     aml:producesResult <http://w3id.org/animl/ontology/result_8_1> ;
     aml:usesTechnique <http://w3id.org/animl/ontology/technique_8> .
 
-<http://w3id.org/animl/ontology/technique_1> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_1> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd",
         "https://www.appliedst.co.uk/deft/techniques/eventstream.atdd" ;
     aml:name "Add",
         "Event Stream" .
 
-<http://w3id.org/animl/ontology/technique_2> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_2> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/technique_3> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_3> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/technique_4> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_4> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/technique_5> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_5> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/technique_6> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_6> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/technique_7> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_7> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/technique_8> a aml:Technique ;
+<http://w3id.org/animl/ontology/technique_8> a aml:technique ;
     aml:identifier "https://www.appliedst.co.uk/deft/techniques/add.atdd" ;
     aml:name "Add" .
 
-<http://w3id.org/animl/ontology/unit_A> a aml:Unit ;
+<http://w3id.org/animl/ontology/unit_A> a aml:units ;
     aml:token "A" .
 
 <http://w3id.org/animl/ontology/datapoint_1_1_1_y_1> a aml:DataPoint ;
@@ -818,55 +818,55 @@
     aml:name "Status" ;
     aml:pointValue "null"^^xsd:string .
 
-<http://w3id.org/animl/ontology/unit_rpm> a aml:Unit ;
+<http://w3id.org/animl/ontology/unit_rpm> a aml:units ;
     aml:token "rpm" .
 
-<http://w3id.org/animl/ontology/series_1_1_1_x> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_1_1_x> a aml:series ;
     aml:dependency "independent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_1_1_x> ;
     aml:identifier "x" ;
     aml:name "Relative Time" ;
     ce:hasMember <http://w3id.org/animl/ontology/datapoint_encoded_1_1_1_x> .
 
-<http://w3id.org/animl/ontology/series_1_2_1_x> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_2_1_x> a aml:series ;
     aml:dependency "independent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_2_1_x> ;
     aml:identifier "x" ;
     aml:name "Relative Time" ;
     ce:hasMember <http://w3id.org/animl/ontology/datapoint_encoded_1_2_1_x> .
 
-<http://w3id.org/animl/ontology/series_1_3_1_x> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_3_1_x> a aml:series ;
     aml:dependency "independent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_3_1_x> ;
     aml:identifier "x" ;
     aml:name "Relative Time" ;
     ce:hasMember <http://w3id.org/animl/ontology/datapoint_encoded_1_3_1_x> .
 
-<http://w3id.org/animl/ontology/series_1_4_1_x> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_4_1_x> a aml:series ;
     aml:dependency "independent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_4_1_x> ;
     aml:identifier "x" ;
     aml:name "Relative Time" ;
     ce:hasMember <http://w3id.org/animl/ontology/datapoint_encoded_1_4_1_x> .
 
-<http://w3id.org/animl/ontology/series_1_5_1_x> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_5_1_x> a aml:series ;
     aml:dependency "independent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_5_1_x> ;
     aml:identifier "x" ;
     aml:name "Relative Time" ;
     ce:hasMember <http://w3id.org/animl/ontology/datapoint_encoded_1_5_1_x> .
 
-<http://w3id.org/animl/ontology/series_1_6_1_x> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_6_1_x> a aml:series ;
     aml:dependency "independent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_6_1_x> ;
     aml:identifier "x" ;
     aml:name "Relative Time" ;
     ce:hasMember <http://w3id.org/animl/ontology/datapoint_encoded_1_6_1_x> .
 
-<http://w3id.org/animl/ontology/unit_C> a aml:Unit ;
+<http://w3id.org/animl/ontology/unit_C> a aml:units ;
     aml:token "C" .
 
-<http://w3id.org/animl/ontology/series_1_4_1_y> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_4_1_y> a aml:series ;
     aml:dependency "dependent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_4_1_y> ;
     aml:identifier "y" ;
@@ -879,7 +879,7 @@
         <http://w3id.org/animl/ontology/datapoint_1_4_1_y_5>,
         <http://w3id.org/animl/ontology/datapoint_encoded_1_4_1_y> .
 
-<http://w3id.org/animl/ontology/series_1_3_1_y> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_3_1_y> a aml:series ;
     aml:dependency "dependent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_3_1_y> ;
     aml:identifier "y" ;
@@ -893,7 +893,7 @@
         <http://w3id.org/animl/ontology/datapoint_1_3_1_y_6>,
         <http://w3id.org/animl/ontology/datapoint_encoded_1_3_1_y> .
 
-<http://w3id.org/animl/ontology/series_1_5_1_y> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_5_1_y> a aml:series ;
     aml:dependency "dependent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_5_1_y> ;
     aml:identifier "y" ;
@@ -909,7 +909,7 @@
         <http://w3id.org/animl/ontology/datapoint_1_5_1_y_8>,
         <http://w3id.org/animl/ontology/datapoint_encoded_1_5_1_y> .
 
-<http://w3id.org/animl/ontology/series_1_1_1_y> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_1_1_y> a aml:series ;
     aml:dependency "dependent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_1_1_y> ;
     aml:identifier "y" ;
@@ -926,7 +926,7 @@
         <http://w3id.org/animl/ontology/datapoint_1_1_1_y_9>,
         <http://w3id.org/animl/ontology/datapoint_encoded_1_1_1_y> .
 
-<http://w3id.org/animl/ontology/series_1_2_1_y> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_2_1_y> a aml:series ;
     aml:dependency "dependent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_2_1_y> ;
     aml:identifier "y" ;
@@ -943,7 +943,7 @@
         <http://w3id.org/animl/ontology/datapoint_1_2_1_y_9>,
         <http://w3id.org/animl/ontology/datapoint_encoded_1_2_1_y> .
 
-<http://w3id.org/animl/ontology/series_1_6_1_y> a aml:Series ;
+<http://w3id.org/animl/ontology/series_1_6_1_y> a aml:series ;
     aml:dependency "dependent" ;
     aml:hasSpecification <http://w3id.org/animl/ontology/seriesSpec_1_6_1_y> ;
     aml:identifier "y" ;

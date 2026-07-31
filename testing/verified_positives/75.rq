@@ -3,7 +3,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?baseTechnique
 WHERE {
-    ?step a aml:ExperimentStep ;
+    ?step a aml:experimentStep ;
           aml:usesTechnique ?appliedTechnique .
           
     ?appliedTechnique aml:extends ?baseTechnique .

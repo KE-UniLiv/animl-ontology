@@ -3,7 +3,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?step ?parameter ?startTime
 WHERE {
-    ?step a aml:ExperimentStep .
+    ?step a aml:experimentStep .
   	?step aml:producesResult ?result .
     ?result aml:hasResultCategory ?category .
     ?category aml:hasParameter ?parameter .

@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?category
 WHERE {
-    ?sample a aml:Sample ;
+    ?sample a aml:sample ;
             aml:hasCategory ?category .
 }

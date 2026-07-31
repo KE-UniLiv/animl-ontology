@@ -4,7 +4,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?referenceURI
 WHERE {
-    ?technique a aml:Technique ;
+    ?technique a aml:technique ;
                aml:citation ?referenceURI . 
     # Alternatively check rdfs:seeAlso
 }

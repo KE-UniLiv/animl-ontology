@@ -1,44 +1,44 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 
-aml:sample_Basil_00002 a aml:Sample ;
+aml:sample_Basil_00002 a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory aml:category_Basil_00002_1 ;
     aml:identifier "F-00002" ;
     aml:name "Basil" .
 
-aml:sample_Cinnamon_00005 a aml:Sample ;
+aml:sample_Cinnamon_00005 a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory aml:category_Cinnamon_00005_1 ;
     aml:identifier "F-00005" ;
     aml:name "Cinnamon" .
 
-aml:sample_Ginger_00006 a aml:Sample ;
+aml:sample_Ginger_00006 a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory aml:category_Ginger_00006_1 ;
     aml:identifier "F-00006" ;
     aml:name "Ginger" .
 
-aml:drink_holder a aml:Container ;
+aml:drink_holder a aml:container ;
     aml:comment "null" ;
     aml:hasSampleCategory aml:category_drink_holder ;
     aml:identifier "F-00007" ;
     aml:hasType aml:6_Wells ;
     aml:name "drink_holder" .
 
-aml:sample_Matcha_00001 a aml:Sample ;
+aml:sample_Matcha_00001 a aml:sample ;
     aml:comment "null" ;
     aml:hasSampleCategory aml:category_Matcha_00001_1 ;
     aml:identifier "F-00001" ;
     aml:isContained aml:sampleInContainer_Matcha_001 ;
     aml:name "Matcha" .
 
-aml:sample_Oregano_00003 a aml:Sample ;
+aml:sample_Oregano_00003 a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory aml:category_Oregano_00003_1 ;
     aml:identifier "F-00003" ;
     aml:name "Oregano" .
 
-aml:sample_Pepper_00004 a aml:Sample ;
+aml:sample_Pepper_00004 a aml:sample ;
     aml:comment "This is an ingredient" ;
     aml:hasSampleCategory aml:category_Pepper_00004_1 ;
     aml:identifier "F-00004" ;
@@ -46,29 +46,29 @@ aml:sample_Pepper_00004 a aml:Sample ;
 
 
 aml:sampleInContainer_Matcha_001
-    a aml:SampleInContainer ;
+    a aml:sampleInContainer ;
     aml:containerRow "A" ;
     aml:containerColumn "1" ;
     aml:isContainedBy aml:drink_holder .
 
-aml:category_Basil_00002_1 a aml:Category ;
+aml:category_Basil_00002_1 a aml:category ;
     aml:name "Formulation details" .
 
-aml:category_Cinnamon_00005_1 a aml:Category ;
+aml:category_Cinnamon_00005_1 a aml:category ;
     aml:name "Formulation details" .
 
-aml:category_Ginger_00006_1 a aml:Category ;
+aml:category_Ginger_00006_1 a aml:category ;
     aml:name "Formulation details" .
 
-aml:category_Matcha_00001_1 a aml:Category ;
+aml:category_Matcha_00001_1 a aml:category ;
     aml:name "Formulation details" .
 
-aml:category_Oregano_00003_1 a aml:Category ;
+aml:category_Oregano_00003_1 a aml:category ;
     aml:name "Formulation details" .
 
-aml:category_Pepper_00004_1 a aml:Category ;
+aml:category_Pepper_00004_1 a aml:category ;
     aml:name "Formulation details" .
 
-aml:category_drink_holder a aml:Category ;
+aml:category_drink_holder a aml:category ;
     aml:name "Formulation details" .
 

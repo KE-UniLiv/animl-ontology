@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?allowedValue
 WHERE {
-    ?paramSpec a aml:ParameterSpecification ;
+    ?paramSpec a aml:parameterSpecification ;
                aml:hasAllowedValue ?allowedValue .
 }

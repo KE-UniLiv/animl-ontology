@@ -3,7 +3,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?outer_technique ?seriesSet ?series
 WHERE {
-    ?seriesSet a aml:SeriesSet .
+    ?seriesSet a aml:seriesSet .
     ?seriesSet aml:hasSpecification ?SeriesSetSpecification .
     ?outer_technique aml:includes ?SeriesSetSpecification .
   	?SeriesSetSpecification aml:usesTechnique ?technique .

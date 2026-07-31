@@ -239,7 +239,7 @@
                 <owl:NamedIndividual rdf:about="SIUnit_1">
                     <rdf:type rdf:resource="SIUnit"/>
                     <aml:factor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1e-03</aml:factor>
-                    <aml:type rdf:resource="aml:g"/>
+                    <aml:hasType rdf:resource="aml:g"/>
                 </owl:NamedIndividual>
 
             <owl:NamedIndividual rdf:about="Category_4">
@@ -488,7 +488,7 @@
                         <owl:NamedIndividual rdf:about="SIUnit_2">
                             <rdf:type rdf:resource="SIUnit"/>
                             <aml:factor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</aml:factor>
-                            <aml:type rdf:resource="aml:none"/>
+                            <aml:hasType rdf:resource="aml:none"/>
                         </owl:NamedIndividual>
 
                     <owl:NamedIndividual rdf:about="Parameter_19">

@@ -4,12 +4,12 @@ PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 
 SELECT ?step ?Technique ?ReferenceSet ?ReferenceSpec
 WHERE {
-    ?step a aml:ExperimentStep .
+    ?step a aml:experimentStep .
     ?step aml:includesInfrastructure ?infrastructure .
     ?infrastructure aml:includes ?referenceSet .
 	?referenceSet ce:hasMember ?reference .
     ?reference aml:pointsTo ?Sample .
-    ?Sample a aml:Sample .
+    ?Sample a aml:sample .
     ?step aml:usesTechnique ?Technique .
     ?Technique aml:consumes ?ReferenceSpec .
     ?reference aml:hasSpecification ?ReferenceSpec	

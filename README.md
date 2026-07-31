@@ -45,19 +45,19 @@ The ontology is organised into primary modules that mirror the architectural sep
 
 ### The AnIML Core Module
 
-The Core module formalises the AnIML Core Schema, representing the primary structure for experimental data, metadata, and provenance. The root of this module is the `aml:Document` class, which aggregates four main components: `aml:Experiment` for the data, `aml:SampleSet` for materials, `aml:AuditTrail` for versioning, and `aml:SignatureSet` for validation.
+The Core module formalises the AnIML Core Schema, representing the primary structure for experimental data, metadata, and provenance. The root of this module is the `aml:document` class, which aggregates four main components: `aml:experiment` for the data, `aml:sampleSet` for materials, `aml:auditTrail` for versioning, and `aml:signatureSet` for validation.
 
 <img src="diagrams/animl_core.png" alt="AnIML Core Module"/>
 
-Sample management utilises the Set ODP, where `aml:SampleSet` contains individual `aml:Sample` objects. To capture the complex physical arrangements common in labs (e.g., multi-well plates), we model hierarchical relationships via the `aml:SampleInContainer` class. Experimental execution is modelled as an ordered sequence of `aml:ExperimentStep` objects, each linking a Method, the Infrastructure used, and the resulting Data.
+Sample management utilises the Set ODP, where `aml:sampleSet` contains individual `aml:sample` objects. To capture the complex physical arrangements common in labs (e.g., multi-well plates), we model hierarchical relationships via the `aml:sampleInContainer` class. Experimental execution is modelled as an ordered sequence of `aml:experimentStep` objects, each linking a Method, the Infrastructure used, and the resulting Data.
 
 ### The Technique Module
 
-While the Core provides the structure, the Technique module enforces domain-specific constraints, mapping the concept of AnIML Technique Definition Documents (ATDDs) to the `aml:Technique` class.
+While the Core provides the structure, the Technique module enforces domain-specific constraints, mapping the concept of AnIML Technique Definition Documents (ATDDs) to the `aml:technique` class.
 
 <img src="diagrams/animl_technique.png" alt="AnIML Technique Module" width="700"/>
 
-A Technique acts as a semantic blueprint. It comprises subclasses of `aml:Specification` that define the expected shape and data types of experimental entities. For instance, `aml:SeriesSpecification` constrains the units (e.g., Hz, nm) and visualisation properties (via `aml:PlotScale`) of a data series, ensuring correct interpretation of spectra or chromatograms.
+A Technique acts as a semantic blueprint. It comprises subclasses of `aml:specification` that define the expected shape and data types of experimental entities. For instance, `aml:seriesSpecification` constrains the units (e.g., Hz, nm) and visualisation properties (via `aml:plotScale`) of a data series, ensuring correct interpretation of spectra or chromatograms.
 
 ### The AnIML Reference Pattern
 
@@ -65,7 +65,7 @@ A significant challenge in the AnIML XML schema is the use of implicit ID/IDREF 
 
 <img src="diagrams/animl_pattern.png" alt="AnIML Reference Pattern" width="400"/>
 
-We reify these pointers into the `aml:AnimlReference` class, which explicitly models the relationship using the `aml:pointsTo` property. This pattern allows us to capture the context of the reference, such as the specific role (e.g., "reference blank") and the scope of the data. Properties like `aml:startValue` and `aml:endValue` allow the ontology to reference specific subsets or slices of a data series, facilitating granular data access.
+We reify these pointers into the `aml:anIMLReference` class, which explicitly models the relationship using the `aml:pointsTo` property. This pattern allows us to capture the context of the reference, such as the specific role (e.g., "reference blank") and the scope of the data. Properties like `aml:startValue` and `aml:endValue` allow the ontology to reference specific subsets or slices of a data series, facilitating granular data access.
 
 ## Competency Questions
 
@@ -100,10 +100,10 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?startIndex
 WHERE {
-    ?reference a aml:AnimlReference ;
+    ?reference a aml:anIMLReference ;
                aml:pointsTo ?series ;
                aml:startValue ?startIndex .
-    ?series a aml:Series .
+    ?series a aml:series .
 }
 ```
 
@@ -112,11 +112,11 @@ WHERE {
 We employ SHACL shapes to enforce complex structural constraints (see `ontologies/animl_reference_pattern.shacl`). The following fragment ensures that the subject of a reference set aligns with the targets of the contained references.
 
 ```shacl
-aml:SampleSetConfiguration
+aml:sampleSetConfiguration
     a sh:NodeShape ;
     sh:property [
         sh:path aml:subject ;
-        sh:class aml:SampleSet ;
+        sh:class aml:sampleSet ;
         sh:minCount 1 ;
     ] ;
     sh:property [
@@ -125,7 +125,7 @@ aml:SampleSetConfiguration
             a sh:NodeShape ;
             sh:property [
                 sh:path aml:pointsTo ;
-                sh:class aml:Sample ;
+                sh:class aml:sample ;
             ]
         ]
     ] .

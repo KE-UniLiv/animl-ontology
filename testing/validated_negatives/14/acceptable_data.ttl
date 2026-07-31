@@ -2,7 +2,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 aml:measurements_002
-    a aml:Category ;
+    a aml:category ;
     aml:hasParameter aml:name ;
     aml:hasParameter aml:FrogNumber ;
     aml:hasParameter aml:StockPrice .

@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?device ?deviceID
 WHERE {
-    ?device a aml:Agent ;
+    ?device a aml:agent ;
             aml:hasType aml:hardwareAgent ;
             aml:identifier ?deviceID .
 }

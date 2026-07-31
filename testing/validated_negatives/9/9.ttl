@@ -3,10 +3,10 @@
 @prefix sh:  <http://www.w3.org/ns/shacl#> .
 @prefix bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#> .
 
-aml:RoleRequiredBySomethingMustAlsoBeRoleOfAgentShape
+aml:roleRequiredBySomethingMustAlsoBeRoleOfAgentShape
     a sh:NodeShape ;
     sh:message "A role that is required by something must also be the role of an agent." ;
-    sh:targetClass aml:Role ;
+    sh:targetClass aml:role ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:select """

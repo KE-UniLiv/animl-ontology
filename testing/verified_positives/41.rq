@@ -5,6 +5,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 SELECT ?maxOccurs
 WHERE {
     # Assuming ResultSpecification is a subclass of Specification
-    ?resultSpec a aml:ResultSpecification ; 
+    ?resultSpec a aml:resultSpecification ; 
                 aml:maxCardinality ?maxOccurs .
 }

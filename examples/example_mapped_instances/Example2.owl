@@ -11,11 +11,11 @@
   xmlns:ns6="http://purl.allotrope.org/ontologies/process#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <aml:Document rdf:about="http://example.org/animl/example2#document">
+  <aml:document rdf:about="http://example.org/animl/example2#document">
     <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-    <aml:animlVersion>1.0</aml:animlVersion>
+    <aml:anIMLVersion>1.0</aml:anIMLVersion>
     <aml:denotes>
-      <aml:Experiment rdf:about="http://example.org/animl/example2#experiment">
+      <aml:experiment rdf:about="http://example.org/animl/example2#experiment">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#step_1"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#step_2"/>
@@ -25,10 +25,10 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example2#step_6"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#step_7"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#step_8"/>
-      </aml:Experiment>
+      </aml:experiment>
     </aml:denotes>
     <aml:hasSampleSet>
-      <aml:SampleSet rdf:about="http://example.org/animl/example2#sampleset">
+      <aml:sampleSet rdf:about="http://example.org/animl/example2#sampleset">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#sample_Basil_00002"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#sample_Cinnamon_00005"/>
@@ -36,31 +36,31 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example2#sample_Matcha_00001"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#sample_Oregano_00003"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#sample_Pepper_00004"/>
-      </aml:SampleSet>
+      </aml:sampleSet>
     </aml:hasSampleSet>
-  </aml:Document>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_3">
+  </aml:document>
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_3">
     <aml:name>Add 2.3g of Pepper</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example2#result_3_1">
+      <aml:result rdf:about="http://example.org/animl/example2#result_3_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example2#technique_3">
+      <aml:technique rdf:about="http://example.org/animl/example2#technique_3">
         <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
         <aml:name>Add</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
+  </aml:experimentStep>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_4_1_y_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">44.8446</aml:pointValue>
     <ce:isMemberOf>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_4_1_y">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_4_1_y">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_4_1_y"/>
@@ -73,7 +73,7 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_4_1_y_4"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_4_1_y_5"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_4_1_y"/>
-      </aml:Series>
+      </aml:series>
     </ce:isMemberOf>
     <seq:directlyPrecedes>
       <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_4_1_y_2">
@@ -84,28 +84,28 @@
       </aml:DataPoint>
     </seq:directlyPrecedes>
   </aml:DataPoint>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_3_1_x">
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_3_1_x">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_3_1_x">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_3_1_x">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_3_1_x"/>
         <aml:identifier>x</aml:identifier>
         <aml:name>Relative Time</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_3_1_x"/>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:Series rdf:about="http://example.org/animl/example2#series_1_6_1_y">
+  </aml:seriesSpecification>
+  <aml:series rdf:about="http://example.org/animl/example2#series_1_6_1_y">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_6_1_y">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_6_1_y">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example2#unit_A"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_6_1_y"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:identifier>y</aml:identifier>
     <aml:name>Stirring Power</aml:name>
@@ -195,12 +195,12 @@
         <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_6_1_y"/>
       </aml:DataPoint>
     </ce:hasMember>
-  </aml:Series>
+  </aml:series>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_3_1_y_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">130.01</aml:pointValue>
     <ce:isMemberOf>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_3_1_y">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_3_1_y">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_3_1_y"/>
@@ -214,7 +214,7 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_3_1_y_5"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_3_1_y_6"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_3_1_y"/>
-      </aml:Series>
+      </aml:series>
     </ce:isMemberOf>
     <seq:directlyPrecedes>
       <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_3_1_y_2">
@@ -225,7 +225,7 @@
       </aml:DataPoint>
     </seq:directlyPrecedes>
   </aml:DataPoint>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Ginger_00006_1_2">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Ginger_00006_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -236,12 +236,12 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R02</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_1_1_y_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.71</aml:pointValue>
     <ce:isMemberOf>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_1_1_y">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_1_1_y">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_1_1_y"/>
@@ -258,7 +258,7 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_1_1_y_8"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_1_1_y_9"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_1_1_y"/>
-      </aml:Series>
+      </aml:series>
     </ce:isMemberOf>
     <seq:directlyPrecedes>
       <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_1_1_y_6">
@@ -275,67 +275,67 @@
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_1_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_1_1_y_5"/>
   </aml:DataPoint>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_4_1_y">
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_4_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Unit rdf:about="http://example.org/animl/example2#unit_rpm">
+      <aml:units rdf:about="http://example.org/animl/example2#unit_rpm">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>rpm</aml:token>
-      </aml:Unit>
+      </aml:units>
     </aml:hasUnits>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_4_1_y"/>
-  </aml:SeriesSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example2#result_1_5">
+  </aml:seriesSpecification>
+  <aml:result rdf:about="http://example.org/animl/example2#result_1_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Stirring Speed</aml:name>
     <ce:hasMember>
-      <aml:SeriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_5_1">
+      <aml:seriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_5_1">
         <aml:name>Stirring Speed</aml:name>
         <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</aml:value>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_5_1_x"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_5_1_y"/>
-      </aml:SeriesSet>
+      </aml:seriesSet>
     </ce:hasMember>
-  </aml:Result>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_5_1_x">
+  </aml:result>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_5_1_x">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_5_1_x">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_5_1_x">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_5_1_x"/>
         <aml:identifier>x</aml:identifier>
         <aml:name>Relative Time</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_5_1_x"/>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
+  </aml:seriesSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Basil_00002_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Basil_00002_1_2">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Basil_00002_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Basil_00002_1_2"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Mixer ID</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R02</aml:pointValue>
   </aml:Parameter>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_2_1_y">
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_2_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits>
-      <aml:Unit rdf:about="http://example.org/animl/example2#unit_C">
+      <aml:units rdf:about="http://example.org/animl/example2#unit_C">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>C</aml:token>
-      </aml:Unit>
+      </aml:units>
     </aml:hasUnits>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_2_1_y">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_2_1_y">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_2_1_y"/>
@@ -352,25 +352,25 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_2_1_y_8"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_2_1_y_9"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_2_1_y"/>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example2#result_1_1">
+  </aml:seriesSpecification>
+  <aml:result rdf:about="http://example.org/animl/example2#result_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Reactor Temperature</aml:name>
     <aml:name>Step Results</aml:name>
     <ce:hasMember>
-      <aml:SeriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_1_1">
+      <aml:seriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_1_1">
         <aml:name>Reactor Temperature</aml:name>
         <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">582</aml:value>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_1_1_x"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_1_1_y"/>
-      </aml:SeriesSet>
+      </aml:seriesSet>
     </ce:hasMember>
-  </aml:Result>
-  <aml:Category rdf:about="http://example.org/animl/example2#category_Ginger_00006_1">
+  </aml:result>
+  <aml:category rdf:about="http://example.org/animl/example2#category_Ginger_00006_1">
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Ginger_00006_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
@@ -389,7 +389,7 @@
       </aml:Parameter>
     </aml:hasParameter>
     <aml:name>Formulation details</aml:name>
-  </aml:Category>
+  </aml:category>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_encoded_1_1_1_y">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">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</aml:pointValue>
@@ -400,7 +400,7 @@
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AAAAAAAAAADXSWftG2xGQEsbAt621VhAPLPud2UKVEAAAAAAAAAAAAAAAAAAAAAA</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_4_1_y"/>
   </aml:DataPoint>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Pepper_00004_1_1">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Pepper_00004_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -411,18 +411,18 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example2#result_5_1">
+  </aml:parameterSpecification>
+  <aml:result rdf:about="http://example.org/animl/example2#result_5_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
+  </aml:result>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_5_1_y_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213.25</aml:pointValue>
     <ce:isMemberOf>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_5_1_y">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_5_1_y">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_5_1_y"/>
@@ -438,7 +438,7 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_5_1_y_7"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_1_5_1_y_8"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_5_1_y"/>
-      </aml:Series>
+      </aml:series>
     </ce:isMemberOf>
     <seq:directlyPrecedes>
       <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_5_1_y_2">
@@ -449,12 +449,12 @@
       </aml:DataPoint>
     </seq:directlyPrecedes>
   </aml:DataPoint>
-  <aml:Result rdf:about="http://example.org/animl/example2#result_2_1">
+  <aml:result rdf:about="http://example.org/animl/example2#result_2_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
+  </aml:result>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_5_1_y_7">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</aml:pointValue>
@@ -467,7 +467,7 @@
       </aml:DataPoint>
     </seq:directlyPrecedes>
   </aml:DataPoint>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_5">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -478,15 +478,15 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">nan</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Cinnamon_00005_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Cinnamon_00005_1_1">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Cinnamon_00005_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Cinnamon_00005_1_1"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Owner</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
@@ -520,14 +520,14 @@
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AAAAAAAAAACfFwEoWSEoQDdkFrSjKyhAOmpyHjs1KEB8hl0Bcj8oQOspX713YShAQYLix5hrKEDMpHNrv1IuQFG18M8fXS5AwOyePCy0LkBmHBAO48suQGTxiPcJNTNAXynLEMc6M0CcespX70UzQIQyelvWSjNA2anMp6HgNEBtMVICdeU0QNHYhKH7/zRAVebTUJAFNUA2F5KmVMQ2QK1Es8VIyTZAAShZYQ3aNkAamAK/M982QLf2K4pENjdAwaikTkA7N0AVsXWWRik4QDq0yHa+LzhAoybnsVPJOED9rB+IGc84QPP6psMdUjlASb99HThXOUAzMzMzM6M5QNdcSJpSqTlAkHvNhaQxOkAywYN5ojY6QAfzRP0b4TpA7CyNckPmOkAOKoToI1M7QOaJ+jdCWTtAj1N0JJdvO0Adf4/nIHU7QLyWkA96Rj1APVH/RihLPUBxPQrXo2A9QFBobMLQZT1A2YSh+19rPkBzIWlKxXE+QEXbHqoWlj5AgbpuN66cPkBqA5020PE+QEPSlIqz9z5ACUDJCmtIP0C7Jw8LtU4/QIqLtj1UlT9A7VTm01CgP0D88Bl2BbA/QLf2K4pEtj9AotlipATiP0AdWmQ73+c/QPxfm3rKA0BAtFn1udoGQEA+DQVZPD5DQFKT89ipQENAdbhDsJdLQ0BzsudFAE5DQGYcEA7j90NA/2glmi36Q0C6/7WppwREQOePVqLZBkRAP3yGXQFORECnMp+GglBEQHnE+4TGWkRAQog+MjBdREAsG8OJ1ZxFQJayDHGsn0VA18ib6UuwRUDVwj9/tLJFQP2sH4gZj0ZA7CyNckOSRkBjggfzRKlGQCLYy8meq0ZAZKpgVFK7RkDmHafoSL5GQPmdOf4e00ZA4QuTqYLVRkCjt2WtjvlGQFGQxSPe+0ZApSxDHOsiR0COmpzHTiVHQE7RkVz+W0dAYleA3GteR0BAE2HD06NHQCRy1OQ8pkdALPaX3ZO/R0BmZmZmZsJHQAAlK6xB8UdA6ZKEV6XzR0BLe4MvTAZIQDPp3NqvCEhAhu5/beo1SEATzRYjJThIQD4K16NwTUhA8tJNYhBQSEAT0ETY8GRIQGnbQ9XCZ0hAqhPQRNiYSEANuwLkXptIQNyNKxvDGUpAMZkqGJUcSkABlKywBklKQP+NUEZvS0pArR+IGQeESkCfq63YX4ZKQNDVVuwvm0pAvVKWIY6dSkBh6P7XpsJKQEpWWIMKxUpAgXAY3yqWTEAdEA7jW5lMQJfdk4eFrkxAgUvtMumwTEBUnH34DLtMQO15EYCSvUxA4jPsCpDnTECJ9wmNTexMQP5D+u3rLE1AbuopX70vTUDpbVmrYzpNQNdcSJpSPU1A0PqBmHEWUEB1cRsN4BdQQFsdEzyYJVBA1CtlGeImUEATF217qG5QQGWFNagQcFBAUNftxpV3UECBS+0y6XhQQEKFEH1k3lBAn9DYhKHfUEDixGoGy/tQQHjm+Hs8/VBAbVZ9rrZMUUCOdXEbDU5RQGlswtD9UVFAxreK2DpTUUBzRpT2BqtRQNeBc0aUrFFAU+B35vixUUDJdr6fGrNRQDvcIdjLjVJAY8kvlvyOUkDWoEKIPpBSQJ0Rpb3BkVJAa5dJ59beUkDAWyBB8d9SQA4Ih/Gt5lJAYQ0qhOjnUkCcxCCwcu5SQHA63CHY71JAEA7jW0VAU0B0ScKr0kFTQKVRbsgsXFNAXIyUQF1dU0CnV8oyxMlUQFMFo5I6y1RAA+eMKO3vVEBAWolmi/FUQFle33S4+1ZAkxgEVg79VkAvuPlZP0JYQBVC9JGBQ1hAq6qqqqpEWEC/xEXbHkZYQBq9LWt1cmJA</aml:pointValue>
     <ce:isMemberOf>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_6_1_x">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_6_1_x">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_6_1_x"/>
         <aml:identifier>x</aml:identifier>
         <aml:name>Relative Time</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_6_1_x"/>
-      </aml:Series>
+      </aml:series>
     </ce:isMemberOf>
   </aml:DataPoint>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_2_1_y_9">
@@ -535,14 +535,14 @@
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">79.21</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_2_1_y"/>
   </aml:DataPoint>
-  <aml:Series rdf:about="http://example.org/animl/example2#series_1_2_1_x">
+  <aml:series rdf:about="http://example.org/animl/example2#series_1_2_1_x">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>independent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_2_1_x">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_2_1_x">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_2_1_x"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:identifier>x</aml:identifier>
     <aml:name>Relative Time</aml:name>
@@ -553,18 +553,18 @@
         <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_2_1_x"/>
       </aml:DataPoint>
     </ce:hasMember>
-  </aml:Series>
+  </aml:series>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_encoded_1_3_1_y">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">0PUoXI8CNEC6HoXrUUBgQLoehetR4GBAuh6F61FAYEB0PQrXo0BVQND1KFyPAjlA0PUoXI8CNEA=</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_3_1_y"/>
   </aml:DataPoint>
-  <aml:Unit rdf:about="http://example.org/animl/example2#unit_A">
+  <aml:units rdf:about="http://example.org/animl/example2#unit_A">
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
     <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
     <aml:token>A</aml:token>
-  </aml:Unit>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_1">
+  </aml:units>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -575,22 +575,22 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example2#result_1_3">
+  </aml:parameterSpecification>
+  <aml:result rdf:about="http://example.org/animl/example2#result_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Temperature Set Point</aml:name>
     <ce:hasMember>
-      <aml:SeriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_3_1">
+      <aml:seriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_3_1">
         <aml:name>Temperature Set Point</aml:name>
         <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</aml:value>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_3_1_x"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_3_1_y"/>
-      </aml:SeriesSet>
+      </aml:seriesSet>
     </ce:hasMember>
-  </aml:Result>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_3">
+  </aml:result>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -601,7 +601,7 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_2_1_y_7">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">68.51</aml:pointValue>
@@ -621,19 +621,19 @@
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_1_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_1_1_y_4"/>
   </aml:DataPoint>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_1_1_x">
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_1_1_x">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_1_1_x">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_1_1_x">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_1_1_x"/>
         <aml:identifier>x</aml:identifier>
         <aml:name>Relative Time</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_1_1_x"/>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
+  </aml:seriesSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_1_1_y_8">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.81</aml:pointValue>
@@ -686,16 +686,16 @@
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Matcha_00001_1_6">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_6">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_6">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Matcha_00001_1_6"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Final pH</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">nan</aml:pointValue>
   </aml:Parameter>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Cinnamon_00005_1_3">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Cinnamon_00005_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -706,33 +706,33 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Basil_00002_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Basil_00002_1_3">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Basil_00002_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Basil_00002_1_3"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Status</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
   </aml:Parameter>
-  <aml:Result rdf:about="http://example.org/animl/example2#result_7_1">
+  <aml:result rdf:about="http://example.org/animl/example2#result_7_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
+  </aml:result>
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Pepper_00004_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Pepper_00004_1_3">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Pepper_00004_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Pepper_00004_1_3"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Status</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
@@ -755,7 +755,7 @@
       </aml:DataPoint>
     </seq:directlyPrecedes>
   </aml:DataPoint>
-  <aml:Category rdf:about="http://example.org/animl/example2#category_Matcha_00001_1">
+  <aml:category rdf:about="http://example.org/animl/example2#category_Matcha_00001_1">
     <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Matcha_00001_1_1"/>
     <aml:hasParameter>
       <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Matcha_00001_1_2">
@@ -777,47 +777,47 @@
     <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Matcha_00001_1_5"/>
     <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Matcha_00001_1_6"/>
     <aml:name>Formulation details</aml:name>
-  </aml:Category>
+  </aml:category>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_4_1_y_5">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_4_1_y"/>
   </aml:DataPoint>
-  <aml:Sample rdf:about="http://example.org/animl/example2#sample_Pepper_00004">
+  <aml:sample rdf:about="http://example.org/animl/example2#sample_Pepper_00004">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:comment>This is an ingredient</aml:comment>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example2#category_Pepper_00004_1">
+      <aml:category rdf:about="http://example.org/animl/example2#category_Pepper_00004_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Pepper_00004_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Pepper_00004_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Pepper_00004_1_3"/>
         <aml:name>Formulation details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Pepper-00004</aml:identifier>
     <aml:name>Pepper</aml:name>
-  </aml:Sample>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_6_1_x">
+  </aml:sample>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_6_1_x">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_6_1_x"/>
-  </aml:SeriesSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_5">
+  </aml:seriesSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_5">
     <aml:name>Add 2.3g of Pepper</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example2#result_5_1"/>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example2#technique_5">
+      <aml:technique rdf:about="http://example.org/animl/example2#technique_5">
         <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
         <aml:name>Add</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
+  </aml:experimentStep>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_1_1_y_7">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.31</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_1_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_1_1_y_8"/>
   </aml:DataPoint>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Oregano_00003_1_2">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Oregano_00003_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -828,7 +828,7 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R02</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_2_1_y_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">33.11</aml:pointValue>
@@ -847,44 +847,44 @@
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_4_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_4_1_y_1"/>
   </aml:DataPoint>
-  <aml:Sample rdf:about="http://example.org/animl/example2#sample_Cinnamon_00005">
+  <aml:sample rdf:about="http://example.org/animl/example2#sample_Cinnamon_00005">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:comment>This is an ingredient</aml:comment>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example2#category_Cinnamon_00005_1">
+      <aml:category rdf:about="http://example.org/animl/example2#category_Cinnamon_00005_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Cinnamon_00005_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Cinnamon_00005_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Cinnamon_00005_1_3"/>
         <aml:name>Formulation details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Cinnamon-00005</aml:identifier>
     <aml:name>Cinnamon</aml:name>
-  </aml:Sample>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_8">
+  </aml:sample>
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_8">
     <aml:name>Add 20.0g of Ginger</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example2#result_8_1">
+      <aml:result rdf:about="http://example.org/animl/example2#result_8_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example2#technique_8">
+      <aml:technique rdf:about="http://example.org/animl/example2#technique_8">
         <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
         <aml:name>Add</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_6_1">
+  </aml:experimentStep>
+  <aml:seriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_6_1">
     <aml:name>Stirring Power</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">174</aml:value>
     <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_6_1_x"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_6_1_y"/>
-  </aml:SeriesSet>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Oregano_00003_1_3">
+  </aml:seriesSet>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Oregano_00003_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -895,7 +895,7 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_3_1_y_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">85.01</aml:pointValue>
@@ -908,48 +908,48 @@
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_3_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_3_1_y_4"/>
   </aml:DataPoint>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_1">
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_1">
     <aml:name>Add 4.0g of Basil</aml:name>
     <aml:name>Process Information</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example2#result_1_1"/>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example2#result_1_2">
+      <aml:result rdf:about="http://example.org/animl/example2#result_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Jacket Temperature</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#seriesSet_1_2_1"/>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult rdf:resource="http://example.org/animl/example2#result_1_3"/>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example2#result_1_4">
+      <aml:result rdf:about="http://example.org/animl/example2#result_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Scraping Speed</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#seriesSet_1_4_1"/>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult rdf:resource="http://example.org/animl/example2#result_1_5"/>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example2#result_1_6">
+      <aml:result rdf:about="http://example.org/animl/example2#result_1_6">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Stirring Power</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#seriesSet_1_6_1"/>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example2#technique_1">
+      <aml:technique rdf:about="http://example.org/animl/example2#technique_1">
         <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
         <aml:identifier>https://www.appliedst.co.uk/deft/techniques/eventstream.atdd</aml:identifier>
         <aml:name>Add</aml:name>
         <aml:name>Event Stream</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
+  </aml:experimentStep>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_2_1_y_0">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.11</aml:pointValue>
@@ -963,66 +963,66 @@
       </aml:DataPoint>
     </seq:directlyPrecedes>
   </aml:DataPoint>
-  <aml:Sample rdf:about="http://example.org/animl/example2#sample_Ginger_00006">
+  <aml:sample rdf:about="http://example.org/animl/example2#sample_Ginger_00006">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:comment>This is an ingredient</aml:comment>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example2#category_Ginger_00006_1"/>
     <aml:identifier>Ginger-00006</aml:identifier>
     <aml:name>Ginger</aml:name>
-  </aml:Sample>
-  <aml:Sample rdf:about="http://example.org/animl/example2#sample_Matcha_00001">
+  </aml:sample>
+  <aml:sample rdf:about="http://example.org/animl/example2#sample_Matcha_00001">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:comment>null</aml:comment>
     <aml:hasSampleCategory rdf:resource="http://example.org/animl/example2#category_Matcha_00001_1"/>
     <aml:identifier>Matcha-00001</aml:identifier>
     <aml:name>Matcha</aml:name>
-  </aml:Sample>
-  <aml:Technique rdf:about="http://example.org/animl/example2#technique_7">
+  </aml:sample>
+  <aml:technique rdf:about="http://example.org/animl/example2#technique_7">
     <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
     <aml:name>Add</aml:name>
-  </aml:Technique>
+  </aml:technique>
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Oregano_00003_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Oregano_00003_1_1">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Oregano_00003_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Oregano_00003_1_1"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Owner</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
   </aml:Parameter>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_4">
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_4">
     <aml:name>Add 2.3g of Pepper</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example2#result_4_1">
+      <aml:result rdf:about="http://example.org/animl/example2#result_4_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Step Results</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example2#technique_4">
+      <aml:technique rdf:about="http://example.org/animl/example2#technique_4">
         <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
         <aml:name>Add</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
+  </aml:experimentStep>
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Cinnamon_00005_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Cinnamon_00005_1_2">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Cinnamon_00005_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Cinnamon_00005_1_2"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Mixer ID</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R02</aml:pointValue>
   </aml:Parameter>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Pepper_00004_1_2">
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Pepper_00004_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy>
@@ -1033,15 +1033,15 @@
         <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R02</aml:pointValue>
       </aml:Parameter>
     </aml:usedBy>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:Parameter rdf:about="http://example.org/animl/example2#parameter_Basil_00002_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000019"/>
     <aml:hasSpecification>
-      <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Basil_00002_1_1">
+      <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Basil_00002_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Basil_00002_1_1"/>
-      </aml:ParameterSpecification>
+      </aml:parameterSpecification>
     </aml:hasSpecification>
     <aml:name>Owner</aml:name>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</aml:pointValue>
@@ -1050,147 +1050,147 @@
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AAAAAAAAAACPv8dzkBoxQOTyH9JvHzFAXynLEMdAWEDOqs/VVkJYQJzEILBycmJA</aml:pointValue>
     <ce:isMemberOf>
-      <aml:Series rdf:about="http://example.org/animl/example2#series_1_4_1_x">
+      <aml:series rdf:about="http://example.org/animl/example2#series_1_4_1_x">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example2#seriesSpec_1_4_1_x"/>
         <aml:identifier>x</aml:identifier>
         <aml:name>Relative Time</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example2#datapoint_encoded_1_4_1_x"/>
-      </aml:Series>
+      </aml:series>
     </ce:isMemberOf>
   </aml:DataPoint>
-  <aml:Sample rdf:about="http://example.org/animl/example2#sample_Basil_00002">
+  <aml:sample rdf:about="http://example.org/animl/example2#sample_Basil_00002">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:comment>This is an ingredient</aml:comment>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example2#category_Basil_00002_1">
+      <aml:category rdf:about="http://example.org/animl/example2#category_Basil_00002_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Basil_00002_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Basil_00002_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Basil_00002_1_3"/>
         <aml:name>Formulation details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Basil-00002</aml:identifier>
     <aml:name>Basil</aml:name>
-  </aml:Sample>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Ginger_00006_1_3">
+  </aml:sample>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Ginger_00006_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Ginger_00006_1_3"/>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_encoded_1_1_1_x">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">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</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_1_1_x"/>
   </aml:DataPoint>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_4_1">
+  <aml:seriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_4_1">
     <aml:name>Scraping Speed</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</aml:value>
     <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_4_1_x"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_4_1_y"/>
-  </aml:SeriesSet>
+  </aml:seriesSet>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_encoded_1_5_1_y">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AAAAAAAAAAAHAAAAAKhqQP//////VX9A/P////9Cf0D9/////3tzQPn//////G5A+v////9ib0AAAAAAAAAAAAAAAAAAAAAA</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_5_1_y"/>
   </aml:DataPoint>
-  <aml:Result rdf:about="http://example.org/animl/example2#result_6_1">
+  <aml:result rdf:about="http://example.org/animl/example2#result_6_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Step Results</aml:name>
-  </aml:Result>
-  <aml:Sample rdf:about="http://example.org/animl/example2#sample_Oregano_00003">
+  </aml:result>
+  <aml:sample rdf:about="http://example.org/animl/example2#sample_Oregano_00003">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:comment>This is an ingredient</aml:comment>
     <aml:hasSampleCategory>
-      <aml:Category rdf:about="http://example.org/animl/example2#category_Oregano_00003_1">
+      <aml:category rdf:about="http://example.org/animl/example2#category_Oregano_00003_1">
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Oregano_00003_1_1"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Oregano_00003_1_2"/>
         <aml:hasParameter rdf:resource="http://example.org/animl/example2#parameter_Oregano_00003_1_3"/>
         <aml:name>Formulation details</aml:name>
-      </aml:Category>
+      </aml:category>
     </aml:hasSampleCategory>
     <aml:identifier>Oregano-00003</aml:identifier>
     <aml:name>Oregano</aml:name>
-  </aml:Sample>
+  </aml:sample>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_encoded_1_3_1_x">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#base64Binary">AAAAAAAAAACo63bjygYBQME5I0p7GzFAJgzd/9o8TkDXo3A9Cm9QQPLSTWIQulBA1Z0U03JyYkA=</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_3_1_x"/>
   </aml:DataPoint>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_2_1">
+  <aml:seriesSet rdf:about="http://example.org/animl/example2#seriesSet_1_2_1">
     <aml:name>Jacket Temperature</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">646</aml:value>
     <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_2_1_x"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example2#series_1_2_1_y"/>
-  </aml:SeriesSet>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_7">
+  </aml:seriesSet>
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_7">
     <aml:name>Add 38.4g of Cinnamon</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example2#result_7_1"/>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example2#technique_7"/>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_2">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Matcha_00001_1_2"/>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_4_1_y_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_4_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_4_1_y_5"/>
   </aml:DataPoint>
-  <aml:Technique rdf:about="http://example.org/animl/example2#technique_6">
+  <aml:technique rdf:about="http://example.org/animl/example2#technique_6">
     <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
     <aml:name>Add</aml:name>
-  </aml:Technique>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Ginger_00006_1_1">
+  </aml:technique>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Ginger_00006_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Ginger_00006_1_1"/>
-  </aml:ParameterSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_2">
+  </aml:parameterSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_2">
     <aml:name>Add 4.0g of Oregano</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example2#result_2_1"/>
     <aml:usesTechnique>
-      <aml:Technique rdf:about="http://example.org/animl/example2#technique_2">
+      <aml:technique rdf:about="http://example.org/animl/example2#technique_2">
         <aml:identifier>https://www.appliedst.co.uk/deft/techniques/add.atdd</aml:identifier>
         <aml:name>Add</aml:name>
-      </aml:Technique>
+      </aml:technique>
     </aml:usesTechnique>
-  </aml:ExperimentStep>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_1_1_y">
+  </aml:experimentStep>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_1_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example2#unit_C"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_1_1_y"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_4_1_x">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_4_1_x">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_4_1_x"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_5_1_y">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_5_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example2#unit_rpm"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_5_1_y"/>
-  </aml:SeriesSpecification>
+  </aml:seriesSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_2_1_y_6">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">62.11</aml:pointValue>
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_2_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_2_1_y_7"/>
   </aml:DataPoint>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example2#step_6">
+  <aml:experimentStep rdf:about="http://example.org/animl/example2#step_6">
     <aml:name>Add 2.3g of Pepper</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example2#result_6_1"/>
     <aml:usesTechnique rdf:resource="http://example.org/animl/example2#technique_6"/>
-  </aml:ExperimentStep>
-  <aml:ParameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_4">
+  </aml:experimentStep>
+  <aml:parameterSpecification rdf:about="http://example.org/animl/example2#paramSpec_Matcha_00001_1_4">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000977"/>
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#parameter_Matcha_00001_1_4"/>
-  </aml:ParameterSpecification>
+  </aml:parameterSpecification>
   <aml:DataPoint rdf:about="http://example.org/animl/example2#datapoint_1_4_1_y_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000186"/>
     <aml:pointValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.16244</aml:pointValue>
@@ -1209,9 +1209,9 @@
     <ce:isMemberOf rdf:resource="http://example.org/animl/example2#series_1_2_1_y"/>
     <seq:directlyPrecedes rdf:resource="http://example.org/animl/example2#datapoint_1_2_1_y_3"/>
   </aml:DataPoint>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_3_1_y">
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example2#seriesSpec_1_3_1_y">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example2#unit_C"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example2#series_1_3_1_y"/>
-  </aml:SeriesSpecification>
+  </aml:seriesSpecification>
 </rdf:RDF>

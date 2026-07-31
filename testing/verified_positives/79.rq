@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?isVisible
 WHERE {
-    ?seriesSpec a aml:SeriesSpecification ;
+    ?seriesSpec a aml:seriesSpecification ;
                 aml:isVisible ?isVisible .
 }

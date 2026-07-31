@@ -4,13 +4,13 @@ PREFIX ce: <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#>
 
 SELECT ?ExperimentStep ?inputStep
 WHERE {
-    ?currentStep a aml:ExperimentStep .
+    ?currentStep a aml:experimentStep .
   	?currentStep aml:includesInfrastructure ?infrastructure .
     ?infrastructure aml:includes ?referenceSet .
     ?referenceSet ce:hasMember ?reference .
-    ?reference a aml:AnimlReference .
+    ?reference a aml:anIMLReference .
   	?reference aml:pointsTo ?inputStep .
-    ?inputStep a aml:ExperimentStep .
-  	?Experiment a aml:Experiment .
+    ?inputStep a aml:experimentStep .
+  	?Experiment a aml:experiment .
 }
 ORDER BY ?ExperimentStep ?inputStep

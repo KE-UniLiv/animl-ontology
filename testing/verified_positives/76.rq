@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?factor ?exponent ?offset
 WHERE {
-    ?unit a aml:SIUnit ;
+    ?unit a aml:sIUnit ;
           aml:factor ?factor ;
           aml:exponent ?exponent ;
           aml:offset ?offset .

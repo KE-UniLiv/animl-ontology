@@ -4,11 +4,11 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 
 aml:sample_001
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample A" .
 
 aml:sample_002
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample B" .
 
 aml:Step_001
@@ -18,105 +18,105 @@ aml:Step_002
     a aml:experimentStep .
 
 aml:role_Author_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_JohnDoe ;
-    aml:hasType aml:Author .
+    aml:hasType aml:author .
 
 aml:role_experimenter_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_filling_machine ;
-    aml:hasType aml:Experimenter .
+    aml:hasType aml:experimenter .
 
 aml:role_Reviewer_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_QCSoftware ;
-    aml:hasType aml:Reviewer .
+    aml:hasType aml:reviewer .
 
 aml:agent_JohnDoe
-    a aml:Agent ;
+    a aml:agent ;
     aml:phone "01189901897253" ;
     aml:operatingSystem "windows 2000";
-    aml:hasType aml:HumanAgent ;
+    aml:hasType aml:humanagent ;
     bag:isClassifiedBy aml:role_Author_01 .
 
 aml:agent_steve
-    a aml:Agent ;
+    a aml:agent ;
     aml:phone "999999999999" ;
     aml:version "1.6.1";
-    aml:hasType aml:HumanAgent ; .
+    aml:hasType aml:humanagent ; .
 
 aml:agent_QCSoftware
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:softwareAgent ;
     bag:isClassifiedBy aml:role_Reviewer_01 .
 
 aml:agent_rinsing_machine
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:HardwareAgent ;
     aml:identifier "F-0001-A" .
 
 aml:agent_filling_machine
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:HardwareAgent ;
     bag:isClassifiedBy aml:role_Experimenter_01 .
 
-aml:Change_001
-    a aml:Change ;
+aml:change_001
+    a aml:change ;
     aml:hasType aml:creation ;
     aml:affects aml:sample_001 ;
     aml:newValue "Initial creation of sample" .
 
-aml:Change_002
-    a aml:Change ;
+aml:change_002
+    a aml:change ;
     aml:hasType aml:modification ;
     aml:affects aml:sample_001 ;
     aml:newValue "Updated metadata fields" .
 
-aml:Change_003 ;
-    a aml:Change ;
+aml:change_003 ;
+    a aml:change ;
     aml:hasType aml:creation ;
     aml:affects aml:Step_001 ;
     aml:newValue "recorded results" .
 
-aml:Change_004 ;
-    a aml:Change ;
+aml:change_004 ;
+    a aml:change ;
     aml:hasType aml:creation ;
     aml:affects aml:Step_002 ;
     aml:newValue "recorded more results" .
 
 aml:signature_001
-    a aml:Signature ;
+    a aml:signature ;
     aml:marks aml:sample_001 .
 
 
 aml:signature_002
-    a aml:Signature ;
+    a aml:signature ;
     aml:marks aml:sample_002 .
 
 aml:entry_001
-    a aml:AuditTrailEntry ;
+    a aml:auditTrailEntry ;
     aml:requiresRole aml:role_Author_01 ;
     aml:requiresRole aml:role_Experimenter_01 ;
-    aml:makesChange aml:Change_001 ;
+    aml:makesChange aml:change_001 ;
     seq:directlyPrecedes aml:entry_002 ;
     aml:timeStep "2025-01-12T10:15:00Z"^^xsd:dateTime .
 
 aml:entry_002
-    a aml:AuditTrailEntry ;
+    a aml:auditTrailEntry ;
     aml:requiresRole aml:role_Reviewer_01 ;
-    aml:makesChange aml:Change_002 ;
-    aml:makesChange aml:Change_003 ;
+    aml:makesChange aml:change_002 ;
+    aml:makesChange aml:change_003 ;
     seq:directlyPrecedes aml:entry_003 ;
     seq:directlyFollows aml:entry_001 ;
     aml:timeStep "2025-01-12T10:15:00Z"^^xsd:dateTime .
 
 aml:entry_003
-    a aml:AuditTrailEntry ;
-    aml:makesChange aml:Change_004 ;
+    a aml:auditTrailEntry ;
+    aml:makesChange aml:change_004 ;
     seq:directlyFollows aml:entry_002 ;
     aml:timeStep "2025-01-12T10:15:00Z"^^xsd:dateTime .
 
 aml:auditTrail_001
-    a aml:AuditTrail ;
+    a aml:auditTrail ;
     aml:hasAuditTrailEntry aml:entry_001 ;
     aml:hasAuditTrailEntry aml:entry_002 .

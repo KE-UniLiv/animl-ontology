@@ -1,5 +1,5 @@
 aml:measurements_002
-    a aml:Category ;
+    a aml:category ;
     aml:hasParameter aml:startTime_002 ;
     aml:hasParameter aml:FrogNumber ;
     aml:stockPrice aml:StockPrice .

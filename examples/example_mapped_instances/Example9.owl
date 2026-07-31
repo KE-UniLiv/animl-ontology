@@ -9,741 +9,741 @@
   xmlns:ns4="http://purl.obolibrary.org/obo/"
   xmlns:ns5="http://purl.allotrope.org/ontologies/result#"
 >
-  <aml:Document rdf:about="http://example.org/animl/example9#document">
+  <aml:document rdf:about="http://example.org/animl/example9#document">
     <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-    <aml:animlVersion>1.0</aml:animlVersion>
+    <aml:anIMLVersion>1.0</aml:anIMLVersion>
     <aml:denotes>
-      <aml:Experiment rdf:about="http://example.org/animl/example9#experiment">
+      <aml:experiment rdf:about="http://example.org/animl/example9#experiment">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example9#step_3"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example9#step_4c7df345_690a_4134_b22e_74dbfea20f39"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example9#step_f552fb4f_d992_40d6_9bba_b68d16214631"/>
-      </aml:Experiment>
+      </aml:experiment>
     </aml:denotes>
     <aml:hasSampleSet>
-      <aml:SampleSet rdf:about="http://example.org/animl/example9#sampleset">
+      <aml:sampleSet rdf:about="http://example.org/animl/example9#sampleset">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example9#sample_Matcha_00001"/>
-      </aml:SampleSet>
+      </aml:sampleSet>
     </aml:hasSampleSet>
-  </aml:Document>
-  <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_3">
+  </aml:document>
+  <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_3">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_3">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_3">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_3"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Viscosity</aml:name>
-  </aml:Series>
-  <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_7">
+  </aml:series>
+  <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_7">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_7">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_7">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_7"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Torque</aml:name>
-  </aml:Series>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example9#seriesSet_4c7df345_690a_4134_b22e_74dbfea20f39_1_1">
+  </aml:series>
+  <aml:seriesSet rdf:about="http://example.org/animl/example9#seriesSet_4c7df345_690a_4134_b22e_74dbfea20f39_1_1">
     <aml:name>Peak hold - 2_data</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</aml:value>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_1">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_1"/>
         <aml:name>Point No.</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_10">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_10">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_10"/>
         <aml:name>Run time</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_11">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_11">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_11"/>
         <aml:name>1/temperature</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_12">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_12">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_12"/>
         <aml:name>Modulus</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_13">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_13">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_13"/>
         <aml:name>Axial force</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_14">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_14">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_14"/>
         <aml:name>Strain</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_15">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_15">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_15"/>
         <aml:name>Displacement</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_16">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_16">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_16"/>
         <aml:name>Torque step</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_17">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_17">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_17"/>
         <aml:name>Shear rate</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_18">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_18">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_18"/>
         <aml:name>Compliance</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_19">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_19">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_19"/>
         <aml:name>Stress step</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_2">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_2"/>
         <aml:name>Temperature</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_20">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_20">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_20"/>
         <aml:name>Normal stress</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_21">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_21">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_21"/>
         <aml:name>Strain constant</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_22">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_22">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_22"/>
         <aml:name>Date and time</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_23">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_23">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_23"/>
         <aml:name>Results Step Id</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_24">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_24">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_24"/>
         <aml:name>Time</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_25">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_25">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_25"/>
         <aml:name>Gap</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_26">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_26">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_26"/>
         <aml:name>Displacement step</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_27">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_27">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_27"/>
         <aml:name>Normal stress coefficient</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_28">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_28">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_28"/>
         <aml:name>Stress</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_3">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_3">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_3"/>
         <aml:name>Viscosity</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_4">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_4"/>
         <aml:name>Procedure Step Id</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_5">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_5">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_5"/>
         <aml:name>Strain step</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_6">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_6">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_6"/>
         <aml:name>Velocity</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_7">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_7">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_7"/>
         <aml:name>Torque</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_8">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_8">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_8"/>
         <aml:name>Step time</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_9">
+      <aml:series rdf:about="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_9">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_9"/>
         <aml:name>Termination reason</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
-  </aml:SeriesSet>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_15">
+  </aml:seriesSet>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_15">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_15"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_5">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_5">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_5"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_20">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_20">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_20">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_20">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_20"/>
         <aml:name>Normal stress</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_8">
+  </aml:seriesSpecification>
+  <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_8">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_8">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_8">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_8"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Step time</aml:name>
-  </aml:Series>
-  <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_25">
+  </aml:series>
+  <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_25">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_25">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_25">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_25"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Gap</aml:name>
-  </aml:Series>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_1">
+  </aml:series>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/int32"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_1">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_1"/>
         <aml:name>Point No.</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_26">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_26">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_26">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_26">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_26"/>
         <aml:name>Displacement step</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_12">
+  </aml:seriesSpecification>
+  <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_12">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_12">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_12">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_12"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Modulus</aml:name>
-  </aml:Series>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_13">
+  </aml:series>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_13">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_13">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_13">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_13"/>
         <aml:name>Axial force</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example9#result_4c7df345_690a_4134_b22e_74dbfea20f39_1">
+  </aml:seriesSpecification>
+  <aml:result rdf:about="http://example.org/animl/example9#result_4c7df345_690a_4134_b22e_74dbfea20f39_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Peak hold - 2</aml:name>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#seriesSet_4c7df345_690a_4134_b22e_74dbfea20f39_1_1"/>
-  </aml:Result>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_3">
+  </aml:result>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_3">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_3"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_7">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_7">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_7"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_28">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_28">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_28">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_28">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_28"/>
         <aml:name>Stress</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_6">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_6">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_6">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_6">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_6"/>
         <aml:name>Velocity</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example9#seriesSet_f552fb4f_d992_40d6_9bba_b68d16214631_1_1">
+  </aml:seriesSpecification>
+  <aml:seriesSet rdf:about="http://example.org/animl/example9#seriesSet_f552fb4f_d992_40d6_9bba_b68d16214631_1_1">
     <aml:name>Peak hold - 1_data</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</aml:value>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_1"/>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_10">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_10">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_10"/>
         <aml:name>Run time</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_11">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_11">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_11"/>
         <aml:name>1/temperature</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_12"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_13"/>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_14">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_14">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_14"/>
         <aml:name>Strain</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_15">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_15">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_15"/>
         <aml:name>Displacement</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_16">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_16">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_16"/>
         <aml:name>Torque step</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_17">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_17">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_17"/>
         <aml:name>Shear rate</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_18">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_18">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_18"/>
         <aml:name>Compliance</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_19">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_19">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_19"/>
         <aml:name>Stress step</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_2">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_2"/>
         <aml:name>Temperature</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_20"/>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_21">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_21">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_21"/>
         <aml:name>Strain constant</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_22">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_22">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_22"/>
         <aml:name>Date and time</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_23">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_23">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_23"/>
         <aml:name>Results Step Id</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_24">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_24">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_24"/>
         <aml:name>Time</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_25"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_26"/>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_27">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_27">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_27"/>
         <aml:name>Normal stress coefficient</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_28"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_3"/>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_4">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_4">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_4"/>
         <aml:name>Procedure Step Id</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_5">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_5">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_5"/>
         <aml:name>Strain step</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_6"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_7"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_8"/>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_9">
+      <aml:series rdf:about="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_9">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_9"/>
         <aml:name>Termination reason</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
-  </aml:SeriesSet>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_4">
+  </aml:seriesSet>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_4">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_4"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_19">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_19">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_19"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_15">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_15">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_15"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_9">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_9">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_9"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_18">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_18">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_18"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_27">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_27">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_27"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_21">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_21">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_21"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_4">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_4">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_4"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_28">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_28">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_28"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_14">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_14">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_14"/>
-  </aml:SeriesSpecification>
-  <aml:Sample rdf:about="http://example.org/animl/example9#sample_Matcha_00001">
+  </aml:seriesSpecification>
+  <aml:sample rdf:about="http://example.org/animl/example9#sample_Matcha_00001">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:identifier>Matcha-00001</aml:identifier>
     <aml:name>Matcha</aml:name>
-  </aml:Sample>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_14">
+  </aml:sample>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_14">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_14"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_22">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_22">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/datetime"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_22"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_22">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_22">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/datetime"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_22"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_18">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_18">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_18"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_23">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_23">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_23"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_9">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_9">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_9"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_21">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_21">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_21"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_8">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_8">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_8"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_13">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_13">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_13"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_12">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_12">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_12"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_25">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_25">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_25"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_1">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/int32"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_1"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_5">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_5">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_5"/>
-  </aml:SeriesSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example9#step_3">
+  </aml:seriesSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example9#step_3">
     <aml:name>Additional Properties</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example9#result_3_1">
+      <aml:result rdf:about="http://example.org/animl/example9#result_3_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>UserProperties</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
-  </aml:ExperimentStep>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_26">
+  </aml:experimentStep>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_26">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_26"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_10">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_10">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_10"/>
-  </aml:SeriesSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example9#step_4c7df345_690a_4134_b22e_74dbfea20f39">
+  </aml:seriesSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example9#step_4c7df345_690a_4134_b22e_74dbfea20f39">
     <aml:name>Flow-Peak Hold</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example9#result_4c7df345_690a_4134_b22e_74dbfea20f39_1"/>
-  </aml:ExperimentStep>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_11">
+  </aml:experimentStep>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_11">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_11"/>
-  </aml:SeriesSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example9#step_f552fb4f_d992_40d6_9bba_b68d16214631">
+  </aml:seriesSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example9#step_f552fb4f_d992_40d6_9bba_b68d16214631">
     <aml:name>Flow-Peak Hold</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example9#result_f552fb4f_d992_40d6_9bba_b68d16214631_1">
+      <aml:result rdf:about="http://example.org/animl/example9#result_f552fb4f_d992_40d6_9bba_b68d16214631_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Peak hold - 1</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example9#seriesSet_f552fb4f_d992_40d6_9bba_b68d16214631_1_1"/>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
-  </aml:ExperimentStep>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_17">
+  </aml:experimentStep>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_17">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_17"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_19">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_19">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_19"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_17">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_17">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_17"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_24">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_24">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_24"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_6">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_6">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_6"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_2">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_2"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_2">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_2"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_23">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_23">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/string"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_23"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_20">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_20">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_20"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_16">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_16">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_16"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_10">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_10">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_10"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_11">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_11">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_11"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_24">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_24">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_24"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_27">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_27">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_f552fb4f_d992_40d6_9bba_b68d16214631_1_1_27"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_16">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example9#seriesSpec_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_16">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float64"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example9#series_4c7df345_690a_4134_b22e_74dbfea20f39_1_1_16"/>
-  </aml:SeriesSpecification>
+  </aml:seriesSpecification>
 </rdf:RDF>

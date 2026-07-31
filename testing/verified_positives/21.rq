@@ -3,8 +3,8 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?AuditTrailEntry ?change ?timestamp
 WHERE {
-    ?change a aml:Change .
-    ?AuditTrailEntry a aml:AuditTrailEntry .
+    ?change a aml:change .
+    ?AuditTrailEntry a aml:auditTrailEntry .
     ?AuditTrailEntry aml:makesChange ?change .
     ?AuditTrailEntry aml:timeStep ?timestamp .
 }

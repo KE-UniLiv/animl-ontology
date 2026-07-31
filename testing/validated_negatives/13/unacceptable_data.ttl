@@ -1,7 +1,7 @@
 @prefix aml: <http://www.w3id.org/animl/ontology/> .
 
 aml:measurements_002
-    a aml:Category ;
+    a aml:category ;
     aml:id "0001" ;
     aml:hasParameter aml:name ;
     aml:hasParameter aml:FrogNumber ;

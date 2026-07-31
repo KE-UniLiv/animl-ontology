@@ -4,12 +4,12 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 ASK {
     # Current step uses a sample
-    ?currentStep a aml:ExperimentStep ;
+    ?currentStep a aml:experimentStep ;
                  aml:hasInfrastructure ?infra .
     ?infra aml:includes/aml:hasMember/aml:pointsTo ?sample .
 
     # A different step produced/defined that sample
-    ?parentStep a aml:ExperimentStep ;
+    ?parentStep a aml:experimentStep ;
                 aml:hasResult ?result .
     ?result aml:includes/aml:hasMember/aml:pointsTo ?sample .
 

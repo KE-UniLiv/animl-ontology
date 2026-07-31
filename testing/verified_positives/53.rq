@@ -5,7 +5,7 @@ SELECT ?modality
 WHERE {
     ?technique aml:hasPart ?resultBlueprint .
     
-    ?resultBlueprint a aml:ResultSpecification ; # Subclass of Specification
+    ?resultBlueprint a aml:resultSpecification ; # Subclass of Specification
                      aml:name "SpecificResultName" ;
                      aml:modality ?modality .
 }

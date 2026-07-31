@@ -5,9 +5,9 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 SELECT ?role
 WHERE {
     # The reference exists within the current step's context
-    ?reference a aml:AnimlReference ;
+    ?reference a aml:anIMLReference ;
                aml:pointsTo ?previousStep ;
                aml:hasFunction ?role .
                
-    ?previousStep a aml:ExperimentStep .
+    ?previousStep a aml:experimentStep .
 }

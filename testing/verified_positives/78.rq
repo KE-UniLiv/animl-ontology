@@ -4,11 +4,11 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?parameterBlueprint
 WHERE {
-    ?technique a aml:Technique ;
+    ?technique a aml:technique ;
                aml:hasPart ?categoryBlueprint .
                
     # Assuming CategoryBlueprint is represented as a structural Specification/Blueprint
     ?categoryBlueprint aml:hasPart ?parameterBlueprint .
     
-    ?parameterBlueprint a aml:ParameterSpecification .
+    ?parameterBlueprint a aml:parameterSpecification .
 }

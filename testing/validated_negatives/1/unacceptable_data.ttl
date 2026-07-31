@@ -28,7 +28,7 @@ aml:dataPoint_004
     seq:directlyFollows aml:dataPoint_003 .
 
 aml:series_001
-  a aml:Series ;
+  a aml:series ;
   ce:hasMember aml:dataPoint_001;
   ce:hasMember aml:dataPoint_002;
   ce:hasMember aml:dataPoint_003;

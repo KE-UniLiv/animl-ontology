@@ -3,9 +3,9 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?Technique ?seriesSpec ?dependency
 WHERE {
-    ?Technique a aml:Technique .
+    ?Technique a aml:technique .
     ?Technique aml:includes ?seriesSpec .
-    ?seriesSpec a aml:SeriesSpecification ;
+    ?seriesSpec a aml:seriesSpecification ;
                 aml:dependency ?dependency .
                 
 }

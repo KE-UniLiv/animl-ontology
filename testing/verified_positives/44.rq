@@ -4,12 +4,12 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?series
 WHERE {
-    ?reference a aml:AnimlReference ;
+    ?reference a aml:anIMLReference ;
                aml:pointsTo ?dataPoint .
                
     ?dataPoint a aml:DataPoint .
     
     # Find the series containing this data point
-    ?series a aml:Series ;
+    ?series a aml:series ;
             aml:hasMember ?dataPoint .
 }

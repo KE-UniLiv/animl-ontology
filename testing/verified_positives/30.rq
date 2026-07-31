@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?author ?location
 WHERE {
-    ?author a aml:Agent ;
+    ?author a aml:agent ;
             aml:location ?location .
 }

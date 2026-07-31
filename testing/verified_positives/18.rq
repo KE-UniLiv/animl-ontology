@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?step ?technique
 WHERE {
-    ?step a aml:ExperimentStep .
+    ?step a aml:experimentStep .
   	?step aml:usesTechnique ?technique .
 }

@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?affectedItem
 WHERE {
-    ?change a aml:Change ;
+    ?change a aml:change ;
             aml:affects ?affectedItem .
             
     ?affectedItem a aml:SignableItem .

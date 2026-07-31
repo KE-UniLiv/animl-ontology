@@ -1,51 +1,51 @@
 aml:role_Reviewer_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_QCSoftware ;
-    aml:hasType aml:Reviewer .
+    aml:hasType aml:reviewer .
 
 aml:agent_QCSoftware
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:softwareAgent ;
     bag:isClassifiedBy aml:role_Reviewer_01 .
 
 aml:automated_pipeline 
-    a aml:Method ;
+    a aml:method ;
     aml:requiresRole aml:role_Reviewer_01 ;
 
 
 aml:role_Experimenter_01
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_robot_arm ;
-    aml:hasType aml:Experimenter .
+    aml:hasType aml:experimenter .
 
 aml:agent_robot_arm
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:HardwareAgent ;
     bag:isClassifiedBy aml:role_Experimenter_01 .
 
 aml:role_Reviewer_02
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:agent_Dave_in_assurance ;
-    aml:hasType aml:Reviewer.
+    aml:hasType aml:reviewer.
 
 aml:agent_Dave_in_assurance
-    a aml:Agent ;
-    aml:hasType aml:HumanAgent ;
+    a aml:agent ;
+    aml:hasType aml:humanagent ;
     bag:isClassifiedBy aml:role_Reviewer_02 .
 
 
 aml:role_Author_02
-    a aml:Role ;
+    a aml:role ;
     bag:isRoleOf aml:NLP_Software ;
-    aml:hasType aml:Author.
+    aml:hasType aml:author.
 
 aml:NLP_Software
-    a aml:Agent ;
+    a aml:agent ;
     aml:hasType aml:SoftwareAgent ;
     bag:isClassifiedBy aml:role_Author_02 .
 
 aml:centaur_pipeline 
-    a aml:Method ;
+    a aml:method ;
     aml:requiresRole aml:role_Experimenter_01 ;
     aml:requiresRole aml:role_Reviewer_02 ;
     aml:requiresRole aml:role_Author_02 .

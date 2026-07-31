@@ -7,7 +7,7 @@
 
 aml:ReferenceTargetConsistencyShape
     a sh:NodeShape ;
-    sh:targetClass aml:AnimlReference ;
+    sh:targetClass aml:anIMLReference ;
 
     #################################################################
     # 1. Reference → DataPoint requires ReferenceSet → Series containing that DataPoint
@@ -27,7 +27,7 @@ aml:ReferenceTargetConsistencyShape
                 # C must have subject D which is a Series containing B
                 FILTER NOT EXISTS {
                     ?refSet aml:subject ?series .
-                    ?series a aml:Series ;
+                    ?series a aml:series ;
                             ce:hasMember ?dp .
                 }
             }
@@ -44,7 +44,7 @@ aml:ReferenceTargetConsistencyShape
             SELECT $this WHERE {
                 # A points to B (Sample)
                 $this aml:pointsTo ?sample .
-                ?sample a aml:Sample .
+                ?sample a aml:sample .
 
                 # Find C: the reference set containing A
                 ?refSet ce:hasMember $this .
@@ -52,7 +52,7 @@ aml:ReferenceTargetConsistencyShape
                 # C must have subject D which is a SampleSet containing B
                 FILTER NOT EXISTS {
                     ?refSet aml:subject ?sampleSet .
-                    ?sampleSet a aml:SampleSet ;
+                    ?sampleSet a aml:sampleSet ;
                                ce:hasMember ?sample .
                 }
             }
@@ -69,7 +69,7 @@ aml:ReferenceTargetConsistencyShape
             SELECT $this WHERE {
                 # A points to B (ExperimentStep)
                 $this aml:pointsTo ?step .
-                ?step a aml:ExperimentStep .
+                ?step a aml:experimentStep .
 
                 # Find C: the reference set containing A
                 ?refSet ce:hasMember $this .
@@ -77,7 +77,7 @@ aml:ReferenceTargetConsistencyShape
                 # C must have subject D which is an Experiment containing B
                 FILTER NOT EXISTS {
                     ?refSet aml:subject ?experiment .
-                    ?experiment a aml:Experiment ;
+                    ?experiment a aml:experiment ;
                                 ce:hasMember ?step .
                 }
             }

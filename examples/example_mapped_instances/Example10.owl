@@ -10,11 +10,11 @@
   xmlns:ns5="http://purl.obolibrary.org/obo/"
   xmlns:ns6="http://purl.allotrope.org/ontologies/result#"
 >
-  <aml:Document rdf:about="http://example.org/animl/example10#document">
+  <aml:document rdf:about="http://example.org/animl/example10#document">
     <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-    <aml:animlVersion>1.0</aml:animlVersion>
+    <aml:anIMLVersion>1.0</aml:anIMLVersion>
     <aml:denotes>
-      <aml:Experiment rdf:about="http://example.org/animl/example10#experiment">
+      <aml:experiment rdf:about="http://example.org/animl/example10#experiment">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/process#AFP_0003735"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#step_es_1"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#step_es_2"/>
@@ -23,377 +23,377 @@
         <ce:hasMember rdf:resource="http://example.org/animl/example10#step_es_5"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#step_es_6"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#step_es_7"/>
-      </aml:Experiment>
+      </aml:experiment>
     </aml:denotes>
     <aml:hasSampleSet>
-      <aml:SampleSet rdf:about="http://example.org/animl/example10#sampleset">
+      <aml:sampleSet rdf:about="http://example.org/animl/example10#sampleset">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000371"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#sample_Matcha_00001"/>
-      </aml:SampleSet>
+      </aml:sampleSet>
     </aml:hasSampleSet>
-  </aml:Document>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_1_2_1">
+  </aml:document>
+  <aml:seriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_1_2_1">
     <aml:name>Raw Dataset</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</aml:value>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_1_2_1_1">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_1_2_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_1_2_1_1"/>
         <aml:name>Particle Size Class</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_1_2_1_2">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_1_2_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_1_2_1_2"/>
         <aml:name>Volume Density</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
-  </aml:SeriesSet>
-  <aml:Sample rdf:about="http://example.org/animl/example10#sample_Matcha_00001">
+  </aml:seriesSet>
+  <aml:sample rdf:about="http://example.org/animl/example10#sample_Matcha_00001">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000508"/>
     <aml:identifier>Matcha-00001</aml:identifier>
     <aml:name>Matcha</aml:name>
-  </aml:Sample>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_6_2_1">
+  </aml:sample>
+  <aml:seriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_6_2_1">
     <aml:name>Raw Dataset</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</aml:value>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_6_2_1_1">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_6_2_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_6_2_1_1"/>
         <aml:name>Particle Size Class</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_6_2_1_2">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_6_2_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_6_2_1_2"/>
         <aml:name>Volume Density</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
-  </aml:SeriesSet>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example10#step_es_5">
+  </aml:seriesSet>
+  <aml:experimentStep rdf:about="http://example.org/animl/example10#step_es_5">
     <aml:name>Particle Size Distribution 5</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_5_1">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_5_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Particle Size</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_5_2">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_5_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Result Series</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#seriesSet_es_5_2_1"/>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
-  </aml:ExperimentStep>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_5_2_1_2">
+  </aml:experimentStep>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_5_2_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits>
-      <aml:Unit rdf:about="http://example.org/animl/example10#unit__">
+      <aml:units rdf:about="http://example.org/animl/example10#unit__">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>%</aml:token>
-      </aml:Unit>
+      </aml:units>
     </aml:hasUnits>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_5_2_1_2">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_5_2_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_5_2_1_2"/>
         <aml:name>Volume Density</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_5_2_1">
+  </aml:seriesSpecification>
+  <aml:seriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_5_2_1">
     <aml:name>Raw Dataset</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</aml:value>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_5_2_1_1">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_5_2_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_5_2_1_1"/>
         <aml:name>Particle Size Class</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_5_2_1_2"/>
-  </aml:SeriesSet>
-  <aml:Result rdf:about="http://example.org/animl/example10#result_es_3_2">
+  </aml:seriesSet>
+  <aml:result rdf:about="http://example.org/animl/example10#result_es_3_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Result Series</aml:name>
     <ce:hasMember>
-      <aml:SeriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_3_2_1">
+      <aml:seriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_3_2_1">
         <aml:name>Raw Dataset</aml:name>
         <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</aml:value>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_3_2_1_1"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_3_2_1_2"/>
-      </aml:SeriesSet>
+      </aml:seriesSet>
     </ce:hasMember>
-  </aml:Result>
-  <aml:Series rdf:about="http://example.org/animl/example10#series_es_7_2_1_2">
+  </aml:result>
+  <aml:series rdf:about="http://example.org/animl/example10#series_es_7_2_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_7_2_1_2">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_7_2_1_2">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_7_2_1_2"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Volume Density</aml:name>
-  </aml:Series>
-  <aml:Series rdf:about="http://example.org/animl/example10#series_es_3_2_1_2">
+  </aml:series>
+  <aml:series rdf:about="http://example.org/animl/example10#series_es_3_2_1_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>dependent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_3_2_1_2">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_3_2_1_2">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_3_2_1_2"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Volume Density</aml:name>
-  </aml:Series>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_4_2_1_2">
+  </aml:series>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_4_2_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_4_2_1_2">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_4_2_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_4_2_1_2"/>
         <aml:name>Volume Density</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example10#result_es_2_2">
+  </aml:seriesSpecification>
+  <aml:result rdf:about="http://example.org/animl/example10#result_es_2_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Result Series</aml:name>
     <ce:hasMember>
-      <aml:SeriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_2_2_1">
+      <aml:seriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_2_2_1">
         <aml:name>Raw Dataset</aml:name>
         <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</aml:value>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_2_2_1_1"/>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_2_2_1_2"/>
-      </aml:SeriesSet>
+      </aml:seriesSet>
     </ce:hasMember>
-  </aml:Result>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_4_2_1">
+  </aml:result>
+  <aml:seriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_4_2_1">
     <aml:name>Raw Dataset</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</aml:value>
     <ce:hasMember>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_4_2_1_1">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_4_2_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_4_2_1_1"/>
         <aml:name>Particle Size Class</aml:name>
-      </aml:Series>
+      </aml:series>
     </ce:hasMember>
     <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_4_2_1_2"/>
-  </aml:SeriesSet>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_3_2_1_1">
+  </aml:seriesSet>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_3_2_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits>
-      <aml:Unit rdf:about="http://example.org/animl/example10#unit__m">
+      <aml:units rdf:about="http://example.org/animl/example10#unit__m">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#Unit"/>
         <rdf:type rdf:resource="http://qudt.org/schema/qudt#SystemOfUnits"/>
         <aml:token>µm</aml:token>
-      </aml:Unit>
+      </aml:units>
     </aml:hasUnits>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_3_2_1_1">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_3_2_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_3_2_1_1"/>
         <aml:name>Particle Size Class</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_7_2_1_1">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_7_2_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_7_2_1_1">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_7_2_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>independent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_7_2_1_1"/>
         <aml:name>Particle Size Class</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example10#step_es_7">
+  </aml:seriesSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example10#step_es_7">
     <aml:name>Calculated Particle Size Distribution</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_7_1">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_7_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Calculated Particle Size</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_7_2">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_7_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Result Series</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#seriesSet_es_7_2_1"/>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
-  </aml:ExperimentStep>
-  <aml:Result rdf:about="http://example.org/animl/example10#result_es_4_2">
+  </aml:experimentStep>
+  <aml:result rdf:about="http://example.org/animl/example10#result_es_4_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Result Series</aml:name>
     <ce:hasMember rdf:resource="http://example.org/animl/example10#seriesSet_es_4_2_1"/>
-  </aml:Result>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_1_2_1_1">
+  </aml:result>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_1_2_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_1_2_1_1"/>
-  </aml:SeriesSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example10#step_es_2">
+  </aml:seriesSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example10#step_es_2">
     <aml:name>Particle Size Distribution 2</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_2_1">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_2_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Particle Size</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult rdf:resource="http://example.org/animl/example10#result_es_2_2"/>
-  </aml:ExperimentStep>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example10#step_es_1">
+  </aml:experimentStep>
+  <aml:experimentStep rdf:about="http://example.org/animl/example10#step_es_1">
     <aml:name>Particle Size Distribution 1</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_1_1">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_1_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Particle Size</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_1_2">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Result Series</aml:name>
         <ce:hasMember rdf:resource="http://example.org/animl/example10#seriesSet_es_1_2_1"/>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
-  </aml:ExperimentStep>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_6_2_1_2">
+  </aml:experimentStep>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_6_2_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_6_2_1_2"/>
-  </aml:SeriesSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example10#result_es_6_2">
+  </aml:seriesSpecification>
+  <aml:result rdf:about="http://example.org/animl/example10#result_es_6_2">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Result Series</aml:name>
     <ce:hasMember rdf:resource="http://example.org/animl/example10#seriesSet_es_6_2_1"/>
-  </aml:Result>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_4_2_1_1">
+  </aml:result>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_4_2_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_4_2_1_1"/>
-  </aml:SeriesSpecification>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example10#step_es_4">
+  </aml:seriesSpecification>
+  <aml:experimentStep rdf:about="http://example.org/animl/example10#step_es_4">
     <aml:name>Particle Size Distribution 4</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_4_1">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_4_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Particle Size</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult rdf:resource="http://example.org/animl/example10#result_es_4_2"/>
-  </aml:ExperimentStep>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example10#step_es_6">
+  </aml:experimentStep>
+  <aml:experimentStep rdf:about="http://example.org/animl/example10#step_es_6">
     <aml:name>Particle Size Distribution 6</aml:name>
     <aml:producesResult>
-      <aml:Result rdf:about="http://example.org/animl/example10#result_es_6_1">
+      <aml:result rdf:about="http://example.org/animl/example10#result_es_6_1">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
         <aml:name>Particle Size</aml:name>
-      </aml:Result>
+      </aml:result>
     </aml:producesResult>
     <aml:producesResult rdf:resource="http://example.org/animl/example10#result_es_6_2"/>
-  </aml:ExperimentStep>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_2_2_1_2">
+  </aml:experimentStep>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_2_2_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy>
-      <aml:Series rdf:about="http://example.org/animl/example10#series_es_2_2_1_2">
+      <aml:series rdf:about="http://example.org/animl/example10#series_es_2_2_1_2">
         <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
         <aml:dependency>dependent</aml:dependency>
         <aml:hasSpecification rdf:resource="http://example.org/animl/example10#seriesSpec_es_2_2_1_2"/>
         <aml:name>Volume Density</aml:name>
-      </aml:Series>
+      </aml:series>
     </aml:usedBy>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_1_2_1_2">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_1_2_1_2">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_1_2_1_2"/>
-  </aml:SeriesSpecification>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_5_2_1_1">
+  </aml:seriesSpecification>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_5_2_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_5_2_1_1"/>
-  </aml:SeriesSpecification>
-  <aml:Result rdf:about="http://example.org/animl/example10#result_es_3_1">
+  </aml:seriesSpecification>
+  <aml:result rdf:about="http://example.org/animl/example10#result_es_3_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0002011"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000299"/>
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/role#AFRL_0000043"/>
     <aml:name>Particle Size</aml:name>
-  </aml:Result>
-  <aml:Series rdf:about="http://example.org/animl/example10#series_es_2_2_1_1">
+  </aml:result>
+  <aml:series rdf:about="http://example.org/animl/example10#series_es_2_2_1_1">
     <rdf:type rdf:resource="http://purl.allotrope.org/ontologies/common#AFC_0000162"/>
     <aml:dependency>independent</aml:dependency>
     <aml:hasSpecification>
-      <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_2_2_1_1">
+      <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_2_2_1_1">
         <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
         <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
         <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_2_2_1_1"/>
-      </aml:SeriesSpecification>
+      </aml:seriesSpecification>
     </aml:hasSpecification>
     <aml:name>Particle Size Class</aml:name>
-  </aml:Series>
-  <aml:ExperimentStep rdf:about="http://example.org/animl/example10#step_es_3">
+  </aml:series>
+  <aml:experimentStep rdf:about="http://example.org/animl/example10#step_es_3">
     <aml:name>Particle Size Distribution 3</aml:name>
     <aml:producesResult rdf:resource="http://example.org/animl/example10#result_es_3_1"/>
     <aml:producesResult rdf:resource="http://example.org/animl/example10#result_es_3_2"/>
-  </aml:ExperimentStep>
-  <aml:SeriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_7_2_1">
+  </aml:experimentStep>
+  <aml:seriesSet rdf:about="http://example.org/animl/example10#seriesSet_es_7_2_1">
     <aml:name>Calculated Dataset</aml:name>
     <aml:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</aml:value>
     <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_7_2_1_1"/>
     <ce:hasMember rdf:resource="http://example.org/animl/example10#series_es_7_2_1_2"/>
-  </aml:SeriesSet>
-  <aml:SeriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_6_2_1_1">
+  </aml:seriesSet>
+  <aml:seriesSpecification rdf:about="http://example.org/animl/example10#seriesSpec_es_6_2_1_1">
     <aml:hasDataType rdf:resource="http://www.w3id.org/animl/ontology/float32"/>
     <aml:hasUnits rdf:resource="http://example.org/animl/example10#unit__m"/>
     <aml:usedBy rdf:resource="http://example.org/animl/example10#series_es_6_2_1_1"/>
-  </aml:SeriesSpecification>
+  </aml:seriesSpecification>
 </rdf:RDF>

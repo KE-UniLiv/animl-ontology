@@ -4,9 +4,9 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?author
 WHERE {
-    ?method a aml:Method ;
+    ?method a aml:method ;
             aml:hasAgent ?author .
     
     # Optional: Filter for human agents if "author" implies a person
-    # ?author a aml:HumanAgent .
+    # ?author a aml:humanagent .
 }

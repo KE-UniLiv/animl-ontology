@@ -4,9 +4,9 @@ PREFIX bag: <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#>
 
 SELECT ?step ?stepName
 WHERE {
-    ?step a aml:ExperimentStep .
+    ?step a aml:experimentStep .
     ?step bag:isItemOf ?Template .
-    ?Template a aml:Template .
+    ?Template a aml:template .
     ?Template aml:name ?stepName .
 }
 ORDER BY ?step ?stepName

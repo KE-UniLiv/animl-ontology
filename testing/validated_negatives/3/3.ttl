@@ -5,14 +5,14 @@
 
 aml:NoHumanAgentSoftwareFieldsShape
     a sh:NodeShape ;
-    sh:targetClass aml:Agent ;
+    sh:targetClass aml:agent ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "A HumanAgent may not have an operating system or version." ;
 
         sh:select """
             SELECT $this WHERE {
-                $this aml:hasType aml:HumanAgent .
+                $this aml:hasType aml:humanagent .
                 {
                     $this aml:operatingSystem ?os .
                 }

@@ -3,7 +3,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT DISTINCT ?device ?manufacturer
 WHERE {
-    ?device a aml:Agent ;
+    ?device a aml:agent ;
             aml:organisation ?manufacturer .
     ?device aml:hasType ?Type .
     FILTER(?Type = aml:HardwareAgent)

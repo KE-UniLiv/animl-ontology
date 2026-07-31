@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?checksum
 WHERE {
-    ?technique a aml:Technique ;
+    ?technique a aml:technique ;
                aml:sha256 ?checksum .
 }

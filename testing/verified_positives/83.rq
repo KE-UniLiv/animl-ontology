@@ -4,7 +4,7 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?isAbstract
 WHERE {
-    ?technique a aml:Technique ;
+    ?technique a aml:technique ;
                aml:isAbstract ?isAbstract . 
     # Or aml:isExtension depending on exact mapping of the "extension" attribute
 }

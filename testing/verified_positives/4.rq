@@ -4,6 +4,6 @@ PREFIX aml: <http://www.w3id.org/animl/ontology/>
 
 SELECT ?stepID
 WHERE {
-    ?step a aml:ExperimentStep ;
+    ?step a aml:experimentStep ;
           aml:id ?stepID .
 }

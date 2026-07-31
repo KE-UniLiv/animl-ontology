@@ -7,27 +7,27 @@
 
 
 aml:sample_Basil_00010
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample A" .
 
 aml:sample_Basil_00020
-    a aml:Sample ;
+    a aml:sample ;
     aml:name "Sample B" .
 
 aml:sampleSet_Basil_00010
-    a aml:SampleSet ;
+    a aml:sampleSet ;
     aml:name "Sample Set A" ;
     ce:hasMember aml:sample_Basil_00010 ;
     ce:hasMember aml:sample_Basil_00020 .
 
 
 aml:function_Basil_00010
-    a aml:Function ;
+    a aml:function ;
     aml:name "Linear interpolation" .
 
 
 aml:ref_Basil_00010_1
-    a aml:AnIMLReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:sample_Basil_00010 ;
     aml:hasFunction aml:function_Basil_00010 ;
     aml:hasSpecification aml:refSpec_Basil_00001 ;
@@ -35,7 +35,7 @@ aml:ref_Basil_00010_1
     aml:endValue "10"^^xsd:nonNegativeInteger .
 
 aml:ref_Basil_00020_1
-    a aml:AnIMLReference ;
+    a aml:anIMLReference ;
     aml:pointsTo aml:sample_Basil_00020 ;
     aml:hasSpecification aml:refSpec_Basil_00002 ;
     aml:startValue "0"^^xsd:nonNegativeInteger ;
@@ -43,14 +43,14 @@ aml:ref_Basil_00020_1
 
 
 aml:refSet_Basil_00010
-    a aml:AnIMLReferenceSet ;
+    a aml:anIMLReferenceSet ;
     ce:hasMember aml:ref_Basil_00010_1 ;
     ce:hasMember aml:ref_Basil_00020_1 ;
     aml:subject aml:sampleSet_Basil_00010 .
 
 
 aml:technique_Basil_00001
-    a aml:Technique ;
+    a aml:technique ;
     aml:name "UV-Vis Spectroscopy" ;
     aml:version "1.0" ;
     aml:citation "Smith et al. (2024) UV-Vis Methods" ;
@@ -59,17 +59,17 @@ aml:technique_Basil_00001
 
 
 aml:refSpec_Basil_00001
-    a aml:AnIMLReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "Reference1" ;
     aml:modality "required" .
 
 aml:refSpec_Basil_00002
-    a aml:AnIMLReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "reference2" ;
     aml:modality "optional" .
 
 aml:technique_Basil_00002
-    a aml:Technique ;
+    a aml:technique ;
     aml:name "science" ;
     aml:version "1.0" ;
     aml:citation "Smith et al. (2024) UV-Vis Methods" ;
@@ -78,11 +78,11 @@ aml:technique_Basil_00002
 
 
 aml:refSpec_Basil_00003
-    a aml:AnIMLReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "Reference3" ;
     aml:modality "optional" .
 
 aml:refSpec_Basil_00004
-    a aml:AnIMLReferenceSpecification ;
+    a aml:anIMLReferenceSpecification ;
     aml:name "Reference4" ;
     aml:modality "optional" .
