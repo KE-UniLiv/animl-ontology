@@ -182,7 +182,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3id.org/animl/ontology/Adjusts
-aml:Adjusts rdf:type owl:ObjectProperty ;
+aml:adjusts rdf:type owl:ObjectProperty ;
             rdfs:domain aml:AdjustedUnit ;
             rdfs:range aml:SIUnit ;
             rdfs:comment "This denotes the adjustment of a fundamental unit"@en .
@@ -886,7 +886,7 @@ aml:AdjustedUnit rdf:type owl:Class ;
                                    owl:allValuesFrom aml:Units
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty aml:Adjusts ;
+                                   owl:onProperty aml:adjusts ;
                                    owl:allValuesFrom aml:SIUnit
                                  ] ;
                  rdfs:comment "This is unique in the document in that it is both an enumeration class, e.i a class that  reifies the enumeration of a property of another class, and links to members of its own class to indicate its position in an ordered set. this is because it is known that its individuals must correspond to one of the limited set of Siunits, but those units can still be combined in an intractable number of ways, making direct enumeration of options impossible."@en .
